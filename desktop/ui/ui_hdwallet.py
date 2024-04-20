@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletuOcAFo.ui'
+## Form generated from reading UI file 'hdwalletcVrpGt.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -24,7 +24,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(951, 439)
+        MainWindow.resize(951, 444)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.horizontalLayout = QHBoxLayout(self.centralwidget)
@@ -2238,12 +2238,16 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.expandTerminalQFrame = QFrame(self.outputQFrame)
         self.expandTerminalQFrame.setObjectName(u"expandTerminalQFrame")
+        self.expandTerminalQFrame.setMinimumSize(QSize(20, 20))
+        self.expandTerminalQFrame.setMaximumSize(QSize(20, 20))
         self.expandTerminalQFrame.setFrameShape(QFrame.StyledPanel)
         self.expandTerminalQFrame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_19 = QVBoxLayout(self.expandTerminalQFrame)
+        self.verticalLayout_19.setSpacing(0)
         self.verticalLayout_19.setObjectName(u"verticalLayout_19")
+        self.verticalLayout_19.setContentsMargins(0, 0, 0, 0)
 
-        self.verticalLayout_2.addWidget(self.expandTerminalQFrame)
+        self.verticalLayout_2.addWidget(self.expandTerminalQFrame, 0, Qt.AlignRight)
 
         self.outputTerminalQTextEdit = QTextEdit(self.outputQFrame)
         self.outputTerminalQTextEdit.setObjectName(u"outputTerminalQTextEdit")
