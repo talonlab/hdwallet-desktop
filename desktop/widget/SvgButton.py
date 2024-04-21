@@ -10,10 +10,10 @@ class SvgButton(QWidget):
     checked = False
     checkable = False
 
-    def __init__(self, parent_widget, icon_path, icon_width, icon_height, alt_icon_path = None):
+    def __init__(self, parent_widget, icon_path, icon_width, icon_height, alt_icon_path=None):
         super(SvgButton, self).__init__()
         QStackedLayout(self)
-        self.icon     = QSvgWidget(icon_path)
+        self.icon = QSvgWidget(icon_path)
         self.icon_alt = QSvgWidget(alt_icon_path) if alt_icon_path is not None else None
 
         self.icon_width = icon_width
@@ -24,7 +24,7 @@ class SvgButton(QWidget):
 
         self.icon.setMinimumSize(QSize(self.icon_width, self.icon_height))
         self.icon.setMaximumSize(QSize(self.icon_width, self.icon_height))
-        
+
         self.layout().addWidget(self.icon)
 
         if self.icon_alt is not None:
@@ -35,7 +35,8 @@ class SvgButton(QWidget):
         parent_widget.layout().addWidget(self)
         self.parent = parent_widget
 
-    def setText(self, text): pass
+    def setText(self, text):
+        pass
 
     def setCheckable(self, value):
         self.checkable = value
@@ -50,7 +51,7 @@ class SvgButton(QWidget):
         return self.checked
 
     def mousePressEvent(self, event):
-        if event.button() == Qt.LeftButton: 
+        if event.button() == Qt.LeftButton:
             self.click()
             self.parent.setProperty("pressed", "true")
             self.parent.style().unpolish(self.parent)
@@ -66,4 +67,3 @@ class SvgButton(QWidget):
         if self.checkable:
             self.setChecked(self.isChecked() ^ True)
             self.toggled.emit()
-   
