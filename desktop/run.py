@@ -1,8 +1,17 @@
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QPushButton, QVBoxLayout, QHBoxLayout, QFrame
 from PySide6.QtCore import QFile, Qt
+
 from ui.ui_hdwallet import Ui_MainWindow
 from widget.SvgButton import SvgButton
 
+class DetachedWindow(QWidget):
+    def __init__(self, p):
+        super().__init__()
+        self.main_window = p
+
+    def closeEvent(self, event):
+        self.main_window.toggle_expand_terminal.setChecked(False)
+        self.main_window.toggle_expand()
 
 class MyMainWindow(QMainWindow):
     def __init__(self):
@@ -22,8 +31,7 @@ class MyMainWindow(QMainWindow):
         )
         self.toggle_expand_terminal.setCheckable(True)
         self.toggle_expand_terminal.toggled.connect(self.toggle_expand)
-        
-                
+        self.detached_window = None
 
     def toggle_expand(self):
         if self.toggle_expand_terminal.isChecked():
@@ -31,7 +39,7 @@ class MyMainWindow(QMainWindow):
             self.showNormal()
 
             self.layout().removeWidget(self.ui.outputQFrame)
-            self.detached_window = QWidget()
+            self.detached_window = DetachedWindow(self)
             self.detached_window.setWindowTitle("Detached Red Frame")
             self.detached_window.resize(self.ui.outputQFrame.width(), self.ui.outputQFrame.height())
 
@@ -47,7 +55,10 @@ class MyMainWindow(QMainWindow):
                 self.resize(self.width() - self.ui.outputQFrame.width(), self.height())
 
         else:
-            self.detached_window.close()
+            if self.detached_window:
+                self.detached_window.close()
+                self.detached_window = None
+
             self.ui.centralwidget.layout().addWidget(self.ui.outputQFrame)
 
             if not self.isMaximized():
@@ -62,6 +73,10 @@ class MyMainWindow(QMainWindow):
             stylesheet = str(style_file.readAll(), encoding='utf-8')
             self.setStyleSheet(stylesheet)
 
+    def closeEvent(self, event):
+        if self.detached_window:
+            self.detached_window.close()
+        super().closeEvent(event)
 
 if __name__ == "__main__":
     app = QApplication([])
