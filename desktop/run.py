@@ -61,9 +61,6 @@ class MyMainWindow(QMainWindow):
 
             self.ui.centralwidget.layout().addWidget(self.ui.outputQFrame)
 
-            if not self.isMaximized():
-                self.resize(self.width() + self.ui.outputQFrame.width(), self.height())
-                
             self.setWindowFlags(self.windowFlags() | Qt.WindowMaximizeButtonHint)
             self.show()
 
