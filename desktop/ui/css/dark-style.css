@@ -38,7 +38,7 @@ QCheckBox::indicator:hover {
 }
 QCheckBox::indicator:checked {
     background: rgb(25, 30, 36);
-    background-image: url(:/icons/images/icons/cil-check-alt.png);
+    /*background-image: url(:/icons/images/icons/cil-check-alt.png);*/
     background-position: center;
     background-repeat: no-reperat;
 }
@@ -93,7 +93,7 @@ QComboBox::drop-down {
     width: 30px;
     border-left-width: 3px;
     border-left-style: solid;
-    background-image: url(:/icons/images/icons/cil-arrow-bottom.png);
+    /*background-image: url(:/icons/images/icons/cil-arrow-bottom.png);*/
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -105,7 +105,7 @@ QComboBox::drop-down:hover {
 
 
 QComboBox::drop-down:checked {
-     background-image: url(:/icons/images/icons/cil-arrow-top.png);
+     /*background-image: url(:/icons/images/icons/cil-arrow-top.png);*/
 }
 
 QComboBox QAbstractItemView  {
