@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletYNktGD.ui'
+## Form generated from reading UI file 'hdwalletboaRxC.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -17,9 +17,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QCheckBox, QComboBox,
     QFrame, QHBoxLayout, QLabel, QLineEdit,
-    QMainWindow, QPushButton, QScrollArea, QSizePolicy,
-    QSpacerItem, QStackedWidget, QTabWidget, QTextEdit,
-    QVBoxLayout, QWidget)
+    QMainWindow, QPushButton, QSizePolicy, QSpacerItem,
+    QStackedWidget, QTabWidget, QTextEdit, QVBoxLayout,
+    QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -6259,9 +6259,7 @@ class Ui_MainWindow(object):
         self.outputQFrame.setObjectName(u"outputQFrame")
         self.outputQFrame.setMinimumSize(QSize(400, 0))
         self.verticalLayout_2 = QVBoxLayout(self.outputQFrame)
-        self.verticalLayout_2.setSpacing(15)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 15)
         self.frame_24 = QFrame(self.outputQFrame)
         self.frame_24.setObjectName(u"frame_24")
         self.frame_24.setMinimumSize(QSize(0, 30))
@@ -6290,26 +6288,22 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_2.addWidget(self.frame_24)
 
-        self.scrollArea = QScrollArea(self.outputQFrame)
-        self.scrollArea.setObjectName(u"scrollArea")
-        self.scrollArea.setWidgetResizable(True)
-        self.scrollAreaWidgetContents = QWidget()
-        self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 398, 460))
-        self.verticalLayout_78 = QVBoxLayout(self.scrollAreaWidgetContents)
-        self.verticalLayout_78.setObjectName(u"verticalLayout_78")
-        self.outputTerminalQTextEdit = QTextEdit(self.scrollAreaWidgetContents)
+        self.outputTerminalQTextEdit = QTextEdit(self.outputQFrame)
         self.outputTerminalQTextEdit.setObjectName(u"outputTerminalQTextEdit")
-        self.outputTerminalQTextEdit.setEnabled(False)
+        self.outputTerminalQTextEdit.setEnabled(True)
+        sizePolicy3 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.outputTerminalQTextEdit.sizePolicy().hasHeightForWidth())
+        self.outputTerminalQTextEdit.setSizePolicy(sizePolicy3)
+        self.outputTerminalQTextEdit.setFrameShape(QFrame.NoFrame)
+        self.outputTerminalQTextEdit.setFrameShadow(QFrame.Plain)
         self.outputTerminalQTextEdit.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
         self.outputTerminalQTextEdit.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
-        self.outputTerminalQTextEdit.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContents)
+        self.outputTerminalQTextEdit.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContentsOnFirstShow)
+        self.outputTerminalQTextEdit.setReadOnly(True)
 
-        self.verticalLayout_78.addWidget(self.outputTerminalQTextEdit)
-
-        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
-
-        self.verticalLayout_2.addWidget(self.scrollArea)
+        self.verticalLayout_2.addWidget(self.outputTerminalQTextEdit)
 
         self.outputTerminalQLineEdit = QLineEdit(self.outputQFrame)
         self.outputTerminalQLineEdit.setObjectName(u"outputTerminalQLineEdit")

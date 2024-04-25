@@ -269,7 +269,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
 /* For vertical scrollbar */
 QScrollBar:vertical {
     border: none; /* Remove the border */
-    background: #83b9ff;
+    background: rgb(16, 21, 27);
     width: 8px;
     /*margin: 21px 0px 21px 0px;*/
     border-radius: 4px;
@@ -301,6 +301,6 @@ QScrollBar:vertical {
  }
 
 QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
-    background: #83b9ff;
+    background: rgb(16, 21, 27);
 }
 
