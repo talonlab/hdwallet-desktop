@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletboaRxC.ui'
+## Form generated from reading UI file 'hdwallethOYWwz.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -85,8 +85,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_14.setContentsMargins(15, 15, 15, 15)
         self.frame_14 = QFrame(self.generateHDWalletTabQWidget)
         self.frame_14.setObjectName(u"frame_14")
-        self.frame_14.setFrameShape(QFrame.StyledPanel)
-        self.frame_14.setFrameShadow(QFrame.Raised)
+        self.frame_14.setLineWidth(0)
         self.verticalLayout_15 = QVBoxLayout(self.frame_14)
         self.verticalLayout_15.setSpacing(15)
         self.verticalLayout_15.setObjectName(u"verticalLayout_15")
@@ -149,14 +148,14 @@ class Ui_MainWindow(object):
 
         self.frame_26 = QFrame(self.generateHDWalletTabQWidget)
         self.frame_26.setObjectName(u"frame_26")
-        self.frame_26.setFrameShape(QFrame.StyledPanel)
-        self.frame_26.setFrameShadow(QFrame.Raised)
+        self.frame_26.setLineWidth(0)
         self.verticalLayout_68 = QVBoxLayout(self.frame_26)
         self.verticalLayout_68.setSpacing(5)
         self.verticalLayout_68.setObjectName(u"verticalLayout_68")
         self.verticalLayout_68.setContentsMargins(0, 0, 0, 0)
         self.frame_42 = QFrame(self.frame_26)
         self.frame_42.setObjectName(u"frame_42")
+        self.frame_42.setLineWidth(0)
         self.horizontalLayout_73 = QHBoxLayout(self.frame_42)
         self.horizontalLayout_73.setSpacing(5)
         self.horizontalLayout_73.setObjectName(u"horizontalLayout_73")
@@ -200,16 +199,12 @@ class Ui_MainWindow(object):
 
         self.frame_17 = QFrame(self.generateHDWalletTabQWidget)
         self.frame_17.setObjectName(u"frame_17")
-        self.frame_17.setFrameShape(QFrame.StyledPanel)
-        self.frame_17.setFrameShadow(QFrame.Raised)
         self.verticalLayout_41 = QVBoxLayout(self.frame_17)
         self.verticalLayout_41.setSpacing(15)
         self.verticalLayout_41.setObjectName(u"verticalLayout_41")
         self.verticalLayout_41.setContentsMargins(0, 0, 0, 0)
         self.frame_27 = QFrame(self.frame_17)
         self.frame_27.setObjectName(u"frame_27")
-        self.frame_27.setFrameShape(QFrame.StyledPanel)
-        self.frame_27.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_60 = QHBoxLayout(self.frame_27)
         self.horizontalLayout_60.setSpacing(15)
         self.horizontalLayout_60.setObjectName(u"horizontalLayout_60")
@@ -336,6 +331,7 @@ class Ui_MainWindow(object):
 
         self.frame_18 = QFrame(self.generateHDWalletTabQWidget)
         self.frame_18.setObjectName(u"frame_18")
+        self.frame_18.setLineWidth(0)
         self.verticalLayout_42 = QVBoxLayout(self.frame_18)
         self.verticalLayout_42.setSpacing(15)
         self.verticalLayout_42.setObjectName(u"verticalLayout_42")
@@ -352,8 +348,7 @@ class Ui_MainWindow(object):
         self.frame_33 = QFrame(self.frame_30)
         self.frame_33.setObjectName(u"frame_33")
         self.frame_33.setMaximumSize(QSize(184, 16777215))
-        self.frame_33.setFrameShape(QFrame.StyledPanel)
-        self.frame_33.setFrameShadow(QFrame.Raised)
+        self.frame_33.setLineWidth(0)
         self.verticalLayout_63 = QVBoxLayout(self.frame_33)
         self.verticalLayout_63.setSpacing(5)
         self.verticalLayout_63.setObjectName(u"verticalLayout_63")
@@ -404,8 +399,7 @@ class Ui_MainWindow(object):
 
         self.frame_29 = QFrame(self.frame_30)
         self.frame_29.setObjectName(u"frame_29")
-        self.frame_29.setFrameShape(QFrame.StyledPanel)
-        self.frame_29.setFrameShadow(QFrame.Raised)
+        self.frame_29.setLineWidth(0)
         self.verticalLayout_67 = QVBoxLayout(self.frame_29)
         self.verticalLayout_67.setSpacing(5)
         self.verticalLayout_67.setObjectName(u"verticalLayout_67")
@@ -474,6 +468,7 @@ class Ui_MainWindow(object):
         self.frame = QFrame(self.tab)
         self.frame.setObjectName(u"frame")
         self.frame.setMinimumSize(QSize(525, 0))
+        self.frame.setLineWidth(0)
         self.verticalLayout_3 = QVBoxLayout(self.frame)
         self.verticalLayout_3.setSpacing(15)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
@@ -481,7 +476,6 @@ class Ui_MainWindow(object):
         self.frame_3 = QFrame(self.frame)
         self.frame_3.setObjectName(u"frame_3")
         self.frame_3.setFrameShape(QFrame.NoFrame)
-        self.frame_3.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.frame_3)
         self.horizontalLayout_2.setSpacing(15)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
@@ -5060,8 +5054,6 @@ class Ui_MainWindow(object):
 
         self.frame_5 = QFrame(self.frame)
         self.frame_5.setObjectName(u"frame_5")
-        self.frame_5.setFrameShape(QFrame.StyledPanel)
-        self.frame_5.setFrameShadow(QFrame.Raised)
         self.verticalLayout_17 = QVBoxLayout(self.frame_5)
         self.verticalLayout_17.setSpacing(15)
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
@@ -6117,7 +6109,6 @@ class Ui_MainWindow(object):
 
         self.frame_6 = QFrame(self.frame)
         self.frame_6.setObjectName(u"frame_6")
-        self.frame_6.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_4 = QHBoxLayout(self.frame_6)
         self.horizontalLayout_4.setSpacing(15)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
@@ -6319,12 +6310,12 @@ class Ui_MainWindow(object):
 
         self.tabWidget.setCurrentIndex(1)
         self.hdQStackedWidget.setCurrentIndex(0)
-        self.BIPQStackedWidget.setCurrentIndex(5)
-        self.cardanoQStackedWidget.setCurrentIndex(0)
-        self.electrumV1QStackedWidget.setCurrentIndex(4)
-        self.electrumV2QStackedWidget.setCurrentIndex(0)
+        self.BIPQStackedWidget.setCurrentIndex(0)
+        self.cardanoQStackedWidget.setCurrentIndex(5)
+        self.electrumV1QStackedWidget.setCurrentIndex(5)
+        self.electrumV2QStackedWidget.setCurrentIndex(2)
         self.moneroQStackedWidget.setCurrentIndex(2)
-        self.DerivationsQTabWidget.setCurrentIndex(4)
+        self.DerivationsQTabWidget.setCurrentIndex(5)
 
 
         QMetaObject.connectSlotsByName(MainWindow)

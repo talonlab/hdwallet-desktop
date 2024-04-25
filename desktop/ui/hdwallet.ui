@@ -171,11 +171,8 @@
            </property>
            <item>
             <widget class="QFrame" name="frame_14">
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+             <property name="lineWidth">
+              <number>0</number>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_15">
               <property name="spacing">
@@ -302,11 +299,8 @@
            </item>
            <item>
             <widget class="QFrame" name="frame_26">
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
+             <property name="lineWidth">
+              <number>0</number>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_68">
               <property name="spacing">
@@ -326,6 +320,9 @@
               </property>
               <item>
                <widget class="QFrame" name="frame_42">
+                <property name="lineWidth">
+                 <number>0</number>
+                </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_73">
                  <property name="spacing">
                   <number>5</number>
@@ -411,12 +408,6 @@
            </item>
            <item>
             <widget class="QFrame" name="frame_17">
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
-             </property>
              <layout class="QVBoxLayout" name="verticalLayout_41">
               <property name="spacing">
                <number>15</number>
@@ -435,12 +426,6 @@
               </property>
               <item>
                <widget class="QFrame" name="frame_27">
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_60">
                  <property name="spacing">
                   <number>15</number>
@@ -689,6 +674,9 @@
            </item>
            <item>
             <widget class="QFrame" name="frame_18">
+             <property name="lineWidth">
+              <number>0</number>
+             </property>
              <layout class="QVBoxLayout" name="verticalLayout_42">
               <property name="spacing">
                <number>15</number>
@@ -740,11 +728,8 @@
                      <height>16777215</height>
                     </size>
                    </property>
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
+                   <property name="lineWidth">
+                    <number>0</number>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_63">
                     <property name="spacing">
@@ -858,11 +843,8 @@
                  </item>
                  <item>
                   <widget class="QFrame" name="frame_29">
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
+                   <property name="lineWidth">
+                    <number>0</number>
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_67">
                     <property name="spacing">
@@ -1016,6 +998,9 @@
                <height>0</height>
               </size>
              </property>
+             <property name="lineWidth">
+              <number>0</number>
+             </property>
              <layout class="QVBoxLayout" name="verticalLayout_3">
               <property name="spacing">
                <number>15</number>
@@ -1036,9 +1021,6 @@
                <widget class="QFrame" name="frame_3">
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_2">
                  <property name="spacing">
@@ -1512,7 +1494,7 @@
                   <item>
                    <widget class="QStackedWidget" name="BIPQStackedWidget">
                     <property name="currentIndex">
-                     <number>5</number>
+                     <number>0</number>
                     </property>
                     <widget class="QWidget" name="BIPFromEntropyQStackedWidget">
                      <layout class="QVBoxLayout" name="verticalLayout_22">
@@ -3753,7 +3735,7 @@
                   <item>
                    <widget class="QStackedWidget" name="cardanoQStackedWidget">
                     <property name="currentIndex">
-                     <number>0</number>
+                     <number>5</number>
                     </property>
                     <widget class="QWidget" name="cardanoFromEntropyQStackedWidget">
                      <layout class="QVBoxLayout" name="verticalLayout_34">
@@ -6748,7 +6730,7 @@
                   <item>
                    <widget class="QStackedWidget" name="electrumV1QStackedWidget">
                     <property name="currentIndex">
-                     <number>4</number>
+                     <number>5</number>
                     </property>
                     <widget class="QWidget" name="electrumV1FromEntropyQStackedWidget">
                      <layout class="QVBoxLayout" name="verticalLayout_46">
@@ -8757,7 +8739,7 @@
                   <item>
                    <widget class="QStackedWidget" name="electrumV2QStackedWidget">
                     <property name="currentIndex">
-                     <number>0</number>
+                     <number>2</number>
                     </property>
                     <widget class="QWidget" name="electrumV2FromEntropyQStackedWidget">
                      <layout class="QVBoxLayout" name="verticalLayout_58">
@@ -11711,12 +11693,6 @@
               </item>
               <item>
                <widget class="QFrame" name="frame_5">
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
                 <layout class="QVBoxLayout" name="verticalLayout_17">
                  <property name="spacing">
                   <number>15</number>
@@ -11801,7 +11777,7 @@
                        </sizepolicy>
                       </property>
                       <property name="currentIndex">
-                       <number>4</number>
+                       <number>5</number>
                       </property>
                       <widget class="QWidget" name="CustomQWidget">
                        <attribute name="title">
@@ -14155,9 +14131,6 @@
               </item>
               <item>
                <widget class="QFrame" name="frame_6">
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_4">
                  <property name="spacing">
                   <number>15</number>
