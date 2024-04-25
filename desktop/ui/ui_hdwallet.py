@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletUYTesj.ui'
+## Form generated from reading UI file 'hdwalletOJaIss.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -15,10 +15,11 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
-    QHBoxLayout, QLabel, QLineEdit, QMainWindow,
-    QPushButton, QSizePolicy, QSpacerItem, QStackedWidget,
-    QTabWidget, QTextEdit, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QCheckBox, QComboBox,
+    QFrame, QHBoxLayout, QLabel, QLineEdit,
+    QMainWindow, QPushButton, QSizePolicy, QSpacerItem,
+    QStackedWidget, QTabWidget, QTextEdit, QVBoxLayout,
+    QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -1870,6 +1871,10 @@ class Ui_MainWindow(object):
 
         self.EStrengthLabelHLayout_3.addWidget(self.cardanoFromEntropyWordsQLabel)
 
+        self.horizontalSpacer_26 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.EStrengthLabelHLayout_3.addItem(self.horizontalSpacer_26)
+
 
         self.EStrengthVLayout_3.addWidget(self.cardanoFromEntropyWordsLabelContainerQFrame)
 
@@ -2026,99 +2031,123 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_36.addWidget(self.cardanoFromMnemonicClientAndPassphraseContainerQFrame)
 
-        self.cardanoFromMnemonicLanguageAndWordsContainerQFrame = QFrame(self.cardanoFromMnemonicQStackedWidget)
-        self.cardanoFromMnemonicLanguageAndWordsContainerQFrame.setObjectName(u"cardanoFromMnemonicLanguageAndWordsContainerQFrame")
-        self.cardanoFromMnemonicLanguageAndWordsContainerQFrame.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_40 = QHBoxLayout(self.cardanoFromMnemonicLanguageAndWordsContainerQFrame)
+        self.cardanoFromEntropyLanguageAndWordsContainerQFrame_2 = QFrame(self.cardanoFromMnemonicQStackedWidget)
+        self.cardanoFromEntropyLanguageAndWordsContainerQFrame_2.setObjectName(u"cardanoFromEntropyLanguageAndWordsContainerQFrame_2")
+        self.horizontalLayout_40 = QHBoxLayout(self.cardanoFromEntropyLanguageAndWordsContainerQFrame_2)
         self.horizontalLayout_40.setSpacing(15)
         self.horizontalLayout_40.setObjectName(u"horizontalLayout_40")
         self.horizontalLayout_40.setContentsMargins(0, 0, 0, 0)
-        self.cardanoFromMnemonicLanguageContainerQFrame = QFrame(self.cardanoFromMnemonicLanguageAndWordsContainerQFrame)
-        self.cardanoFromMnemonicLanguageContainerQFrame.setObjectName(u"cardanoFromMnemonicLanguageContainerQFrame")
-        self.MLanguageVLayout_3 = QVBoxLayout(self.cardanoFromMnemonicLanguageContainerQFrame)
-        self.MLanguageVLayout_3.setSpacing(5)
-        self.MLanguageVLayout_3.setObjectName(u"MLanguageVLayout_3")
-        self.MLanguageVLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.cardanoFromMnemonicLanguageLabelContainerQFrame = QWidget(self.cardanoFromMnemonicLanguageContainerQFrame)
-        self.cardanoFromMnemonicLanguageLabelContainerQFrame.setObjectName(u"cardanoFromMnemonicLanguageLabelContainerQFrame")
-        self.MLanguageLabelHLayout_3 = QHBoxLayout(self.cardanoFromMnemonicLanguageLabelContainerQFrame)
-        self.MLanguageLabelHLayout_3.setSpacing(15)
-        self.MLanguageLabelHLayout_3.setObjectName(u"MLanguageLabelHLayout_3")
-        self.MLanguageLabelHLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.cardanoFromMnemonicLanguageQLabel = QLabel(self.cardanoFromMnemonicLanguageLabelContainerQFrame)
-        self.cardanoFromMnemonicLanguageQLabel.setObjectName(u"cardanoFromMnemonicLanguageQLabel")
+        self.cardanoFromEntropyLanguageContainerQFrame_2 = QFrame(self.cardanoFromEntropyLanguageAndWordsContainerQFrame_2)
+        self.cardanoFromEntropyLanguageContainerQFrame_2.setObjectName(u"cardanoFromEntropyLanguageContainerQFrame_2")
+        self.ELanguageVLayout_6 = QVBoxLayout(self.cardanoFromEntropyLanguageContainerQFrame_2)
+        self.ELanguageVLayout_6.setSpacing(5)
+        self.ELanguageVLayout_6.setObjectName(u"ELanguageVLayout_6")
+        self.ELanguageVLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.cardanoFromEntropyLanguageLabelContainerQFrame_2 = QFrame(self.cardanoFromEntropyLanguageContainerQFrame_2)
+        self.cardanoFromEntropyLanguageLabelContainerQFrame_2.setObjectName(u"cardanoFromEntropyLanguageLabelContainerQFrame_2")
+        self.ELanguageLabelHLayout_6 = QHBoxLayout(self.cardanoFromEntropyLanguageLabelContainerQFrame_2)
+        self.ELanguageLabelHLayout_6.setSpacing(15)
+        self.ELanguageLabelHLayout_6.setObjectName(u"ELanguageLabelHLayout_6")
+        self.ELanguageLabelHLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.cardanoFromEntropyLanguageQLabel_2 = QLabel(self.cardanoFromEntropyLanguageLabelContainerQFrame_2)
+        self.cardanoFromEntropyLanguageQLabel_2.setObjectName(u"cardanoFromEntropyLanguageQLabel_2")
 
-        self.MLanguageLabelHLayout_3.addWidget(self.cardanoFromMnemonicLanguageQLabel)
+        self.ELanguageLabelHLayout_6.addWidget(self.cardanoFromEntropyLanguageQLabel_2)
 
+        self.horizontalSpacer_27 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.MLanguageVLayout_3.addWidget(self.cardanoFromMnemonicLanguageLabelContainerQFrame)
-
-        self.cardanoFromMnemonicLanguageQComboBox = QComboBox(self.cardanoFromMnemonicLanguageContainerQFrame)
-        self.cardanoFromMnemonicLanguageQComboBox.addItem("")
-        self.cardanoFromMnemonicLanguageQComboBox.addItem("")
-        self.cardanoFromMnemonicLanguageQComboBox.addItem("")
-        self.cardanoFromMnemonicLanguageQComboBox.addItem("")
-        self.cardanoFromMnemonicLanguageQComboBox.addItem("")
-        self.cardanoFromMnemonicLanguageQComboBox.addItem("")
-        self.cardanoFromMnemonicLanguageQComboBox.addItem("")
-        self.cardanoFromMnemonicLanguageQComboBox.addItem("")
-        self.cardanoFromMnemonicLanguageQComboBox.setObjectName(u"cardanoFromMnemonicLanguageQComboBox")
-
-        self.MLanguageVLayout_3.addWidget(self.cardanoFromMnemonicLanguageQComboBox)
+        self.ELanguageLabelHLayout_6.addItem(self.horizontalSpacer_27)
 
 
-        self.horizontalLayout_40.addWidget(self.cardanoFromMnemonicLanguageContainerQFrame)
+        self.ELanguageVLayout_6.addWidget(self.cardanoFromEntropyLanguageLabelContainerQFrame_2)
 
-        self.frame_62 = QFrame(self.cardanoFromMnemonicLanguageAndWordsContainerQFrame)
-        self.frame_62.setObjectName(u"frame_62")
-        self.verticalLayout_88 = QVBoxLayout(self.frame_62)
-        self.verticalLayout_88.setSpacing(5)
-        self.verticalLayout_88.setObjectName(u"verticalLayout_88")
-        self.verticalLayout_88.setContentsMargins(0, 0, 0, 0)
-        self.label_16 = QLabel(self.frame_62)
-        self.label_16.setObjectName(u"label_16")
+        self.cardanoFromEntropyLanguageQComboBox_2 = QComboBox(self.cardanoFromEntropyLanguageContainerQFrame_2)
+        self.cardanoFromEntropyLanguageQComboBox_2.addItem("")
+        self.cardanoFromEntropyLanguageQComboBox_2.addItem("")
+        self.cardanoFromEntropyLanguageQComboBox_2.addItem("")
+        self.cardanoFromEntropyLanguageQComboBox_2.addItem("")
+        self.cardanoFromEntropyLanguageQComboBox_2.addItem("")
+        self.cardanoFromEntropyLanguageQComboBox_2.addItem("")
+        self.cardanoFromEntropyLanguageQComboBox_2.addItem("")
+        self.cardanoFromEntropyLanguageQComboBox_2.addItem("")
+        self.cardanoFromEntropyLanguageQComboBox_2.setObjectName(u"cardanoFromEntropyLanguageQComboBox_2")
 
-        self.verticalLayout_88.addWidget(self.label_16)
-
-        self.comboBox_19 = QComboBox(self.frame_62)
-        self.comboBox_19.setObjectName(u"comboBox_19")
-
-        self.verticalLayout_88.addWidget(self.comboBox_19)
+        self.ELanguageVLayout_6.addWidget(self.cardanoFromEntropyLanguageQComboBox_2)
 
 
-        self.horizontalLayout_40.addWidget(self.frame_62)
+        self.horizontalLayout_40.addWidget(self.cardanoFromEntropyLanguageContainerQFrame_2)
 
-        self.cardanoFromMnemonicWordsContainerQFrame = QFrame(self.cardanoFromMnemonicLanguageAndWordsContainerQFrame)
-        self.cardanoFromMnemonicWordsContainerQFrame.setObjectName(u"cardanoFromMnemonicWordsContainerQFrame")
-        self.MStrengthVLayout_3 = QVBoxLayout(self.cardanoFromMnemonicWordsContainerQFrame)
-        self.MStrengthVLayout_3.setSpacing(5)
-        self.MStrengthVLayout_3.setObjectName(u"MStrengthVLayout_3")
-        self.MStrengthVLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.cardanoFromMnemonicWordsLabelContainerQFrame = QFrame(self.cardanoFromMnemonicWordsContainerQFrame)
-        self.cardanoFromMnemonicWordsLabelContainerQFrame.setObjectName(u"cardanoFromMnemonicWordsLabelContainerQFrame")
-        self.MStrengthLabelHLayout_11 = QHBoxLayout(self.cardanoFromMnemonicWordsLabelContainerQFrame)
-        self.MStrengthLabelHLayout_11.setSpacing(15)
-        self.MStrengthLabelHLayout_11.setObjectName(u"MStrengthLabelHLayout_11")
-        self.MStrengthLabelHLayout_11.setContentsMargins(0, 0, 0, 0)
-        self.cardanoFromMnemonicWordsQLabel = QLabel(self.cardanoFromMnemonicWordsLabelContainerQFrame)
-        self.cardanoFromMnemonicWordsQLabel.setObjectName(u"cardanoFromMnemonicWordsQLabel")
+        self.frame_88 = QFrame(self.cardanoFromEntropyLanguageAndWordsContainerQFrame_2)
+        self.frame_88.setObjectName(u"frame_88")
+        self.verticalLayout_93 = QVBoxLayout(self.frame_88)
+        self.verticalLayout_93.setSpacing(5)
+        self.verticalLayout_93.setObjectName(u"verticalLayout_93")
+        self.verticalLayout_93.setContentsMargins(0, 0, 0, 0)
+        self.frame_89 = QFrame(self.frame_88)
+        self.frame_89.setObjectName(u"frame_89")
+        self.horizontalLayout_97 = QHBoxLayout(self.frame_89)
+        self.horizontalLayout_97.setSpacing(15)
+        self.horizontalLayout_97.setObjectName(u"horizontalLayout_97")
+        self.horizontalLayout_97.setContentsMargins(0, 0, 0, 0)
+        self.label_43 = QLabel(self.frame_89)
+        self.label_43.setObjectName(u"label_43")
 
-        self.MStrengthLabelHLayout_11.addWidget(self.cardanoFromMnemonicWordsQLabel)
+        self.horizontalLayout_97.addWidget(self.label_43)
 
+        self.horizontalSpacer_28 = QSpacerItem(22, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.MStrengthVLayout_3.addWidget(self.cardanoFromMnemonicWordsLabelContainerQFrame)
-
-        self.cardanoFromMnemonicWordsQComboBox = QComboBox(self.cardanoFromMnemonicWordsContainerQFrame)
-        self.cardanoFromMnemonicWordsQComboBox.addItem("")
-        self.cardanoFromMnemonicWordsQComboBox.setObjectName(u"cardanoFromMnemonicWordsQComboBox")
-
-        self.MStrengthVLayout_3.addWidget(self.cardanoFromMnemonicWordsQComboBox)
+        self.horizontalLayout_97.addItem(self.horizontalSpacer_28)
 
 
-        self.horizontalLayout_40.addWidget(self.cardanoFromMnemonicWordsContainerQFrame)
+        self.verticalLayout_93.addWidget(self.frame_89)
+
+        self.comboBox_24 = QComboBox(self.frame_88)
+        self.comboBox_24.setObjectName(u"comboBox_24")
+
+        self.verticalLayout_93.addWidget(self.comboBox_24)
 
 
-        self.verticalLayout_36.addWidget(self.cardanoFromMnemonicLanguageAndWordsContainerQFrame)
+        self.horizontalLayout_40.addWidget(self.frame_88)
+
+        self.cardanoFromEntropyWordsContainerQFrame_2 = QFrame(self.cardanoFromEntropyLanguageAndWordsContainerQFrame_2)
+        self.cardanoFromEntropyWordsContainerQFrame_2.setObjectName(u"cardanoFromEntropyWordsContainerQFrame_2")
+        self.EStrengthVLayout_6 = QVBoxLayout(self.cardanoFromEntropyWordsContainerQFrame_2)
+        self.EStrengthVLayout_6.setSpacing(5)
+        self.EStrengthVLayout_6.setObjectName(u"EStrengthVLayout_6")
+        self.EStrengthVLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.cardanoFromEntropyWordsLabelContainerQFrame_2 = QFrame(self.cardanoFromEntropyWordsContainerQFrame_2)
+        self.cardanoFromEntropyWordsLabelContainerQFrame_2.setObjectName(u"cardanoFromEntropyWordsLabelContainerQFrame_2")
+        self.EStrengthLabelHLayout_6 = QHBoxLayout(self.cardanoFromEntropyWordsLabelContainerQFrame_2)
+        self.EStrengthLabelHLayout_6.setSpacing(15)
+        self.EStrengthLabelHLayout_6.setObjectName(u"EStrengthLabelHLayout_6")
+        self.EStrengthLabelHLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.cardanoFromEntropyWordsQLabel_2 = QLabel(self.cardanoFromEntropyWordsLabelContainerQFrame_2)
+        self.cardanoFromEntropyWordsQLabel_2.setObjectName(u"cardanoFromEntropyWordsQLabel_2")
+
+        self.EStrengthLabelHLayout_6.addWidget(self.cardanoFromEntropyWordsQLabel_2)
+
+        self.horizontalSpacer_29 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.EStrengthLabelHLayout_6.addItem(self.horizontalSpacer_29)
+
+
+        self.EStrengthVLayout_6.addWidget(self.cardanoFromEntropyWordsLabelContainerQFrame_2)
+
+        self.cardanoFromEntropyWordsQComboBox_2 = QComboBox(self.cardanoFromEntropyWordsContainerQFrame_2)
+        self.cardanoFromEntropyWordsQComboBox_2.addItem("")
+        self.cardanoFromEntropyWordsQComboBox_2.addItem("")
+        self.cardanoFromEntropyWordsQComboBox_2.addItem("")
+        self.cardanoFromEntropyWordsQComboBox_2.addItem("")
+        self.cardanoFromEntropyWordsQComboBox_2.addItem("")
+        self.cardanoFromEntropyWordsQComboBox_2.setObjectName(u"cardanoFromEntropyWordsQComboBox_2")
+
+        self.EStrengthVLayout_6.addWidget(self.cardanoFromEntropyWordsQComboBox_2)
+
+
+        self.horizontalLayout_40.addWidget(self.cardanoFromEntropyWordsContainerQFrame_2)
+
+
+        self.verticalLayout_36.addWidget(self.cardanoFromEntropyLanguageAndWordsContainerQFrame_2)
 
         self.cardanoQStackedWidget.addWidget(self.cardanoFromMnemonicQStackedWidget)
         self.cardanoFromSeedQStackedWidget = QWidget()
@@ -6264,8 +6293,9 @@ class Ui_MainWindow(object):
         self.outputTerminalQTextEdit = QTextEdit(self.outputQFrame)
         self.outputTerminalQTextEdit.setObjectName(u"outputTerminalQTextEdit")
         self.outputTerminalQTextEdit.setEnabled(False)
-        self.outputTerminalQTextEdit.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
-        self.outputTerminalQTextEdit.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.outputTerminalQTextEdit.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.outputTerminalQTextEdit.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.outputTerminalQTextEdit.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContents)
 
         self.verticalLayout_2.addWidget(self.outputTerminalQTextEdit)
 
@@ -6282,8 +6312,8 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.tabWidget.setCurrentIndex(1)
-        self.hdQStackedWidget.setCurrentIndex(1)
-        self.BIPQStackedWidget.setCurrentIndex(2)
+        self.hdQStackedWidget.setCurrentIndex(0)
+        self.BIPQStackedWidget.setCurrentIndex(5)
         self.cardanoQStackedWidget.setCurrentIndex(0)
         self.electrumV1QStackedWidget.setCurrentIndex(4)
         self.electrumV2QStackedWidget.setCurrentIndex(0)
@@ -6455,19 +6485,23 @@ class Ui_MainWindow(object):
 
         self.cardanoFromMnemonicPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.cardanoFromMnemonicPassphraseQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
-        self.cardanoFromMnemonicLanguageQLabel.setText(QCoreApplication.translate("MainWindow", u"Language", None))
-        self.cardanoFromMnemonicLanguageQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Chinese Simplified", None))
-        self.cardanoFromMnemonicLanguageQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Chinese Traditional", None))
-        self.cardanoFromMnemonicLanguageQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"English", None))
-        self.cardanoFromMnemonicLanguageQComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"French", None))
-        self.cardanoFromMnemonicLanguageQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Italian", None))
-        self.cardanoFromMnemonicLanguageQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Korean", None))
-        self.cardanoFromMnemonicLanguageQComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Japanese", None))
-        self.cardanoFromMnemonicLanguageQComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Spanish", None))
+        self.cardanoFromEntropyLanguageQLabel_2.setText(QCoreApplication.translate("MainWindow", u"Language", None))
+        self.cardanoFromEntropyLanguageQComboBox_2.setItemText(0, QCoreApplication.translate("MainWindow", u"Chinese Simplified", None))
+        self.cardanoFromEntropyLanguageQComboBox_2.setItemText(1, QCoreApplication.translate("MainWindow", u"Chinese Traditional", None))
+        self.cardanoFromEntropyLanguageQComboBox_2.setItemText(2, QCoreApplication.translate("MainWindow", u"English", None))
+        self.cardanoFromEntropyLanguageQComboBox_2.setItemText(3, QCoreApplication.translate("MainWindow", u"French", None))
+        self.cardanoFromEntropyLanguageQComboBox_2.setItemText(4, QCoreApplication.translate("MainWindow", u"Italian", None))
+        self.cardanoFromEntropyLanguageQComboBox_2.setItemText(5, QCoreApplication.translate("MainWindow", u"Korean", None))
+        self.cardanoFromEntropyLanguageQComboBox_2.setItemText(6, QCoreApplication.translate("MainWindow", u"Japanese", None))
+        self.cardanoFromEntropyLanguageQComboBox_2.setItemText(7, QCoreApplication.translate("MainWindow", u"Spanish", None))
 
-        self.label_16.setText(QCoreApplication.translate("MainWindow", u"Address Type", None))
-        self.cardanoFromMnemonicWordsQLabel.setText(QCoreApplication.translate("MainWindow", u"Words", None))
-        self.cardanoFromMnemonicWordsQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"12 Words", None))
+        self.label_43.setText(QCoreApplication.translate("MainWindow", u"Address Type", None))
+        self.cardanoFromEntropyWordsQLabel_2.setText(QCoreApplication.translate("MainWindow", u"Words", None))
+        self.cardanoFromEntropyWordsQComboBox_2.setItemText(0, QCoreApplication.translate("MainWindow", u"12 Words", None))
+        self.cardanoFromEntropyWordsQComboBox_2.setItemText(1, QCoreApplication.translate("MainWindow", u"15 Words", None))
+        self.cardanoFromEntropyWordsQComboBox_2.setItemText(2, QCoreApplication.translate("MainWindow", u"18 Words", None))
+        self.cardanoFromEntropyWordsQComboBox_2.setItemText(3, QCoreApplication.translate("MainWindow", u"21 Words", None))
+        self.cardanoFromEntropyWordsQComboBox_2.setItemText(4, QCoreApplication.translate("MainWindow", u"24 Words", None))
 
         self.cardanoFromSeedQLabel.setText(QCoreApplication.translate("MainWindow", u"Seed", None))
         self.ClientQLabel_9.setText(QCoreApplication.translate("MainWindow", u"cardano type", None))

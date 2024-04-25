@@ -1490,7 +1490,7 @@
               <item>
                <widget class="QStackedWidget" name="hdQStackedWidget">
                 <property name="currentIndex">
-                 <number>1</number>
+                 <number>0</number>
                 </property>
                 <widget class="QWidget" name="BIPsPageQWidget">
                  <layout class="QVBoxLayout" name="verticalLayout_21">
@@ -1512,7 +1512,7 @@
                   <item>
                    <widget class="QStackedWidget" name="BIPQStackedWidget">
                     <property name="currentIndex">
-                     <number>2</number>
+                     <number>5</number>
                     </property>
                     <widget class="QWidget" name="BIPFromEntropyQStackedWidget">
                      <layout class="QVBoxLayout" name="verticalLayout_22">
@@ -4303,6 +4303,19 @@
                                  </property>
                                 </widget>
                                </item>
+                               <item>
+                                <spacer name="horizontalSpacer_26">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
                               </layout>
                              </widget>
                             </item>
@@ -4660,10 +4673,7 @@
                        </widget>
                       </item>
                       <item>
-                       <widget class="QFrame" name="cardanoFromMnemonicLanguageAndWordsContainerQFrame">
-                        <property name="frameShadow">
-                         <enum>QFrame::Raised</enum>
-                        </property>
+                       <widget class="QFrame" name="cardanoFromEntropyLanguageAndWordsContainerQFrame_2">
                         <layout class="QHBoxLayout" name="horizontalLayout_40">
                          <property name="spacing">
                           <number>15</number>
@@ -4681,8 +4691,8 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="cardanoFromMnemonicLanguageContainerQFrame">
-                           <layout class="QVBoxLayout" name="MLanguageVLayout_3">
+                          <widget class="QFrame" name="cardanoFromEntropyLanguageContainerQFrame_2">
+                           <layout class="QVBoxLayout" name="ELanguageVLayout_6">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -4699,8 +4709,8 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QWidget" name="cardanoFromMnemonicLanguageLabelContainerQFrame" native="true">
-                              <layout class="QHBoxLayout" name="MLanguageLabelHLayout_3">
+                             <widget class="QFrame" name="cardanoFromEntropyLanguageLabelContainerQFrame_2">
+                              <layout class="QHBoxLayout" name="ELanguageLabelHLayout_6">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -4717,17 +4727,30 @@
                                 <number>0</number>
                                </property>
                                <item>
-                                <widget class="QLabel" name="cardanoFromMnemonicLanguageQLabel">
+                                <widget class="QLabel" name="cardanoFromEntropyLanguageQLabel_2">
                                  <property name="text">
                                   <string>Language</string>
                                  </property>
                                 </widget>
                                </item>
+                               <item>
+                                <spacer name="horizontalSpacer_27">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
                               </layout>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QComboBox" name="cardanoFromMnemonicLanguageQComboBox">
+                             <widget class="QComboBox" name="cardanoFromEntropyLanguageQComboBox_2">
                               <item>
                                <property name="text">
                                 <string>Chinese Simplified</string>
@@ -4774,8 +4797,8 @@
                           </widget>
                          </item>
                          <item>
-                          <widget class="QFrame" name="frame_62">
-                           <layout class="QVBoxLayout" name="verticalLayout_88">
+                          <widget class="QFrame" name="frame_88">
+                           <layout class="QVBoxLayout" name="verticalLayout_93">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -4792,39 +4815,8 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QLabel" name="label_16">
-                              <property name="text">
-                               <string>Address Type</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QComboBox" name="comboBox_19"/>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="cardanoFromMnemonicWordsContainerQFrame">
-                           <layout class="QVBoxLayout" name="MStrengthVLayout_3">
-                            <property name="spacing">
-                             <number>5</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QFrame" name="cardanoFromMnemonicWordsLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="MStrengthLabelHLayout_11">
+                             <widget class="QFrame" name="frame_89">
+                              <layout class="QHBoxLayout" name="horizontalLayout_97">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -4841,20 +4833,118 @@
                                 <number>0</number>
                                </property>
                                <item>
-                                <widget class="QLabel" name="cardanoFromMnemonicWordsQLabel">
+                                <widget class="QLabel" name="label_43">
                                  <property name="text">
-                                  <string>Words</string>
+                                  <string>Address Type</string>
                                  </property>
                                 </widget>
+                               </item>
+                               <item>
+                                <spacer name="horizontalSpacer_28">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>22</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
                                </item>
                               </layout>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QComboBox" name="cardanoFromMnemonicWordsQComboBox">
+                             <widget class="QComboBox" name="comboBox_24"/>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="cardanoFromEntropyWordsContainerQFrame_2">
+                           <layout class="QVBoxLayout" name="EStrengthVLayout_6">
+                            <property name="spacing">
+                             <number>5</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="cardanoFromEntropyWordsLabelContainerQFrame_2">
+                              <layout class="QHBoxLayout" name="EStrengthLabelHLayout_6">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="cardanoFromEntropyWordsQLabel_2">
+                                 <property name="text">
+                                  <string>Words</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="horizontalSpacer_29">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="cardanoFromEntropyWordsQComboBox_2">
                               <item>
                                <property name="text">
                                 <string>12 Words</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>15 Words</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>18 Words</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>21 Words</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>24 Words</string>
                                </property>
                               </item>
                              </widget>
@@ -14491,10 +14581,13 @@
           <bool>false</bool>
          </property>
          <property name="verticalScrollBarPolicy">
-          <enum>Qt::ScrollBarAlwaysOn</enum>
+          <enum>Qt::ScrollBarAsNeeded</enum>
          </property>
          <property name="horizontalScrollBarPolicy">
-          <enum>Qt::ScrollBarAlwaysOff</enum>
+          <enum>Qt::ScrollBarAsNeeded</enum>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QAbstractScrollArea::AdjustToContents</enum>
          </property>
         </widget>
        </item>

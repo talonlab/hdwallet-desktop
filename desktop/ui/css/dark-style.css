@@ -223,3 +223,84 @@ QTabBar QToolButton {
   background-color: #232629;
   background: #232629;
 }
+
+QScrollBar {
+    border: none;
+}
+/* For horizontal scrollbar */
+QScrollBar:horizontal {
+    border: none; /* Remove the border */
+    background: #83b9ff;
+    height: 8px;
+    margin: 0px 21px 0 21px;
+    border-radius: 0px;
+}
+QScrollBar::handle:horizontal {
+     background: #83b9ff;
+     min-width: 25px;
+     border-radius: 4px
+}
+QScrollBar::add-line:horizontal {
+     border: none;
+     background: [[ QScrollbar-addbar-horizontal-background-color ]];
+     width: 20px;
+     border-top-right-radius: 4px;
+     border-bottom-right-radius: 4px;
+     subcontrol-position: right;
+     subcontrol-origin: margin;
+}
+QScrollBar::sub-line:horizontal {
+     border: none;
+     background: [[ QScrollbar-subline-horizontal-background-color ]];
+     width: 20px;
+     border-top-left-radius: 4px;
+     border-bottom-left-radius: 4px;
+     subcontrol-position: left;
+     subcontrol-origin: margin;
+}
+QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal
+{
+     background: none;
+}
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
+{
+     background: none;
+}
+/* For vertical scrollbar */
+QScrollBar:vertical {
+    border: none; /* Remove the border */
+    background: #83b9ff;
+    width: 8px;
+    /*margin: 21px 0px 21px 0px;*/
+    border-radius: 4px;
+}
+ QScrollBar::handle:vertical {
+     background: #83b9ff;
+     min-height: 25px;
+     border-radius: 4px;
+ }
+ QScrollBar::add-line:vertical {
+     border: none;
+     background: green;
+     height: 20px;
+     border-bottom-left-radius: 4px;
+     border-bottom-right-radius: 4px;
+     subcontrol-position: bottom;
+     subcontrol-origin: margin;
+ }
+ QScrollBar::sub-line:vertical {
+     border: none;
+     height: 20px;
+     border-top-left-radius: 0px;
+     border-top-right-radius: 0px;
+     subcontrol-position: top;
+     subcontrol-origin: margin;
+ }
+ QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+     background: transparent;
+ }
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
+    background: #83b9ff;
+}
+
