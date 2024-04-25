@@ -285,7 +285,7 @@
                   <widget class="QPushButton" name="pushButton">
                    <property name="maximumSize">
                     <size>
-                     <width>75</width>
+                     <width>100</width>
                      <height>16777215</height>
                     </size>
                    </property>
@@ -563,7 +563,7 @@
                   <widget class="QPushButton" name="pushButton_3">
                    <property name="maximumSize">
                     <size>
-                     <width>75</width>
+                     <width>100</width>
                      <height>16777215</height>
                     </size>
                    </property>
@@ -841,7 +841,7 @@
                         <widget class="QPushButton" name="pushButton_8">
                          <property name="maximumSize">
                           <size>
-                           <width>75</width>
+                           <width>100</width>
                            <height>16777215</height>
                           </size>
                          </property>
@@ -1490,7 +1490,7 @@
               <item>
                <widget class="QStackedWidget" name="hdQStackedWidget">
                 <property name="currentIndex">
-                 <number>2</number>
+                 <number>1</number>
                 </property>
                 <widget class="QWidget" name="BIPsPageQWidget">
                  <layout class="QVBoxLayout" name="verticalLayout_21">
@@ -1512,7 +1512,7 @@
                   <item>
                    <widget class="QStackedWidget" name="BIPQStackedWidget">
                     <property name="currentIndex">
-                     <number>1</number>
+                     <number>2</number>
                     </property>
                     <widget class="QWidget" name="BIPFromEntropyQStackedWidget">
                      <layout class="QVBoxLayout" name="verticalLayout_22">
@@ -2673,10 +2673,10 @@
                        <number>0</number>
                       </property>
                       <item>
-                       <widget class="QFrame" name="BIPFromXPrivateKeyContainerQFrame">
-                        <layout class="QVBoxLayout" name="XPrivateKeyVLayout_2">
+                       <widget class="QFrame" name="frame_53">
+                        <layout class="QHBoxLayout" name="horizontalLayout_90">
                          <property name="spacing">
-                          <number>5</number>
+                          <number>15</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -2691,10 +2691,16 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="BIPFromXPrivateKeyLabelContainerQFrame">
-                           <layout class="QHBoxLayout" name="XPrivateKeyLabelHLayout_2">
+                          <widget class="QFrame" name="BIPFromPrivateKeyContainerQFrame_3">
+                           <property name="minimumSize">
+                            <size>
+                             <width>400</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <layout class="QVBoxLayout" name="PrivateKeyVLayout_7">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>5</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -2709,61 +2715,122 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QLabel" name="BIPFromXPrivateKeyQLabel">
-                              <property name="text">
-                               <string>XPrivate Key</string>
-                              </property>
+                             <widget class="QFrame" name="BIPFromPrivateKeyLabelContainerQFrame_3">
+                              <layout class="QHBoxLayout" name="PrivateKeyLabelHLayout_7">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="BIPFromPrivateKeyQLabel_3">
+                                 <property name="text">
+                                  <string>XPrivate Key</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="BIPFromPrivateKeyLabelContainerQFrameHSpacer_3">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>764</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
-                             <spacer name="BIPFromXPrivateKeyLabelContainerQFrameHSpacer">
-                              <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
-                              </property>
-                              <property name="sizeHint" stdset="0">
-                               <size>
-                                <width>764</width>
-                                <height>20</height>
-                               </size>
-                              </property>
-                             </spacer>
+                             <widget class="QLineEdit" name="BIPFromPrivateKeyQLineEdit_3"/>
                             </item>
                            </layout>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLineEdit" name="BIPFromXPrivateKeyQLineEdit"/>
-                         </item>
-                        </layout>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QFrame" name="frame_52">
-                        <layout class="QVBoxLayout" name="verticalLayout_78">
-                         <property name="spacing">
-                          <number>5</number>
-                         </property>
-                         <property name="leftMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="topMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="rightMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="bottomMargin">
-                          <number>0</number>
-                         </property>
-                         <item>
-                          <widget class="QLabel" name="label_32">
-                           <property name="text">
-                            <string>Public Key Type</string>
-                           </property>
+                          <widget class="QFrame" name="frame_82">
+                           <layout class="QVBoxLayout" name="verticalLayout_92">
+                            <property name="spacing">
+                             <number>5</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="frame_83">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QHBoxLayout" name="horizontalLayout_91">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="label_42">
+                                 <property name="text">
+                                  <string>Public Key Type</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="horizontalSpacer_20">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="comboBox_23"/>
+                            </item>
+                           </layout>
                           </widget>
-                         </item>
-                         <item>
-                          <widget class="QComboBox" name="comboBox_13"/>
                          </item>
                         </layout>
                        </widget>
@@ -2801,10 +2868,10 @@
                        <number>0</number>
                       </property>
                       <item>
-                       <widget class="QFrame" name="BIPFromXPublicKeyContainerQFrame">
-                        <layout class="QVBoxLayout" name="XPublicKeyVLayout_2">
+                       <widget class="QFrame" name="frame_51">
+                        <layout class="QHBoxLayout" name="horizontalLayout_82">
                          <property name="spacing">
-                          <number>5</number>
+                          <number>15</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -2819,10 +2886,10 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="BIPFromXPublicKeyLabelContainerQFrame">
-                           <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_2">
+                          <widget class="QFrame" name="BIPFromXPublicKeyContainerQFrame">
+                           <layout class="QVBoxLayout" name="XPublicKeyVLayout_2">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>5</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -2837,61 +2904,122 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QLabel" name="BIPFromXPublicKeyQLabel">
-                              <property name="text">
-                               <string>XPublic Key</string>
-                              </property>
+                             <widget class="QFrame" name="BIPFromXPublicKeyLabelContainerQFrame">
+                              <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_2">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="BIPFromXPublicKeyQLabel">
+                                 <property name="text">
+                                  <string>XPublic Key</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="BIPFromXPublicKeyLabelContainerQFrameHSpacer">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>764</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
-                             <spacer name="BIPFromXPublicKeyLabelContainerQFrameHSpacer">
-                              <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
-                              </property>
-                              <property name="sizeHint" stdset="0">
-                               <size>
-                                <width>764</width>
-                                <height>20</height>
-                               </size>
-                              </property>
-                             </spacer>
+                             <widget class="QLineEdit" name="BIPFromXPublicKeyQLineEdit"/>
                             </item>
                            </layout>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLineEdit" name="BIPFromXPublicKeyQLineEdit"/>
-                         </item>
-                        </layout>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QFrame" name="frame_51">
-                        <layout class="QVBoxLayout" name="verticalLayout_77">
-                         <property name="spacing">
-                          <number>5</number>
-                         </property>
-                         <property name="leftMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="topMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="rightMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="bottomMargin">
-                          <number>0</number>
-                         </property>
-                         <item>
-                          <widget class="QLabel" name="label_31">
-                           <property name="text">
-                            <string>Public Key Type</string>
-                           </property>
+                          <widget class="QFrame" name="frame_73">
+                           <layout class="QVBoxLayout" name="verticalLayout_77">
+                            <property name="spacing">
+                             <number>5</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="frame_74">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QHBoxLayout" name="horizontalLayout_83">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="label_31">
+                                 <property name="text">
+                                  <string>Public Key Type</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="horizontalSpacer_16">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="comboBox_12"/>
+                            </item>
+                           </layout>
                           </widget>
-                         </item>
-                         <item>
-                          <widget class="QComboBox" name="comboBox_12"/>
                          </item>
                         </layout>
                        </widget>
@@ -3000,105 +3128,6 @@
                        </widget>
                       </item>
                       <item>
-                       <widget class="QFrame" name="BIPFromWIFBIP38PassphraseContainerQFrame">
-                        <layout class="QVBoxLayout" name="verticalLayout_30">
-                         <property name="spacing">
-                          <number>5</number>
-                         </property>
-                         <property name="leftMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="topMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="rightMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="bottomMargin">
-                          <number>0</number>
-                         </property>
-                         <item>
-                          <widget class="QFrame" name="BIPFromWIFBIP38PassphraseCheckBoxContainerQFrame">
-                           <layout class="QHBoxLayout" name="EPassphraseLabelHLayout_4">
-                            <property name="spacing">
-                             <number>15</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QCheckBox" name="BIPFromWIFBIP38PassphraseQCheckBox">
-                              <property name="text">
-                               <string>BIP38 Passphrase</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <spacer name="BIPFromWIFBIP38PassphraseCheckBoxContainerQFrameHSpacer">
-                              <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
-                              </property>
-                              <property name="sizeHint" stdset="0">
-                               <size>
-                                <width>764</width>
-                                <height>20</height>
-                               </size>
-                              </property>
-                             </spacer>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="BIPFromWIFBIP38PassphraseGenerateContainerQFrame">
-                           <layout class="QHBoxLayout" name="horizontalLayout_32">
-                            <property name="spacing">
-                             <number>15</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QLineEdit" name="BIPFromWIFBIP38PassphraseQLineEdit"/>
-                            </item>
-                            <item>
-                             <widget class="QPushButton" name="BIPFromWIFBIP38PassphraseGenerateQPushButton">
-                              <property name="sizePolicy">
-                               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-                                <horstretch>0</horstretch>
-                                <verstretch>0</verstretch>
-                               </sizepolicy>
-                              </property>
-                              <property name="text">
-                               <string>Generate</string>
-                              </property>
-                             </widget>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                        </layout>
-                       </widget>
-                      </item>
-                      <item>
                        <widget class="QFrame" name="frame_50">
                         <property name="frameShape">
                          <enum>QFrame::StyledPanel</enum>
@@ -3106,9 +3135,9 @@
                         <property name="frameShadow">
                          <enum>QFrame::Raised</enum>
                         </property>
-                        <layout class="QVBoxLayout" name="verticalLayout_76">
+                        <layout class="QHBoxLayout" name="horizontalLayout_32">
                          <property name="spacing">
-                          <number>5</number>
+                          <number>15</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -3123,14 +3152,168 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QLabel" name="label_29">
-                           <property name="text">
-                            <string>Public Key Type</string>
-                           </property>
+                          <widget class="QFrame" name="BIPFromWIFBIP38PassphraseContainerQFrame">
+                           <layout class="QVBoxLayout" name="verticalLayout_30">
+                            <property name="spacing">
+                             <number>5</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="BIPFromWIFBIP38PassphraseCheckBoxContainerQFrame">
+                              <layout class="QHBoxLayout" name="EPassphraseLabelHLayout_4">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QCheckBox" name="BIPFromWIFBIP38PassphraseQCheckBox">
+                                 <property name="text">
+                                  <string>BIP38 Passphrase</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="BIPFromWIFBIP38PassphraseCheckBoxContainerQFrameHSpacer">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>764</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="BIPFromWIFBIP38PassphraseGenerateContainerQFrame">
+                              <layout class="QHBoxLayout" name="horizontalLayout_85">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLineEdit" name="BIPFromWIFBIP38PassphraseQLineEdit"/>
+                               </item>
+                               <item>
+                                <widget class="QPushButton" name="BIPFromWIFBIP38PassphraseGenerateQPushButton">
+                                 <property name="sizePolicy">
+                                  <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                                   <horstretch>0</horstretch>
+                                   <verstretch>0</verstretch>
+                                  </sizepolicy>
+                                 </property>
+                                 <property name="text">
+                                  <string>Generate</string>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QComboBox" name="comboBox_11"/>
+                          <widget class="QFrame" name="frame_75">
+                           <layout class="QVBoxLayout" name="verticalLayout_76">
+                            <property name="spacing">
+                             <number>5</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="frame_76">
+                              <layout class="QHBoxLayout" name="horizontalLayout_84">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="label_29">
+                                 <property name="text">
+                                  <string>Public Key Type</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="horizontalSpacer_17">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="comboBox_11"/>
+                            </item>
+                           </layout>
+                          </widget>
                          </item>
                         </layout>
                        </widget>
@@ -3168,16 +3351,10 @@
                        <number>0</number>
                       </property>
                       <item>
-                       <widget class="QFrame" name="BIPFromPrivateKeyContainerQFrame">
-                        <property name="minimumSize">
-                         <size>
-                          <width>400</width>
-                          <height>0</height>
-                         </size>
-                        </property>
-                        <layout class="QVBoxLayout" name="PrivateKeyVLayout_2">
+                       <widget class="QFrame" name="frame_54">
+                        <layout class="QHBoxLayout" name="horizontalLayout_86">
                          <property name="spacing">
-                          <number>5</number>
+                          <number>15</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -3192,10 +3369,16 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="BIPFromPrivateKeyLabelContainerQFrame">
-                           <layout class="QHBoxLayout" name="PrivateKeyLabelHLayout_2">
+                          <widget class="QFrame" name="BIPFromPrivateKeyContainerQFrame">
+                           <property name="minimumSize">
+                            <size>
+                             <width>400</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <layout class="QVBoxLayout" name="PrivateKeyVLayout_2">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>5</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -3210,61 +3393,122 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QLabel" name="BIPFromPrivateKeyQLabel">
-                              <property name="text">
-                               <string>Private Key</string>
-                              </property>
+                             <widget class="QFrame" name="BIPFromPrivateKeyLabelContainerQFrame">
+                              <layout class="QHBoxLayout" name="PrivateKeyLabelHLayout_2">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="BIPFromPrivateKeyQLabel">
+                                 <property name="text">
+                                  <string>Private Key</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="BIPFromPrivateKeyLabelContainerQFrameHSpacer">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>764</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
-                             <spacer name="BIPFromPrivateKeyLabelContainerQFrameHSpacer">
-                              <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
-                              </property>
-                              <property name="sizeHint" stdset="0">
-                               <size>
-                                <width>764</width>
-                                <height>20</height>
-                               </size>
-                              </property>
-                             </spacer>
+                             <widget class="QLineEdit" name="BIPFromPrivateKeyQLineEdit"/>
                             </item>
                            </layout>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLineEdit" name="BIPFromPrivateKeyQLineEdit"/>
-                         </item>
-                        </layout>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QFrame" name="frame_54">
-                        <layout class="QVBoxLayout" name="verticalLayout_80">
-                         <property name="spacing">
-                          <number>5</number>
-                         </property>
-                         <property name="leftMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="topMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="rightMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="bottomMargin">
-                          <number>0</number>
-                         </property>
-                         <item>
-                          <widget class="QLabel" name="label_34">
-                           <property name="text">
-                            <string>Public Key Type</string>
-                           </property>
+                          <widget class="QFrame" name="frame_77">
+                           <layout class="QVBoxLayout" name="verticalLayout_80">
+                            <property name="spacing">
+                             <number>5</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="frame_78">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QHBoxLayout" name="horizontalLayout_87">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="label_34">
+                                 <property name="text">
+                                  <string>Public Key Type</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="horizontalSpacer_18">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="comboBox_15"/>
+                            </item>
+                           </layout>
                           </widget>
-                         </item>
-                         <item>
-                          <widget class="QComboBox" name="comboBox_15"/>
                          </item>
                         </layout>
                        </widget>
@@ -3302,10 +3546,16 @@
                        <number>0</number>
                       </property>
                       <item>
-                       <widget class="QFrame" name="BIPFromPublicKeyContainerQFrame">
-                        <layout class="QVBoxLayout" name="PublicKeyVLayout_2">
+                       <widget class="QFrame" name="frame_79">
+                        <property name="frameShape">
+                         <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
+                        </property>
+                        <layout class="QHBoxLayout" name="horizontalLayout_88">
                          <property name="spacing">
-                          <number>5</number>
+                          <number>15</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -3320,10 +3570,16 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="BIPFromPublicKeyLabelContainerQFrame">
-                           <layout class="QHBoxLayout" name="PublicKeyLabelHLayout_2">
+                          <widget class="QFrame" name="BIPFromPrivateKeyContainerQFrame_2">
+                           <property name="minimumSize">
+                            <size>
+                             <width>400</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <layout class="QVBoxLayout" name="PrivateKeyVLayout_6">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>5</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -3338,58 +3594,122 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QLabel" name="BIPFromPublicKeyQLabel">
-                              <property name="text">
-                               <string>Public Key</string>
-                              </property>
+                             <widget class="QFrame" name="BIPFromPrivateKeyLabelContainerQFrame_2">
+                              <layout class="QHBoxLayout" name="PrivateKeyLabelHLayout_6">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="BIPFromPrivateKeyQLabel_2">
+                                 <property name="text">
+                                  <string>Public Key</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="BIPFromPrivateKeyLabelContainerQFrameHSpacer_2">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>764</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
-                             <spacer name="BIPFromPublicKeyLabelContainerQFrameHSpacer">
-                              <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
-                              </property>
-                              <property name="sizeHint" stdset="0">
-                               <size>
-                                <width>764</width>
-                                <height>20</height>
-                               </size>
-                              </property>
-                             </spacer>
+                             <widget class="QLineEdit" name="BIPFromPrivateKeyQLineEdit_2"/>
                             </item>
                            </layout>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLineEdit" name="BIPFromPublicKeyQLineEdit"/>
-                         </item>
-                        </layout>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QFrame" name="frame_53">
-                        <layout class="QVBoxLayout" name="verticalLayout_79">
-                         <property name="spacing">
-                          <number>5</number>
-                         </property>
-                         <property name="leftMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="topMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="rightMargin">
-                          <number>0</number>
-                         </property>
-                         <item>
-                          <widget class="QLabel" name="label_33">
-                           <property name="text">
-                            <string>Public Key Type</string>
-                           </property>
+                          <widget class="QFrame" name="frame_80">
+                           <layout class="QVBoxLayout" name="verticalLayout_82">
+                            <property name="spacing">
+                             <number>5</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="frame_81">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QHBoxLayout" name="horizontalLayout_89">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="label_41">
+                                 <property name="text">
+                                  <string>Public Key Type</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="horizontalSpacer_19">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="comboBox_22"/>
+                            </item>
+                           </layout>
                           </widget>
-                         </item>
-                         <item>
-                          <widget class="QComboBox" name="comboBox_14"/>
                          </item>
                         </layout>
                        </widget>
@@ -3433,7 +3753,7 @@
                   <item>
                    <widget class="QStackedWidget" name="cardanoQStackedWidget">
                     <property name="currentIndex">
-                     <number>5</number>
+                     <number>0</number>
                     </property>
                     <widget class="QWidget" name="cardanoFromEntropyQStackedWidget">
                      <layout class="QVBoxLayout" name="verticalLayout_34">
@@ -3813,7 +4133,7 @@
                                 </widget>
                                </item>
                                <item>
-                                <spacer name="cardanoFromEntropyLanguageLabelContainerQFrameHSpacer">
+                                <spacer name="horizontalSpacer_24">
                                  <property name="orientation">
                                   <enum>Qt::Horizontal</enum>
                                  </property>
@@ -3876,10 +4196,68 @@
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLabel" name="label">
-                           <property name="text">
-                            <string>address type</string>
-                           </property>
+                          <widget class="QFrame" name="frame_63">
+                           <layout class="QVBoxLayout" name="verticalLayout_89">
+                            <property name="spacing">
+                             <number>5</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="frame_87">
+                              <layout class="QHBoxLayout" name="horizontalLayout_96">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="label_39">
+                                 <property name="text">
+                                  <string>Address Type</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="horizontalSpacer_25">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>22</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="comboBox_20"/>
+                            </item>
+                           </layout>
                           </widget>
                          </item>
                          <item>
@@ -3924,19 +4302,6 @@
                                   <string>Words</string>
                                  </property>
                                 </widget>
-                               </item>
-                               <item>
-                                <spacer name="cardanoFromEntropyWordsLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>40</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
                                </item>
                               </layout>
                              </widget>
@@ -4358,19 +4723,6 @@
                                  </property>
                                 </widget>
                                </item>
-                               <item>
-                                <spacer name="cardanoFromMnemonicLanguageLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>40</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
                               </layout>
                              </widget>
                             </item>
@@ -4422,10 +4774,34 @@
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLabel" name="label_4">
-                           <property name="text">
-                            <string>address type</string>
-                           </property>
+                          <widget class="QFrame" name="frame_62">
+                           <layout class="QVBoxLayout" name="verticalLayout_88">
+                            <property name="spacing">
+                             <number>5</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="label_16">
+                              <property name="text">
+                               <string>Address Type</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="comboBox_19"/>
+                            </item>
+                           </layout>
                           </widget>
                          </item>
                          <item>
@@ -4470,19 +4846,6 @@
                                   <string>Words</string>
                                  </property>
                                 </widget>
-                               </item>
-                               <item>
-                                <spacer name="cardanoFromMnemonicWordsLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>40</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
                                </item>
                               </layout>
                              </widget>
@@ -5122,7 +5485,7 @@
                                <item>
                                 <widget class="QLabel" name="ClientQLabel_12">
                                  <property name="text">
-                                  <string>cardano type</string>
+                                  <string>Cardano Type</string>
                                  </property>
                                 </widget>
                                </item>
@@ -6295,7 +6658,7 @@
                   <item>
                    <widget class="QStackedWidget" name="electrumV1QStackedWidget">
                     <property name="currentIndex">
-                     <number>1</number>
+                     <number>4</number>
                     </property>
                     <widget class="QWidget" name="electrumV1FromEntropyQStackedWidget">
                      <layout class="QVBoxLayout" name="verticalLayout_46">
@@ -7412,6 +7775,77 @@
                              <number>0</number>
                             </property>
                             <item>
+                             <widget class="QFrame" name="electrumV1FromSeedContainerQFrame">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QVBoxLayout" name="verticalLayout_50">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="electrumV1FromSeedLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="SeedLabelHLayout_4">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="electrumV1FromSeedQLabel">
+                                    <property name="text">
+                                     <string>Seed</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="electrumV1FromSeedLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLineEdit" name="electrumV1FromSeedQLineEdit"/>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
                              <widget class="QFrame" name="electrumV1FromClientContainerQFrame">
                               <property name="minimumSize">
                                <size>
@@ -7509,77 +7943,6 @@
                                   </property>
                                  </item>
                                 </widget>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QFrame" name="electrumV1FromSeedContainerQFrame">
-                              <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
-                              </property>
-                              <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
-                              </property>
-                              <layout class="QVBoxLayout" name="verticalLayout_50">
-                               <property name="spacing">
-                                <number>5</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QFrame" name="electrumV1FromSeedLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="SeedLabelHLayout_4">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="electrumV1FromSeedQLabel">
-                                    <property name="text">
-                                     <string>Seed</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <spacer name="electrumV1FromSeedLabelContainerQFrameHSpacer">
-                                    <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
-                                    </property>
-                                    <property name="sizeHint" stdset="0">
-                                     <size>
-                                      <width>764</width>
-                                      <height>20</height>
-                                     </size>
-                                    </property>
-                                   </spacer>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QLineEdit" name="electrumV1FromSeedQLineEdit"/>
                                </item>
                               </layout>
                              </widget>
@@ -7695,9 +8058,9 @@
                       </item>
                       <item>
                        <widget class="QFrame" name="frame_55">
-                        <layout class="QVBoxLayout" name="verticalLayout_81">
+                        <layout class="QHBoxLayout" name="horizontalLayout_52">
                          <property name="spacing">
-                          <number>5</number>
+                          <number>15</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -7712,41 +8075,10 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QLabel" name="label_35">
-                           <property name="text">
-                            <string>Public Key Type</string>
-                           </property>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QComboBox" name="comboBox_16"/>
-                         </item>
-                        </layout>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QFrame" name="electrumV1FromWIFBIP38PassphraseContainerQFrame">
-                        <layout class="QVBoxLayout" name="verticalLayout_54">
-                         <property name="spacing">
-                          <number>5</number>
-                         </property>
-                         <property name="leftMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="topMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="rightMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="bottomMargin">
-                          <number>0</number>
-                         </property>
-                         <item>
-                          <widget class="QFrame" name="electrumV1FromWIFBIP38PassphraseCheckBoxContainerQFrame">
-                           <layout class="QHBoxLayout" name="EPassphraseLabelHLayout_8">
+                          <widget class="QFrame" name="electrumV1FromWIFBIP38PassphraseContainerQFrame">
+                           <layout class="QVBoxLayout" name="verticalLayout_54">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>5</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -7761,33 +8093,91 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QCheckBox" name="electrumV1FromWIFBIP38PassphraseQCheckBox">
-                              <property name="text">
-                               <string>BIP38 Passphrase</string>
-                              </property>
+                             <widget class="QFrame" name="electrumV1FromWIFBIP38PassphraseCheckBoxContainerQFrame">
+                              <layout class="QHBoxLayout" name="EPassphraseLabelHLayout_8">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QCheckBox" name="electrumV1FromWIFBIP38PassphraseQCheckBox">
+                                 <property name="text">
+                                  <string>BIP38 Passphrase</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="electrumV1FromWIFBIP38PassphraseContainerQFrameHSpacer">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>764</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
-                             <spacer name="electrumV1FromWIFBIP38PassphraseContainerQFrameHSpacer">
-                              <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
-                              </property>
-                              <property name="sizeHint" stdset="0">
-                               <size>
-                                <width>764</width>
-                                <height>20</height>
-                               </size>
-                              </property>
-                             </spacer>
+                             <widget class="QFrame" name="electrumV1FromWIFBIP38PassphraseGenerateContainerQFrame">
+                              <layout class="QHBoxLayout" name="horizontalLayout_76">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLineEdit" name="electrumV1FromWIFBIP38PassphraseQLineEdit"/>
+                               </item>
+                               <item>
+                                <widget class="QPushButton" name="electrumV1FromWIFBIP38PassphraseQPushButton">
+                                 <property name="sizePolicy">
+                                  <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                                   <horstretch>0</horstretch>
+                                   <verstretch>0</verstretch>
+                                  </sizepolicy>
+                                 </property>
+                                 <property name="text">
+                                  <string>Generate</string>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
                             </item>
                            </layout>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QFrame" name="electrumV1FromWIFBIP38PassphraseGenerateContainerQFrame">
-                           <layout class="QHBoxLayout" name="horizontalLayout_52">
+                          <widget class="QFrame" name="frame_66">
+                           <layout class="QVBoxLayout" name="verticalLayout_81">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>5</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -7802,20 +8192,54 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QLineEdit" name="electrumV1FromWIFBIP38PassphraseQLineEdit"/>
+                             <widget class="QFrame" name="frame_67">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QHBoxLayout" name="horizontalLayout_77">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="label_35">
+                                 <property name="text">
+                                  <string>Public Key Type</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="horizontalSpacer_12">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
+                             </widget>
                             </item>
                             <item>
-                             <widget class="QPushButton" name="electrumV1FromWIFBIP38PassphraseQPushButton">
-                              <property name="sizePolicy">
-                               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-                                <horstretch>0</horstretch>
-                                <verstretch>0</verstretch>
-                               </sizepolicy>
-                              </property>
-                              <property name="text">
-                               <string>Generate</string>
-                              </property>
-                             </widget>
+                             <widget class="QComboBox" name="comboBox_16"/>
                             </item>
                            </layout>
                           </widget>
@@ -7856,16 +8280,13 @@
                        <number>0</number>
                       </property>
                       <item>
-                       <widget class="QFrame" name="electrumV1FromPrivateKeyContainerQFrame">
-                        <property name="minimumSize">
-                         <size>
-                          <width>400</width>
-                          <height>0</height>
-                         </size>
+                       <widget class="QFrame" name="frame_56">
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
                         </property>
-                        <layout class="QVBoxLayout" name="PrivateKeyVLayout_4">
+                        <layout class="QHBoxLayout" name="horizontalLayout_72">
                          <property name="spacing">
-                          <number>5</number>
+                          <number>15</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -7880,10 +8301,16 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="electrumV1FromPrivateKeyLabelContainerQFrame">
-                           <layout class="QHBoxLayout" name="PrivateKeyLabelHLayout_4">
+                          <widget class="QFrame" name="electrumV1FromPrivateKeyContainerQFrame">
+                           <property name="minimumSize">
+                            <size>
+                             <width>400</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <layout class="QVBoxLayout" name="PrivateKeyVLayout_4">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>5</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -7898,61 +8325,116 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QLabel" name="electrumV1FromPrivateKeyQLabel">
-                              <property name="text">
-                               <string>Private Key</string>
-                              </property>
+                             <widget class="QFrame" name="electrumV1FromPrivateKeyLabelContainerQFrame">
+                              <layout class="QHBoxLayout" name="PrivateKeyLabelHLayout_4">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="electrumV1FromPrivateKeyQLabel">
+                                 <property name="text">
+                                  <string>Private Key</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="electrumV1FromPrivateKeyLabelContainerQFrameHSpacer">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>764</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
-                             <spacer name="electrumV1FromPrivateKeyLabelContainerQFrameHSpacer">
-                              <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
-                              </property>
-                              <property name="sizeHint" stdset="0">
-                               <size>
-                                <width>764</width>
-                                <height>20</height>
-                               </size>
-                              </property>
-                             </spacer>
+                             <widget class="QLineEdit" name="electrumV1FromPrivateKeyQLineEdit"/>
                             </item>
                            </layout>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLineEdit" name="electrumV1FromPrivateKeyQLineEdit"/>
-                         </item>
-                        </layout>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QFrame" name="frame_56">
-                        <layout class="QVBoxLayout" name="verticalLayout_82">
-                         <property name="spacing">
-                          <number>5</number>
-                         </property>
-                         <property name="leftMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="topMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="rightMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="bottomMargin">
-                          <number>0</number>
-                         </property>
-                         <item>
-                          <widget class="QLabel" name="label_36">
-                           <property name="text">
-                            <string>Public Key Type</string>
-                           </property>
+                          <widget class="QFrame" name="frame_64">
+                           <layout class="QVBoxLayout" name="verticalLayout_91">
+                            <property name="spacing">
+                             <number>5</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="frame_71">
+                              <layout class="QHBoxLayout" name="horizontalLayout_80">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="label_40">
+                                 <property name="text">
+                                  <string>Public Key Type</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="horizontalSpacer_14">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="comboBox_21"/>
+                            </item>
+                           </layout>
                           </widget>
-                         </item>
-                         <item>
-                          <widget class="QComboBox" name="comboBox_17"/>
                          </item>
                         </layout>
                        </widget>
@@ -7990,10 +8472,10 @@
                        <number>0</number>
                       </property>
                       <item>
-                       <widget class="QFrame" name="electrumV1FromPublicKeyContainerQFrame">
-                        <layout class="QVBoxLayout" name="PublicKeyVLayout_4">
+                       <widget class="QFrame" name="frame_57">
+                        <layout class="QHBoxLayout" name="horizontalLayout_78">
                          <property name="spacing">
-                          <number>5</number>
+                          <number>15</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -8008,10 +8490,10 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="electrumV1FromPublicKeyLabelContainerQFrame">
-                           <layout class="QHBoxLayout" name="PublicKeyLabelHLayout_4">
+                          <widget class="QFrame" name="electrumV1FromPublicKeyContainerQFrame">
+                           <layout class="QVBoxLayout" name="PublicKeyVLayout_4">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>5</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -8026,61 +8508,122 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QLabel" name="electrumV1FromPublicKeyQLabel">
-                              <property name="text">
-                               <string>Public Key</string>
-                              </property>
+                             <widget class="QFrame" name="electrumV1FromPublicKeyLabelContainerQFrame">
+                              <layout class="QHBoxLayout" name="PublicKeyLabelHLayout_4">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="electrumV1FromPublicKeyQLabel">
+                                 <property name="text">
+                                  <string>Public Key</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="electrumV1FromPublicKeyLabelContainerQFrameHSpacer">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>764</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
-                             <spacer name="electrumV1FromPublicKeyLabelContainerQFrameHSpacer">
-                              <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
-                              </property>
-                              <property name="sizeHint" stdset="0">
-                               <size>
-                                <width>764</width>
-                                <height>20</height>
-                               </size>
-                              </property>
-                             </spacer>
+                             <widget class="QLineEdit" name="electrumV1FromPublicKeyQLineEdit"/>
                             </item>
                            </layout>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLineEdit" name="electrumV1FromPublicKeyQLineEdit"/>
-                         </item>
-                        </layout>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QFrame" name="frame_57">
-                        <layout class="QVBoxLayout" name="verticalLayout_83">
-                         <property name="spacing">
-                          <number>5</number>
-                         </property>
-                         <property name="leftMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="topMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="rightMargin">
-                          <number>0</number>
-                         </property>
-                         <property name="bottomMargin">
-                          <number>0</number>
-                         </property>
-                         <item>
-                          <widget class="QLabel" name="label_37">
-                           <property name="text">
-                            <string>Public Key Type</string>
-                           </property>
+                          <widget class="QFrame" name="frame_68">
+                           <layout class="QVBoxLayout" name="verticalLayout_83">
+                            <property name="spacing">
+                             <number>5</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="frame_69">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QHBoxLayout" name="horizontalLayout_79">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="label_37">
+                                 <property name="text">
+                                  <string>Public Key Type</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="horizontalSpacer_13">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="comboBox_18"/>
+                            </item>
+                           </layout>
                           </widget>
-                         </item>
-                         <item>
-                          <widget class="QComboBox" name="comboBox_18"/>
                          </item>
                         </layout>
                        </widget>
@@ -8124,7 +8667,7 @@
                   <item>
                    <widget class="QStackedWidget" name="electrumV2QStackedWidget">
                     <property name="currentIndex">
-                     <number>2</number>
+                     <number>0</number>
                     </property>
                     <widget class="QWidget" name="electrumV2FromEntropyQStackedWidget">
                      <layout class="QVBoxLayout" name="verticalLayout_58">
@@ -8266,45 +8809,54 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QLabel" name="label_14">
-                              <property name="text">
-                               <string>Mode</string>
+                             <widget class="QFrame" name="frame_52">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
                               </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QHBoxLayout" name="horizontalLayout_92">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="label_14">
+                                 <property name="text">
+                                  <string>Mode</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="horizontalSpacer_21">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>16</width>
+                                   <height>19</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
                              <widget class="QComboBox" name="comboBox_9"/>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="frame_49">
-                           <layout class="QVBoxLayout" name="verticalLayout_75">
-                            <property name="spacing">
-                             <number>5</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QLabel" name="label_21">
-                              <property name="text">
-                               <string>Mnemonic</string>
-                              </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QComboBox" name="comboBox_10"/>
                             </item>
                            </layout>
                           </widget>
@@ -8565,19 +9117,6 @@
                                  </property>
                                 </widget>
                                </item>
-                               <item>
-                                <spacer name="electrumV2FromEntropyLanguageLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>40</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
                               </layout>
                              </widget>
                             </item>
@@ -8671,19 +9210,6 @@
                                  </property>
                                 </widget>
                                </item>
-                               <item>
-                                <spacer name="electrumV2FromEntropyWordsLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>40</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
                               </layout>
                              </widget>
                             </item>
@@ -8719,6 +9245,37 @@
                            </layout>
                           </widget>
                          </item>
+                         <item>
+                          <widget class="QFrame" name="frame_49">
+                           <layout class="QVBoxLayout" name="verticalLayout_75">
+                            <property name="spacing">
+                             <number>5</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QLabel" name="label_21">
+                              <property name="text">
+                               <string>Mnemonic Type</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="comboBox_10"/>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
                         </layout>
                        </widget>
                       </item>
@@ -8742,10 +9299,10 @@
                        <number>0</number>
                       </property>
                       <item>
-                       <widget class="QFrame" name="electrumV2FromMnemonicContainerQFrame">
-                        <layout class="QVBoxLayout" name="MnemonicVLayout_5">
+                       <widget class="QFrame" name="frame_28">
+                        <layout class="QHBoxLayout" name="horizontalLayout_57">
                          <property name="spacing">
-                          <number>5</number>
+                          <number>15</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -8760,10 +9317,10 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="electrumV2FromMnemonicLabelContainerQFrame">
-                           <layout class="QHBoxLayout" name="MnemonicLabelHLayout_5">
+                          <widget class="QFrame" name="electrumV2FromMnemonicContainerQFrame">
+                           <layout class="QVBoxLayout" name="MnemonicVLayout_5">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>5</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -8778,33 +9335,84 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QLabel" name="electrumV2FromMnemonicQLabel">
-                              <property name="text">
-                               <string>Mnemonic</string>
-                              </property>
+                             <widget class="QFrame" name="electrumV2FromMnemonicLabelContainerQFrame">
+                              <layout class="QHBoxLayout" name="MnemonicLabelHLayout_5">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="electrumV2FromMnemonicQLabel">
+                                 <property name="text">
+                                  <string>Mnemonic</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="electrumV2FromMnemonicLabelContainerQFrameHSpacer">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>764</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
-                             <spacer name="electrumV2FromMnemonicLabelContainerQFrameHSpacer">
-                              <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
-                              </property>
-                              <property name="sizeHint" stdset="0">
-                               <size>
-                                <width>764</width>
-                                <height>20</height>
-                               </size>
-                              </property>
-                             </spacer>
+                             <widget class="QFrame" name="electrumV2FromMnemonicGenerateContainerQFrame">
+                              <layout class="QHBoxLayout" name="horizontalLayout_93">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLineEdit" name="electrumV2FromMnemonicGenerateQLineEdit"/>
+                               </item>
+                              </layout>
+                             </widget>
                             </item>
                            </layout>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QFrame" name="electrumV2FromMnemonicGenerateContainerQFrame">
-                           <layout class="QHBoxLayout" name="horizontalLayout_57">
+                          <widget class="QFrame" name="frame_84">
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_71">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>5</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -8819,7 +9427,48 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QLineEdit" name="electrumV2FromMnemonicGenerateQLineEdit"/>
+                             <widget class="QFrame" name="frame_86">
+                              <layout class="QHBoxLayout" name="horizontalLayout_95">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="label_13">
+                                 <property name="text">
+                                  <string>Mnemonic Type</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="horizontalSpacer_22">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>49</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QComboBox" name="comboBox_6"/>
                             </item>
                            </layout>
                           </widget>
@@ -8847,6 +9496,12 @@
                          </property>
                          <item>
                           <widget class="QFrame" name="frame_41">
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
                            <layout class="QVBoxLayout" name="verticalLayout_72">
                             <property name="spacing">
                              <number>5</number>
@@ -8864,63 +9519,58 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QLabel" name="label_12">
-                              <property name="text">
-                               <string>Mode</string>
-                              </property>
+                             <widget class="QFrame" name="frame_85">
+                              <layout class="QHBoxLayout" name="horizontalLayout_94">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="label_32">
+                                 <property name="text">
+                                  <string>Mode</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="horizontalSpacer_23">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>49</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QComboBox" name="comboBox_7"/>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="frame_28">
-                           <property name="frameShape">
-                            <enum>QFrame::StyledPanel</enum>
-                           </property>
-                           <property name="frameShadow">
-                            <enum>QFrame::Raised</enum>
-                           </property>
-                           <layout class="QVBoxLayout" name="verticalLayout_71">
-                            <property name="spacing">
-                             <number>5</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QLabel" name="label_13">
-                              <property name="text">
-                               <string>Mnemonic Type</string>
+                             <widget class="QComboBox" name="comboBox_7">
+                              <property name="placeholderText">
+                               <string/>
                               </property>
                              </widget>
-                            </item>
-                            <item>
-                             <widget class="QComboBox" name="comboBox_6"/>
                             </item>
                            </layout>
                           </widget>
                          </item>
                          <item>
                           <widget class="QFrame" name="electrumV2FromMnemonicClientContainerQFrame">
-                           <property name="minimumSize">
-                            <size>
-                             <width>150</width>
-                             <height>0</height>
-                            </size>
-                           </property>
                            <layout class="QVBoxLayout" name="ClientVLayout_14">
                             <property name="spacing">
                              <number>5</number>
@@ -9431,7 +10081,7 @@
                   <item>
                    <widget class="QStackedWidget" name="moneroQStackedWidget">
                     <property name="currentIndex">
-                     <number>0</number>
+                     <number>2</number>
                     </property>
                     <widget class="QWidget" name="moneroFromEntropyQStackedWidget">
                      <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -9690,10 +10340,44 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QLabel" name="label_38">
-                              <property name="text">
-                               <string>Payment ID</string>
-                              </property>
+                             <widget class="QFrame" name="frame_72">
+                              <layout class="QHBoxLayout" name="horizontalLayout_81">
+                               <property name="spacing">
+                                <number>15</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="label_38">
+                                 <property name="text">
+                                  <string>Payment ID</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <spacer name="horizontalSpacer_15">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>40</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
@@ -10306,77 +10990,6 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QFrame" name="ClientQFrame_3">
-                              <property name="minimumSize">
-                               <size>
-                                <width>150</width>
-                                <height>0</height>
-                               </size>
-                              </property>
-                              <layout class="QVBoxLayout" name="ClientVLayout_3">
-                               <property name="spacing">
-                                <number>5</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QFrame" name="ClientLabelQFrame_3">
-                                 <layout class="QHBoxLayout" name="MStrengthLabelHLayout_5">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="ClientQLabel_3">
-                                    <property name="text">
-                                     <string>Payment ID</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <spacer name="ClientLabelHSpacer_3">
-                                    <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
-                                    </property>
-                                    <property name="sizeHint" stdset="0">
-                                     <size>
-                                      <width>40</width>
-                                      <height>20</height>
-                                     </size>
-                                    </property>
-                                   </spacer>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QLineEdit" name="lineEdit_7"/>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
                              <widget class="QFrame" name="frame_21">
                               <property name="frameShape">
                                <enum>QFrame::StyledPanel</enum>
@@ -10443,6 +11056,77 @@
                                </item>
                                <item>
                                 <widget class="QLineEdit" name="SeedQLineEdit"/>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="ClientQFrame_3">
+                              <property name="minimumSize">
+                               <size>
+                                <width>150</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <layout class="QVBoxLayout" name="ClientVLayout_3">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="ClientLabelQFrame_3">
+                                 <layout class="QHBoxLayout" name="MStrengthLabelHLayout_5">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="ClientQLabel_3">
+                                    <property name="text">
+                                     <string>Payment ID</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="ClientLabelHSpacer_3">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>40</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLineEdit" name="lineEdit_7"/>
                                </item>
                               </layout>
                              </widget>
@@ -10688,6 +11372,9 @@
                           <number>0</number>
                          </property>
                          <property name="topMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="rightMargin">
                           <number>0</number>
                          </property>
                          <property name="bottomMargin">
@@ -13802,6 +14489,12 @@
         <widget class="QTextEdit" name="outputTerminalQTextEdit">
          <property name="enabled">
           <bool>false</bool>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOn</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
          </property>
         </widget>
        </item>
