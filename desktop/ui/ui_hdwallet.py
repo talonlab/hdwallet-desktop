@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletOJaIss.ui'
+## Form generated from reading UI file 'hdwalletYNktGD.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -17,9 +17,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QCheckBox, QComboBox,
     QFrame, QHBoxLayout, QLabel, QLineEdit,
-    QMainWindow, QPushButton, QSizePolicy, QSpacerItem,
-    QStackedWidget, QTabWidget, QTextEdit, QVBoxLayout,
-    QWidget)
+    QMainWindow, QPushButton, QScrollArea, QSizePolicy,
+    QSpacerItem, QStackedWidget, QTabWidget, QTextEdit,
+    QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -6290,14 +6290,26 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_2.addWidget(self.frame_24)
 
-        self.outputTerminalQTextEdit = QTextEdit(self.outputQFrame)
+        self.scrollArea = QScrollArea(self.outputQFrame)
+        self.scrollArea.setObjectName(u"scrollArea")
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollAreaWidgetContents = QWidget()
+        self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 398, 460))
+        self.verticalLayout_78 = QVBoxLayout(self.scrollAreaWidgetContents)
+        self.verticalLayout_78.setObjectName(u"verticalLayout_78")
+        self.outputTerminalQTextEdit = QTextEdit(self.scrollAreaWidgetContents)
         self.outputTerminalQTextEdit.setObjectName(u"outputTerminalQTextEdit")
         self.outputTerminalQTextEdit.setEnabled(False)
         self.outputTerminalQTextEdit.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
         self.outputTerminalQTextEdit.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
         self.outputTerminalQTextEdit.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContents)
 
-        self.verticalLayout_2.addWidget(self.outputTerminalQTextEdit)
+        self.verticalLayout_78.addWidget(self.outputTerminalQTextEdit)
+
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+
+        self.verticalLayout_2.addWidget(self.scrollArea)
 
         self.outputTerminalQLineEdit = QLineEdit(self.outputQFrame)
         self.outputTerminalQLineEdit.setObjectName(u"outputTerminalQLineEdit")
