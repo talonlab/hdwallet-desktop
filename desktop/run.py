@@ -1,3 +1,5 @@
+import subprocess
+
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QPushButton, QVBoxLayout, QHBoxLayout, QFrame
 from PySide6.QtCore import QFile, Qt
 
@@ -31,7 +33,21 @@ class MyMainWindow(QMainWindow):
         )
         self.toggle_expand_terminal.setCheckable(True)
         self.toggle_expand_terminal.toggled.connect(self.toggle_expand)
+        self.ui.outputTerminalQLineEdit.returnPressed.connect(self.process_command)
         self.detached_window = None
+
+    def process_command(self):
+        result = subprocess.run(
+                    f'hdwallet {self.ui.outputTerminalQLineEdit.text()}',
+                    shell=True, 
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE
+                )
+
+        output = result.stderr if result.stderr else result.stdout
+
+        self.ui.outputTerminalQLineEdit.setText(None)
+        self.ui.outputTerminalQTextEdit.setText(output.decode())
 
     def toggle_expand(self):
         if self.toggle_expand_terminal.isChecked():
@@ -40,7 +56,7 @@ class MyMainWindow(QMainWindow):
 
             self.layout().removeWidget(self.ui.outputQFrame)
             self.detached_window = DetachedWindow(self)
-            self.detached_window.setWindowTitle("Detached Red Frame")
+            self.detached_window.setWindowTitle("Hierarchical Deterministic Wallet - Output")
             self.detached_window.resize(self.ui.outputQFrame.width(), self.ui.outputQFrame.height())
 
             layout = QVBoxLayout()
