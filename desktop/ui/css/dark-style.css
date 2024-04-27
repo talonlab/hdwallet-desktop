@@ -180,6 +180,11 @@ QTabBar{
   font-weight: bold;
 }
 
+QTabWidget::pane {
+    border: 0;
+}
+
+
 QTabBar::tab {
   color: #ffffff;
   border: 0px;
