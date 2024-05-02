@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletIswuFR.ui'
+## Form generated from reading UI file 'hdwalletBKQTDv.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -16,17 +16,18 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QCheckBox, QComboBox,
-    QFrame, QHBoxLayout, QLabel, QLineEdit,
-    QMainWindow, QPushButton, QSizePolicy, QSpacerItem,
-    QStackedWidget, QTabWidget, QTextEdit, QVBoxLayout,
-    QWidget)
+    QFrame, QGridLayout, QGroupBox, QHBoxLayout,
+    QLabel, QLineEdit, QMainWindow, QPushButton,
+    QSizePolicy, QSpacerItem, QStackedWidget, QTabWidget,
+    QTextEdit, QVBoxLayout, QWidget)
+
 from .resources_rc import *
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1050, 510)
+        MainWindow.resize(1150, 509)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidgetHLayout = QHBoxLayout(self.centralwidget)
@@ -94,28 +95,6 @@ class Ui_MainWindow(object):
         self.generatePageQStackedWidgetVLayout.setSpacing(15)
         self.generatePageQStackedWidgetVLayout.setObjectName(u"generatePageQStackedWidgetVLayout")
         self.generatePageQStackedWidgetVLayout.setContentsMargins(15, 15, 15, 15)
-        self.entropyGeneratorLabelQFrame = QFrame(self.generatePageQStackedWidget)
-        self.entropyGeneratorLabelQFrame.setObjectName(u"entropyGeneratorLabelQFrame")
-        self.entropyGeneratorLabelQFrameHLayout = QHBoxLayout(self.entropyGeneratorLabelQFrame)
-        self.entropyGeneratorLabelQFrameHLayout.setSpacing(15)
-        self.entropyGeneratorLabelQFrameHLayout.setObjectName(u"entropyGeneratorLabelQFrameHLayout")
-        self.entropyGeneratorLabelQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.entropyGeneratorQLabel = QLabel(self.entropyGeneratorLabelQFrame)
-        self.entropyGeneratorQLabel.setObjectName(u"entropyGeneratorQLabel")
-        self.entropyGeneratorQLabel.setMaximumSize(QSize(127, 16777215))
-
-        self.entropyGeneratorLabelQFrameHLayout.addWidget(self.entropyGeneratorQLabel)
-
-        self.entropyGeneratorHLine = QFrame(self.entropyGeneratorLabelQFrame)
-        self.entropyGeneratorHLine.setObjectName(u"entropyGeneratorHLine")
-        self.entropyGeneratorHLine.setFrameShape(QFrame.HLine)
-        self.entropyGeneratorHLine.setFrameShadow(QFrame.Sunken)
-
-        self.entropyGeneratorLabelQFrameHLayout.addWidget(self.entropyGeneratorHLine)
-
-
-        self.generatePageQStackedWidgetVLayout.addWidget(self.entropyGeneratorLabelQFrame)
-
         self.generateEntopyClientAndStrengthContainerQFrame = QFrame(self.generatePageQStackedWidget)
         self.generateEntopyClientAndStrengthContainerQFrame.setObjectName(u"generateEntopyClientAndStrengthContainerQFrame")
         self.generateEntopyClientAndStrengthContainerQFrame.setLineWidth(0)
@@ -123,13 +102,13 @@ class Ui_MainWindow(object):
         self.generateEntopyClientAndStrengthContainerQFrameVLayout.setSpacing(15)
         self.generateEntopyClientAndStrengthContainerQFrameVLayout.setObjectName(u"generateEntopyClientAndStrengthContainerQFrameVLayout")
         self.generateEntopyClientAndStrengthContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.generateClientAndStrengthContainerQFrame = QFrame(self.generateEntopyClientAndStrengthContainerQFrame)
-        self.generateClientAndStrengthContainerQFrame.setObjectName(u"generateClientAndStrengthContainerQFrame")
-        self.generateClientAndStrengthContainerQFrameHLayout = QHBoxLayout(self.generateClientAndStrengthContainerQFrame)
+        self.generateClientAndStrengthContainerQGroupBox = QGroupBox(self.generateEntopyClientAndStrengthContainerQFrame)
+        self.generateClientAndStrengthContainerQGroupBox.setObjectName(u"generateClientAndStrengthContainerQGroupBox")
+        self.generateClientAndStrengthContainerQFrameHLayout = QHBoxLayout(self.generateClientAndStrengthContainerQGroupBox)
         self.generateClientAndStrengthContainerQFrameHLayout.setSpacing(15)
         self.generateClientAndStrengthContainerQFrameHLayout.setObjectName(u"generateClientAndStrengthContainerQFrameHLayout")
-        self.generateClientAndStrengthContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.generateEntropyClientContainerQFrame = QFrame(self.generateClientAndStrengthContainerQFrame)
+        self.generateClientAndStrengthContainerQFrameHLayout.setContentsMargins(5, 5, 5, 5)
+        self.generateEntropyClientContainerQFrame = QFrame(self.generateClientAndStrengthContainerQGroupBox)
         self.generateEntropyClientContainerQFrame.setObjectName(u"generateEntropyClientContainerQFrame")
         self.generateEntropyClientContainerQFrameVLayout = QVBoxLayout(self.generateEntropyClientContainerQFrame)
         self.generateEntropyClientContainerQFrameVLayout.setSpacing(5)
@@ -148,7 +127,7 @@ class Ui_MainWindow(object):
 
         self.generateClientAndStrengthContainerQFrameHLayout.addWidget(self.generateEntropyClientContainerQFrame)
 
-        self.generateEntropyStrengthContainerQFrame = QFrame(self.generateClientAndStrengthContainerQFrame)
+        self.generateEntropyStrengthContainerQFrame = QFrame(self.generateClientAndStrengthContainerQGroupBox)
         self.generateEntropyStrengthContainerQFrame.setObjectName(u"generateEntropyStrengthContainerQFrame")
         self.generateEntropyStrengthContainerQFrameVLayout = QVBoxLayout(self.generateEntropyStrengthContainerQFrame)
         self.generateEntropyStrengthContainerQFrameVLayout.setSpacing(5)
@@ -167,47 +146,25 @@ class Ui_MainWindow(object):
 
         self.generateClientAndStrengthContainerQFrameHLayout.addWidget(self.generateEntropyStrengthContainerQFrame)
 
-        self.generateEntropyClientAndStrengthQPushButton = QPushButton(self.generateClientAndStrengthContainerQFrame)
+        self.generateEntropyClientAndStrengthQPushButton = QPushButton(self.generateClientAndStrengthContainerQGroupBox)
         self.generateEntropyClientAndStrengthQPushButton.setObjectName(u"generateEntropyClientAndStrengthQPushButton")
         self.generateEntropyClientAndStrengthQPushButton.setMaximumSize(QSize(100, 16777215))
 
         self.generateClientAndStrengthContainerQFrameHLayout.addWidget(self.generateEntropyClientAndStrengthQPushButton, 0, Qt.AlignBottom)
 
 
-        self.generateEntopyClientAndStrengthContainerQFrameVLayout.addWidget(self.generateClientAndStrengthContainerQFrame)
+        self.generateEntopyClientAndStrengthContainerQFrameVLayout.addWidget(self.generateClientAndStrengthContainerQGroupBox)
 
 
         self.generatePageQStackedWidgetVLayout.addWidget(self.generateEntopyClientAndStrengthContainerQFrame)
 
-        self.mnemonicGeneratorLabelQFrame = QFrame(self.generatePageQStackedWidget)
-        self.mnemonicGeneratorLabelQFrame.setObjectName(u"mnemonicGeneratorLabelQFrame")
-        self.mnemonicGeneratorLabelQFrameHLayout = QHBoxLayout(self.mnemonicGeneratorLabelQFrame)
-        self.mnemonicGeneratorLabelQFrameHLayout.setSpacing(15)
-        self.mnemonicGeneratorLabelQFrameHLayout.setObjectName(u"mnemonicGeneratorLabelQFrameHLayout")
-        self.mnemonicGeneratorLabelQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.mnemonicGeneratorQLabel = QLabel(self.mnemonicGeneratorLabelQFrame)
-        self.mnemonicGeneratorQLabel.setObjectName(u"mnemonicGeneratorQLabel")
-        self.mnemonicGeneratorQLabel.setMaximumSize(QSize(127, 16777215))
-
-        self.mnemonicGeneratorLabelQFrameHLayout.addWidget(self.mnemonicGeneratorQLabel)
-
-        self.mnemonicGeneratorHLine = QFrame(self.mnemonicGeneratorLabelQFrame)
-        self.mnemonicGeneratorHLine.setObjectName(u"mnemonicGeneratorHLine")
-        self.mnemonicGeneratorHLine.setFrameShape(QFrame.HLine)
-        self.mnemonicGeneratorHLine.setFrameShadow(QFrame.Sunken)
-
-        self.mnemonicGeneratorLabelQFrameHLayout.addWidget(self.mnemonicGeneratorHLine)
-
-
-        self.generatePageQStackedWidgetVLayout.addWidget(self.mnemonicGeneratorLabelQFrame)
-
-        self.generateMnemonicClientWordsLanguageContainerQFrame = QFrame(self.generatePageQStackedWidget)
-        self.generateMnemonicClientWordsLanguageContainerQFrame.setObjectName(u"generateMnemonicClientWordsLanguageContainerQFrame")
-        self.generateMnemonicClientWordsLanguageContainerQFrameHLayout = QHBoxLayout(self.generateMnemonicClientWordsLanguageContainerQFrame)
+        self.generateMnemonicClientWordsLanguageContainerQGroupBox = QGroupBox(self.generatePageQStackedWidget)
+        self.generateMnemonicClientWordsLanguageContainerQGroupBox.setObjectName(u"generateMnemonicClientWordsLanguageContainerQGroupBox")
+        self.generateMnemonicClientWordsLanguageContainerQFrameHLayout = QHBoxLayout(self.generateMnemonicClientWordsLanguageContainerQGroupBox)
         self.generateMnemonicClientWordsLanguageContainerQFrameHLayout.setSpacing(15)
         self.generateMnemonicClientWordsLanguageContainerQFrameHLayout.setObjectName(u"generateMnemonicClientWordsLanguageContainerQFrameHLayout")
-        self.generateMnemonicClientWordsLanguageContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.generateMnemonicClientContainerQFrame = QFrame(self.generateMnemonicClientWordsLanguageContainerQFrame)
+        self.generateMnemonicClientWordsLanguageContainerQFrameHLayout.setContentsMargins(5, 5, 5, 5)
+        self.generateMnemonicClientContainerQFrame = QFrame(self.generateMnemonicClientWordsLanguageContainerQGroupBox)
         self.generateMnemonicClientContainerQFrame.setObjectName(u"generateMnemonicClientContainerQFrame")
         self.generateMnemonicClientContainerQFrameVLayout = QVBoxLayout(self.generateMnemonicClientContainerQFrame)
         self.generateMnemonicClientContainerQFrameVLayout.setSpacing(5)
@@ -226,7 +183,7 @@ class Ui_MainWindow(object):
 
         self.generateMnemonicClientWordsLanguageContainerQFrameHLayout.addWidget(self.generateMnemonicClientContainerQFrame)
 
-        self.generateMnemonicWordsContainerQFrame = QFrame(self.generateMnemonicClientWordsLanguageContainerQFrame)
+        self.generateMnemonicWordsContainerQFrame = QFrame(self.generateMnemonicClientWordsLanguageContainerQGroupBox)
         self.generateMnemonicWordsContainerQFrame.setObjectName(u"generateMnemonicWordsContainerQFrame")
         self.generateMnemonicWordsContainerQFrameVLayout = QVBoxLayout(self.generateMnemonicWordsContainerQFrame)
         self.generateMnemonicWordsContainerQFrameVLayout.setSpacing(5)
@@ -245,7 +202,7 @@ class Ui_MainWindow(object):
 
         self.generateMnemonicClientWordsLanguageContainerQFrameHLayout.addWidget(self.generateMnemonicWordsContainerQFrame)
 
-        self.generateMnemonicLanguageContainerQFrame = QFrame(self.generateMnemonicClientWordsLanguageContainerQFrame)
+        self.generateMnemonicLanguageContainerQFrame = QFrame(self.generateMnemonicClientWordsLanguageContainerQGroupBox)
         self.generateMnemonicLanguageContainerQFrame.setObjectName(u"generateMnemonicLanguageContainerQFrame")
         self.generateMnemonicLanguageContainerQFrameVLayout = QVBoxLayout(self.generateMnemonicLanguageContainerQFrame)
         self.generateMnemonicLanguageContainerQFrameVLayout.setSpacing(5)
@@ -264,38 +221,22 @@ class Ui_MainWindow(object):
 
         self.generateMnemonicClientWordsLanguageContainerQFrameHLayout.addWidget(self.generateMnemonicLanguageContainerQFrame)
 
-        self.generateMnemonicClientWordsAndLanguageQPushButton = QPushButton(self.generateMnemonicClientWordsLanguageContainerQFrame)
+        self.generateMnemonicClientWordsAndLanguageQPushButton = QPushButton(self.generateMnemonicClientWordsLanguageContainerQGroupBox)
         self.generateMnemonicClientWordsAndLanguageQPushButton.setObjectName(u"generateMnemonicClientWordsAndLanguageQPushButton")
         self.generateMnemonicClientWordsAndLanguageQPushButton.setMaximumSize(QSize(100, 16777215))
 
         self.generateMnemonicClientWordsLanguageContainerQFrameHLayout.addWidget(self.generateMnemonicClientWordsAndLanguageQPushButton, 0, Qt.AlignBottom)
 
 
-        self.generatePageQStackedWidgetVLayout.addWidget(self.generateMnemonicClientWordsLanguageContainerQFrame)
+        self.generatePageQStackedWidgetVLayout.addWidget(self.generateMnemonicClientWordsLanguageContainerQGroupBox)
 
-        self.seedGeneratorLabelQFrame = QFrame(self.generatePageQStackedWidget)
-        self.seedGeneratorLabelQFrame.setObjectName(u"seedGeneratorLabelQFrame")
-        self.mnemonicGeneratorLabelQFrameHLayout_2 = QHBoxLayout(self.seedGeneratorLabelQFrame)
-        self.mnemonicGeneratorLabelQFrameHLayout_2.setSpacing(15)
-        self.mnemonicGeneratorLabelQFrameHLayout_2.setObjectName(u"mnemonicGeneratorLabelQFrameHLayout_2")
-        self.mnemonicGeneratorLabelQFrameHLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.seedGeneratorQLabel = QLabel(self.seedGeneratorLabelQFrame)
-        self.seedGeneratorQLabel.setObjectName(u"seedGeneratorQLabel")
-        self.seedGeneratorQLabel.setMaximumSize(QSize(126, 16777215))
-
-        self.mnemonicGeneratorLabelQFrameHLayout_2.addWidget(self.seedGeneratorQLabel)
-
-        self.seedGeneratorHLine = QFrame(self.seedGeneratorLabelQFrame)
-        self.seedGeneratorHLine.setObjectName(u"seedGeneratorHLine")
-        self.seedGeneratorHLine.setFrameShape(QFrame.HLine)
-        self.seedGeneratorHLine.setFrameShadow(QFrame.Sunken)
-
-        self.mnemonicGeneratorLabelQFrameHLayout_2.addWidget(self.seedGeneratorHLine)
-
-
-        self.generatePageQStackedWidgetVLayout.addWidget(self.seedGeneratorLabelQFrame)
-
-        self.generateSeedGenerateContainerQFrame = QFrame(self.generatePageQStackedWidget)
+        self.groupBox = QGroupBox(self.generatePageQStackedWidget)
+        self.groupBox.setObjectName(u"groupBox")
+        self.verticalLayout = QVBoxLayout(self.groupBox)
+        self.verticalLayout.setSpacing(15)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalLayout.setContentsMargins(5, 5, 5, 5)
+        self.generateSeedGenerateContainerQFrame = QFrame(self.groupBox)
         self.generateSeedGenerateContainerQFrame.setObjectName(u"generateSeedGenerateContainerQFrame")
         self.generateSeedGenerateContainerQFrame.setEnabled(True)
         self.generateLengthAndPassphraseQFrameHLayout_2 = QHBoxLayout(self.generateSeedGenerateContainerQFrame)
@@ -360,9 +301,9 @@ class Ui_MainWindow(object):
         self.generateLengthAndPassphraseQFrameHLayout_2.addWidget(self.generateSeedCardanoTypeContainerQFrame)
 
 
-        self.generatePageQStackedWidgetVLayout.addWidget(self.generateSeedGenerateContainerQFrame)
+        self.verticalLayout.addWidget(self.generateSeedGenerateContainerQFrame)
 
-        self.generateSeedClientMnemonicContainerQFrame = QFrame(self.generatePageQStackedWidget)
+        self.generateSeedClientMnemonicContainerQFrame = QFrame(self.groupBox)
         self.generateSeedClientMnemonicContainerQFrame.setObjectName(u"generateSeedClientMnemonicContainerQFrame")
         self.generateMnemonicClientWordsLanguageContainerQFrameHLayout_2 = QHBoxLayout(self.generateSeedClientMnemonicContainerQFrame)
         self.generateMnemonicClientWordsLanguageContainerQFrameHLayout_2.setSpacing(15)
@@ -443,38 +384,19 @@ class Ui_MainWindow(object):
         self.generateMnemonicClientWordsLanguageContainerQFrameHLayout_2.addWidget(self.generateSeedPassphraseGenerateQPushButton, 0, Qt.AlignBottom)
 
 
-        self.generatePageQStackedWidgetVLayout.addWidget(self.generateSeedClientMnemonicContainerQFrame)
-
-        self.passphraseGeneratorLabelQFrame = QFrame(self.generatePageQStackedWidget)
-        self.passphraseGeneratorLabelQFrame.setObjectName(u"passphraseGeneratorLabelQFrame")
-        self.passphraseGeneratorLabelQFrameHLayout = QHBoxLayout(self.passphraseGeneratorLabelQFrame)
-        self.passphraseGeneratorLabelQFrameHLayout.setSpacing(15)
-        self.passphraseGeneratorLabelQFrameHLayout.setObjectName(u"passphraseGeneratorLabelQFrameHLayout")
-        self.passphraseGeneratorLabelQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.passphraseGeneratorQLabel = QLabel(self.passphraseGeneratorLabelQFrame)
-        self.passphraseGeneratorQLabel.setObjectName(u"passphraseGeneratorQLabel")
-        self.passphraseGeneratorQLabel.setMaximumSize(QSize(142, 16777215))
-
-        self.passphraseGeneratorLabelQFrameHLayout.addWidget(self.passphraseGeneratorQLabel)
-
-        self.passphraseGeneratorHLine = QFrame(self.passphraseGeneratorLabelQFrame)
-        self.passphraseGeneratorHLine.setObjectName(u"passphraseGeneratorHLine")
-        self.passphraseGeneratorHLine.setFrameShape(QFrame.HLine)
-        self.passphraseGeneratorHLine.setFrameShadow(QFrame.Sunken)
-
-        self.passphraseGeneratorLabelQFrameHLayout.addWidget(self.passphraseGeneratorHLine)
+        self.verticalLayout.addWidget(self.generateSeedClientMnemonicContainerQFrame)
 
 
-        self.generatePageQStackedWidgetVLayout.addWidget(self.passphraseGeneratorLabelQFrame)
+        self.generatePageQStackedWidgetVLayout.addWidget(self.groupBox)
 
-        self.generateLengthAndPassphraseQFrame = QFrame(self.generatePageQStackedWidget)
-        self.generateLengthAndPassphraseQFrame.setObjectName(u"generateLengthAndPassphraseQFrame")
-        self.generateLengthAndPassphraseQFrame.setEnabled(True)
-        self.generateLengthAndPassphraseQFrameHLayout = QHBoxLayout(self.generateLengthAndPassphraseQFrame)
+        self.generateLengthAndPassphraseQGroupBox = QGroupBox(self.generatePageQStackedWidget)
+        self.generateLengthAndPassphraseQGroupBox.setObjectName(u"generateLengthAndPassphraseQGroupBox")
+        self.generateLengthAndPassphraseQGroupBox.setEnabled(True)
+        self.generateLengthAndPassphraseQFrameHLayout = QHBoxLayout(self.generateLengthAndPassphraseQGroupBox)
         self.generateLengthAndPassphraseQFrameHLayout.setSpacing(15)
         self.generateLengthAndPassphraseQFrameHLayout.setObjectName(u"generateLengthAndPassphraseQFrameHLayout")
-        self.generateLengthAndPassphraseQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.generateLengthContainerQFrame = QFrame(self.generateLengthAndPassphraseQFrame)
+        self.generateLengthAndPassphraseQFrameHLayout.setContentsMargins(5, 5, 5, 5)
+        self.generateLengthContainerQFrame = QFrame(self.generateLengthAndPassphraseQGroupBox)
         self.generateLengthContainerQFrame.setObjectName(u"generateLengthContainerQFrame")
         self.generateLengthContainerQFrame.setMaximumSize(QSize(184, 16777215))
         self.generateLengthContainerQFrame.setLineWidth(0)
@@ -510,12 +432,11 @@ class Ui_MainWindow(object):
 
         self.generateLengthAndPassphraseQFrameHLayout.addWidget(self.generateLengthContainerQFrame)
 
-        self.generatePassphraseContainerQFrame = QFrame(self.generateLengthAndPassphraseQFrame)
+        self.generatePassphraseContainerQFrame = QFrame(self.generateLengthAndPassphraseQGroupBox)
         self.generatePassphraseContainerQFrame.setObjectName(u"generatePassphraseContainerQFrame")
-        self.generatePassphraseContainerQFrameVLayout = QVBoxLayout(self.generatePassphraseContainerQFrame)
-        self.generatePassphraseContainerQFrameVLayout.setSpacing(5)
-        self.generatePassphraseContainerQFrameVLayout.setObjectName(u"generatePassphraseContainerQFrameVLayout")
-        self.generatePassphraseContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout = QGridLayout(self.generatePassphraseContainerQFrame)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.generatePassphraseLineEditContainerQFrame = QFrame(self.generatePassphraseContainerQFrame)
         self.generatePassphraseLineEditContainerQFrame.setObjectName(u"generatePassphraseLineEditContainerQFrame")
         self.generatePassphraseLineEditContainerQFrameHLayout = QHBoxLayout(self.generatePassphraseLineEditContainerQFrame)
@@ -543,18 +464,18 @@ class Ui_MainWindow(object):
         self.generatePassphraseLineEditContainerQFrameHLayout.addWidget(self.generatePassphraseCharacterQCheckBox)
 
 
-        self.generatePassphraseContainerQFrameVLayout.addWidget(self.generatePassphraseLineEditContainerQFrame, 0, Qt.AlignBottom)
+        self.gridLayout.addWidget(self.generatePassphraseLineEditContainerQFrame, 0, 0, 1, 1, Qt.AlignBottom)
 
 
         self.generateLengthAndPassphraseQFrameHLayout.addWidget(self.generatePassphraseContainerQFrame)
 
-        self.generatePassphraseQPushButton = QPushButton(self.generateLengthAndPassphraseQFrame)
+        self.generatePassphraseQPushButton = QPushButton(self.generateLengthAndPassphraseQGroupBox)
         self.generatePassphraseQPushButton.setObjectName(u"generatePassphraseQPushButton")
 
         self.generateLengthAndPassphraseQFrameHLayout.addWidget(self.generatePassphraseQPushButton, 0, Qt.AlignBottom)
 
 
-        self.generatePageQStackedWidgetVLayout.addWidget(self.generateLengthAndPassphraseQFrame)
+        self.generatePageQStackedWidgetVLayout.addWidget(self.generateLengthAndPassphraseQGroupBox)
 
         self.generatePageQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -6322,7 +6243,7 @@ class Ui_MainWindow(object):
 
         self.outputQFrame = QFrame(self.centralwidget)
         self.outputQFrame.setObjectName(u"outputQFrame")
-        self.outputQFrame.setMinimumSize(QSize(400, 0))
+        self.outputQFrame.setMinimumSize(QSize(500, 0))
         self.outputQFrameVLayout = QVBoxLayout(self.outputQFrame)
         self.outputQFrameVLayout.setObjectName(u"outputQFrameVLayout")
         self.outputFrameTopContainerQFrame = QFrame(self.outputQFrame)
@@ -6401,13 +6322,13 @@ class Ui_MainWindow(object):
         self.dumpQPushButton.setText(QCoreApplication.translate("MainWindow", u"Dumps", None))
         self.donationHDWalletQPushButton.setText(QCoreApplication.translate("MainWindow", u"Donation", None))
         self.helpHDWalletQPushButton.setText(QCoreApplication.translate("MainWindow", u"Help", None))
-        self.entropyGeneratorQLabel.setText(QCoreApplication.translate("MainWindow", u"Entropy Generator", None))
+        self.generateClientAndStrengthContainerQGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Entropy", None))
         self.generateEntropyClientQLabel.setText(QCoreApplication.translate("MainWindow", u"Client", None))
         self.generateEntropyClientQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Select Client", None))
         self.generateEntropyStrengthQLabel.setText(QCoreApplication.translate("MainWindow", u"Strength", None))
         self.generateEntropyStrengthQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Select Strength", None))
         self.generateEntropyClientAndStrengthQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
-        self.mnemonicGeneratorQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic Generator", None))
+        self.generateMnemonicClientWordsLanguageContainerQGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Mnemonic", None))
         self.generateMnemonicClientQLabel.setText(QCoreApplication.translate("MainWindow", u"Client", None))
         self.generateMnemonicClientQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Select Client", None))
         self.generateMnemonicWordsQLabel.setText(QCoreApplication.translate("MainWindow", u"Words", None))
@@ -6415,7 +6336,7 @@ class Ui_MainWindow(object):
         self.generateMnemonicLanguageQLabel.setText(QCoreApplication.translate("MainWindow", u"Language", None))
         self.generateMnemonicLanguageQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Select Language", None))
         self.generateMnemonicClientWordsAndLanguageQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
-        self.seedGeneratorQLabel.setText(QCoreApplication.translate("MainWindow", u"Seed Generator", None))
+        self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"Seed", None))
         self.generateSeedClientQLabel.setText(QCoreApplication.translate("MainWindow", u"Client", None))
         self.generateSeedClientQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Select Client", None))
         self.generateSeedMnemonicTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic Type", None))
@@ -6425,7 +6346,7 @@ class Ui_MainWindow(object):
         self.generateSeedMnemonicQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic", None))
         self.generateSeedPassphraseGenerateQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.generateSeedPassphraseGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
-        self.passphraseGeneratorQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase Generator", None))
+        self.generateLengthAndPassphraseQGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.generateLengthQLabel.setText(QCoreApplication.translate("MainWindow", u"Length", None))
         self.generatePassphraseUpperCaseQCheckBox.setText(QCoreApplication.translate("MainWindow", u"Upper", None))
         self.generatePassphraseLowerCaseQCheckBox.setText(QCoreApplication.translate("MainWindow", u"Lower", None))

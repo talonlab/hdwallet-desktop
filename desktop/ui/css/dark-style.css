@@ -6,9 +6,26 @@ QWidget {
     font: 11pt "Segoe UI";
     background-color: rgb(16, 21, 27);
 }
+QWidget:disabled{
+    color: rgb(101, 101, 101);
+    font: 11pt "Jersey M54";
+    padding: 5px 10px;
+    border-radius: 2px;
+    background-color: rgba(11, 17, 17, 0.5);
+    border: 1px solid rgba(17, 19, 23, 0.5);
+}
 
 QFrame{
     background-color: rgb(16, 21, 27);
+}
+
+QFrame:disabled{
+    color: rgb(101, 101, 101);
+    font: 11pt "Jersey M54";
+    padding: 5px 10px;
+    border-radius: 2px;
+    background-color: rgba(11, 17, 17, 0.5);
+    border: 1px solid rgba(17, 19, 23, 0.5);
 }
 
 QTextEdit QMenu::item,
@@ -82,6 +99,15 @@ QPushButton:pressed {
     background-color: rgb(25, 30, 36);
 }
 
+QPushButton:disabled{
+    color: rgb(101, 101, 101);
+    font: 11pt "Jersey M54";
+    padding: 5px 10px;
+    border-radius: 2px;
+    background-color: rgba(25, 30, 36, 0.5);
+    border: 1px solid rgba(25, 30, 36, 0.5);
+}
+
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
 ComboBox */
@@ -95,6 +121,15 @@ QComboBox {
     padding: 5px 10px;
     height: 25px;
 
+}
+
+QComboBox:disabled{
+    color: rgb(101, 101, 101);
+    font: 11pt "Jersey M54";
+    padding: 5px 10px;
+    border-radius: 2px;
+    background-color: rgba(11, 17, 17, 0.5);
+    border: 1px solid rgba(17, 19, 23, 0.5);
 }
 
 

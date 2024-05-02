@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1050</width>
-    <height>510</height>
+    <width>1150</width>
+    <height>509</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -181,47 +181,6 @@
             <number>15</number>
            </property>
            <item>
-            <widget class="QFrame" name="entropyGeneratorLabelQFrame">
-             <layout class="QHBoxLayout" name="entropyGeneratorLabelQFrameHLayout">
-              <property name="spacing">
-               <number>15</number>
-              </property>
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <item>
-               <widget class="QLabel" name="entropyGeneratorQLabel">
-                <property name="maximumSize">
-                 <size>
-                  <width>127</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Entropy Generator</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="Line" name="entropyGeneratorHLine">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
             <widget class="QFrame" name="generateEntopyClientAndStrengthContainerQFrame">
              <property name="lineWidth">
               <number>0</number>
@@ -243,22 +202,25 @@
                <number>0</number>
               </property>
               <item>
-               <widget class="QFrame" name="generateClientAndStrengthContainerQFrame">
+               <widget class="QGroupBox" name="generateClientAndStrengthContainerQGroupBox">
+                <property name="title">
+                 <string>Entropy</string>
+                </property>
                 <layout class="QHBoxLayout" name="generateClientAndStrengthContainerQFrameHLayout">
                  <property name="spacing">
                   <number>15</number>
                  </property>
                  <property name="leftMargin">
-                  <number>0</number>
+                  <number>5</number>
                  </property>
                  <property name="topMargin">
-                  <number>0</number>
+                  <number>5</number>
                  </property>
                  <property name="rightMargin">
-                  <number>0</number>
+                  <number>5</number>
                  </property>
                  <property name="bottomMargin">
-                  <number>0</number>
+                  <number>5</number>
                  </property>
                  <item>
                   <widget class="QFrame" name="generateEntropyClientContainerQFrame">
@@ -350,63 +312,25 @@
             </widget>
            </item>
            <item>
-            <widget class="QFrame" name="mnemonicGeneratorLabelQFrame">
-             <layout class="QHBoxLayout" name="mnemonicGeneratorLabelQFrameHLayout">
-              <property name="spacing">
-               <number>15</number>
-              </property>
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <item>
-               <widget class="QLabel" name="mnemonicGeneratorQLabel">
-                <property name="maximumSize">
-                 <size>
-                  <width>127</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Mnemonic Generator</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="Line" name="mnemonicGeneratorHLine">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QFrame" name="generateMnemonicClientWordsLanguageContainerQFrame">
+            <widget class="QGroupBox" name="generateMnemonicClientWordsLanguageContainerQGroupBox">
+             <property name="title">
+              <string>Mnemonic</string>
+             </property>
              <layout class="QHBoxLayout" name="generateMnemonicClientWordsLanguageContainerQFrameHLayout">
               <property name="spacing">
                <number>15</number>
               </property>
               <property name="leftMargin">
-               <number>0</number>
+               <number>5</number>
               </property>
               <property name="topMargin">
-               <number>0</number>
+               <number>5</number>
               </property>
               <property name="rightMargin">
-               <number>0</number>
+               <number>5</number>
               </property>
               <property name="bottomMargin">
-               <number>0</number>
+               <number>5</number>
               </property>
               <item>
                <widget class="QFrame" name="generateMnemonicClientContainerQFrame">
@@ -527,413 +451,358 @@
             </widget>
            </item>
            <item>
-            <widget class="QFrame" name="seedGeneratorLabelQFrame">
-             <layout class="QHBoxLayout" name="mnemonicGeneratorLabelQFrameHLayout_2">
+            <widget class="QGroupBox" name="groupBox">
+             <property name="title">
+              <string>Seed</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout">
               <property name="spacing">
                <number>15</number>
               </property>
               <property name="leftMargin">
-               <number>0</number>
+               <number>5</number>
               </property>
               <property name="topMargin">
-               <number>0</number>
+               <number>5</number>
               </property>
               <property name="rightMargin">
-               <number>0</number>
+               <number>5</number>
               </property>
               <property name="bottomMargin">
-               <number>0</number>
+               <number>5</number>
               </property>
               <item>
-               <widget class="QLabel" name="seedGeneratorQLabel">
-                <property name="maximumSize">
-                 <size>
-                  <width>126</width>
-                  <height>16777215</height>
-                 </size>
+               <widget class="QFrame" name="generateSeedGenerateContainerQFrame">
+                <property name="enabled">
+                 <bool>true</bool>
                 </property>
-                <property name="text">
-                 <string>Seed Generator</string>
-                </property>
+                <layout class="QHBoxLayout" name="generateLengthAndPassphraseQFrameHLayout_2">
+                 <property name="spacing">
+                  <number>15</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="generateSeedClientContainerQFrame">
+                   <layout class="QVBoxLayout" name="generateMnemonicClientContainerQFrameVLayout_2">
+                    <property name="spacing">
+                     <number>5</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="generateSeedClientQLabel">
+                      <property name="text">
+                       <string>Client</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QComboBox" name="generateSeedClientQComboBox">
+                      <property name="placeholderText">
+                       <string>Select Client</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="generateSeedMnemonicTypeContainerQFrame">
+                   <layout class="QVBoxLayout" name="generateMnemonicWordsContainerQFrameVLayout_2">
+                    <property name="spacing">
+                     <number>5</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="generateSeedMnemonicTypeQLabel">
+                      <property name="text">
+                       <string>Mnemonic Type</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QComboBox" name="generateSeedMnemonicTypeQComboBox">
+                      <property name="placeholderText">
+                       <string>Select Mnemonic Type</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="generateSeedCardanoTypeContainerQFrame">
+                   <layout class="QVBoxLayout" name="generateMnemonicLanguageContainerQFrameVLayout_2">
+                    <property name="spacing">
+                     <number>5</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="generateSeedCardanoTypeQLabel">
+                      <property name="text">
+                       <string>Cardano Type</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QComboBox" name="generateSeedCardanoTypeQComboBox">
+                      <property name="placeholderText">
+                       <string>Select Cardano Type</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
               <item>
-               <widget class="Line" name="seedGeneratorHLine">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
+               <widget class="QFrame" name="generateSeedClientMnemonicContainerQFrame">
+                <layout class="QHBoxLayout" name="generateMnemonicClientWordsLanguageContainerQFrameHLayout_2">
+                 <property name="spacing">
+                  <number>15</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="generateSeedMnemonicContainerQFrame">
+                   <property name="lineWidth">
+                    <number>0</number>
+                   </property>
+                   <layout class="QVBoxLayout" name="generateLengthContainerQFrameVLayout_3">
+                    <property name="spacing">
+                     <number>5</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QFrame" name="generateSeedMnemonicLabelContainerQFrame">
+                      <property name="enabled">
+                       <bool>true</bool>
+                      </property>
+                      <layout class="QHBoxLayout" name="generateLengthLabelContainerQFrameHLayout_3">
+                       <property name="spacing">
+                        <number>15</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="generateSeedMnemonicQLabel">
+                         <property name="text">
+                          <string>Mnemonic</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="generateSeedMnemonicContainerQFrameHSpacer">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="generateSeedMnemonicQLineEdit">
+                      <property name="minimumSize">
+                       <size>
+                        <width>350</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="generateSeedPassphraseGenerateContainerQFrame">
+                   <property name="lineWidth">
+                    <number>0</number>
+                   </property>
+                   <layout class="QVBoxLayout" name="generateLengthContainerQFrameVLayout_2">
+                    <property name="spacing">
+                     <number>5</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QFrame" name="generateSeedPassphraseGenerateLabelContainerQFrame">
+                      <property name="enabled">
+                       <bool>true</bool>
+                      </property>
+                      <layout class="QHBoxLayout" name="generateLengthLabelContainerQFrameHLayout_2">
+                       <property name="spacing">
+                        <number>15</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="generateSeedPassphraseGenerateQLabel">
+                         <property name="text">
+                          <string>Passphrase</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="generateSeedPassphraseGenerateLabelContainerQFrameHSpacer">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="generateSeedPassphraseGenerateQLineEdit"/>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item alignment="Qt::AlignBottom">
+                  <widget class="QPushButton" name="generateSeedPassphraseGenerateQPushButton">
+                   <property name="text">
+                    <string>Generate</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
              </layout>
             </widget>
            </item>
            <item>
-            <widget class="QFrame" name="generateSeedGenerateContainerQFrame">
+            <widget class="QGroupBox" name="generateLengthAndPassphraseQGroupBox">
              <property name="enabled">
               <bool>true</bool>
              </property>
-             <layout class="QHBoxLayout" name="generateLengthAndPassphraseQFrameHLayout_2">
-              <property name="spacing">
-               <number>15</number>
-              </property>
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <item>
-               <widget class="QFrame" name="generateSeedClientContainerQFrame">
-                <layout class="QVBoxLayout" name="generateMnemonicClientContainerQFrameVLayout_2">
-                 <property name="spacing">
-                  <number>5</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="generateSeedClientQLabel">
-                   <property name="text">
-                    <string>Client</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QComboBox" name="generateSeedClientQComboBox">
-                   <property name="placeholderText">
-                    <string>Select Client</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QFrame" name="generateSeedMnemonicTypeContainerQFrame">
-                <layout class="QVBoxLayout" name="generateMnemonicWordsContainerQFrameVLayout_2">
-                 <property name="spacing">
-                  <number>5</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="generateSeedMnemonicTypeQLabel">
-                   <property name="text">
-                    <string>Mnemonic Type</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QComboBox" name="generateSeedMnemonicTypeQComboBox">
-                   <property name="placeholderText">
-                    <string>Select Mnemonic Type</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QFrame" name="generateSeedCardanoTypeContainerQFrame">
-                <layout class="QVBoxLayout" name="generateMnemonicLanguageContainerQFrameVLayout_2">
-                 <property name="spacing">
-                  <number>5</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="generateSeedCardanoTypeQLabel">
-                   <property name="text">
-                    <string>Cardano Type</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QComboBox" name="generateSeedCardanoTypeQComboBox">
-                   <property name="placeholderText">
-                    <string>Select Cardano Type</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QFrame" name="generateSeedClientMnemonicContainerQFrame">
-             <layout class="QHBoxLayout" name="generateMnemonicClientWordsLanguageContainerQFrameHLayout_2">
-              <property name="spacing">
-               <number>15</number>
-              </property>
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <item>
-               <widget class="QFrame" name="generateSeedMnemonicContainerQFrame">
-                <property name="lineWidth">
-                 <number>0</number>
-                </property>
-                <layout class="QVBoxLayout" name="generateLengthContainerQFrameVLayout_3">
-                 <property name="spacing">
-                  <number>5</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QFrame" name="generateSeedMnemonicLabelContainerQFrame">
-                   <property name="enabled">
-                    <bool>true</bool>
-                   </property>
-                   <layout class="QHBoxLayout" name="generateLengthLabelContainerQFrameHLayout_3">
-                    <property name="spacing">
-                     <number>15</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QLabel" name="generateSeedMnemonicQLabel">
-                      <property name="text">
-                       <string>Mnemonic</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <spacer name="generateSeedMnemonicContainerQFrameHSpacer">
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                      <property name="sizeHint" stdset="0">
-                       <size>
-                        <width>40</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                     </spacer>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLineEdit" name="generateSeedMnemonicQLineEdit">
-                   <property name="minimumSize">
-                    <size>
-                     <width>350</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QFrame" name="generateSeedPassphraseGenerateContainerQFrame">
-                <property name="lineWidth">
-                 <number>0</number>
-                </property>
-                <layout class="QVBoxLayout" name="generateLengthContainerQFrameVLayout_2">
-                 <property name="spacing">
-                  <number>5</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QFrame" name="generateSeedPassphraseGenerateLabelContainerQFrame">
-                   <property name="enabled">
-                    <bool>true</bool>
-                   </property>
-                   <layout class="QHBoxLayout" name="generateLengthLabelContainerQFrameHLayout_2">
-                    <property name="spacing">
-                     <number>15</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QLabel" name="generateSeedPassphraseGenerateQLabel">
-                      <property name="text">
-                       <string>Passphrase</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <spacer name="generateSeedPassphraseGenerateLabelContainerQFrameHSpacer">
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                      <property name="sizeHint" stdset="0">
-                       <size>
-                        <width>40</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                     </spacer>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLineEdit" name="generateSeedPassphraseGenerateQLineEdit"/>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item alignment="Qt::AlignBottom">
-               <widget class="QPushButton" name="generateSeedPassphraseGenerateQPushButton">
-                <property name="text">
-                 <string>Generate</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QFrame" name="passphraseGeneratorLabelQFrame">
-             <layout class="QHBoxLayout" name="passphraseGeneratorLabelQFrameHLayout">
-              <property name="spacing">
-               <number>15</number>
-              </property>
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <item>
-               <widget class="QLabel" name="passphraseGeneratorQLabel">
-                <property name="maximumSize">
-                 <size>
-                  <width>142</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Passphrase Generator</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="Line" name="passphraseGeneratorHLine">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QFrame" name="generateLengthAndPassphraseQFrame">
-             <property name="enabled">
-              <bool>true</bool>
+             <property name="title">
+              <string>Passphrase</string>
              </property>
              <layout class="QHBoxLayout" name="generateLengthAndPassphraseQFrameHLayout">
               <property name="spacing">
                <number>15</number>
               </property>
               <property name="leftMargin">
-               <number>0</number>
+               <number>5</number>
               </property>
               <property name="topMargin">
-               <number>0</number>
+               <number>5</number>
               </property>
               <property name="rightMargin">
-               <number>0</number>
+               <number>5</number>
               </property>
               <property name="bottomMargin">
-               <number>0</number>
+               <number>5</number>
               </property>
               <item>
                <widget class="QFrame" name="generateLengthContainerQFrame">
@@ -1021,10 +890,7 @@
               </item>
               <item>
                <widget class="QFrame" name="generatePassphraseContainerQFrame">
-                <layout class="QVBoxLayout" name="generatePassphraseContainerQFrameVLayout">
-                 <property name="spacing">
-                  <number>5</number>
-                 </property>
+                <layout class="QGridLayout" name="gridLayout">
                  <property name="leftMargin">
                   <number>0</number>
                  </property>
@@ -1037,7 +903,7 @@
                  <property name="bottomMargin">
                   <number>0</number>
                  </property>
-                 <item alignment="Qt::AlignBottom">
+                 <item row="0" column="0" alignment="Qt::AlignBottom">
                   <widget class="QFrame" name="generatePassphraseLineEditContainerQFrame">
                    <layout class="QHBoxLayout" name="generatePassphraseLineEditContainerQFrameHLayout">
                     <property name="spacing">
@@ -14525,7 +14391,7 @@
      <widget class="QFrame" name="outputQFrame">
       <property name="minimumSize">
        <size>
-        <width>400</width>
+        <width>500</width>
         <height>0</height>
        </size>
       </property>
