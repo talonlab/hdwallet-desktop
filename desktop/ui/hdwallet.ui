@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
+    <width>1050</width>
     <height>510</height>
    </rect>
   </property>
@@ -34,13 +34,13 @@
      <widget class="QFrame" name="hdWalletContainerQFrame">
       <property name="minimumSize">
        <size>
-        <width>600</width>
+        <width>650</width>
         <height>0</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>600</width>
+        <width>650</width>
         <height>16777215</height>
        </size>
       </property>
@@ -182,12 +182,6 @@
            </property>
            <item>
             <widget class="QFrame" name="entropyGeneratorLabelQFrame">
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
-             </property>
              <layout class="QHBoxLayout" name="entropyGeneratorLabelQFrameHLayout">
               <property name="spacing">
                <number>15</number>
@@ -208,7 +202,7 @@
                <widget class="QLabel" name="entropyGeneratorQLabel">
                 <property name="maximumSize">
                  <size>
-                  <width>110</width>
+                  <width>127</width>
                   <height>16777215</height>
                  </size>
                 </property>
@@ -357,12 +351,6 @@
            </item>
            <item>
             <widget class="QFrame" name="mnemonicGeneratorLabelQFrame">
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
-             </property>
              <layout class="QHBoxLayout" name="mnemonicGeneratorLabelQFrameHLayout">
               <property name="spacing">
                <number>15</number>
@@ -383,7 +371,7 @@
                <widget class="QLabel" name="mnemonicGeneratorQLabel">
                 <property name="maximumSize">
                  <size>
-                  <width>115</width>
+                  <width>127</width>
                   <height>16777215</height>
                  </size>
                 </property>
@@ -540,12 +528,6 @@
            </item>
            <item>
             <widget class="QFrame" name="seedGeneratorLabelQFrame">
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
-             </property>
              <layout class="QHBoxLayout" name="mnemonicGeneratorLabelQFrameHLayout_2">
               <property name="spacing">
                <number>15</number>
@@ -566,7 +548,7 @@
                <widget class="QLabel" name="seedGeneratorQLabel">
                 <property name="maximumSize">
                  <size>
-                  <width>115</width>
+                  <width>126</width>
                   <height>16777215</height>
                  </size>
                 </property>
@@ -586,8 +568,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QFrame" name="generateSeedClientMnemonicContainerQFrame">
-             <layout class="QHBoxLayout" name="generateMnemonicClientWordsLanguageContainerQFrameHLayout_2">
+            <widget class="QFrame" name="generateSeedGenerateContainerQFrame">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <layout class="QHBoxLayout" name="generateLengthAndPassphraseQFrameHLayout_2">
               <property name="spacing">
                <number>15</number>
               </property>
@@ -638,6 +623,97 @@
                 </layout>
                </widget>
               </item>
+              <item>
+               <widget class="QFrame" name="generateSeedMnemonicTypeContainerQFrame">
+                <layout class="QVBoxLayout" name="generateMnemonicWordsContainerQFrameVLayout_2">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="generateSeedMnemonicTypeQLabel">
+                   <property name="text">
+                    <string>Mnemonic Type</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="generateSeedMnemonicTypeQComboBox">
+                   <property name="placeholderText">
+                    <string>Select Mnemonic Type</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="generateSeedCardanoTypeContainerQFrame">
+                <layout class="QVBoxLayout" name="generateMnemonicLanguageContainerQFrameVLayout_2">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="generateSeedCardanoTypeQLabel">
+                   <property name="text">
+                    <string>Cardano Type</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="generateSeedCardanoTypeQComboBox">
+                   <property name="placeholderText">
+                    <string>Select Cardano Type</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="generateSeedClientMnemonicContainerQFrame">
+             <layout class="QHBoxLayout" name="generateMnemonicClientWordsLanguageContainerQFrameHLayout_2">
+              <property name="spacing">
+               <number>15</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
               <item>
                <widget class="QFrame" name="generateSeedMnemonicContainerQFrame">
                 <property name="lineWidth">
@@ -704,105 +780,12 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="generateSeedMnemonicQLineEdit"/>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QFrame" name="generateSeedGenerateContainerQFrame">
-             <property name="enabled">
-              <bool>true</bool>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
-             </property>
-             <layout class="QHBoxLayout" name="generateLengthAndPassphraseQFrameHLayout_2">
-              <property name="spacing">
-               <number>15</number>
-              </property>
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <item>
-               <widget class="QFrame" name="generateSeedMnemonicTypeContainerQFrame">
-                <layout class="QVBoxLayout" name="generateMnemonicWordsContainerQFrameVLayout_2">
-                 <property name="spacing">
-                  <number>5</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="generateSeedMnemonicTypeQLabel">
-                   <property name="text">
-                    <string>Mnemonic Type</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QComboBox" name="generateSeedMnemonicTypeQComboBox">
-                   <property name="placeholderText">
-                    <string>Select Mnemonic Type</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QFrame" name="generateSeedCardanoTypeContainerQFrame">
-                <layout class="QVBoxLayout" name="generateMnemonicLanguageContainerQFrameVLayout_2">
-                 <property name="spacing">
-                  <number>5</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="generateSeedCardanoTypeQLabel">
-                   <property name="text">
-                    <string>Cardano Type</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QComboBox" name="generateSeedCardanoTypeQComboBox">
-                   <property name="placeholderText">
-                    <string>Select Cardano Type</string>
+                  <widget class="QLineEdit" name="generateSeedMnemonicQLineEdit">
+                   <property name="minimumSize">
+                    <size>
+                     <width>350</width>
+                     <height>0</height>
+                    </size>
                    </property>
                   </widget>
                  </item>
@@ -892,12 +875,6 @@
            </item>
            <item>
             <widget class="QFrame" name="passphraseGeneratorLabelQFrame">
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
-             </property>
              <layout class="QHBoxLayout" name="passphraseGeneratorLabelQFrameHLayout">
               <property name="spacing">
                <number>15</number>
@@ -918,7 +895,7 @@
                <widget class="QLabel" name="passphraseGeneratorQLabel">
                 <property name="maximumSize">
                  <size>
-                  <width>116</width>
+                  <width>142</width>
                   <height>16777215</height>
                  </size>
                 </property>
@@ -941,12 +918,6 @@
             <widget class="QFrame" name="generateLengthAndPassphraseQFrame">
              <property name="enabled">
               <bool>true</bool>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
              </property>
              <layout class="QHBoxLayout" name="generateLengthAndPassphraseQFrameHLayout">
               <property name="spacing">
@@ -1036,7 +1007,14 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="generateLengthQLineEdit"/>
+                  <widget class="QLineEdit" name="generateLengthQLineEdit">
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
                </widget>
@@ -1080,14 +1058,14 @@
                     <item>
                      <widget class="QCheckBox" name="generatePassphraseUpperCaseQCheckBox">
                       <property name="text">
-                       <string>Upper Cases</string>
+                       <string>Upper</string>
                       </property>
                      </widget>
                     </item>
                     <item>
                      <widget class="QCheckBox" name="generatePassphraseLowerCaseQCheckBox">
                       <property name="text">
-                       <string>Lower Cases</string>
+                       <string>Lower</string>
                       </property>
                      </widget>
                     </item>
@@ -14677,6 +14655,8 @@
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
