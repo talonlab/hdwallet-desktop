@@ -163,23 +163,23 @@ class MyMainWindow(QMainWindow):
         self.ui.generateSeedMnemonicTypeQComboBox.clear()
         self.ui.generateSeedCardanoTypeQComboBox.clear()
 
-        self.ui.generateSeedMnemonicTypeQComboBox.setEnabled(False)
-        self.ui.generateSeedCardanoTypeQComboBox.setEnabled(False)
+        self.ui.generateSeedMnemonicTypeContainerQFrame.setEnabled(False)
+        self.ui.generateSeedCardanoTypeContainerQFrame.setEnabled(False)
 
         self.ui.generateSeedPassphraseGenerateQLineEdit.setText(None)
-        self.ui.generateSeedPassphraseGenerateQLineEdit.setEnabled(False)
+        self.ui.generateSeedPassphraseGenerateContainerQFrame.setEnabled(False)
 
         if CardanoSeed.name() == seed_client:
-            self.ui.generateSeedCardanoTypeQComboBox.setEnabled(True)
+            self.ui.generateSeedCardanoTypeContainerQFrame.setEnabled(True)
             self.ui.generateSeedCardanoTypeQComboBox.addItems(Cardano.TYPES.get_cardano_types())
             self.ui.generateSeedCardanoTypeQComboBox.setCurrentIndex(0)
         elif ElectrumV2Seed.name() == seed_client:
-            self.ui.generateSeedMnemonicTypeQComboBox.setEnabled(True)
+            self.ui.generateSeedMnemonicTypeContainerQFrame.setEnabled(True)
             self.ui.generateSeedMnemonicTypeQComboBox.addItems(ElectrumV2Mnemonic.mnemonic_types.keys())
             self.ui.generateSeedMnemonicTypeQComboBox.setCurrentIndex(0)
 
         if seed_client in (BIP39Seed.name(), ElectrumV2Seed.name()):
-            self.ui.generateSeedPassphraseGenerateQLineEdit.setEnabled(True)
+            self.ui.generateSeedPassphraseGenerateContainerQFrame.setEnabled(True)
 
     def _cardano_type_changed(self):
         cardano_type = self.ui.generateSeedCardanoTypeQComboBox.currentText() 
@@ -187,7 +187,7 @@ class MyMainWindow(QMainWindow):
             self.ui.generateSeedPassphraseGenerateQLineEdit.setEnabled(True)
         else:
             self.ui.generateSeedPassphraseGenerateQLineEdit.setText(None)
-            self.ui.generateSeedPassphraseGenerateQLineEdit.setEnabled(False)
+            self.ui.generateSeedPassphraseGenerateContainerQFrame.setEnabled(False)
 
     def _generate_seed(self):
         seed_client = self.ui.generateSeedClientQComboBox.currentText()
