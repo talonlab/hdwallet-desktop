@@ -1,4 +1,6 @@
 import subprocess
+from random import choice
+import string
 
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QWidget, 
@@ -6,6 +8,7 @@ from PySide6.QtWidgets import (
     QStackedWidget
 )
 from PySide6.QtCore import QFile, Qt
+from PySide6.QtGui import QIntValidator
 
 import string
 
@@ -80,6 +83,16 @@ class MyMainWindow(QMainWindow):
         self.ui.generateMnemonicClientQComboBox.setCurrentText(BIP39Mnemonic.name())
         self.ui.generateMnemonicClientWordsAndLanguageQPushButton.clicked.connect(self._generate_mnemonic)
 
+        self.ui.generateLengthQLineEdit.setText("12")
+        self.ui.generateLengthQLineEdit.setValidator(QIntValidator(1, 1000))
+
+        self.ui.generatePassphraseUpperCaseQCheckBox.setChecked(True)
+        self.ui.generatePassphraseLowerCaseQCheckBox.setChecked(True)
+        self.ui.generatePassphraseNumberQCheckBox.setChecked(True)
+        self.ui.generatePassphraseCharacterQCheckBox.setChecked(True)
+
+        self.ui.generatePassphraseQPushButton.clicked.connect(self._generate_passphrase)
+
 
     def _generate_entropy_change(self):
         entropy_client = self.ui.generateEntropyClientQComboBox.currentText()
@@ -124,6 +137,30 @@ class MyMainWindow(QMainWindow):
                         )
 
         self.println(gen_mnemonic)
+
+    def _generate_passphrase(self):
+
+        if len(self.ui.generateLengthQLineEdit.text()) == 0:
+            self.println("Error: passpharse length is required")
+            return None
+
+        length = int(self.ui.generateLengthQLineEdit.text())
+        upper = self.ui.generatePassphraseUpperCaseQCheckBox.isChecked()
+        lower = self.ui.generatePassphraseLowerCaseQCheckBox.isChecked()
+        special = self.ui.generatePassphraseNumberQCheckBox.isChecked()
+        digit = self.ui.generatePassphraseCharacterQCheckBox.isChecked()
+
+
+        characters = string.ascii_lowercase if lower else ''
+        characters += string.ascii_uppercase if upper else ''
+        characters += string.digits if digit else ''
+        characters += string.punctuation if special else ''
+
+        if not any([upper, lower, special, digit]):
+            self.println("Error: At least one of upper, lower, special, or digit must be selected")
+        else:
+            pp = "".join(choice(characters) for _ in range(length))
+            self.println(pp)
 
     def change_page(self, stacked_name: str, widget_name : str) -> None:
         qStackedWidget: Optional[QStackedWidget] = self.findChild(QStackedWidget, stacked_name)
