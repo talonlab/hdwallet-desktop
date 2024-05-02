@@ -22,7 +22,6 @@ from hdwallet.entropies import (
     ENTROPIES
 )
 
-
 from hdwallet.mnemonics import (
     AlgorandMnemonic, ALGORAND_MNEMONIC_WORDS, ALGORAND_MNEMONIC_LANGUAGES,
     BIP39Mnemonic, BIP39_MNEMONIC_WORDS, BIP39_MNEMONIC_LANGUAGES,
@@ -31,6 +30,20 @@ from hdwallet.mnemonics import (
     MoneroMnemonic, MONERO_MNEMONIC_WORDS, MONERO_MNEMONIC_LANGUAGES,
     MNEMONICS
 )
+
+from hdwallet.cryptocurrencies import Cardano
+
+from hdwallet.seeds import (
+    AlgorandSeed,
+    BIP39Seed,
+    CardanoSeed,
+    ElectrumV1Seed,
+    ElectrumV2Seed,
+    MoneroSeed,
+    SEEDS
+)
+
+
 
 from ui.ui_hdwallet import Ui_MainWindow
 from widget.SvgButton import SvgButton
@@ -82,6 +95,12 @@ class MyMainWindow(QMainWindow):
         self.ui.generateMnemonicClientQComboBox.currentIndexChanged.connect(self._generate_mnemonic_change)
         self.ui.generateMnemonicClientQComboBox.setCurrentText(BIP39Mnemonic.name())
         self.ui.generateMnemonicClientWordsAndLanguageQPushButton.clicked.connect(self._generate_mnemonic)
+
+        self.ui.generateSeedClientQComboBox.addItems(SEEDS.names())
+        self.ui.generateSeedClientQComboBox.currentIndexChanged.connect(self._generate_seed_change)
+        self.ui.generateSeedClientQComboBox.setCurrentText(BIP39Mnemonic.name())
+        self.ui.generateSeedCardanoTypeQComboBox.currentIndexChanged.connect(self._cardano_type_changed)
+        self.ui.generateSeedPassphraseGenerateQPushButton.clicked.connect(self._generate_seed)
 
         self.ui.generateLengthQLineEdit.setText("12")
         self.ui.generateLengthQLineEdit.setValidator(QIntValidator(1, 1000))
@@ -138,6 +157,65 @@ class MyMainWindow(QMainWindow):
 
         self.println(gen_mnemonic)
 
+    def _generate_seed_change(self):
+        seed_client = self.ui.generateSeedClientQComboBox.currentText()
+
+        self.ui.generateSeedMnemonicTypeQComboBox.clear()
+        self.ui.generateSeedCardanoTypeQComboBox.clear()
+
+        self.ui.generateSeedMnemonicTypeQComboBox.setEnabled(False)
+        self.ui.generateSeedCardanoTypeQComboBox.setEnabled(False)
+
+        self.ui.generateSeedPassphraseGenerateQLineEdit.setText(None)
+        self.ui.generateSeedPassphraseGenerateQLineEdit.setEnabled(False)
+
+        if CardanoSeed.name() == seed_client:
+            self.ui.generateSeedCardanoTypeQComboBox.setEnabled(True)
+            self.ui.generateSeedCardanoTypeQComboBox.addItems(Cardano.TYPES.get_cardano_types())
+            self.ui.generateSeedCardanoTypeQComboBox.setCurrentIndex(0)
+        elif ElectrumV2Seed.name() == seed_client:
+            self.ui.generateSeedMnemonicTypeQComboBox.setEnabled(True)
+            self.ui.generateSeedMnemonicTypeQComboBox.addItems(ElectrumV2Mnemonic.mnemonic_types.keys())
+            self.ui.generateSeedMnemonicTypeQComboBox.setCurrentIndex(0)
+
+        if seed_client in (BIP39Seed.name(), ElectrumV2Seed.name()):
+            self.ui.generateSeedPassphraseGenerateQLineEdit.setEnabled(True)
+
+    def _cardano_type_changed(self):
+        cardano_type = self.ui.generateSeedCardanoTypeQComboBox.currentText() 
+        if cardano_type == 'byron-ledger' or cardano_type == 'shelley-ledger':
+            self.ui.generateSeedPassphraseGenerateQLineEdit.setEnabled(True)
+        else:
+            self.ui.generateSeedPassphraseGenerateQLineEdit.setText(None)
+            self.ui.generateSeedPassphraseGenerateQLineEdit.setEnabled(False)
+
+    def _generate_seed(self):
+        seed_client = self.ui.generateSeedClientQComboBox.currentText()
+        mnemonic_type = self.ui.generateSeedMnemonicTypeQComboBox.currentText()
+        cardano_type = self.ui.generateSeedCardanoTypeQComboBox.currentText()
+        mnemonic = self.ui.generateSeedMnemonicQLineEdit.text()
+
+        passphrase = self.ui.generateSeedPassphraseGenerateQLineEdit.text()
+        passphrase = None if passphrase == '' else passphrase
+
+        output = None
+
+        try:
+            if len(mnemonic) == 0:
+                output = "Error: mnemonic is required to generate seed!"
+            elif CardanoSeed.name() == seed_client:
+                output = CardanoSeed.from_mnemonic(mnemonic=mnemonic, cardano_type=cardano_type, passphrase=passphrase)
+            elif ElectrumV2Seed.name() == seed_client:
+                output = ElectrumV2Seed.from_mnemonic(mnemonic=mnemonic, mnemonic_type=mnemonic_type, passphrase=passphrase)
+            elif BIP39Seed.name() == seed_client:
+                output = SEEDS.seed(seed_client).from_mnemonic(mnemonic=mnemonic, passphrase=passphrase)
+            else:
+                output = SEEDS.seed(seed_client).from_mnemonic(mnemonic=mnemonic)
+        except Exception as e:
+            output = str(e)
+
+        self.println(output)
+
     def _generate_passphrase(self):
 
         if len(self.ui.generateLengthQLineEdit.text()) == 0:
@@ -192,7 +270,7 @@ class MyMainWindow(QMainWindow):
     def println(self, s):
         #just for now
         oldtext = self.ui.outputTerminalQTextEdit.toPlainText()
-        self.ui.outputTerminalQTextEdit.setText(oldtext + "\n" + str(s))        
+        self.ui.outputTerminalQTextEdit.setText(oldtext + "\n\n" + str(s))        
 
     def toggle_expand(self):
         if self.toggle_expand_terminal.isChecked():
