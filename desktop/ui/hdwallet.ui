@@ -137,7 +137,7 @@
           <item>
            <widget class="QPushButton" name="dumpQPushButton">
             <property name="text">
-             <string>Dump</string>
+             <string>Dumps</string>
             </property>
            </widget>
           </item>
@@ -159,7 +159,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QStackedWidget" name="stackedWidget">
+        <widget class="QStackedWidget" name="hdwalletQStackedWidget">
          <property name="currentIndex">
           <number>1</number>
          </property>
@@ -180,6 +180,53 @@
            <property name="bottomMargin">
             <number>15</number>
            </property>
+           <item>
+            <widget class="QFrame" name="entropyGeneratorLabelQFrame">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_98">
+              <property name="spacing">
+               <number>15</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="entropyGeneratorQLabel">
+                <property name="maximumSize">
+                 <size>
+                  <width>110</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Entropy Generator</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="entropyGeneratorHLine">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
            <item>
             <widget class="QFrame" name="generateEntopyClientAndStrengthContainerQFrame">
              <property name="lineWidth">
@@ -400,7 +447,7 @@
                  <item>
                   <widget class="QLineEdit" name="generateEntropyQLineEdit">
                    <property name="enabled">
-                    <bool>false</bool>
+                    <bool>true</bool>
                    </property>
                   </widget>
                  </item>
@@ -412,6 +459,53 @@
                   </widget>
                  </item>
                 </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="mnemonicGeneratorLabelQFrame">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_41">
+              <property name="spacing">
+               <number>15</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="mnemonicGeneratorQLabel">
+                <property name="maximumSize">
+                 <size>
+                  <width>115</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Mnemonic Generator</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="mnemonicGeneratorHLine">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
                </widget>
               </item>
              </layout>
@@ -678,6 +772,53 @@
                   </widget>
                  </item>
                 </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="passphraseGeneratorLabelQFrame">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_30">
+              <property name="spacing">
+               <number>15</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="passphraseGeneratorQLabel">
+                <property name="maximumSize">
+                 <size>
+                  <width>116</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Passphrase Generator</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="passphraseGeneratorHLine">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
                </widget>
               </item>
              </layout>
@@ -981,7 +1122,7 @@
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="dumpPageQStackedWidget">
+         <widget class="QWidget" name="dumpsPageQStackedWidget">
           <layout class="QVBoxLayout" name="verticalLayout_12">
            <property name="spacing">
             <number>5</number>
@@ -999,7 +1140,7 @@
             <number>0</number>
            </property>
            <item>
-            <widget class="QFrame" name="dumpPageEntireContainerQFrame">
+            <widget class="QFrame" name="dumpsPageEntireContainerQFrame">
              <property name="minimumSize">
               <size>
                <width>525</width>
@@ -1026,7 +1167,7 @@
                <number>15</number>
               </property>
               <item>
-               <widget class="QFrame" name="dumpHDFromCryptocurrencyAndNetworkContainerQFrame">
+               <widget class="QFrame" name="dumpsHDFromCryptocurrencyAndNetworkContainerQFrame">
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
                 </property>
@@ -1047,7 +1188,7 @@
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QFrame" name="dumpHdListComboContainerQFrame">
+                  <widget class="QFrame" name="dumpsHdListComboContainerQFrame">
                    <layout class="QVBoxLayout" name="verticalLayout_5">
                     <property name="spacing">
                      <number>5</number>
@@ -1065,7 +1206,7 @@
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QFrame" name="dumpHdListLabelContainerQFrame">
+                     <widget class="QFrame" name="dumpsHdListLabelContainerQFrame">
                       <property name="frameShape">
                        <enum>QFrame::NoFrame</enum>
                       </property>
@@ -1086,14 +1227,14 @@
                         <number>0</number>
                        </property>
                        <item>
-                        <widget class="QLabel" name="dumpHdListQLabel">
+                        <widget class="QLabel" name="dumpsHdListQLabel">
                          <property name="text">
                           <string>HD</string>
                          </property>
                         </widget>
                        </item>
                        <item>
-                        <spacer name="dumpHdListLabelContainerQFrameHSpacer">
+                        <spacer name="dumpsHdListLabelContainerQFrameHSpacer">
                          <property name="orientation">
                           <enum>Qt::Horizontal</enum>
                          </property>
@@ -1109,7 +1250,7 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QComboBox" name="dumpHdQComboBox">
+                     <widget class="QComboBox" name="dumpsHdQComboBox">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                         <horstretch>0</horstretch>
@@ -1172,7 +1313,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QFrame" name="dumpFromContainerQFrame">
+                  <widget class="QFrame" name="dumpsFromContainerQFrame">
                    <layout class="QVBoxLayout" name="verticalLayout_6">
                     <property name="spacing">
                      <number>5</number>
@@ -1190,7 +1331,7 @@
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QFrame" name="dumpFromLabelContainerQFrame">
+                     <widget class="QFrame" name="dumpsFromLabelContainerQFrame">
                       <property name="frameShape">
                        <enum>QFrame::NoFrame</enum>
                       </property>
@@ -1211,14 +1352,14 @@
                         <number>0</number>
                        </property>
                        <item>
-                        <widget class="QLabel" name="dumpFromQLabel">
+                        <widget class="QLabel" name="dumpsFromQLabel">
                          <property name="text">
                           <string>From</string>
                          </property>
                         </widget>
                        </item>
                        <item>
-                        <spacer name="dumpFromLabelContainerQFrameHSpacer">
+                        <spacer name="dumpsFromLabelContainerQFrameHSpacer">
                          <property name="orientation">
                           <enum>Qt::Horizontal</enum>
                          </property>
@@ -1234,7 +1375,7 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QComboBox" name="dumpFromQComboBox">
+                     <widget class="QComboBox" name="dumpsFromQComboBox">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                         <horstretch>0</horstretch>
@@ -1287,7 +1428,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QFrame" name="dumpCryptocurrencyContainerQFrame">
+                  <widget class="QFrame" name="dumpsCryptocurrencyContainerQFrame">
                    <layout class="QVBoxLayout" name="CryptocurrencyVLayout">
                     <property name="spacing">
                      <number>5</number>
@@ -1305,7 +1446,7 @@
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QFrame" name="dumpCryptocurrencyLabelContainerQFrame">
+                     <widget class="QFrame" name="dumpsCryptocurrencyLabelContainerQFrame">
                       <layout class="QHBoxLayout" name="CryptocurrencyLabelHLayout">
                        <property name="spacing">
                         <number>15</number>
@@ -1323,14 +1464,14 @@
                         <number>0</number>
                        </property>
                        <item>
-                        <widget class="QLabel" name="dumpCryptocurrencyQLabel">
+                        <widget class="QLabel" name="dumpsCryptocurrencyQLabel">
                          <property name="text">
                           <string>Cryptocurrency</string>
                          </property>
                         </widget>
                        </item>
                        <item>
-                        <spacer name="dumpCryptocurrencyLabelContainerQFrameHSpacer">
+                        <spacer name="dumpsCryptocurrencyLabelContainerQFrameHSpacer">
                          <property name="orientation">
                           <enum>Qt::Horizontal</enum>
                          </property>
@@ -1346,25 +1487,15 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QComboBox" name="dumpCryptocurrencyQComboBox">
+                     <widget class="QComboBox" name="dumpsCryptocurrencyQComboBox">
                       <item>
                        <property name="text">
-                        <string>BTC - Bitcoin</string>
+                        <string>Bitcoin</string>
                        </property>
                       </item>
                       <item>
                        <property name="text">
-                        <string>BTC - Bitcoin Testnet</string>
-                       </property>
-                      </item>
-                      <item>
-                       <property name="text">
-                        <string>QTUM - Qtum</string>
-                       </property>
-                      </item>
-                      <item>
-                       <property name="text">
-                        <string>QTUM - Qtum Testnet</string>
+                        <string>Qtum</string>
                        </property>
                       </item>
                      </widget>
@@ -1373,7 +1504,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QFrame" name="dumpNetworkContainerQFrame">
+                  <widget class="QFrame" name="dumpsNetworkContainerQFrame">
                    <property name="minimumSize">
                     <size>
                      <width>150</width>
@@ -1397,7 +1528,7 @@
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QFrame" name="dumpNetworkLabelContainerQFrame">
+                     <widget class="QFrame" name="dumpsNetworkLabelContainerQFrame">
                       <layout class="QHBoxLayout" name="MStrengthLabelHLayout_30">
                        <property name="spacing">
                         <number>15</number>
@@ -1415,14 +1546,14 @@
                         <number>0</number>
                        </property>
                        <item>
-                        <widget class="QLabel" name="dumpNetworkQLabel">
+                        <widget class="QLabel" name="dumpsNetworkQLabel">
                          <property name="text">
                           <string>Network</string>
                          </property>
                         </widget>
                        </item>
                        <item>
-                        <spacer name="dumpNetworkLabelContainerQFrameHSpacer">
+                        <spacer name="dumpsNetworkLabelContainerQFrameHSpacer">
                          <property name="orientation">
                           <enum>Qt::Horizontal</enum>
                          </property>
@@ -1438,7 +1569,7 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QComboBox" name="dumpNetworkQComboBox">
+                     <widget class="QComboBox" name="dumpsNetworkQComboBox">
                       <item>
                        <property name="text">
                         <string>Algorand</string>
@@ -1483,7 +1614,7 @@
                  <number>0</number>
                 </property>
                 <property name="currentIndex">
-                 <number>4</number>
+                 <number>2</number>
                 </property>
                 <widget class="QWidget" name="BIPsPageQWidget">
                  <layout class="QVBoxLayout" name="verticalLayout_21">
@@ -11685,7 +11816,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QFrame" name="dumpDerivationContainerQFrame">
+               <widget class="QFrame" name="dumpsDerivationContainerQFrame">
                 <layout class="QVBoxLayout" name="verticalLayout_17">
                  <property name="spacing">
                   <number>15</number>
@@ -14123,7 +14254,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QFrame" name="dumpFormatKeysContainerQFrame">
+               <widget class="QFrame" name="dumpsFormatKeysContainerQFrame">
                 <layout class="QHBoxLayout" name="horizontalLayout_4">
                  <property name="spacing">
                   <number>15</number>
@@ -14141,7 +14272,7 @@
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QFrame" name="dumpFormatContainerQFrame">
+                  <widget class="QFrame" name="dumpsFormatContainerQFrame">
                    <layout class="QHBoxLayout" name="CryptocurrencyAndFormatHLayout">
                     <property name="spacing">
                      <number>15</number>
@@ -14159,7 +14290,7 @@
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QFrame" name="FormatQFrame">
+                     <widget class="QFrame" name="dumpsformatQFrame">
                       <property name="maximumSize">
                        <size>
                         <width>100</width>
@@ -14183,7 +14314,7 @@
                         <number>0</number>
                        </property>
                        <item>
-                        <widget class="QFrame" name="dumpFormatLabelContainerQFrame">
+                        <widget class="QFrame" name="dumpsFormatLabelContainerQFrame">
                          <layout class="QHBoxLayout" name="FormatLabelHLayout">
                           <property name="spacing">
                            <number>15</number>
@@ -14201,14 +14332,14 @@
                            <number>0</number>
                           </property>
                           <item>
-                           <widget class="QLabel" name="dumpFormatQLabel">
+                           <widget class="QLabel" name="dumpsFormatQLabel">
                             <property name="text">
                              <string>Format</string>
                             </property>
                            </widget>
                           </item>
                           <item>
-                           <spacer name="dumpFormatLabelContainerQFrameHSpacer">
+                           <spacer name="dumpsFormatLabelContainerQFrameHSpacer">
                             <property name="orientation">
                              <enum>Qt::Horizontal</enum>
                             </property>
@@ -14224,7 +14355,7 @@
                         </widget>
                        </item>
                        <item>
-                        <widget class="QComboBox" name="FormatQComboBox">
+                        <widget class="QComboBox" name="dumpsormatQComboBox">
                          <item>
                           <property name="text">
                            <string>JSON</string>
@@ -14244,7 +14375,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QFrame" name="dumpKeysContainerQFrame">
+                  <widget class="QFrame" name="dumpsKeysContainerQFrame">
                    <layout class="QHBoxLayout" name="horizontalLayout_18">
                     <property name="spacing">
                      <number>15</number>
@@ -14262,7 +14393,7 @@
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QFrame" name="KeysQFrame">
+                     <widget class="QFrame" name="dumpsKeysQFrame">
                       <property name="minimumSize">
                        <size>
                         <width>288</width>
@@ -14286,7 +14417,7 @@
                         <number>0</number>
                        </property>
                        <item>
-                        <widget class="QFrame" name="dumpKeysLabelContainerQFrame">
+                        <widget class="QFrame" name="dumpsKeysLabelContainerQFrame">
                          <layout class="QHBoxLayout" name="horizontalLayout_21">
                           <property name="spacing">
                            <number>15</number>
@@ -14304,14 +14435,14 @@
                            <number>0</number>
                           </property>
                           <item>
-                           <widget class="QLabel" name="dumpKeysQLabel">
+                           <widget class="QLabel" name="dumpsKeysQLabel">
                             <property name="text">
                              <string>Keys</string>
                             </property>
                            </widget>
                           </item>
                           <item>
-                           <spacer name="dumpKeysLabelContainerQFrameHSpacer">
+                           <spacer name="dumpsKeysLabelContainerQFrameHSpacer">
                             <property name="orientation">
                              <enum>Qt::Horizontal</enum>
                             </property>
@@ -14327,7 +14458,7 @@
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="KeysLabelQFrame">
+                        <widget class="QFrame" name="dumpsKeysLabelQFrame">
                          <layout class="QVBoxLayout" name="verticalLayout_18">
                           <property name="spacing">
                            <number>5</number>
@@ -14345,7 +14476,7 @@
                            <number>0</number>
                           </property>
                           <item>
-                           <widget class="QFrame" name="dumpKeysLineEditContainerQFrame">
+                           <widget class="QFrame" name="dumpsKeysLineEditContainerQFrame">
                             <layout class="QHBoxLayout" name="horizontalLayout_20">
                              <property name="spacing">
                               <number>15</number>
@@ -14363,10 +14494,10 @@
                               <number>0</number>
                              </property>
                              <item>
-                              <widget class="QLineEdit" name="dumpKeysQLineEdit"/>
+                              <widget class="QLineEdit" name="dumpsKeysQLineEdit"/>
                              </item>
                              <item>
-                              <widget class="QPushButton" name="dumpKeysGenerateQPushButton">
+                              <widget class="QPushButton" name="dumpsKeysGenerateQPushButton">
                                <property name="sizePolicy">
                                 <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                                  <horstretch>0</horstretch>

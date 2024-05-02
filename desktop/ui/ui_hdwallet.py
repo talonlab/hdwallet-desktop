@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletUcwdUJ.ui'
+## Form generated from reading UI file 'hdwalletVlbjMN.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -85,14 +85,38 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.hdWalletHeaderContainerQFrame)
 
-        self.stackedWidget = QStackedWidget(self.hdWalletContainerQFrame)
-        self.stackedWidget.setObjectName(u"stackedWidget")
+        self.hdwalletQStackedWidget = QStackedWidget(self.hdWalletContainerQFrame)
+        self.hdwalletQStackedWidget.setObjectName(u"hdwalletQStackedWidget")
         self.generatePageQStackedWidget = QWidget()
         self.generatePageQStackedWidget.setObjectName(u"generatePageQStackedWidget")
         self.verticalLayout_14 = QVBoxLayout(self.generatePageQStackedWidget)
         self.verticalLayout_14.setSpacing(15)
         self.verticalLayout_14.setObjectName(u"verticalLayout_14")
         self.verticalLayout_14.setContentsMargins(15, 15, 15, 15)
+        self.entropyGeneratorLabelQFrame = QFrame(self.generatePageQStackedWidget)
+        self.entropyGeneratorLabelQFrame.setObjectName(u"entropyGeneratorLabelQFrame")
+        self.entropyGeneratorLabelQFrame.setFrameShape(QFrame.StyledPanel)
+        self.entropyGeneratorLabelQFrame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_98 = QHBoxLayout(self.entropyGeneratorLabelQFrame)
+        self.horizontalLayout_98.setSpacing(15)
+        self.horizontalLayout_98.setObjectName(u"horizontalLayout_98")
+        self.horizontalLayout_98.setContentsMargins(0, 0, 0, 0)
+        self.entropyGeneratorQLabel = QLabel(self.entropyGeneratorLabelQFrame)
+        self.entropyGeneratorQLabel.setObjectName(u"entropyGeneratorQLabel")
+        self.entropyGeneratorQLabel.setMaximumSize(QSize(110, 16777215))
+
+        self.horizontalLayout_98.addWidget(self.entropyGeneratorQLabel)
+
+        self.entropyGeneratorHLine = QFrame(self.entropyGeneratorLabelQFrame)
+        self.entropyGeneratorHLine.setObjectName(u"entropyGeneratorHLine")
+        self.entropyGeneratorHLine.setFrameShape(QFrame.HLine)
+        self.entropyGeneratorHLine.setFrameShadow(QFrame.Sunken)
+
+        self.horizontalLayout_98.addWidget(self.entropyGeneratorHLine)
+
+
+        self.verticalLayout_14.addWidget(self.entropyGeneratorLabelQFrame)
+
         self.generateEntopyClientAndStrengthContainerQFrame = QFrame(self.generatePageQStackedWidget)
         self.generateEntopyClientAndStrengthContainerQFrame.setObjectName(u"generateEntopyClientAndStrengthContainerQFrame")
         self.generateEntopyClientAndStrengthContainerQFrame.setLineWidth(0)
@@ -192,7 +216,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_11.setContentsMargins(0, 0, 0, 0)
         self.generateEntropyQLineEdit = QLineEdit(self.generateEntropyLineEditContainerQFrame)
         self.generateEntropyQLineEdit.setObjectName(u"generateEntropyQLineEdit")
-        self.generateEntropyQLineEdit.setEnabled(False)
+        self.generateEntropyQLineEdit.setEnabled(True)
 
         self.horizontalLayout_11.addWidget(self.generateEntropyQLineEdit)
 
@@ -206,6 +230,30 @@ class Ui_MainWindow(object):
 
 
         self.verticalLayout_14.addWidget(self.generateEntropyContainerQFrame)
+
+        self.mnemonicGeneratorLabelQFrame = QFrame(self.generatePageQStackedWidget)
+        self.mnemonicGeneratorLabelQFrame.setObjectName(u"mnemonicGeneratorLabelQFrame")
+        self.mnemonicGeneratorLabelQFrame.setFrameShape(QFrame.StyledPanel)
+        self.mnemonicGeneratorLabelQFrame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_41 = QHBoxLayout(self.mnemonicGeneratorLabelQFrame)
+        self.horizontalLayout_41.setSpacing(15)
+        self.horizontalLayout_41.setObjectName(u"horizontalLayout_41")
+        self.horizontalLayout_41.setContentsMargins(0, 0, 0, 0)
+        self.mnemonicGeneratorQLabel = QLabel(self.mnemonicGeneratorLabelQFrame)
+        self.mnemonicGeneratorQLabel.setObjectName(u"mnemonicGeneratorQLabel")
+        self.mnemonicGeneratorQLabel.setMaximumSize(QSize(115, 16777215))
+
+        self.horizontalLayout_41.addWidget(self.mnemonicGeneratorQLabel)
+
+        self.mnemonicGeneratorHLine = QFrame(self.mnemonicGeneratorLabelQFrame)
+        self.mnemonicGeneratorHLine.setObjectName(u"mnemonicGeneratorHLine")
+        self.mnemonicGeneratorHLine.setFrameShape(QFrame.HLine)
+        self.mnemonicGeneratorHLine.setFrameShadow(QFrame.Sunken)
+
+        self.horizontalLayout_41.addWidget(self.mnemonicGeneratorHLine)
+
+
+        self.verticalLayout_14.addWidget(self.mnemonicGeneratorLabelQFrame)
 
         self.generateMnemonicClientWordsAndLanguageContainerQFrame = QFrame(self.generatePageQStackedWidget)
         self.generateMnemonicClientWordsAndLanguageContainerQFrame.setObjectName(u"generateMnemonicClientWordsAndLanguageContainerQFrame")
@@ -339,6 +387,30 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_14.addWidget(self.generateMnemonicClientWordsAndLanguageContainerQFrame)
 
+        self.passphraseGeneratorLabelQFrame = QFrame(self.generatePageQStackedWidget)
+        self.passphraseGeneratorLabelQFrame.setObjectName(u"passphraseGeneratorLabelQFrame")
+        self.passphraseGeneratorLabelQFrame.setFrameShape(QFrame.StyledPanel)
+        self.passphraseGeneratorLabelQFrame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_30 = QHBoxLayout(self.passphraseGeneratorLabelQFrame)
+        self.horizontalLayout_30.setSpacing(15)
+        self.horizontalLayout_30.setObjectName(u"horizontalLayout_30")
+        self.horizontalLayout_30.setContentsMargins(0, 0, 0, 0)
+        self.passphraseGeneratorQLabel = QLabel(self.passphraseGeneratorLabelQFrame)
+        self.passphraseGeneratorQLabel.setObjectName(u"passphraseGeneratorQLabel")
+        self.passphraseGeneratorQLabel.setMaximumSize(QSize(116, 16777215))
+
+        self.horizontalLayout_30.addWidget(self.passphraseGeneratorQLabel)
+
+        self.passphraseGeneratorHLine = QFrame(self.passphraseGeneratorLabelQFrame)
+        self.passphraseGeneratorHLine.setObjectName(u"passphraseGeneratorHLine")
+        self.passphraseGeneratorHLine.setFrameShape(QFrame.HLine)
+        self.passphraseGeneratorHLine.setFrameShadow(QFrame.Sunken)
+
+        self.horizontalLayout_30.addWidget(self.passphraseGeneratorHLine)
+
+
+        self.verticalLayout_14.addWidget(self.passphraseGeneratorLabelQFrame)
+
         self.generateLengthAndPassphraseContainerQFrame = QFrame(self.generatePageQStackedWidget)
         self.generateLengthAndPassphraseContainerQFrame.setObjectName(u"generateLengthAndPassphraseContainerQFrame")
         self.generateLengthAndPassphraseContainerQFrame.setLineWidth(0)
@@ -468,198 +540,196 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_14.addItem(self.generatePageQStackedWidgetVSpacer)
 
-        self.stackedWidget.addWidget(self.generatePageQStackedWidget)
-        self.dumpPageQStackedWidget = QWidget()
-        self.dumpPageQStackedWidget.setObjectName(u"dumpPageQStackedWidget")
-        self.verticalLayout_12 = QVBoxLayout(self.dumpPageQStackedWidget)
+        self.hdwalletQStackedWidget.addWidget(self.generatePageQStackedWidget)
+        self.dumpsPageQStackedWidget = QWidget()
+        self.dumpsPageQStackedWidget.setObjectName(u"dumpsPageQStackedWidget")
+        self.verticalLayout_12 = QVBoxLayout(self.dumpsPageQStackedWidget)
         self.verticalLayout_12.setSpacing(5)
         self.verticalLayout_12.setObjectName(u"verticalLayout_12")
         self.verticalLayout_12.setContentsMargins(0, 0, 0, 0)
-        self.dumpPageEntireContainerQFrame = QFrame(self.dumpPageQStackedWidget)
-        self.dumpPageEntireContainerQFrame.setObjectName(u"dumpPageEntireContainerQFrame")
-        self.dumpPageEntireContainerQFrame.setMinimumSize(QSize(525, 0))
-        self.dumpPageEntireContainerQFrame.setLineWidth(0)
-        self.verticalLayout_3 = QVBoxLayout(self.dumpPageEntireContainerQFrame)
+        self.dumpsPageEntireContainerQFrame = QFrame(self.dumpsPageQStackedWidget)
+        self.dumpsPageEntireContainerQFrame.setObjectName(u"dumpsPageEntireContainerQFrame")
+        self.dumpsPageEntireContainerQFrame.setMinimumSize(QSize(525, 0))
+        self.dumpsPageEntireContainerQFrame.setLineWidth(0)
+        self.verticalLayout_3 = QVBoxLayout(self.dumpsPageEntireContainerQFrame)
         self.verticalLayout_3.setSpacing(15)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.verticalLayout_3.setContentsMargins(15, 5, 15, 15)
-        self.dumpHDFromCryptocurrencyAndNetworkContainerQFrame = QFrame(self.dumpPageEntireContainerQFrame)
-        self.dumpHDFromCryptocurrencyAndNetworkContainerQFrame.setObjectName(u"dumpHDFromCryptocurrencyAndNetworkContainerQFrame")
-        self.dumpHDFromCryptocurrencyAndNetworkContainerQFrame.setFrameShape(QFrame.NoFrame)
-        self.horizontalLayout_2 = QHBoxLayout(self.dumpHDFromCryptocurrencyAndNetworkContainerQFrame)
+        self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame = QFrame(self.dumpsPageEntireContainerQFrame)
+        self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame.setObjectName(u"dumpsHDFromCryptocurrencyAndNetworkContainerQFrame")
+        self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame.setFrameShape(QFrame.NoFrame)
+        self.horizontalLayout_2 = QHBoxLayout(self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame)
         self.horizontalLayout_2.setSpacing(15)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.dumpHdListComboContainerQFrame = QFrame(self.dumpHDFromCryptocurrencyAndNetworkContainerQFrame)
-        self.dumpHdListComboContainerQFrame.setObjectName(u"dumpHdListComboContainerQFrame")
-        self.verticalLayout_5 = QVBoxLayout(self.dumpHdListComboContainerQFrame)
+        self.dumpsHdListComboContainerQFrame = QFrame(self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame)
+        self.dumpsHdListComboContainerQFrame.setObjectName(u"dumpsHdListComboContainerQFrame")
+        self.verticalLayout_5 = QVBoxLayout(self.dumpsHdListComboContainerQFrame)
         self.verticalLayout_5.setSpacing(5)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.dumpHdListLabelContainerQFrame = QFrame(self.dumpHdListComboContainerQFrame)
-        self.dumpHdListLabelContainerQFrame.setObjectName(u"dumpHdListLabelContainerQFrame")
-        self.dumpHdListLabelContainerQFrame.setFrameShape(QFrame.NoFrame)
-        self.horizontalLayout_3 = QHBoxLayout(self.dumpHdListLabelContainerQFrame)
+        self.dumpsHdListLabelContainerQFrame = QFrame(self.dumpsHdListComboContainerQFrame)
+        self.dumpsHdListLabelContainerQFrame.setObjectName(u"dumpsHdListLabelContainerQFrame")
+        self.dumpsHdListLabelContainerQFrame.setFrameShape(QFrame.NoFrame)
+        self.horizontalLayout_3 = QHBoxLayout(self.dumpsHdListLabelContainerQFrame)
         self.horizontalLayout_3.setSpacing(15)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.dumpHdListQLabel = QLabel(self.dumpHdListLabelContainerQFrame)
-        self.dumpHdListQLabel.setObjectName(u"dumpHdListQLabel")
+        self.dumpsHdListQLabel = QLabel(self.dumpsHdListLabelContainerQFrame)
+        self.dumpsHdListQLabel.setObjectName(u"dumpsHdListQLabel")
 
-        self.horizontalLayout_3.addWidget(self.dumpHdListQLabel)
+        self.horizontalLayout_3.addWidget(self.dumpsHdListQLabel)
 
-        self.dumpHdListLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.dumpsHdListLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.horizontalLayout_3.addItem(self.dumpHdListLabelContainerQFrameHSpacer)
+        self.horizontalLayout_3.addItem(self.dumpsHdListLabelContainerQFrameHSpacer)
 
 
-        self.verticalLayout_5.addWidget(self.dumpHdListLabelContainerQFrame)
+        self.verticalLayout_5.addWidget(self.dumpsHdListLabelContainerQFrame)
 
-        self.dumpHdQComboBox = QComboBox(self.dumpHdListComboContainerQFrame)
-        self.dumpHdQComboBox.addItem("")
-        self.dumpHdQComboBox.addItem("")
-        self.dumpHdQComboBox.addItem("")
-        self.dumpHdQComboBox.addItem("")
-        self.dumpHdQComboBox.addItem("")
-        self.dumpHdQComboBox.addItem("")
-        self.dumpHdQComboBox.addItem("")
-        self.dumpHdQComboBox.addItem("")
-        self.dumpHdQComboBox.addItem("")
-        self.dumpHdQComboBox.addItem("")
-        self.dumpHdQComboBox.setObjectName(u"dumpHdQComboBox")
+        self.dumpsHdQComboBox = QComboBox(self.dumpsHdListComboContainerQFrame)
+        self.dumpsHdQComboBox.addItem("")
+        self.dumpsHdQComboBox.addItem("")
+        self.dumpsHdQComboBox.addItem("")
+        self.dumpsHdQComboBox.addItem("")
+        self.dumpsHdQComboBox.addItem("")
+        self.dumpsHdQComboBox.addItem("")
+        self.dumpsHdQComboBox.addItem("")
+        self.dumpsHdQComboBox.addItem("")
+        self.dumpsHdQComboBox.addItem("")
+        self.dumpsHdQComboBox.addItem("")
+        self.dumpsHdQComboBox.setObjectName(u"dumpsHdQComboBox")
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.dumpHdQComboBox.sizePolicy().hasHeightForWidth())
-        self.dumpHdQComboBox.setSizePolicy(sizePolicy)
+        sizePolicy.setHeightForWidth(self.dumpsHdQComboBox.sizePolicy().hasHeightForWidth())
+        self.dumpsHdQComboBox.setSizePolicy(sizePolicy)
 
-        self.verticalLayout_5.addWidget(self.dumpHdQComboBox)
+        self.verticalLayout_5.addWidget(self.dumpsHdQComboBox)
 
 
-        self.horizontalLayout_2.addWidget(self.dumpHdListComboContainerQFrame)
+        self.horizontalLayout_2.addWidget(self.dumpsHdListComboContainerQFrame)
 
-        self.dumpFromContainerQFrame = QFrame(self.dumpHDFromCryptocurrencyAndNetworkContainerQFrame)
-        self.dumpFromContainerQFrame.setObjectName(u"dumpFromContainerQFrame")
-        self.verticalLayout_6 = QVBoxLayout(self.dumpFromContainerQFrame)
+        self.dumpsFromContainerQFrame = QFrame(self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame)
+        self.dumpsFromContainerQFrame.setObjectName(u"dumpsFromContainerQFrame")
+        self.verticalLayout_6 = QVBoxLayout(self.dumpsFromContainerQFrame)
         self.verticalLayout_6.setSpacing(5)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
         self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
-        self.dumpFromLabelContainerQFrame = QFrame(self.dumpFromContainerQFrame)
-        self.dumpFromLabelContainerQFrame.setObjectName(u"dumpFromLabelContainerQFrame")
-        self.dumpFromLabelContainerQFrame.setFrameShape(QFrame.NoFrame)
-        self.horizontalLayout_8 = QHBoxLayout(self.dumpFromLabelContainerQFrame)
+        self.dumpsFromLabelContainerQFrame = QFrame(self.dumpsFromContainerQFrame)
+        self.dumpsFromLabelContainerQFrame.setObjectName(u"dumpsFromLabelContainerQFrame")
+        self.dumpsFromLabelContainerQFrame.setFrameShape(QFrame.NoFrame)
+        self.horizontalLayout_8 = QHBoxLayout(self.dumpsFromLabelContainerQFrame)
         self.horizontalLayout_8.setSpacing(15)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
-        self.dumpFromQLabel = QLabel(self.dumpFromLabelContainerQFrame)
-        self.dumpFromQLabel.setObjectName(u"dumpFromQLabel")
+        self.dumpsFromQLabel = QLabel(self.dumpsFromLabelContainerQFrame)
+        self.dumpsFromQLabel.setObjectName(u"dumpsFromQLabel")
 
-        self.horizontalLayout_8.addWidget(self.dumpFromQLabel)
+        self.horizontalLayout_8.addWidget(self.dumpsFromQLabel)
 
-        self.dumpFromLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.dumpsFromLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.horizontalLayout_8.addItem(self.dumpFromLabelContainerQFrameHSpacer)
-
-
-        self.verticalLayout_6.addWidget(self.dumpFromLabelContainerQFrame)
-
-        self.dumpFromQComboBox = QComboBox(self.dumpFromContainerQFrame)
-        self.dumpFromQComboBox.addItem("")
-        self.dumpFromQComboBox.addItem("")
-        self.dumpFromQComboBox.addItem("")
-        self.dumpFromQComboBox.addItem("")
-        self.dumpFromQComboBox.addItem("")
-        self.dumpFromQComboBox.addItem("")
-        self.dumpFromQComboBox.addItem("")
-        self.dumpFromQComboBox.addItem("")
-        self.dumpFromQComboBox.setObjectName(u"dumpFromQComboBox")
-        sizePolicy.setHeightForWidth(self.dumpFromQComboBox.sizePolicy().hasHeightForWidth())
-        self.dumpFromQComboBox.setSizePolicy(sizePolicy)
-
-        self.verticalLayout_6.addWidget(self.dumpFromQComboBox)
+        self.horizontalLayout_8.addItem(self.dumpsFromLabelContainerQFrameHSpacer)
 
 
-        self.horizontalLayout_2.addWidget(self.dumpFromContainerQFrame)
+        self.verticalLayout_6.addWidget(self.dumpsFromLabelContainerQFrame)
 
-        self.dumpCryptocurrencyContainerQFrame = QFrame(self.dumpHDFromCryptocurrencyAndNetworkContainerQFrame)
-        self.dumpCryptocurrencyContainerQFrame.setObjectName(u"dumpCryptocurrencyContainerQFrame")
-        self.CryptocurrencyVLayout = QVBoxLayout(self.dumpCryptocurrencyContainerQFrame)
+        self.dumpsFromQComboBox = QComboBox(self.dumpsFromContainerQFrame)
+        self.dumpsFromQComboBox.addItem("")
+        self.dumpsFromQComboBox.addItem("")
+        self.dumpsFromQComboBox.addItem("")
+        self.dumpsFromQComboBox.addItem("")
+        self.dumpsFromQComboBox.addItem("")
+        self.dumpsFromQComboBox.addItem("")
+        self.dumpsFromQComboBox.addItem("")
+        self.dumpsFromQComboBox.addItem("")
+        self.dumpsFromQComboBox.setObjectName(u"dumpsFromQComboBox")
+        sizePolicy.setHeightForWidth(self.dumpsFromQComboBox.sizePolicy().hasHeightForWidth())
+        self.dumpsFromQComboBox.setSizePolicy(sizePolicy)
+
+        self.verticalLayout_6.addWidget(self.dumpsFromQComboBox)
+
+
+        self.horizontalLayout_2.addWidget(self.dumpsFromContainerQFrame)
+
+        self.dumpsCryptocurrencyContainerQFrame = QFrame(self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame)
+        self.dumpsCryptocurrencyContainerQFrame.setObjectName(u"dumpsCryptocurrencyContainerQFrame")
+        self.CryptocurrencyVLayout = QVBoxLayout(self.dumpsCryptocurrencyContainerQFrame)
         self.CryptocurrencyVLayout.setSpacing(5)
         self.CryptocurrencyVLayout.setObjectName(u"CryptocurrencyVLayout")
         self.CryptocurrencyVLayout.setContentsMargins(0, 0, 0, 0)
-        self.dumpCryptocurrencyLabelContainerQFrame = QFrame(self.dumpCryptocurrencyContainerQFrame)
-        self.dumpCryptocurrencyLabelContainerQFrame.setObjectName(u"dumpCryptocurrencyLabelContainerQFrame")
-        self.CryptocurrencyLabelHLayout = QHBoxLayout(self.dumpCryptocurrencyLabelContainerQFrame)
+        self.dumpsCryptocurrencyLabelContainerQFrame = QFrame(self.dumpsCryptocurrencyContainerQFrame)
+        self.dumpsCryptocurrencyLabelContainerQFrame.setObjectName(u"dumpsCryptocurrencyLabelContainerQFrame")
+        self.CryptocurrencyLabelHLayout = QHBoxLayout(self.dumpsCryptocurrencyLabelContainerQFrame)
         self.CryptocurrencyLabelHLayout.setSpacing(15)
         self.CryptocurrencyLabelHLayout.setObjectName(u"CryptocurrencyLabelHLayout")
         self.CryptocurrencyLabelHLayout.setContentsMargins(0, 0, 0, 0)
-        self.dumpCryptocurrencyQLabel = QLabel(self.dumpCryptocurrencyLabelContainerQFrame)
-        self.dumpCryptocurrencyQLabel.setObjectName(u"dumpCryptocurrencyQLabel")
+        self.dumpsCryptocurrencyQLabel = QLabel(self.dumpsCryptocurrencyLabelContainerQFrame)
+        self.dumpsCryptocurrencyQLabel.setObjectName(u"dumpsCryptocurrencyQLabel")
 
-        self.CryptocurrencyLabelHLayout.addWidget(self.dumpCryptocurrencyQLabel)
+        self.CryptocurrencyLabelHLayout.addWidget(self.dumpsCryptocurrencyQLabel)
 
-        self.dumpCryptocurrencyLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.dumpsCryptocurrencyLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.CryptocurrencyLabelHLayout.addItem(self.dumpCryptocurrencyLabelContainerQFrameHSpacer)
-
-
-        self.CryptocurrencyVLayout.addWidget(self.dumpCryptocurrencyLabelContainerQFrame)
-
-        self.dumpCryptocurrencyQComboBox = QComboBox(self.dumpCryptocurrencyContainerQFrame)
-        self.dumpCryptocurrencyQComboBox.addItem("")
-        self.dumpCryptocurrencyQComboBox.addItem("")
-        self.dumpCryptocurrencyQComboBox.addItem("")
-        self.dumpCryptocurrencyQComboBox.addItem("")
-        self.dumpCryptocurrencyQComboBox.setObjectName(u"dumpCryptocurrencyQComboBox")
-
-        self.CryptocurrencyVLayout.addWidget(self.dumpCryptocurrencyQComboBox)
+        self.CryptocurrencyLabelHLayout.addItem(self.dumpsCryptocurrencyLabelContainerQFrameHSpacer)
 
 
-        self.horizontalLayout_2.addWidget(self.dumpCryptocurrencyContainerQFrame)
+        self.CryptocurrencyVLayout.addWidget(self.dumpsCryptocurrencyLabelContainerQFrame)
 
-        self.dumpNetworkContainerQFrame = QFrame(self.dumpHDFromCryptocurrencyAndNetworkContainerQFrame)
-        self.dumpNetworkContainerQFrame.setObjectName(u"dumpNetworkContainerQFrame")
-        self.dumpNetworkContainerQFrame.setMinimumSize(QSize(150, 0))
-        self.ClientVLayout_25 = QVBoxLayout(self.dumpNetworkContainerQFrame)
+        self.dumpsCryptocurrencyQComboBox = QComboBox(self.dumpsCryptocurrencyContainerQFrame)
+        self.dumpsCryptocurrencyQComboBox.addItem("")
+        self.dumpsCryptocurrencyQComboBox.addItem("")
+        self.dumpsCryptocurrencyQComboBox.setObjectName(u"dumpsCryptocurrencyQComboBox")
+
+        self.CryptocurrencyVLayout.addWidget(self.dumpsCryptocurrencyQComboBox)
+
+
+        self.horizontalLayout_2.addWidget(self.dumpsCryptocurrencyContainerQFrame)
+
+        self.dumpsNetworkContainerQFrame = QFrame(self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame)
+        self.dumpsNetworkContainerQFrame.setObjectName(u"dumpsNetworkContainerQFrame")
+        self.dumpsNetworkContainerQFrame.setMinimumSize(QSize(150, 0))
+        self.ClientVLayout_25 = QVBoxLayout(self.dumpsNetworkContainerQFrame)
         self.ClientVLayout_25.setSpacing(5)
         self.ClientVLayout_25.setObjectName(u"ClientVLayout_25")
         self.ClientVLayout_25.setContentsMargins(0, 0, 0, 0)
-        self.dumpNetworkLabelContainerQFrame = QFrame(self.dumpNetworkContainerQFrame)
-        self.dumpNetworkLabelContainerQFrame.setObjectName(u"dumpNetworkLabelContainerQFrame")
-        self.MStrengthLabelHLayout_30 = QHBoxLayout(self.dumpNetworkLabelContainerQFrame)
+        self.dumpsNetworkLabelContainerQFrame = QFrame(self.dumpsNetworkContainerQFrame)
+        self.dumpsNetworkLabelContainerQFrame.setObjectName(u"dumpsNetworkLabelContainerQFrame")
+        self.MStrengthLabelHLayout_30 = QHBoxLayout(self.dumpsNetworkLabelContainerQFrame)
         self.MStrengthLabelHLayout_30.setSpacing(15)
         self.MStrengthLabelHLayout_30.setObjectName(u"MStrengthLabelHLayout_30")
         self.MStrengthLabelHLayout_30.setContentsMargins(0, 0, 0, 0)
-        self.dumpNetworkQLabel = QLabel(self.dumpNetworkLabelContainerQFrame)
-        self.dumpNetworkQLabel.setObjectName(u"dumpNetworkQLabel")
+        self.dumpsNetworkQLabel = QLabel(self.dumpsNetworkLabelContainerQFrame)
+        self.dumpsNetworkQLabel.setObjectName(u"dumpsNetworkQLabel")
 
-        self.MStrengthLabelHLayout_30.addWidget(self.dumpNetworkQLabel)
+        self.MStrengthLabelHLayout_30.addWidget(self.dumpsNetworkQLabel)
 
-        self.dumpNetworkLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.dumpsNetworkLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.MStrengthLabelHLayout_30.addItem(self.dumpNetworkLabelContainerQFrameHSpacer)
-
-
-        self.ClientVLayout_25.addWidget(self.dumpNetworkLabelContainerQFrame)
-
-        self.dumpNetworkQComboBox = QComboBox(self.dumpNetworkContainerQFrame)
-        self.dumpNetworkQComboBox.addItem("")
-        self.dumpNetworkQComboBox.addItem("")
-        self.dumpNetworkQComboBox.addItem("")
-        self.dumpNetworkQComboBox.addItem("")
-        self.dumpNetworkQComboBox.addItem("")
-        self.dumpNetworkQComboBox.addItem("")
-        self.dumpNetworkQComboBox.setObjectName(u"dumpNetworkQComboBox")
-
-        self.ClientVLayout_25.addWidget(self.dumpNetworkQComboBox)
+        self.MStrengthLabelHLayout_30.addItem(self.dumpsNetworkLabelContainerQFrameHSpacer)
 
 
-        self.horizontalLayout_2.addWidget(self.dumpNetworkContainerQFrame)
+        self.ClientVLayout_25.addWidget(self.dumpsNetworkLabelContainerQFrame)
+
+        self.dumpsNetworkQComboBox = QComboBox(self.dumpsNetworkContainerQFrame)
+        self.dumpsNetworkQComboBox.addItem("")
+        self.dumpsNetworkQComboBox.addItem("")
+        self.dumpsNetworkQComboBox.addItem("")
+        self.dumpsNetworkQComboBox.addItem("")
+        self.dumpsNetworkQComboBox.addItem("")
+        self.dumpsNetworkQComboBox.addItem("")
+        self.dumpsNetworkQComboBox.setObjectName(u"dumpsNetworkQComboBox")
+
+        self.ClientVLayout_25.addWidget(self.dumpsNetworkQComboBox)
 
 
-        self.verticalLayout_3.addWidget(self.dumpHDFromCryptocurrencyAndNetworkContainerQFrame)
+        self.horizontalLayout_2.addWidget(self.dumpsNetworkContainerQFrame)
 
-        self.hdQStackedWidget = QStackedWidget(self.dumpPageEntireContainerQFrame)
+
+        self.verticalLayout_3.addWidget(self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame)
+
+        self.hdQStackedWidget = QStackedWidget(self.dumpsPageEntireContainerQFrame)
         self.hdQStackedWidget.setObjectName(u"hdQStackedWidget")
         self.hdQStackedWidget.setLineWidth(0)
         self.BIPsPageQWidget = QWidget()
@@ -5049,13 +5119,13 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addWidget(self.hdQStackedWidget)
 
-        self.dumpDerivationContainerQFrame = QFrame(self.dumpPageEntireContainerQFrame)
-        self.dumpDerivationContainerQFrame.setObjectName(u"dumpDerivationContainerQFrame")
-        self.verticalLayout_17 = QVBoxLayout(self.dumpDerivationContainerQFrame)
+        self.dumpsDerivationContainerQFrame = QFrame(self.dumpsPageEntireContainerQFrame)
+        self.dumpsDerivationContainerQFrame.setObjectName(u"dumpsDerivationContainerQFrame")
+        self.verticalLayout_17 = QVBoxLayout(self.dumpsDerivationContainerQFrame)
         self.verticalLayout_17.setSpacing(15)
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
         self.verticalLayout_17.setContentsMargins(0, 0, 0, 0)
-        self.DerivationQFrame = QFrame(self.dumpDerivationContainerQFrame)
+        self.DerivationQFrame = QFrame(self.dumpsDerivationContainerQFrame)
         self.DerivationQFrame.setObjectName(u"DerivationQFrame")
         self.DerivationVLayout = QVBoxLayout(self.DerivationQFrame)
         self.DerivationVLayout.setSpacing(5)
@@ -6102,135 +6172,135 @@ class Ui_MainWindow(object):
         self.verticalLayout_17.addWidget(self.DerivationQFrame)
 
 
-        self.verticalLayout_3.addWidget(self.dumpDerivationContainerQFrame)
+        self.verticalLayout_3.addWidget(self.dumpsDerivationContainerQFrame)
 
-        self.dumpFormatKeysContainerQFrame = QFrame(self.dumpPageEntireContainerQFrame)
-        self.dumpFormatKeysContainerQFrame.setObjectName(u"dumpFormatKeysContainerQFrame")
-        self.horizontalLayout_4 = QHBoxLayout(self.dumpFormatKeysContainerQFrame)
+        self.dumpsFormatKeysContainerQFrame = QFrame(self.dumpsPageEntireContainerQFrame)
+        self.dumpsFormatKeysContainerQFrame.setObjectName(u"dumpsFormatKeysContainerQFrame")
+        self.horizontalLayout_4 = QHBoxLayout(self.dumpsFormatKeysContainerQFrame)
         self.horizontalLayout_4.setSpacing(15)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.dumpFormatContainerQFrame = QFrame(self.dumpFormatKeysContainerQFrame)
-        self.dumpFormatContainerQFrame.setObjectName(u"dumpFormatContainerQFrame")
-        self.CryptocurrencyAndFormatHLayout = QHBoxLayout(self.dumpFormatContainerQFrame)
+        self.dumpsFormatContainerQFrame = QFrame(self.dumpsFormatKeysContainerQFrame)
+        self.dumpsFormatContainerQFrame.setObjectName(u"dumpsFormatContainerQFrame")
+        self.CryptocurrencyAndFormatHLayout = QHBoxLayout(self.dumpsFormatContainerQFrame)
         self.CryptocurrencyAndFormatHLayout.setSpacing(15)
         self.CryptocurrencyAndFormatHLayout.setObjectName(u"CryptocurrencyAndFormatHLayout")
         self.CryptocurrencyAndFormatHLayout.setContentsMargins(0, 0, 0, 0)
-        self.FormatQFrame = QFrame(self.dumpFormatContainerQFrame)
-        self.FormatQFrame.setObjectName(u"FormatQFrame")
-        self.FormatQFrame.setMaximumSize(QSize(100, 16777215))
-        self.FormatVLayout = QVBoxLayout(self.FormatQFrame)
+        self.dumpsformatQFrame = QFrame(self.dumpsFormatContainerQFrame)
+        self.dumpsformatQFrame.setObjectName(u"dumpsformatQFrame")
+        self.dumpsformatQFrame.setMaximumSize(QSize(100, 16777215))
+        self.FormatVLayout = QVBoxLayout(self.dumpsformatQFrame)
         self.FormatVLayout.setSpacing(5)
         self.FormatVLayout.setObjectName(u"FormatVLayout")
         self.FormatVLayout.setContentsMargins(0, 0, 0, 0)
-        self.dumpFormatLabelContainerQFrame = QFrame(self.FormatQFrame)
-        self.dumpFormatLabelContainerQFrame.setObjectName(u"dumpFormatLabelContainerQFrame")
-        self.FormatLabelHLayout = QHBoxLayout(self.dumpFormatLabelContainerQFrame)
+        self.dumpsFormatLabelContainerQFrame = QFrame(self.dumpsformatQFrame)
+        self.dumpsFormatLabelContainerQFrame.setObjectName(u"dumpsFormatLabelContainerQFrame")
+        self.FormatLabelHLayout = QHBoxLayout(self.dumpsFormatLabelContainerQFrame)
         self.FormatLabelHLayout.setSpacing(15)
         self.FormatLabelHLayout.setObjectName(u"FormatLabelHLayout")
         self.FormatLabelHLayout.setContentsMargins(0, 0, 0, 0)
-        self.dumpFormatQLabel = QLabel(self.dumpFormatLabelContainerQFrame)
-        self.dumpFormatQLabel.setObjectName(u"dumpFormatQLabel")
+        self.dumpsFormatQLabel = QLabel(self.dumpsFormatLabelContainerQFrame)
+        self.dumpsFormatQLabel.setObjectName(u"dumpsFormatQLabel")
 
-        self.FormatLabelHLayout.addWidget(self.dumpFormatQLabel)
+        self.FormatLabelHLayout.addWidget(self.dumpsFormatQLabel)
 
-        self.dumpFormatLabelContainerQFrameHSpacer = QSpacerItem(764, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.dumpsFormatLabelContainerQFrameHSpacer = QSpacerItem(764, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.FormatLabelHLayout.addItem(self.dumpFormatLabelContainerQFrameHSpacer)
-
-
-        self.FormatVLayout.addWidget(self.dumpFormatLabelContainerQFrame)
-
-        self.FormatQComboBox = QComboBox(self.FormatQFrame)
-        self.FormatQComboBox.addItem("")
-        self.FormatQComboBox.addItem("")
-        self.FormatQComboBox.setObjectName(u"FormatQComboBox")
-
-        self.FormatVLayout.addWidget(self.FormatQComboBox)
+        self.FormatLabelHLayout.addItem(self.dumpsFormatLabelContainerQFrameHSpacer)
 
 
-        self.CryptocurrencyAndFormatHLayout.addWidget(self.FormatQFrame)
+        self.FormatVLayout.addWidget(self.dumpsFormatLabelContainerQFrame)
+
+        self.dumpsormatQComboBox = QComboBox(self.dumpsformatQFrame)
+        self.dumpsormatQComboBox.addItem("")
+        self.dumpsormatQComboBox.addItem("")
+        self.dumpsormatQComboBox.setObjectName(u"dumpsormatQComboBox")
+
+        self.FormatVLayout.addWidget(self.dumpsormatQComboBox)
 
 
-        self.horizontalLayout_4.addWidget(self.dumpFormatContainerQFrame)
+        self.CryptocurrencyAndFormatHLayout.addWidget(self.dumpsformatQFrame)
 
-        self.dumpKeysContainerQFrame = QFrame(self.dumpFormatKeysContainerQFrame)
-        self.dumpKeysContainerQFrame.setObjectName(u"dumpKeysContainerQFrame")
-        self.horizontalLayout_18 = QHBoxLayout(self.dumpKeysContainerQFrame)
+
+        self.horizontalLayout_4.addWidget(self.dumpsFormatContainerQFrame)
+
+        self.dumpsKeysContainerQFrame = QFrame(self.dumpsFormatKeysContainerQFrame)
+        self.dumpsKeysContainerQFrame.setObjectName(u"dumpsKeysContainerQFrame")
+        self.horizontalLayout_18 = QHBoxLayout(self.dumpsKeysContainerQFrame)
         self.horizontalLayout_18.setSpacing(15)
         self.horizontalLayout_18.setObjectName(u"horizontalLayout_18")
         self.horizontalLayout_18.setContentsMargins(0, 0, 0, 0)
-        self.KeysQFrame = QFrame(self.dumpKeysContainerQFrame)
-        self.KeysQFrame.setObjectName(u"KeysQFrame")
-        self.KeysQFrame.setMinimumSize(QSize(288, 0))
-        self.KeysVLayout = QVBoxLayout(self.KeysQFrame)
+        self.dumpsKeysQFrame = QFrame(self.dumpsKeysContainerQFrame)
+        self.dumpsKeysQFrame.setObjectName(u"dumpsKeysQFrame")
+        self.dumpsKeysQFrame.setMinimumSize(QSize(288, 0))
+        self.KeysVLayout = QVBoxLayout(self.dumpsKeysQFrame)
         self.KeysVLayout.setSpacing(5)
         self.KeysVLayout.setObjectName(u"KeysVLayout")
         self.KeysVLayout.setContentsMargins(0, 0, 0, 0)
-        self.dumpKeysLabelContainerQFrame = QFrame(self.KeysQFrame)
-        self.dumpKeysLabelContainerQFrame.setObjectName(u"dumpKeysLabelContainerQFrame")
-        self.horizontalLayout_21 = QHBoxLayout(self.dumpKeysLabelContainerQFrame)
+        self.dumpsKeysLabelContainerQFrame = QFrame(self.dumpsKeysQFrame)
+        self.dumpsKeysLabelContainerQFrame.setObjectName(u"dumpsKeysLabelContainerQFrame")
+        self.horizontalLayout_21 = QHBoxLayout(self.dumpsKeysLabelContainerQFrame)
         self.horizontalLayout_21.setSpacing(15)
         self.horizontalLayout_21.setObjectName(u"horizontalLayout_21")
         self.horizontalLayout_21.setContentsMargins(0, 0, 0, 0)
-        self.dumpKeysQLabel = QLabel(self.dumpKeysLabelContainerQFrame)
-        self.dumpKeysQLabel.setObjectName(u"dumpKeysQLabel")
+        self.dumpsKeysQLabel = QLabel(self.dumpsKeysLabelContainerQFrame)
+        self.dumpsKeysQLabel.setObjectName(u"dumpsKeysQLabel")
 
-        self.horizontalLayout_21.addWidget(self.dumpKeysQLabel)
+        self.horizontalLayout_21.addWidget(self.dumpsKeysQLabel)
 
-        self.dumpKeysLabelContainerQFrameHSpacer = QSpacerItem(524, 17, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.dumpsKeysLabelContainerQFrameHSpacer = QSpacerItem(524, 17, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.horizontalLayout_21.addItem(self.dumpKeysLabelContainerQFrameHSpacer)
+        self.horizontalLayout_21.addItem(self.dumpsKeysLabelContainerQFrameHSpacer)
 
 
-        self.KeysVLayout.addWidget(self.dumpKeysLabelContainerQFrame)
+        self.KeysVLayout.addWidget(self.dumpsKeysLabelContainerQFrame)
 
-        self.KeysLabelQFrame = QFrame(self.KeysQFrame)
-        self.KeysLabelQFrame.setObjectName(u"KeysLabelQFrame")
-        self.verticalLayout_18 = QVBoxLayout(self.KeysLabelQFrame)
+        self.dumpsKeysLabelQFrame = QFrame(self.dumpsKeysQFrame)
+        self.dumpsKeysLabelQFrame.setObjectName(u"dumpsKeysLabelQFrame")
+        self.verticalLayout_18 = QVBoxLayout(self.dumpsKeysLabelQFrame)
         self.verticalLayout_18.setSpacing(5)
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
         self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
-        self.dumpKeysLineEditContainerQFrame = QFrame(self.KeysLabelQFrame)
-        self.dumpKeysLineEditContainerQFrame.setObjectName(u"dumpKeysLineEditContainerQFrame")
-        self.horizontalLayout_20 = QHBoxLayout(self.dumpKeysLineEditContainerQFrame)
+        self.dumpsKeysLineEditContainerQFrame = QFrame(self.dumpsKeysLabelQFrame)
+        self.dumpsKeysLineEditContainerQFrame.setObjectName(u"dumpsKeysLineEditContainerQFrame")
+        self.horizontalLayout_20 = QHBoxLayout(self.dumpsKeysLineEditContainerQFrame)
         self.horizontalLayout_20.setSpacing(15)
         self.horizontalLayout_20.setObjectName(u"horizontalLayout_20")
         self.horizontalLayout_20.setContentsMargins(0, 0, 0, 0)
-        self.dumpKeysQLineEdit = QLineEdit(self.dumpKeysLineEditContainerQFrame)
-        self.dumpKeysQLineEdit.setObjectName(u"dumpKeysQLineEdit")
+        self.dumpsKeysQLineEdit = QLineEdit(self.dumpsKeysLineEditContainerQFrame)
+        self.dumpsKeysQLineEdit.setObjectName(u"dumpsKeysQLineEdit")
 
-        self.horizontalLayout_20.addWidget(self.dumpKeysQLineEdit)
+        self.horizontalLayout_20.addWidget(self.dumpsKeysQLineEdit)
 
-        self.dumpKeysGenerateQPushButton = QPushButton(self.dumpKeysLineEditContainerQFrame)
-        self.dumpKeysGenerateQPushButton.setObjectName(u"dumpKeysGenerateQPushButton")
-        sizePolicy1.setHeightForWidth(self.dumpKeysGenerateQPushButton.sizePolicy().hasHeightForWidth())
-        self.dumpKeysGenerateQPushButton.setSizePolicy(sizePolicy1)
-        self.dumpKeysGenerateQPushButton.setStyleSheet(u"")
+        self.dumpsKeysGenerateQPushButton = QPushButton(self.dumpsKeysLineEditContainerQFrame)
+        self.dumpsKeysGenerateQPushButton.setObjectName(u"dumpsKeysGenerateQPushButton")
+        sizePolicy1.setHeightForWidth(self.dumpsKeysGenerateQPushButton.sizePolicy().hasHeightForWidth())
+        self.dumpsKeysGenerateQPushButton.setSizePolicy(sizePolicy1)
+        self.dumpsKeysGenerateQPushButton.setStyleSheet(u"")
 
-        self.horizontalLayout_20.addWidget(self.dumpKeysGenerateQPushButton)
-
-
-        self.verticalLayout_18.addWidget(self.dumpKeysLineEditContainerQFrame)
+        self.horizontalLayout_20.addWidget(self.dumpsKeysGenerateQPushButton)
 
 
-        self.KeysVLayout.addWidget(self.KeysLabelQFrame)
+        self.verticalLayout_18.addWidget(self.dumpsKeysLineEditContainerQFrame)
 
 
-        self.horizontalLayout_18.addWidget(self.KeysQFrame)
+        self.KeysVLayout.addWidget(self.dumpsKeysLabelQFrame)
 
 
-        self.horizontalLayout_4.addWidget(self.dumpKeysContainerQFrame)
+        self.horizontalLayout_18.addWidget(self.dumpsKeysQFrame)
 
 
-        self.verticalLayout_3.addWidget(self.dumpFormatKeysContainerQFrame)
+        self.horizontalLayout_4.addWidget(self.dumpsKeysContainerQFrame)
 
 
-        self.verticalLayout_12.addWidget(self.dumpPageEntireContainerQFrame)
+        self.verticalLayout_3.addWidget(self.dumpsFormatKeysContainerQFrame)
 
-        self.stackedWidget.addWidget(self.dumpPageQStackedWidget)
 
-        self.verticalLayout.addWidget(self.stackedWidget)
+        self.verticalLayout_12.addWidget(self.dumpsPageEntireContainerQFrame)
+
+        self.hdwalletQStackedWidget.addWidget(self.dumpsPageQStackedWidget)
+
+        self.verticalLayout.addWidget(self.hdwalletQStackedWidget)
 
         self.hdWalletContainerQFrameVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -6305,8 +6375,8 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(1)
-        self.hdQStackedWidget.setCurrentIndex(4)
+        self.hdwalletQStackedWidget.setCurrentIndex(1)
+        self.hdQStackedWidget.setCurrentIndex(2)
         self.BIPQStackedWidget.setCurrentIndex(4)
         self.cardanoQStackedWidget.setCurrentIndex(4)
         self.electrumV1QStackedWidget.setCurrentIndex(0)
@@ -6321,9 +6391,10 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.generateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
-        self.dumpQPushButton.setText(QCoreApplication.translate("MainWindow", u"Dump", None))
+        self.dumpQPushButton.setText(QCoreApplication.translate("MainWindow", u"Dumps", None))
         self.donationHDWalletQPushButton.setText(QCoreApplication.translate("MainWindow", u"Donation", None))
         self.helpHDWalletQPushButton.setText(QCoreApplication.translate("MainWindow", u"Help", None))
+        self.entropyGeneratorQLabel.setText(QCoreApplication.translate("MainWindow", u"Entropy Generator", None))
         self.generateEntropyClientQLabel.setText(QCoreApplication.translate("MainWindow", u"Client", None))
         self.generateEntropyClientQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Select Client", None))
         self.generateEntropyStrengthQLabel.setText(QCoreApplication.translate("MainWindow", u"Strength", None))
@@ -6331,6 +6402,7 @@ class Ui_MainWindow(object):
         self.generateEntropyClientAndStrengthQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
         self.generateEntropyQLabel.setText(QCoreApplication.translate("MainWindow", u"Entropy", None))
         self.generateEntropyCopyQLineEdit.setText(QCoreApplication.translate("MainWindow", u"Copy", None))
+        self.mnemonicGeneratorQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic Generator", None))
         self.generateMnemonicClientQLabel.setText(QCoreApplication.translate("MainWindow", u"Client", None))
         self.generateMnemonicClientQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Select Client", None))
         self.generateMnemonicWordsQLabel.setText(QCoreApplication.translate("MainWindow", u"Words", None))
@@ -6340,45 +6412,44 @@ class Ui_MainWindow(object):
         self.generateMnemonicClientWordsAndLanguageQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
         self.generateMnemonicQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic", None))
         self.generateMnemonicCopyQPushButton.setText(QCoreApplication.translate("MainWindow", u"Copy", None))
+        self.passphraseGeneratorQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase Generator", None))
         self.generateLengthQLabel.setText(QCoreApplication.translate("MainWindow", u"Length", None))
         self.generatePassphraseLengthQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
         self.generatePassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.generatePassphraseCopyQPushButton.setText(QCoreApplication.translate("MainWindow", u"Copy", None))
-        self.dumpHdListQLabel.setText(QCoreApplication.translate("MainWindow", u"HD", None))
-        self.dumpHdQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"BIP32", None))
-        self.dumpHdQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP44", None))
-        self.dumpHdQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"BIP49", None))
-        self.dumpHdQComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"BIP84", None))
-        self.dumpHdQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"BIP86", None))
-        self.dumpHdQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"BIP141", None))
-        self.dumpHdQComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Cardano", None))
-        self.dumpHdQComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Electrum-V1", None))
-        self.dumpHdQComboBox.setItemText(8, QCoreApplication.translate("MainWindow", u"Electrum-V2", None))
-        self.dumpHdQComboBox.setItemText(9, QCoreApplication.translate("MainWindow", u"Monero", None))
+        self.dumpsHdListQLabel.setText(QCoreApplication.translate("MainWindow", u"HD", None))
+        self.dumpsHdQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"BIP32", None))
+        self.dumpsHdQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP44", None))
+        self.dumpsHdQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"BIP49", None))
+        self.dumpsHdQComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"BIP84", None))
+        self.dumpsHdQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"BIP86", None))
+        self.dumpsHdQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"BIP141", None))
+        self.dumpsHdQComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Cardano", None))
+        self.dumpsHdQComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Electrum-V1", None))
+        self.dumpsHdQComboBox.setItemText(8, QCoreApplication.translate("MainWindow", u"Electrum-V2", None))
+        self.dumpsHdQComboBox.setItemText(9, QCoreApplication.translate("MainWindow", u"Monero", None))
 
-        self.dumpFromQLabel.setText(QCoreApplication.translate("MainWindow", u"From", None))
-        self.dumpFromQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Entropy", None))
-        self.dumpFromQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Mnemonic", None))
-        self.dumpFromQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Private key", None))
-        self.dumpFromQComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Public key", None))
-        self.dumpFromQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Seed", None))
-        self.dumpFromQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"WIF", None))
-        self.dumpFromQComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"XPrivate Key", None))
-        self.dumpFromQComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"XPublic Key", None))
+        self.dumpsFromQLabel.setText(QCoreApplication.translate("MainWindow", u"From", None))
+        self.dumpsFromQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Entropy", None))
+        self.dumpsFromQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Mnemonic", None))
+        self.dumpsFromQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Private key", None))
+        self.dumpsFromQComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Public key", None))
+        self.dumpsFromQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Seed", None))
+        self.dumpsFromQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"WIF", None))
+        self.dumpsFromQComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"XPrivate Key", None))
+        self.dumpsFromQComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"XPublic Key", None))
 
-        self.dumpCryptocurrencyQLabel.setText(QCoreApplication.translate("MainWindow", u"Cryptocurrency", None))
-        self.dumpCryptocurrencyQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"BTC - Bitcoin", None))
-        self.dumpCryptocurrencyQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BTC - Bitcoin Testnet", None))
-        self.dumpCryptocurrencyQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"QTUM - Qtum", None))
-        self.dumpCryptocurrencyQComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"QTUM - Qtum Testnet", None))
+        self.dumpsCryptocurrencyQLabel.setText(QCoreApplication.translate("MainWindow", u"Cryptocurrency", None))
+        self.dumpsCryptocurrencyQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Bitcoin", None))
+        self.dumpsCryptocurrencyQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Qtum", None))
 
-        self.dumpNetworkQLabel.setText(QCoreApplication.translate("MainWindow", u"Network", None))
-        self.dumpNetworkQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
-        self.dumpNetworkQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
-        self.dumpNetworkQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Cardano", None))
-        self.dumpNetworkQComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Electrum V1", None))
-        self.dumpNetworkQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
-        self.dumpNetworkQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
+        self.dumpsNetworkQLabel.setText(QCoreApplication.translate("MainWindow", u"Network", None))
+        self.dumpsNetworkQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
+        self.dumpsNetworkQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
+        self.dumpsNetworkQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Cardano", None))
+        self.dumpsNetworkQComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Electrum V1", None))
+        self.dumpsNetworkQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
+        self.dumpsNetworkQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
         self.BIPFromEntropyQLabel.setText(QCoreApplication.translate("MainWindow", u"Entropy", None))
         self.BIPFromEntropyPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
@@ -6851,11 +6922,11 @@ class Ui_MainWindow(object):
         self.CIP1852AddressQLineEdit.setText("")
         self.CIP1852AddressQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.DerivationsQTabWidget.setTabText(self.DerivationsQTabWidget.indexOf(self.CIP1852QWidget), QCoreApplication.translate("MainWindow", u"CIP1852", None))
-        self.dumpFormatQLabel.setText(QCoreApplication.translate("MainWindow", u"Format", None))
-        self.FormatQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"JSON", None))
-        self.FormatQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"CSV", None))
+        self.dumpsFormatQLabel.setText(QCoreApplication.translate("MainWindow", u"Format", None))
+        self.dumpsormatQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"JSON", None))
+        self.dumpsormatQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"CSV", None))
 
-        self.dumpKeysQLabel.setText(QCoreApplication.translate("MainWindow", u"Keys", None))
-        self.dumpKeysGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
+        self.dumpsKeysQLabel.setText(QCoreApplication.translate("MainWindow", u"Keys", None))
+        self.dumpsKeysGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
     # retranslateUi
 
