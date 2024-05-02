@@ -7,14 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>1000</width>
-    <height>509</height>
+    <height>510</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
+   <layout class="QHBoxLayout" name="centralwidgetHLayout">
     <property name="spacing">
      <number>0</number>
     </property>
@@ -47,7 +47,7 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
+      <layout class="QVBoxLayout" name="hdWalletContainerQFrameVLayout">
        <property name="spacing">
         <number>0</number>
        </property>
@@ -77,7 +77,7 @@
            <height>47</height>
           </size>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <layout class="QHBoxLayout" name="hdWalletHeaderContainerQFrameHLayout">
           <property name="spacing">
            <number>15</number>
           </property>
@@ -95,7 +95,7 @@
           </property>
           <item>
            <widget class="QFrame" name="hdWalletLogoContainerQFrame">
-            <layout class="QVBoxLayout" name="verticalLayout_20">
+            <layout class="QVBoxLayout" name="hdWalletLogoContainerQFrameVLayout">
              <property name="spacing">
               <number>5</number>
              </property>
@@ -161,10 +161,10 @@
        <item>
         <widget class="QStackedWidget" name="hdwalletQStackedWidget">
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="generatePageQStackedWidget">
-          <layout class="QVBoxLayout" name="verticalLayout_14">
+          <layout class="QVBoxLayout" name="generatePageQStackedWidgetVLayout">
            <property name="spacing">
             <number>15</number>
            </property>
@@ -188,7 +188,7 @@
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
-             <layout class="QHBoxLayout" name="horizontalLayout_98">
+             <layout class="QHBoxLayout" name="entropyGeneratorLabelQFrameHLayout">
               <property name="spacing">
                <number>15</number>
               </property>
@@ -232,7 +232,7 @@
              <property name="lineWidth">
               <number>0</number>
              </property>
-             <layout class="QVBoxLayout" name="verticalLayout_15">
+             <layout class="QVBoxLayout" name="generateEntopyClientAndStrengthContainerQFrameVLayout">
               <property name="spacing">
                <number>15</number>
               </property>
@@ -250,7 +250,7 @@
               </property>
               <item>
                <widget class="QFrame" name="generateClientAndStrengthContainerQFrame">
-                <layout class="QHBoxLayout" name="horizontalLayout_14">
+                <layout class="QHBoxLayout" name="generateClientAndStrengthContainerQFrameHLayout">
                  <property name="spacing">
                   <number>15</number>
                  </property>
@@ -268,7 +268,7 @@
                  </property>
                  <item>
                   <widget class="QFrame" name="generateEntropyClientContainerQFrame">
-                   <layout class="QVBoxLayout" name="verticalLayout_51">
+                   <layout class="QVBoxLayout" name="generateEntropyClientContainerQFrameVLayout">
                     <property name="spacing">
                      <number>5</number>
                     </property>
@@ -303,7 +303,7 @@
                  </item>
                  <item>
                   <widget class="QFrame" name="generateEntropyStrengthContainerQFrame">
-                   <layout class="QVBoxLayout" name="verticalLayout_52">
+                   <layout class="QVBoxLayout" name="generateEntropyStrengthContainerQFrameVLayout">
                     <property name="spacing">
                      <number>5</number>
                     </property>
@@ -356,115 +356,6 @@
             </widget>
            </item>
            <item>
-            <widget class="QFrame" name="generateEntropyContainerQFrame">
-             <property name="lineWidth">
-              <number>0</number>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_68">
-              <property name="spacing">
-               <number>5</number>
-              </property>
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <item>
-               <widget class="QFrame" name="generateEntropyLabelContainerQFrame">
-                <property name="lineWidth">
-                 <number>0</number>
-                </property>
-                <layout class="QHBoxLayout" name="horizontalLayout_73">
-                 <property name="spacing">
-                  <number>5</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QLabel" name="generateEntropyQLabel">
-                   <property name="text">
-                    <string>Entropy</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <spacer name="generateEntropyLabelContainerQFrameHSpacer">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QFrame" name="generateEntropyLineEditContainerQFrame">
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <layout class="QHBoxLayout" name="horizontalLayout_11">
-                 <property name="spacing">
-                  <number>15</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QLineEdit" name="generateEntropyQLineEdit">
-                   <property name="enabled">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QPushButton" name="generateEntropyCopyQLineEdit">
-                   <property name="text">
-                    <string>Copy</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
             <widget class="QFrame" name="mnemonicGeneratorLabelQFrame">
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
@@ -472,7 +363,7 @@
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
-             <layout class="QHBoxLayout" name="horizontalLayout_41">
+             <layout class="QHBoxLayout" name="mnemonicGeneratorLabelQFrameHLayout">
               <property name="spacing">
                <number>15</number>
               </property>
@@ -512,8 +403,8 @@
             </widget>
            </item>
            <item>
-            <widget class="QFrame" name="generateMnemonicClientWordsAndLanguageContainerQFrame">
-             <layout class="QVBoxLayout" name="verticalLayout_41">
+            <widget class="QFrame" name="generateMnemonicClientWordsLanguageContainerQFrame">
+             <layout class="QHBoxLayout" name="generateMnemonicClientWordsLanguageContainerQFrameHLayout">
               <property name="spacing">
                <number>15</number>
               </property>
@@ -530,150 +421,8 @@
                <number>0</number>
               </property>
               <item>
-               <widget class="QFrame" name="generateMnemonicClientWordsLanguageContainerQFrame">
-                <layout class="QHBoxLayout" name="horizontalLayout_60">
-                 <property name="spacing">
-                  <number>15</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QFrame" name="generateMnemonicClientContainerQFrame">
-                   <layout class="QVBoxLayout" name="verticalLayout_64">
-                    <property name="spacing">
-                     <number>5</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QLabel" name="generateMnemonicClientQLabel">
-                      <property name="text">
-                       <string>Client</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QComboBox" name="generateMnemonicClientQComboBox">
-                      <property name="placeholderText">
-                       <string>Select Client</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QFrame" name="generateMnemonicWordsContainerQFrame">
-                   <layout class="QVBoxLayout" name="verticalLayout_66">
-                    <property name="spacing">
-                     <number>5</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QLabel" name="generateMnemonicWordsQLabel">
-                      <property name="text">
-                       <string>Words</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QComboBox" name="generateMnemonicWordsQComboBox">
-                      <property name="placeholderText">
-                       <string>Select Words</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QFrame" name="generateMnemonicLanguageContainerQFrame">
-                   <layout class="QVBoxLayout" name="verticalLayout_65">
-                    <property name="spacing">
-                     <number>5</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QLabel" name="generateMnemonicLanguageQLabel">
-                      <property name="text">
-                       <string>Language</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QComboBox" name="generateMnemonicLanguageQComboBox">
-                      <property name="placeholderText">
-                       <string>Select Language</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item alignment="Qt::AlignBottom">
-                  <widget class="QPushButton" name="generateMnemonicClientWordsAndLanguageQPushButton">
-                   <property name="maximumSize">
-                    <size>
-                     <width>100</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string>Generate</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QFrame" name="generateMnemonicContainerQFrame">
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <layout class="QVBoxLayout" name="verticalLayout_70">
+               <widget class="QFrame" name="generateMnemonicClientContainerQFrame">
+                <layout class="QVBoxLayout" name="generateMnemonicClientContainerQFrameVLayout">
                  <property name="spacing">
                   <number>5</number>
                  </property>
@@ -690,55 +439,232 @@
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QFrame" name="generateMnemonicLabelContainerQFrame">
-                   <layout class="QHBoxLayout" name="horizontalLayout_74">
-                    <property name="spacing">
-                     <number>5</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QLabel" name="generateMnemonicQLabel">
-                      <property name="text">
-                       <string>Mnemonic</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <spacer name="generateMnemonicLabelContainerQFrameHSpacer">
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                      <property name="sizeHint" stdset="0">
-                       <size>
-                        <width>40</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                     </spacer>
-                    </item>
-                   </layout>
+                  <widget class="QLabel" name="generateMnemonicClientQLabel">
+                   <property name="text">
+                    <string>Client</string>
+                   </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QFrame" name="generateMnemonicLineEditContainerQFrame">
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
+                  <widget class="QComboBox" name="generateMnemonicClientQComboBox">
+                   <property name="placeholderText">
+                    <string>Select Client</string>
                    </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="generateMnemonicWordsContainerQFrame">
+                <layout class="QVBoxLayout" name="generateMnemonicWordsContainerQFrameVLayout">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="generateMnemonicWordsQLabel">
+                   <property name="text">
+                    <string>Words</string>
                    </property>
-                   <layout class="QHBoxLayout" name="horizontalLayout_75">
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="generateMnemonicWordsQComboBox">
+                   <property name="placeholderText">
+                    <string>Select Words</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="generateMnemonicLanguageContainerQFrame">
+                <layout class="QVBoxLayout" name="generateMnemonicLanguageContainerQFrameVLayout">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="generateMnemonicLanguageQLabel">
+                   <property name="text">
+                    <string>Language</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="generateMnemonicLanguageQComboBox">
+                   <property name="placeholderText">
+                    <string>Select Language</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignBottom">
+               <widget class="QPushButton" name="generateMnemonicClientWordsAndLanguageQPushButton">
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Generate</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="seedGeneratorLabelQFrame">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="mnemonicGeneratorLabelQFrameHLayout_2">
+              <property name="spacing">
+               <number>15</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="seedGeneratorQLabel">
+                <property name="maximumSize">
+                 <size>
+                  <width>115</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Seed Generator</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="Line" name="seedGeneratorHLine">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="generateSeedClientMnemonicContainerQFrame">
+             <layout class="QHBoxLayout" name="generateMnemonicClientWordsLanguageContainerQFrameHLayout_2">
+              <property name="spacing">
+               <number>15</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="generateSeedClientContainerQFrame">
+                <layout class="QVBoxLayout" name="generateMnemonicClientContainerQFrameVLayout_2">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="generateSeedClientQLabel">
+                   <property name="text">
+                    <string>Client</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="generateSeedClientQComboBox">
+                   <property name="placeholderText">
+                    <string>Select Client</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="generateSeedMnemonicContainerQFrame">
+                <property name="lineWidth">
+                 <number>0</number>
+                </property>
+                <layout class="QVBoxLayout" name="generateLengthContainerQFrameVLayout_3">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="generateSeedMnemonicLabelContainerQFrame">
+                   <property name="enabled">
+                    <bool>true</bool>
+                   </property>
+                   <layout class="QHBoxLayout" name="generateLengthLabelContainerQFrameHLayout_3">
                     <property name="spacing">
                      <number>15</number>
                     </property>
@@ -755,23 +681,210 @@
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QLineEdit" name="generateMnemonicQLineEdit">
-                      <property name="enabled">
-                       <bool>false</bool>
+                     <widget class="QLabel" name="generateSeedMnemonicQLabel">
+                      <property name="text">
+                       <string>Mnemonic</string>
                       </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="generateMnemonicCopyQPushButton">
-                      <property name="text">
-                       <string>Copy</string>
+                     <spacer name="generateSeedMnemonicContainerQFrameHSpacer">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
                       </property>
-                     </widget>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
                     </item>
                    </layout>
                   </widget>
                  </item>
+                 <item>
+                  <widget class="QLineEdit" name="generateSeedMnemonicQLineEdit"/>
+                 </item>
                 </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="generateSeedGenerateContainerQFrame">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="generateLengthAndPassphraseQFrameHLayout_2">
+              <property name="spacing">
+               <number>15</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="generateSeedMnemonicTypeContainerQFrame">
+                <layout class="QVBoxLayout" name="generateMnemonicWordsContainerQFrameVLayout_2">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="generateSeedMnemonicTypeQLabel">
+                   <property name="text">
+                    <string>Mnemonic Type</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="generateSeedMnemonicTypeQComboBox">
+                   <property name="placeholderText">
+                    <string>Select Mnemonic Type</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="generateSeedCardanoTypeContainerQFrame">
+                <layout class="QVBoxLayout" name="generateMnemonicLanguageContainerQFrameVLayout_2">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="generateSeedCardanoTypeQLabel">
+                   <property name="text">
+                    <string>Cardano Type</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="generateSeedCardanoTypeQComboBox">
+                   <property name="placeholderText">
+                    <string>Select Cardano Type</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="generateSeedPassphraseGenerateContainerQFrame">
+                <property name="lineWidth">
+                 <number>0</number>
+                </property>
+                <layout class="QVBoxLayout" name="generateLengthContainerQFrameVLayout_2">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="generateSeedPassphraseGenerateLabelContainerQFrame">
+                   <property name="enabled">
+                    <bool>true</bool>
+                   </property>
+                   <layout class="QHBoxLayout" name="generateLengthLabelContainerQFrameHLayout_2">
+                    <property name="spacing">
+                     <number>15</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QLabel" name="generateSeedPassphraseGenerateQLabel">
+                      <property name="text">
+                       <string>Passphrase</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="generateSeedPassphraseGenerateLabelContainerQFrameHSpacer">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="generateSeedPassphraseGenerateQLineEdit"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignBottom">
+               <widget class="QPushButton" name="generateSeedPassphraseGenerateQPushButton">
+                <property name="text">
+                 <string>Generate</string>
+                </property>
                </widget>
               </item>
              </layout>
@@ -785,7 +898,7 @@
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
-             <layout class="QHBoxLayout" name="horizontalLayout_30">
+             <layout class="QHBoxLayout" name="passphraseGeneratorLabelQFrameHLayout">
               <property name="spacing">
                <number>15</number>
               </property>
@@ -825,11 +938,17 @@
             </widget>
            </item>
            <item>
-            <widget class="QFrame" name="generateLengthAndPassphraseContainerQFrame">
-             <property name="lineWidth">
-              <number>0</number>
+            <widget class="QFrame" name="generateLengthAndPassphraseQFrame">
+             <property name="enabled">
+              <bool>true</bool>
              </property>
-             <layout class="QVBoxLayout" name="verticalLayout_42">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="generateLengthAndPassphraseQFrameHLayout">
               <property name="spacing">
                <number>15</number>
               </property>
@@ -846,19 +965,19 @@
                <number>0</number>
               </property>
               <item>
-               <widget class="QFrame" name="generateLengthAndPassphraseQFrame">
-                <property name="enabled">
-                 <bool>false</bool>
+               <widget class="QFrame" name="generateLengthContainerQFrame">
+                <property name="maximumSize">
+                 <size>
+                  <width>184</width>
+                  <height>16777215</height>
+                 </size>
                 </property>
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                <property name="lineWidth">
+                 <number>0</number>
                 </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <layout class="QHBoxLayout" name="horizontalLayout_68">
+                <layout class="QVBoxLayout" name="generateLengthContainerQFrameVLayout">
                  <property name="spacing">
-                  <number>15</number>
+                  <number>5</number>
                  </property>
                  <property name="leftMargin">
                   <number>0</number>
@@ -873,19 +992,13 @@
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QFrame" name="generateLengthContainerQFrame">
-                   <property name="maximumSize">
-                    <size>
-                     <width>184</width>
-                     <height>16777215</height>
-                    </size>
+                  <widget class="QFrame" name="generateLengthLabelContainerQFrame">
+                   <property name="enabled">
+                    <bool>true</bool>
                    </property>
-                   <property name="lineWidth">
-                    <number>0</number>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_63">
+                   <layout class="QHBoxLayout" name="generateLengthLabelContainerQFrameHLayout">
                     <property name="spacing">
-                     <number>5</number>
+                     <number>15</number>
                     </property>
                     <property name="leftMargin">
                      <number>0</number>
@@ -900,107 +1013,57 @@
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QFrame" name="generateLengthLabelContainerQFrame">
-                      <layout class="QHBoxLayout" name="horizontalLayout_70">
-                       <property name="spacing">
-                        <number>5</number>
-                       </property>
-                       <property name="leftMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="topMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="rightMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="bottomMargin">
-                        <number>0</number>
-                       </property>
-                       <item>
-                        <widget class="QLabel" name="generateLengthQLabel">
-                         <property name="text">
-                          <string>Length</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <spacer name="generateLengthLabelContainerQFrameHSpacer">
-                         <property name="orientation">
-                          <enum>Qt::Horizontal</enum>
-                         </property>
-                         <property name="sizeHint" stdset="0">
-                          <size>
-                           <width>40</width>
-                           <height>20</height>
-                          </size>
-                         </property>
-                        </spacer>
-                       </item>
-                      </layout>
+                     <widget class="QLabel" name="generateLengthQLabel">
+                      <property name="text">
+                       <string>Length</string>
+                      </property>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QFrame" name="generateLengthLineEditContainerQFrame">
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
+                     <spacer name="generateLengthLabelContainerQFrameHSpacer">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
                       </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>40</width>
+                        <height>20</height>
+                       </size>
                       </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_71">
-                       <property name="spacing">
-                        <number>5</number>
-                       </property>
-                       <property name="leftMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="topMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="rightMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="bottomMargin">
-                        <number>0</number>
-                       </property>
-                       <item>
-                        <widget class="QLineEdit" name="generateLengthQLineEdit">
-                         <property name="maximumSize">
-                          <size>
-                           <width>100</width>
-                           <height>16777215</height>
-                          </size>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QPushButton" name="generatePassphraseLengthQPushButton">
-                         <property name="maximumSize">
-                          <size>
-                           <width>100</width>
-                           <height>16777215</height>
-                          </size>
-                         </property>
-                         <property name="text">
-                          <string>Generate</string>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
+                     </spacer>
                     </item>
                    </layout>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QFrame" name="generatePassphraseContainerQFrame">
-                   <property name="lineWidth">
-                    <number>0</number>
-                   </property>
-                   <layout class="QVBoxLayout" name="verticalLayout_67">
+                  <widget class="QLineEdit" name="generateLengthQLineEdit"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="generatePassphraseContainerQFrame">
+                <layout class="QVBoxLayout" name="generatePassphraseContainerQFrameVLayout">
+                 <property name="spacing">
+                  <number>5</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item alignment="Qt::AlignBottom">
+                  <widget class="QFrame" name="generatePassphraseLineEditContainerQFrame">
+                   <layout class="QHBoxLayout" name="generatePassphraseLineEditContainerQFrameHLayout">
                     <property name="spacing">
-                     <number>5</number>
+                     <number>15</number>
                     </property>
                     <property name="leftMargin">
                      <number>0</number>
@@ -1015,93 +1078,44 @@
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QFrame" name="generatePassphraseLabelContainerQFrame">
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
+                     <widget class="QCheckBox" name="generatePassphraseUpperCaseQCheckBox">
+                      <property name="text">
+                       <string>Upper Cases</string>
                       </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_67">
-                       <property name="spacing">
-                        <number>5</number>
-                       </property>
-                       <property name="leftMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="topMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="rightMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="bottomMargin">
-                        <number>0</number>
-                       </property>
-                       <item>
-                        <widget class="QLabel" name="generatePassphraseQLabel">
-                         <property name="text">
-                          <string>Passphrase</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <spacer name="generatePassphraseLabelContainerQFrameHSpacer">
-                         <property name="orientation">
-                          <enum>Qt::Horizontal</enum>
-                         </property>
-                         <property name="sizeHint" stdset="0">
-                          <size>
-                           <width>155</width>
-                           <height>20</height>
-                          </size>
-                         </property>
-                        </spacer>
-                       </item>
-                      </layout>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QFrame" name="generatePassphraseLineEditContainerQFrame">
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
+                     <widget class="QCheckBox" name="generatePassphraseLowerCaseQCheckBox">
+                      <property name="text">
+                       <string>Lower Cases</string>
                       </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QCheckBox" name="generatePassphraseNumberQCheckBox">
+                      <property name="text">
+                       <string>Numbers</string>
                       </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_69">
-                       <property name="spacing">
-                        <number>15</number>
-                       </property>
-                       <property name="leftMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="topMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="rightMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="bottomMargin">
-                        <number>0</number>
-                       </property>
-                       <item>
-                        <widget class="QLineEdit" name="generatePassphraseQLineEdit"/>
-                       </item>
-                       <item>
-                        <widget class="QPushButton" name="generatePassphraseCopyQPushButton">
-                         <property name="text">
-                          <string>Copy</string>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QCheckBox" name="generatePassphraseCharacterQCheckBox">
+                      <property name="text">
+                       <string>Characters</string>
+                      </property>
                      </widget>
                     </item>
                    </layout>
                   </widget>
                  </item>
                 </layout>
+               </widget>
+              </item>
+              <item alignment="Qt::AlignBottom">
+               <widget class="QPushButton" name="generatePassphraseQPushButton">
+                <property name="text">
+                 <string>Generate</string>
+                </property>
                </widget>
               </item>
              </layout>
@@ -1123,7 +1137,7 @@
           </layout>
          </widget>
          <widget class="QWidget" name="dumpsPageQStackedWidget">
-          <layout class="QVBoxLayout" name="verticalLayout_12">
+          <layout class="QVBoxLayout" name="dumpsPageQStackedWidgetVLayout">
            <property name="spacing">
             <number>5</number>
            </property>
@@ -1150,7 +1164,7 @@
              <property name="lineWidth">
               <number>0</number>
              </property>
-             <layout class="QVBoxLayout" name="verticalLayout_3">
+             <layout class="QVBoxLayout" name="dumpsPageEntireContainerQFrameVLayout">
               <property name="spacing">
                <number>15</number>
               </property>
@@ -1171,7 +1185,7 @@
                 <property name="frameShape">
                  <enum>QFrame::NoFrame</enum>
                 </property>
-                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <layout class="QHBoxLayout" name="dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout">
                  <property name="spacing">
                   <number>15</number>
                  </property>
@@ -1189,7 +1203,7 @@
                  </property>
                  <item>
                   <widget class="QFrame" name="dumpsHdListComboContainerQFrame">
-                   <layout class="QVBoxLayout" name="verticalLayout_5">
+                   <layout class="QVBoxLayout" name="dumpsHdListComboContainerQFrameVLayout">
                     <property name="spacing">
                      <number>5</number>
                     </property>
@@ -1210,7 +1224,7 @@
                       <property name="frameShape">
                        <enum>QFrame::NoFrame</enum>
                       </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_3">
+                      <layout class="QHBoxLayout" name="dumpsHdListLabelContainerQFrameHLayout">
                        <property name="spacing">
                         <number>15</number>
                        </property>
@@ -1314,7 +1328,7 @@
                  </item>
                  <item>
                   <widget class="QFrame" name="dumpsFromContainerQFrame">
-                   <layout class="QVBoxLayout" name="verticalLayout_6">
+                   <layout class="QVBoxLayout" name="dumpsFromContainerQFrameVLayout">
                     <property name="spacing">
                      <number>5</number>
                     </property>
@@ -1335,7 +1349,7 @@
                       <property name="frameShape">
                        <enum>QFrame::NoFrame</enum>
                       </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_8">
+                      <layout class="QHBoxLayout" name="dumpsFromLabelContainerQFrameHLayout">
                        <property name="spacing">
                         <number>15</number>
                        </property>
@@ -1429,7 +1443,7 @@
                  </item>
                  <item>
                   <widget class="QFrame" name="dumpsCryptocurrencyContainerQFrame">
-                   <layout class="QVBoxLayout" name="CryptocurrencyVLayout">
+                   <layout class="QVBoxLayout" name="dumpsCryptocurrencyContainerQFrameVLayout">
                     <property name="spacing">
                      <number>5</number>
                     </property>
@@ -1447,7 +1461,7 @@
                     </property>
                     <item>
                      <widget class="QFrame" name="dumpsCryptocurrencyLabelContainerQFrame">
-                      <layout class="QHBoxLayout" name="CryptocurrencyLabelHLayout">
+                      <layout class="QHBoxLayout" name="dumpsCryptocurrencyLabelContainerQFrameHLayout">
                        <property name="spacing">
                         <number>15</number>
                        </property>
@@ -1511,7 +1525,7 @@
                      <height>0</height>
                     </size>
                    </property>
-                   <layout class="QVBoxLayout" name="ClientVLayout_25">
+                   <layout class="QVBoxLayout" name="dumpsNetworkContainerQFrameVLayout">
                     <property name="spacing">
                      <number>5</number>
                     </property>
@@ -1529,7 +1543,7 @@
                     </property>
                     <item>
                      <widget class="QFrame" name="dumpsNetworkLabelContainerQFrame">
-                      <layout class="QHBoxLayout" name="MStrengthLabelHLayout_30">
+                      <layout class="QHBoxLayout" name="dumpsNetworkLabelContainerQFrameHLayout">
                        <property name="spacing">
                         <number>15</number>
                        </property>
@@ -1614,10 +1628,10 @@
                  <number>0</number>
                 </property>
                 <property name="currentIndex">
-                 <number>2</number>
+                 <number>1</number>
                 </property>
                 <widget class="QWidget" name="BIPsPageQWidget">
-                 <layout class="QVBoxLayout" name="verticalLayout_21">
+                 <layout class="QVBoxLayout" name="BIPsPageQWidgetVLayout">
                   <property name="spacing">
                    <number>0</number>
                   </property>
@@ -1639,7 +1653,7 @@
                      <number>4</number>
                     </property>
                     <widget class="QWidget" name="BIPFromEntropyQStackedWidget">
-                     <layout class="QVBoxLayout" name="verticalLayout_22">
+                     <layout class="QVBoxLayout" name="BIPFromEntropyQStackedWidgetVLayout">
                       <property name="spacing">
                        <number>15</number>
                       </property>
@@ -1657,7 +1671,7 @@
                       </property>
                       <item>
                        <widget class="QFrame" name="BIPFromEntropyContainerQFrame">
-                        <layout class="QVBoxLayout" name="verticalLayout_23">
+                        <layout class="QVBoxLayout" name="BIPFromEntropyContainerQFrameVLayout">
                          <property name="spacing">
                           <number>5</number>
                          </property>
@@ -1675,7 +1689,7 @@
                          </property>
                          <item>
                           <widget class="QFrame" name="BIPFromEntropyLabelContainerQFrame">
-                           <layout class="QHBoxLayout" name="EntropyLabelHLayout_3">
+                           <layout class="QHBoxLayout" name="BIPFromEntropyLabelContainerQFrameHLayout">
                             <property name="spacing">
                              <number>15</number>
                             </property>
@@ -1716,7 +1730,7 @@
                          </item>
                          <item>
                           <widget class="QFrame" name="BIPFromEntropyEntAndGenerateContainerQFrame">
-                           <layout class="QHBoxLayout" name="horizontalLayout_23">
+                           <layout class="QHBoxLayout" name="BIPFromEntropyEntAndGenerateContainerQFrameHLayout">
                             <property name="spacing">
                              <number>15</number>
                             </property>
@@ -1743,7 +1757,7 @@
                       </item>
                       <item>
                        <widget class="QFrame" name="BIPFromEntropyPublicKeyAndPassphraseContainerQFrame">
-                        <layout class="QHBoxLayout" name="horizontalLayout_24">
+                        <layout class="QHBoxLayout" name="BIPFromEntropyPublicKeyAndPassphraseContainerQFrameHLayout">
                          <property name="spacing">
                           <number>15</number>
                          </property>
@@ -1767,7 +1781,7 @@
                              <height>0</height>
                             </size>
                            </property>
-                           <layout class="QVBoxLayout" name="ClientVLayout_4">
+                           <layout class="QVBoxLayout" name="BIPFromEntropyPublicKeyTypeContainerQFrameVLayout">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -1785,7 +1799,7 @@
                             </property>
                             <item>
                              <widget class="QFrame" name="BIPFromEntropyPublicKeyTypeLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="MStrengthLabelHLayout_6">
+                              <layout class="QHBoxLayout" name="BIPFromEntropyPublicKeyTypeLabelContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -1863,7 +1877,7 @@
                          </item>
                          <item>
                           <widget class="QFrame" name="BIPFromEntropyPassphraseContainerQFrame">
-                           <layout class="QVBoxLayout" name="EPassphraseVLayout_3">
+                           <layout class="QVBoxLayout" name="BIPFromEntropyPassphraseContainerQFrameVLayout">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -1881,7 +1895,7 @@
                             </property>
                             <item>
                              <widget class="QFrame" name="BIPFromEntropyPassphraseLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="EPassphraseLabelHLayout_3">
+                              <layout class="QHBoxLayout" name="BIPFromEntropyPassphraseLabelContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -1922,7 +1936,7 @@
                             </item>
                             <item>
                              <widget class="QFrame" name="BIPFromEntropyPassphraseGenerateContainerQFrame">
-                              <layout class="QHBoxLayout" name="horizontalLayout_25">
+                              <layout class="QHBoxLayout" name="BIPFromEntropyPassphraseGenerateContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -1956,7 +1970,7 @@
                       </item>
                       <item>
                        <widget class="QFrame" name="BIPFromEntropyLanguageAndWordsContainerQFrame">
-                        <layout class="QHBoxLayout" name="horizontalLayout_26">
+                        <layout class="QHBoxLayout" name="BIPFromEntropyLanguageAndWordsContainerQFrameHLayout">
                          <property name="spacing">
                           <number>15</number>
                          </property>
@@ -1974,7 +1988,7 @@
                          </property>
                          <item>
                           <widget class="QFrame" name="BIPFromEntropyLanguageContainerQFrame">
-                           <layout class="QVBoxLayout" name="ELanguageVLayout_2">
+                           <layout class="QVBoxLayout" name="BIPFromEntropyLanguageContainerQFrameVLayout">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -1992,7 +2006,7 @@
                             </property>
                             <item>
                              <widget class="QFrame" name="BIPFromEntropyLanguageLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="ELanguageLabelHLayout_2">
+                              <layout class="QHBoxLayout" name="BIPFromEntropyLanguageLabelContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -2080,7 +2094,7 @@
                          </item>
                          <item>
                           <widget class="QFrame" name="BIPFromEntropyWordsContainerQFrame">
-                           <layout class="QVBoxLayout" name="EStrengthVLayout_2">
+                           <layout class="QVBoxLayout" name="BIPFromEntropyWordsContainerQFrameVLayout">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -2098,7 +2112,7 @@
                             </property>
                             <item>
                              <widget class="QFrame" name="BIPFromEntropyWordsLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="EStrengthLabelHLayout_2">
+                              <layout class="QHBoxLayout" name="BIPFromEntropyWordsLabelContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -2175,7 +2189,7 @@
                      </layout>
                     </widget>
                     <widget class="QWidget" name="BIPFromMnemonicQStackedWidget">
-                     <layout class="QVBoxLayout" name="verticalLayout_24">
+                     <layout class="QVBoxLayout" name="BIPFromMnemonicQStackedWidgetVLayout">
                       <property name="spacing">
                        <number>15</number>
                       </property>
@@ -2193,7 +2207,7 @@
                       </property>
                       <item>
                        <widget class="QFrame" name="BIPFromMnemonicContainerQFrame">
-                        <layout class="QVBoxLayout" name="MnemonicVLayout_2">
+                        <layout class="QVBoxLayout" name="BIPFromMnemonicContainerQFrameVLayout">
                          <property name="spacing">
                           <number>5</number>
                          </property>
@@ -2211,7 +2225,7 @@
                          </property>
                          <item>
                           <widget class="QFrame" name="BIPFromMnemonicLabelContainerQFrame">
-                           <layout class="QHBoxLayout" name="MnemonicLabelHLayout_2">
+                           <layout class="QHBoxLayout" name="BIPFromMnemonicLabelContainerQFrameHLayout">
                             <property name="spacing">
                              <number>15</number>
                             </property>
@@ -2252,7 +2266,7 @@
                          </item>
                          <item>
                           <widget class="QFrame" name="BIPFromMnemonicLabelGenerateContainerQFrame">
-                           <layout class="QHBoxLayout" name="horizontalLayout_27">
+                           <layout class="QHBoxLayout" name="BIPFromMnemonicLabelGenerateContainerQFrameHLayout">
                             <property name="spacing">
                              <number>15</number>
                             </property>
@@ -2271,27 +2285,6 @@
                             <item>
                              <widget class="QLineEdit" name="BIPFromMnemonicQLineEdit"/>
                             </item>
-                            <item>
-                             <widget class="QFrame" name="BIPFromMnemonicLabelGenerateContainerQFrame_2">
-                              <layout class="QVBoxLayout" name="GenerateMnemonicVLayout_2">
-                               <property name="spacing">
-                                <number>15</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                              </layout>
-                             </widget>
-                            </item>
                            </layout>
                           </widget>
                          </item>
@@ -2300,7 +2293,7 @@
                       </item>
                       <item>
                        <widget class="QFrame" name="BIPFromMnemonicPublicKeyTypeAndPassphraseQFrame">
-                        <layout class="QHBoxLayout" name="horizontalLayout_28">
+                        <layout class="QHBoxLayout" name="BIPFromMnemonicPublicKeyTypeAndPassphraseQFrameHLayout">
                          <property name="spacing">
                           <number>15</number>
                          </property>
@@ -2324,7 +2317,7 @@
                              <height>0</height>
                             </size>
                            </property>
-                           <layout class="QVBoxLayout" name="ClientVLayout_5">
+                           <layout class="QVBoxLayout" name="BIPFromMnemonicPublicKeyTypeContainerQFrameVLayout">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -2342,7 +2335,7 @@
                             </property>
                             <item>
                              <widget class="QFrame" name="BIPFromMnemonicPublicKeyTypeLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="MStrengthLabelHLayout_7">
+                              <layout class="QHBoxLayout" name="BIPFromMnemonicPublicKeyTypeLabelContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -2420,7 +2413,7 @@
                          </item>
                          <item>
                           <widget class="QFrame" name="BIPFromMnemonicPassphraseContainerQFrame">
-                           <layout class="QVBoxLayout" name="EPassphraseVLayout_4">
+                           <layout class="QVBoxLayout" name="BIPFromMnemonicPassphraseContainerQFrameVLayout">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -2438,7 +2431,7 @@
                             </property>
                             <item>
                              <widget class="QFrame" name="BIPFromMnemonicPassphraseLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="MPassphraseLabelHLayout_2">
+                              <layout class="QHBoxLayout" name="BIPFromMnemonicPassphraseLabelContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -2479,7 +2472,7 @@
                             </item>
                             <item>
                              <widget class="QFrame" name="BIPFromMnemonicPassphraseGeneratelContainerQFrame">
-                              <layout class="QHBoxLayout" name="horizontalLayout_29">
+                              <layout class="QHBoxLayout" name="BIPFromMnemonicPassphraseGeneratelContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -2527,7 +2520,7 @@
                      </layout>
                     </widget>
                     <widget class="QWidget" name="BIPFromSeedQStackedWidget">
-                     <layout class="QVBoxLayout" name="verticalLayout_25">
+                     <layout class="QVBoxLayout" name="BIPFromSeedQStackedWidgetVLayout">
                       <property name="spacing">
                        <number>15</number>
                       </property>
@@ -2551,7 +2544,7 @@
                           <height>0</height>
                          </size>
                         </property>
-                        <layout class="QVBoxLayout" name="SeedVLayout_2">
+                        <layout class="QVBoxLayout" name="BIPFromSeedContainerQFrameVLayout">
                          <property name="spacing">
                           <number>5</number>
                          </property>
@@ -2569,7 +2562,7 @@
                          </property>
                          <item>
                           <widget class="QFrame" name="BIPFromSeedAndPublicKeyTypeContainerQFrame">
-                           <layout class="QHBoxLayout" name="horizontalLayout_31">
+                           <layout class="QHBoxLayout" name="BIPFromSeedAndPublicKeyTypeContainerQFrameHLayout">
                             <property name="spacing">
                              <number>15</number>
                             </property>
@@ -2593,7 +2586,7 @@
                               <property name="frameShadow">
                                <enum>QFrame::Raised</enum>
                               </property>
-                              <layout class="QVBoxLayout" name="verticalLayout_26">
+                              <layout class="QVBoxLayout" name="BIPFromSeedsContainerQFrameVLayout">
                                <property name="spacing">
                                 <number>5</number>
                                </property>
@@ -2611,7 +2604,7 @@
                                </property>
                                <item>
                                 <widget class="QFrame" name="BIPFromSeedsLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="SeedLabelHLayout_2">
+                                 <layout class="QHBoxLayout" name="BIPFromSeedsLabelContainerQFrameHLayout">
                                   <property name="spacing">
                                    <number>15</number>
                                   </property>
@@ -2664,7 +2657,7 @@
                                 <height>0</height>
                                </size>
                               </property>
-                              <layout class="QVBoxLayout" name="ClientVLayout_6">
+                              <layout class="QVBoxLayout" name="BIPFromSeedPublicKeyTypeContainerQFrameVLayout">
                                <property name="spacing">
                                 <number>5</number>
                                </property>
@@ -2682,7 +2675,7 @@
                                </property>
                                <item>
                                 <widget class="QFrame" name="BIPFromSeedPublicKeyTypeLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="MStrengthLabelHLayout_8">
+                                 <layout class="QHBoxLayout" name="BIPFromSeedPublicKeyTypeLabelContainerQFrameHLayout">
                                   <property name="spacing">
                                    <number>15</number>
                                   </property>
@@ -2780,7 +2773,7 @@
                      </layout>
                     </widget>
                     <widget class="QWidget" name="BIPFromXPrivateKeyQStackedWidget">
-                     <layout class="QVBoxLayout" name="verticalLayout_27">
+                     <layout class="QVBoxLayout" name="BIPFromXPrivateKeyQStackedWidgetVLayout">
                       <property name="spacing">
                        <number>15</number>
                       </property>
@@ -2798,7 +2791,7 @@
                       </property>
                       <item>
                        <widget class="QFrame" name="BIPFromXPrivateKeyAndPublicKeyTypeQFrame">
-                        <layout class="QHBoxLayout" name="horizontalLayout_90">
+                        <layout class="QHBoxLayout" name="BIPFromXPrivateKeyAndPublicKeyTypeQFrameHLayout">
                          <property name="spacing">
                           <number>15</number>
                          </property>
@@ -2822,7 +2815,7 @@
                              <height>0</height>
                             </size>
                            </property>
-                           <layout class="QVBoxLayout" name="PrivateKeyVLayout_7">
+                           <layout class="QVBoxLayout" name="BIPFromXPrivateKeyContainerQFrameVLayout">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -2840,7 +2833,7 @@
                             </property>
                             <item>
                              <widget class="QFrame" name="BIPFromXPrivateKeyLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="PrivateKeyLabelHLayout_7">
+                              <layout class="QHBoxLayout" name="BIPFromXPrivateKeyLabelContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -2893,7 +2886,7 @@
                              <height>0</height>
                             </size>
                            </property>
-                           <layout class="QVBoxLayout" name="verticalLayout_92">
+                           <layout class="QVBoxLayout" name="BIPFromXPrivateKeyPublicKeyTypeContainerQFrameVLayout">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -2917,7 +2910,7 @@
                               <property name="frameShadow">
                                <enum>QFrame::Raised</enum>
                               </property>
-                              <layout class="QHBoxLayout" name="horizontalLayout_91">
+                              <layout class="QHBoxLayout" name="BIPFromXPrivateKeyPublicKeyTypeLabelContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -2981,7 +2974,7 @@
                      </layout>
                     </widget>
                     <widget class="QWidget" name="BIPFromXPublicKeyQStackedWidget">
-                     <layout class="QVBoxLayout" name="verticalLayout_28">
+                     <layout class="QVBoxLayout" name="BIPFromXPublicKeyQStackedWidgetVLayout">
                       <property name="spacing">
                        <number>15</number>
                       </property>
@@ -2999,7 +2992,7 @@
                       </property>
                       <item>
                        <widget class="QFrame" name="BIPFromXPublicKeyAndPublicKeyTypeContainerQFrame">
-                        <layout class="QHBoxLayout" name="horizontalLayout_82">
+                        <layout class="QHBoxLayout" name="BIPFromXPublicKeyAndPublicKeyTypeContainerQFrameHLayout">
                          <property name="spacing">
                           <number>15</number>
                          </property>
@@ -3017,7 +3010,7 @@
                          </property>
                          <item>
                           <widget class="QFrame" name="BIPFromXPublicKeyContainerQFrame">
-                           <layout class="QVBoxLayout" name="XPublicKeyVLayout_2">
+                           <layout class="QVBoxLayout" name="BIPFromXPublicKeyContainerQFrameVLayout">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -3035,7 +3028,7 @@
                             </property>
                             <item>
                              <widget class="QFrame" name="BIPFromXPublicKeyLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_2">
+                              <layout class="QHBoxLayout" name="BIPFromXPublicKeyLabelContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -3088,7 +3081,7 @@
                              <height>0</height>
                             </size>
                            </property>
-                           <layout class="QVBoxLayout" name="verticalLayout_77">
+                           <layout class="QVBoxLayout" name="BIPFromXPublicKeyPublicKeyTypeContainerQFrameVLayout">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -3112,7 +3105,7 @@
                               <property name="frameShadow">
                                <enum>QFrame::Raised</enum>
                               </property>
-                              <layout class="QHBoxLayout" name="horizontalLayout_83">
+                              <layout class="QHBoxLayout" name="BIPFromXPublicKeyPublicKeyTypeLabelContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -3176,7 +3169,7 @@
                      </layout>
                     </widget>
                     <widget class="QWidget" name="BIPFromWIFQStackedWidget">
-                     <layout class="QVBoxLayout" name="verticalLayout_29">
+                     <layout class="QVBoxLayout" name="BIPFromWIFQStackedWidgetVLayout">
                       <property name="spacing">
                        <number>15</number>
                       </property>
@@ -3200,7 +3193,7 @@
                           <height>0</height>
                          </size>
                         </property>
-                        <layout class="QVBoxLayout" name="WIFVLayout_2">
+                        <layout class="QVBoxLayout" name="BIPFromWIFContainerQFrameVLayout">
                          <property name="spacing">
                           <number>5</number>
                          </property>
@@ -3218,7 +3211,7 @@
                          </property>
                          <item>
                           <widget class="QFrame" name="BIPFromWIFLabelContainerQFrame">
-                           <layout class="QHBoxLayout" name="WIFLabelHLayout_2">
+                           <layout class="QHBoxLayout" name="BIPFromWIFLabelContainerQFrameHLayout">
                             <property name="spacing">
                              <number>15</number>
                             </property>
@@ -3271,7 +3264,7 @@
                         <property name="frameShadow">
                          <enum>QFrame::Raised</enum>
                         </property>
-                        <layout class="QHBoxLayout" name="horizontalLayout_32">
+                        <layout class="QHBoxLayout" name="BIPFromWIFPublicKeyAndBIP38PassphraseContainerQFrameHLayout">
                          <property name="spacing">
                           <number>15</number>
                          </property>
@@ -3295,7 +3288,7 @@
                              <height>0</height>
                             </size>
                            </property>
-                           <layout class="QVBoxLayout" name="verticalLayout_76">
+                           <layout class="QVBoxLayout" name="BIPFromWIFPublicKeyTypeContainerQFrameVLayout">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -3313,7 +3306,7 @@
                             </property>
                             <item>
                              <widget class="QFrame" name="BIPFromWIFPublicKeyTypeLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="horizontalLayout_84">
+                              <layout class="QHBoxLayout" name="BIPFromWIFPublicKeyTypeLabelContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -3360,7 +3353,7 @@
                          </item>
                          <item>
                           <widget class="QFrame" name="BIPFromWIFBIP38PassphraseContainerQFrame">
-                           <layout class="QVBoxLayout" name="verticalLayout_30">
+                           <layout class="QVBoxLayout" name="BIPFromWIFBIP38PassphraseContainerQFrameVLayout">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -3378,7 +3371,7 @@
                             </property>
                             <item>
                              <widget class="QFrame" name="BIPFromWIFBIP38PassphraseCheckBoxContainerQFrame">
-                              <layout class="QHBoxLayout" name="EPassphraseLabelHLayout_4">
+                              <layout class="QHBoxLayout" name="BIPFromWIFBIP38PassphraseCheckBoxContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -3419,7 +3412,7 @@
                             </item>
                             <item>
                              <widget class="QFrame" name="BIPFromWIFBIP38PassphraseGenerateContainerQFrame">
-                              <layout class="QHBoxLayout" name="horizontalLayout_85">
+                              <layout class="QHBoxLayout" name="BIPFromWIFBIP38PassphraseGenerateContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -3476,7 +3469,7 @@
                      </layout>
                     </widget>
                     <widget class="QWidget" name="BIPFromPrivateKeyQStackedWidget">
-                     <layout class="QVBoxLayout" name="verticalLayout_31">
+                     <layout class="QVBoxLayout" name="BIPFromPrivateKeyQStackedWidgetVLayout">
                       <property name="spacing">
                        <number>15</number>
                       </property>
@@ -3494,7 +3487,7 @@
                       </property>
                       <item>
                        <widget class="QFrame" name="BIPFromPrivateKeyAndPublicKeyTypeContainerQFrame">
-                        <layout class="QHBoxLayout" name="horizontalLayout_86">
+                        <layout class="QHBoxLayout" name="BIPFromPrivateKeyAndPublicKeyTypeContainerQFrameHLayout">
                          <property name="spacing">
                           <number>15</number>
                          </property>
@@ -3518,7 +3511,7 @@
                              <height>0</height>
                             </size>
                            </property>
-                           <layout class="QVBoxLayout" name="PrivateKeyVLayout_2">
+                           <layout class="QVBoxLayout" name="BIPFromPrivateKeyContainerQFrameVLayout">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -3536,7 +3529,7 @@
                             </property>
                             <item>
                              <widget class="QFrame" name="BIPFromPrivateKeyLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="PrivateKeyLabelHLayout_2">
+                              <layout class="QHBoxLayout" name="BIPFromPrivateKeyLabelContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -3582,14 +3575,14 @@
                           </widget>
                          </item>
                          <item>
-                          <widget class="QFrame" name="BIPFromPrivateKeyAndPublicKeyTypeContainerQFrame_2">
+                          <widget class="QFrame" name="BIPFromPrivateKeyAndPublicKeyTypeLineContainerQFrame">
                            <property name="minimumSize">
                             <size>
                              <width>150</width>
                              <height>0</height>
                             </size>
                            </property>
-                           <layout class="QVBoxLayout" name="verticalLayout_80">
+                           <layout class="QVBoxLayout" name="BIPFromPrivateKeyAndPublicKeyTypeLineContainerQFrameVLayout">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -3606,14 +3599,14 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QFrame" name="BIPFromPrivateKeyAndPublicKeyTypeLabelContainerQFrame">
+                             <widget class="QFrame" name="BIPFromPrivateKeyAndPublicKeyTypeLabelQFrame">
                               <property name="frameShape">
                                <enum>QFrame::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
                                <enum>QFrame::Raised</enum>
                               </property>
-                              <layout class="QHBoxLayout" name="horizontalLayout_87">
+                              <layout class="QHBoxLayout" name="BIPFromPrivateKeyAndPublicKeyTypeLabelQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -3677,7 +3670,7 @@
                      </layout>
                     </widget>
                     <widget class="QWidget" name="BIPFromPublicKeyQStackedWidget">
-                     <layout class="QVBoxLayout" name="verticalLayout_32">
+                     <layout class="QVBoxLayout" name="BIPFromPublicKeyQStackedWidgetVLayout">
                       <property name="spacing">
                        <number>15</number>
                       </property>
@@ -3701,7 +3694,7 @@
                         <property name="frameShadow">
                          <enum>QFrame::Raised</enum>
                         </property>
-                        <layout class="QHBoxLayout" name="horizontalLayout_88">
+                        <layout class="QHBoxLayout" name="BIPFromPublicKeyAndPublicKeyTypeContainerQFrameHLayout">
                          <property name="spacing">
                           <number>15</number>
                          </property>
@@ -3725,7 +3718,7 @@
                              <height>0</height>
                             </size>
                            </property>
-                           <layout class="QVBoxLayout" name="PrivateKeyVLayout_6">
+                           <layout class="QVBoxLayout" name="BIPFromPublicKeyContainerQFrameVLayout">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -3743,7 +3736,7 @@
                             </property>
                             <item>
                              <widget class="QFrame" name="BIPFromPublicKeyLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="PrivateKeyLabelHLayout_6">
+                              <layout class="QHBoxLayout" name="BIPFromPublicKeyLabelContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -3796,7 +3789,7 @@
                              <height>0</height>
                             </size>
                            </property>
-                           <layout class="QVBoxLayout" name="verticalLayout_82">
+                           <layout class="QVBoxLayout" name="BIPFromPublicKeyPublicKeyTypeContainerQFrameVLayout">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -3820,7 +3813,7 @@
                               <property name="frameShadow">
                                <enum>QFrame::Raised</enum>
                               </property>
-                              <layout class="QHBoxLayout" name="horizontalLayout_89">
+                              <layout class="QHBoxLayout" name="BIPFromPublicKeyPublicKeyTypeLabelContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -3888,7 +3881,7 @@
                  </layout>
                 </widget>
                 <widget class="QWidget" name="cardanoPageQWidget">
-                 <layout class="QVBoxLayout" name="verticalLayout_33">
+                 <layout class="QVBoxLayout" name="cardanoPageQWidgetVLayout">
                   <property name="spacing">
                    <number>0</number>
                   </property>
@@ -3907,10 +3900,10 @@
                   <item>
                    <widget class="QStackedWidget" name="cardanoQStackedWidget">
                     <property name="currentIndex">
-                     <number>4</number>
+                     <number>0</number>
                     </property>
                     <widget class="QWidget" name="cardanoFromEntropyQStackedWidget">
-                     <layout class="QVBoxLayout" name="verticalLayout_34">
+                     <layout class="QVBoxLayout" name="cardanoFromEntropyQStackedWidgetVLayout">
                       <property name="spacing">
                        <number>15</number>
                       </property>
@@ -4014,7 +4007,7 @@
                       </item>
                       <item>
                        <widget class="QFrame" name="cardanoFromEntropyCardanoTypeAndPassphraseContainerQFrame">
-                        <layout class="QHBoxLayout" name="horizontalLayout_34">
+                        <layout class="QHBoxLayout" name="cardanoFromEntropyCardanoTypeAndPassphraseContainerQFrameHLayout">
                          <property name="spacing">
                           <number>15</number>
                          </property>
@@ -4038,7 +4031,7 @@
                              <height>0</height>
                             </size>
                            </property>
-                           <layout class="QVBoxLayout" name="ClientVLayout_7">
+                           <layout class="QVBoxLayout" name="cardanoFromEntropyCardanoTypeContainerQFrameVLayout">
                             <property name="spacing">
                              <number>5</number>
                             </property>
@@ -4056,7 +4049,7 @@
                             </property>
                             <item>
                              <widget class="QFrame" name="cardanoFromEntropyCardanoTypeLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="MStrengthLabelHLayout_9">
+                              <layout class="QHBoxLayout" name="cardanoFromEntropyCardanoTypeLabelContainerQFrameHLayout">
                                <property name="spacing">
                                 <number>15</number>
                                </property>
@@ -6835,7 +6828,7 @@
                  </layout>
                 </widget>
                 <widget class="QWidget" name="electrumV1PageQWidget">
-                 <layout class="QVBoxLayout" name="verticalLayout_45">
+                 <layout class="QVBoxLayout" name="electrumV1PageQWidgetVLayout">
                   <property name="spacing">
                    <number>0</number>
                   </property>
@@ -8844,7 +8837,7 @@
                  </layout>
                 </widget>
                 <widget class="QWidget" name="electrumV2PageQWidget">
-                 <layout class="QVBoxLayout" name="verticalLayout_57">
+                 <layout class="QVBoxLayout" name="electrumV2PageQWidgetVLayout">
                   <property name="spacing">
                    <number>0</number>
                   </property>
@@ -10258,7 +10251,7 @@
                  </layout>
                 </widget>
                 <widget class="QWidget" name="moneroPageQWidget">
-                 <layout class="QVBoxLayout" name="verticalLayout_69">
+                 <layout class="QVBoxLayout" name="moneroPageQWidgetVLayout">
                   <property name="spacing">
                    <number>0</number>
                   </property>
@@ -10277,7 +10270,7 @@
                   <item>
                    <widget class="QStackedWidget" name="moneroQStackedWidget">
                     <property name="currentIndex">
-                     <number>4</number>
+                     <number>0</number>
                     </property>
                     <widget class="QWidget" name="moneroFromEntropyQStackedWidget">
                      <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -11817,7 +11810,7 @@
               </item>
               <item>
                <widget class="QFrame" name="dumpsDerivationContainerQFrame">
-                <layout class="QVBoxLayout" name="verticalLayout_17">
+                <layout class="QVBoxLayout" name="dumpsDerivationContainerQFrameVLayout">
                  <property name="spacing">
                   <number>15</number>
                  </property>
@@ -14255,7 +14248,7 @@
               </item>
               <item>
                <widget class="QFrame" name="dumpsFormatKeysContainerQFrame">
-                <layout class="QHBoxLayout" name="horizontalLayout_4">
+                <layout class="QHBoxLayout" name="dumpsFormatKeysContainerQFrameHLayout">
                  <property name="spacing">
                   <number>15</number>
                  </property>
@@ -14535,19 +14528,6 @@
         </widget>
        </item>
        <item>
-        <spacer name="hdWalletContainerQFrameVSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
         <spacer name="hdWalletContainerQFrameVSpacerB">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -14571,7 +14551,7 @@
         <height>0</height>
        </size>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <layout class="QVBoxLayout" name="outputQFrameVLayout">
        <item>
         <widget class="QFrame" name="outputFrameTopContainerQFrame">
          <property name="minimumSize">
@@ -14586,7 +14566,7 @@
            <height>30</height>
           </size>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout_22">
+         <layout class="QHBoxLayout" name="outputFrameTopContainerQFrameHLayout">
           <property name="spacing">
            <number>15</number>
           </property>
@@ -14635,7 +14615,7 @@
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_19">
+            <layout class="QVBoxLayout" name="expandTerminalQFrameVLayout">
              <property name="spacing">
               <number>0</number>
              </property>

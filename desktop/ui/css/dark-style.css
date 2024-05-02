@@ -27,7 +27,8 @@ QLineEdit QMenu::item::selected {
 CheckBox */
 QCheckBox {
     color: white;
-    font: 11pt "Segoe UI";
+    font: 10pt "Jersey M54";
+    letter-spacing: 1px;
 }
 
 QCheckBox::indicator {
@@ -52,6 +53,9 @@ QCheckBox::indicator:checked {
 QLabel */
 
 QLabel {
+    font: 10pt "HDWallet";
+    font-weight: lighter;
+    letter-spacing: 1px;
     color: rgb(255, 255, 255);
 
 }
@@ -61,7 +65,9 @@ QLabel {
 QPushButton */
 
 QPushButton {
-    font: 11pt "Segoe UI";
+    font: 10pt "HDWallet";
+    font-weight: lighter;
+    letter-spacing: 1px;
     background-color: rgb(25, 30, 36);
     border-radius: 5px;
     color: rgb(255, 255, 255);
@@ -81,7 +87,8 @@ QPushButton:pressed {
 ComboBox */
 
 QComboBox {
-    font: 11pt "Segoe UI";
+    font: 10pt "Tahoma";
+    letter-spacing: 1px;
     background-color: rgb(25, 30, 36);
     border-radius: 5px;
     color: rgb(255, 255, 255);
@@ -154,7 +161,7 @@ QLineEdit:focus {
 
 QLineEdit::disabled {
     color: rgb(194, 194, 194);
-    font: 11pt "Segoe UI";
+    font: 11pt "Jersey M54";
     padding: 5px 10px;
     border-radius: 2px;
     background-color: rgba(25, 30, 36, 0.5);
@@ -177,11 +184,13 @@ QTextEdit {
 
 QTabBar{
   /*text-transform: uppercase;*/
-  font-weight: bold;
+  font: 10pt "HDWallet";
+    font-weight: lighter;
+    letter-spacing: 1px;
 }
 
 QTabWidget::pane {
-    border: 0;
+    border: 1px;
 }
 
 
