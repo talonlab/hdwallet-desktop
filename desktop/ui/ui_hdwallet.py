@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletBKQTDv.ui'
+## Form generated from reading UI file 'hdwalletSeuGOU.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -107,7 +107,7 @@ class Ui_MainWindow(object):
         self.generateClientAndStrengthContainerQFrameHLayout = QHBoxLayout(self.generateClientAndStrengthContainerQGroupBox)
         self.generateClientAndStrengthContainerQFrameHLayout.setSpacing(15)
         self.generateClientAndStrengthContainerQFrameHLayout.setObjectName(u"generateClientAndStrengthContainerQFrameHLayout")
-        self.generateClientAndStrengthContainerQFrameHLayout.setContentsMargins(5, 5, 5, 5)
+        self.generateClientAndStrengthContainerQFrameHLayout.setContentsMargins(10, 10, 10, 10)
         self.generateEntropyClientContainerQFrame = QFrame(self.generateClientAndStrengthContainerQGroupBox)
         self.generateEntropyClientContainerQFrame.setObjectName(u"generateEntropyClientContainerQFrame")
         self.generateEntropyClientContainerQFrameVLayout = QVBoxLayout(self.generateEntropyClientContainerQFrame)
@@ -163,7 +163,7 @@ class Ui_MainWindow(object):
         self.generateMnemonicClientWordsLanguageContainerQFrameHLayout = QHBoxLayout(self.generateMnemonicClientWordsLanguageContainerQGroupBox)
         self.generateMnemonicClientWordsLanguageContainerQFrameHLayout.setSpacing(15)
         self.generateMnemonicClientWordsLanguageContainerQFrameHLayout.setObjectName(u"generateMnemonicClientWordsLanguageContainerQFrameHLayout")
-        self.generateMnemonicClientWordsLanguageContainerQFrameHLayout.setContentsMargins(5, 5, 5, 5)
+        self.generateMnemonicClientWordsLanguageContainerQFrameHLayout.setContentsMargins(10, 10, 10, 10)
         self.generateMnemonicClientContainerQFrame = QFrame(self.generateMnemonicClientWordsLanguageContainerQGroupBox)
         self.generateMnemonicClientContainerQFrame.setObjectName(u"generateMnemonicClientContainerQFrame")
         self.generateMnemonicClientContainerQFrameVLayout = QVBoxLayout(self.generateMnemonicClientContainerQFrame)
@@ -235,7 +235,7 @@ class Ui_MainWindow(object):
         self.verticalLayout = QVBoxLayout(self.groupBox)
         self.verticalLayout.setSpacing(15)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(5, 5, 5, 5)
+        self.verticalLayout.setContentsMargins(10, 10, 10, 10)
         self.generateSeedGenerateContainerQFrame = QFrame(self.groupBox)
         self.generateSeedGenerateContainerQFrame.setObjectName(u"generateSeedGenerateContainerQFrame")
         self.generateSeedGenerateContainerQFrame.setEnabled(True)
@@ -395,7 +395,7 @@ class Ui_MainWindow(object):
         self.generateLengthAndPassphraseQFrameHLayout = QHBoxLayout(self.generateLengthAndPassphraseQGroupBox)
         self.generateLengthAndPassphraseQFrameHLayout.setSpacing(15)
         self.generateLengthAndPassphraseQFrameHLayout.setObjectName(u"generateLengthAndPassphraseQFrameHLayout")
-        self.generateLengthAndPassphraseQFrameHLayout.setContentsMargins(5, 5, 5, 5)
+        self.generateLengthAndPassphraseQFrameHLayout.setContentsMargins(10, 10, 10, 10)
         self.generateLengthContainerQFrame = QFrame(self.generateLengthAndPassphraseQGroupBox)
         self.generateLengthContainerQFrame.setObjectName(u"generateLengthContainerQFrame")
         self.generateLengthContainerQFrame.setMaximumSize(QSize(184, 16777215))
