@@ -249,8 +249,8 @@ class MyMainWindow(QMainWindow):
         length = int(self.ui.generateLengthQLineEdit.text())
         upper = self.ui.generatePassphraseUpperCaseQCheckBox.isChecked()
         lower = self.ui.generatePassphraseLowerCaseQCheckBox.isChecked()
-        special = self.ui.generatePassphraseNumberQCheckBox.isChecked()
-        digit = self.ui.generatePassphraseCharacterQCheckBox.isChecked()
+        digit = self.ui.generatePassphraseNumberQCheckBox.isChecked()
+        special = self.ui.generatePassphraseCharacterQCheckBox.isChecked()
 
 
         characters = string.ascii_lowercase if lower else ''
