@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletSeuGOU.ui'
+## Form generated from reading UI file 'hdwalletgutVaO.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -396,6 +396,52 @@ class Ui_MainWindow(object):
         self.generateLengthAndPassphraseQFrameHLayout.setSpacing(15)
         self.generateLengthAndPassphraseQFrameHLayout.setObjectName(u"generateLengthAndPassphraseQFrameHLayout")
         self.generateLengthAndPassphraseQFrameHLayout.setContentsMargins(10, 10, 10, 10)
+        self.generatePassphraseContainerQFrame = QFrame(self.generateLengthAndPassphraseQGroupBox)
+        self.generatePassphraseContainerQFrame.setObjectName(u"generatePassphraseContainerQFrame")
+        self.gridLayout = QGridLayout(self.generatePassphraseContainerQFrame)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.generatePassphraseLineEditContainerQFrame = QFrame(self.generatePassphraseContainerQFrame)
+        self.generatePassphraseLineEditContainerQFrame.setObjectName(u"generatePassphraseLineEditContainerQFrame")
+        self.generatePassphraseLineEditContainerQFrameHLayout = QHBoxLayout(self.generatePassphraseLineEditContainerQFrame)
+        self.generatePassphraseLineEditContainerQFrameHLayout.setSpacing(15)
+        self.generatePassphraseLineEditContainerQFrameHLayout.setObjectName(u"generatePassphraseLineEditContainerQFrameHLayout")
+        self.generatePassphraseLineEditContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
+        self.generatePassphraseLowerCaseQCheckBox = QCheckBox(self.generatePassphraseLineEditContainerQFrame)
+        self.generatePassphraseLowerCaseQCheckBox.setObjectName(u"generatePassphraseLowerCaseQCheckBox")
+
+        self.generatePassphraseLineEditContainerQFrameHLayout.addWidget(self.generatePassphraseLowerCaseQCheckBox)
+
+        self.generatePassphraseCharacterQCheckBox = QCheckBox(self.generatePassphraseLineEditContainerQFrame)
+        self.generatePassphraseCharacterQCheckBox.setObjectName(u"generatePassphraseCharacterQCheckBox")
+
+        self.generatePassphraseLineEditContainerQFrameHLayout.addWidget(self.generatePassphraseCharacterQCheckBox)
+
+
+        self.gridLayout.addWidget(self.generatePassphraseLineEditContainerQFrame, 1, 0, 1, 1, Qt.AlignBottom)
+
+        self.generatePassphraseLetterTypeContainerQFrame = QFrame(self.generatePassphraseContainerQFrame)
+        self.generatePassphraseLetterTypeContainerQFrame.setObjectName(u"generatePassphraseLetterTypeContainerQFrame")
+        self.generatePassphraseLetterTypeContainerQFrameHLayout = QHBoxLayout(self.generatePassphraseLetterTypeContainerQFrame)
+        self.generatePassphraseLetterTypeContainerQFrameHLayout.setSpacing(15)
+        self.generatePassphraseLetterTypeContainerQFrameHLayout.setObjectName(u"generatePassphraseLetterTypeContainerQFrameHLayout")
+        self.generatePassphraseLetterTypeContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
+        self.generatePassphraseUpperCaseQCheckBox = QCheckBox(self.generatePassphraseLetterTypeContainerQFrame)
+        self.generatePassphraseUpperCaseQCheckBox.setObjectName(u"generatePassphraseUpperCaseQCheckBox")
+
+        self.generatePassphraseLetterTypeContainerQFrameHLayout.addWidget(self.generatePassphraseUpperCaseQCheckBox)
+
+        self.generatePassphraseNumberQCheckBox = QCheckBox(self.generatePassphraseLetterTypeContainerQFrame)
+        self.generatePassphraseNumberQCheckBox.setObjectName(u"generatePassphraseNumberQCheckBox")
+
+        self.generatePassphraseLetterTypeContainerQFrameHLayout.addWidget(self.generatePassphraseNumberQCheckBox)
+
+
+        self.gridLayout.addWidget(self.generatePassphraseLetterTypeContainerQFrame, 0, 0, 1, 1)
+
+
+        self.generateLengthAndPassphraseQFrameHLayout.addWidget(self.generatePassphraseContainerQFrame)
+
         self.generateLengthContainerQFrame = QFrame(self.generateLengthAndPassphraseQGroupBox)
         self.generateLengthContainerQFrame.setObjectName(u"generateLengthContainerQFrame")
         self.generateLengthContainerQFrame.setMaximumSize(QSize(184, 16777215))
@@ -432,45 +478,9 @@ class Ui_MainWindow(object):
 
         self.generateLengthAndPassphraseQFrameHLayout.addWidget(self.generateLengthContainerQFrame)
 
-        self.generatePassphraseContainerQFrame = QFrame(self.generateLengthAndPassphraseQGroupBox)
-        self.generatePassphraseContainerQFrame.setObjectName(u"generatePassphraseContainerQFrame")
-        self.gridLayout = QGridLayout(self.generatePassphraseContainerQFrame)
-        self.gridLayout.setObjectName(u"gridLayout")
-        self.gridLayout.setContentsMargins(0, 0, 0, 0)
-        self.generatePassphraseLineEditContainerQFrame = QFrame(self.generatePassphraseContainerQFrame)
-        self.generatePassphraseLineEditContainerQFrame.setObjectName(u"generatePassphraseLineEditContainerQFrame")
-        self.generatePassphraseLineEditContainerQFrameHLayout = QHBoxLayout(self.generatePassphraseLineEditContainerQFrame)
-        self.generatePassphraseLineEditContainerQFrameHLayout.setSpacing(15)
-        self.generatePassphraseLineEditContainerQFrameHLayout.setObjectName(u"generatePassphraseLineEditContainerQFrameHLayout")
-        self.generatePassphraseLineEditContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.generatePassphraseUpperCaseQCheckBox = QCheckBox(self.generatePassphraseLineEditContainerQFrame)
-        self.generatePassphraseUpperCaseQCheckBox.setObjectName(u"generatePassphraseUpperCaseQCheckBox")
-
-        self.generatePassphraseLineEditContainerQFrameHLayout.addWidget(self.generatePassphraseUpperCaseQCheckBox)
-
-        self.generatePassphraseLowerCaseQCheckBox = QCheckBox(self.generatePassphraseLineEditContainerQFrame)
-        self.generatePassphraseLowerCaseQCheckBox.setObjectName(u"generatePassphraseLowerCaseQCheckBox")
-
-        self.generatePassphraseLineEditContainerQFrameHLayout.addWidget(self.generatePassphraseLowerCaseQCheckBox)
-
-        self.generatePassphraseNumberQCheckBox = QCheckBox(self.generatePassphraseLineEditContainerQFrame)
-        self.generatePassphraseNumberQCheckBox.setObjectName(u"generatePassphraseNumberQCheckBox")
-
-        self.generatePassphraseLineEditContainerQFrameHLayout.addWidget(self.generatePassphraseNumberQCheckBox)
-
-        self.generatePassphraseCharacterQCheckBox = QCheckBox(self.generatePassphraseLineEditContainerQFrame)
-        self.generatePassphraseCharacterQCheckBox.setObjectName(u"generatePassphraseCharacterQCheckBox")
-
-        self.generatePassphraseLineEditContainerQFrameHLayout.addWidget(self.generatePassphraseCharacterQCheckBox)
-
-
-        self.gridLayout.addWidget(self.generatePassphraseLineEditContainerQFrame, 0, 0, 1, 1, Qt.AlignBottom)
-
-
-        self.generateLengthAndPassphraseQFrameHLayout.addWidget(self.generatePassphraseContainerQFrame)
-
         self.generatePassphraseQPushButton = QPushButton(self.generateLengthAndPassphraseQGroupBox)
         self.generatePassphraseQPushButton.setObjectName(u"generatePassphraseQPushButton")
+        self.generatePassphraseQPushButton.setMaximumSize(QSize(100, 16777215))
 
         self.generateLengthAndPassphraseQFrameHLayout.addWidget(self.generatePassphraseQPushButton, 0, Qt.AlignBottom)
 
@@ -6156,73 +6166,64 @@ class Ui_MainWindow(object):
 
         self.dumpsFormatKeysContainerQFrameHLayout.addWidget(self.dumpsFormatContainerQFrame)
 
-        self.dumpsKeysContainerQFrame = QFrame(self.dumpsFormatKeysContainerQFrame)
-        self.dumpsKeysContainerQFrame.setObjectName(u"dumpsKeysContainerQFrame")
-        self.horizontalLayout_18 = QHBoxLayout(self.dumpsKeysContainerQFrame)
-        self.horizontalLayout_18.setSpacing(15)
-        self.horizontalLayout_18.setObjectName(u"horizontalLayout_18")
-        self.horizontalLayout_18.setContentsMargins(0, 0, 0, 0)
-        self.dumpsKeysQFrame = QFrame(self.dumpsKeysContainerQFrame)
-        self.dumpsKeysQFrame.setObjectName(u"dumpsKeysQFrame")
-        self.dumpsKeysQFrame.setMinimumSize(QSize(288, 0))
-        self.KeysVLayout = QVBoxLayout(self.dumpsKeysQFrame)
+        self.dumpsExcludeOrIncludeQFrame = QFrame(self.dumpsFormatKeysContainerQFrame)
+        self.dumpsExcludeOrIncludeQFrame.setObjectName(u"dumpsExcludeOrIncludeQFrame")
+        self.dumpsExcludeOrIncludeQFrame.setMinimumSize(QSize(288, 0))
+        self.KeysVLayout = QVBoxLayout(self.dumpsExcludeOrIncludeQFrame)
         self.KeysVLayout.setSpacing(5)
         self.KeysVLayout.setObjectName(u"KeysVLayout")
         self.KeysVLayout.setContentsMargins(0, 0, 0, 0)
-        self.dumpsKeysLabelContainerQFrame = QFrame(self.dumpsKeysQFrame)
-        self.dumpsKeysLabelContainerQFrame.setObjectName(u"dumpsKeysLabelContainerQFrame")
-        self.horizontalLayout_21 = QHBoxLayout(self.dumpsKeysLabelContainerQFrame)
+        self.dumpsExcludeOrIncludeLabelContainerQFrame = QFrame(self.dumpsExcludeOrIncludeQFrame)
+        self.dumpsExcludeOrIncludeLabelContainerQFrame.setObjectName(u"dumpsExcludeOrIncludeLabelContainerQFrame")
+        self.horizontalLayout_21 = QHBoxLayout(self.dumpsExcludeOrIncludeLabelContainerQFrame)
         self.horizontalLayout_21.setSpacing(15)
         self.horizontalLayout_21.setObjectName(u"horizontalLayout_21")
         self.horizontalLayout_21.setContentsMargins(0, 0, 0, 0)
-        self.dumpsKeysQLabel = QLabel(self.dumpsKeysLabelContainerQFrame)
-        self.dumpsKeysQLabel.setObjectName(u"dumpsKeysQLabel")
+        self.dumpsExcludeOrIncludeQLabel = QLabel(self.dumpsExcludeOrIncludeLabelContainerQFrame)
+        self.dumpsExcludeOrIncludeQLabel.setObjectName(u"dumpsExcludeOrIncludeQLabel")
 
-        self.horizontalLayout_21.addWidget(self.dumpsKeysQLabel)
+        self.horizontalLayout_21.addWidget(self.dumpsExcludeOrIncludeQLabel)
 
-        self.dumpsKeysLabelContainerQFrameHSpacer = QSpacerItem(524, 17, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.dumpsExcludeOrIncludeLabelContainerQFrameHSpacer = QSpacerItem(524, 17, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.horizontalLayout_21.addItem(self.dumpsKeysLabelContainerQFrameHSpacer)
+        self.horizontalLayout_21.addItem(self.dumpsExcludeOrIncludeLabelContainerQFrameHSpacer)
 
 
-        self.KeysVLayout.addWidget(self.dumpsKeysLabelContainerQFrame)
+        self.KeysVLayout.addWidget(self.dumpsExcludeOrIncludeLabelContainerQFrame)
 
-        self.dumpsKeysLabelQFrame = QFrame(self.dumpsKeysQFrame)
-        self.dumpsKeysLabelQFrame.setObjectName(u"dumpsKeysLabelQFrame")
-        self.verticalLayout_18 = QVBoxLayout(self.dumpsKeysLabelQFrame)
+        self.dumpsExcludeOrIncludeLabelQFrame = QFrame(self.dumpsExcludeOrIncludeQFrame)
+        self.dumpsExcludeOrIncludeLabelQFrame.setObjectName(u"dumpsExcludeOrIncludeLabelQFrame")
+        self.verticalLayout_18 = QVBoxLayout(self.dumpsExcludeOrIncludeLabelQFrame)
         self.verticalLayout_18.setSpacing(5)
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
         self.verticalLayout_18.setContentsMargins(0, 0, 0, 0)
-        self.dumpsKeysLineEditContainerQFrame = QFrame(self.dumpsKeysLabelQFrame)
-        self.dumpsKeysLineEditContainerQFrame.setObjectName(u"dumpsKeysLineEditContainerQFrame")
-        self.horizontalLayout_20 = QHBoxLayout(self.dumpsKeysLineEditContainerQFrame)
+        self.dumpsExcludeOrIncludeLineEditContainerQFrame = QFrame(self.dumpsExcludeOrIncludeLabelQFrame)
+        self.dumpsExcludeOrIncludeLineEditContainerQFrame.setObjectName(u"dumpsExcludeOrIncludeLineEditContainerQFrame")
+        self.horizontalLayout_20 = QHBoxLayout(self.dumpsExcludeOrIncludeLineEditContainerQFrame)
         self.horizontalLayout_20.setSpacing(15)
         self.horizontalLayout_20.setObjectName(u"horizontalLayout_20")
         self.horizontalLayout_20.setContentsMargins(0, 0, 0, 0)
-        self.dumpsKeysQLineEdit = QLineEdit(self.dumpsKeysLineEditContainerQFrame)
-        self.dumpsKeysQLineEdit.setObjectName(u"dumpsKeysQLineEdit")
+        self.dumpsExcludeOrIncludeQLineEdit = QLineEdit(self.dumpsExcludeOrIncludeLineEditContainerQFrame)
+        self.dumpsExcludeOrIncludeQLineEdit.setObjectName(u"dumpsExcludeOrIncludeQLineEdit")
 
-        self.horizontalLayout_20.addWidget(self.dumpsKeysQLineEdit)
-
-        self.dumpsKeysGenerateQPushButton = QPushButton(self.dumpsKeysLineEditContainerQFrame)
-        self.dumpsKeysGenerateQPushButton.setObjectName(u"dumpsKeysGenerateQPushButton")
-        sizePolicy1.setHeightForWidth(self.dumpsKeysGenerateQPushButton.sizePolicy().hasHeightForWidth())
-        self.dumpsKeysGenerateQPushButton.setSizePolicy(sizePolicy1)
-        self.dumpsKeysGenerateQPushButton.setStyleSheet(u"")
-
-        self.horizontalLayout_20.addWidget(self.dumpsKeysGenerateQPushButton)
+        self.horizontalLayout_20.addWidget(self.dumpsExcludeOrIncludeQLineEdit)
 
 
-        self.verticalLayout_18.addWidget(self.dumpsKeysLineEditContainerQFrame)
+        self.verticalLayout_18.addWidget(self.dumpsExcludeOrIncludeLineEditContainerQFrame)
 
 
-        self.KeysVLayout.addWidget(self.dumpsKeysLabelQFrame)
+        self.KeysVLayout.addWidget(self.dumpsExcludeOrIncludeLabelQFrame)
 
 
-        self.horizontalLayout_18.addWidget(self.dumpsKeysQFrame)
+        self.dumpsFormatKeysContainerQFrameHLayout.addWidget(self.dumpsExcludeOrIncludeQFrame)
 
+        self.dumpsGenerateQPushButton = QPushButton(self.dumpsFormatKeysContainerQFrame)
+        self.dumpsGenerateQPushButton.setObjectName(u"dumpsGenerateQPushButton")
+        sizePolicy1.setHeightForWidth(self.dumpsGenerateQPushButton.sizePolicy().hasHeightForWidth())
+        self.dumpsGenerateQPushButton.setSizePolicy(sizePolicy1)
+        self.dumpsGenerateQPushButton.setStyleSheet(u"")
 
-        self.dumpsFormatKeysContainerQFrameHLayout.addWidget(self.dumpsKeysContainerQFrame)
+        self.dumpsFormatKeysContainerQFrameHLayout.addWidget(self.dumpsGenerateQPushButton, 0, Qt.AlignBottom)
 
 
         self.dumpsPageEntireContainerQFrameVLayout.addWidget(self.dumpsFormatKeysContainerQFrame)
@@ -6304,8 +6305,8 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.hdwalletQStackedWidget.setCurrentIndex(0)
-        self.hdQStackedWidget.setCurrentIndex(1)
-        self.BIPQStackedWidget.setCurrentIndex(4)
+        self.hdQStackedWidget.setCurrentIndex(0)
+        self.BIPQStackedWidget.setCurrentIndex(0)
         self.cardanoQStackedWidget.setCurrentIndex(0)
         self.electrumV1QStackedWidget.setCurrentIndex(0)
         self.electrumV2QStackedWidget.setCurrentIndex(2)
@@ -6347,11 +6348,11 @@ class Ui_MainWindow(object):
         self.generateSeedPassphraseGenerateQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.generateSeedPassphraseGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
         self.generateLengthAndPassphraseQGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Passphrase", None))
-        self.generateLengthQLabel.setText(QCoreApplication.translate("MainWindow", u"Length", None))
-        self.generatePassphraseUpperCaseQCheckBox.setText(QCoreApplication.translate("MainWindow", u"Upper", None))
         self.generatePassphraseLowerCaseQCheckBox.setText(QCoreApplication.translate("MainWindow", u"Lower", None))
-        self.generatePassphraseNumberQCheckBox.setText(QCoreApplication.translate("MainWindow", u"Numbers", None))
         self.generatePassphraseCharacterQCheckBox.setText(QCoreApplication.translate("MainWindow", u"Characters", None))
+        self.generatePassphraseUpperCaseQCheckBox.setText(QCoreApplication.translate("MainWindow", u"Upper ", None))
+        self.generatePassphraseNumberQCheckBox.setText(QCoreApplication.translate("MainWindow", u"Numbers", None))
+        self.generateLengthQLabel.setText(QCoreApplication.translate("MainWindow", u"Length", None))
         self.generatePassphraseQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
         self.dumpsHdListQLabel.setText(QCoreApplication.translate("MainWindow", u"HD", None))
         self.dumpsHdQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"BIP32", None))
@@ -6862,7 +6863,7 @@ class Ui_MainWindow(object):
         self.dumpsormatQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"JSON", None))
         self.dumpsormatQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"CSV", None))
 
-        self.dumpsKeysQLabel.setText(QCoreApplication.translate("MainWindow", u"Keys", None))
-        self.dumpsKeysGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
+        self.dumpsExcludeOrIncludeQLabel.setText(QCoreApplication.translate("MainWindow", u"Exclude / Include", None))
+        self.dumpsGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
     # retranslateUi
 

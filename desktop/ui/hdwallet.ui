@@ -805,6 +805,94 @@
                <number>10</number>
               </property>
               <item>
+               <widget class="QFrame" name="generatePassphraseContainerQFrame">
+                <layout class="QGridLayout" name="gridLayout">
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item row="1" column="0" alignment="Qt::AlignBottom">
+                  <widget class="QFrame" name="generatePassphraseLineEditContainerQFrame">
+                   <layout class="QHBoxLayout" name="generatePassphraseLineEditContainerQFrameHLayout">
+                    <property name="spacing">
+                     <number>15</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QCheckBox" name="generatePassphraseLowerCaseQCheckBox">
+                      <property name="text">
+                       <string>Lower</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QCheckBox" name="generatePassphraseCharacterQCheckBox">
+                      <property name="text">
+                       <string>Characters</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QFrame" name="generatePassphraseLetterTypeContainerQFrame">
+                   <layout class="QHBoxLayout" name="generatePassphraseLetterTypeContainerQFrameHLayout">
+                    <property name="spacing">
+                     <number>15</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QCheckBox" name="generatePassphraseUpperCaseQCheckBox">
+                      <property name="text">
+                       <string>Upper </string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QCheckBox" name="generatePassphraseNumberQCheckBox">
+                      <property name="text">
+                       <string>Numbers</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
                <widget class="QFrame" name="generateLengthContainerQFrame">
                 <property name="maximumSize">
                  <size>
@@ -888,75 +976,14 @@
                 </layout>
                </widget>
               </item>
-              <item>
-               <widget class="QFrame" name="generatePassphraseContainerQFrame">
-                <layout class="QGridLayout" name="gridLayout">
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item row="0" column="0" alignment="Qt::AlignBottom">
-                  <widget class="QFrame" name="generatePassphraseLineEditContainerQFrame">
-                   <layout class="QHBoxLayout" name="generatePassphraseLineEditContainerQFrameHLayout">
-                    <property name="spacing">
-                     <number>15</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QCheckBox" name="generatePassphraseUpperCaseQCheckBox">
-                      <property name="text">
-                       <string>Upper</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="generatePassphraseLowerCaseQCheckBox">
-                      <property name="text">
-                       <string>Lower</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="generatePassphraseNumberQCheckBox">
-                      <property name="text">
-                       <string>Numbers</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QCheckBox" name="generatePassphraseCharacterQCheckBox">
-                      <property name="text">
-                       <string>Characters</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
               <item alignment="Qt::AlignBottom">
                <widget class="QPushButton" name="generatePassphraseQPushButton">
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
                 <property name="text">
                  <string>Generate</string>
                 </property>
@@ -1472,7 +1499,7 @@
                  <number>0</number>
                 </property>
                 <property name="currentIndex">
-                 <number>1</number>
+                 <number>0</number>
                 </property>
                 <widget class="QWidget" name="BIPsPageQWidget">
                  <layout class="QVBoxLayout" name="BIPsPageQWidgetVLayout">
@@ -1494,7 +1521,7 @@
                   <item>
                    <widget class="QStackedWidget" name="BIPQStackedWidget">
                     <property name="currentIndex">
-                     <number>4</number>
+                     <number>0</number>
                     </property>
                     <widget class="QWidget" name="BIPFromEntropyQStackedWidget">
                      <layout class="QVBoxLayout" name="BIPFromEntropyQStackedWidgetVLayout">
@@ -14212,10 +14239,16 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QFrame" name="dumpsKeysContainerQFrame">
-                   <layout class="QHBoxLayout" name="horizontalLayout_18">
+                  <widget class="QFrame" name="dumpsExcludeOrIncludeQFrame">
+                   <property name="minimumSize">
+                    <size>
+                     <width>288</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <layout class="QVBoxLayout" name="KeysVLayout">
                     <property name="spacing">
-                     <number>15</number>
+                     <number>5</number>
                     </property>
                     <property name="leftMargin">
                      <number>0</number>
@@ -14230,14 +14263,49 @@
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QFrame" name="dumpsKeysQFrame">
-                      <property name="minimumSize">
-                       <size>
-                        <width>288</width>
-                        <height>0</height>
-                       </size>
-                      </property>
-                      <layout class="QVBoxLayout" name="KeysVLayout">
+                     <widget class="QFrame" name="dumpsExcludeOrIncludeLabelContainerQFrame">
+                      <layout class="QHBoxLayout" name="horizontalLayout_21">
+                       <property name="spacing">
+                        <number>15</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="dumpsExcludeOrIncludeQLabel">
+                         <property name="text">
+                          <string>Exclude / Include</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="dumpsExcludeOrIncludeLabelContainerQFrameHSpacer">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>524</width>
+                           <height>17</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="dumpsExcludeOrIncludeLabelQFrame">
+                      <layout class="QVBoxLayout" name="verticalLayout_18">
                        <property name="spacing">
                         <number>5</number>
                        </property>
@@ -14254,8 +14322,8 @@
                         <number>0</number>
                        </property>
                        <item>
-                        <widget class="QFrame" name="dumpsKeysLabelContainerQFrame">
-                         <layout class="QHBoxLayout" name="horizontalLayout_21">
+                        <widget class="QFrame" name="dumpsExcludeOrIncludeLineEditContainerQFrame">
+                         <layout class="QHBoxLayout" name="horizontalLayout_20">
                           <property name="spacing">
                            <number>15</number>
                           </property>
@@ -14272,85 +14340,7 @@
                            <number>0</number>
                           </property>
                           <item>
-                           <widget class="QLabel" name="dumpsKeysQLabel">
-                            <property name="text">
-                             <string>Keys</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <spacer name="dumpsKeysLabelContainerQFrameHSpacer">
-                            <property name="orientation">
-                             <enum>Qt::Horizontal</enum>
-                            </property>
-                            <property name="sizeHint" stdset="0">
-                             <size>
-                              <width>524</width>
-                              <height>17</height>
-                             </size>
-                            </property>
-                           </spacer>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QFrame" name="dumpsKeysLabelQFrame">
-                         <layout class="QVBoxLayout" name="verticalLayout_18">
-                          <property name="spacing">
-                           <number>5</number>
-                          </property>
-                          <property name="leftMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="topMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="rightMargin">
-                           <number>0</number>
-                          </property>
-                          <property name="bottomMargin">
-                           <number>0</number>
-                          </property>
-                          <item>
-                           <widget class="QFrame" name="dumpsKeysLineEditContainerQFrame">
-                            <layout class="QHBoxLayout" name="horizontalLayout_20">
-                             <property name="spacing">
-                              <number>15</number>
-                             </property>
-                             <property name="leftMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="topMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="rightMargin">
-                              <number>0</number>
-                             </property>
-                             <property name="bottomMargin">
-                              <number>0</number>
-                             </property>
-                             <item>
-                              <widget class="QLineEdit" name="dumpsKeysQLineEdit"/>
-                             </item>
-                             <item>
-                              <widget class="QPushButton" name="dumpsKeysGenerateQPushButton">
-                               <property name="sizePolicy">
-                                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-                                 <horstretch>0</horstretch>
-                                 <verstretch>0</verstretch>
-                                </sizepolicy>
-                               </property>
-                               <property name="styleSheet">
-                                <string notr="true"/>
-                               </property>
-                               <property name="text">
-                                <string>Generate</string>
-                               </property>
-                              </widget>
-                             </item>
-                            </layout>
-                           </widget>
+                           <widget class="QLineEdit" name="dumpsExcludeOrIncludeQLineEdit"/>
                           </item>
                          </layout>
                         </widget>
@@ -14359,6 +14349,22 @@
                      </widget>
                     </item>
                    </layout>
+                  </widget>
+                 </item>
+                 <item alignment="Qt::AlignBottom">
+                  <widget class="QPushButton" name="dumpsGenerateQPushButton">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="text">
+                    <string>Generate</string>
+                   </property>
                   </widget>
                  </item>
                 </layout>
