@@ -338,13 +338,15 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
 }
 
 QGroupBox {
-    /*border: 15px solid red;*/
-    /*margin-bottom: 20px;*/
+    border: 1px solid gray;
+    border-radius: 0px;
+    margin-top: 1ex; /* leave space at the top for the title */
     font: 11pt "HDWallet";
 }
-
-QGroupBox::title{
-    padding: 5px;
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 3px 0 3px;
+    background-color: rgb(16, 21, 27);
 }
-
 
