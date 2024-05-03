@@ -111,6 +111,10 @@ class MyMainWindow(QMainWindow):
         self.ui.generatePassphraseNumberQCheckBox.setChecked(True)
         self.ui.generatePassphraseCharacterQCheckBox.setChecked(True)
 
+        self.ui.generateSeedCardanoTypeQComboBox.addItems(Cardano.TYPES.get_cardano_types())
+        self.ui.generateSeedMnemonicTypeQComboBox.addItems(ElectrumV2Mnemonic.mnemonic_types.keys())
+        self.ui.generateMnemonicTypeQComboBox.addItems(ElectrumV2Mnemonic.mnemonic_types.keys())
+
         self.ui.generatePassphraseQPushButton.clicked.connect(self._generate_passphrase)
 
 
@@ -153,15 +157,28 @@ class MyMainWindow(QMainWindow):
         self.ui.generateMnemonicWordsQComboBox.setCurrentIndex(0)
         self.ui.generateMnemonicLanguageQComboBox.setCurrentText('english')
 
+        if ElectrumV2Seed.name() == mnemonic_client:
+            self.ui.generateMnemonicTypeQComboBox.setEnabled(True)
+            self.ui.generateMnemonicTypeQComboBox.setCurrentIndex(0)
+        else:
+            self.ui.generateMnemonicTypeQComboBox.setEnabled(False)
+            self.ui.generateMnemonicTypeQComboBox.setCurrentIndex(-1)
+
 
     def _generate_mnemonic(self):
         mnemonic_client = self.ui.generateMnemonicClientQComboBox.currentText()
         word = self.ui.generateMnemonicWordsQComboBox.currentText()
         lang = self.ui.generateMnemonicLanguageQComboBox.currentText()
-        gen_mnemonic = MNEMONICS.mnemonic(mnemonic_client).from_words(
-                            words=int(word),
-                            language=lang
-                        )
+
+        kwargs = {
+            "words": int(word),
+            "language": lang
+        }
+
+        if ElectrumV2Seed.name() == mnemonic_client:
+            kwargs["mnemonic_type"] =  self.ui.generateMnemonicTypeQComboBox.currentText()
+
+        gen_mnemonic = MNEMONICS.mnemonic(mnemonic_client).from_words(**kwargs)
 
         output = {
             "name": mnemonic_client,
@@ -170,13 +187,17 @@ class MyMainWindow(QMainWindow):
             "words": int(word)
         }
 
+        if ElectrumV2Seed.name() == mnemonic_client:
+            output["mnemonic_type"] =  self.ui.generateMnemonicTypeQComboBox.currentText()
+
         self.println(output)
 
     def _generate_seed_change(self):
         seed_client = self.ui.generateSeedClientQComboBox.currentText()
 
-        self.ui.generateSeedMnemonicTypeQComboBox.clear()
-        self.ui.generateSeedCardanoTypeQComboBox.clear()
+        self.ui.generateSeedCardanoTypeQComboBox.setCurrentIndex(-1)
+        self.ui.generateSeedMnemonicTypeQComboBox.setCurrentIndex(-1)
+
 
         self.ui.generateSeedMnemonicTypeContainerQFrame.setEnabled(False)
         self.ui.generateSeedCardanoTypeContainerQFrame.setEnabled(False)
@@ -186,11 +207,9 @@ class MyMainWindow(QMainWindow):
 
         if CardanoSeed.name() == seed_client:
             self.ui.generateSeedCardanoTypeContainerQFrame.setEnabled(True)
-            self.ui.generateSeedCardanoTypeQComboBox.addItems(Cardano.TYPES.get_cardano_types())
             self.ui.generateSeedCardanoTypeQComboBox.setCurrentIndex(0)
         elif ElectrumV2Seed.name() == seed_client:
             self.ui.generateSeedMnemonicTypeContainerQFrame.setEnabled(True)
-            self.ui.generateSeedMnemonicTypeQComboBox.addItems(ElectrumV2Mnemonic.mnemonic_types.keys())
             self.ui.generateSeedMnemonicTypeQComboBox.setCurrentIndex(0)
 
         if seed_client in (BIP39Seed.name(), ElectrumV2Seed.name()):
