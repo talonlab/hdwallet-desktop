@@ -1,6 +1,7 @@
 import subprocess
-from random import choice
 import string
+import json
+from random import choice
 
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QWidget, 
@@ -127,7 +128,14 @@ class MyMainWindow(QMainWindow):
         entropy_client = self.ui.generateEntropyClientQComboBox.currentText()
         strength = int(self.ui.generateEntropyStrengthQComboBox.currentText())
         gen_entropy = ENTROPIES.entropy(entropy_client).generate(strength=strength)
-        self.println(gen_entropy)
+        
+        output = {
+            "name": entropy_client,
+            "entropy": gen_entropy,
+            "strength": strength
+        }
+
+        self.println(output)
 
 
     def _generate_mnemonic_change(self):
@@ -155,7 +163,14 @@ class MyMainWindow(QMainWindow):
                             language=lang
                         )
 
-        self.println(gen_mnemonic)
+        output = {
+            "name": mnemonic_client,
+            "mnemonic": gen_mnemonic,
+            "language": lang,
+            "words": int(word)
+        }
+
+        self.println(output)
 
     def _generate_seed_change(self):
         seed_client = self.ui.generateSeedClientQComboBox.currentText()
@@ -202,24 +217,33 @@ class MyMainWindow(QMainWindow):
 
         try:
             if len(mnemonic) == 0:
-                output = "Error: mnemonic is required to generate seed!"
+                raise Exception("mnemonic is required to generate seed!")
             elif CardanoSeed.name() == seed_client:
-                output = CardanoSeed.from_mnemonic(mnemonic=mnemonic, cardano_type=cardano_type, passphrase=passphrase)
+                seed = CardanoSeed.from_mnemonic(mnemonic=mnemonic, cardano_type=cardano_type, passphrase=passphrase)
             elif ElectrumV2Seed.name() == seed_client:
-                output = ElectrumV2Seed.from_mnemonic(mnemonic=mnemonic, mnemonic_type=mnemonic_type, passphrase=passphrase)
+                seed = ElectrumV2Seed.from_mnemonic(mnemonic=mnemonic, mnemonic_type=mnemonic_type, passphrase=passphrase)
             elif BIP39Seed.name() == seed_client:
-                output = SEEDS.seed(seed_client).from_mnemonic(mnemonic=mnemonic, passphrase=passphrase)
+                seed = SEEDS.seed(seed_client).from_mnemonic(mnemonic=mnemonic, passphrase=passphrase)
             else:
-                output = SEEDS.seed(seed_client).from_mnemonic(mnemonic=mnemonic)
+                seed = SEEDS.seed(seed_client).from_mnemonic(mnemonic=mnemonic)
         except Exception as e:
-            output = str(e)
+            output = {
+                "Error": str(e)
+            }
+        else:
+            output = {
+                "name": seed_client,
+                "seed": seed
+            }
+
 
         self.println(output)
 
     def _generate_passphrase(self):
 
         if len(self.ui.generateLengthQLineEdit.text()) == 0:
-            self.println("Error: passpharse length is required")
+            #self.println("Error: passpharse length is required")
+            self.println({"Error": "passpharse length is required"})
             return None
 
         length = int(self.ui.generateLengthQLineEdit.text())
@@ -234,11 +258,20 @@ class MyMainWindow(QMainWindow):
         characters += string.digits if digit else ''
         characters += string.punctuation if special else ''
 
+        output = None
         if not any([upper, lower, special, digit]):
-            self.println("Error: At least one of upper, lower, special, or digit must be selected")
+            output = {
+                "Error": "At least one of upper, lower, special, or digit must be selected"
+            }
         else:
             pp = "".join(choice(characters) for _ in range(length))
-            self.println(pp)
+
+            output = {
+                "passphrase": pp,
+                "length": length
+            }
+
+        self.println(output)
 
     def change_page(self, stacked_name: str, widget_name : str) -> None:
         qStackedWidget: Optional[QStackedWidget] = self.findChild(QStackedWidget, stacked_name)
@@ -270,7 +303,12 @@ class MyMainWindow(QMainWindow):
     def println(self, s):
         #just for now
         oldtext = self.ui.outputTerminalQTextEdit.toPlainText()
-        self.ui.outputTerminalQTextEdit.setText(oldtext + "\n\n" + str(s))        
+
+        if isinstance(s, dict):
+            newtext = json.dumps(s, indent=4)  
+        else:
+            newtext = str(s)
+        self.ui.outputTerminalQTextEdit.setText(oldtext + "\n\n" + str(newtext))
 
     def toggle_expand(self):
         if self.toggle_expand_terminal.isChecked():
