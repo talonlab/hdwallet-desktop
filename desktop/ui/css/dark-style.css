@@ -7,7 +7,8 @@ QWidget {
     background-color: rgb(16, 21, 27);
 }
 QWidget:disabled{
-    color: rgb(101, 101, 101);
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(16, 21, 27, 0.5);
 }
 
 QFrame{
@@ -15,7 +16,8 @@ QFrame{
 }
 
 QFrame:disabled{
-    color: rgb(101, 101, 101);
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(16, 21, 27, 0.5);
 }
 
 QTextEdit QMenu::item,
@@ -89,9 +91,9 @@ QPushButton:pressed {
     background-color: rgb(25, 30, 36);
 }
 
-QPushButton:disabled{
-    color: rgb(101, 101, 101);
-}
+/*QPushButton:disabled{*/
+/*    color: rgb(101, 101, 101);*/
+/*}*/
 
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -109,7 +111,8 @@ QComboBox {
 }
 
 QComboBox:disabled{
-    color: rgb(101, 101, 101);
+    /*color: rgb(101, 101, 101);*/
+    background-color: rgba(25, 30, 36, 0.5);
 }
 
 
@@ -175,13 +178,8 @@ QLineEdit:focus {
 }
 
 QLineEdit::disabled {
-    color: rgb(194, 194, 194);
-    font: 11pt "Jersey M54";
-    padding: 5px 10px;
-    border-radius: 2px;
+    /*color: rgb(101, 101, 101);*/
     background-color: rgba(25, 30, 36, 0.5);
-    border: 1px solid rgba(25, 30, 36, 0.5);
-
 }
 
 QTextEdit {
@@ -338,14 +336,14 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
 }
 
 QGroupBox {
-    border: 1px solid gray;
-    border-radius: 0px;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 4px;
     margin-top: 1ex; /* leave space at the top for the title */
     font: 11pt "HDWallet";
 }
 QGroupBox::title {
     subcontrol-origin: margin;
-    left: 10px;
+    left: 15px;
     padding: 0 3px 0 3px;
     background-color: rgb(16, 21, 27);
 }

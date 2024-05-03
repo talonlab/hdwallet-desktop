@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletlhnvrv.ui'
+## Form generated from reading UI file 'hdwalletrwNJEZ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -182,6 +182,25 @@ class Ui_MainWindow(object):
 
 
         self.generateMnemonicClientWordsLanguageContainerQFrameHLayout.addWidget(self.generateMnemonicClientContainerQFrame)
+
+        self.generateMnemonicTypeContainerQFrame = QFrame(self.generateMnemonicClientWordsLanguageContainerQGroupBox)
+        self.generateMnemonicTypeContainerQFrame.setObjectName(u"generateMnemonicTypeContainerQFrame")
+        self.generateMnemonicWordsContainerQFrameVLayout_3 = QVBoxLayout(self.generateMnemonicTypeContainerQFrame)
+        self.generateMnemonicWordsContainerQFrameVLayout_3.setSpacing(5)
+        self.generateMnemonicWordsContainerQFrameVLayout_3.setObjectName(u"generateMnemonicWordsContainerQFrameVLayout_3")
+        self.generateMnemonicWordsContainerQFrameVLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.generateMnemonicTypeQLabel = QLabel(self.generateMnemonicTypeContainerQFrame)
+        self.generateMnemonicTypeQLabel.setObjectName(u"generateMnemonicTypeQLabel")
+
+        self.generateMnemonicWordsContainerQFrameVLayout_3.addWidget(self.generateMnemonicTypeQLabel)
+
+        self.generateMnemonicTypeQComboBox = QComboBox(self.generateMnemonicTypeContainerQFrame)
+        self.generateMnemonicTypeQComboBox.setObjectName(u"generateMnemonicTypeQComboBox")
+
+        self.generateMnemonicWordsContainerQFrameVLayout_3.addWidget(self.generateMnemonicTypeQComboBox)
+
+
+        self.generateMnemonicClientWordsLanguageContainerQFrameHLayout.addWidget(self.generateMnemonicTypeContainerQFrame)
 
         self.generateMnemonicWordsContainerQFrame = QFrame(self.generateMnemonicClientWordsLanguageContainerQGroupBox)
         self.generateMnemonicWordsContainerQFrame.setObjectName(u"generateMnemonicWordsContainerQFrame")
@@ -5067,31 +5086,13 @@ class Ui_MainWindow(object):
         self.dumpsDerivationContainerQFrameVLayout.setSpacing(15)
         self.dumpsDerivationContainerQFrameVLayout.setObjectName(u"dumpsDerivationContainerQFrameVLayout")
         self.dumpsDerivationContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.DerivationQFrame = QFrame(self.dumpsDerivationContainerQFrame)
-        self.DerivationQFrame.setObjectName(u"DerivationQFrame")
-        self.DerivationVLayout = QVBoxLayout(self.DerivationQFrame)
+        self.DerivationQGroupBox = QGroupBox(self.dumpsDerivationContainerQFrame)
+        self.DerivationQGroupBox.setObjectName(u"DerivationQGroupBox")
+        self.DerivationVLayout = QVBoxLayout(self.DerivationQGroupBox)
         self.DerivationVLayout.setSpacing(5)
         self.DerivationVLayout.setObjectName(u"DerivationVLayout")
-        self.DerivationVLayout.setContentsMargins(0, 0, 0, 0)
-        self.DerivationLabelQFrame = QFrame(self.DerivationQFrame)
-        self.DerivationLabelQFrame.setObjectName(u"DerivationLabelQFrame")
-        self.DerivationLabelHLayout = QHBoxLayout(self.DerivationLabelQFrame)
-        self.DerivationLabelHLayout.setSpacing(15)
-        self.DerivationLabelHLayout.setObjectName(u"DerivationLabelHLayout")
-        self.DerivationLabelHLayout.setContentsMargins(0, 0, 0, 0)
-        self.DerivationQLabel = QLabel(self.DerivationLabelQFrame)
-        self.DerivationQLabel.setObjectName(u"DerivationQLabel")
-
-        self.DerivationLabelHLayout.addWidget(self.DerivationQLabel)
-
-        self.DerivationLabelHSpacer = QSpacerItem(764, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.DerivationLabelHLayout.addItem(self.DerivationLabelHSpacer)
-
-
-        self.DerivationVLayout.addWidget(self.DerivationLabelQFrame)
-
-        self.DerivationsQTabWidget = QTabWidget(self.DerivationQFrame)
+        self.DerivationVLayout.setContentsMargins(0, 15, 0, 0)
+        self.DerivationsQTabWidget = QTabWidget(self.DerivationQGroupBox)
         self.DerivationsQTabWidget.setObjectName(u"DerivationsQTabWidget")
         sizePolicy2 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy2.setHorizontalStretch(0)
@@ -6111,7 +6112,7 @@ class Ui_MainWindow(object):
         self.DerivationVLayout.addWidget(self.DerivationsQTabWidget)
 
 
-        self.dumpsDerivationContainerQFrameVLayout.addWidget(self.DerivationQFrame)
+        self.dumpsDerivationContainerQFrameVLayout.addWidget(self.DerivationQGroupBox)
 
 
         self.dumpsPageEntireContainerQFrameVLayout.addWidget(self.dumpsDerivationContainerQFrame)
@@ -6305,7 +6306,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.hdwalletQStackedWidget.setCurrentIndex(0)
-        self.hdQStackedWidget.setCurrentIndex(0)
+        self.hdQStackedWidget.setCurrentIndex(1)
         self.BIPQStackedWidget.setCurrentIndex(0)
         self.cardanoQStackedWidget.setCurrentIndex(0)
         self.electrumV1QStackedWidget.setCurrentIndex(0)
@@ -6332,6 +6333,8 @@ class Ui_MainWindow(object):
         self.generateMnemonicClientWordsLanguageContainerQGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Mnemonic", None))
         self.generateMnemonicClientQLabel.setText(QCoreApplication.translate("MainWindow", u"Client", None))
         self.generateMnemonicClientQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Select Client", None))
+        self.generateMnemonicTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic Type", None))
+        self.generateMnemonicTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Select Mnemonic Type", None))
         self.generateMnemonicWordsQLabel.setText(QCoreApplication.translate("MainWindow", u"Words", None))
         self.generateMnemonicWordsQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Select Words", None))
         self.generateMnemonicLanguageQLabel.setText(QCoreApplication.translate("MainWindow", u"Language", None))
@@ -6346,6 +6349,7 @@ class Ui_MainWindow(object):
         self.generateSeedCardanoTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Select Cardano Type", None))
         self.generateSeedMnemonicQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic", None))
         self.generateSeedPassphraseGenerateQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
+        self.generateSeedPassphraseGenerateQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
         self.generateSeedPassphraseGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
         self.generateLengthAndPassphraseQGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.generatePassphraseLowerCaseQCheckBox.setText(QCoreApplication.translate("MainWindow", u"Lower", None))
@@ -6751,7 +6755,7 @@ class Ui_MainWindow(object):
         self.PrivateKeyQLabel.setText(QCoreApplication.translate("MainWindow", u"View Private key", None))
         self.PrivateKeyQLabel_2.setText(QCoreApplication.translate("MainWindow", u"Spend Public Key", None))
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"Payment ID", None))
-        self.DerivationQLabel.setText(QCoreApplication.translate("MainWindow", u"Derivation", None))
+        self.DerivationQGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Derivation", None))
         self.CustomPathQLabel.setText(QCoreApplication.translate("MainWindow", u"Path", None))
         self.CustomPathQLineEdit.setText("")
         self.CustomPathQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"m/0'/0", None))
