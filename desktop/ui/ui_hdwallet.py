@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletIQKywM.ui'
+## Form generated from reading UI file 'hdwalletlYzDDN.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -94,7 +94,7 @@ class Ui_MainWindow(object):
         self.generatePageQStackedWidgetVLayout = QVBoxLayout(self.generatePageQStackedWidget)
         self.generatePageQStackedWidgetVLayout.setSpacing(10)
         self.generatePageQStackedWidgetVLayout.setObjectName(u"generatePageQStackedWidgetVLayout")
-        self.generatePageQStackedWidgetVLayout.setContentsMargins(15, 10, 15, 10)
+        self.generatePageQStackedWidgetVLayout.setContentsMargins(15, 5, 15, 15)
         self.generateEntopyClientAndStrengthContainerQFrame = QFrame(self.generatePageQStackedWidget)
         self.generateEntopyClientAndStrengthContainerQFrame.setObjectName(u"generateEntopyClientAndStrengthContainerQFrame")
         self.generateEntopyClientAndStrengthContainerQFrame.setLineWidth(0)
@@ -518,7 +518,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3 = QVBoxLayout(self.dumpsPageQStackedWidget)
         self.verticalLayout_3.setSpacing(10)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.verticalLayout_3.setContentsMargins(15, 10, 15, 10)
+        self.verticalLayout_3.setContentsMargins(15, 5, 15, 15)
         self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox = QGroupBox(self.dumpsPageQStackedWidget)
         self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox.setObjectName(u"dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox")
         self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout = QHBoxLayout(self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox)
@@ -644,7 +644,6 @@ class Ui_MainWindow(object):
         self.dumpsCryptocurrencyQComboBox.addItem("")
         self.dumpsCryptocurrencyQComboBox.addItem("")
         self.dumpsCryptocurrencyQComboBox.setObjectName(u"dumpsCryptocurrencyQComboBox")
-        self.dumpsCryptocurrencyQComboBox.setMinimumSize(QSize(150, 0))
 
         self.dumpsCryptocurrencyContainerQFrameVLayout.addWidget(self.dumpsCryptocurrencyQComboBox)
 
@@ -653,7 +652,7 @@ class Ui_MainWindow(object):
 
         self.dumpsNetworkContainerQFrame = QFrame(self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox)
         self.dumpsNetworkContainerQFrame.setObjectName(u"dumpsNetworkContainerQFrame")
-        self.dumpsNetworkContainerQFrame.setMinimumSize(QSize(150, 0))
+        self.dumpsNetworkContainerQFrame.setMaximumSize(QSize(115, 16777215))
         self.dumpsNetworkContainerQFrameVLayout = QVBoxLayout(self.dumpsNetworkContainerQFrame)
         self.dumpsNetworkContainerQFrameVLayout.setSpacing(5)
         self.dumpsNetworkContainerQFrameVLayout.setObjectName(u"dumpsNetworkContainerQFrameVLayout")
@@ -6282,7 +6281,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.hdwalletQStackedWidget.setCurrentIndex(0)
+        self.hdwalletQStackedWidget.setCurrentIndex(1)
         self.hdQStackedWidget.setCurrentIndex(4)
         self.BIPQStackedWidget.setCurrentIndex(0)
         self.cardanoQStackedWidget.setCurrentIndex(0)

@@ -161,7 +161,7 @@
        <item>
         <widget class="QStackedWidget" name="hdwalletQStackedWidget">
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="generatePageQStackedWidget">
           <layout class="QVBoxLayout" name="generatePageQStackedWidgetVLayout">
@@ -172,13 +172,13 @@
             <number>15</number>
            </property>
            <property name="topMargin">
-            <number>10</number>
+            <number>5</number>
            </property>
            <property name="rightMargin">
             <number>15</number>
            </property>
            <property name="bottomMargin">
-            <number>10</number>
+            <number>15</number>
            </property>
            <item>
             <widget class="QFrame" name="generateEntopyClientAndStrengthContainerQFrame">
@@ -1070,13 +1070,13 @@
             <number>15</number>
            </property>
            <property name="topMargin">
-            <number>10</number>
+            <number>5</number>
            </property>
            <property name="rightMargin">
             <number>15</number>
            </property>
            <property name="bottomMargin">
-            <number>10</number>
+            <number>15</number>
            </property>
            <item>
             <widget class="QGroupBox" name="dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox">
@@ -1403,12 +1403,6 @@
                  </item>
                  <item>
                   <widget class="QComboBox" name="dumpsCryptocurrencyQComboBox">
-                   <property name="minimumSize">
-                    <size>
-                     <width>150</width>
-                     <height>0</height>
-                    </size>
-                   </property>
                    <property name="placeholderText">
                     <string>(Select)</string>
                    </property>
@@ -1429,10 +1423,10 @@
               </item>
               <item>
                <widget class="QFrame" name="dumpsNetworkContainerQFrame">
-                <property name="minimumSize">
+                <property name="maximumSize">
                  <size>
-                  <width>150</width>
-                  <height>0</height>
+                  <width>115</width>
+                  <height>16777215</height>
                  </size>
                 </property>
                 <layout class="QVBoxLayout" name="dumpsNetworkContainerQFrameVLayout">
