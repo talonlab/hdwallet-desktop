@@ -85,7 +85,7 @@
            <number>0</number>
           </property>
           <property name="topMargin">
-           <number>0</number>
+           <number>10</number>
           </property>
           <property name="rightMargin">
            <number>15</number>
@@ -1520,32 +1520,12 @@
                       </property>
                       <item>
                        <property name="text">
-                        <string>Algorand</string>
+                        <string>Mainnet</string>
                        </property>
                       </item>
                       <item>
                        <property name="text">
-                        <string>BIP39</string>
-                       </property>
-                      </item>
-                      <item>
-                       <property name="text">
-                        <string>Cardano</string>
-                       </property>
-                      </item>
-                      <item>
-                       <property name="text">
-                        <string>Electrum V1</string>
-                       </property>
-                      </item>
-                      <item>
-                       <property name="text">
-                        <string>Electrum V2</string>
-                       </property>
-                      </item>
-                      <item>
-                       <property name="text">
-                        <string>Monero</string>
+                        <string>Testnet</string>
                        </property>
                       </item>
                      </widget>

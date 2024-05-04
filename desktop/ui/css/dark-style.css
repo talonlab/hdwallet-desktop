@@ -162,7 +162,7 @@ QComboBox QAbstractItemView::item:selected {
 LineEdit */
 
 QLineEdit {
-    font: 11pt "Segoe UI";
+    /*font: 11pt "Segoe UI";*/
     background-color: rgb(25, 30, 36);
     border-radius: 5px;
     color: rgb(255, 255, 255);
@@ -185,7 +185,7 @@ QLineEdit::disabled {
 }
 
 QTextEdit {
-    font: 11pt "Segoe UI";
+    /*font: 11pt "Segoe UI";*/
     background-color: #000000;
     border-color: rgb(25, 30, 36);
     border-radius: 5px;

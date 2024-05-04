@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletSEDiqK.ui'
+## Form generated from reading UI file 'hdwalletGvrrCh.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -50,7 +50,7 @@ class Ui_MainWindow(object):
         self.hdWalletHeaderContainerQFrameHLayout = QHBoxLayout(self.hdWalletHeaderContainerQFrame)
         self.hdWalletHeaderContainerQFrameHLayout.setSpacing(15)
         self.hdWalletHeaderContainerQFrameHLayout.setObjectName(u"hdWalletHeaderContainerQFrameHLayout")
-        self.hdWalletHeaderContainerQFrameHLayout.setContentsMargins(0, 0, 15, 0)
+        self.hdWalletHeaderContainerQFrameHLayout.setContentsMargins(0, 10, 15, 0)
         self.hdWalletLogoContainerQFrame = QFrame(self.hdWalletHeaderContainerQFrame)
         self.hdWalletLogoContainerQFrame.setObjectName(u"hdWalletLogoContainerQFrame")
         self.hdWalletLogoContainerQFrameVLayout = QVBoxLayout(self.hdWalletLogoContainerQFrame)
@@ -684,10 +684,6 @@ class Ui_MainWindow(object):
         self.dumpsNetworkContainerQFrameVLayout.addWidget(self.dumpsNetworkLabelContainerQFrame)
 
         self.dumpsNetworkQComboBox = QComboBox(self.dumpsNetworkContainerQFrame)
-        self.dumpsNetworkQComboBox.addItem("")
-        self.dumpsNetworkQComboBox.addItem("")
-        self.dumpsNetworkQComboBox.addItem("")
-        self.dumpsNetworkQComboBox.addItem("")
         self.dumpsNetworkQComboBox.addItem("")
         self.dumpsNetworkQComboBox.addItem("")
         self.dumpsNetworkQComboBox.setObjectName(u"dumpsNetworkQComboBox")
@@ -6379,12 +6375,8 @@ class Ui_MainWindow(object):
 
         self.dumpsCryptocurrencyQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.dumpsNetworkQLabel.setText(QCoreApplication.translate("MainWindow", u"Network", None))
-        self.dumpsNetworkQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
-        self.dumpsNetworkQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
-        self.dumpsNetworkQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Cardano", None))
-        self.dumpsNetworkQComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"Electrum V1", None))
-        self.dumpsNetworkQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
-        self.dumpsNetworkQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
+        self.dumpsNetworkQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Mainnet", None))
+        self.dumpsNetworkQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Testnet", None))
 
         self.dumpsNetworkQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.groupBox_2.setTitle("")
