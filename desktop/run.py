@@ -6,7 +6,7 @@ from random import choice
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QWidget, 
     QPushButton, QVBoxLayout, QHBoxLayout, QFrame,
-    QStackedWidget
+    QStackedWidget, QSizePolicy
 )
 from PySide6.QtCore import QFile, Qt
 from PySide6.QtGui import QIntValidator
@@ -83,6 +83,16 @@ class MyMainWindow(QMainWindow):
 
         self.ui.generateQPushButton.clicked.connect(lambda: self.change_page("hdwalletQStackedWidget", "generatePageQStackedWidget"))
         self.ui.dumpQPushButton.clicked.connect(lambda: self.change_page("hdwalletQStackedWidget", "dumpsPageQStackedWidget"))
+
+        self.ui.generateEntropyClientContainerQFrame.setSizePolicy(
+            QSizePolicy.Expanding, QSizePolicy.Expanding
+        )
+        self.ui.generateSeedMnemonicContainerQFrame.setSizePolicy(
+            QSizePolicy.Expanding, QSizePolicy.Expanding
+        )
+        self.ui.generateLengthContainerQFrame.setSizePolicy(
+            QSizePolicy.Expanding, QSizePolicy.Expanding
+        )
 
         self._setup_generate_stack()
 
