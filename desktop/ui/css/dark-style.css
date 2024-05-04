@@ -3,7 +3,8 @@
 
 QWidget {
     color: white;
-    font: 11pt "Segoe UI";
+    font: 10pt "Tahoma";
+    letter-spacing: 1px;
     background-color: rgb(16, 21, 27);
 }
 QWidget:disabled{
@@ -12,6 +13,8 @@ QWidget:disabled{
 }
 
 QFrame{
+    font: 10pt "Tahoma";
+    letter-spacing: 1px;
     background-color: rgb(16, 21, 27);
 }
 
@@ -100,8 +103,7 @@ QPushButton:pressed {
 ComboBox */
 
 QComboBox {
-    font: 10pt "Tahoma";
-    letter-spacing: 1px;
+
     background-color: rgb(25, 30, 36);
     border-radius: 5px;
     color: rgb(255, 255, 255);

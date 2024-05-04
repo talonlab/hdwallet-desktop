@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletzzVVWB.ui'
+## Form generated from reading UI file 'hdwalletcxWeUE.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -6336,7 +6336,7 @@ class Ui_MainWindow(object):
         self.generateSeedPassphraseGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
         self.generateLengthAndPassphraseQGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.generatePassphraseLowerCaseQCheckBox.setText(QCoreApplication.translate("MainWindow", u"Lower Case", None))
-        self.generatePassphraseCharacterQCheckBox.setText(QCoreApplication.translate("MainWindow", u"Special Characters", None))
+        self.generatePassphraseCharacterQCheckBox.setText(QCoreApplication.translate("MainWindow", u"Characters", None))
         self.generatePassphraseUpperCaseQCheckBox.setText(QCoreApplication.translate("MainWindow", u"Upper Case", None))
         self.generatePassphraseNumberQCheckBox.setText(QCoreApplication.translate("MainWindow", u"Numbers", None))
         self.generateLengthQLabel.setText(QCoreApplication.translate("MainWindow", u"Length", None))

@@ -901,7 +901,7 @@
                     <item>
                      <widget class="QCheckBox" name="generatePassphraseCharacterQCheckBox">
                       <property name="text">
-                       <string>Special Characters</string>
+                       <string>Characters</string>
                       </property>
                      </widget>
                     </item>
