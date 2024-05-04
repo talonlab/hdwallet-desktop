@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletWzubJe.ui'
+## Form generated from reading UI file 'hdwalletIQKywM.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -92,9 +92,9 @@ class Ui_MainWindow(object):
         self.generatePageQStackedWidget = QWidget()
         self.generatePageQStackedWidget.setObjectName(u"generatePageQStackedWidget")
         self.generatePageQStackedWidgetVLayout = QVBoxLayout(self.generatePageQStackedWidget)
-        self.generatePageQStackedWidgetVLayout.setSpacing(15)
+        self.generatePageQStackedWidgetVLayout.setSpacing(10)
         self.generatePageQStackedWidgetVLayout.setObjectName(u"generatePageQStackedWidgetVLayout")
-        self.generatePageQStackedWidgetVLayout.setContentsMargins(15, 15, 15, 15)
+        self.generatePageQStackedWidgetVLayout.setContentsMargins(15, 10, 15, 10)
         self.generateEntopyClientAndStrengthContainerQFrame = QFrame(self.generatePageQStackedWidget)
         self.generateEntopyClientAndStrengthContainerQFrame.setObjectName(u"generateEntopyClientAndStrengthContainerQFrame")
         self.generateEntopyClientAndStrengthContainerQFrame.setLineWidth(0)
@@ -515,19 +515,11 @@ class Ui_MainWindow(object):
         self.hdwalletQStackedWidget.addWidget(self.generatePageQStackedWidget)
         self.dumpsPageQStackedWidget = QWidget()
         self.dumpsPageQStackedWidget.setObjectName(u"dumpsPageQStackedWidget")
-        self.dumpsPageQStackedWidgetVLayout = QVBoxLayout(self.dumpsPageQStackedWidget)
-        self.dumpsPageQStackedWidgetVLayout.setSpacing(0)
-        self.dumpsPageQStackedWidgetVLayout.setObjectName(u"dumpsPageQStackedWidgetVLayout")
-        self.dumpsPageQStackedWidgetVLayout.setContentsMargins(0, 0, 0, 0)
-        self.dumpsPageEntireContainerQFrame = QFrame(self.dumpsPageQStackedWidget)
-        self.dumpsPageEntireContainerQFrame.setObjectName(u"dumpsPageEntireContainerQFrame")
-        self.dumpsPageEntireContainerQFrame.setMinimumSize(QSize(525, 0))
-        self.dumpsPageEntireContainerQFrame.setLineWidth(0)
-        self.dumpsPageEntireContainerQFrameVLayout = QVBoxLayout(self.dumpsPageEntireContainerQFrame)
-        self.dumpsPageEntireContainerQFrameVLayout.setSpacing(10)
-        self.dumpsPageEntireContainerQFrameVLayout.setObjectName(u"dumpsPageEntireContainerQFrameVLayout")
-        self.dumpsPageEntireContainerQFrameVLayout.setContentsMargins(15, 5, 15, 15)
-        self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox = QGroupBox(self.dumpsPageEntireContainerQFrame)
+        self.verticalLayout_3 = QVBoxLayout(self.dumpsPageQStackedWidget)
+        self.verticalLayout_3.setSpacing(10)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.verticalLayout_3.setContentsMargins(15, 10, 15, 10)
+        self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox = QGroupBox(self.dumpsPageQStackedWidget)
         self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox.setObjectName(u"dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox")
         self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout = QHBoxLayout(self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox)
         self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout.setSpacing(15)
@@ -652,6 +644,7 @@ class Ui_MainWindow(object):
         self.dumpsCryptocurrencyQComboBox.addItem("")
         self.dumpsCryptocurrencyQComboBox.addItem("")
         self.dumpsCryptocurrencyQComboBox.setObjectName(u"dumpsCryptocurrencyQComboBox")
+        self.dumpsCryptocurrencyQComboBox.setMinimumSize(QSize(150, 0))
 
         self.dumpsCryptocurrencyContainerQFrameVLayout.addWidget(self.dumpsCryptocurrencyQComboBox)
 
@@ -694,15 +687,15 @@ class Ui_MainWindow(object):
         self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout.addWidget(self.dumpsNetworkContainerQFrame)
 
 
-        self.dumpsPageEntireContainerQFrameVLayout.addWidget(self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox)
+        self.verticalLayout_3.addWidget(self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox)
 
-        self.groupBox_2 = QGroupBox(self.dumpsPageEntireContainerQFrame)
-        self.groupBox_2.setObjectName(u"groupBox_2")
-        self.verticalLayout_2 = QVBoxLayout(self.groupBox_2)
+        self.dumpsStackQGroupBox = QGroupBox(self.dumpsPageQStackedWidget)
+        self.dumpsStackQGroupBox.setObjectName(u"dumpsStackQGroupBox")
+        self.verticalLayout_2 = QVBoxLayout(self.dumpsStackQGroupBox)
         self.verticalLayout_2.setSpacing(15)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(10, 10, 10, 10)
-        self.hdQStackedWidget = QStackedWidget(self.groupBox_2)
+        self.hdQStackedWidget = QStackedWidget(self.dumpsStackQGroupBox)
         self.hdQStackedWidget.setObjectName(u"hdQStackedWidget")
         self.hdQStackedWidget.setLineWidth(0)
         self.BIPsPageQWidget = QWidget()
@@ -5065,9 +5058,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.addWidget(self.hdQStackedWidget)
 
 
-        self.dumpsPageEntireContainerQFrameVLayout.addWidget(self.groupBox_2)
+        self.verticalLayout_3.addWidget(self.dumpsStackQGroupBox)
 
-        self.dumpsDerivationContainerQFrame = QFrame(self.dumpsPageEntireContainerQFrame)
+        self.dumpsDerivationContainerQFrame = QFrame(self.dumpsPageQStackedWidget)
         self.dumpsDerivationContainerQFrame.setObjectName(u"dumpsDerivationContainerQFrame")
         self.dumpsDerivationContainerQFrameVLayout = QVBoxLayout(self.dumpsDerivationContainerQFrame)
         self.dumpsDerivationContainerQFrameVLayout.setSpacing(15)
@@ -6102,9 +6095,9 @@ class Ui_MainWindow(object):
         self.dumpsDerivationContainerQFrameVLayout.addWidget(self.DerivationQGroupBox)
 
 
-        self.dumpsPageEntireContainerQFrameVLayout.addWidget(self.dumpsDerivationContainerQFrame)
+        self.verticalLayout_3.addWidget(self.dumpsDerivationContainerQFrame)
 
-        self.dumpsFormatKeysContainerQGroupBox = QGroupBox(self.dumpsPageEntireContainerQFrame)
+        self.dumpsFormatKeysContainerQGroupBox = QGroupBox(self.dumpsPageQStackedWidget)
         self.dumpsFormatKeysContainerQGroupBox.setObjectName(u"dumpsFormatKeysContainerQGroupBox")
         self.dumpsFormatKeysContainerQFrameHLayout = QHBoxLayout(self.dumpsFormatKeysContainerQGroupBox)
         self.dumpsFormatKeysContainerQFrameHLayout.setSpacing(15)
@@ -6214,10 +6207,7 @@ class Ui_MainWindow(object):
         self.dumpsFormatKeysContainerQFrameHLayout.addWidget(self.dumpsGenerateQPushButton, 0, Qt.AlignBottom)
 
 
-        self.dumpsPageEntireContainerQFrameVLayout.addWidget(self.dumpsFormatKeysContainerQGroupBox)
-
-
-        self.dumpsPageQStackedWidgetVLayout.addWidget(self.dumpsPageEntireContainerQFrame)
+        self.verticalLayout_3.addWidget(self.dumpsFormatKeysContainerQGroupBox)
 
         self.hdwalletQStackedWidget.addWidget(self.dumpsPageQStackedWidget)
 
@@ -6292,7 +6282,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.hdwalletQStackedWidget.setCurrentIndex(1)
+        self.hdwalletQStackedWidget.setCurrentIndex(0)
         self.hdQStackedWidget.setCurrentIndex(4)
         self.BIPQStackedWidget.setCurrentIndex(0)
         self.cardanoQStackedWidget.setCurrentIndex(0)
@@ -6379,7 +6369,7 @@ class Ui_MainWindow(object):
         self.dumpsNetworkQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Testnet", None))
 
         self.dumpsNetworkQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
-        self.groupBox_2.setTitle("")
+        self.dumpsStackQGroupBox.setTitle("")
         self.BIPFromEntropyQLabel.setText(QCoreApplication.translate("MainWindow", u"Entropy", None))
         self.BIPFromEntropyPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
         self.BIPFromEntropyPublicKeyTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
