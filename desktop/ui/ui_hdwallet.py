@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletcxWeUE.ui'
+## Form generated from reading UI file 'hdwalletSEDiqK.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -27,7 +27,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1150, 542)
+        MainWindow.resize(1150, 578)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidgetHLayout = QHBoxLayout(self.centralwidget)
@@ -527,14 +527,13 @@ class Ui_MainWindow(object):
         self.dumpsPageEntireContainerQFrameVLayout.setSpacing(15)
         self.dumpsPageEntireContainerQFrameVLayout.setObjectName(u"dumpsPageEntireContainerQFrameVLayout")
         self.dumpsPageEntireContainerQFrameVLayout.setContentsMargins(15, 5, 15, 15)
-        self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame = QFrame(self.dumpsPageEntireContainerQFrame)
-        self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame.setObjectName(u"dumpsHDFromCryptocurrencyAndNetworkContainerQFrame")
-        self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame.setFrameShape(QFrame.NoFrame)
-        self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout = QHBoxLayout(self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame)
+        self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox = QGroupBox(self.dumpsPageEntireContainerQFrame)
+        self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox.setObjectName(u"dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox")
+        self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout = QHBoxLayout(self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox)
         self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout.setSpacing(15)
         self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout.setObjectName(u"dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout")
-        self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.dumpsHdListComboContainerQFrame = QFrame(self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame)
+        self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout.setContentsMargins(10, 10, 10, 10)
+        self.dumpsHdListComboContainerQFrame = QFrame(self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox)
         self.dumpsHdListComboContainerQFrame.setObjectName(u"dumpsHdListComboContainerQFrame")
         self.dumpsHdListComboContainerQFrameVLayout = QVBoxLayout(self.dumpsHdListComboContainerQFrame)
         self.dumpsHdListComboContainerQFrameVLayout.setSpacing(5)
@@ -582,7 +581,7 @@ class Ui_MainWindow(object):
 
         self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout.addWidget(self.dumpsHdListComboContainerQFrame)
 
-        self.dumpsFromContainerQFrame = QFrame(self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame)
+        self.dumpsFromContainerQFrame = QFrame(self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox)
         self.dumpsFromContainerQFrame.setObjectName(u"dumpsFromContainerQFrame")
         self.dumpsFromContainerQFrameVLayout = QVBoxLayout(self.dumpsFromContainerQFrame)
         self.dumpsFromContainerQFrameVLayout.setSpacing(5)
@@ -625,7 +624,7 @@ class Ui_MainWindow(object):
 
         self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout.addWidget(self.dumpsFromContainerQFrame)
 
-        self.dumpsCryptocurrencyContainerQFrame = QFrame(self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame)
+        self.dumpsCryptocurrencyContainerQFrame = QFrame(self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox)
         self.dumpsCryptocurrencyContainerQFrame.setObjectName(u"dumpsCryptocurrencyContainerQFrame")
         self.dumpsCryptocurrencyContainerQFrameVLayout = QVBoxLayout(self.dumpsCryptocurrencyContainerQFrame)
         self.dumpsCryptocurrencyContainerQFrameVLayout.setSpacing(5)
@@ -659,7 +658,7 @@ class Ui_MainWindow(object):
 
         self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout.addWidget(self.dumpsCryptocurrencyContainerQFrame)
 
-        self.dumpsNetworkContainerQFrame = QFrame(self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame)
+        self.dumpsNetworkContainerQFrame = QFrame(self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox)
         self.dumpsNetworkContainerQFrame.setObjectName(u"dumpsNetworkContainerQFrame")
         self.dumpsNetworkContainerQFrame.setMinimumSize(QSize(150, 0))
         self.dumpsNetworkContainerQFrameVLayout = QVBoxLayout(self.dumpsNetworkContainerQFrame)
@@ -699,9 +698,15 @@ class Ui_MainWindow(object):
         self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout.addWidget(self.dumpsNetworkContainerQFrame)
 
 
-        self.dumpsPageEntireContainerQFrameVLayout.addWidget(self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrame)
+        self.dumpsPageEntireContainerQFrameVLayout.addWidget(self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox)
 
-        self.hdQStackedWidget = QStackedWidget(self.dumpsPageEntireContainerQFrame)
+        self.groupBox_2 = QGroupBox(self.dumpsPageEntireContainerQFrame)
+        self.groupBox_2.setObjectName(u"groupBox_2")
+        self.verticalLayout_2 = QVBoxLayout(self.groupBox_2)
+        self.verticalLayout_2.setSpacing(15)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(10, 10, 10, 10)
+        self.hdQStackedWidget = QStackedWidget(self.groupBox_2)
         self.hdQStackedWidget.setObjectName(u"hdQStackedWidget")
         self.hdQStackedWidget.setLineWidth(0)
         self.BIPsPageQWidget = QWidget()
@@ -709,7 +714,7 @@ class Ui_MainWindow(object):
         self.BIPsPageQWidgetVLayout = QVBoxLayout(self.BIPsPageQWidget)
         self.BIPsPageQWidgetVLayout.setSpacing(0)
         self.BIPsPageQWidgetVLayout.setObjectName(u"BIPsPageQWidgetVLayout")
-        self.BIPsPageQWidgetVLayout.setContentsMargins(0, 15, 0, 0)
+        self.BIPsPageQWidgetVLayout.setContentsMargins(0, 0, 0, 0)
         self.BIPQStackedWidget = QStackedWidget(self.BIPsPageQWidget)
         self.BIPQStackedWidget.setObjectName(u"BIPQStackedWidget")
         self.BIPFromEntropyQStackedWidget = QWidget()
@@ -1680,7 +1685,7 @@ class Ui_MainWindow(object):
         self.cardanoPageQWidgetVLayout = QVBoxLayout(self.cardanoPageQWidget)
         self.cardanoPageQWidgetVLayout.setSpacing(0)
         self.cardanoPageQWidgetVLayout.setObjectName(u"cardanoPageQWidgetVLayout")
-        self.cardanoPageQWidgetVLayout.setContentsMargins(0, 15, 0, 0)
+        self.cardanoPageQWidgetVLayout.setContentsMargins(0, 0, 0, 0)
         self.cardanoQStackedWidget = QStackedWidget(self.cardanoPageQWidget)
         self.cardanoQStackedWidget.setObjectName(u"cardanoQStackedWidget")
         self.cardanoFromEntropyQStackedWidget = QWidget()
@@ -2901,7 +2906,7 @@ class Ui_MainWindow(object):
         self.electrumV1PageQWidgetVLayout = QVBoxLayout(self.electrumV1PageQWidget)
         self.electrumV1PageQWidgetVLayout.setSpacing(0)
         self.electrumV1PageQWidgetVLayout.setObjectName(u"electrumV1PageQWidgetVLayout")
-        self.electrumV1PageQWidgetVLayout.setContentsMargins(0, 15, 0, 0)
+        self.electrumV1PageQWidgetVLayout.setContentsMargins(0, 0, 0, 0)
         self.electrumV1QStackedWidget = QStackedWidget(self.electrumV1PageQWidget)
         self.electrumV1QStackedWidget.setObjectName(u"electrumV1QStackedWidget")
         self.electrumV1FromEntropyQStackedWidget = QWidget()
@@ -3766,7 +3771,7 @@ class Ui_MainWindow(object):
         self.electrumV2PageQWidgetVLayout = QVBoxLayout(self.electrumV2PageQWidget)
         self.electrumV2PageQWidgetVLayout.setSpacing(0)
         self.electrumV2PageQWidgetVLayout.setObjectName(u"electrumV2PageQWidgetVLayout")
-        self.electrumV2PageQWidgetVLayout.setContentsMargins(0, 15, 0, 0)
+        self.electrumV2PageQWidgetVLayout.setContentsMargins(0, 0, 0, 0)
         self.electrumV2QStackedWidget = QStackedWidget(self.electrumV2PageQWidget)
         self.electrumV2QStackedWidget.setObjectName(u"electrumV2QStackedWidget")
         self.electrumV2FromEntropyQStackedWidget = QWidget()
@@ -4385,7 +4390,7 @@ class Ui_MainWindow(object):
         self.moneroPageQWidgetVLayout = QVBoxLayout(self.moneroPageQWidget)
         self.moneroPageQWidgetVLayout.setSpacing(0)
         self.moneroPageQWidgetVLayout.setObjectName(u"moneroPageQWidgetVLayout")
-        self.moneroPageQWidgetVLayout.setContentsMargins(0, 15, 0, 0)
+        self.moneroPageQWidgetVLayout.setContentsMargins(0, 0, 0, 0)
         self.moneroQStackedWidget = QStackedWidget(self.moneroPageQWidget)
         self.moneroQStackedWidget.setObjectName(u"moneroQStackedWidget")
         self.moneroFromEntropyQStackedWidget = QWidget()
@@ -5061,7 +5066,10 @@ class Ui_MainWindow(object):
 
         self.hdQStackedWidget.addWidget(self.moneroPageQWidget)
 
-        self.dumpsPageEntireContainerQFrameVLayout.addWidget(self.hdQStackedWidget)
+        self.verticalLayout_2.addWidget(self.hdQStackedWidget)
+
+
+        self.dumpsPageEntireContainerQFrameVLayout.addWidget(self.groupBox_2)
 
         self.dumpsDerivationContainerQFrame = QFrame(self.dumpsPageEntireContainerQFrame)
         self.dumpsDerivationContainerQFrame.setObjectName(u"dumpsDerivationContainerQFrame")
@@ -6100,13 +6108,13 @@ class Ui_MainWindow(object):
 
         self.dumpsPageEntireContainerQFrameVLayout.addWidget(self.dumpsDerivationContainerQFrame)
 
-        self.dumpsFormatKeysContainerQFrame = QFrame(self.dumpsPageEntireContainerQFrame)
-        self.dumpsFormatKeysContainerQFrame.setObjectName(u"dumpsFormatKeysContainerQFrame")
-        self.dumpsFormatKeysContainerQFrameHLayout = QHBoxLayout(self.dumpsFormatKeysContainerQFrame)
+        self.dumpsFormatKeysContainerQGroupBox = QGroupBox(self.dumpsPageEntireContainerQFrame)
+        self.dumpsFormatKeysContainerQGroupBox.setObjectName(u"dumpsFormatKeysContainerQGroupBox")
+        self.dumpsFormatKeysContainerQFrameHLayout = QHBoxLayout(self.dumpsFormatKeysContainerQGroupBox)
         self.dumpsFormatKeysContainerQFrameHLayout.setSpacing(15)
         self.dumpsFormatKeysContainerQFrameHLayout.setObjectName(u"dumpsFormatKeysContainerQFrameHLayout")
-        self.dumpsFormatKeysContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.dumpsFormatContainerQFrame = QFrame(self.dumpsFormatKeysContainerQFrame)
+        self.dumpsFormatKeysContainerQFrameHLayout.setContentsMargins(10, 10, 10, 10)
+        self.dumpsFormatContainerQFrame = QFrame(self.dumpsFormatKeysContainerQGroupBox)
         self.dumpsFormatContainerQFrame.setObjectName(u"dumpsFormatContainerQFrame")
         self.CryptocurrencyAndFormatHLayout = QHBoxLayout(self.dumpsFormatContainerQFrame)
         self.CryptocurrencyAndFormatHLayout.setSpacing(15)
@@ -6150,7 +6158,7 @@ class Ui_MainWindow(object):
 
         self.dumpsFormatKeysContainerQFrameHLayout.addWidget(self.dumpsFormatContainerQFrame)
 
-        self.dumpsExcludeOrIncludeQFrame = QFrame(self.dumpsFormatKeysContainerQFrame)
+        self.dumpsExcludeOrIncludeQFrame = QFrame(self.dumpsFormatKeysContainerQGroupBox)
         self.dumpsExcludeOrIncludeQFrame.setObjectName(u"dumpsExcludeOrIncludeQFrame")
         self.dumpsExcludeOrIncludeQFrame.setMinimumSize(QSize(288, 0))
         self.KeysVLayout = QVBoxLayout(self.dumpsExcludeOrIncludeQFrame)
@@ -6201,7 +6209,7 @@ class Ui_MainWindow(object):
 
         self.dumpsFormatKeysContainerQFrameHLayout.addWidget(self.dumpsExcludeOrIncludeQFrame)
 
-        self.dumpsGenerateQPushButton = QPushButton(self.dumpsFormatKeysContainerQFrame)
+        self.dumpsGenerateQPushButton = QPushButton(self.dumpsFormatKeysContainerQGroupBox)
         self.dumpsGenerateQPushButton.setObjectName(u"dumpsGenerateQPushButton")
         sizePolicy1.setHeightForWidth(self.dumpsGenerateQPushButton.sizePolicy().hasHeightForWidth())
         self.dumpsGenerateQPushButton.setSizePolicy(sizePolicy1)
@@ -6210,7 +6218,7 @@ class Ui_MainWindow(object):
         self.dumpsFormatKeysContainerQFrameHLayout.addWidget(self.dumpsGenerateQPushButton, 0, Qt.AlignBottom)
 
 
-        self.dumpsPageEntireContainerQFrameVLayout.addWidget(self.dumpsFormatKeysContainerQFrame)
+        self.dumpsPageEntireContainerQFrameVLayout.addWidget(self.dumpsFormatKeysContainerQGroupBox)
 
 
         self.dumpsPageQStackedWidgetVLayout.addWidget(self.dumpsPageEntireContainerQFrame)
@@ -6288,14 +6296,14 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.hdwalletQStackedWidget.setCurrentIndex(0)
+        self.hdwalletQStackedWidget.setCurrentIndex(1)
         self.hdQStackedWidget.setCurrentIndex(4)
         self.BIPQStackedWidget.setCurrentIndex(0)
         self.cardanoQStackedWidget.setCurrentIndex(0)
-        self.electrumV1QStackedWidget.setCurrentIndex(0)
-        self.electrumV2QStackedWidget.setCurrentIndex(2)
-        self.moneroQStackedWidget.setCurrentIndex(4)
-        self.DerivationsQTabWidget.setCurrentIndex(1)
+        self.electrumV1QStackedWidget.setCurrentIndex(1)
+        self.electrumV2QStackedWidget.setCurrentIndex(0)
+        self.moneroQStackedWidget.setCurrentIndex(0)
+        self.DerivationsQTabWidget.setCurrentIndex(6)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -6353,6 +6361,7 @@ class Ui_MainWindow(object):
         self.dumpsHdQComboBox.setItemText(8, QCoreApplication.translate("MainWindow", u"Electrum-V2", None))
         self.dumpsHdQComboBox.setItemText(9, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.dumpsHdQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.dumpsFromQLabel.setText(QCoreApplication.translate("MainWindow", u"From", None))
         self.dumpsFromQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Entropy", None))
         self.dumpsFromQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Mnemonic", None))
@@ -6363,10 +6372,12 @@ class Ui_MainWindow(object):
         self.dumpsFromQComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"XPrivate Key", None))
         self.dumpsFromQComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"XPublic Key", None))
 
+        self.dumpsFromQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.dumpsCryptocurrencyQLabel.setText(QCoreApplication.translate("MainWindow", u"Cryptocurrency", None))
         self.dumpsCryptocurrencyQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Bitcoin", None))
         self.dumpsCryptocurrencyQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Qtum", None))
 
+        self.dumpsCryptocurrencyQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.dumpsNetworkQLabel.setText(QCoreApplication.translate("MainWindow", u"Network", None))
         self.dumpsNetworkQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
         self.dumpsNetworkQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
@@ -6375,6 +6386,8 @@ class Ui_MainWindow(object):
         self.dumpsNetworkQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.dumpsNetworkQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.dumpsNetworkQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
+        self.groupBox_2.setTitle("")
         self.BIPFromEntropyQLabel.setText(QCoreApplication.translate("MainWindow", u"Entropy", None))
         self.BIPFromEntropyPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
         self.BIPFromEntropyPublicKeyTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
@@ -6436,7 +6449,7 @@ class Ui_MainWindow(object):
         self.BIPFromPublicKeyQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key", None))
         self.BIPFromPublicKeyPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
         self.cardanoFromEntropyQLabel.setText(QCoreApplication.translate("MainWindow", u"Entropy", None))
-        self.cardanoFromEntropyCardanoTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"cardano Type", None))
+        self.cardanoFromEntropyCardanoTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Cardano Type", None))
         self.cardanoFromEntropyCardanoTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
         self.cardanoFromEntropyCardanoTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
         self.cardanoFromEntropyCardanoTypeQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Cardano", None))
@@ -6444,6 +6457,7 @@ class Ui_MainWindow(object):
         self.cardanoFromEntropyCardanoTypeQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.cardanoFromEntropyCardanoTypeQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.cardanoFromEntropyCardanoTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromEntropyPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.cardanoFromEntropyPassphraseQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
         self.cardanoFromEntropyLanguageQLabel.setText(QCoreApplication.translate("MainWindow", u"Language", None))
@@ -6456,7 +6470,9 @@ class Ui_MainWindow(object):
         self.cardanoFromEntropyLanguageQComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Japanese", None))
         self.cardanoFromEntropyLanguageQComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Spanish", None))
 
+        self.cardanoFromEntropyLanguageQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromEntropyAddressTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Address Type", None))
+        self.cardanoFromEntropyAddressTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromEntropyWordsQLabel.setText(QCoreApplication.translate("MainWindow", u"Words", None))
         self.cardanoFromEntropyWordsQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"12 Words", None))
         self.cardanoFromEntropyWordsQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"15 Words", None))
@@ -6464,8 +6480,9 @@ class Ui_MainWindow(object):
         self.cardanoFromEntropyWordsQComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"21 Words", None))
         self.cardanoFromEntropyWordsQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"24 Words", None))
 
+        self.cardanoFromEntropyWordsQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromMnemonicQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic", None))
-        self.cardanoFromMnemonicCardanoTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"cardano type", None))
+        self.cardanoFromMnemonicCardanoTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Cardano type", None))
         self.cardanoFromMnemonicCardanoTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
         self.cardanoFromMnemonicCardanoTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
         self.cardanoFromMnemonicCardanoTypeQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Cardano", None))
@@ -6473,6 +6490,7 @@ class Ui_MainWindow(object):
         self.cardanoFromMnemonicCardanoTypeQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.cardanoFromMnemonicCardanoTypeQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.cardanoFromMnemonicCardanoTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromMnemonicPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.cardanoFromMnemonicPassphraseQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
         self.cardanoFromMnemonicLanguageQLabel.setText(QCoreApplication.translate("MainWindow", u"Language", None))
@@ -6485,7 +6503,9 @@ class Ui_MainWindow(object):
         self.cardanoFromMnemonicLanguageQComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Japanese", None))
         self.cardanoFromMnemonicLanguageQComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Spanish", None))
 
+        self.cardanoFromMnemonicLanguageQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromMnemonicAddressTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Address Type", None))
+        self.cardanoFromMnemonicAddressTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromMnemonicWordsQLabel.setText(QCoreApplication.translate("MainWindow", u"Words", None))
         self.cardanoFromMnemonicWordsQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"12 Words", None))
         self.cardanoFromMnemonicWordsQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"15 Words", None))
@@ -6493,8 +6513,9 @@ class Ui_MainWindow(object):
         self.cardanoFromMnemonicWordsQComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"21 Words", None))
         self.cardanoFromMnemonicWordsQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"24 Words", None))
 
+        self.cardanoFromMnemonicWordsQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromSeedQLabel.setText(QCoreApplication.translate("MainWindow", u"Seed", None))
-        self.cardanoFromSeedCardanoTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"cardano type", None))
+        self.cardanoFromSeedCardanoTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Cardano type", None))
         self.cardanoFromSeedCardanoTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
         self.cardanoFromSeedCardanoTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
         self.cardanoFromSeedCardanoTypeQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Cardano", None))
@@ -6502,6 +6523,7 @@ class Ui_MainWindow(object):
         self.cardanoFromSeedCardanoTypeQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.cardanoFromSeedCardanoTypeQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.cardanoFromSeedCardanoTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromSeedAddressTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Address Type", None))
         self.cardanoFromSeedAddressTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
         self.cardanoFromSeedAddressTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
@@ -6510,6 +6532,7 @@ class Ui_MainWindow(object):
         self.cardanoFromSeedAddressTypeQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.cardanoFromSeedAddressTypeQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.cardanoFromSeedAddressTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromSeedPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.cardanoFromSeedPassphraseQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
         self.cardanoFromSeedPassphraseGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
@@ -6522,6 +6545,7 @@ class Ui_MainWindow(object):
         self.cardanoFromXPrivateKeyCardanoTypeQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.cardanoFromXPrivateKeyCardanoTypeQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.cardanoFromXPrivateKeyCardanoTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromXPrivateKeyAddressTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Address Type", None))
         self.cardanoFromXPrivateKeyAddressTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
         self.cardanoFromXPrivateKeyAddressTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
@@ -6530,8 +6554,9 @@ class Ui_MainWindow(object):
         self.cardanoFromXPrivateKeyAddressTypeQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.cardanoFromXPrivateKeyAddressTypeQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.cardanoFromXPrivateKeyAddressTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromXPublicKeyQLabel.setText(QCoreApplication.translate("MainWindow", u"XPublic Key", None))
-        self.cardanoFromXPublicKeyCardanoTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"cardano type", None))
+        self.cardanoFromXPublicKeyCardanoTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Cardano Type", None))
         self.cardanoFromXPublicKeyCardanoTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
         self.cardanoFromXPublicKeyCardanoTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
         self.cardanoFromXPublicKeyCardanoTypeQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Cardano", None))
@@ -6539,6 +6564,7 @@ class Ui_MainWindow(object):
         self.cardanoFromXPublicKeyCardanoTypeQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.cardanoFromXPublicKeyCardanoTypeQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.cardanoFromXPublicKeyCardanoTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromXPublicKeyAddressTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Address Type", None))
         self.cardanoFromXPublicKeyAddressTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
         self.cardanoFromXPublicKeyAddressTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
@@ -6547,8 +6573,9 @@ class Ui_MainWindow(object):
         self.cardanoFromXPublicKeyAddressTypeQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.cardanoFromXPublicKeyAddressTypeQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.cardanoFromXPublicKeyAddressTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromPrivateKeyContainerQLabel.setText(QCoreApplication.translate("MainWindow", u"Private Key", None))
-        self.cardanoFromPrivateKeyCardanoTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"cardano type", None))
+        self.cardanoFromPrivateKeyCardanoTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Cardano Type", None))
         self.cardanoFromPrivateKeyCardanoTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
         self.cardanoFromPrivateKeyCardanoTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
         self.cardanoFromPrivateKeyCardanoTypeQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Cardano", None))
@@ -6556,6 +6583,7 @@ class Ui_MainWindow(object):
         self.cardanoFromPrivateKeyCardanoTypeQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.cardanoFromPrivateKeyCardanoTypeQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.cardanoFromPrivateKeyCardanoTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromPrivateKeyAddressTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Address Type", None))
         self.cardanoFromPrivateKeyAddressTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
         self.cardanoFromPrivateKeyAddressTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
@@ -6564,8 +6592,9 @@ class Ui_MainWindow(object):
         self.cardanoFromPrivateKeyAddressTypeQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.cardanoFromPrivateKeyAddressTypeQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.cardanoFromPrivateKeyAddressTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromPublicKeyQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key", None))
-        self.cardanoFromPublicKeyCardanoTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"cardano type", None))
+        self.cardanoFromPublicKeyCardanoTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Cardano Type", None))
         self.cardanoFromPublicKeyCardanoTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
         self.cardanoFromPublicKeyCardanoTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
         self.cardanoFromPublicKeyCardanoTypeQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Cardano", None))
@@ -6573,6 +6602,7 @@ class Ui_MainWindow(object):
         self.cardanoFromPublicKeyCardanoTypeQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.cardanoFromPublicKeyCardanoTypeQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.cardanoFromPublicKeyCardanoTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromPublicKeyAddressTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Address Type", None))
         self.cardanoFromPublicKeyAddressTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
         self.cardanoFromPublicKeyAddressTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
@@ -6581,6 +6611,7 @@ class Ui_MainWindow(object):
         self.cardanoFromPublicKeyAddressTypeQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.cardanoFromPublicKeyAddressTypeQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.cardanoFromPublicKeyAddressTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV1FromEntropyQLabel.setText(QCoreApplication.translate("MainWindow", u"Entropy", None))
         self.electrumV1FromEntropyPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
         self.electrumV1FromEntropyPublicKeyTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
@@ -6590,6 +6621,7 @@ class Ui_MainWindow(object):
         self.electrumV1FromEntropyPublicKeyTypeQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.electrumV1FromEntropyPublicKeyTypeQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.electrumV1FromEntropyPublicKeyTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV1FromEntropyPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.electrumV1FromEntropyPassphraseGenerateQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
         self.electrumV1FromEntropyLanguageQLabel.setText(QCoreApplication.translate("MainWindow", u"Language", None))
@@ -6602,6 +6634,7 @@ class Ui_MainWindow(object):
         self.electrumV1FromEntropyLanguageQComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Japanese", None))
         self.electrumV1FromEntropyLanguageQComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Spanish", None))
 
+        self.electrumV1FromEntropyLanguageQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV1FromEntropyWordsQLabel.setText(QCoreApplication.translate("MainWindow", u"Words", None))
         self.electrumV1FromEntropyWordsQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"12 Words", None))
         self.electrumV1FromEntropyWordsQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"15 Words", None))
@@ -6609,6 +6642,7 @@ class Ui_MainWindow(object):
         self.electrumV1FromEntropyWordsQComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"21 Words", None))
         self.electrumV1FromEntropyWordsQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"24 Words", None))
 
+        self.electrumV1FromEntropyWordsQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV1FromMnemonicQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic", None))
         self.electrumV1FromMnemonicPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
         self.electrumV1FromMnemonicPublicKeyTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
@@ -6618,6 +6652,7 @@ class Ui_MainWindow(object):
         self.electrumV1FromMnemonicPublicKeyTypeQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.electrumV1FromMnemonicPublicKeyTypeQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.electrumV1FromMnemonicPublicKeyTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV1FromMnemonicPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.electrumV1FromMnemonicPassphraseGenerateQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
         self.electrumV1FromMnemonicLanguageQLabel.setText(QCoreApplication.translate("MainWindow", u"Language", None))
@@ -6630,9 +6665,11 @@ class Ui_MainWindow(object):
         self.electrumV1FromMnemonicLanguageQComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Japanese", None))
         self.electrumV1FromMnemonicLanguageQComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Spanish", None))
 
+        self.electrumV1FromMnemonicLanguageQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV1FromMnemonicWordsQLabel.setText(QCoreApplication.translate("MainWindow", u"Words", None))
         self.electrumV1FromMnemonicWordsQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"12 Words", None))
 
+        self.electrumV1FromMnemonicWordsQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV1FromSeedQLabel.setText(QCoreApplication.translate("MainWindow", u"Seed", None))
         self.electrumV1FromSeedPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
         self.electrumV1FromClientQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
@@ -6642,16 +6679,21 @@ class Ui_MainWindow(object):
         self.electrumV1FromClientQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.electrumV1FromClientQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.electrumV1FromClientQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV1FromWIFQLabel.setText(QCoreApplication.translate("MainWindow", u"Wallet Important Format", None))
         self.electrumV1FromWIFBIP38PassphraseQCheckBox.setText(QCoreApplication.translate("MainWindow", u"BIP38 Passphrase", None))
         self.electrumV1FromWIFBIP38PassphraseQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
         self.electrumV1FromWIFPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
+        self.electrumV1FromWIFPublicKeyTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV1FromPrivateKeyQLabel.setText(QCoreApplication.translate("MainWindow", u"Private Key", None))
         self.electrumV1FromPrivateKeyPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
+        self.electrumV1FromPrivateKeyPublicKeyTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV1FromPublicKeyQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key", None))
         self.electrumV1FromPublicKeyPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
+        self.electrumV1FromPublicKeyPublicKeyTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV2FromEntropyQLabel.setText(QCoreApplication.translate("MainWindow", u"Entropy", None))
         self.electrumV2FromEntropyModeQLabel.setText(QCoreApplication.translate("MainWindow", u"Mode", None))
+        self.electrumV2FromEntropyModeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV2FromEntropyPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
         self.electrumV2FromEntropyPublicKeyTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
         self.electrumV2FromEntropyPublicKeyTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
@@ -6660,6 +6702,7 @@ class Ui_MainWindow(object):
         self.electrumV2FromEntropyPublicKeyTypeQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.electrumV2FromEntropyPublicKeyTypeQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.electrumV2FromEntropyPublicKeyTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV2FromEntropyPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.electrumV2FromEntropyPassphraseGenerateQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
         self.electrumV2FromEntropyLanguageQLabel.setText(QCoreApplication.translate("MainWindow", u"Language", None))
@@ -6672,6 +6715,7 @@ class Ui_MainWindow(object):
         self.electrumV2FromEntropyLanguageQComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Japanese", None))
         self.electrumV2FromEntropyLanguageQComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Spanish", None))
 
+        self.electrumV2FromEntropyLanguageQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV2FromEntropyWordsQLabel.setText(QCoreApplication.translate("MainWindow", u"Words", None))
         self.electrumV2FromEntropyWordsQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"12 Words", None))
         self.electrumV2FromEntropyWordsQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"15 Words", None))
@@ -6679,11 +6723,13 @@ class Ui_MainWindow(object):
         self.electrumV2FromEntropyWordsQComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"21 Words", None))
         self.electrumV2FromEntropyWordsQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"24 Words", None))
 
+        self.electrumV2FromEntropyWordsQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV2FromEntropyMnemonicTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic Type", None))
+        self.electrumV2FromEntropyMnemonicTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV2FromMnemonicQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic", None))
         self.electrumV2FromMnemonicMnemonicTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic Type", None))
         self.electrumV2FromMnemonicModeQLabel.setText(QCoreApplication.translate("MainWindow", u"Mode", None))
-        self.electrumV2FromMnemonicModeQComboBox.setPlaceholderText("")
+        self.electrumV2FromMnemonicModeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV2FromMnemonicPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
         self.electrumV2FromMnemonicPublicKeyTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
         self.electrumV2FromMnemonicPublicKeyTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
@@ -6692,10 +6738,12 @@ class Ui_MainWindow(object):
         self.electrumV2FromMnemonicPublicKeyTypeQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.electrumV2FromMnemonicPublicKeyTypeQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.electrumV2FromMnemonicPublicKeyTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV2FromMnemonicPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.electrumV2FromMnemonicPassphraseGenerateQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
         self.electrumV2FromSeedsQLabel.setText(QCoreApplication.translate("MainWindow", u"Seed", None))
         self.electrumV2FromSeedModeQLabel.setText(QCoreApplication.translate("MainWindow", u"Mode", None))
+        self.electrumV2FromSeedModeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV2FromSeedPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
         self.electrumV2FromSeedPublicKeyTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
         self.electrumV2FromSeedPublicKeyTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"BIP39", None))
@@ -6704,6 +6752,7 @@ class Ui_MainWindow(object):
         self.electrumV2FromSeedPublicKeyTypeQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Electrum V2", None))
         self.electrumV2FromSeedPublicKeyTypeQComboBox.setItemText(5, QCoreApplication.translate("MainWindow", u"Monero", None))
 
+        self.electrumV2FromSeedPublicKeyTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.moneroFromEntropyQLabel.setText(QCoreApplication.translate("MainWindow", u"Entropy", None))
         self.moneroFromEntropyPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.moneroFromEntropyPassphraseQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
@@ -6718,6 +6767,7 @@ class Ui_MainWindow(object):
         self.ELanguageQComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Japanese", None))
         self.ELanguageQComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Spanish", None))
 
+        self.ELanguageQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.moneroFromEntropyWordsQLabel.setText(QCoreApplication.translate("MainWindow", u"Words", None))
         self.moneroFromEntropyWordsQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"12 Words", None))
         self.moneroFromEntropyWordsQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"15 Words", None))
@@ -6725,6 +6775,7 @@ class Ui_MainWindow(object):
         self.moneroFromEntropyWordsQComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"21 Words", None))
         self.moneroFromEntropyWordsQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"24 Words", None))
 
+        self.moneroFromEntropyWordsQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.moneroFromMnemonicQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic", None))
         self.moneroFromMnemonicPaymentIDQLabel.setText(QCoreApplication.translate("MainWindow", u"Payment ID", None))
         self.moneroFromMnemonicPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
@@ -6749,6 +6800,7 @@ class Ui_MainWindow(object):
         self.CustomClientQComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"MultiBit HD", None))
         self.CustomClientQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"Coinomi, Ledger", None))
 
+        self.CustomClientQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.DerivationsQTabWidget.setTabText(self.DerivationsQTabWidget.indexOf(self.CustomQWidget), QCoreApplication.translate("MainWindow", u"Custom", None))
         self.BIP44PurposeQLabel.setText(QCoreApplication.translate("MainWindow", u"Purpose", None))
         self.BIP44PurposeQLineEdit.setText("")
@@ -6763,6 +6815,7 @@ class Ui_MainWindow(object):
         self.BIP44ChangeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"External", None))
         self.BIP44ChangeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Internal", None))
 
+        self.BIP44ChangeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.BIP44AddressQLabel.setText(QCoreApplication.translate("MainWindow", u"Address", None))
         self.BIP44AddressQLineEdit.setText("")
         self.BIP44AddressQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
@@ -6780,6 +6833,7 @@ class Ui_MainWindow(object):
         self.BIP49ChangeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"External", None))
         self.BIP49ChangeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Internal", None))
 
+        self.BIP49ChangeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.BIP49AddressQLabel.setText(QCoreApplication.translate("MainWindow", u"Address", None))
         self.BIP49AddressQLineEdit.setText("")
         self.BIP49AddressQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
@@ -6797,6 +6851,7 @@ class Ui_MainWindow(object):
         self.BIP84ChangeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"External", None))
         self.BIP84ChangeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Internal", None))
 
+        self.BIP84ChangeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.BIP84AddressQLabel.setText(QCoreApplication.translate("MainWindow", u"Address", None))
         self.BIP84AddressQLineEdit.setText("")
         self.BIP84AddressQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
@@ -6814,6 +6869,7 @@ class Ui_MainWindow(object):
         self.BIP86ChangeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"External", None))
         self.BIP86ChangeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Internal", None))
 
+        self.BIP86ChangeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.BIP86AddressQLabel.setText(QCoreApplication.translate("MainWindow", u"Address", None))
         self.BIP86AddressQLineEdit.setText("")
         self.BIP86AddressQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
@@ -6827,6 +6883,7 @@ class Ui_MainWindow(object):
         self.BIP141ScriptSemanticsQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"P2WSH (1-of-1 multisig)", None))
         self.BIP141ScriptSemanticsQComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"P2WSH nested in P2SH (1-of-1 multisig)", None))
 
+        self.BIP141ScriptSemanticsQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.DerivationsQTabWidget.setTabText(self.DerivationsQTabWidget.indexOf(self.BIP141QWidget), QCoreApplication.translate("MainWindow", u"BIP141", None))
         self.CIP1852PurposeQLabel.setText(QCoreApplication.translate("MainWindow", u"Purpose", None))
         self.CIP1852PurposeQLineEdit.setText("")
@@ -6842,6 +6899,7 @@ class Ui_MainWindow(object):
         self.CIP1852ChangeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Internal", None))
         self.CIP1852ChangeQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Staking", None))
 
+        self.CIP1852ChangeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.CIP1852AddressQLabel.setText(QCoreApplication.translate("MainWindow", u"Address", None))
         self.CIP1852AddressQLineEdit.setText("")
         self.CIP1852AddressQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
@@ -6850,6 +6908,7 @@ class Ui_MainWindow(object):
         self.dumpsormatQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"JSON", None))
         self.dumpsormatQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"CSV", None))
 
+        self.dumpsormatQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.dumpsExcludeOrIncludeQLabel.setText(QCoreApplication.translate("MainWindow", u"Exclude / Include", None))
         self.dumpsGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
     # retranslateUi
