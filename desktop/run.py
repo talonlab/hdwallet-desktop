@@ -246,9 +246,7 @@ class MyMainWindow(QMainWindow):
             else:
                 seed = SEEDS.seed(seed_client).from_mnemonic(mnemonic=mnemonic)
         except Exception as e:
-            output = {
-                "Error": str(e)
-            }
+            output = "Error: " + str(e)
         else:
             output = {
                 "name": seed_client,
@@ -261,8 +259,7 @@ class MyMainWindow(QMainWindow):
     def _generate_passphrase(self):
 
         if len(self.ui.generateLengthQLineEdit.text()) == 0:
-            #self.println("Error: passpharse length is required")
-            self.println({"Error": "passpharse length is required"})
+            self.println("Error: passpharse length is required")
             return None
 
         length = int(self.ui.generateLengthQLineEdit.text())
@@ -279,9 +276,7 @@ class MyMainWindow(QMainWindow):
 
         output = None
         if not any([upper, lower, special, digit]):
-            output = {
-                "Error": "At least one of upper, lower, special, or digit must be selected"
-            }
+            output = "Error: At least one of upper, lower, special, or digit must be selected"
         else:
             pp = "".join(choice(characters) for _ in range(length))
 
