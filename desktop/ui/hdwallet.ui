@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1150</width>
-    <height>578</height>
+    <height>563</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1064,7 +1064,7 @@
          <widget class="QWidget" name="dumpsPageQStackedWidget">
           <layout class="QVBoxLayout" name="dumpsPageQStackedWidgetVLayout">
            <property name="spacing">
-            <number>5</number>
+            <number>0</number>
            </property>
            <property name="leftMargin">
             <number>0</number>
@@ -1091,7 +1091,7 @@
              </property>
              <layout class="QVBoxLayout" name="dumpsPageEntireContainerQFrameVLayout">
               <property name="spacing">
-               <number>15</number>
+               <number>10</number>
               </property>
               <property name="leftMargin">
                <number>15</number>

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletGvrrCh.ui'
+## Form generated from reading UI file 'hdwalletWzubJe.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -27,7 +27,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1150, 578)
+        MainWindow.resize(1150, 563)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidgetHLayout = QHBoxLayout(self.centralwidget)
@@ -516,7 +516,7 @@ class Ui_MainWindow(object):
         self.dumpsPageQStackedWidget = QWidget()
         self.dumpsPageQStackedWidget.setObjectName(u"dumpsPageQStackedWidget")
         self.dumpsPageQStackedWidgetVLayout = QVBoxLayout(self.dumpsPageQStackedWidget)
-        self.dumpsPageQStackedWidgetVLayout.setSpacing(5)
+        self.dumpsPageQStackedWidgetVLayout.setSpacing(0)
         self.dumpsPageQStackedWidgetVLayout.setObjectName(u"dumpsPageQStackedWidgetVLayout")
         self.dumpsPageQStackedWidgetVLayout.setContentsMargins(0, 0, 0, 0)
         self.dumpsPageEntireContainerQFrame = QFrame(self.dumpsPageQStackedWidget)
@@ -524,7 +524,7 @@ class Ui_MainWindow(object):
         self.dumpsPageEntireContainerQFrame.setMinimumSize(QSize(525, 0))
         self.dumpsPageEntireContainerQFrame.setLineWidth(0)
         self.dumpsPageEntireContainerQFrameVLayout = QVBoxLayout(self.dumpsPageEntireContainerQFrame)
-        self.dumpsPageEntireContainerQFrameVLayout.setSpacing(15)
+        self.dumpsPageEntireContainerQFrameVLayout.setSpacing(10)
         self.dumpsPageEntireContainerQFrameVLayout.setObjectName(u"dumpsPageEntireContainerQFrameVLayout")
         self.dumpsPageEntireContainerQFrameVLayout.setContentsMargins(15, 5, 15, 15)
         self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox = QGroupBox(self.dumpsPageEntireContainerQFrame)
