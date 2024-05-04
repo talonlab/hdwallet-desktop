@@ -95,6 +95,96 @@ class MyMainWindow(QMainWindow):
         )
 
         self._setup_generate_stack()
+        self._setup_dump_stack()
+
+    def _setup_dump_stack(self):
+        self.stack_hd_widgets = {
+            'BIP32': "BIPsPageQWidget",
+            'BIP44': "BIPsPageQWidget",
+            'BIP49': "BIPsPageQWidget",
+            'BIP84': "BIPsPageQWidget",
+            'BIP86': "BIPsPageQWidget",
+            'BIP141': "BIPsPageQWidget",
+            'Cardano': "cardanoPageQWidget",
+            'Electrum-V1': "electrumV1PageQWidget",
+            'Electrum-V2': "electrumV2PageQWidget",
+            'Monero': "moneroPageQWidget" 
+        }
+
+        self.stack_from_widgets = {
+            "BIPsPageQWidget": {
+                "StackWidget": "BIPQStackedWidget",
+                "Entropy": "BIPFromEntropyQStackedWidget",
+                "Mnemonic": "BIPFromMnemonicQStackedWidget",
+                "Private key": "BIPFromPrivateKeyQStackedWidget",
+                "Public key": "BIPFromPublicKeyQStackedWidget",
+                "Seed": "BIPFromSeedQStackedWidget",
+                "WIF": "BIPFromWIFQStackedWidget",
+                "XPrivate key": "BIPFromXPrivateKeyQStackedWidget",
+                "XPublic key": "BIPFromXPublicKeyQStackedWidget"
+            },
+            "cardanoPageQWidget": {
+                "StackWidget": "cardanoQStackedWidget",
+                "Entropy": "cardanoFromEntropyQStackedWidget",
+                "Mnemonic": "cardanoFromMnemonicQStackedWidget",
+                "Private key": "cardanoFromPrivateKeyQStackedWidget",
+                "Public key": "cardanoFromPublicKeyQStackedWidget",
+                "Seed": "cardanoFromSeedQStackedWidget",
+                "XPrivate key": "cardanoFromXPrivateKeyQStackedWidget",
+                "XPublic key": "cardanoFromXPublicKeyQStackedWidget"
+            },
+            "electrumV1PageQWidget": {
+                "StackWidget": "electrumV1QStackedWidget",
+                "Entropy": "electrumV1FromEntropyQStackedWidget",
+                "Mnemonic": "electrumV1FromMnemonicQStackedWidget",
+                "Private key": "electrumV1FromPrivateKeyQStackedWidget",
+                "Public key": "electrumV1FromPublicKeyQStackedWidget",
+                "Seed": "electrumV1FromSeedQStackedWidget",
+                "WIF": "electrumV1FromWIFQStackedWidget",
+            },
+            "electrumV2PageQWidget": {
+                "StackWidget": "electrumV2QStackedWidget",
+                "Entropy": "electrumV2FromEntropyQStackedWidget",
+                "Mnemonic": "electrumV2FromMnemonicQStackedWidget",
+                "Seed": "electrumV2FromSeedQStackedWidget",
+            },
+            "moneroPageQWidget": {
+                "StackWidget": "moneroQStackedWidget",
+                "Entropy": "moneroFromEntropyQStackedWidget",
+                "Mnemonic": "moneroFromMnemonicQStackedWidget",
+                "Private key": "moneroFromPrivateKeyQStackedWidget",
+                "Seed": "moneroFromSeedQStackedWidget",
+                "Spend private key": "moneroFromSpendPrivateKeyQStackedWidget",
+                "Watch only": "moneroFromWatchOnlyQStackedWidget",
+            }
+        }
+
+        self.ui.dumpsHdQComboBox.currentIndexChanged.connect(self._dump_hd_changed)
+        self.ui.dumpsFromQComboBox.currentIndexChanged.connect(self._dump_from_changed)
+        self.ui.dumpsHdQComboBox.setCurrentText("BIP44")
+
+    def _dump_hd_changed(self):
+        current_hd = self.ui.dumpsHdQComboBox.currentText()
+        current_hd_widget  = self.stack_hd_widgets[current_hd]
+        self.change_page("hdQStackedWidget", current_hd_widget)
+
+        keys = [key for key in self.stack_from_widgets[current_hd_widget] if key != "StackWidget"]
+        self.ui.dumpsFromQComboBox.clear()
+        self.ui.dumpsFromQComboBox.addItems(sorted(keys))
+        self.ui.dumpsFromQComboBox.setCurrentIndex(0)
+
+    def _dump_from_changed(self):
+        dump_from = self.ui.dumpsFromQComboBox.currentText()
+        if dump_from == '':
+            return None
+
+        current_hd = self.ui.dumpsHdQComboBox.currentText()
+
+        current_hd_widget  = self.stack_hd_widgets[current_hd]
+        current_from_stack = self.stack_from_widgets[current_hd_widget]["StackWidget"]
+        current_from_widget = self.stack_from_widgets[current_hd_widget][dump_from]
+
+        self.change_page(current_from_stack, current_from_widget)
 
     def _setup_generate_stack(self):
         self.ui.generateEntropyClientQComboBox.addItems(ENTROPIES.names())
