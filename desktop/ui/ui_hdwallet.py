@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletlYzDDN.ui'
+## Form generated from reading UI file 'hdwalletfXWeqB.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.5.2
+## Created by: Qt User Interface Compiler version 6.3.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -27,7 +27,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1150, 563)
+        MainWindow.resize(1350, 615)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidgetHLayout = QHBoxLayout(self.centralwidget)
@@ -36,8 +36,8 @@ class Ui_MainWindow(object):
         self.centralwidgetHLayout.setContentsMargins(0, 0, 0, 0)
         self.hdWalletContainerQFrame = QFrame(self.centralwidget)
         self.hdWalletContainerQFrame.setObjectName(u"hdWalletContainerQFrame")
-        self.hdWalletContainerQFrame.setMinimumSize(QSize(650, 0))
-        self.hdWalletContainerQFrame.setMaximumSize(QSize(650, 16777215))
+        self.hdWalletContainerQFrame.setMinimumSize(QSize(750, 0))
+        self.hdWalletContainerQFrame.setMaximumSize(QSize(750, 16777215))
         self.hdWalletContainerQFrame.setFrameShadow(QFrame.Raised)
         self.hdWalletContainerQFrameVLayout = QVBoxLayout(self.hdWalletContainerQFrame)
         self.hdWalletContainerQFrameVLayout.setSpacing(0)
@@ -45,21 +45,10 @@ class Ui_MainWindow(object):
         self.hdWalletContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
         self.hdWalletHeaderContainerQFrame = QFrame(self.hdWalletContainerQFrame)
         self.hdWalletHeaderContainerQFrame.setObjectName(u"hdWalletHeaderContainerQFrame")
-        self.hdWalletHeaderContainerQFrame.setMinimumSize(QSize(525, 47))
-        self.hdWalletHeaderContainerQFrame.setMaximumSize(QSize(16777215, 47))
         self.hdWalletHeaderContainerQFrameHLayout = QHBoxLayout(self.hdWalletHeaderContainerQFrame)
         self.hdWalletHeaderContainerQFrameHLayout.setSpacing(15)
         self.hdWalletHeaderContainerQFrameHLayout.setObjectName(u"hdWalletHeaderContainerQFrameHLayout")
-        self.hdWalletHeaderContainerQFrameHLayout.setContentsMargins(0, 10, 15, 0)
-        self.hdWalletLogoContainerQFrame = QFrame(self.hdWalletHeaderContainerQFrame)
-        self.hdWalletLogoContainerQFrame.setObjectName(u"hdWalletLogoContainerQFrame")
-        self.hdWalletLogoContainerQFrameVLayout = QVBoxLayout(self.hdWalletLogoContainerQFrame)
-        self.hdWalletLogoContainerQFrameVLayout.setSpacing(5)
-        self.hdWalletLogoContainerQFrameVLayout.setObjectName(u"hdWalletLogoContainerQFrameVLayout")
-        self.hdWalletLogoContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-
-        self.hdWalletHeaderContainerQFrameHLayout.addWidget(self.hdWalletLogoContainerQFrame)
-
+        self.hdWalletHeaderContainerQFrameHLayout.setContentsMargins(15, 15, 15, 15)
         self.hdWalletHeaderContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.hdWalletHeaderContainerQFrameHLayout.addItem(self.hdWalletHeaderContainerQFrameHSpacer)
@@ -87,14 +76,22 @@ class Ui_MainWindow(object):
 
         self.hdWalletContainerQFrameVLayout.addWidget(self.hdWalletHeaderContainerQFrame)
 
-        self.hdwalletQStackedWidget = QStackedWidget(self.hdWalletContainerQFrame)
+        self.hdwalletMainQFrame = QFrame(self.hdWalletContainerQFrame)
+        self.hdwalletMainQFrame.setObjectName(u"hdwalletMainQFrame")
+        self.hdwalletMainQFrame.setFrameShape(QFrame.StyledPanel)
+        self.hdwalletMainQFrame.setFrameShadow(QFrame.Raised)
+        self.hdwalletMainQFrameVLayout = QVBoxLayout(self.hdwalletMainQFrame)
+        self.hdwalletMainQFrameVLayout.setSpacing(0)
+        self.hdwalletMainQFrameVLayout.setObjectName(u"hdwalletMainQFrameVLayout")
+        self.hdwalletMainQFrameVLayout.setContentsMargins(15, 0, 15, 15)
+        self.hdwalletQStackedWidget = QStackedWidget(self.hdwalletMainQFrame)
         self.hdwalletQStackedWidget.setObjectName(u"hdwalletQStackedWidget")
         self.generatePageQStackedWidget = QWidget()
         self.generatePageQStackedWidget.setObjectName(u"generatePageQStackedWidget")
         self.generatePageQStackedWidgetVLayout = QVBoxLayout(self.generatePageQStackedWidget)
         self.generatePageQStackedWidgetVLayout.setSpacing(10)
         self.generatePageQStackedWidgetVLayout.setObjectName(u"generatePageQStackedWidgetVLayout")
-        self.generatePageQStackedWidgetVLayout.setContentsMargins(15, 5, 15, 15)
+        self.generatePageQStackedWidgetVLayout.setContentsMargins(0, 0, 0, 0)
         self.generateEntopyClientAndStrengthContainerQFrame = QFrame(self.generatePageQStackedWidget)
         self.generateEntopyClientAndStrengthContainerQFrame.setObjectName(u"generateEntopyClientAndStrengthContainerQFrame")
         self.generateEntopyClientAndStrengthContainerQFrame.setLineWidth(0)
@@ -205,6 +202,7 @@ class Ui_MainWindow(object):
 
         self.generateMnemonicWordsContainerQFrame = QFrame(self.generateMnemonicClientWordsLanguageContainerQGroupBox)
         self.generateMnemonicWordsContainerQFrame.setObjectName(u"generateMnemonicWordsContainerQFrame")
+        self.generateMnemonicWordsContainerQFrame.setMaximumSize(QSize(100, 16777215))
         self.generateMnemonicWordsContainerQFrameVLayout = QVBoxLayout(self.generateMnemonicWordsContainerQFrame)
         self.generateMnemonicWordsContainerQFrameVLayout.setSpacing(5)
         self.generateMnemonicWordsContainerQFrameVLayout.setObjectName(u"generateMnemonicWordsContainerQFrameVLayout")
@@ -216,7 +214,6 @@ class Ui_MainWindow(object):
 
         self.generateMnemonicWordsQComboBox = QComboBox(self.generateMnemonicWordsContainerQFrame)
         self.generateMnemonicWordsQComboBox.setObjectName(u"generateMnemonicWordsQComboBox")
-        self.generateMnemonicWordsQComboBox.setMaximumSize(QSize(75, 16777215))
 
         self.generateMnemonicWordsContainerQFrameVLayout.addWidget(self.generateMnemonicWordsQComboBox)
 
@@ -465,7 +462,6 @@ class Ui_MainWindow(object):
 
         self.generateLengthContainerQFrame = QFrame(self.generateLengthAndPassphraseQGroupBox)
         self.generateLengthContainerQFrame.setObjectName(u"generateLengthContainerQFrame")
-        self.generateLengthContainerQFrame.setMaximumSize(QSize(184, 16777215))
         self.generateLengthContainerQFrame.setLineWidth(0)
         self.generateLengthContainerQFrameVLayout = QVBoxLayout(self.generateLengthContainerQFrame)
         self.generateLengthContainerQFrameVLayout.setSpacing(5)
@@ -518,7 +514,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3 = QVBoxLayout(self.dumpsPageQStackedWidget)
         self.verticalLayout_3.setSpacing(10)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.verticalLayout_3.setContentsMargins(15, 5, 15, 15)
+        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox = QGroupBox(self.dumpsPageQStackedWidget)
         self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox.setObjectName(u"dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox")
         self.dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout = QHBoxLayout(self.dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox)
@@ -5845,7 +5841,7 @@ class Ui_MainWindow(object):
         self.BIP141HLayout = QHBoxLayout(self.BIP141QWidget)
         self.BIP141HLayout.setSpacing(15)
         self.BIP141HLayout.setObjectName(u"BIP141HLayout")
-        self.BIP141HLayout.setContentsMargins(0, 10, 0, 0)
+        self.BIP141HLayout.setContentsMargins(0, 0, 0, 0)
         self.BIP141PathQFrame = QFrame(self.BIP141QWidget)
         self.BIP141PathQFrame.setObjectName(u"BIP141PathQFrame")
         self.BIP141PathVLayout = QVBoxLayout(self.BIP141PathQFrame)
@@ -6087,6 +6083,148 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5.addWidget(self.CIP1852AddressQFrame)
 
         self.DerivationsQTabWidget.addTab(self.CIP1852QWidget, "")
+        self.ElectrumQWidget = QWidget()
+        self.ElectrumQWidget.setObjectName(u"ElectrumQWidget")
+        self.ElectrumQWidgetHLayout = QHBoxLayout(self.ElectrumQWidget)
+        self.ElectrumQWidgetHLayout.setSpacing(15)
+        self.ElectrumQWidgetHLayout.setObjectName(u"ElectrumQWidgetHLayout")
+        self.ElectrumQWidgetHLayout.setContentsMargins(0, 0, 0, 0)
+        self.ElectrumChangeQFrame = QFrame(self.ElectrumQWidget)
+        self.ElectrumChangeQFrame.setObjectName(u"ElectrumChangeQFrame")
+        self.BIP44AccountVLayout_3 = QVBoxLayout(self.ElectrumChangeQFrame)
+        self.BIP44AccountVLayout_3.setSpacing(5)
+        self.BIP44AccountVLayout_3.setObjectName(u"BIP44AccountVLayout_3")
+        self.BIP44AccountVLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.ElectrumChangeLabelQFrame = QFrame(self.ElectrumChangeQFrame)
+        self.ElectrumChangeLabelQFrame.setObjectName(u"ElectrumChangeLabelQFrame")
+        self.BIP44AccountLabelHLayout_3 = QHBoxLayout(self.ElectrumChangeLabelQFrame)
+        self.BIP44AccountLabelHLayout_3.setSpacing(5)
+        self.BIP44AccountLabelHLayout_3.setObjectName(u"BIP44AccountLabelHLayout_3")
+        self.BIP44AccountLabelHLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.ElectrumChangeQLabel = QLabel(self.ElectrumChangeLabelQFrame)
+        self.ElectrumChangeQLabel.setObjectName(u"ElectrumChangeQLabel")
+
+        self.BIP44AccountLabelHLayout_3.addWidget(self.ElectrumChangeQLabel)
+
+        self.ElectrumChangeLabelHSpacer = QSpacerItem(764, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.BIP44AccountLabelHLayout_3.addItem(self.ElectrumChangeLabelHSpacer)
+
+
+        self.BIP44AccountVLayout_3.addWidget(self.ElectrumChangeLabelQFrame)
+
+        self.ElectrumChangeQLineEdit = QLineEdit(self.ElectrumChangeQFrame)
+        self.ElectrumChangeQLineEdit.setObjectName(u"ElectrumChangeQLineEdit")
+
+        self.BIP44AccountVLayout_3.addWidget(self.ElectrumChangeQLineEdit)
+
+
+        self.ElectrumQWidgetHLayout.addWidget(self.ElectrumChangeQFrame)
+
+        self.ElectrumAddressQFrame = QFrame(self.ElectrumQWidget)
+        self.ElectrumAddressQFrame.setObjectName(u"ElectrumAddressQFrame")
+        self.BIP44AccountVLayout_4 = QVBoxLayout(self.ElectrumAddressQFrame)
+        self.BIP44AccountVLayout_4.setSpacing(5)
+        self.BIP44AccountVLayout_4.setObjectName(u"BIP44AccountVLayout_4")
+        self.BIP44AccountVLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.ElectrumAddressLabelQFrame = QFrame(self.ElectrumAddressQFrame)
+        self.ElectrumAddressLabelQFrame.setObjectName(u"ElectrumAddressLabelQFrame")
+        self.BIP44AccountLabelHLayout_4 = QHBoxLayout(self.ElectrumAddressLabelQFrame)
+        self.BIP44AccountLabelHLayout_4.setSpacing(5)
+        self.BIP44AccountLabelHLayout_4.setObjectName(u"BIP44AccountLabelHLayout_4")
+        self.BIP44AccountLabelHLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.ElectrumAddressQLabel = QLabel(self.ElectrumAddressLabelQFrame)
+        self.ElectrumAddressQLabel.setObjectName(u"ElectrumAddressQLabel")
+
+        self.BIP44AccountLabelHLayout_4.addWidget(self.ElectrumAddressQLabel)
+
+        self.ElectrumAddressLabelHSpacer = QSpacerItem(764, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.BIP44AccountLabelHLayout_4.addItem(self.ElectrumAddressLabelHSpacer)
+
+
+        self.BIP44AccountVLayout_4.addWidget(self.ElectrumAddressLabelQFrame)
+
+        self.ElectrumAddressQLineEdit = QLineEdit(self.ElectrumAddressQFrame)
+        self.ElectrumAddressQLineEdit.setObjectName(u"ElectrumAddressQLineEdit")
+
+        self.BIP44AccountVLayout_4.addWidget(self.ElectrumAddressQLineEdit)
+
+
+        self.ElectrumQWidgetHLayout.addWidget(self.ElectrumAddressQFrame)
+
+        self.DerivationsQTabWidget.addTab(self.ElectrumQWidget, "")
+        self.MoneroQWidget = QWidget()
+        self.MoneroQWidget.setObjectName(u"MoneroQWidget")
+        self.MoneroQWidgetHLayout = QHBoxLayout(self.MoneroQWidget)
+        self.MoneroQWidgetHLayout.setSpacing(15)
+        self.MoneroQWidgetHLayout.setObjectName(u"MoneroQWidgetHLayout")
+        self.MoneroQWidgetHLayout.setContentsMargins(0, 0, 0, 0)
+        self.MoneroMinorQFrame = QFrame(self.MoneroQWidget)
+        self.MoneroMinorQFrame.setObjectName(u"MoneroMinorQFrame")
+        self.BIP44AccountVLayout_5 = QVBoxLayout(self.MoneroMinorQFrame)
+        self.BIP44AccountVLayout_5.setSpacing(5)
+        self.BIP44AccountVLayout_5.setObjectName(u"BIP44AccountVLayout_5")
+        self.BIP44AccountVLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.MoneroMinorLabelQFrame = QFrame(self.MoneroMinorQFrame)
+        self.MoneroMinorLabelQFrame.setObjectName(u"MoneroMinorLabelQFrame")
+        self.BIP44AccountLabelHLayout_5 = QHBoxLayout(self.MoneroMinorLabelQFrame)
+        self.BIP44AccountLabelHLayout_5.setSpacing(5)
+        self.BIP44AccountLabelHLayout_5.setObjectName(u"BIP44AccountLabelHLayout_5")
+        self.BIP44AccountLabelHLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.MoneroMinorQLabel = QLabel(self.MoneroMinorLabelQFrame)
+        self.MoneroMinorQLabel.setObjectName(u"MoneroMinorQLabel")
+
+        self.BIP44AccountLabelHLayout_5.addWidget(self.MoneroMinorQLabel)
+
+        self.MoneroMinorLabelLabelHSpacer = QSpacerItem(764, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.BIP44AccountLabelHLayout_5.addItem(self.MoneroMinorLabelLabelHSpacer)
+
+
+        self.BIP44AccountVLayout_5.addWidget(self.MoneroMinorLabelQFrame)
+
+        self.MoneroMinorQLineEdit = QLineEdit(self.MoneroMinorQFrame)
+        self.MoneroMinorQLineEdit.setObjectName(u"MoneroMinorQLineEdit")
+
+        self.BIP44AccountVLayout_5.addWidget(self.MoneroMinorQLineEdit)
+
+
+        self.MoneroQWidgetHLayout.addWidget(self.MoneroMinorQFrame)
+
+        self.MoneroMajorQFrame = QFrame(self.MoneroQWidget)
+        self.MoneroMajorQFrame.setObjectName(u"MoneroMajorQFrame")
+        self.BIP44AccountVLayout_6 = QVBoxLayout(self.MoneroMajorQFrame)
+        self.BIP44AccountVLayout_6.setSpacing(5)
+        self.BIP44AccountVLayout_6.setObjectName(u"BIP44AccountVLayout_6")
+        self.BIP44AccountVLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.MoneroMajorLabelQFrame = QFrame(self.MoneroMajorQFrame)
+        self.MoneroMajorLabelQFrame.setObjectName(u"MoneroMajorLabelQFrame")
+        self.BIP44AccountLabelHLayout_6 = QHBoxLayout(self.MoneroMajorLabelQFrame)
+        self.BIP44AccountLabelHLayout_6.setSpacing(5)
+        self.BIP44AccountLabelHLayout_6.setObjectName(u"BIP44AccountLabelHLayout_6")
+        self.BIP44AccountLabelHLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.MoneroMajorQLabel = QLabel(self.MoneroMajorLabelQFrame)
+        self.MoneroMajorQLabel.setObjectName(u"MoneroMajorQLabel")
+
+        self.BIP44AccountLabelHLayout_6.addWidget(self.MoneroMajorQLabel)
+
+        self.MoneroMajorLabelHSpacer = QSpacerItem(764, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.BIP44AccountLabelHLayout_6.addItem(self.MoneroMajorLabelHSpacer)
+
+
+        self.BIP44AccountVLayout_6.addWidget(self.MoneroMajorLabelQFrame)
+
+        self.MoneroMajorQLineEdit = QLineEdit(self.MoneroMajorQFrame)
+        self.MoneroMajorQLineEdit.setObjectName(u"MoneroMajorQLineEdit")
+
+        self.BIP44AccountVLayout_6.addWidget(self.MoneroMajorQLineEdit)
+
+
+        self.MoneroQWidgetHLayout.addWidget(self.MoneroMajorQFrame)
+
+        self.DerivationsQTabWidget.addTab(self.MoneroQWidget, "")
 
         self.DerivationVLayout.addWidget(self.DerivationsQTabWidget)
 
@@ -6210,7 +6348,10 @@ class Ui_MainWindow(object):
 
         self.hdwalletQStackedWidget.addWidget(self.dumpsPageQStackedWidget)
 
-        self.hdWalletContainerQFrameVLayout.addWidget(self.hdwalletQStackedWidget)
+        self.hdwalletMainQFrameVLayout.addWidget(self.hdwalletQStackedWidget)
+
+
+        self.hdWalletContainerQFrameVLayout.addWidget(self.hdwalletMainQFrame)
 
         self.hdWalletContainerQFrameVSpacerB = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -6221,25 +6362,27 @@ class Ui_MainWindow(object):
 
         self.outputQFrame = QFrame(self.centralwidget)
         self.outputQFrame.setObjectName(u"outputQFrame")
-        self.outputQFrame.setMinimumSize(QSize(500, 0))
+        self.outputQFrame.setMinimumSize(QSize(600, 0))
         self.outputQFrameVLayout = QVBoxLayout(self.outputQFrame)
+        self.outputQFrameVLayout.setSpacing(0)
         self.outputQFrameVLayout.setObjectName(u"outputQFrameVLayout")
+        self.outputQFrameVLayout.setContentsMargins(0, 0, 0, 15)
         self.outputFrameTopContainerQFrame = QFrame(self.outputQFrame)
         self.outputFrameTopContainerQFrame.setObjectName(u"outputFrameTopContainerQFrame")
-        self.outputFrameTopContainerQFrame.setMinimumSize(QSize(0, 30))
-        self.outputFrameTopContainerQFrame.setMaximumSize(QSize(16777215, 30))
+        sizePolicy.setHeightForWidth(self.outputFrameTopContainerQFrame.sizePolicy().hasHeightForWidth())
+        self.outputFrameTopContainerQFrame.setSizePolicy(sizePolicy)
         self.outputFrameTopContainerQFrameHLayout = QHBoxLayout(self.outputFrameTopContainerQFrame)
         self.outputFrameTopContainerQFrameHLayout.setSpacing(15)
         self.outputFrameTopContainerQFrameHLayout.setObjectName(u"outputFrameTopContainerQFrameHLayout")
-        self.outputFrameTopContainerQFrameHLayout.setContentsMargins(5, 5, 5, 5)
+        self.outputFrameTopContainerQFrameHLayout.setContentsMargins(15, 15, 15, 15)
         self.outputFrameTopContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.outputFrameTopContainerQFrameHLayout.addItem(self.outputFrameTopContainerQFrameHSpacer)
 
         self.expandTerminalQFrame = QFrame(self.outputFrameTopContainerQFrame)
         self.expandTerminalQFrame.setObjectName(u"expandTerminalQFrame")
-        self.expandTerminalQFrame.setMinimumSize(QSize(20, 20))
-        self.expandTerminalQFrame.setMaximumSize(QSize(20, 20))
+        self.expandTerminalQFrame.setMinimumSize(QSize(25, 25))
+        self.expandTerminalQFrame.setMaximumSize(QSize(25, 25))
         self.expandTerminalQFrame.setFrameShape(QFrame.StyledPanel)
         self.expandTerminalQFrame.setFrameShadow(QFrame.Raised)
         self.expandTerminalQFrameVLayout = QVBoxLayout(self.expandTerminalQFrame)
@@ -6252,14 +6395,27 @@ class Ui_MainWindow(object):
 
         self.outputQFrameVLayout.addWidget(self.outputFrameTopContainerQFrame)
 
-        self.outputTerminalQTextEdit = QTextEdit(self.outputQFrame)
-        self.outputTerminalQTextEdit.setObjectName(u"outputTerminalQTextEdit")
-        self.outputTerminalQTextEdit.setEnabled(True)
-        sizePolicy3 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        self.outputTerminalQFrame = QFrame(self.outputQFrame)
+        self.outputTerminalQFrame.setObjectName(u"outputTerminalQFrame")
+        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
         sizePolicy3.setHorizontalStretch(0)
         sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.outputTerminalQTextEdit.sizePolicy().hasHeightForWidth())
-        self.outputTerminalQTextEdit.setSizePolicy(sizePolicy3)
+        sizePolicy3.setHeightForWidth(self.outputTerminalQFrame.sizePolicy().hasHeightForWidth())
+        self.outputTerminalQFrame.setSizePolicy(sizePolicy3)
+        self.outputTerminalQFrame.setFrameShape(QFrame.StyledPanel)
+        self.outputTerminalQFrame.setFrameShadow(QFrame.Raised)
+        self.outputTerminalQFrameVLayout = QVBoxLayout(self.outputTerminalQFrame)
+        self.outputTerminalQFrameVLayout.setSpacing(0)
+        self.outputTerminalQFrameVLayout.setObjectName(u"outputTerminalQFrameVLayout")
+        self.outputTerminalQFrameVLayout.setContentsMargins(0, 0, 0, 15)
+        self.outputTerminalQTextEdit = QTextEdit(self.outputTerminalQFrame)
+        self.outputTerminalQTextEdit.setObjectName(u"outputTerminalQTextEdit")
+        self.outputTerminalQTextEdit.setEnabled(True)
+        sizePolicy4 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.outputTerminalQTextEdit.sizePolicy().hasHeightForWidth())
+        self.outputTerminalQTextEdit.setSizePolicy(sizePolicy4)
         self.outputTerminalQTextEdit.setFrameShape(QFrame.NoFrame)
         self.outputTerminalQTextEdit.setFrameShadow(QFrame.Plain)
         self.outputTerminalQTextEdit.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
@@ -6267,7 +6423,10 @@ class Ui_MainWindow(object):
         self.outputTerminalQTextEdit.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContentsOnFirstShow)
         self.outputTerminalQTextEdit.setReadOnly(True)
 
-        self.outputQFrameVLayout.addWidget(self.outputTerminalQTextEdit)
+        self.outputTerminalQFrameVLayout.addWidget(self.outputTerminalQTextEdit)
+
+
+        self.outputQFrameVLayout.addWidget(self.outputTerminalQFrame)
 
         self.outputTerminalQLineEdit = QLineEdit(self.outputQFrame)
         self.outputTerminalQLineEdit.setObjectName(u"outputTerminalQLineEdit")
@@ -6288,7 +6447,7 @@ class Ui_MainWindow(object):
         self.electrumV1QStackedWidget.setCurrentIndex(1)
         self.electrumV2QStackedWidget.setCurrentIndex(0)
         self.moneroQStackedWidget.setCurrentIndex(0)
-        self.DerivationsQTabWidget.setCurrentIndex(6)
+        self.DerivationsQTabWidget.setCurrentIndex(8)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -6885,6 +7044,20 @@ class Ui_MainWindow(object):
         self.CIP1852AddressQLineEdit.setText("")
         self.CIP1852AddressQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.DerivationsQTabWidget.setTabText(self.DerivationsQTabWidget.indexOf(self.CIP1852QWidget), QCoreApplication.translate("MainWindow", u"CIP1852", None))
+        self.ElectrumChangeQLabel.setText(QCoreApplication.translate("MainWindow", u"Change", None))
+        self.ElectrumChangeQLineEdit.setText("")
+        self.ElectrumChangeQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.ElectrumAddressQLabel.setText(QCoreApplication.translate("MainWindow", u"Address", None))
+        self.ElectrumAddressQLineEdit.setText("")
+        self.ElectrumAddressQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.DerivationsQTabWidget.setTabText(self.DerivationsQTabWidget.indexOf(self.ElectrumQWidget), QCoreApplication.translate("MainWindow", u"Electrum", None))
+        self.MoneroMinorQLabel.setText(QCoreApplication.translate("MainWindow", u"Mirnor", None))
+        self.MoneroMinorQLineEdit.setText("")
+        self.MoneroMinorQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.MoneroMajorQLabel.setText(QCoreApplication.translate("MainWindow", u"Magor", None))
+        self.MoneroMajorQLineEdit.setText("")
+        self.MoneroMajorQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.DerivationsQTabWidget.setTabText(self.DerivationsQTabWidget.indexOf(self.MoneroQWidget), QCoreApplication.translate("MainWindow", u"Monero", None))
         self.dumpsFormatQLabel.setText(QCoreApplication.translate("MainWindow", u"Format", None))
         self.dumpsormatQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"JSON", None))
         self.dumpsormatQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"CSV", None))
