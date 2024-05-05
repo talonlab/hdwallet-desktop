@@ -1,3 +1,4 @@
+import os
 import subprocess
 import string
 import json
@@ -68,12 +69,12 @@ class MyMainWindow(QMainWindow):
         # Setup UI Stuff
         self.setWindowTitle("Hierarchical Deterministic Wallet")
 
-        self.load_stylesheet("ui/css/dark-style.css")
+        self.load_stylesheet(os.path.join(os.path.dirname(__file__), "ui/css/dark-style.css"))
 
         self.toggle_expand_terminal = SvgButton(
             parent_widget=self.ui.expandTerminalQFrame,
-            icon_path="ui/images/icon_maximize.svg",
-            alt_icon_path="ui/images/icon_minimize.svg",
+            icon_path=os.path.join(os.path.dirname(__file__),"ui/images/icon_maximize.svg"),
+            alt_icon_path=os.path.join(os.path.dirname(__file__),"ui/images/icon_minimize.svg"),
             icon_width=17,
             icon_height=17
         )
