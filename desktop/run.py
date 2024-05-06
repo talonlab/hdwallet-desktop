@@ -72,7 +72,7 @@ class MyMainWindow(QMainWindow):
         self.load_stylesheet(os.path.join(os.path.dirname(__file__), "ui/css/dark-style.css"))
 
         self.toggle_expand_terminal = SvgButton(
-            parent_widget=self.ui.expandTerminalQFrame,
+            parent_widget=self.ui.expandAndCollapseTerminalQFrame,
             icon_path=os.path.join(os.path.dirname(__file__),"ui/images/icon_maximize.svg"),
             alt_icon_path=os.path.join(os.path.dirname(__file__),"ui/images/icon_minimize.svg"),
             icon_width=17,
@@ -100,12 +100,12 @@ class MyMainWindow(QMainWindow):
 
     def _setup_dump_stack(self):
         self.stack_hd_widgets = {
-            'BIP32': "BIPsPageQWidget",
-            'BIP44': "BIPsPageQWidget",
-            'BIP49': "BIPsPageQWidget",
-            'BIP84': "BIPsPageQWidget",
-            'BIP86': "BIPsPageQWidget",
-            'BIP141': "BIPsPageQWidget",
+            'BIP32': "bipsPageQWidget",
+            'BIP44': "bipsPageQWidget",
+            'BIP49': "bipsPageQWidget",
+            'BIP84': "bipsPageQWidget",
+            'BIP86': "bipsPageQWidget",
+            'BIP141': "bipsPageQWidget",
             'Cardano': "cardanoPageQWidget",
             'Electrum-V1': "electrumV1PageQWidget",
             'Electrum-V2': "electrumV2PageQWidget",
@@ -113,16 +113,16 @@ class MyMainWindow(QMainWindow):
         }
 
         self.stack_from_widgets = {
-            "BIPsPageQWidget": {
-                "StackWidget": "BIPQStackedWidget",
-                "Entropy": "BIPFromEntropyQStackedWidget",
-                "Mnemonic": "BIPFromMnemonicQStackedWidget",
-                "Private key": "BIPFromPrivateKeyQStackedWidget",
-                "Public key": "BIPFromPublicKeyQStackedWidget",
-                "Seed": "BIPFromSeedQStackedWidget",
-                "WIF": "BIPFromWIFQStackedWidget",
-                "XPrivate key": "BIPFromXPrivateKeyQStackedWidget",
-                "XPublic key": "BIPFromXPublicKeyQStackedWidget"
+            "bipsPageQWidget": {
+                "StackWidget": "bipQStackedWidget",
+                "Entropy": "bipFromEntropyQStackedWidget",
+                "Mnemonic": "bipFromMnemonicQStackedWidget",
+                "Private key": "bipFromPrivateKeyQStackedWidget",
+                "Public key": "bipFromPublicKeyQStackedWidget",
+                "Seed": "bipFromSeedQStackedWidget",
+                "WIF": "bipFromWIFQStackedWidget",
+                "XPrivate key": "bipFromXPrivateKeyQStackedWidget",
+                "XPublic key": "bipFromXPublicKeyQStackedWidget"
             },
             "cardanoPageQWidget": {
                 "StackWidget": "cardanoQStackedWidget",
