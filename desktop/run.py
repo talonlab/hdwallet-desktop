@@ -633,8 +633,10 @@ class MyMainWindow(QMainWindow):
         super().closeEvent(event)
 
     def update_terminal_ui(self):
+        print(self.ui.outputWidgetTopContainerQFrame.width())
         self.ui.outputWidgetTopContainerQWidget.setGeometry(QRect(
-            0, 0, self.ui.noLayoutQWidget.width(), self.ui.outputWidgetTopContainerQWidget.height()
+            (self.ui.noLayoutQWidget.width() - self.ui.outputWidgetTopContainerQFrame.width()), 0,
+            self.ui.outputWidgetTopContainerQFrame.width(), self.ui.outputWidgetTopContainerQWidget.height()
         ))
         self.ui.outputTerminalQWidget.setGeometry(QRect(
             0, 0, self.ui.noLayoutQWidget.width(), self.ui.noLayoutQWidget.height()

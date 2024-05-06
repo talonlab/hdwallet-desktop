@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletlFXmEe.ui'
+## Form generated from reading UI file 'hdwalletwSdIdf.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -6406,17 +6406,9 @@ class Ui_MainWindow(object):
         self.outputFrameTopContainerQFrameHLayout.setSpacing(15)
         self.outputFrameTopContainerQFrameHLayout.setObjectName(u"outputFrameTopContainerQFrameHLayout")
         self.outputFrameTopContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.outputFrameTopContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.outputFrameTopContainerQFrameHLayout.addItem(self.outputFrameTopContainerQFrameHSpacer)
-
         self.outputWidgetTopContainerQFrame = QFrame(self.outputWidgetTopContainerQWidget)
         self.outputWidgetTopContainerQFrame.setObjectName(u"outputWidgetTopContainerQFrame")
-        sizePolicy6 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
-        sizePolicy6.setHorizontalStretch(0)
-        sizePolicy6.setVerticalStretch(0)
-        sizePolicy6.setHeightForWidth(self.outputWidgetTopContainerQFrame.sizePolicy().hasHeightForWidth())
-        self.outputWidgetTopContainerQFrame.setSizePolicy(sizePolicy6)
+        self.outputWidgetTopContainerQFrame.setMinimumSize(QSize(200, 0))
         self.outputWidgetTopContainerQFrameHLayout = QHBoxLayout(self.outputWidgetTopContainerQFrame)
         self.outputWidgetTopContainerQFrameHLayout.setSpacing(15)
         self.outputWidgetTopContainerQFrameHLayout.setObjectName(u"outputWidgetTopContainerQFrameHLayout")
