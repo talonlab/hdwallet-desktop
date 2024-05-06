@@ -9,7 +9,7 @@ from PySide6.QtWidgets import (
     QPushButton, QVBoxLayout, QHBoxLayout, QFrame,
     QStackedWidget, QSizePolicy
 )
-from PySide6.QtCore import QFile, Qt
+from PySide6.QtCore import QFile, Qt, QRect,QObject
 from PySide6.QtGui import QIntValidator
 
 import string
@@ -455,6 +455,7 @@ class MyMainWindow(QMainWindow):
             self.detached_window.resize(self.ui.outputQFrame.width(), self.ui.outputQFrame.height())
 
             layout = QVBoxLayout()
+            layout.setContentsMargins(0, 0, 0, 0)
             layout.addWidget(self.ui.outputQFrame)
 
             self.detached_window.setLayout(layout)
@@ -485,6 +486,24 @@ class MyMainWindow(QMainWindow):
         if self.detached_window:
             self.detached_window.close()
         super().closeEvent(event)
+
+    def update_terminal_ui(self):
+        self.ui.outputWidgetTopContainerQWidget.setGeometry(QRect(
+            0, 0, self.ui.noLayoutQWidget.width(), self.ui.outputWidgetTopContainerQWidget.height()
+        ))
+        self.ui.outputTerminalQWidget.setGeometry(QRect(
+            0, 0, self.ui.noLayoutQWidget.width(), self.ui.noLayoutQWidget.height()
+        ))
+        self.ui.outputWidgetTopContainerQWidget.raise_()
+        self.ui.outputTerminalQWidget.lower()
+
+    def resizeEvent(self, event) -> None:
+        self.update_terminal_ui()
+
+    def show(self):
+        super(MyMainWindow, self).show()
+        self.update_terminal_ui()
+
 
 if __name__ == "__main__":
     app = QApplication([])
