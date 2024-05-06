@@ -356,10 +356,14 @@ QGroupBox::title {
     background-color: rgb(16, 21, 27);
 }
 
-#outputWidgetTopContainerQFrame,
+
 #outputWidgetTopContainerQWidget{
-    background-color: rgba(0, 0, 0, 0.5)
+    background-color: rgba(0, 0, 0, 0)
 }
+
+#outputWidgetTopContainerQFrame{
+    background-color: rgba(0, 0, 0, 0.5);
+ }
 
 
 #outputQFrame{
@@ -374,4 +378,27 @@ QGroupBox::title {
 #clearTerminalQFrame{
     background-color: transparent;
 }
+
+QRadioButton::indicator {
+    border: 3px solid rgb(25, 30, 36);
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    background: rgb(16, 21, 27);
+}
+QRadioButton::indicator:hover {
+    border: 3px solid rgba(25, 30, 36, 100);
+}
+QRadioButton::indicator:checked {
+    background: 3px solid rgba(255, 255, 255, 0.5);
+    border: 3px solid rgb(25, 30, 36);
+}
+
+#outputTerminalQLineEdit{
+    background-color: rgba(25, 30, 36, 0.5);
+}
+
+
+
+
 

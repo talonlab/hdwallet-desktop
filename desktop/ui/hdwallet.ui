@@ -95,13 +95,6 @@
            </spacer>
           </item>
           <item>
-           <widget class="QLabel" name="versionQLabel">
-            <property name="text">
-             <string>Version</string>
-            </property>
-           </widget>
-          </item>
-          <item>
            <widget class="QPushButton" name="generateQPushButton">
             <property name="text">
              <string>Generate</string>
@@ -153,7 +146,7 @@
           <item>
            <widget class="QStackedWidget" name="hdwalletQStackedWidget">
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="generatePageQStackedWidget">
              <layout class="QVBoxLayout" name="generatePageQStackedWidgetVLayout">
@@ -418,7 +411,7 @@
                         <widget class="QFrame" name="generateMnemonicFromActionQFrame">
                          <layout class="QHBoxLayout" name="generateMnemonicFromActionQFrameHLayout">
                           <property name="spacing">
-                           <number>0</number>
+                           <number>15</number>
                           </property>
                           <property name="leftMargin">
                            <number>0</number>
@@ -14449,9 +14442,6 @@
                            </item>
                            <item>
                             <widget class="QLineEdit" name="moneroMajorQLineEdit">
-                             <property name="inputMethodHints">
-                              <set>Qt::ImhDigitsOnly</set>
-                             </property>
                              <property name="text">
                               <string/>
                              </property>
@@ -14917,6 +14907,13 @@
                <number>15</number>
               </property>
               <item>
+               <widget class="QLabel" name="versionQLabel">
+                <property name="text">
+                 <string>Version</string>
+                </property>
+               </widget>
+              </item>
+              <item>
                <widget class="QFrame" name="saveTerminalQFrame">
                 <property name="minimumSize">
                  <size>
@@ -15059,7 +15056,11 @@
            <number>15</number>
           </property>
           <item>
-           <widget class="QLineEdit" name="outputTerminalQLineEdit"/>
+           <widget class="QLineEdit" name="outputTerminalQLineEdit">
+            <property name="placeholderText">
+             <string>Command Line Interface (CLI)</string>
+            </property>
+           </widget>
           </item>
           <item>
            <widget class="QPushButton" name="outputTerminalQPushButton">

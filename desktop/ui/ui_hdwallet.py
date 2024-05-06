@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletynOPIQ.ui'
+## Form generated from reading UI file 'hdwalletlFXmEe.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -15,8 +15,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (
-    QAbstractScrollArea, QApplication, QCheckBox, QComboBox,
+from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QCheckBox, QComboBox,
     QFrame, QGridLayout, QGroupBox, QHBoxLayout,
     QLabel, QLineEdit, QMainWindow, QPushButton,
     QRadioButton, QSizePolicy, QSpacerItem, QStackedWidget,
@@ -54,11 +53,6 @@ class Ui_MainWindow(object):
         self.hdWalletHeaderContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.hdWalletHeaderContainerQFrameHLayout.addItem(self.hdWalletHeaderContainerQFrameHSpacer)
-
-        self.versionQLabel = QLabel(self.hdWalletHeaderContainerQFrame)
-        self.versionQLabel.setObjectName(u"versionQLabel")
-
-        self.hdWalletHeaderContainerQFrameHLayout.addWidget(self.versionQLabel)
 
         self.generateQPushButton = QPushButton(self.hdWalletHeaderContainerQFrame)
         self.generateQPushButton.setObjectName(u"generateQPushButton")
@@ -211,7 +205,7 @@ class Ui_MainWindow(object):
         self.generateMnemonicFromActionQFrame = QFrame(self.generateMnemonicFromContainerQFrame)
         self.generateMnemonicFromActionQFrame.setObjectName(u"generateMnemonicFromActionQFrame")
         self.generateMnemonicFromActionQFrameHLayout = QHBoxLayout(self.generateMnemonicFromActionQFrame)
-        self.generateMnemonicFromActionQFrameHLayout.setSpacing(0)
+        self.generateMnemonicFromActionQFrameHLayout.setSpacing(15)
         self.generateMnemonicFromActionQFrameHLayout.setObjectName(u"generateMnemonicFromActionQFrameHLayout")
         self.generateMnemonicFromActionQFrameHLayout.setContentsMargins(0, 0, 0, 0)
         self.generateMnemonicWordsQRadioButton = QRadioButton(self.generateMnemonicFromActionQFrame)
@@ -6218,7 +6212,6 @@ class Ui_MainWindow(object):
 
         self.moneroMajorQLineEdit = QLineEdit(self.moneroMajorQFrame)
         self.moneroMajorQLineEdit.setObjectName(u"moneroMajorQLineEdit")
-        self.moneroMajorQLineEdit.setInputMethodHints(Qt.ImhDigitsOnly)
 
         self.BIP44AccountVLayout_6.addWidget(self.moneroMajorQLineEdit)
 
@@ -6428,6 +6421,11 @@ class Ui_MainWindow(object):
         self.outputWidgetTopContainerQFrameHLayout.setSpacing(15)
         self.outputWidgetTopContainerQFrameHLayout.setObjectName(u"outputWidgetTopContainerQFrameHLayout")
         self.outputWidgetTopContainerQFrameHLayout.setContentsMargins(15, 15, 15, 15)
+        self.versionQLabel = QLabel(self.outputWidgetTopContainerQFrame)
+        self.versionQLabel.setObjectName(u"versionQLabel")
+
+        self.outputWidgetTopContainerQFrameHLayout.addWidget(self.versionQLabel)
+
         self.saveTerminalQFrame = QFrame(self.outputWidgetTopContainerQFrame)
         self.saveTerminalQFrame.setObjectName(u"saveTerminalQFrame")
         self.saveTerminalQFrame.setMinimumSize(QSize(25, 25))
@@ -6499,7 +6497,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.hdwalletQStackedWidget.setCurrentIndex(1)
+        self.hdwalletQStackedWidget.setCurrentIndex(0)
         self.hdQStackedWidget.setCurrentIndex(4)
         self.bipQStackedWidget.setCurrentIndex(4)
         self.cardanoQStackedWidget.setCurrentIndex(4)
@@ -6514,7 +6512,6 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.versionQLabel.setText(QCoreApplication.translate("MainWindow", u"Version", None))
         self.generateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
         self.dumpQPushButton.setText(QCoreApplication.translate("MainWindow", u"Dumps", None))
         self.donationHDWalletQPushButton.setText(QCoreApplication.translate("MainWindow", u"Donation", None))
@@ -7123,6 +7120,8 @@ class Ui_MainWindow(object):
         self.dumpsormatQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.dumpsExcludeOrIncludeQLabel.setText(QCoreApplication.translate("MainWindow", u"Exclude / Include", None))
         self.dumpsGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
+        self.versionQLabel.setText(QCoreApplication.translate("MainWindow", u"Version", None))
+        self.outputTerminalQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Command Line Interface (CLI)", None))
         self.outputTerminalQPushButton.setText(QCoreApplication.translate("MainWindow", u"Execute", None))
     # retranslateUi
 
