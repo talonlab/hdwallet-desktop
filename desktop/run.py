@@ -10,7 +10,7 @@ from PySide6.QtWidgets import (
     QStackedWidget, QSizePolicy
 )
 from PySide6.QtCore import QFile, Qt, QRect,QObject
-from PySide6.QtGui import QIntValidator
+from PySide6.QtGui import QIntValidator, QFont, QFontDatabase
 
 import string
 
@@ -65,6 +65,8 @@ class MyMainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.detached_window = None
+
+        QFontDatabase.addApplicationFont(os.path.join(os.path.dirname(__file__), "ui/font/HD Wallet-Regular.ttf"))
 
         # Setup UI Stuff
         self.setWindowTitle("Hierarchical Deterministic Wallet")

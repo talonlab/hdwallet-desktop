@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletsETYhR.ui'
+## Form generated from reading UI file 'hdwalletynOPIQ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -15,11 +15,13 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QCheckBox, QComboBox,
+from PySide6.QtWidgets import (
+    QAbstractScrollArea, QApplication, QCheckBox, QComboBox,
     QFrame, QGridLayout, QGroupBox, QHBoxLayout,
     QLabel, QLineEdit, QMainWindow, QPushButton,
     QRadioButton, QSizePolicy, QSpacerItem, QStackedWidget,
-    QTabWidget, QTextEdit, QVBoxLayout, QWidget)
+    QTabWidget, QTextEdit, QVBoxLayout, QWidget
+)
 
 from .resources_rc import *
 
@@ -6216,6 +6218,7 @@ class Ui_MainWindow(object):
 
         self.moneroMajorQLineEdit = QLineEdit(self.moneroMajorQFrame)
         self.moneroMajorQLineEdit.setObjectName(u"moneroMajorQLineEdit")
+        self.moneroMajorQLineEdit.setInputMethodHints(Qt.ImhDigitsOnly)
 
         self.BIP44AccountVLayout_6.addWidget(self.moneroMajorQLineEdit)
 

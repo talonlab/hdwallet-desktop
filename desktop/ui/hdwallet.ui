@@ -14449,6 +14449,9 @@
                            </item>
                            <item>
                             <widget class="QLineEdit" name="moneroMajorQLineEdit">
+                             <property name="inputMethodHints">
+                              <set>Qt::ImhDigitsOnly</set>
+                             </property>
                              <property name="text">
                               <string/>
                              </property>
