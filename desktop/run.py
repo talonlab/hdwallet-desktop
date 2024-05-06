@@ -9,9 +9,11 @@ from PySide6.QtWidgets import (
     QPushButton, QVBoxLayout, QHBoxLayout, QFrame,
     QStackedWidget, QSizePolicy
 )
-from PySide6.QtCore import QFile, Qt, QRect,QObject
-from PySide6.QtGui import QIntValidator, QFont, QFontDatabase
-
+from PySide6.QtCore import QFile, Qt, QRect, QObject, QRegularExpression
+from PySide6.QtGui import (
+    QIntValidator, QFont, QFontDatabase, QSyntaxHighlighter,
+    QTextCharFormat, QColor, QTextCursor
+)
 import string
 
 
@@ -67,6 +69,50 @@ class DetachedWindow(QWidget):
         self.main_window.toggle_expand_terminal.setChecked(False)
         self.main_window.toggle_expand()
 
+class Highlighter(QSyntaxHighlighter):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.highlighting_rules = []
+
+    def add_highlighting_rule(self, pattern, char_format):
+        self.highlighting_rules.append((QRegularExpression(pattern), char_format))
+
+    def highlightBlock(self, text):
+        for pattern, char_format in self.highlighting_rules:
+            matcher = pattern.globalMatch(text)
+            while matcher.hasNext():
+                match = matcher.next()
+                self.setFormat(match.capturedStart(), match.capturedLength(), char_format)
+
+class LogHighlighter(Highlighter):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+
+        # Punctuation highlighting
+        punctuation_format = QTextCharFormat()
+        punctuation_format.setForeground(QColor(255, 255, 255))
+        self.add_highlighting_rule(r'[^\w\s]', punctuation_format)
+
+        # Digit highlighting
+        digit_format = QTextCharFormat()
+        digit_format.setForeground(QColor(0, 120, 215))
+        self.add_highlighting_rule(r'\b\d+\b', digit_format)
+
+        # Character highlighting
+        character_format = QTextCharFormat()
+        character_format.setForeground(QColor(6, 240, 111))
+        self.add_highlighting_rule(r'\b[a-zA-Z]+\b', character_format)
+
+        # Values within single or double quotes
+        quoted_value_format = QTextCharFormat()
+        quoted_value_format.setForeground(QColor(6, 240, 111))
+        self.add_highlighting_rule(r'["\'].*?["\']', quoted_value_format)
+
+        # Highlight lines starting with "ERROR:"
+        error_format = QTextCharFormat()
+        error_format.setForeground(QColor(255, 96, 96))
+        self.add_highlighting_rule(r'^ERROR:.*$', error_format)
+
 class MyMainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -104,6 +150,8 @@ class MyMainWindow(QMainWindow):
         self.ui.generateLengthContainerQFrame.setSizePolicy(
             QSizePolicy.Expanding, QSizePolicy.Expanding
         )
+
+        LogHighlighter(self.ui.outputTerminalQTextEdit.document())
 
         self._setup_generate_stack()
         self._setup_dump_stack()
@@ -201,7 +249,7 @@ class MyMainWindow(QMainWindow):
         try:
             self.__dumps()
         except Exception as e:
-            self.println(f"Error: {e}")
+            self.println(f"ERROR: {e}")
 
     def __dumps(self):
         current_hd = self.ui.dumpsHdQComboBox.currentText()
@@ -510,20 +558,19 @@ class MyMainWindow(QMainWindow):
             else:
                 seed = SEEDS.seed(seed_client).from_mnemonic(mnemonic=mnemonic)
         except Exception as e:
-            output = f"Error: {e}"
+            output = f"ERROR: {e}"
         else:
             output = {
                 "name": seed_client,
                 "seed": seed
             }
 
-
         self.println(output)
 
     def _generate_passphrase(self):
 
         if len(self.ui.generateLengthQLineEdit.text()) == 0:
-            self.println("Error: passpharse length is required")
+            self.println("ERROR: passpharse length is required")
             return None
 
         length = int(self.ui.generateLengthQLineEdit.text())
@@ -540,7 +587,7 @@ class MyMainWindow(QMainWindow):
 
         output = None
         if not any([upper, lower, special, digit]):
-            output = "Error: At least one of upper, lower, special, or digit must be selected"
+            output = "ERROR: At least one of upper, lower, special, or digit must be selected"
         else:
             pp = "".join(choice(characters) for _ in range(length))
 
@@ -563,7 +610,7 @@ class MyMainWindow(QMainWindow):
         if qStackedWidget and qWidget: 
             qStackedWidget.setCurrentWidget(qWidget)
         else:
-            print(f"Error changing page: '{stacked_name}' '{widget_name}'")
+            print(f"ERROR changing page: '{stacked_name}' '{widget_name}'")
 
 
     def process_command(self):
@@ -580,13 +627,13 @@ class MyMainWindow(QMainWindow):
 
     def println(self, s):
         #just for now
-        oldtext = self.ui.outputTerminalQTextEdit.toPlainText()
 
         if isinstance(s, dict):
             newtext = json.dumps(s, indent=4)  
         else:
             newtext = str(s)
-        self.ui.outputTerminalQTextEdit.setText(f"{oldtext}\n\n{newtext}")
+       
+        self.ui.outputTerminalQTextEdit.append(f"{newtext}\n\n")
 
     def toggle_expand(self):
         if self.toggle_expand_terminal.isChecked():
