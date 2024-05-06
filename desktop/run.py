@@ -69,50 +69,6 @@ class DetachedWindow(QWidget):
         self.main_window.toggle_expand_terminal.setChecked(False)
         self.main_window.toggle_expand()
 
-class Highlighter(QSyntaxHighlighter):
-    def __init__(self, parent=None):
-        super().__init__(parent)
-        self.highlighting_rules = []
-
-    def add_highlighting_rule(self, pattern, char_format):
-        self.highlighting_rules.append((QRegularExpression(pattern), char_format))
-
-    def highlightBlock(self, text):
-        for pattern, char_format in self.highlighting_rules:
-            matcher = pattern.globalMatch(text)
-            while matcher.hasNext():
-                match = matcher.next()
-                self.setFormat(match.capturedStart(), match.capturedLength(), char_format)
-
-class LogHighlighter(Highlighter):
-    def __init__(self, parent=None):
-        super().__init__(parent)
-
-        # Punctuation highlighting
-        punctuation_format = QTextCharFormat()
-        punctuation_format.setForeground(QColor(255, 255, 255))
-        self.add_highlighting_rule(r'[^\w\s]', punctuation_format)
-
-        # Digit highlighting
-        digit_format = QTextCharFormat()
-        digit_format.setForeground(QColor(0, 120, 215))
-        self.add_highlighting_rule(r'\b\d+\b', digit_format)
-
-        # Character highlighting
-        character_format = QTextCharFormat()
-        character_format.setForeground(QColor(6, 240, 111))
-        self.add_highlighting_rule(r'\b[a-zA-Z]+\b', character_format)
-
-        # Values within single or double quotes
-        quoted_value_format = QTextCharFormat()
-        quoted_value_format.setForeground(QColor(6, 240, 111))
-        self.add_highlighting_rule(r'["\'].*?["\']', quoted_value_format)
-
-        # Highlight lines starting with "ERROR:"
-        error_format = QTextCharFormat()
-        error_format.setForeground(QColor(255, 96, 96))
-        self.add_highlighting_rule(r'^ERROR:.*$', error_format)
-
 class MyMainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -150,8 +106,6 @@ class MyMainWindow(QMainWindow):
         self.ui.generateLengthContainerQFrame.setSizePolicy(
             QSizePolicy.Expanding, QSizePolicy.Expanding
         )
-
-        LogHighlighter(self.ui.outputTerminalQTextEdit.document())
 
         self._setup_generate_stack()
         self._setup_dump_stack()
