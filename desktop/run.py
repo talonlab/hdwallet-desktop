@@ -15,6 +15,9 @@ from PySide6.QtGui import QIntValidator, QFont, QFontDatabase
 import string
 
 
+from hdwallet import HDWallet
+from hdwallet.hds import HDS
+
 from hdwallet.entropies import (
     AlgorandEntropy, ALGORAND_ENTROPY_STRENGTHS,
     BIP39Entropy, BIP39_ENTROPY_STRENGTHS,
@@ -33,7 +36,12 @@ from hdwallet.mnemonics import (
     MNEMONICS
 )
 
-from hdwallet.cryptocurrencies import Cardano
+from hdwallet.derivations import (
+    CustomDerivation,BIP44Derivation, BIP49Derivation, BIP84Derivation,
+    BIP86Derivation, CHANGES
+)
+
+from hdwallet.cryptocurrencies import Cardano, CRYPTOCURRENCIES
 
 from hdwallet.seeds import (
     AlgorandSeed,
@@ -114,6 +122,19 @@ class MyMainWindow(QMainWindow):
             'Monero': "moneroPageQWidget" 
         }
 
+        self.hd_allowed_derivation = {
+            'BIP32': ["Custom", "BIP44", "BIP49", "BIP84", "BIP86", "BIP141", "CIP1852"],
+            'BIP44': ["BIP44"],
+            'BIP49': ["BIP49"],
+            'BIP84': ["BIP84"],
+            'BIP86': ["BIP86"],
+            'BIP141': ["BIP141"],
+            'Cardano': ["Custom", "CIP1852"],
+            'Electrum-V1': ["Electrum"],
+            'Electrum-V2': ["Electrum"],
+            'Monero': ["Monero"] 
+        }
+
         self.stack_from_widgets = {
             "bipsPageQWidget": {
                 "StackWidget": "bipQStackedWidget",
@@ -164,10 +185,125 @@ class MyMainWindow(QMainWindow):
 
         self.ui.dumpsHdQComboBox.currentIndexChanged.connect(self._dump_hd_changed)
         self.ui.dumpsFromQComboBox.currentIndexChanged.connect(self._dump_from_changed)
-        self.ui.dumpsHdQComboBox.setCurrentText("BIP44")
+
+        self.ui.dumpsCryptocurrencyQComboBox.clear()
+        self.ui.dumpsCryptocurrencyQComboBox.addItems(CRYPTOCURRENCIES.names())
+        self.ui.dumpsCryptocurrencyQComboBox.currentIndexChanged.connect(self._dumps_crypto_change)
+        self.ui.dumpsCryptocurrencyQComboBox.setCurrentText("Bitcoin")
+
+        self.ui.bipFromEntropyLanguageQComboBox.clear()
+        self.ui.bipFromEntropyLanguageQComboBox.addItems([i.title() for i in BIP39Mnemonic.languages])
+        self.ui.bipFromEntropyLanguageQComboBox.setCurrentText("English")
+
+        self.ui.dumpsGenerateQPushButton.clicked.connect(self._dumps)
+
+    def _dumps(self):
+        try:
+            self.__dumps()
+        except Exception as e:
+            self.println(f"Error: {e}")
+
+    def __dumps(self):
+        current_hd = self.ui.dumpsHdQComboBox.currentText()
+        dump_from = self.ui.dumpsFromQComboBox.currentText()
+        network = self.ui.dumpsNetworkQComboBox.currentText()
+        exclude_set = set([p.strip() for p in self.ui.dumpsExcludeOrIncludeQLineEdit.text().split(",")])
+
+        crypto = self.ui.dumpsCryptocurrencyQComboBox.currentText()
+
+        hd_kwargs = {
+            "cryptocurrency": CRYPTOCURRENCIES.cryptocurrency(crypto),
+            "hd": HDS.hd(current_hd),
+            "network": network.lower()
+        }
+
+        #TODO: implement all hd
+        if current_hd in ('BIP32', 'BIP44', 'BIP49', 'BIP84', 'BIP86', 'BIP141'):
+            hd = self._dump_bips(current_hd, dump_from, hd_kwargs)
+
+        derivation = self.__dumps_get_derivation(CRYPTOCURRENCIES.cryptocurrency(crypto))
+        hdwallet = hd.from_derivation(derivation=derivation)
+
+        self.println(json.dumps(hdwallet.dumps(exclude=exclude_set), indent=4, ensure_ascii=False))
+
+
+    def __dumps_get_derivation(self, crypto):
+        tab = self.ui.derivationsQTabWidget
+        current_tab = tab.tabText(tab.currentIndex())
+
+        #TODO: implement all derivation
+        if current_tab == "Custom":
+            return CustomDerivation(
+                path=self.ui.customPathQLineEdit.text()
+            )
+        elif current_tab == "BIP44":
+            return BIP44Derivation(
+                    coin_type=crypto.COIN_TYPE,
+                    account=self.ui.bip44AccountQLineEdit.text(),
+                    change=f"{self.ui.bip44ChangeQComboBox.currentText().lower()}-chain",
+                    address=self.ui.bip44AddressQLineEdit.text()
+                )
+        elif current_tab == "BIP49":
+            return BIP49Derivation(
+                    coin_type=crypto.COIN_TYPE,
+                    account=self.ui.bip49AccountQLineEdit.text(),
+                    change=f"{self.ui.bip49ChangeQComboBox.currentText().lower()}-chain",
+                    address=self.ui.bip49AddressQLineEdit.text()
+                )
+        elif current_tab == "BIP84":
+            return BIP84Derivation(
+                    coin_type=crypto.COIN_TYPE,
+                    account=self.ui.bip84AccountQLineEdit.text(),
+                    change=f"{self.ui.bip84ChangeQComboBox.currentText().lower()}-chain",
+                    address=self.ui.bip84AddressQLineEdit.text()
+                )
+        elif current_tab == "BIP86":
+            return BIP86Derivation(
+                    coin_type=crypto.COIN_TYPE,
+                    account=self.ui.bip86AccountQLineEdit.text(),
+                    change=f"{self.ui.bip86ChangeQComboBox.currentText().lower()}-chain",
+                    address=self.ui.bip86AddressQLineEdit.text()
+                )
+        elif current_tab == "BIP141":
+            pass
+        elif current_tab == "CIP1852":
+            pass
+        elif current_tab == "Electrum":
+            pass
+        elif current_tab == "Monero":
+            pass
+
+
+    def _dump_bips(self, hd, dump_from, hd_kwargs):
+        #TODO: dump from all available methods
+        if dump_from == "Entropy":
+            hd_kwargs["language"] = self.ui.bipFromEntropyLanguageQComboBox.currentText().lower()
+            hd_kwargs["passphrase"] = self.ui.bipFromEntropyPassphraseQLineEdit.text()
+            hd_kwargs["public_key_type"] = self.ui.bipFromEntropyPublicKeyTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_entropy(
+                BIP39Entropy(
+                    entropy = self.ui.bipFromEntropyGenerateQLineEdit.text()
+                )
+            )
+
+    def _dumps_crypto_change(self):
+        crypto = self.ui.dumpsCryptocurrencyQComboBox.currentText()
+
+        self.ui.dumpsHdQComboBox.clear()
+        self.ui.dumpsHdQComboBox.addItems(CRYPTOCURRENCIES.cryptocurrency(crypto).HDS.get_hds())
+        self.ui.dumpsHdQComboBox.setCurrentIndex(0)
+
+        nets = [i.title() for i in CRYPTOCURRENCIES.cryptocurrency(crypto).NETWORKS.get_networks()]
+        self.ui.dumpsNetworkQComboBox.clear()
+        self.ui.dumpsNetworkQComboBox.addItems(nets)
+        self.ui.dumpsNetworkQComboBox.setCurrentText("Mainnet")
 
     def _dump_hd_changed(self):
         current_hd = self.ui.dumpsHdQComboBox.currentText()
+
+        if current_hd == "":
+            return None
+
         current_hd_widget  = self.stack_hd_widgets[current_hd]
         self.change_page("hdQStackedWidget", current_hd_widget)
 
@@ -175,6 +311,15 @@ class MyMainWindow(QMainWindow):
         self.ui.dumpsFromQComboBox.clear()
         self.ui.dumpsFromQComboBox.addItems(sorted(keys))
         self.ui.dumpsFromQComboBox.setCurrentIndex(0)
+
+        ls_indx = 0
+        for index in range(self.ui.derivationsQTabWidget.count() - 1, -1, -1):
+            if self.ui.derivationsQTabWidget.tabText(index) in self.hd_allowed_derivation[current_hd]:
+                self.ui.derivationsQTabWidget.setTabEnabled(index, True)
+                ls_indx = index
+            else:
+                self.ui.derivationsQTabWidget.setTabEnabled(index, False)
+        self.ui.derivationsQTabWidget.setCurrentIndex(ls_indx)
 
     def _dump_from_changed(self):
         dump_from = self.ui.dumpsFromQComboBox.currentText()
@@ -259,10 +404,10 @@ class MyMainWindow(QMainWindow):
                 str, MNEMONICS.mnemonic(mnemonic_client).words_list
             )
         )
-        self.ui.generateMnemonicLanguageQComboBox.addItems(MNEMONICS.mnemonic(mnemonic_client).languages)
+        self.ui.generateMnemonicLanguageQComboBox.addItems([i.title() for i in MNEMONICS.mnemonic(mnemonic_client).languages])
 
         self.ui.generateMnemonicWordsQComboBox.setCurrentIndex(0)
-        self.ui.generateMnemonicLanguageQComboBox.setCurrentText('english')
+        self.ui.generateMnemonicLanguageQComboBox.setCurrentText('English')
 
         if ElectrumV2Seed.name() == mnemonic_client:
             self.ui.generateMnemonicTypeQComboBox.setEnabled(True)
@@ -289,7 +434,7 @@ class MyMainWindow(QMainWindow):
         mnemonic_client = self.ui.generateMnemonicClientQComboBox.currentText()
         word = self.ui.generateMnemonicWordsQComboBox.currentText()
         entropy = self.ui.generateSeedMnemonicEntropyQLineEdit.text()
-        lang = self.ui.generateMnemonicLanguageQComboBox.currentText()
+        lang = self.ui.generateMnemonicLanguageQComboBox.currentText().lower()
 
         kwargs = {
             "language": lang
@@ -350,10 +495,7 @@ class MyMainWindow(QMainWindow):
         mnemonic_type = self.ui.generateSeedMnemonicTypeQComboBox.currentText()
         cardano_type = self.ui.generateSeedCardanoTypeQComboBox.currentText()
         mnemonic = self.ui.generateSeedMnemonicQLineEdit.text()
-
         passphrase = self.ui.generateSeedPassphraseGenerateQLineEdit.text()
-        passphrase = None if passphrase == '' else passphrase
-
         output = None
 
         try:
@@ -368,7 +510,7 @@ class MyMainWindow(QMainWindow):
             else:
                 seed = SEEDS.seed(seed_client).from_mnemonic(mnemonic=mnemonic)
         except Exception as e:
-            output = "Error: " + str(e)
+            output = f"Error: {e}"
         else:
             output = {
                 "name": seed_client,
@@ -444,7 +586,7 @@ class MyMainWindow(QMainWindow):
             newtext = json.dumps(s, indent=4)  
         else:
             newtext = str(s)
-        self.ui.outputTerminalQTextEdit.setText(oldtext + "\n\n" + str(newtext))
+        self.ui.outputTerminalQTextEdit.setText(f"{oldtext}\n\n{newtext}")
 
     def toggle_expand(self):
         if self.toggle_expand_terminal.isChecked():
