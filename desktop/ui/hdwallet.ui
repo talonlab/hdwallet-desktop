@@ -146,7 +146,7 @@
           <item>
            <widget class="QStackedWidget" name="hdwalletQStackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="generatePageQStackedWidget">
              <layout class="QVBoxLayout" name="generatePageQStackedWidgetVLayout">
@@ -509,6 +509,12 @@
                     </property>
                     <item>
                      <widget class="QFrame" name="generateMnemonicLanguageContainerQFrame">
+                      <property name="minimumSize">
+                       <size>
+                        <width>125</width>
+                        <height>0</height>
+                       </size>
+                      </property>
                       <layout class="QVBoxLayout" name="generateMnemonicLanguageContainerQFrameVLayout">
                        <property name="spacing">
                         <number>5</number>
@@ -546,7 +552,7 @@
                      <widget class="QFrame" name="generateMnemonicWordsContainerQFrame">
                       <property name="maximumSize">
                        <size>
-                        <width>100</width>
+                        <width>125</width>
                         <height>16777215</height>
                        </size>
                       </property>
@@ -1710,7 +1716,7 @@
                     <number>0</number>
                    </property>
                    <property name="currentIndex">
-                    <number>4</number>
+                    <number>0</number>
                    </property>
                    <widget class="QWidget" name="bipsPageQWidget">
                     <layout class="QVBoxLayout" name="BIPsPageQWidgetVLayout">
@@ -1732,7 +1738,7 @@
                      <item>
                       <widget class="QStackedWidget" name="bipQStackedWidget">
                        <property name="currentIndex">
-                        <number>4</number>
+                        <number>3</number>
                        </property>
                        <widget class="QWidget" name="bipFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="BIPFromEntropyQStackedWidgetVLayout">
@@ -2834,12 +2840,6 @@
                             </property>
                             <item>
                              <widget class="QFrame" name="bipFromXPrivateKeyContainerQFrame">
-                              <property name="minimumSize">
-                               <size>
-                                <width>400</width>
-                                <height>0</height>
-                               </size>
-                              </property>
                               <layout class="QVBoxLayout" name="BIPFromXPrivateKeyContainerQFrameVLayout">
                                <property name="spacing">
                                 <number>5</number>
@@ -2899,6 +2899,91 @@
                                </item>
                                <item>
                                 <widget class="QLineEdit" name="bipFromXPrivateKeyQLineEdit"/>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="bipFromXPrivateKeyStrictContainerQFrame">
+                              <property name="sizePolicy">
+                               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                               </sizepolicy>
+                              </property>
+                              <layout class="QVBoxLayout" name="BIPFromXPrivateKeyPublicKeyTypeContainerQFrameVLayout_2">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="bipFromXPrivateKeyStrictLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="BIPFromXPrivateKeyPublicKeyTypeLabelContainerQFrameHLayout_2">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="bipFromXPrivateKeyStrictQLabel">
+                                    <property name="text">
+                                     <string>Strict</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="bipFromXPrivateKeyStrictLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>40</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QComboBox" name="bipFromXPrivateKeyStrictQComboBox">
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
+                                 </property>
+                                 <item>
+                                  <property name="text">
+                                   <string>True</string>
+                                  </property>
+                                 </item>
+                                 <item>
+                                  <property name="text">
+                                   <string>False</string>
+                                  </property>
+                                 </item>
+                                </widget>
                                </item>
                               </layout>
                              </widget>
@@ -3102,6 +3187,85 @@
                                </item>
                                <item>
                                 <widget class="QLineEdit" name="bipFromXPublicKeyQLineEdit"/>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="bipFromXPublicKeyStrictContainerQFrame">
+                              <layout class="QVBoxLayout" name="BIPFromXPrivateKeyPublicKeyTypeContainerQFrameVLayout_5">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="bipFromXPublicKeyStrictLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="BIPFromXPrivateKeyPublicKeyTypeLabelContainerQFrameHLayout_5">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="bipFromXPublicKeyStrictQLabel">
+                                    <property name="text">
+                                     <string>Strict</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="bipFromXPublicKeyStrictLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>40</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QComboBox" name="bipFromXPublicKeyStrictQComboBox">
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
+                                 </property>
+                                 <item>
+                                  <property name="text">
+                                   <string>True</string>
+                                  </property>
+                                 </item>
+                                 <item>
+                                  <property name="text">
+                                   <string>False</string>
+                                  </property>
+                                 </item>
+                                </widget>
                                </item>
                               </layout>
                              </widget>
@@ -5598,10 +5762,10 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="cardanoFromXPrivateKeyContainerQFrame">
-                           <layout class="QVBoxLayout" name="XPrivateKeyVLayout_3">
+                          <widget class="QFrame" name="cardanoFromXPrivateKeyStrictXPrivateKeyContainerQFrame">
+                           <layout class="QHBoxLayout" name="cardanoFromXPrivateKeyStrictXPrivateKeyContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>5</number>
+                             <number>15</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -5616,10 +5780,10 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QFrame" name="cardanoFromXPrivateKeyLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="XPrivateKeyLabelHLayout_3">
+                             <widget class="QFrame" name="cardanoFromXPrivateKeyContainerQFrame">
+                              <layout class="QVBoxLayout" name="XPublicKeyVLayout_4">
                                <property name="spacing">
-                                <number>15</number>
+                                <number>5</number>
                                </property>
                                <property name="leftMargin">
                                 <number>0</number>
@@ -5634,30 +5798,130 @@
                                 <number>0</number>
                                </property>
                                <item>
-                                <widget class="QLabel" name="cardanoFromXPrivateKeyQLabel">
-                                 <property name="text">
-                                  <string>XPrivate Key</string>
-                                 </property>
+                                <widget class="QFrame" name="cardanoFromXPrivateKeyLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_4">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="cardanoFromXPrivateKeyQLabel">
+                                    <property name="text">
+                                     <string>XPrivate Key</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="cardanoFromXPrivateKeyLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
                                 </widget>
                                </item>
                                <item>
-                                <spacer name="cardanoFromXPrivateKeyLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>764</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
+                                <widget class="QLineEdit" name="cardanoFromXPrivateKeyQLineEdit"/>
                                </item>
                               </layout>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QLineEdit" name="cardanoFromXPrivateKeyQLineEdit"/>
+                             <widget class="QFrame" name="cardanoFromXPrivateKeyStrictContainerQFrame">
+                              <layout class="QVBoxLayout" name="BIPFromXPrivateKeyPublicKeyTypeContainerQFrameVLayout_4">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="cardanoFromXPrivateKeyStrictLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="BIPFromXPrivateKeyPublicKeyTypeLabelContainerQFrameHLayout_4">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="cardanoFromXPrivateKeyStrictQLabel">
+                                    <property name="text">
+                                     <string>Strict</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="cardanoFromXPrivateKeyStrictLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>40</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QComboBox" name="cardanoFromXPrivateKeyStrictQComboBox">
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
+                                 </property>
+                                 <item>
+                                  <property name="text">
+                                   <string>True</string>
+                                  </property>
+                                 </item>
+                                 <item>
+                                  <property name="text">
+                                   <string>False</string>
+                                  </property>
+                                 </item>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
                             </item>
                            </layout>
                           </widget>
@@ -5926,10 +6190,10 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="cardanoFromXPublicKeyContainerQFrame">
-                           <layout class="QVBoxLayout" name="XPublicKeyVLayout_3">
+                          <widget class="QFrame" name="cardanoFromXPublicKeyStrictXPublicKeyContainerQFrame">
+                           <layout class="QHBoxLayout" name="cardanoFromXPublicKeyStrictXPublicKeyContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>5</number>
+                             <number>15</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -5944,10 +6208,10 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QFrame" name="cardanoFromXPublicKeyLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_3">
+                             <widget class="QFrame" name="cardanoFromXPublicKeyContainerQFrame">
+                              <layout class="QVBoxLayout" name="XPublicKeyVLayout_3">
                                <property name="spacing">
-                                <number>15</number>
+                                <number>5</number>
                                </property>
                                <property name="leftMargin">
                                 <number>0</number>
@@ -5962,30 +6226,130 @@
                                 <number>0</number>
                                </property>
                                <item>
-                                <widget class="QLabel" name="cardanoFromXPublicKeyQLabel">
-                                 <property name="text">
-                                  <string>XPublic Key</string>
-                                 </property>
+                                <widget class="QFrame" name="cardanoFromXPublicKeyLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_3">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="cardanoFromXPublicKeyQLabel">
+                                    <property name="text">
+                                     <string>XPublic Key</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="cardanoFromXPublicKeyLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
                                 </widget>
                                </item>
                                <item>
-                                <spacer name="cardanoFromXPublicKeyLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>764</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
+                                <widget class="QLineEdit" name="cardanoFromXPublicKeyQLineEdit"/>
                                </item>
                               </layout>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QLineEdit" name="cardanoFromXPublicKeyQLineEdit"/>
+                             <widget class="QFrame" name="cardanoFromXPublicKeyStrictContainerQFrame">
+                              <layout class="QVBoxLayout" name="BIPFromXPrivateKeyPublicKeyTypeContainerQFrameVLayout_3">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="cardanoFromXPublicKeyStrictLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="BIPFromXPrivateKeyPublicKeyTypeLabelContainerQFrameHLayout_3">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="cardanoFromXPublicKeyStrictQLabel">
+                                    <property name="text">
+                                     <string>Strict</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="cardanoFromXPublicKeyStrictLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>40</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QComboBox" name="cardanoFromXPublicKeyStrictQComboBox">
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
+                                 </property>
+                                 <item>
+                                  <property name="text">
+                                   <string>True</string>
+                                  </property>
+                                 </item>
+                                 <item>
+                                  <property name="text">
+                                   <string>False</string>
+                                  </property>
+                                 </item>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
                             </item>
                            </layout>
                           </widget>
@@ -14870,25 +15234,12 @@
             <number>0</number>
            </property>
            <item>
-            <spacer name="outputFrameTopContainerQFrameHSpacer">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
             <widget class="QFrame" name="outputWidgetTopContainerQFrame">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
+             <property name="minimumSize">
+              <size>
+               <width>200</width>
+               <height>0</height>
+              </size>
              </property>
              <layout class="QHBoxLayout" name="outputWidgetTopContainerQFrameHLayout">
               <property name="spacing">

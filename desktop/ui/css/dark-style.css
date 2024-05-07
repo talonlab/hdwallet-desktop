@@ -149,6 +149,7 @@ QComboBox QAbstractItemView  {
 }
 QComboBox QAbstractItemView::item {
     padding: 5px;
+    width: fit-content;
 }
 QComboBox QAbstractItemView::item:hover {
     outline: none;
@@ -198,65 +199,71 @@ QTextEdit {
 }
 
 
-QTabBar{
-  /*text-transform: uppercase;*/
-  font: 10pt "HDWallet";
+/* Styles for enabled QTabBar */
+QTabBar {
+    font: 10pt "HDWallet";
     font-weight: lighter;
     letter-spacing: 1px;
 }
 
-QTabWidget::pane {
-    border: 1px;
-}
-
-
 QTabBar::tab {
-  color: #ffffff;
-  border: 0px;
+    color: #ffffff;
+    border: 0px;
 }
 
 QTabBar::tab:bottom,
-QTabBar::tab:top{
-  padding: 0 16px;
-  height: 28px;
+QTabBar::tab:top {
+    padding: 0 16px;
+    height: 28px;
 }
 
 QTabBar::tab:left,
-QTabBar::tab:right{
-  padding: 16px 0;
-  width: 28px;
+QTabBar::tab:right {
+    padding: 16px 0;
+    width: 28px;
 }
 
 QTabBar::tab:top:selected,
 QTabBar::tab:top:hover {
-  color: #83b9ff;
-  border-bottom: 2px solid #83b9ff;
+    color: #83b9ff;
+    border-bottom: 2px solid #83b9ff;
 }
 
 QTabBar::tab:bottom:selected,
 QTabBar::tab:bottom:hover {
-  color: #83b9ff;
-  border-top: 2px solid #83b9ff;
+    color: #83b9ff;
+    border-top: 2px solid #83b9ff;
 }
 
 QTabBar::tab:right:selected,
 QTabBar::tab:right:hover {
-  color: #83b9ff;
-  border-left: 2px solid #83b9ff;
+    color: #83b9ff;
+    border-left: 2px solid #83b9ff;
 }
 
 QTabBar::tab:left:selected,
 QTabBar::tab:left:hover {
-  color: #83b9ff;
-  border-right: 2px solid #83b9ff;
+    color: #83b9ff;
+    border-right: 2px solid #83b9ff;
 }
 
 QTabBar QToolButton:hover,
 QTabBar QToolButton {
-  border: 0px;
-  background-color: #232629;
-  background: #232629;
+    border: 0px;
+    background-color: #232629;
+    background: #232629;
 }
+
+/* Styles for disabled QTabBar */
+QTabBar:disabled {
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(16, 21, 27, 0.5);
+}
+
+QTabBar::tab:disabled {
+    color: rgba(255, 255, 255, 0.5); /* Change the color of disabled tabs */
+}
+
 
 QScrollBar {
     border: none;
@@ -354,6 +361,15 @@ QGroupBox::title {
     left: 15px;
     padding: 0 3px 0 3px;
     background-color: rgb(16, 21, 27);
+}
+
+QGroupBox:disabled{
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(16, 21, 27, 0.5);
+}
+
+QGroupBox::title:disabled{
+    color: rgba(255, 255, 255, 0.5);
 }
 
 
