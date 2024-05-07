@@ -56,8 +56,6 @@ from hdwallet.seeds import (
     SEEDS
 )
 
-
-
 from ui.ui_hdwallet import Ui_MainWindow
 from widget.SvgButton import SvgButton
 
@@ -134,6 +132,9 @@ class MyMainWindow(QMainWindow):
         self._setup_dump_stack()
 
     def _setup_dump_stack(self):
+
+        self.script_semantics = ["P2WPKH", "'P2WPKH-In-P2SH", "P2WSH", "P2WSH-In-P2SH"]
+
         self.stack_hd_widgets = {
             'BIP32': "bipsPageQWidget",
             'BIP44': "bipsPageQWidget",
@@ -149,6 +150,7 @@ class MyMainWindow(QMainWindow):
 
         self.hd_allowed_derivation = {
             'BIP32': ["Custom", "BIP44", "BIP49", "BIP84", "BIP86", "BIP141", "CIP1852"],
+            'BIP32XPUB': ["Custom", "BIP141"],
             'BIP44': ["BIP44"],
             'BIP49': ["BIP49"],
             'BIP84': ["BIP84"],
@@ -244,13 +246,17 @@ class MyMainWindow(QMainWindow):
 
         #TODO: implement all hd
         if current_hd in ('BIP32', 'BIP44', 'BIP49', 'BIP84', 'BIP86', 'BIP141'):
+            if current_hd == 'BIP141':
+                semantic_indx = self.ui.bip141ScriptSemanticsQComboBox.currentIndex()
+                hd_kwargs["semantic"] = self.script_semantics[semantic_indx]
             hd = self._dump_bips(current_hd, dump_from, hd_kwargs)
 
-        derivation = self.__dumps_get_derivation(CRYPTOCURRENCIES.cryptocurrency(crypto))
-        hdwallet = hd.from_derivation(derivation=derivation)
-
-        self.println(json.dumps(hdwallet.dumps(exclude=exclude_set), indent=4, ensure_ascii=False))
-
+        if self.ui.derivationQGroupBox.isEnabled():
+            derivation = self.__dumps_get_derivation(CRYPTOCURRENCIES.cryptocurrency(crypto))
+            hd = hd.from_derivation(derivation=derivation)
+            self.println(json.dumps(hd.dumps(exclude=exclude_set), indent=4, ensure_ascii=False))
+        else:
+            self.println(json.dumps(hd.dump(exclude=exclude_set), indent=4, ensure_ascii=False))
 
     def __dumps_get_derivation(self, crypto):
         tab = self.ui.derivationsQTabWidget
@@ -290,7 +296,9 @@ class MyMainWindow(QMainWindow):
                     address=self.ui.bip86AddressQLineEdit.text()
                 )
         elif current_tab == "BIP141":
-            pass
+            return CustomDerivation(
+                path=self.ui.bip141PathQLineEdit.text()
+            )
         elif current_tab == "CIP1852":
             pass
         elif current_tab == "Electrum":
@@ -300,7 +308,6 @@ class MyMainWindow(QMainWindow):
 
 
     def _dump_bips(self, hd, dump_from, hd_kwargs):
-        #TODO: dump from all available methods
         if dump_from == "Entropy":
             hd_kwargs["language"] = self.ui.bipFromEntropyLanguageQComboBox.currentText().lower()
             hd_kwargs["passphrase"] = self.ui.bipFromEntropyPassphraseQLineEdit.text()
@@ -310,6 +317,49 @@ class MyMainWindow(QMainWindow):
                     entropy = self.ui.bipFromEntropyGenerateQLineEdit.text()
                 )
             )
+        elif dump_from == "Mnemonic":
+            hd_kwargs["passphrase"] = self.ui.bipFromMnemonicPassphraseQLineEdit.text()
+            hd_kwargs["public_key_type"] = self.ui.bipFromMnemonicPublicKeyTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_mnemonic(
+                BIP39Mnemonic(
+                    mnemonic = self.ui.bipFromMnemonicQLineEdit.text()
+                )
+            )
+        elif dump_from == "Private key":
+            hd_kwargs["public_key_type"] = self.ui.bipFromMnemonicPublicKeyTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_private_key(
+                    private_key=self.ui.bipFromPrivateKeyQLineEdit.text()
+                )
+        elif dump_from == "Public key":
+            hd_kwargs["public_key_type"] = self.ui.bipFromPublicKeyPublicKeyTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_public_key(
+                    public_key=self.ui.bipFromPublicKeyQLineEdit.text()
+                )
+        elif dump_from == "Seed":
+            hd_kwargs["public_key_type"] = self.ui.bipFromSeedPublicKeyTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_seed(
+                    BIP39Seed(
+                        seed=self.ui.bipFromSeedsQLineEdit.text()
+                    )
+                )
+        elif dump_from == "WIF":
+            hd_kwargs["public_key_type"] = self.ui.bipFromWIFPublicKeyTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_wif(
+                    wif=self.ui.bipFromWIFQLineEdit.text()
+                )
+        elif dump_from == "XPrivate key":
+            hd_kwargs["public_key_type"] = self.ui.bipFromXPrivateKeyPublicKeyTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_xprivate_key(
+                    xprivate_key=self.ui.bipFromXPrivateKeyQLineEdit.text(),
+                    strict=True
+                )
+        elif dump_from == "XPublic key":
+            hd_kwargs["public_key_type"] = self.ui.bipFromXPublicKeyPublicKeyTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_xpublic_key(
+                    xpublic_key=self.ui.bipFromXPublicKeyQLineEdit.text(),
+                    strict=True
+                )
+
 
     def _dumps_crypto_change(self):
         crypto = self.ui.dumpsCryptocurrencyQComboBox.currentText()
@@ -332,14 +382,24 @@ class MyMainWindow(QMainWindow):
         current_hd_widget  = self.stack_hd_widgets[current_hd]
         self.change_page("hdQStackedWidget", current_hd_widget)
 
-        keys = [key for key in self.stack_from_widgets[current_hd_widget] if key != "StackWidget"]
+        keys = []
+
+        for key in self.stack_from_widgets[current_hd_widget]:
+            if key == "StackWidget":
+                continue
+            if current_hd in {"BIP44", "BIP49", "BIP84", "BIP86"} and key == "XPublic key":
+                continue
+
+            keys.append(key)
+
         self.ui.dumpsFromQComboBox.clear()
         self.ui.dumpsFromQComboBox.addItems(sorted(keys))
         self.ui.dumpsFromQComboBox.setCurrentIndex(0)
 
+    def __filter_derivation_tab(self, k):
         ls_indx = 0
         for index in range(self.ui.derivationsQTabWidget.count() - 1, -1, -1):
-            if self.ui.derivationsQTabWidget.tabText(index) in self.hd_allowed_derivation[current_hd]:
+            if self.ui.derivationsQTabWidget.tabText(index) in self.hd_allowed_derivation[k]:
                 self.ui.derivationsQTabWidget.setTabEnabled(index, True)
                 ls_indx = index
             else:
@@ -358,6 +418,15 @@ class MyMainWindow(QMainWindow):
         current_from_widget = self.stack_from_widgets[current_hd_widget][dump_from]
 
         self.change_page(current_from_stack, current_from_widget)
+
+        is_drived = dump_from in ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"]
+        self.ui.derivationQGroupBox.setEnabled(is_drived)
+
+        if is_drived:
+            key = current_hd
+            if current_hd == "BIP32" and dump_from == "XPublic key":
+                key = 'BIP32XPUB'
+            self.__filter_derivation_tab(key)
 
     def _setup_generate_stack(self):
         self.ui.generateEntropyClientQComboBox.addItems(ENTROPIES.names())
