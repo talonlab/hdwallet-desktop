@@ -7,12 +7,11 @@ QWidget {
     letter-spacing: 1px;
     background-color: rgb(16, 21, 27);
     border: none;
-    /*border-radius: 0;*/
+    border-radius: 0;
 }
 QWidget:disabled{
     color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(16, 21, 27, 0.5);
-    /*border: none;*/
+    background-color: transparent;
 }
 
 QFrame{
@@ -23,7 +22,7 @@ QFrame{
 
 QFrame:disabled{
     color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(16, 21, 27, 0.5);
+    background-color: transparent;
 }
 
 QTextEdit QMenu::item,
@@ -263,7 +262,7 @@ QTabBar QToolButton {
 
 QTabBar:disabled {
     color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(16, 21, 27, 0.5);
+    background-color:  transparent;
     border: none;
 }
 
