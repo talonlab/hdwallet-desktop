@@ -95,6 +95,13 @@ class DetachedWindow(QWidget):
         super(DetachedWindow, self).show()
         self.update_terminal_ui()
 
+    def center_window(self):
+        # Get the screen resolution from the application
+        screen = QApplication.primaryScreen().geometry()
+        x = (screen.width() - self.width()) // 2
+        y = (screen.height() - self.height()) // 2
+        self.move(x, y)
+
 class MyMainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -856,13 +863,16 @@ class MyMainWindow(QMainWindow):
     def toggle_expand(self):
         if self.toggle_expand_terminal.isChecked():
             self.setWindowFlags(self.windowFlags() & ~Qt.WindowMaximizeButtonHint)
-            # ToDO remove resizing
+            self.setMaximumSize(
+                self.ui.hdWalletContainerQFrame.width(), self.ui.hdwalletMainQFrame.height()  # Set maximum size of main window
+            )
             self.showNormal()
 
             self.layout().removeWidget(self.ui.outputQFrame)
             self.detached_window = DetachedWindow(self)
-            self.detached_window.setWindowTitle("Hierarchical Deterministic Wallet - Output")
+            self.detached_window.setWindowTitle("Terminal")
             self.detached_window.resize(self.ui.outputQFrame.width(), self.ui.outputQFrame.height())
+            self.detached_window.setMinimumHeight(self.minimumHeight())
 
             layout = QVBoxLayout()
             layout.setContentsMargins(0, 0, 0, 0)
@@ -872,6 +882,8 @@ class MyMainWindow(QMainWindow):
             self.detached_window.show()
             self.detached_window.setStyleSheet(self.styleSheet())
             self.setMinimumWidth(0)
+            self.detached_window.center_window()
+            # self.center_window()
 
             if not self.isMaximized():
                 self.resize(self.width() - self.ui.outputQFrame.width(), self.height())
@@ -884,7 +896,12 @@ class MyMainWindow(QMainWindow):
             self.ui.centralwidget.layout().addWidget(self.ui.outputQFrame)
 
             self.setWindowFlags(self.windowFlags() | Qt.WindowMaximizeButtonHint)
-            # ToDO set resizing
+            self.setMaximumSize(
+                16777215, 16777215  # Removes maximum size of main window
+            )
+            self.ui.outputQFrame.setGeometry(QRect(
+                0, 0, 600, self.ui.outputQFrame.height()  # Fix from detached into attached
+            ))
             self.show()
 
     def load_stylesheet(self, path):
@@ -911,6 +928,13 @@ class MyMainWindow(QMainWindow):
 
     def resizeEvent(self, event) -> None:
         self.update_terminal_ui()
+
+    def center_window(self):
+        # Get the screen resolution from the application
+        screen = QApplication.primaryScreen().geometry()
+        x = (screen.width() - self.width()) // 2
+        y = (screen.height() - self.height()) // 2
+        self.move(x, y)
 
     def show(self):
         super(MyMainWindow, self).show()
