@@ -7,11 +7,12 @@ QWidget {
     letter-spacing: 1px;
     background-color: rgb(16, 21, 27);
     border: none;
-    border-radius: 0;
+    /*border-radius: 0;*/
 }
 QWidget:disabled{
     color: rgba(255, 255, 255, 0.5);
     background-color: rgba(16, 21, 27, 0.5);
+    /*border: none;*/
 }
 
 QFrame{
@@ -202,9 +203,9 @@ QTextEdit {
 
 
 /* Styles for enabled QTabBar */
-QTabWidget{
-    border: none;
-}
+/*QTabWidget{*/
+/*    border: none;*/
+/*}*/
 QTabBar {
     font: 10pt "HDWallet";
     font-weight: lighter;
@@ -260,14 +261,14 @@ QTabBar QToolButton {
     background: #232629;
 }
 
-/* Styles for disabled QTabBar */
 QTabBar:disabled {
     color: rgba(255, 255, 255, 0.5);
     background-color: rgba(16, 21, 27, 0.5);
+    border: none;
 }
 
 QTabBar::tab:disabled {
-    color: rgba(255, 255, 255, 0.5); /* Change the color of disabled tabs */
+    color: rgba(255, 255, 255, 0.5);
 }
 
 
@@ -324,7 +325,7 @@ QScrollBar:vertical {
 }
  QScrollBar::handle:vertical {
      background: #83b9ff;
-     min-height: 25px;
+     min-height: 50px;
      border-radius: 4px;
  }
  QScrollBar::add-line:vertical {
