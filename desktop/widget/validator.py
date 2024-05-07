@@ -5,7 +5,7 @@ import re
 class Validator:
     @staticmethod
     def validate_string(input_string):
-        pattern = r'^\d-\d$'
+        pattern = r'^\d[1]-\d[1]$'
         return bool(re.match(pattern, input_string))
 
     @staticmethod
