@@ -389,10 +389,12 @@ class MyMainWindow(QMainWindow):
             )
 
         elif current_tab == "CIP1852":
+            role = self.ui.cip1852ChangeQComboBox.currentText().lower()
+            postfix = "key" if role == "staking" else "chain"
             return CIP1852Derivation(
                     coin_type=crypto.COIN_TYPE,
                     account=self.ui.cip1852AccountQLineEdit.text(),
-                    change=f"{self.ui.cip1852ChangeQComboBox.currentText().lower()}-chain",
+                    role=f"{role}-{postfix}",
                     address=self.ui.cip1852AddressQLineEdit.text()
                 )
 
@@ -401,6 +403,7 @@ class MyMainWindow(QMainWindow):
                     change=self.ui.electrumChangeQLineEdit.text(),
                     address=self.ui.electrumAddressQLineEdit.text(),
                 )
+
         elif current_tab == "Monero":
             pass
 
@@ -460,7 +463,61 @@ class MyMainWindow(QMainWindow):
 
     def _dump_cardano(self, dump_from, hd_kwargs):
         if dump_from == "Entropy":
-            pass
+            hd_kwargs["language"] = self.ui.cardanoFromEntropyLanguageQComboBox.currentText().lower()
+            hd_kwargs["passphrase"] = self.ui.cardanoFromEntropyPassphraseQLineEdit.text()
+            hd_kwargs["cardano_type"] = self.ui.cardanoFromEntropyCardanoTypeQComboBox.currentText().lower()
+            hd_kwargs["address_type"] = self.ui.cardanoFromEntropyAddressTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_entropy(
+                BIP39Entropy(
+                    entropy = self.ui.cardanoFromEntropyGenerateQLineEdit.text()
+                )
+            )
+        elif dump_from == "Mnemonic":
+            hd_kwargs["passphrase"] = self.ui.cardanoFromMnemonicPassphraseQLineEdit.text()
+            hd_kwargs["cardano_type"] = self.ui.cardanoFromMnemonicCardanoTypeQComboBox.currentText().lower()
+            hd_kwargs["address_type"] = self.ui.cardanoFromMnemonicAddressTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_mnemonic(
+                BIP39Mnemonic(
+                    mnemonic = self.ui.cardanoFromMnemonicGenerateQLineEdit.text()
+                )
+            )
+        elif dump_from == "Private key":
+            hd_kwargs["cardano_type"] = self.ui.cardanoFromPrivateKeyCardanoTypeQComboBox.currentText().lower()
+            hd_kwargs["address_type"] = self.ui.cardanoFromPrivateKeyAddressTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_private_key(
+                    private_key=self.ui.cardanoFromPrivateKeyQLineEdit.text()
+                )
+        elif dump_from == "Public key":
+            hd_kwargs["cardano_type"] = self.ui.cardanoFromPublicKeyCardanoTypeQComboBox.currentText().lower()
+            hd_kwargs["address_type"] = self.ui.cardanoFromPublicKeyAddressTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_public_key(
+                    public_key=self.ui.cardanoFromPublicKeyQLineEdit.text()
+                )
+        elif dump_from == "Seed":
+            hd_kwargs["passphrase"] = self.ui.cardanoFromSeedPassphraseQLineEdit.text()
+            hd_kwargs["cardano_type"] = self.ui.cardanoFromSeedCardanoTypeQComboBox.currentText().lower()
+            hd_kwargs["address_type"] = self.ui.cardanoFromSeedAddressTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_seed(
+                    CardanoSeed(
+                        seed=self.ui.cardanoFromSeedQLineEdit.text()
+                    )
+                )
+        elif dump_from == "XPrivate key":
+            hd_kwargs["cardano_type"] = self.ui.cardanoFromXPrivateKeyCardanoTypeQComboBox.currentText().lower()
+            hd_kwargs["address_type"] = self.ui.cardanoFromXPrivateKeyAddressTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_xprivate_key(
+                    xprivate_key=self.ui.cardanoFromXPrivateKeyQLineEdit.text(),
+                    strict=True
+                )
+        elif dump_from == "XPublic key":
+            hd_kwargs["cardano_type"] = self.ui.cardanoFromXPublicKeyCardanoTypeQComboBox.currentText().lower()
+            hd_kwargs["address_type"] = self.ui.cardanoFromXPublicKeyAddressTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_xpublic_key(
+                    xpublic_key=self.ui.cardanoFromXPublicKeyQLineEdit.text(),
+                    strict=True
+                )
+
+
 
     def _dump_ev1(self, dump_from, hd_kwargs):
         if dump_from == "Entropy":
