@@ -6,6 +6,8 @@ QWidget {
     font: 10pt "Tahoma";
     letter-spacing: 1px;
     background-color: rgb(16, 21, 27);
+    border: none;
+    border-radius: 0;
 }
 QWidget:disabled{
     color: rgba(255, 255, 255, 0.5);
@@ -200,10 +202,14 @@ QTextEdit {
 
 
 /* Styles for enabled QTabBar */
+QTabWidget{
+    border: none;
+}
 QTabBar {
     font: 10pt "HDWallet";
     font-weight: lighter;
     letter-spacing: 1px;
+
 }
 
 QTabBar::tab {
