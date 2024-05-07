@@ -2,6 +2,7 @@ import os
 import subprocess
 import string
 import json
+import functools
 from random import choice
 from typing import *
 
@@ -41,7 +42,11 @@ from hdwallet.mnemonics import (
 
 from hdwallet.derivations import (
     CustomDerivation,BIP44Derivation, BIP49Derivation, BIP84Derivation,
-    BIP86Derivation, CHANGES
+    BIP86Derivation, ElectrumDerivation, CIP1852Derivation, CHANGES
+)
+
+from hdwallet.const import (
+    ELECTRUM_V2_MODES
 )
 
 from hdwallet.cryptocurrencies import Cardano, CRYPTOCURRENCIES
@@ -133,7 +138,7 @@ class MyMainWindow(QMainWindow):
 
     def _setup_dump_stack(self):
 
-        self.script_semantics = ["P2WPKH", "'P2WPKH-In-P2SH", "P2WSH", "P2WSH-In-P2SH"]
+        self.script_semantics = ["P2WPKH", "P2WPKH_IN_P2SH", "P2WSH", "P2WSH_IN_P2SH"]
 
         self.stack_hd_widgets = {
             'BIP32': "bipsPageQWidget",
@@ -148,6 +153,18 @@ class MyMainWindow(QMainWindow):
             'Monero': "moneroPageQWidget" 
         }
 
+        self.hd_drivable_methods = {
+            'BIP32': ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"],
+            'BIP44': ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"],
+            'BIP49': ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"],
+            'BIP84': ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"],
+            'BIP86': ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"],
+            'BIP141': ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"],
+            'Electrum-V1': ["Entropy", "Mnemonic", "Private key", "Public key", "Seed", "WIF"],
+            'Electrum-V2': ["Entropy", "Mnemonic", "Seed"],
+            'Cardano': ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"]
+        }
+
         self.hd_allowed_derivation = {
             'BIP32': ["Custom", "BIP44", "BIP49", "BIP84", "BIP86", "BIP141", "CIP1852"],
             'BIP32XPUB': ["Custom", "BIP141"],
@@ -156,7 +173,7 @@ class MyMainWindow(QMainWindow):
             'BIP84': ["BIP84"],
             'BIP86': ["BIP86"],
             'BIP141': ["BIP141"],
-            'Cardano': ["Custom", "CIP1852"],
+            'Cardano': ["Custom", "BIP44", "CIP1852"],
             'Electrum-V1': ["Electrum"],
             'Electrum-V2': ["Electrum"],
             'Monero': ["Monero"] 
@@ -222,7 +239,63 @@ class MyMainWindow(QMainWindow):
         self.ui.bipFromEntropyLanguageQComboBox.addItems([i.title() for i in BIP39Mnemonic.languages])
         self.ui.bipFromEntropyLanguageQComboBox.setCurrentText("English")
 
+        self.ui.bipFromEntropyLanguageQComboBox.clear()
+        self.ui.bipFromEntropyLanguageQComboBox.addItems([i.title() for i in BIP39Mnemonic.languages])
+        self.ui.bipFromEntropyLanguageQComboBox.setCurrentText("English")
+
+        self.ui.cardanoFromEntropyLanguageQComboBox.clear()
+        self.ui.cardanoFromEntropyLanguageQComboBox.addItems([i.title() for i in BIP39Mnemonic.languages])
+        self.ui.cardanoFromEntropyLanguageQComboBox.setCurrentText("English")
+
+        self.ui.electrumV2FromEntropyLanguageQComboBox.clear()
+        self.ui.electrumV2FromEntropyLanguageQComboBox.addItems([i.title() for i in ElectrumV2Mnemonic.languages])
+        self.ui.electrumV2FromEntropyLanguageQComboBox.setCurrentText("English")
+
+        self.ui.electrumV2FromEntropyMnemonicTypeQComboBox.addItems([i.title() for i in ElectrumV2Mnemonic.mnemonic_types.keys()])
+        self.ui.electrumV2FromEntropyModeQComboBox.addItems([i.title() for i in ELECTRUM_V2_MODES.get_modes()])
+        self.ui.electrumV2FromEntropyMnemonicTypeQComboBox.setCurrentIndex(0)
+        self.ui.electrumV2FromEntropyModeQComboBox.setCurrentIndex(0)
+
+        self.ui.electrumV2FromMnemonicMnemonicTypeQComboBox.addItems([i.title() for i in ElectrumV2Mnemonic.mnemonic_types.keys()])
+        self.ui.electrumV2FromMnemonicModeQComboBox.addItems([i.title() for i in ELECTRUM_V2_MODES.get_modes()])
+        self.ui.electrumV2FromMnemonicMnemonicTypeQComboBox.setCurrentIndex(0)
+        self.ui.electrumV2FromMnemonicModeQComboBox.setCurrentIndex(0)
+
+        self.ui.electrumV2FromSeedModeQComboBox.addItems([i.title() for i in ELECTRUM_V2_MODES.get_modes()])
+        self.ui.electrumV2FromSeedModeQComboBox.setCurrentIndex(0)
+
+        cardano_and_address_type = [
+            (self.ui.cardanoFromEntropyCardanoTypeQComboBox, self.ui.cardanoFromEntropyAddressTypeQComboBox),
+            (self.ui.cardanoFromMnemonicCardanoTypeQComboBox, self.ui.cardanoFromMnemonicAddressTypeQComboBox),
+            (self.ui.cardanoFromPrivateKeyCardanoTypeQComboBox, self.ui.cardanoFromPrivateKeyAddressTypeQComboBox),
+            (self.ui.cardanoFromPublicKeyCardanoTypeQComboBox, self.ui.cardanoFromPublicKeyAddressTypeQComboBox),
+            (self.ui.cardanoFromSeedCardanoTypeQComboBox, self.ui.cardanoFromSeedAddressTypeQComboBox),
+            (self.ui.cardanoFromXPrivateKeyCardanoTypeQComboBox, self.ui.cardanoFromXPrivateKeyAddressTypeQComboBox),
+            (self.ui.cardanoFromXPublicKeyCardanoTypeQComboBox, self.ui.cardanoFromXPublicKeyAddressTypeQComboBox),
+        ]
+
+        cardano_list = [i.title() for i in Cardano.TYPES.get_cardano_types()]
+        c_address_list = ["Payment", "Staking"]
+
+        for pair in cardano_and_address_type:
+            pair[0].clear()
+            pair[1].clear()
+            pair[0].addItems(cardano_list)
+            pair[1].addItems(c_address_list)
+            pair[0].currentIndexChanged.connect(functools.partial(self.__pair_ca_address_type, pair[1], pair[0]))
+            pair[0].setCurrentIndex(0)
+
         self.ui.dumpsGenerateQPushButton.clicked.connect(self._dumps)
+
+
+    def __pair_ca_address_type(self, c_addr, c_list, idx):
+        if c_list.currentText().lower().startswith("shelley"):
+            c_addr.setEnabled(True)
+            c_addr.setCurrentIndex(0)
+        else:
+            c_addr.setCurrentIndex(-1)
+            c_addr.setEnabled(False)
+
 
     def _dumps(self):
         try:
@@ -250,6 +323,14 @@ class MyMainWindow(QMainWindow):
                 semantic_indx = self.ui.bip141ScriptSemanticsQComboBox.currentIndex()
                 hd_kwargs["semantic"] = self.script_semantics[semantic_indx]
             hd = self._dump_bips(current_hd, dump_from, hd_kwargs)
+        elif current_hd == 'Cardano':
+            hd = self._dump_cardano(dump_from, hd_kwargs)
+        elif current_hd == 'Electrum-V1':
+            hd = self._dump_ev1(dump_from, hd_kwargs)
+        elif current_hd == 'Electrum-V2':
+            hd = self._dump_ev2(dump_from, hd_kwargs)
+        elif current_hd == 'Monero':
+            pass
 
         if self.ui.derivationQGroupBox.isEnabled():
             derivation = self.__dumps_get_derivation(CRYPTOCURRENCIES.cryptocurrency(crypto))
@@ -299,10 +380,20 @@ class MyMainWindow(QMainWindow):
             return CustomDerivation(
                 path=self.ui.bip141PathQLineEdit.text()
             )
+
         elif current_tab == "CIP1852":
-            pass
+            return CIP1852Derivation(
+                    coin_type=crypto.COIN_TYPE,
+                    account=self.ui.cip1852AccountQLineEdit.text(),
+                    change=f"{self.ui.cip1852ChangeQComboBox.currentText().lower()}-chain",
+                    address=self.ui.cip1852AddressQLineEdit.text()
+                )
+
         elif current_tab == "Electrum":
-            pass
+            return  ElectrumDerivation(
+                    change=self.ui.electrumChangeQLineEdit.text(),
+                    address=self.ui.electrumAddressQLineEdit.text(),
+                )
         elif current_tab == "Monero":
             pass
 
@@ -359,6 +450,87 @@ class MyMainWindow(QMainWindow):
                     xpublic_key=self.ui.bipFromXPublicKeyQLineEdit.text(),
                     strict=True
                 )
+
+    def _dump_cardano(self, dump_from, hd_kwargs):
+        if dump_from == "Entropy":
+            pass
+
+    def _dump_ev1(self, dump_from, hd_kwargs):
+        if dump_from == "Entropy":
+            hd_kwargs["language"] = self.ui.electrumV1FromEntropyLanguageQComboBox.currentText().lower()
+            hd_kwargs["passphrase"] = self.ui.electrumV1FromEntropyPassphraseGenerateQLineEdit.text()
+            hd_kwargs["public_key_type"] = self.ui.electrumV1FromEntropyPublicKeyTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_entropy(
+                ElectrumV1Entropy(
+                    entropy = self.ui.electrumV1FromEntropyQLineEdit.text()
+                )
+            )
+        elif dump_from == "Mnemonic":
+            hd_kwargs["passphrase"] = self.ui.electrumV1FromMnemonicPassphraseGenerateQLineEdit.text()
+            hd_kwargs["public_key_type"] = self.ui.electrumV1FromMnemonicPublicKeyTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_mnemonic(
+                ElectrumV1Mnemonic(
+                    mnemonic = self.ui.electrumV1FromMnemonicGenerateQLineEdit.text()
+                )
+            )
+
+        elif dump_from == "Private key":
+            hd_kwargs["public_key_type"] = self.ui.electrumV1FromPrivateKeyPublicKeyTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_private_key(
+                    private_key=self.ui.electrumV1FromPrivateKeyQLineEdit.text()
+                )
+        elif dump_from == "Public key":
+            hd_kwargs["public_key_type"] = self.ui.electrumV1FromPublicKeyPublicKeyTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_public_key(
+                    public_key=self.ui.electrumV1FromPublicKeyQLineEdit.text()
+                )
+        elif dump_from == "Seed":
+            hd_kwargs["public_key_type"] = self.ui.electrumV1FromSeedPublicKeyTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_seed(
+                    ElectrumV1Seed(
+                        seed=self.ui.electrumV1FromSeedQLineEdit.text()
+                    )
+                )
+        elif dump_from == "WIF":
+            hd_kwargs["public_key_type"] = self.ui.electrumV1FromWIFPublicKeyTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_wif(
+                    wif=self.ui.electrumV1FromWIFQLineEdit.text()
+                )
+
+    def _dump_ev2(self, dump_from, hd_kwargs):
+        if dump_from == "Entropy":
+            hd_kwargs["mode"] = self.ui.electrumV2FromEntropyModeQComboBox.currentText().lower()
+            hd_kwargs["mnemonic_type"] = self.ui.electrumV2FromEntropyMnemonicTypeQComboBox.currentText().lower()
+            hd_kwargs["language"] = self.ui.electrumV2FromEntropyLanguageQComboBox.currentText().lower()
+            hd_kwargs["passphrase"] = self.ui.electrumV2FromEntropyGenerateQLineEdit.text()
+            hd_kwargs["public_key_type"] = self.ui.electrumV2FromEntropyPublicKeyTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_entropy(
+                ElectrumV2Entropy(
+                    entropy = self.ui.electrumV2FromEntropyGenerateQLineEdit.text()
+                )
+            )
+
+        elif dump_from == "Mnemonic":
+            mnemonic_type = self.ui.electrumV2FromMnemonicMnemonicTypeQComboBox.currentText().lower()
+            hd_kwargs["mode"] = self.ui.electrumV2FromMnemonicModeQComboBox.currentText().lower()
+            hd_kwargs["mnemonic_type"] = mnemonic_type
+            hd_kwargs["passphrase"] = self.ui.electrumV2FromMnemonicPassphraseGenerateQLineEdit.text()
+            hd_kwargs["public_key_type"] = self.ui.electrumV2FromMnemonicPublicKeyTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_mnemonic(
+                ElectrumV2Mnemonic(
+                    mnemonic = self.ui.electrumV2FromMnemonicGenerateQLineEdit.text(),
+                    mnemonic_type=mnemonic_type
+                )
+            )
+
+        elif dump_from == "Seed":
+            hd_kwargs["mode"] = self.ui.electrumV2FromSeedModeQComboBox.currentText().lower()
+            hd_kwargs["public_key_type"] = self.ui.electrumV2FromSeedPublicKeyTypeQComboBox.currentText().lower()
+            return HDWallet(**hd_kwargs).from_seed(
+                ElectrumV2Seed(
+                    seed = self.ui.electrumV2FromSeedsQLineEdit.text()
+                )
+            )
 
 
     def _dumps_crypto_change(self):
@@ -419,7 +591,7 @@ class MyMainWindow(QMainWindow):
 
         self.change_page(current_from_stack, current_from_widget)
 
-        is_drived = dump_from in ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"]
+        is_drived = dump_from in self.hd_drivable_methods[current_hd]
         self.ui.derivationQGroupBox.setEnabled(is_drived)
 
         if is_drived:
@@ -457,9 +629,9 @@ class MyMainWindow(QMainWindow):
         self.ui.generatePassphraseNumberQCheckBox.setChecked(True)
         self.ui.generatePassphraseCharacterQCheckBox.setChecked(True)
 
-        self.ui.generateSeedCardanoTypeQComboBox.addItems(Cardano.TYPES.get_cardano_types())
-        self.ui.generateSeedMnemonicTypeQComboBox.addItems(ElectrumV2Mnemonic.mnemonic_types.keys())
-        self.ui.generateMnemonicTypeQComboBox.addItems(ElectrumV2Mnemonic.mnemonic_types.keys())
+        self.ui.generateSeedCardanoTypeQComboBox.addItems([i.title() for i in Cardano.TYPES.get_cardano_types()])
+        self.ui.generateSeedMnemonicTypeQComboBox.addItems([i.title() for i in ElectrumV2Mnemonic.mnemonic_types.keys()])
+        self.ui.generateMnemonicTypeQComboBox.addItems([i.title() for i in ElectrumV2Mnemonic.mnemonic_types.keys()])
 
         self.ui.generatePassphraseQPushButton.clicked.connect(self._generate_passphrase)
 
@@ -535,7 +707,7 @@ class MyMainWindow(QMainWindow):
         }
 
         if ElectrumV2Seed.name() == mnemonic_client:
-            kwargs["mnemonic_type"] =  self.ui.generateMnemonicTypeQComboBox.currentText()
+            kwargs["mnemonic_type"] =  self.ui.generateMnemonicTypeQComboBox.currentText().lower()
 
         if self.ui.generateMnemonicWordsQRadioButton.isChecked():
             kwargs["words"] = int(word)
@@ -577,17 +749,17 @@ class MyMainWindow(QMainWindow):
             self.ui.generateSeedPassphraseGenerateContainerQFrame.setEnabled(True)
 
     def _cardano_type_changed(self):
-        cardano_type = self.ui.generateSeedCardanoTypeQComboBox.currentText() 
+        cardano_type = self.ui.generateSeedCardanoTypeQComboBox.currentText().lower() 
         if cardano_type == 'byron-ledger' or cardano_type == 'shelley-ledger':
-            self.ui.generateSeedPassphraseGenerateQLineEdit.setEnabled(True)
+            self.ui.generateSeedPassphraseGenerateContainerQFrame.setEnabled(True)
         else:
             self.ui.generateSeedPassphraseGenerateQLineEdit.setText(None)
             self.ui.generateSeedPassphraseGenerateContainerQFrame.setEnabled(False)
 
     def _generate_seed(self):
         seed_client = self.ui.generateSeedClientQComboBox.currentText()
-        mnemonic_type = self.ui.generateSeedMnemonicTypeQComboBox.currentText()
-        cardano_type = self.ui.generateSeedCardanoTypeQComboBox.currentText()
+        mnemonic_type = self.ui.generateSeedMnemonicTypeQComboBox.currentText().lower()
+        cardano_type = self.ui.generateSeedCardanoTypeQComboBox.currentText().lower()
         mnemonic = self.ui.generateSeedMnemonicQLineEdit.text()
         passphrase = self.ui.generateSeedPassphraseGenerateQLineEdit.text()
         output = None
