@@ -3,6 +3,7 @@ import subprocess
 import string
 import json
 from random import choice
+from typing import *
 
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QWidget, 
@@ -68,6 +69,28 @@ class DetachedWindow(QWidget):
     def closeEvent(self, event):
         self.main_window.toggle_expand_terminal.setChecked(False)
         self.main_window.toggle_expand()
+
+    def update_terminal_ui(self):
+        noLayoutQWidget: QWidget = self.layout().itemAt(0).widget().findChild(QWidget, "noLayoutQWidget")
+        outputWidgetTopContainerQWidget: QWidget = self.layout().itemAt(0).widget().findChild(QWidget, "outputWidgetTopContainerQWidget")
+        outputTerminalQWidget: QWidget = self.layout().itemAt(0).widget().findChild(QWidget, "outputTerminalQWidget")
+        outputWidgetTopContainerQFrame: QFrame = self.layout().itemAt(0).widget().findChild(QFrame, "outputWidgetTopContainerQFrame")
+        outputWidgetTopContainerQWidget.setGeometry(QRect(
+            (noLayoutQWidget.width() - outputWidgetTopContainerQFrame.width()), 0,
+            outputWidgetTopContainerQFrame.width(), outputWidgetTopContainerQWidget.height()
+        ))
+        outputTerminalQWidget.setGeometry(QRect(
+            0, 0, noLayoutQWidget.width(), noLayoutQWidget.height()
+        ))
+        outputWidgetTopContainerQWidget.raise_()
+        outputTerminalQWidget.lower()
+
+    def resizeEvent(self, event) -> None:
+        self.update_terminal_ui()
+
+    def show(self):
+        super(DetachedWindow, self).show()
+        self.update_terminal_ui()
 
 class MyMainWindow(QMainWindow):
     def __init__(self):
@@ -591,7 +614,8 @@ class MyMainWindow(QMainWindow):
 
     def toggle_expand(self):
         if self.toggle_expand_terminal.isChecked():
-            self.setWindowFlags(self.windowFlags() & ~Qt.WindowMaximizeButtonHint)     
+            self.setWindowFlags(self.windowFlags() & ~Qt.WindowMaximizeButtonHint)
+            # ToDO remove resizing
             self.showNormal()
 
             self.layout().removeWidget(self.ui.outputQFrame)
@@ -619,6 +643,7 @@ class MyMainWindow(QMainWindow):
             self.ui.centralwidget.layout().addWidget(self.ui.outputQFrame)
 
             self.setWindowFlags(self.windowFlags() | Qt.WindowMaximizeButtonHint)
+            # ToDO set resizing
             self.show()
 
     def load_stylesheet(self, path):
@@ -633,7 +658,6 @@ class MyMainWindow(QMainWindow):
         super().closeEvent(event)
 
     def update_terminal_ui(self):
-        print(self.ui.outputWidgetTopContainerQFrame.width())
         self.ui.outputWidgetTopContainerQWidget.setGeometry(QRect(
             (self.ui.noLayoutQWidget.width() - self.ui.outputWidgetTopContainerQFrame.width()), 0,
             self.ui.outputWidgetTopContainerQFrame.width(), self.ui.outputWidgetTopContainerQWidget.height()
