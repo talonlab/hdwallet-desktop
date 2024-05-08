@@ -7,6 +7,12 @@ from random import choice
 from typing import *
 
 from PySide6.QtWidgets import (
+        QPushButton, QLineEdit, QLayout, QWidget, QApplication, QMainWindow
+    )
+from PySide6.QtCore import QSize
+from PySide6.QtGui import QGuiApplication
+from PySide6.QtSvgWidgets import QSvgWidget
+from PySide6.QtWidgets import (
     QApplication, QMainWindow, QWidget, 
     QPushButton, QVBoxLayout, QHBoxLayout, QFrame,
     QStackedWidget, QSizePolicy
@@ -64,6 +70,28 @@ from hdwallet.seeds import (
 from ui.ui_hdwallet import Ui_MainWindow
 from widget.SvgButton import SvgButton
 
+
+def clear_layout(layout: QLayout, delete: bool = True) -> None:
+    if layout is not None:
+        while layout.count():
+            item = layout.takeAt(0)
+            widget = item.widget()
+            if widget is not None and delete:
+                widget.deleteLater()
+            else:
+                clear_layout(item.layout())
+
+
+def put_svg(layout: QLayout, path: str, width: int, height: int) ->  QSvgWidget:
+    clear_layout(layout)
+    svg = QSvgWidget(path)
+    svg.setMinimumSize(QSize(width, height))
+    svg.setMaximumSize(QSize(width, height))
+    svg.setStyleSheet("background: transparent")
+    layout.addWidget(svg)
+    return svg
+
+
 class DetachedWindow(QWidget):
     def __init__(self, p):
         super().__init__()
@@ -115,6 +143,8 @@ class MyMainWindow(QMainWindow):
         self.setWindowTitle("Hierarchical Deterministic Wallet")
 
         self.load_stylesheet(os.path.join(os.path.dirname(__file__), "ui/css/dark-style.css"))
+
+        put_svg(self.ui.hdwalletLogoHLayout, os.path.join(os.path.dirname(__file__), "ui/images/11.svg"), 132.04, 45)
 
         self.toggle_expand_terminal = SvgButton(
             parent_widget=self.ui.expandAndCollapseTerminalQFrame,
