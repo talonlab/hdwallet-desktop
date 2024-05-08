@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletdUxRSE.ui'
+## Form generated from reading UI file 'hdwalletgPAgAb.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.0
 ##
@@ -6659,7 +6659,7 @@ class Ui_MainWindow(object):
         self.cardanoQStackedWidget.setCurrentIndex(0)
         self.electrumV1QStackedWidget.setCurrentIndex(2)
         self.electrumV2QStackedWidget.setCurrentIndex(2)
-        self.moneroQStackedWidget.setCurrentIndex(0)
+        self.moneroQStackedWidget.setCurrentIndex(5)
         self.derivationsQTabWidget.setCurrentIndex(8)
 
 

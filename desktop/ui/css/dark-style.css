@@ -202,8 +202,9 @@ QTextEdit {
 
 
 /* Styles for enabled QTabBar */
-/*QTabWidget{*/
+/*QTabWidget QWidget{*/
 /*    border: none;*/
+
 /*}*/
 QTabBar {
     font: 10pt "HDWallet";
@@ -211,6 +212,10 @@ QTabBar {
     letter-spacing: 1px;
 
 }
+QTabBar, QTabBar::tab {
+    border: none;
+}
+
 
 QTabBar::tab {
     color: #ffffff;
@@ -369,6 +374,15 @@ QGroupBox:disabled{
     color: rgba(255, 255, 255, 0.5);
     background-color: rgba(16, 21, 27, 0.5);
 }
+QGroupBox:disabled QTabBar::tab:disabled,
+QGroupBox:disabled QTabBar::tab:top:disabled,
+QGroupBox:disabled QTabWidget QWidget:disabled,
+QTabBar::tab:top:selected QGroupBox:disabled {
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgb(16, 21, 27);
+    border-top: 2px solid rgb(16, 21, 27);
+}
+
 
 QGroupBox::title:disabled{
     color: rgba(255, 255, 255, 0.5);
@@ -415,6 +429,11 @@ QRadioButton::indicator:checked {
 #outputTerminalQLineEdit{
     background-color: rgba(25, 30, 36, 0.5);
 }
+
+QTabBar, QTabBar::tab, QTabBar::tab:hover, QTabBar::tab:focus {
+    border: none;
+}
+
 
 
 
