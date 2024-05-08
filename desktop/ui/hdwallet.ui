@@ -12288,7 +12288,7 @@
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
-                      <widget class="QWidget" name="customQStackedWidgetPage" native="true">
+                      <widget class="QWidget" name="customQStackedWidgetPage">
                        <layout class="QHBoxLayout" name="BIP32HLayout">
                         <property name="spacing">
                          <number>15</number>
@@ -12485,7 +12485,7 @@
                         </item>
                        </layout>
                       </widget>
-                      <widget class="QWidget" name="bip44QStackedWidgetPage" native="true">
+                      <widget class="QWidget" name="bip44QStackedWidgetPage">
                        <layout class="QHBoxLayout" name="BIP44HLayout">
                         <property name="spacing">
                          <number>15</number>
@@ -12877,7 +12877,7 @@
                         </item>
                        </layout>
                       </widget>
-                      <widget class="QWidget" name="bip49QStackedWidgetPage" native="true">
+                      <widget class="QWidget" name="bip49QStackedWidgetPage">
                        <layout class="QHBoxLayout" name="BIP49HLayout">
                         <property name="spacing">
                          <number>15</number>
@@ -13269,7 +13269,7 @@
                         </item>
                        </layout>
                       </widget>
-                      <widget class="QWidget" name="bip84QStackedWidgetPage" native="true">
+                      <widget class="QWidget" name="bip84QStackedWidgetPage">
                        <layout class="QHBoxLayout" name="BIP84HLayout">
                         <property name="spacing">
                          <number>15</number>
@@ -13661,7 +13661,7 @@
                         </item>
                        </layout>
                       </widget>
-                      <widget class="QWidget" name="bip86QStackedWidgetPage" native="true">
+                      <widget class="QWidget" name="bip86QStackedWidgetPage">
                        <layout class="QHBoxLayout" name="horizontalLayout_19">
                         <property name="spacing">
                          <number>15</number>
@@ -14053,7 +14053,7 @@
                         </item>
                        </layout>
                       </widget>
-                      <widget class="QWidget" name="bip141QStackedWidgetPage" native="true">
+                      <widget class="QWidget" name="bip141QStackedWidgetPage">
                        <layout class="QHBoxLayout" name="BIP141HLayout">
                         <property name="spacing">
                          <number>15</number>
@@ -14233,7 +14233,7 @@
                         </item>
                        </layout>
                       </widget>
-                      <widget class="QWidget" name="cip1852QStackedWidgetPage" native="true">
+                      <widget class="QWidget" name="cip1852QStackedWidgetPage">
                        <layout class="QHBoxLayout" name="horizontalLayout_5">
                         <property name="spacing">
                          <number>15</number>
@@ -14630,7 +14630,7 @@
                         </item>
                        </layout>
                       </widget>
-                      <widget class="QWidget" name="electrumQStackedWidgetPage" native="true">
+                      <widget class="QWidget" name="electrumQStackedWidgetPage">
                        <layout class="QHBoxLayout" name="ElectrumQWidgetHLayout">
                         <property name="spacing">
                          <number>15</number>
@@ -14793,7 +14793,7 @@
                         </item>
                        </layout>
                       </widget>
-                      <widget class="QWidget" name="moneroQStackedWidgetPage" native="true">
+                      <widget class="QWidget" name="moneroQStackedWidgetPage">
                        <layout class="QHBoxLayout" name="MoneroQWidgetHLayout">
                         <property name="spacing">
                          <number>15</number>
@@ -15066,7 +15066,7 @@
                         </widget>
                        </item>
                        <item>
-                        <widget class="QComboBox" name="dumpsormatQComboBox">
+                        <widget class="QComboBox" name="dumpsFormatQComboBox">
                          <property name="placeholderText">
                           <string>(Select)</string>
                          </property>

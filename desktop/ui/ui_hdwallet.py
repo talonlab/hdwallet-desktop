@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletwWLYdJ.ui'
+## Form generated from reading UI file 'hdwalletnDnIJP.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -6553,12 +6553,12 @@ class Ui_MainWindow(object):
 
         self.FormatVLayout.addWidget(self.dumpsFormatLabelContainerQFrame)
 
-        self.dumpsormatQComboBox = QComboBox(self.dumpsformatQFrame)
-        self.dumpsormatQComboBox.addItem("")
-        self.dumpsormatQComboBox.addItem("")
-        self.dumpsormatQComboBox.setObjectName(u"dumpsormatQComboBox")
+        self.dumpsFormatQComboBox = QComboBox(self.dumpsformatQFrame)
+        self.dumpsFormatQComboBox.addItem("")
+        self.dumpsFormatQComboBox.addItem("")
+        self.dumpsFormatQComboBox.setObjectName(u"dumpsFormatQComboBox")
 
-        self.FormatVLayout.addWidget(self.dumpsormatQComboBox)
+        self.FormatVLayout.addWidget(self.dumpsFormatQComboBox)
 
 
         self.CryptocurrencyAndFormatHLayout.addWidget(self.dumpsformatQFrame)
@@ -7384,10 +7384,10 @@ class Ui_MainWindow(object):
         self.moneroMajorQLineEdit.setText("")
         self.moneroMajorQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.dumpsFormatQLabel.setText(QCoreApplication.translate("MainWindow", u"Format", None))
-        self.dumpsormatQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"JSON", None))
-        self.dumpsormatQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"CSV", None))
+        self.dumpsFormatQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"JSON", None))
+        self.dumpsFormatQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"CSV", None))
 
-        self.dumpsormatQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
+        self.dumpsFormatQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.dumpsExcludeOrIncludeQLabel.setText(QCoreApplication.translate("MainWindow", u"Exclude / Include", None))
         self.dumpsGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
         self.versionQLabel.setText(QCoreApplication.translate("MainWindow", u"Version", None))
