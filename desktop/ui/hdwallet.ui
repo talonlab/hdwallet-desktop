@@ -12333,7 +12333,7 @@
                      <number>10</number>
                     </property>
                     <item>
-                     <widget class="QFrame" name="tabButtonsContainerQFrame">
+                     <widget class="QFrame" name="derivationTabButtonsContainerQFrame">
                       <layout class="QHBoxLayout" name="horizontalLayout">
                        <property name="spacing">
                         <number>0</number>
@@ -12414,7 +12414,7 @@
                         </widget>
                        </item>
                        <item>
-                        <spacer name="tabButtonsContainerQFrameHSpacer">
+                        <spacer name="derivationTabButtonsContainerQFrameHSpacer">
                          <property name="orientation">
                           <enum>Qt::Horizontal</enum>
                          </property>

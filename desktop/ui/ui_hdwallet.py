@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletRoZAtS.ui'
+## Form generated from reading UI file 'hdwalletMtpcRv.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -5350,63 +5350,63 @@ class Ui_MainWindow(object):
         self.DerivationVLayout.setSpacing(5)
         self.DerivationVLayout.setObjectName(u"DerivationVLayout")
         self.DerivationVLayout.setContentsMargins(10, 15, 10, 10)
-        self.tabButtonsContainerQFrame = QFrame(self.derivationQGroupBox)
-        self.tabButtonsContainerQFrame.setObjectName(u"tabButtonsContainerQFrame")
-        self.horizontalLayout = QHBoxLayout(self.tabButtonsContainerQFrame)
+        self.derivationTabButtonsContainerQFrame = QFrame(self.derivationQGroupBox)
+        self.derivationTabButtonsContainerQFrame.setObjectName(u"derivationTabButtonsContainerQFrame")
+        self.horizontalLayout = QHBoxLayout(self.derivationTabButtonsContainerQFrame)
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.customTabQPushButton = QPushButton(self.tabButtonsContainerQFrame)
+        self.customTabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.customTabQPushButton.setObjectName(u"customTabQPushButton")
 
         self.horizontalLayout.addWidget(self.customTabQPushButton)
 
-        self.bip44TabQPushButton = QPushButton(self.tabButtonsContainerQFrame)
+        self.bip44TabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.bip44TabQPushButton.setObjectName(u"bip44TabQPushButton")
 
         self.horizontalLayout.addWidget(self.bip44TabQPushButton)
 
-        self.bip49TabQPushButton = QPushButton(self.tabButtonsContainerQFrame)
+        self.bip49TabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.bip49TabQPushButton.setObjectName(u"bip49TabQPushButton")
 
         self.horizontalLayout.addWidget(self.bip49TabQPushButton)
 
-        self.bip84TabQPushButton = QPushButton(self.tabButtonsContainerQFrame)
+        self.bip84TabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.bip84TabQPushButton.setObjectName(u"bip84TabQPushButton")
 
         self.horizontalLayout.addWidget(self.bip84TabQPushButton)
 
-        self.bip86TabQPushButton = QPushButton(self.tabButtonsContainerQFrame)
+        self.bip86TabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.bip86TabQPushButton.setObjectName(u"bip86TabQPushButton")
 
         self.horizontalLayout.addWidget(self.bip86TabQPushButton)
 
-        self.bip141TabQPushButton = QPushButton(self.tabButtonsContainerQFrame)
+        self.bip141TabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.bip141TabQPushButton.setObjectName(u"bip141TabQPushButton")
 
         self.horizontalLayout.addWidget(self.bip141TabQPushButton)
 
-        self.cip1852TabQPushButton = QPushButton(self.tabButtonsContainerQFrame)
+        self.cip1852TabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.cip1852TabQPushButton.setObjectName(u"cip1852TabQPushButton")
 
         self.horizontalLayout.addWidget(self.cip1852TabQPushButton)
 
-        self.electrumTabQPushButton = QPushButton(self.tabButtonsContainerQFrame)
+        self.electrumTabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.electrumTabQPushButton.setObjectName(u"electrumTabQPushButton")
 
         self.horizontalLayout.addWidget(self.electrumTabQPushButton)
 
-        self.moneroTabQPushButton = QPushButton(self.tabButtonsContainerQFrame)
+        self.moneroTabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.moneroTabQPushButton.setObjectName(u"moneroTabQPushButton")
 
         self.horizontalLayout.addWidget(self.moneroTabQPushButton)
 
-        self.tabButtonsContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.derivationTabButtonsContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.horizontalLayout.addItem(self.tabButtonsContainerQFrameHSpacer)
+        self.horizontalLayout.addItem(self.derivationTabButtonsContainerQFrameHSpacer)
 
 
-        self.DerivationVLayout.addWidget(self.tabButtonsContainerQFrame)
+        self.DerivationVLayout.addWidget(self.derivationTabButtonsContainerQFrame)
 
         self.derivationsQStackedWidget = QStackedWidget(self.derivationQGroupBox)
         self.derivationsQStackedWidget.setObjectName(u"derivationsQStackedWidget")
