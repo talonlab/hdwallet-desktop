@@ -9,8 +9,8 @@ from random import choice
 from typing import *
 
 from PySide6.QtWidgets import (
-        QPushButton, QLineEdit, QLayout, QWidget, QApplication, QMainWindow
-    )
+    QPushButton, QLineEdit, QLayout, QWidget, QApplication, QMainWindow, QFileDialog
+)
 from PySide6.QtCore import QSize
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtSvgWidgets import QSvgWidget
@@ -29,6 +29,7 @@ import string
 
 from hdwallet import HDWallet
 from hdwallet.hds import HDS
+from widget.file_saver import FileSaver
 
 from hdwallet.entropies import (
     AlgorandEntropy, ALGORAND_ENTROPY_STRENGTHS,
@@ -172,6 +173,15 @@ class MyMainWindow(QMainWindow):
         self.ui.generateLengthContainerQFrame.setSizePolicy(
             QSizePolicy.Expanding, QSizePolicy.Expanding
         )
+
+        self.save_file_button = SvgButton(
+            parent_widget=self.ui.saveTerminalQFrame,
+            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/icon_maximize.svg"),
+            icon_width=17,
+            icon_height=17
+        )
+
+        self.save_file_button.clicked.connect(self.save_file)
 
         self._setup_generate_stack()
         self._setup_dump_stack()
@@ -1204,6 +1214,21 @@ class MyMainWindow(QMainWindow):
     def derivation_tab_changed(self, page_name: str, qPushButton: QPushButton) -> None:
         widget = self.ui.derivationsQStackedWidget.currentWidget()
         self.widget_changed("derivationsQStackedWidget", page_name, qPushButton, widget)
+
+    def save_file(self):
+        filename, _ = QFileDialog.getSaveFileName(self, 'Save File', '', 'CSV Files (*.csv);;JSON Files (*.json)')
+        if filename:
+            text = self.ui.outputTerminalQTextEdit.toPlainText()
+            selected_format = self.ui.dumpsormatQComboBox.currentText()
+
+            if selected_format == 'JSON':
+                if not filename.endswith('.json'):
+                    filename += '.json'
+                FileSaver.save_as_json(filename, text)
+            elif selected_format == 'CSV':
+                if not filename.endswith('.csv'):
+                    filename += '.csv'
+                FileSaver.save_as_csv(filename, text)
 
 
 if __name__ == "__main__":
