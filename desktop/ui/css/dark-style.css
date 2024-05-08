@@ -1,5 +1,8 @@
 
 /* ///////////////////////////////////////////// */
+QMainWindow {
+                background-color: #1E1E1E; /* Set the background color of the window */
+            }
 
 QWidget {
     color: white;
