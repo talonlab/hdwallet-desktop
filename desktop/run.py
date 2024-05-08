@@ -211,6 +211,7 @@ class MyMainWindow(QMainWindow):
             'BIP86': ["BIP86"],
             'BIP141': ["BIP141"],
             'Cardano': ["Custom", "BIP44", "CIP1852"],
+            'CardanoXPUB': ["Custom"],
             'Electrum-V1': ["Electrum"],
             'Electrum-V2': ["Electrum"],
             'Monero': ["Monero"] 
@@ -690,8 +691,11 @@ class MyMainWindow(QMainWindow):
 
         if is_drived:
             key = current_hd
-            if current_hd == "BIP32" and dump_from == "XPublic key":
-                key = 'BIP32XPUB'
+            if dump_from == "XPublic key":
+                if current_hd == "BIP32": 
+                    key = 'BIP32XPUB'
+                elif current_hd == "Cardano":
+                    key = 'CardanoXPUB'
             self.__filter_derivation_tab(key)
 
     def _setup_generate_stack(self):
