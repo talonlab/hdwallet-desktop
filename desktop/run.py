@@ -94,6 +94,10 @@ def put_svg(layout: QLayout, path: str, width: int, height: int) -> QSvgWidget:
     layout.addWidget(svg)
     return svg
 
+def clear_text_area(text_edit):
+    text_edit.clear()
+
+
 
 class DetachedWindow(QWidget):
     def __init__(self, p):
@@ -188,6 +192,14 @@ class MyMainWindow(QMainWindow):
         self.save_file_button.clicked.connect(
             lambda: FileSaver.save_file(self.ui.outputTerminalQTextEdit, self.ui.dumpsFormatQComboBox)
         )
+        self.clear_terminal_button = SvgButton(
+            parent_widget=self.ui.clearTerminalQFrame,
+            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/icon_maximize.svg"),
+            icon_width=17,
+            icon_height=17
+        )
+
+        self.clear_terminal_button.clicked.connect(lambda: clear_text_area(self.ui.outputTerminalQTextEdit))
 
         self._setup_generate_stack()
         self._setup_dump_stack()
