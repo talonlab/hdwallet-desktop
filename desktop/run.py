@@ -158,10 +158,10 @@ class MyMainWindow(QMainWindow):
 
         self.toggle_expand_terminal = SvgButton(
             parent_widget=self.ui.expandAndCollapseTerminalQFrame,
-            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/icon_maximize.svg"),
-            alt_icon_path=os.path.join(os.path.dirname(__file__), "ui/images/icon_minimize.svg"),
-            icon_width=17,
-            icon_height=17
+            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/all_Icons/expandWhite.svg"),
+            alt_icon_path=os.path.join(os.path.dirname(__file__), "ui/images/all_Icons/collapseWhite.svg"),
+            icon_width=20,
+            icon_height=20
         )
         self.toggle_expand_terminal.setCheckable(True)
         self.toggle_expand_terminal.toggled.connect(self.toggle_expand)
@@ -184,9 +184,9 @@ class MyMainWindow(QMainWindow):
 
         self.save_file_button = SvgButton(
             parent_widget=self.ui.saveTerminalQFrame,
-            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/icon_maximize.svg"),
-            icon_width=17,
-            icon_height=17
+            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/all_Icons/saveWhite.svg"),
+            icon_width=20,
+            icon_height=20
         )
 
         self.save_file_button.clicked.connect(
@@ -194,9 +194,9 @@ class MyMainWindow(QMainWindow):
         )
         self.clear_terminal_button = SvgButton(
             parent_widget=self.ui.clearTerminalQFrame,
-            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/icon_maximize.svg"),
-            icon_width=17,
-            icon_height=17
+            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/all_Icons/clearWhite.svg"),
+            icon_width=20,
+            icon_height=20
         )
 
         self.clear_terminal_button.clicked.connect(lambda: clear_text_area(self.ui.outputTerminalQTextEdit))
