@@ -48,7 +48,8 @@ from hdwallet.mnemonics import (
 
 from hdwallet.derivations import (
     CustomDerivation,BIP44Derivation, BIP49Derivation, BIP84Derivation,
-    BIP86Derivation, ElectrumDerivation, CIP1852Derivation, CHANGES
+    BIP86Derivation, ElectrumDerivation, CIP1852Derivation, MoneroDerivation,
+    CHANGES
 )
 
 from hdwallet.const import (
@@ -199,8 +200,10 @@ class MyMainWindow(QMainWindow):
             'BIP141': ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"],
             'Electrum-V1': ["Entropy", "Mnemonic", "Private key", "Public key", "Seed", "WIF"],
             'Electrum-V2': ["Entropy", "Mnemonic", "Seed"],
-            'Cardano': ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"]
+            'Cardano': ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"],
+            'Monero': ["Entropy", "Mnemonic", "Private key", "Seed", "Spend private key", "Watch only"]
         }
+
 
         self.hd_allowed_derivation = {
             'BIP32': ["Custom", "BIP44", "BIP49", "BIP84", "BIP86", "BIP141", "CIP1852"],
@@ -289,6 +292,10 @@ class MyMainWindow(QMainWindow):
         self.ui.electrumV2FromEntropyLanguageQComboBox.addItems([i.title() for i in ElectrumV2Mnemonic.languages])
         self.ui.electrumV2FromEntropyLanguageQComboBox.setCurrentText("English")
 
+        self.ui.moneroFromEntropyLanguageQComboBox.clear()
+        self.ui.moneroFromEntropyLanguageQComboBox.addItems([i.title() for i in MoneroMnemonic.languages])
+        self.ui.moneroFromEntropyLanguageQComboBox.setCurrentText("English")
+
         self.ui.electrumV2FromEntropyMnemonicTypeQComboBox.addItems([i.title() for i in ElectrumV2Mnemonic.mnemonic_types.keys()])
         self.ui.electrumV2FromEntropyModeQComboBox.addItems([i.title() for i in ELECTRUM_V2_MODES.get_modes()])
         self.ui.electrumV2FromEntropyMnemonicTypeQComboBox.setCurrentIndex(0)
@@ -355,7 +362,6 @@ class MyMainWindow(QMainWindow):
             "network": network.lower()
         }
 
-        #TODO: implement all hd
         if current_hd in ('BIP32', 'BIP44', 'BIP49', 'BIP84', 'BIP86', 'BIP141'):
             if current_hd == 'BIP141':
                 semantic_indx = self.ui.bip141ScriptSemanticsQComboBox.currentIndex()
@@ -368,7 +374,7 @@ class MyMainWindow(QMainWindow):
         elif current_hd == 'Electrum-V2':
             hd = self._dump_ev2(dump_from, hd_kwargs)
         elif current_hd == 'Monero':
-            pass
+            hd = self._dump_monero(dump_from, hd_kwargs)
 
         if self.ui.derivationQGroupBox.isEnabled():
             derivation = self.__dumps_get_derivation(CRYPTOCURRENCIES.cryptocurrency(crypto))
@@ -381,7 +387,6 @@ class MyMainWindow(QMainWindow):
         tab = self.ui.derivationsQTabWidget
         current_tab = tab.tabText(tab.currentIndex())
 
-        #TODO: implement all derivation
         if current_tab == "Custom":
             return CustomDerivation(
                 path=self.ui.customPathQLineEdit.text()
@@ -436,7 +441,10 @@ class MyMainWindow(QMainWindow):
                 )
 
         elif current_tab == "Monero":
-            pass
+            return MoneroDerivation(
+                    minor=self.ui.moneroMinorQLineEdit.text(),
+                    major=self.ui.moneroMajorQLineEdit.text()
+                )
 
 
     def _dump_bips(self, hd, dump_from, hd_kwargs):
@@ -548,8 +556,6 @@ class MyMainWindow(QMainWindow):
                     strict=True
                 )
 
-
-
     def _dump_ev1(self, dump_from, hd_kwargs):
         if dump_from == "Entropy":
             hd_kwargs["language"] = self.ui.electrumV1FromEntropyLanguageQComboBox.currentText().lower()
@@ -627,6 +633,52 @@ class MyMainWindow(QMainWindow):
                 )
             )
 
+    def _dump_monero(self, dump_from, hd_kwargs):
+        if dump_from == "Entropy":
+            hd_kwargs["language"] = self.ui.moneroFromEntropyLanguageQComboBox.currentText().lower()
+            hd_kwargs["passphrase"] = self.ui.moneroFromEntropyPassphraseQLineEdit.text()
+            hd_kwargs["payment_id"] = self.ui.moneroFromEntropyPaymentIDQLineEdit.text().lower()
+            return HDWallet(**hd_kwargs).from_entropy(
+                MoneroEntropy(
+                    entropy = self.ui.moneroFromEntropyQLineEdit.text()
+                )
+            )
+
+        elif dump_from == "Mnemonic": 
+            hd_kwargs["passphrase"] = self.ui.moneroFromMnemonicPassphraseQLineEdit.text()
+            hd_kwargs["payment_id"] = self.ui.moneroFromMnemonicPaymentIDQLineEdit.text().lower()
+            return HDWallet(**hd_kwargs).from_mnemonic(
+                MoneroMnemonic(
+                    mnemonic = self.ui.moneroFromMnemonicQLineEdit.text()
+                )
+            )
+
+        elif dump_from == "Private key": 
+            hd_kwargs["payment_id"] = self.ui.moneroFromMnemonicPaymentIDQLineEdit.text().lower()
+            return HDWallet(**hd_kwargs).from_private_key(
+                private_key = self.ui.moneroFromPrivateKeyQLineEdit.text().lower()
+            )
+
+        elif dump_from == "Seed": 
+            hd_kwargs["payment_id"] = self.ui.moneroFromSeedPaymentIDQLineEdit.text().lower()
+            return HDWallet(**hd_kwargs).from_seed(
+                MoneroSeed(
+                    seed = self.ui.moneroFromSeedQLineEdit.text()
+                )
+            )
+
+        elif dump_from == "Spend private key": 
+            hd_kwargs["payment_id"] = self.ui.moneroFromSpendPrivateKeyPaymentIDQLineEdit.text().lower()
+            return HDWallet(**hd_kwargs).from_spend_private_key(
+                spend_private_key = self.ui.moneroFromSpendPrivateKeyQLineEdit.text().lower()
+            )
+
+        elif dump_from == "Watch only": 
+            hd_kwargs["payment_id"] = self.ui.moneroFromWatchOnlyPaymentIDQLineEdit.text().lower()
+            return HDWallet(**hd_kwargs).from_watch_only(
+                view_private_key = self.ui.moneroFromWatchOnlyViewPrivateKeyQLIneEdit.text(),
+                spend_public_key = self.ui.moneroFromWatchOnlySpendPublicKeyQLineEdit.text()
+            )
 
     def _dumps_crypto_change(self):
         crypto = self.ui.dumpsCryptocurrencyQComboBox.currentText()
@@ -1008,7 +1060,7 @@ class MyMainWindow(QMainWindow):
 
     def update_terminal_ui(self):
         self.ui.outputWidgetTopContainerQWidget.setGeometry(QRect(
-            (self.ui.noLayoutQWidget.width() - self.ui.outputWidgetTopContainerQFrame.width()), 0,
+            (self.ui.noLayoutQWidget.width() - (self.ui.outputWidgetTopContainerQFrame.width() + 20)), 0,
             self.ui.outputWidgetTopContainerQFrame.width(), self.ui.outputWidgetTopContainerQWidget.height()
         ))
         self.ui.outputTerminalQWidget.setGeometry(QRect(
