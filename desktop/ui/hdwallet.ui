@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1350</width>
-    <height>637</height>
+    <height>575</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -3997,7 +3997,7 @@
                      <item>
                       <widget class="QStackedWidget" name="cardanoQStackedWidget">
                        <property name="currentIndex">
-                        <number>0</number>
+                        <number>4</number>
                        </property>
                        <widget class="QWidget" name="cardanoFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="cardanoFromEntropyQStackedWidgetVLayout">
@@ -4018,13 +4018,22 @@
                          </property>
                          <item>
                           <widget class="QFrame" name="frame">
-                           <property name="frameShape">
-                            <enum>QFrame::StyledPanel</enum>
-                           </property>
-                           <property name="frameShadow">
-                            <enum>QFrame::Raised</enum>
-                           </property>
                            <layout class="QHBoxLayout" name="horizontalLayout_2">
+                            <property name="spacing">
+                             <number>15</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
                             <item>
                              <widget class="QFrame" name="cardanoFromEntropyContainerQFrame">
                               <layout class="QVBoxLayout" name="verticalLayout_35">
@@ -4655,31 +4664,10 @@
                                 </widget>
                                </item>
                                <item>
-                                <widget class="QFrame" name="cardanoFromEntropyPassphraseGenerateContainerQFrame">
-                                 <layout class="QHBoxLayout" name="horizontalLayout_35">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLineEdit" name="cardanoFromEntropyPassphraseQLineEdit">
-                                    <property name="placeholderText">
-                                     <string>(Optional)</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                 </layout>
+                                <widget class="QLineEdit" name="cardanoFromEntropyPassphraseQLineEdit">
+                                 <property name="placeholderText">
+                                  <string>(Optional)</string>
+                                 </property>
                                 </widget>
                                </item>
                               </layout>
@@ -4708,159 +4696,8 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="cardanoFromMnemonicContainerQFrame">
-                           <layout class="QVBoxLayout" name="MnemonicVLayout_3">
-                            <property name="spacing">
-                             <number>5</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QFrame" name="cardanoFromMnemonicLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="MnemonicLabelHLayout_3">
-                               <property name="spacing">
-                                <number>15</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QLabel" name="cardanoFromMnemonicQLabel">
-                                 <property name="text">
-                                  <string>Mnemonic</string>
-                                 </property>
-                                </widget>
-                               </item>
-                               <item>
-                                <spacer name="cardanoFromMnemonicLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>764</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QFrame" name="cardanoFromMnemonicGenerateContainerQFrame">
-                              <layout class="QHBoxLayout" name="horizontalLayout_37">
-                               <property name="spacing">
-                                <number>15</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QLineEdit" name="cardanoFromMnemonicGenerateQLineEdit"/>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="cardanoFromMnemonicStakingContainerQFrame">
-                           <layout class="QVBoxLayout" name="XPublicKeyVLayout_10">
-                            <property name="spacing">
-                             <number>5</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QFrame" name="cardanoFromMnemonicStakingLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_10">
-                               <property name="spacing">
-                                <number>15</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QLabel" name="cardanoFromMnemonicStakingQLabel">
-                                 <property name="text">
-                                  <string>Staking Public Key</string>
-                                 </property>
-                                </widget>
-                               </item>
-                               <item>
-                                <spacer name="cardanoFromMnemonicStakingLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>764</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QLineEdit" name="cardanoFromMnemonicStakingQLineEdit"/>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="cardanoFromMnemonicClientAndPassphraseContainerQFrame">
-                           <layout class="QHBoxLayout" name="horizontalLayout_38">
+                          <widget class="QFrame" name="frame_2">
+                           <layout class="QHBoxLayout" name="horizontalLayout_3">
                             <property name="spacing">
                              <number>15</number>
                             </property>
@@ -4876,6 +4713,92 @@
                             <property name="bottomMargin">
                              <number>0</number>
                             </property>
+                            <item>
+                             <widget class="QFrame" name="cardanoFromMnemonicContainerQFrame">
+                              <layout class="QVBoxLayout" name="MnemonicVLayout_3">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="cardanoFromMnemonicLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="MnemonicLabelHLayout_3">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="cardanoFromMnemonicQLabel">
+                                    <property name="text">
+                                     <string>Mnemonic</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="cardanoFromMnemonicLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QFrame" name="cardanoFromMnemonicGenerateContainerQFrame">
+                                 <layout class="QHBoxLayout" name="horizontalLayout_37">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLineEdit" name="cardanoFromMnemonicGenerateQLineEdit"/>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
                             <item>
                              <widget class="QFrame" name="cardanoFromMnemonicCardanoTypeContainerQFrame">
                               <property name="minimumSize">
@@ -4981,6 +4904,167 @@
                               </layout>
                              </widget>
                             </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="cardanoFromMnemonicClientAndPassphraseContainerQFrame">
+                           <layout class="QHBoxLayout" name="horizontalLayout_38">
+                            <property name="spacing">
+                             <number>15</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="cardanoFromMnemonicStakingContainerQFrame">
+                              <layout class="QVBoxLayout" name="XPublicKeyVLayout_10">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="cardanoFromMnemonicStakingLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_10">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="cardanoFromMnemonicStakingQLabel">
+                                    <property name="text">
+                                     <string>Staking Public Key</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="cardanoFromMnemonicStakingLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLineEdit" name="cardanoFromMnemonicStakingQLineEdit"/>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="cardanoFromMnemonicAddressTypeContainerQFrame">
+                              <property name="minimumSize">
+                               <size>
+                                <width>150</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <layout class="QVBoxLayout" name="verticalLayout_93">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="cardanoFromMnemonicAddressTypeLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="horizontalLayout_97">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="cardanoFromMnemonicAddressTypeQLabel">
+                                    <property name="text">
+                                     <string>Address Type</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="cardanoFromMnemonicAddressTypeLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>22</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QComboBox" name="cardanoFromMnemonicAddressTypeQComboBox">
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
                             <item>
                              <widget class="QFrame" name="cardanoFromMnemonicPassphraseContainerQFrame">
                               <layout class="QVBoxLayout" name="EPassphraseVLayout_6">
@@ -5075,297 +5159,17 @@
                           </widget>
                          </item>
                          <item>
-                          <widget class="QFrame" name="cardanoFromMnemonicLanguageAddressTypeAndWordsContainerQFrame">
-                           <layout class="QHBoxLayout" name="horizontalLayout_40">
-                            <property name="spacing">
-                             <number>15</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QFrame" name="cardanoFromMnemonicLanguageContainerQFrame">
-                              <layout class="QVBoxLayout" name="ELanguageVLayout_6">
-                               <property name="spacing">
-                                <number>5</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QFrame" name="cardanoFromMnemonicLanguageLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="ELanguageLabelHLayout_6">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="cardanoFromMnemonicLanguageQLabel">
-                                    <property name="text">
-                                     <string>Language</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <spacer name="cardanoFromMnemonicLanguageLabelContainerQFrameHSpacer">
-                                    <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
-                                    </property>
-                                    <property name="sizeHint" stdset="0">
-                                     <size>
-                                      <width>40</width>
-                                      <height>20</height>
-                                     </size>
-                                    </property>
-                                   </spacer>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QComboBox" name="cardanoFromMnemonicLanguageQComboBox">
-                                 <property name="placeholderText">
-                                  <string>(Select)</string>
-                                 </property>
-                                 <item>
-                                  <property name="text">
-                                   <string>Chinese Simplified</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>Chinese Traditional</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>English</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>French</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>Italian</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>Korean</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>Japanese</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>Spanish</string>
-                                  </property>
-                                 </item>
-                                </widget>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QFrame" name="cardanoFromMnemonicAddressTypeContainerQFrame">
-                              <layout class="QVBoxLayout" name="verticalLayout_93">
-                               <property name="spacing">
-                                <number>5</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QFrame" name="cardanoFromMnemonicAddressTypeLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="horizontalLayout_97">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="cardanoFromMnemonicAddressTypeQLabel">
-                                    <property name="text">
-                                     <string>Address Type</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <spacer name="cardanoFromMnemonicAddressTypeLabelContainerQFrameHSpacer">
-                                    <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
-                                    </property>
-                                    <property name="sizeHint" stdset="0">
-                                     <size>
-                                      <width>22</width>
-                                      <height>20</height>
-                                     </size>
-                                    </property>
-                                   </spacer>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QComboBox" name="cardanoFromMnemonicAddressTypeQComboBox">
-                                 <property name="placeholderText">
-                                  <string>(Select)</string>
-                                 </property>
-                                </widget>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QFrame" name="cardanoFromMnemonicWordsContainerQFrame">
-                              <layout class="QVBoxLayout" name="EStrengthVLayout_6">
-                               <property name="spacing">
-                                <number>5</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QFrame" name="cardanoFromMnemonicWordsLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="EStrengthLabelHLayout_6">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="cardanoFromMnemonicWordsQLabel">
-                                    <property name="text">
-                                     <string>Words</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <spacer name="cardanoFromMnemonicWordsLabelContainerQFrameHSpacer">
-                                    <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
-                                    </property>
-                                    <property name="sizeHint" stdset="0">
-                                     <size>
-                                      <width>40</width>
-                                      <height>20</height>
-                                     </size>
-                                    </property>
-                                   </spacer>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QComboBox" name="cardanoFromMnemonicWordsQComboBox">
-                                 <property name="placeholderText">
-                                  <string>(Select)</string>
-                                 </property>
-                                 <item>
-                                  <property name="text">
-                                   <string>12 Words</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>15 Words</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>18 Words</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>21 Words</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>24 Words</string>
-                                  </property>
-                                 </item>
-                                </widget>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                           </layout>
-                          </widget>
+                          <spacer name="verticalSpacer">
+                           <property name="orientation">
+                            <enum>Qt::Vertical</enum>
+                           </property>
+                           <property name="sizeHint" stdset="0">
+                            <size>
+                             <width>20</width>
+                             <height>40</height>
+                            </size>
+                           </property>
+                          </spacer>
                          </item>
                         </layout>
                        </widget>
@@ -5387,73 +5191,8 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="cardanoFromSeedContainerQFrame">
-                           <layout class="QVBoxLayout" name="verticalLayout_38">
-                            <property name="spacing">
-                             <number>5</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QFrame" name="cardanoFromSeedLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="SeedLabelHLayout_3">
-                               <property name="spacing">
-                                <number>15</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QLabel" name="cardanoFromSeedQLabel">
-                                 <property name="text">
-                                  <string>Seed</string>
-                                 </property>
-                                </widget>
-                               </item>
-                               <item>
-                                <spacer name="cardanoFromSeedLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>764</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QLineEdit" name="cardanoFromSeedQLineEdit"/>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="cardanoFromSeedCardanoTypeAddressTypeAndPassphraseContainerQFrame">
-                           <layout class="QHBoxLayout" name="horizontalLayout_42">
+                          <widget class="QFrame" name="frame_5">
+                           <layout class="QHBoxLayout" name="horizontalLayout_8">
                             <property name="spacing">
                              <number>15</number>
                             </property>
@@ -5469,6 +5208,71 @@
                             <property name="bottomMargin">
                              <number>0</number>
                             </property>
+                            <item>
+                             <widget class="QFrame" name="cardanoFromSeedContainerQFrame">
+                              <layout class="QVBoxLayout" name="verticalLayout_38">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="cardanoFromSeedLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="SeedLabelHLayout_3">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="cardanoFromSeedQLabel">
+                                    <property name="text">
+                                     <string>Seed</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="cardanoFromSeedLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLineEdit" name="cardanoFromSeedQLineEdit"/>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
                             <item>
                              <widget class="QFrame" name="cardanoFromSeedCardanoTypeContainerQFrame">
                               <property name="minimumSize">
@@ -5570,6 +5374,92 @@
                                   </property>
                                  </item>
                                 </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="cardanoFromSeedCardanoTypeAddressTypeAndPassphraseContainerQFrame">
+                           <layout class="QHBoxLayout" name="horizontalLayout_42">
+                            <property name="spacing">
+                             <number>15</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="cardanoFromSeedStakingContainerQFrame">
+                              <layout class="QVBoxLayout" name="XPublicKeyVLayout_7">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="cardanoFromSeedStakingLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_7">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="cardanoFromSeedStakingQLabel">
+                                    <property name="text">
+                                     <string>Staking Public Key</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="cardanoFromSeedStakingLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLineEdit" name="cardanoFromSeedStakingQLineEdit"/>
                                </item>
                               </layout>
                              </widget>
@@ -5739,107 +5629,14 @@
                                 </widget>
                                </item>
                                <item>
-                                <widget class="QFrame" name="cardanoFromSeedPassphraseLineEditContainerQFrame">
-                                 <layout class="QHBoxLayout" name="horizontalLayout_62">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLineEdit" name="cardanoFromSeedPassphraseQLineEdit">
-                                    <property name="placeholderText">
-                                     <string>(Optional)</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <widget class="QPushButton" name="cardanoFromSeedPassphraseGenerateQPushButton">
-                                    <property name="text">
-                                     <string>Generate</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                 </layout>
+                                <widget class="QLineEdit" name="cardanoFromSeedPassphraseQLineEdit">
+                                 <property name="placeholderText">
+                                  <string>(Optional)</string>
+                                 </property>
                                 </widget>
                                </item>
                               </layout>
                              </widget>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="cardanoFromSeedStakingContainerQFrame">
-                           <layout class="QVBoxLayout" name="XPublicKeyVLayout_7">
-                            <property name="spacing">
-                             <number>5</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QFrame" name="cardanoFromSeedStakingLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_7">
-                               <property name="spacing">
-                                <number>15</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QLabel" name="cardanoFromSeedStakingQLabel">
-                                 <property name="text">
-                                  <string>Staking Public Key</string>
-                                 </property>
-                                </widget>
-                               </item>
-                               <item>
-                                <spacer name="cardanoFromSeedStakingLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>764</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QLineEdit" name="cardanoFromSeedStakingQLineEdit"/>
                             </item>
                            </layout>
                           </widget>
@@ -5959,34 +5756,13 @@
                               </layout>
                              </widget>
                             </item>
-                            <item>
+                            <item alignment="Qt::AlignVCenter">
                              <widget class="QCheckBox" name="cardanoFromXPrivateKeyStrictQCheckBox">
                               <property name="text">
                                <string>Strict</string>
                               </property>
                              </widget>
                             </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="cardanoFromXPrivateKeyCardanoTypeAndAddressTypeContainerQFrame">
-                           <layout class="QHBoxLayout" name="horizontalLayout_63">
-                            <property name="spacing">
-                             <number>15</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
                             <item>
                              <widget class="QFrame" name="cardanoFromXPrivateKeyCardanoTypeContainerQFrame">
                               <property name="minimumSize">
@@ -6088,6 +5864,92 @@
                                   </property>
                                  </item>
                                 </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="cardanoFromXPrivateKeyCardanoTypeAndAddressTypeContainerQFrame">
+                           <layout class="QHBoxLayout" name="horizontalLayout_63">
+                            <property name="spacing">
+                             <number>15</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="cardanoFromXPrivateKeyStakingContainerQFrame">
+                              <layout class="QVBoxLayout" name="XPublicKeyVLayout_5">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="cardanoFromXPrivateKeyStakingLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_5">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="cardanoFromXPrivateKeyStakingQLabel">
+                                    <property name="text">
+                                     <string>Staking Public Key</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="cardanoFromXPrivateKeyStakingLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLineEdit" name="cardanoFromXPrivateKeyStakingQLineEdit"/>
                                </item>
                               </layout>
                              </widget>
@@ -6201,71 +6063,6 @@
                           </widget>
                          </item>
                          <item>
-                          <widget class="QFrame" name="cardanoFromXPrivateKeyStakingContainerQFrame">
-                           <layout class="QVBoxLayout" name="XPublicKeyVLayout_5">
-                            <property name="spacing">
-                             <number>5</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QFrame" name="cardanoFromXPrivateKeyStakingLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_5">
-                               <property name="spacing">
-                                <number>15</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QLabel" name="cardanoFromXPrivateKeyStakingQLabel">
-                                 <property name="text">
-                                  <string>Staking Public Key</string>
-                                 </property>
-                                </widget>
-                               </item>
-                               <item>
-                                <spacer name="cardanoFromXPrivateKeyStakingLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>764</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QLineEdit" name="cardanoFromXPrivateKeyStakingQLineEdit"/>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
                           <spacer name="cardanoFromXPrivateKeyQStackedWidgetVSpacer">
                            <property name="orientation">
                             <enum>Qt::Vertical</enum>
@@ -6346,7 +6143,7 @@
                                    <number>0</number>
                                   </property>
                                   <property name="rightMargin">
-                                   <number>0</number>
+                                   <number>15</number>
                                   </property>
                                   <property name="bottomMargin">
                                    <number>0</number>
@@ -6371,6 +6168,13 @@
                                     </property>
                                    </spacer>
                                   </item>
+                                  <item>
+                                   <widget class="QCheckBox" name="cardanoFromXPublicKeyStrictQCheckBox">
+                                    <property name="text">
+                                     <string>Strict</string>
+                                    </property>
+                                   </widget>
+                                  </item>
                                  </layout>
                                 </widget>
                                </item>
@@ -6380,34 +6184,6 @@
                               </layout>
                              </widget>
                             </item>
-                            <item>
-                             <widget class="QCheckBox" name="cardanoFromXPublicKeyStrictQCheckBox">
-                              <property name="text">
-                               <string>Strict</string>
-                              </property>
-                             </widget>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="cardanoFromXPublicKeyCardanoTypeAndAddressTypeContainerQFrame">
-                           <layout class="QHBoxLayout" name="horizontalLayout_64">
-                            <property name="spacing">
-                             <number>15</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
                             <item>
                              <widget class="QFrame" name="cardanoFromXPublicKeyCardanoTypeContainerQFrame">
                               <property name="minimumSize">
@@ -6509,6 +6285,92 @@
                                   </property>
                                  </item>
                                 </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="cardanoFromXPublicKeyCardanoTypeAndAddressTypeContainerQFrame">
+                           <layout class="QHBoxLayout" name="horizontalLayout_64">
+                            <property name="spacing">
+                             <number>15</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="cardanoFromXPublicKeyStakingContainerQFrame">
+                              <layout class="QVBoxLayout" name="XPublicKeyVLayout_6">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="cardanoFromXPublicKeyStakingLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_6">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="cardanoFromXPublicKeyStakingQLabel">
+                                    <property name="text">
+                                     <string>Staking Public Key</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="cardanoFromXPublicKeyStakingLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLineEdit" name="cardanoFromXPublicKeyStakingQLineEdit"/>
                                </item>
                               </layout>
                              </widget>
@@ -6622,71 +6484,6 @@
                           </widget>
                          </item>
                          <item>
-                          <widget class="QFrame" name="cardanoFromXPublicKeyStakingContainerQFrame">
-                           <layout class="QVBoxLayout" name="XPublicKeyVLayout_6">
-                            <property name="spacing">
-                             <number>5</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QFrame" name="cardanoFromXPublicKeyStakingLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_6">
-                               <property name="spacing">
-                                <number>15</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QLabel" name="cardanoFromXPublicKeyStakingQLabel">
-                                 <property name="text">
-                                  <string>Staking Public Key</string>
-                                 </property>
-                                </widget>
-                               </item>
-                               <item>
-                                <spacer name="cardanoFromXPublicKeyStakingLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>764</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QLineEdit" name="cardanoFromXPublicKeyStakingQLineEdit"/>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
                           <spacer name="cardanoFromXPublicKeyQStackedWidgetVSpacer">
                            <property name="orientation">
                             <enum>Qt::Vertical</enum>
@@ -6719,79 +6516,8 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="cardanoFromPrivateKeyContainerQFrame">
-                           <property name="minimumSize">
-                            <size>
-                             <width>400</width>
-                             <height>0</height>
-                            </size>
-                           </property>
-                           <layout class="QVBoxLayout" name="PrivateKeyVLayout_3">
-                            <property name="spacing">
-                             <number>5</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QFrame" name="cardanoFromPrivateKeyContainerLabelQFrame">
-                              <layout class="QHBoxLayout" name="PrivateKeyLabelHLayout_3">
-                               <property name="spacing">
-                                <number>15</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QLabel" name="cardanoFromPrivateKeyContainerQLabel">
-                                 <property name="text">
-                                  <string>Private Key</string>
-                                 </property>
-                                </widget>
-                               </item>
-                               <item>
-                                <spacer name="cardanoFromPrivateKeyContainerLabelQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>764</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QLineEdit" name="cardanoFromPrivateKeyQLineEdit"/>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="cardanoFromPrivateKeyCardanoTypeAndAddressTypeContainerQFrame">
-                           <layout class="QHBoxLayout" name="horizontalLayout_65">
+                          <widget class="QFrame" name="frame_3">
+                           <layout class="QHBoxLayout" name="horizontalLayout_4">
                             <property name="spacing">
                              <number>15</number>
                             </property>
@@ -6807,6 +6533,77 @@
                             <property name="bottomMargin">
                              <number>0</number>
                             </property>
+                            <item>
+                             <widget class="QFrame" name="cardanoFromPrivateKeyContainerQFrame">
+                              <property name="minimumSize">
+                               <size>
+                                <width>400</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <layout class="QVBoxLayout" name="PrivateKeyVLayout_3">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="cardanoFromPrivateKeyContainerLabelQFrame">
+                                 <layout class="QHBoxLayout" name="PrivateKeyLabelHLayout_3">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="cardanoFromPrivateKeyContainerQLabel">
+                                    <property name="text">
+                                     <string>Private Key</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="cardanoFromPrivateKeyContainerLabelQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLineEdit" name="cardanoFromPrivateKeyQLineEdit"/>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
                             <item>
                              <widget class="QFrame" name="cardanoFromPrivateKeyCardanoTypeContainerQFrame">
                               <property name="minimumSize">
@@ -6908,6 +6705,92 @@
                                   </property>
                                  </item>
                                 </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="cardanoFromPrivateKeyCardanoTypeAndAddressTypeContainerQFrame">
+                           <layout class="QHBoxLayout" name="horizontalLayout_65">
+                            <property name="spacing">
+                             <number>15</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="cardanoFromPrivateKeyStakingContainerQFrame">
+                              <layout class="QVBoxLayout" name="XPublicKeyVLayout_9">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="cardanoFromPrivateKeyStakingLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_9">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="cardanoFromPrivateStakingQLabel">
+                                    <property name="text">
+                                     <string>Staking Public Key</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="cardanoFromPrivateKeyStakingLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLineEdit" name="cardanoFromPrivateKeyStakingQLineEdit"/>
                                </item>
                               </layout>
                              </widget>
@@ -7021,71 +6904,6 @@
                           </widget>
                          </item>
                          <item>
-                          <widget class="QFrame" name="cardanoFromPrivateKeyStakingContainerQFrame">
-                           <layout class="QVBoxLayout" name="XPublicKeyVLayout_9">
-                            <property name="spacing">
-                             <number>5</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QFrame" name="cardanoFromPrivateKeyStakingLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_9">
-                               <property name="spacing">
-                                <number>15</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QLabel" name="cardanoFromPrivateStakingQLabel">
-                                 <property name="text">
-                                  <string>Staking Public Key</string>
-                                 </property>
-                                </widget>
-                               </item>
-                               <item>
-                                <spacer name="cardanoFromPrivateKeyStakingLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>764</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QLineEdit" name="cardanoFromPrivateKeyStakingQLineEdit"/>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
                           <spacer name="cardanoFromPrivateKeyQStackedWidgetVSpacer">
                            <property name="orientation">
                             <enum>Qt::Vertical</enum>
@@ -7118,73 +6936,8 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="cardanoFromPublicKeyContainerQFrame">
-                           <layout class="QVBoxLayout" name="PublicKeyVLayout_3">
-                            <property name="spacing">
-                             <number>5</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QFrame" name="cardanoFromPublicKeyLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="PublicKeyLabelHLayout_3">
-                               <property name="spacing">
-                                <number>15</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QLabel" name="cardanoFromPublicKeyQLabel">
-                                 <property name="text">
-                                  <string>Public Key</string>
-                                 </property>
-                                </widget>
-                               </item>
-                               <item>
-                                <spacer name="cardanoFromPublicKeyLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>764</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QLineEdit" name="cardanoFromPublicKeyQLineEdit"/>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="cardanoFromPublicKeyCardanoTypeAndAddressTypeContainerQFrame">
-                           <layout class="QHBoxLayout" name="horizontalLayout_66">
+                          <widget class="QFrame" name="frame_4">
+                           <layout class="QHBoxLayout" name="horizontalLayout_6">
                             <property name="spacing">
                              <number>15</number>
                             </property>
@@ -7200,6 +6953,71 @@
                             <property name="bottomMargin">
                              <number>0</number>
                             </property>
+                            <item>
+                             <widget class="QFrame" name="cardanoFromPublicKeyContainerQFrame">
+                              <layout class="QVBoxLayout" name="PublicKeyVLayout_3">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="cardanoFromPublicKeyLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="PublicKeyLabelHLayout_3">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="cardanoFromPublicKeyQLabel">
+                                    <property name="text">
+                                     <string>Public Key</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="cardanoFromPublicKeyLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLineEdit" name="cardanoFromPublicKeyQLineEdit"/>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
                             <item>
                              <widget class="QFrame" name="cardanoFromPublicKeyCardanoTypeContainerQFrame">
                               <property name="minimumSize">
@@ -7301,6 +7119,92 @@
                                   </property>
                                  </item>
                                 </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="cardanoFromPublicKeyCardanoTypeAndAddressTypeContainerQFrame">
+                           <layout class="QHBoxLayout" name="horizontalLayout_66">
+                            <property name="spacing">
+                             <number>15</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="cardanoFromPublicKeyStakingContainerQFrame">
+                              <layout class="QVBoxLayout" name="XPublicKeyVLayout_8">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="cardanoFromPublicKeyStakingLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_8">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="cardanoFromPublicStakingQLabel">
+                                    <property name="text">
+                                     <string>Staking Public Key</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="cardanoFromPublicKeyStakingLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLineEdit" name="cardanoFromPublicKeyStakingQLineEdit"/>
                                </item>
                               </layout>
                              </widget>
@@ -7409,71 +7313,6 @@
                                </item>
                               </layout>
                              </widget>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="cardanoFromPublicKeyStakingContainerQFrame">
-                           <layout class="QVBoxLayout" name="XPublicKeyVLayout_8">
-                            <property name="spacing">
-                             <number>5</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
-                             <widget class="QFrame" name="cardanoFromPublicKeyStakingLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="XPublicKeyLabelHLayout_8">
-                               <property name="spacing">
-                                <number>15</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QLabel" name="cardanoFromPublicStakingQLabel">
-                                 <property name="text">
-                                  <string>Staking Public Key</string>
-                                 </property>
-                                </widget>
-                               </item>
-                               <item>
-                                <spacer name="cardanoFromPublicKeyStakingLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>764</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QLineEdit" name="cardanoFromPublicKeyStakingQLineEdit"/>
                             </item>
                            </layout>
                           </widget>

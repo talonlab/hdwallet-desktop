@@ -42,28 +42,59 @@ QLineEdit QMenu::item::selected {
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
 CheckBox */
+
+#derivationTabButtonsContainerQFrame QPushButton{
+    border-bottom: 2px solid #83b9ff;
+}
+
 QCheckBox {
     color: white;
-    font: 10pt "Jersey M54";
+    /*font: 10pt "Jersey M54";*/
     letter-spacing: 1px;
 }
 
 QCheckBox::indicator {
     background: rgb(25, 30, 36);
-    width: 25px;
-    height: 25px;
+    /*width: 25px;*/
+    /*height: 25px;*/
     border-radius: 2px;
-    margin-right: 5px;
+    /*margin-right: 5px;*/
+
+    /*border: 2px solid rgb(25, 30, 36);*/
+    width: 15px;
+    height: 15px;
+    /*background: rgb(16, 21, 27);*/
 }
 QCheckBox::indicator:hover {
     background: rgba(25, 30, 36, 100);
+    /*border: 2px solid rgba(25, 30, 36, 100);*/
 }
 QCheckBox::indicator:checked {
-    background: rgb(25, 30, 36);
-    background-image: url(:/icons/images/icons/cil-check-alt.png);
-    background-position: center;
-    background-repeat: no-reperat;
+    /*background: rgb(25, 30, 36);*/
+    /*background-image: url(:/icons/images/icons/cil-check-alt.png);*/
+    /*background-position: center;*/
+    /*background-repeat: no-reperat;*/
+
+    background: 2px solid #83b9ff;
+    /*border: 2px solid #83b9ff;*/
 }
+
+/*QRadioButton::indicator {*/
+/*    border: 3px solid rgb(25, 30, 36);*/
+/*    width: 15px;*/
+/*    height: 15px;*/
+/*    border-radius: 10px;*/
+/*    !*background: rgb(16, 21, 27);*!*/
+/*    background: rgb(25, 30, 36);*/
+/*}*/
+/*QRadioButton::indicator:hover {*/
+/*    background: rgba(25, 30, 36, 100);*/
+/*    border: 3px solid rgba(25, 30, 36, 100);*/
+/*}*/
+/*QRadioButton::indicator:checked {*/
+/*    !*background: 2px solid #83b9ff;*!*/
+/*    border: 3px solid #83b9ff;*/
+/*}*/
 
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -435,6 +466,10 @@ QRadioButton::indicator:checked {
 
 QTabBar, QTabBar::tab, QTabBar::tab:hover, QTabBar::tab:focus {
     border: none;
+}
+
+#outputTerminalQTextEdit{
+    border-radius: 0;
 }
 
 
