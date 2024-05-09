@@ -72,7 +72,7 @@ from hdwallet.seeds import (
 
 from ui.ui_hdwallet import Ui_MainWindow
 from widget.SvgButton import SvgButton
-from widget.file_saver import FileSaver
+from file_saver import FileSaver
 from worker import Worker
 
 def clear_layout(layout: QLayout, delete: bool = True) -> None:
