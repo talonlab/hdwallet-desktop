@@ -707,6 +707,7 @@ class MyMainWindow(QMainWindow):
             drive(*derivation.derivations())
             if save_filepath != None:
                 saved_file.close()
+
         else:
             if derivation != None:
                 hd = hd.from_derivation(derivation=derivation)
@@ -1400,6 +1401,8 @@ class MyMainWindow(QMainWindow):
 
         if isinstance(s, dict):
             newtext = json.dumps(s, indent=4)
+        elif s == None:
+            return None
         else:
             newtext = str(s)
 
