@@ -5,6 +5,10 @@ from PySide6.QtWidgets import QFileDialog
 
 
 class FileSaver:
+    @staticmethod
+    def save_as_text(filename, text):
+        with open(filename, 'w') as file:
+            file.write(text)
 
     @staticmethod
     def save_as_json(filename, text):
@@ -30,7 +34,7 @@ class FileSaver:
         elif save_as == 'CSV':
             save_as = 'CSV Files (*.csv)'
 
-        filename, _ = QFileDialog.getSaveFileName(None, 'Save File', '',
+        filename, _ = QFileDialog.getSaveFileName(None, 'Save File', 'hdwallet',
                                                   save_as,
                                                   options=options)
         if filename:

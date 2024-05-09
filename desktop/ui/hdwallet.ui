@@ -98,17 +98,38 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="generateQPushButton">
-            <property name="text">
-             <string>Generate</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="dumpQPushButton">
-            <property name="text">
-             <string>Dumps</string>
-            </property>
+           <widget class="QFrame" name="generateAndDumpTabContainerQFrame">
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="generateQPushButton">
+               <property name="text">
+                <string>Generate</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="dumpQPushButton">
+               <property name="text">
+                <string>Dumps</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
           <item>
@@ -12288,6 +12309,9 @@
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="currentIndex">
+                       <number>8</number>
+                      </property>
                       <widget class="QWidget" name="customQStackedWidgetPage">
                        <layout class="QHBoxLayout" name="BIP32HLayout">
                         <property name="spacing">
@@ -15380,7 +15404,7 @@
              </property>
              <layout class="QHBoxLayout" name="outputWidgetTopContainerQFrameHLayout">
               <property name="spacing">
-               <number>15</number>
+               <number>10</number>
               </property>
               <property name="leftMargin">
                <number>15</number>
@@ -15394,13 +15418,6 @@
               <property name="bottomMargin">
                <number>15</number>
               </property>
-              <item>
-               <widget class="QLabel" name="versionQLabel">
-                <property name="text">
-                 <string>Version</string>
-                </property>
-               </widget>
-              </item>
               <item>
                <widget class="QFrame" name="saveTerminalQFrame">
                 <property name="minimumSize">

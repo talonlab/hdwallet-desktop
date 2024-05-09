@@ -159,8 +159,8 @@ class MyMainWindow(QMainWindow):
 
         self.toggle_expand_terminal = SvgButton(
             parent_widget=self.ui.expandAndCollapseTerminalQFrame,
-            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/all_Icons/expandWhite.svg"),
-            alt_icon_path=os.path.join(os.path.dirname(__file__), "ui/images/all_Icons/collapseWhite.svg"),
+            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/all_Icons/expand-white-thin.svg"),
+            alt_icon_path=os.path.join(os.path.dirname(__file__), "ui/images/all_Icons/collapse-white-thin.svg"),
             icon_width=20,
             icon_height=20
         )
@@ -170,7 +170,8 @@ class MyMainWindow(QMainWindow):
         self.ui.outputTerminalQPushButton.clicked.connect(self.process_command)
 
         self.ui.generateQPushButton.clicked.connect(
-            lambda: self.change_page("hdwalletQStackedWidget", "generatePageQStackedWidget"))
+            lambda: self.change_page("hdwalletQStackedWidget", "generatePageQStackedWidget"),
+        )
         self.ui.dumpQPushButton.clicked.connect(
             lambda: self.change_page("hdwalletQStackedWidget", "dumpsPageQStackedWidget"))
 
@@ -186,7 +187,7 @@ class MyMainWindow(QMainWindow):
 
         self.save_file_button = SvgButton(
             parent_widget=self.ui.saveTerminalQFrame,
-            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/all_Icons/saveWhite.svg"),
+            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/all_Icons/save-white.svg"),
             icon_width=20,
             icon_height=20
         )
@@ -196,12 +197,22 @@ class MyMainWindow(QMainWindow):
         )
         self.clear_terminal_button = SvgButton(
             parent_widget=self.ui.clearTerminalQFrame,
-            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/all_Icons/clearWhite.svg"),
+            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/all_Icons/clean-white.svg"),
             icon_width=20,
             icon_height=20
         )
 
         self.clear_terminal_button.clicked.connect(lambda: clear_text_area(self.ui.outputTerminalQTextEdit))
+
+        self.ui.generateQPushButton.clicked.connect(
+            functools.partial(self.generate_dump_tab_changed, "generatePageQStackedWidget", self.ui.generateQPushButton)
+        )
+
+        self.ui.dumpQPushButton.clicked.connect(
+            functools.partial(self.generate_dump_tab_changed, "dumpsPageQStackedWidget", self.ui.dumpQPushButton)
+        )
+
+        self.ui.generateQPushButton.click()
 
         self._setup_generate_stack()
         self._setup_dump_stack()
@@ -1359,6 +1370,10 @@ class MyMainWindow(QMainWindow):
     def derivation_tab_changed(self, page_name: str, qPushButton: QPushButton) -> None:
         widget = self.ui.derivationTabButtonsContainerQFrame
         self.widget_changed("derivationsQStackedWidget", page_name, qPushButton, widget)
+
+    def generate_dump_tab_changed(self, page_name: str, qPushButton: QPushButton) -> None:
+        widget = self.ui.generateAndDumpTabContainerQFrame
+        self.widget_changed("hdwalletQStackedWidget", page_name, qPushButton, widget)
 
 
 if __name__ == "__main__":

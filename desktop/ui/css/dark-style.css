@@ -44,7 +44,7 @@ QLineEdit QMenu::item::selected {
 CheckBox */
 
 #derivationTabButtonsContainerQFrame QPushButton{
-    border-bottom: 2px solid #83b9ff;
+    border-radius: 0;
 }
 
 QCheckBox {
@@ -472,6 +472,37 @@ QTabBar, QTabBar::tab, QTabBar::tab:hover, QTabBar::tab:focus {
     border-radius: 0;
 }
 
+#generateAndDumpTabContainerQFrame QPushButton,
+#derivationTabButtonsContainerQFrame QPushButton{
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+}
+
+#generateAndDumpTabContainerQFrame QPushButton:hover,
+#derivationTabButtonsContainerQFrame QPushButton:hover{
+    background-color: transparent;
+    border-bottom: 2px solid #83b9ff;
+}
+
+#generateAndDumpTabContainerQFrame QPushButton[Active="true"],
+#derivationTabButtonsContainerQFrame QPushButton[Active="true"]{
+    border-bottom: 2px solid #83b9ff;
+}
+
+#generateAndDumpTabContainerQFrame QPushButton[Active="true"]:disabled,
+#derivationTabButtonsContainerQFrame QPushButton[Active="true"]:disabled
+{
+    border-bottom: none;
+}
+
+
+
+#saveTerminalQFrame,
+#expandAndCollapseTerminalQFrame,
+#clearTerminalQFrame{
+    background-color: transparent;
+}
 
 
 

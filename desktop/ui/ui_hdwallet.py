@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletnDnIJP.ui'
+## Form generated from reading UI file 'hdwalletbGmckc.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -59,15 +59,24 @@ class Ui_MainWindow(object):
 
         self.hdWalletHeaderContainerQFrameHLayout.addItem(self.hdWalletHeaderContainerQFrameHSpacer)
 
-        self.generateQPushButton = QPushButton(self.hdWalletHeaderContainerQFrame)
+        self.generateAndDumpTabContainerQFrame = QFrame(self.hdWalletHeaderContainerQFrame)
+        self.generateAndDumpTabContainerQFrame.setObjectName(u"generateAndDumpTabContainerQFrame")
+        self.horizontalLayout_11 = QHBoxLayout(self.generateAndDumpTabContainerQFrame)
+        self.horizontalLayout_11.setSpacing(0)
+        self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
+        self.horizontalLayout_11.setContentsMargins(0, 0, 0, 0)
+        self.generateQPushButton = QPushButton(self.generateAndDumpTabContainerQFrame)
         self.generateQPushButton.setObjectName(u"generateQPushButton")
 
-        self.hdWalletHeaderContainerQFrameHLayout.addWidget(self.generateQPushButton)
+        self.horizontalLayout_11.addWidget(self.generateQPushButton)
 
-        self.dumpQPushButton = QPushButton(self.hdWalletHeaderContainerQFrame)
+        self.dumpQPushButton = QPushButton(self.generateAndDumpTabContainerQFrame)
         self.dumpQPushButton.setObjectName(u"dumpQPushButton")
 
-        self.hdWalletHeaderContainerQFrameHLayout.addWidget(self.dumpQPushButton)
+        self.horizontalLayout_11.addWidget(self.dumpQPushButton)
+
+
+        self.hdWalletHeaderContainerQFrameHLayout.addWidget(self.generateAndDumpTabContainerQFrame)
 
         self.donationHDWalletQPushButton = QPushButton(self.hdWalletHeaderContainerQFrame)
         self.donationHDWalletQPushButton.setObjectName(u"donationHDWalletQPushButton")
@@ -6696,33 +6705,20 @@ class Ui_MainWindow(object):
         self.outputFrameTopContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
         self.outputWidgetTopContainerQFrame = QFrame(self.outputWidgetTopContainerQWidget)
         self.outputWidgetTopContainerQFrame.setObjectName(u"outputWidgetTopContainerQFrame")
-        self.outputWidgetTopContainerQFrame.setMinimumSize(QSize(200, 0))
+        sizePolicy6 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
+        sizePolicy6.setHorizontalStretch(0)
+        sizePolicy6.setVerticalStretch(0)
+        sizePolicy6.setHeightForWidth(self.outputWidgetTopContainerQFrame.sizePolicy().hasHeightForWidth())
+        self.outputWidgetTopContainerQFrame.setSizePolicy(sizePolicy6)
+        self.outputWidgetTopContainerQFrame.setMinimumSize(QSize(120, 0))
         self.outputWidgetTopContainerQFrameHLayout = QHBoxLayout(self.outputWidgetTopContainerQFrame)
         self.outputWidgetTopContainerQFrameHLayout.setSpacing(15)
         self.outputWidgetTopContainerQFrameHLayout.setObjectName(u"outputWidgetTopContainerQFrameHLayout")
         self.outputWidgetTopContainerQFrameHLayout.setContentsMargins(15, 15, 15, 15)
-        self.versionQLabel = QLabel(self.outputWidgetTopContainerQFrame)
-        self.versionQLabel.setObjectName(u"versionQLabel")
-
-        self.outputWidgetTopContainerQFrameHLayout.addWidget(self.versionQLabel)
-
-        self.saveTerminalQFrame = QFrame(self.outputWidgetTopContainerQFrame)
-        self.saveTerminalQFrame.setObjectName(u"saveTerminalQFrame")
-        self.saveTerminalQFrame.setMinimumSize(QSize(25, 25))
-        self.saveTerminalQFrame.setMaximumSize(QSize(25, 25))
-        self.saveTerminalQFrame.setFrameShape(QFrame.StyledPanel)
-        self.saveTerminalQFrame.setFrameShadow(QFrame.Raised)
-        self.saveTerminalQFrameVLayout = QVBoxLayout(self.saveTerminalQFrame)
-        self.saveTerminalQFrameVLayout.setSpacing(0)
-        self.saveTerminalQFrameVLayout.setObjectName(u"saveTerminalQFrameVLayout")
-        self.saveTerminalQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-
-        self.outputWidgetTopContainerQFrameHLayout.addWidget(self.saveTerminalQFrame)
-
         self.clearTerminalQFrame = QFrame(self.outputWidgetTopContainerQFrame)
         self.clearTerminalQFrame.setObjectName(u"clearTerminalQFrame")
-        self.clearTerminalQFrame.setMinimumSize(QSize(25, 25))
-        self.clearTerminalQFrame.setMaximumSize(QSize(25, 25))
+        self.clearTerminalQFrame.setMinimumSize(QSize(20, 20))
+        self.clearTerminalQFrame.setMaximumSize(QSize(20, 20))
         self.clearTerminalQFrame.setFrameShape(QFrame.StyledPanel)
         self.clearTerminalQFrame.setFrameShadow(QFrame.Raised)
         self.clearTerminalQFrameVLayout = QVBoxLayout(self.clearTerminalQFrame)
@@ -6732,10 +6728,23 @@ class Ui_MainWindow(object):
 
         self.outputWidgetTopContainerQFrameHLayout.addWidget(self.clearTerminalQFrame)
 
+        self.saveTerminalQFrame = QFrame(self.outputWidgetTopContainerQFrame)
+        self.saveTerminalQFrame.setObjectName(u"saveTerminalQFrame")
+        self.saveTerminalQFrame.setMinimumSize(QSize(20, 20))
+        self.saveTerminalQFrame.setMaximumSize(QSize(20, 20))
+        self.saveTerminalQFrame.setFrameShape(QFrame.StyledPanel)
+        self.saveTerminalQFrame.setFrameShadow(QFrame.Raised)
+        self.saveTerminalQFrameVLayout = QVBoxLayout(self.saveTerminalQFrame)
+        self.saveTerminalQFrameVLayout.setSpacing(0)
+        self.saveTerminalQFrameVLayout.setObjectName(u"saveTerminalQFrameVLayout")
+        self.saveTerminalQFrameVLayout.setContentsMargins(0, 0, 0, 0)
+
+        self.outputWidgetTopContainerQFrameHLayout.addWidget(self.saveTerminalQFrame)
+
         self.expandAndCollapseTerminalQFrame = QFrame(self.outputWidgetTopContainerQFrame)
         self.expandAndCollapseTerminalQFrame.setObjectName(u"expandAndCollapseTerminalQFrame")
-        self.expandAndCollapseTerminalQFrame.setMinimumSize(QSize(25, 25))
-        self.expandAndCollapseTerminalQFrame.setMaximumSize(QSize(25, 25))
+        self.expandAndCollapseTerminalQFrame.setMinimumSize(QSize(20, 20))
+        self.expandAndCollapseTerminalQFrame.setMaximumSize(QSize(20, 20))
         self.expandAndCollapseTerminalQFrame.setFrameShape(QFrame.StyledPanel)
         self.expandAndCollapseTerminalQFrame.setFrameShadow(QFrame.Raised)
         self.expandAndCollapseTerminalQFrameVLayout = QVBoxLayout(self.expandAndCollapseTerminalQFrame)
@@ -6784,6 +6793,7 @@ class Ui_MainWindow(object):
         self.electrumV1QStackedWidget.setCurrentIndex(2)
         self.electrumV2QStackedWidget.setCurrentIndex(2)
         self.moneroQStackedWidget.setCurrentIndex(5)
+        self.derivationsQStackedWidget.setCurrentIndex(8)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -7390,7 +7400,6 @@ class Ui_MainWindow(object):
         self.dumpsFormatQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.dumpsExcludeOrIncludeQLabel.setText(QCoreApplication.translate("MainWindow", u"Exclude / Include", None))
         self.dumpsGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
-        self.versionQLabel.setText(QCoreApplication.translate("MainWindow", u"Version", None))
         self.outputTerminalQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Command Line Interface (CLI)", None))
         self.outputTerminalQPushButton.setText(QCoreApplication.translate("MainWindow", u"Execute", None))
     # retranslateUi
