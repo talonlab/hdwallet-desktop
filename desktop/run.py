@@ -11,7 +11,7 @@ from typing import *
 from PySide6.QtWidgets import (
     QPushButton, QLineEdit, QLayout, QWidget, QApplication, QMainWindow, QFileDialog, QTextEdit
 )
-from PySide6.QtCore import QSize, QThreadPool
+from PySide6.QtCore import QSize, QThreadPool, QEvent
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtSvgWidgets import QSvgWidget
 from PySide6.QtWidgets import (
@@ -107,31 +107,43 @@ class DetachedWindow(QWidget):
     def closeEvent(self, event):
         self.main_window.toggle_expand_terminal.setChecked(False)
         self.main_window.toggle_expand()
+        self.update_terminal_ui()
+
+    def changeEvent(self, event):
+        super().changeEvent(event)
+        if event.type() == QEvent.WindowStateChange:
+            if self.isMaximized():
+                self.update_terminal_ui()
+            elif self.windowState() == Qt.WindowNoState:
+                self.update_terminal_ui()
 
     def update_terminal_ui(self):
-        noLayoutQWidget: QWidget = self.layout().itemAt(0).widget().findChild(QWidget, "noLayoutQWidget")
-        outputWidgetTopContainerQWidget: QWidget = self.layout().itemAt(0).widget().findChild(QWidget,
-                                                                                              "outputWidgetTopContainerQWidget")
-        outputTerminalQWidget: QWidget = self.layout().itemAt(0).widget().findChild(QWidget, "outputTerminalQWidget")
-        outputWidgetTopContainerQFrame: QFrame = self.layout().itemAt(0).widget().findChild(QFrame,
-                                                                                            "outputWidgetTopContainerQFrame")
-        outputTerminalQTextEdit: QTextEdit = self.layout().itemAt(0).widget().findChild(QTextEdit,
-                                                                                            "outputTerminalQTextEdit")
-        outputWidgetTopContainerQWidget.setGeometry(QRect(
-            (
-                noLayoutQWidget.width() - (
-                    outputWidgetTopContainerQFrame.width() + (
-                        20 if outputTerminalQTextEdit.verticalScrollBar().maximum() > 0 else 10
+        try:
+            noLayoutQWidget: QWidget = self.layout().itemAt(0).widget().findChild(QWidget, "noLayoutQWidget")
+            outputWidgetTopContainerQWidget: QWidget = self.layout().itemAt(0).widget().findChild(QWidget,
+                                                                                                  "outputWidgetTopContainerQWidget")
+            outputTerminalQWidget: QWidget = self.layout().itemAt(0).widget().findChild(QWidget, "outputTerminalQWidget")
+            outputWidgetTopContainerQFrame: QFrame = self.layout().itemAt(0).widget().findChild(QFrame,
+                                                                                                "outputWidgetTopContainerQFrame")
+            outputTerminalQPlainTextEdit: QTextEdit = self.layout().itemAt(0).widget().findChild(QTextEdit,
+                                                                                                "outputTerminalQPlainTextEdit")
+            outputWidgetTopContainerQWidget.setGeometry(QRect(
+                (
+                    noLayoutQWidget.width() - (
+                        outputWidgetTopContainerQFrame.width() + (
+                            20 if outputTerminalQPlainTextEdit.verticalScrollBar().maximum() > 0 else 10
+                        )
                     )
-                )
-            ), 0,
-            outputWidgetTopContainerQFrame.width(), outputWidgetTopContainerQWidget.height()
-        ))
-        outputTerminalQWidget.setGeometry(QRect(
-            0, 0, noLayoutQWidget.width(), noLayoutQWidget.height()
-        ))
-        outputWidgetTopContainerQWidget.raise_()
-        outputTerminalQWidget.lower()
+                ), 0,
+                outputWidgetTopContainerQFrame.width(), outputWidgetTopContainerQWidget.height()
+            ))
+            outputTerminalQWidget.setGeometry(QRect(
+                0, 0, noLayoutQWidget.width(), noLayoutQWidget.height()
+            ))
+            outputWidgetTopContainerQWidget.raise_()
+            outputTerminalQWidget.lower()
+        except AttributeError:
+            pass
 
     def resizeEvent(self, event) -> None:
         self.update_terminal_ui()
@@ -146,6 +158,7 @@ class DetachedWindow(QWidget):
         x = (screen.width() - self.width()) // 2
         y = (screen.height() - self.height()) // 2
         self.move(x, y)
+        self.update_terminal_ui()
 
 class Highlighter(QSyntaxHighlighter):
     def __init__(self, parent=None):
@@ -192,6 +205,13 @@ class LogHighlighter(Highlighter):
         self.add_highlighting_rule(r'^ERROR:.*$', error_format)
 
 class MyMainWindow(QMainWindow):
+    def changeEvent(self, event):
+        super().changeEvent(event)
+        if event.type() == QEvent.WindowStateChange:
+            if self.isMaximized():
+                self.update_terminal_ui()
+            elif self.windowState() == Qt.WindowNoState:
+                self.update_terminal_ui()
     def __init__(self):
         super().__init__()
         self.ui = Ui_MainWindow()
@@ -218,7 +238,7 @@ class MyMainWindow(QMainWindow):
         self.toggle_expand_terminal.toggled.connect(self.toggle_expand)
         self.ui.outputTerminalQLineEdit.returnPressed.connect(self.process_command)
         self.ui.outputTerminalQPushButton.clicked.connect(self.process_command)
-        self.ui.outputTerminalQTextEdit.textChanged.connect(self.update_terminal_ui)
+        self.ui.outputTerminalQPlainTextEdit.textChanged.connect(self.update_terminal_ui)
 
         self.ui.generateQPushButton.clicked.connect(
             lambda: self.change_page("hdwalletQStackedWidget", "generatePageQStackedWidget"),
@@ -573,7 +593,8 @@ class MyMainWindow(QMainWindow):
         network = self.ui.dumpsNetworkQComboBox.currentText()
         exclude_set = set([p.strip() for p in self.ui.dumpsExcludeOrIncludeQLineEdit.text().split(",")])
 
-        saved_file = open(save_filepath, 'w')
+        if save_filepath != None:
+            saved_file = open(save_filepath, 'w')
 
         crypto = self.ui.dumpsCryptocurrencyQComboBox.currentText()
 
@@ -684,7 +705,8 @@ class MyMainWindow(QMainWindow):
                 return None
 
             drive(*derivation.derivations())
-            saved_file.close()
+            if save_filepath != None:
+                saved_file.close()
         else:
             if derivation != None:
                 hd = hd.from_derivation(derivation=derivation)
@@ -694,7 +716,7 @@ class MyMainWindow(QMainWindow):
 
             if save_filepath != None:
                 saved_file.write(result)
-            saved_file.close()
+                saved_file.close()
             return result
 
 
@@ -1445,7 +1467,7 @@ class MyMainWindow(QMainWindow):
             (
                 self.ui.noLayoutQWidget.width() - (
                     self.ui.outputWidgetTopContainerQFrame.width() + (
-                        20 if self.ui.outputTerminalQTextEdit.verticalScrollBar().maximum() > 0 else 10
+                        20 if self.ui.outputTerminalQPlainTextEdit.verticalScrollBar().maximum() > 0 else 10
                     )
                 )
             ), 0,
@@ -1466,6 +1488,7 @@ class MyMainWindow(QMainWindow):
         x = (screen.width() - self.width()) // 2
         y = (screen.height() - self.height()) // 2
         self.move(x, y)
+        self.update_terminal_ui()
 
     def show(self):
         super(MyMainWindow, self).show()
