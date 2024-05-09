@@ -9,7 +9,7 @@ from random import choice
 from typing import *
 
 from PySide6.QtWidgets import (
-    QPushButton, QLineEdit, QLayout, QWidget, QApplication, QMainWindow, QFileDialog
+    QPushButton, QLineEdit, QLayout, QWidget, QApplication, QMainWindow, QFileDialog, QTextEdit
 )
 from PySide6.QtCore import QSize, QThreadPool
 from PySide6.QtGui import QGuiApplication
@@ -115,8 +115,16 @@ class DetachedWindow(QWidget):
         outputTerminalQWidget: QWidget = self.layout().itemAt(0).widget().findChild(QWidget, "outputTerminalQWidget")
         outputWidgetTopContainerQFrame: QFrame = self.layout().itemAt(0).widget().findChild(QFrame,
                                                                                             "outputWidgetTopContainerQFrame")
+        outputTerminalQTextEdit: QTextEdit = self.layout().itemAt(0).widget().findChild(QTextEdit,
+                                                                                            "outputTerminalQTextEdit")
         outputWidgetTopContainerQWidget.setGeometry(QRect(
-            (noLayoutQWidget.width() - (outputWidgetTopContainerQFrame.width() + 20)), 0,
+            (
+                noLayoutQWidget.width() - (
+                    outputWidgetTopContainerQFrame.width() + (
+                        20 if outputTerminalQTextEdit.verticalScrollBar().maximum() > 0 else 10
+                    )
+                )
+            ), 0,
             outputWidgetTopContainerQFrame.width(), outputWidgetTopContainerQWidget.height()
         ))
         outputTerminalQWidget.setGeometry(QRect(
@@ -210,6 +218,7 @@ class MyMainWindow(QMainWindow):
         self.toggle_expand_terminal.toggled.connect(self.toggle_expand)
         self.ui.outputTerminalQLineEdit.returnPressed.connect(self.process_command)
         self.ui.outputTerminalQPushButton.clicked.connect(self.process_command)
+        self.ui.outputTerminalQTextEdit.textChanged.connect(self.update_terminal_ui)
 
         self.ui.generateQPushButton.clicked.connect(
             lambda: self.change_page("hdwalletQStackedWidget", "generatePageQStackedWidget"),
@@ -1417,8 +1426,15 @@ class MyMainWindow(QMainWindow):
         super().closeEvent(event)
 
     def update_terminal_ui(self):
+
         self.ui.outputWidgetTopContainerQWidget.setGeometry(QRect(
-            (self.ui.noLayoutQWidget.width() - (self.ui.outputWidgetTopContainerQFrame.width() + 20)), 0,
+            (
+                self.ui.noLayoutQWidget.width() - (
+                    self.ui.outputWidgetTopContainerQFrame.width() + (
+                        20 if self.ui.outputTerminalQTextEdit.verticalScrollBar().maximum() > 0 else 10
+                    )
+                )
+            ), 0,
             self.ui.outputWidgetTopContainerQFrame.width(), self.ui.outputWidgetTopContainerQWidget.height()
         ))
         self.ui.outputTerminalQWidget.setGeometry(QRect(
@@ -1439,6 +1455,7 @@ class MyMainWindow(QMainWindow):
 
     def show(self):
         super(MyMainWindow, self).show()
+        self.update_terminal_ui()
         self.update_terminal_ui()
 
     def update_style(self, widget: QWidget):
