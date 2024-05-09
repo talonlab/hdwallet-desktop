@@ -345,6 +345,10 @@ class MyMainWindow(QMainWindow):
             }
         }
 
+        for name, data in self.derivation_tab.items():
+            data["button"].clicked.connect(
+                functools.partial(self.derivation_tab_changed, data["widget"], data["button"]))
+
         self.ui.dumpsHdQComboBox.currentIndexChanged.connect(self._dump_hd_changed)
         self.ui.dumpsFromQComboBox.currentIndexChanged.connect(self._dump_from_changed)
 
@@ -440,10 +444,6 @@ class MyMainWindow(QMainWindow):
             pair[0].setCurrentIndex(0)
 
         self.ui.dumpsGenerateQPushButton.clicked.connect(self._dumps)
-
-        for name, data in self.derivation_tab.items():
-            data["button"].clicked.connect(
-                functools.partial(self.derivation_tab_changed, data["widget"], data["button"]))
 
     def __pair_ca_address_type(self, c_addr, c_list, idx):
         if c_list.currentText().lower().startswith("shelley"):
@@ -936,7 +936,7 @@ class MyMainWindow(QMainWindow):
                     first_name = name
             else:
                 data["button"].setEnabled(False)
-        self.derivation_tab[name]["button"].click()
+        self.derivation_tab[first_name]["button"].click()
 
     def _dump_from_changed(self):
         dump_from = self.ui.dumpsFromQComboBox.currentText()
@@ -1308,7 +1308,7 @@ class MyMainWindow(QMainWindow):
         self.change_page(stacked_name, page_name)
 
     def derivation_tab_changed(self, page_name: str, qPushButton: QPushButton) -> None:
-        widget = self.ui.derivationsQStackedWidget.currentWidget()
+        widget = self.ui.derivationTabButtonsContainerQFrame
         self.widget_changed("derivationsQStackedWidget", page_name, qPushButton, widget)
 
 
