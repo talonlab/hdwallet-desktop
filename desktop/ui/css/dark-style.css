@@ -1,7 +1,12 @@
 
 /* ///////////////////////////////////////////// */
+* {
+    selection-color: #000000;
+    selection-background-color: #83b9ff;
+}
 QMainWindow {
-                background-color: #1E1E1E; /* Set the background color of the window */
+    background-color: #1E1E1E;
+
             }
 
 QWidget {
