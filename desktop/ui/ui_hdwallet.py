@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletUXhemz.ui'
+## Form generated from reading UI file 'hdwalletTgDZtX.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -17,10 +17,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QCheckBox, QComboBox,
     QFrame, QGridLayout, QGroupBox, QHBoxLayout,
-    QLabel, QLineEdit, QMainWindow, QPushButton,
-    QRadioButton, QSizePolicy, QSpacerItem, QStackedWidget,
-    QTabWidget, QTextEdit, QVBoxLayout, QWidget
-)
+    QLabel, QLineEdit, QMainWindow, QPlainTextEdit,
+    QPushButton, QRadioButton, QSizePolicy, QSpacerItem,
+    QStackedWidget, QVBoxLayout, QWidget)
 
 from .resources_rc import *
 
@@ -6685,19 +6684,19 @@ class Ui_MainWindow(object):
         self.outputTerminalQFrameVLayout.setSpacing(0)
         self.outputTerminalQFrameVLayout.setObjectName(u"outputTerminalQFrameVLayout")
         self.outputTerminalQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.outputTerminalQTextEdit = QTextEdit(self.outputTerminalQWidget)
-        self.outputTerminalQTextEdit.setObjectName(u"outputTerminalQTextEdit")
-        self.outputTerminalQTextEdit.setEnabled(True)
-        sizePolicy5.setHeightForWidth(self.outputTerminalQTextEdit.sizePolicy().hasHeightForWidth())
-        self.outputTerminalQTextEdit.setSizePolicy(sizePolicy5)
-        self.outputTerminalQTextEdit.setFrameShape(QFrame.NoFrame)
-        self.outputTerminalQTextEdit.setFrameShadow(QFrame.Plain)
-        self.outputTerminalQTextEdit.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
-        self.outputTerminalQTextEdit.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
-        self.outputTerminalQTextEdit.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContentsOnFirstShow)
-        self.outputTerminalQTextEdit.setReadOnly(True)
+        self.outputTerminalQPlainTextEdit = QPlainTextEdit(self.outputTerminalQWidget)
+        self.outputTerminalQPlainTextEdit.setObjectName(u"outputTerminalQPlainTextEdit")
+        self.outputTerminalQPlainTextEdit.setEnabled(True)
+        sizePolicy5.setHeightForWidth(self.outputTerminalQPlainTextEdit.sizePolicy().hasHeightForWidth())
+        self.outputTerminalQPlainTextEdit.setSizePolicy(sizePolicy5)
+        self.outputTerminalQPlainTextEdit.setFrameShape(QFrame.NoFrame)
+        self.outputTerminalQPlainTextEdit.setFrameShadow(QFrame.Plain)
+        self.outputTerminalQPlainTextEdit.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.outputTerminalQPlainTextEdit.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.outputTerminalQPlainTextEdit.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContentsOnFirstShow)
+        self.outputTerminalQPlainTextEdit.setMaximumBlockCount(2500)
 
-        self.outputTerminalQFrameVLayout.addWidget(self.outputTerminalQTextEdit)
+        self.outputTerminalQFrameVLayout.addWidget(self.outputTerminalQPlainTextEdit)
 
         self.outputWidgetTopContainerQWidget = QWidget(self.noLayoutQWidget)
         self.outputWidgetTopContainerQWidget.setObjectName(u"outputWidgetTopContainerQWidget")

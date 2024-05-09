@@ -222,7 +222,7 @@ QLineEdit::disabled {
     background-color: rgba(25, 30, 36, 0.5);
 }
 
-QTextEdit {
+QPlainTextEdit {
     /*font: 11pt "Segoe UI";*/
     background-color: #000000;
     border-color: rgb(25, 30, 36);
@@ -230,6 +230,8 @@ QTextEdit {
     color: rgb(255, 255, 255);
     padding: 5px 10px;
     height: 25px;
+    selection-color: #000000;
+    selection-background-color: #83b9ff;
     /*selection-color: black;*/
     /*selection-background-color: white;*/
 }
@@ -468,7 +470,7 @@ QTabBar, QTabBar::tab, QTabBar::tab:hover, QTabBar::tab:focus {
     border: none;
 }
 
-#outputTerminalQTextEdit{
+#outputTerminalQPlainTextEdit{
     border-radius: 0;
 }
 

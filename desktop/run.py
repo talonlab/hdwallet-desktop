@@ -235,10 +235,10 @@ class MyMainWindow(QMainWindow):
         self.ui.generateLengthContainerQFrame.setSizePolicy(
             QSizePolicy.Expanding, QSizePolicy.Expanding
         )
-        LogHighlighter(self.ui.outputTerminalQTextEdit.document())
+        LogHighlighter(self.ui.outputTerminalQPlainTextEdit.document())
 
         self.ui.dumpsSaveAndGenerateQPushButton.clicked.connect(
-            lambda: FileSaver.save_file(self.ui.outputTerminalQTextEdit)
+            lambda: self._dumps(save=True)
         )
 
         self.clear_terminal_button = SvgButton(
@@ -248,7 +248,7 @@ class MyMainWindow(QMainWindow):
             icon_height=20
         )
 
-        self.clear_terminal_button.clicked.connect(lambda: clear_text_area(self.ui.outputTerminalQTextEdit))
+        self.clear_terminal_button.clicked.connect(lambda: clear_text_area(self.ui.outputTerminalQPlainTextEdit))
 
         self.ui.generateQPushButton.clicked.connect(
             functools.partial(self.generate_dump_tab_changed, "generatePageQStackedWidget", self.ui.generateQPushButton)
@@ -540,7 +540,12 @@ class MyMainWindow(QMainWindow):
             staking.setText(None)
             staking.setEnabled(False)
 
-    def _dumps(self):
+    def _dumps(self, save=False):
+        save_filepath = None
+        if save:
+            save_filepath = FileSaver.save_file(self.ui.dumpsFormatQComboBox.currentText())
+            if save_filepath == '': return None
+
         def _error(e): 
             self.println(f"ERROR: {e}")
         
@@ -550,7 +555,7 @@ class MyMainWindow(QMainWindow):
         self.ui.dumpsGenerateQPushButton.setEnabled(False)
 
         mysignals = WorkerSignals()
-        job = Worker(self.__dumps, signal=mysignals)
+        job = Worker(self.__dumps, signal=mysignals, save_filepath=save_filepath)
         job.signals = mysignals
 
         job.signals.interval_output.connect(self.println)
@@ -562,11 +567,13 @@ class MyMainWindow(QMainWindow):
 
         QThreadPool.globalInstance().start(job)
 
-    def __dumps(self, signal):
+    def __dumps(self, signal, save_filepath):
         current_hd = self.ui.dumpsHdQComboBox.currentText()
         dump_from = self.ui.dumpsFromQComboBox.currentText()
         network = self.ui.dumpsNetworkQComboBox.currentText()
         exclude_set = set([p.strip() for p in self.ui.dumpsExcludeOrIncludeQLineEdit.text().split(",")])
+
+        saved_file = open(save_filepath, 'w')
 
         crypto = self.ui.dumpsCryptocurrencyQComboBox.currentText()
 
@@ -653,7 +660,10 @@ class MyMainWindow(QMainWindow):
                                 csv_data.append(dump[key[0]][key[1]])
                             else:
                                 csv_data.append(dump[key[0]])
-                        signal.interval_output.emit(", ".join(csv_data))
+                        csv_out = ", ".join(csv_data)
+                        signal.interval_output.emit(csv_out)
+                        if save_filepath != None:
+                            saved_file.write(f"{csv_out}\n")
                         return [_derivation.path()]
 
                     path: List[str] = []
@@ -674,6 +684,7 @@ class MyMainWindow(QMainWindow):
                 return None
 
             drive(*derivation.derivations())
+            saved_file.close()
         else:
             if derivation != None:
                 hd = hd.from_derivation(derivation=derivation)
@@ -681,6 +692,9 @@ class MyMainWindow(QMainWindow):
             else:
                 result = json.dumps(hd.dump(exclude=exclude_set), indent=4, ensure_ascii=False)
 
+            if save_filepath != None:
+                saved_file.write(result)
+            saved_file.close()
             return result
 
 
@@ -1367,7 +1381,7 @@ class MyMainWindow(QMainWindow):
         else:
             newtext = str(s)
 
-        self.ui.outputTerminalQTextEdit.append(f"{newtext}")
+        self.ui.outputTerminalQPlainTextEdit.appendPlainText(f"{newtext}")
 
     def toggle_expand(self):
         if self.toggle_expand_terminal.isChecked():

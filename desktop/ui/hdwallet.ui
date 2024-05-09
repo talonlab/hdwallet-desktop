@@ -15338,7 +15338,7 @@
             <number>0</number>
            </property>
            <item>
-            <widget class="QTextEdit" name="outputTerminalQTextEdit">
+            <widget class="QPlainTextEdit" name="outputTerminalQPlainTextEdit">
              <property name="enabled">
               <bool>true</bool>
              </property>
@@ -15363,8 +15363,8 @@
              <property name="sizeAdjustPolicy">
               <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
              </property>
-             <property name="readOnly">
-              <bool>true</bool>
+             <property name="maximumBlockCount">
+              <number>2500</number>
              </property>
             </widget>
            </item>
@@ -15411,7 +15411,7 @@
              </property>
              <property name="minimumSize">
               <size>
-               <width>30</width>
+               <width>40</width>
                <height>0</height>
               </size>
              </property>
@@ -15431,6 +15431,48 @@
               <property name="bottomMargin">
                <number>15</number>
               </property>
+              <item>
+               <widget class="QFrame" name="clearTerminalQFrame">
+                <property name="minimumSize">
+                 <size>
+                  <width>20</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>20</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string>Clear</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="clearTerminalQFrameVLayout_2">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                </layout>
+               </widget>
+              </item>
               <item>
                <widget class="QFrame" name="expandAndCollapseTerminalQFrame">
                 <property name="minimumSize">
@@ -15500,48 +15542,6 @@
             <property name="placeholderText">
              <string>Command Line Interface (CLI)</string>
             </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QFrame" name="clearTerminalQFrame">
-            <property name="minimumSize">
-             <size>
-              <width>20</width>
-              <height>20</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>20</width>
-              <height>20</height>
-             </size>
-            </property>
-            <property name="toolTip">
-             <string>Clear</string>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <layout class="QVBoxLayout" name="clearTerminalQFrameVLayout">
-             <property name="spacing">
-              <number>0</number>
-             </property>
-             <property name="leftMargin">
-              <number>0</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
-              <number>0</number>
-             </property>
-            </layout>
            </widget>
           </item>
           <item>
