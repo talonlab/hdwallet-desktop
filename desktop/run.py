@@ -49,6 +49,7 @@ from hdwallet.mnemonics import (
 )
 
 from hdwallet.derivations import (
+    IDerivation, DERIVATIONS,
     CustomDerivation, BIP44Derivation, BIP49Derivation, BIP84Derivation,
     BIP86Derivation, ElectrumDerivation, CIP1852Derivation, MoneroDerivation,
     CHANGES
@@ -493,11 +494,93 @@ class MyMainWindow(QMainWindow):
         elif current_hd == 'Monero':
             hd = self._dump_monero(dump_from, hd_kwargs)
 
+        derivation = None
         if self.ui.derivationQGroupBox.isEnabled():
             derivation = self.__dumps_get_derivation(CRYPTOCURRENCIES.cryptocurrency(crypto))
-            hd = hd.from_derivation(derivation=derivation)
-            self.println(json.dumps(hd.dumps(exclude=exclude_set), indent=4, ensure_ascii=False))
+
+        if self.ui.dumpsFormatQComboBox.currentText() == "CSV":
+            def drive(*args) -> List[str]:
+                def drive_helper(derivations, current_derivation: List[Tuple[int, bool]] = []) -> List[str]:
+                    if not derivations:
+
+                        derivation_name: str = derivation.name()
+                        if derivation_name in [
+                            "BIP44", "BIP49", "BIP84", "BIP86"
+                        ]:
+                            _derivation: IDerivation = DERIVATIONS.derivation(
+                                name=derivation_name
+                            ).__call__(
+                                coin_type=current_derivation[1][0],
+                                account=current_derivation[2][0],
+                                change=current_derivation[3][0],
+                                address=current_derivation[4][0]
+                            )
+                        elif derivation_name == "CIP1852":
+                            _derivation: IDerivation = DERIVATIONS.derivation(
+                                name=derivation_name
+                            ).__call__(
+                                coin_type=current_derivation[1][0],
+                                account=current_derivation[2][0],
+                                role=current_derivation[3][0],
+                                address=current_derivation[4][0]
+                            )
+                        elif derivation_name == 'Electrum':
+                            _derivation: IDerivation = DERIVATIONS.derivation(
+                                name=derivation_name
+                            ).__call__(
+                                change=current_derivation[0][0],
+                                address=current_derivation[1][0]
+                            )
+                        elif derivation_name == "Monero":
+                            _derivation: IDerivation = DERIVATIONS.derivation(
+                                name=derivation_name
+                            ).__call__(
+                                minor=current_derivation[0][0],
+                                major=current_derivation[1][0]
+                            )
+                        else:
+                            _derivation: IDerivation = DERIVATIONS.derivation(
+                                name=derivation_name  #at:path,addresses:p2pkh,public_key,wif
+                            ).__call__(
+                                path="m/" + "/".join(
+                                    [str(item[0]) + "'" if item[1] else str(item[0]) for item in current_derivation]
+                                )
+                            )
+
+                        csv_data: List[str] = []
+                        hd.update_derivation(
+                            derivation=_derivation
+                        )
+                        dump: dict = hd.dump(exclude={"root"})
+                        for key in [keys.split(":") for keys in self.ui.dumpsExcludeOrIncludeQLineEdit.text().split(",")]:
+                            if len(key) == 2:
+                                csv_data.append(dump[key[0]][key[1]])
+                            else:
+                                csv_data.append(dump[key[0]])
+                        self.println(", ".join(csv_data))
+                        return [_derivation.path()]
+
+                    path: List[str] = []
+                    if len(derivations[0]) == 3:
+                        for value in range(derivations[0][0], derivations[0][1] + 1):
+                            path += drive_helper(
+                                derivations[1:], current_derivation + [(value, derivations[0][2])]
+                            )
+                    else:
+                        path += drive_helper(
+                            derivations[1:], current_derivation + [derivations[0]]
+                        )
+                    return path
+
+                return drive_helper(args)
+
+            if derivation is None:
+                return None
+
+            drive(*derivation.derivations())
         else:
+            if derivation != None:
+                hd = hd.from_derivation(derivation=derivation)
             self.println(json.dumps(hd.dump(exclude=exclude_set), indent=4, ensure_ascii=False))
 
     def __selected_dervation_name(self):
