@@ -15411,7 +15411,7 @@
              </property>
              <property name="minimumSize">
               <size>
-               <width>110</width>
+               <width>30</width>
                <height>0</height>
               </size>
              </property>
@@ -15503,16 +15503,51 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="outputTerminalQPushButton">
-            <property name="text">
-             <string>Execute</string>
+           <widget class="QFrame" name="clearTerminalQFrame">
+            <property name="minimumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
             </property>
+            <property name="maximumSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Clear</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="clearTerminalQFrameVLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+            </layout>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="clearTerminalQPushButton">
+           <widget class="QPushButton" name="outputTerminalQPushButton">
             <property name="text">
-             <string>Clear</string>
+             <string>Execute</string>
             </property>
            </widget>
           </item>
