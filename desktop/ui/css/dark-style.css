@@ -498,7 +498,6 @@ QTabBar, QTabBar::tab, QTabBar::tab:hover, QTabBar::tab:focus {
 
 
 
-#saveTerminalQFrame,
 #expandAndCollapseTerminalQFrame,
 #clearTerminalQFrame{
     background-color: transparent;

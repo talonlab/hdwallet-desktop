@@ -249,7 +249,7 @@ class MyMainWindow(QMainWindow):
             functools.partial(self.generate_dump_tab_changed, "dumpsPageQStackedWidget", self.ui.dumpQPushButton)
         )
 
-        self.ui.generateQPushButton.click()
+        self.ui.dumpQPushButton.click()
         vali= [
             self.ui.bip44AccountQLineEdit,
             self.ui.bip44AddressQLineEdit,
@@ -267,6 +267,8 @@ class MyMainWindow(QMainWindow):
             self.ui.moneroMajorQLineEdit
         ]
         Validator.validate_input(vali)
+
+        self.ui.clearTerminalQFrame.hide()
 
         self._setup_generate_stack()
         self._setup_dump_stack()
