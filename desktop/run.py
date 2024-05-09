@@ -973,15 +973,26 @@ class MyMainWindow(QMainWindow):
 
     def _dumps_crypto_change(self):
         crypto = self.ui.dumpsCryptocurrencyQComboBox.currentText()
+        crypto_obj = CRYPTOCURRENCIES.cryptocurrency(crypto)
 
         self.ui.dumpsHdQComboBox.clear()
-        self.ui.dumpsHdQComboBox.addItems(CRYPTOCURRENCIES.cryptocurrency(crypto).HDS.get_hds())
+        self.ui.dumpsHdQComboBox.addItems(crypto_obj.HDS.get_hds())
         self.ui.dumpsHdQComboBox.setCurrentIndex(0)
 
-        nets = [i.title() for i in CRYPTOCURRENCIES.cryptocurrency(crypto).NETWORKS.get_networks()]
+        nets = [i.title() for i in crypto_obj.NETWORKS.get_networks()]
         self.ui.dumpsNetworkQComboBox.clear()
         self.ui.dumpsNetworkQComboBox.addItems(nets)
         self.ui.dumpsNetworkQComboBox.setCurrentText("Mainnet")
+
+        coin_typs_derviation = [
+            self.ui.bip44CoinTypeQLineEdit,
+            self.ui.bip49CoinTypeQLineEdit,
+            self.ui.bip84CoinTypeQLineEdit,
+            self.ui.bip86CoinTypeQLineEdit,
+            self.ui.cip1852CoinTypeQLineEdit
+        ]
+
+        for c in coin_typs_derviation: c.setText(str(crypto_obj.COIN_TYPE))
 
     def _dump_format_changed(self):
         f = self.ui.dumpsFormatQComboBox.currentText()
