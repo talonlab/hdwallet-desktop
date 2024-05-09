@@ -116,7 +116,7 @@ class DetachedWindow(QWidget):
         outputWidgetTopContainerQFrame: QFrame = self.layout().itemAt(0).widget().findChild(QFrame,
                                                                                             "outputWidgetTopContainerQFrame")
         outputWidgetTopContainerQWidget.setGeometry(QRect(
-            (noLayoutQWidget.width() - outputWidgetTopContainerQFrame.width()), 0,
+            (noLayoutQWidget.width() - (outputWidgetTopContainerQFrame.width() + 20)), 0,
             outputWidgetTopContainerQFrame.width(), outputWidgetTopContainerQWidget.height()
         ))
         outputTerminalQWidget.setGeometry(QRect(
