@@ -1294,12 +1294,17 @@ class MyMainWindow(QMainWindow):
         super(MyMainWindow, self).show()
         self.update_terminal_ui()
 
+    def update_style(self, widget: QWidget):
+        widget.setStyleSheet(widget.styleSheet())
+
 
     def widget_changed(self, stacked_name: str, page_name: str, button: QWidget, qWidget: QWidget) -> None:
         for btn in qWidget.findChildren(QWidget):
             btn.setProperty("Active", "")
+            self.update_style(btn)
 
         button.setProperty("Active", "true")
+        self.update_style(button)
         self.change_page(stacked_name, page_name)
 
     def derivation_tab_changed(self, page_name: str, qPushButton: QPushButton) -> None:
