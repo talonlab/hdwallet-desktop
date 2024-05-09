@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletbGmckc.ui'
+## Form generated from reading UI file 'hdwalletYOxDUH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -6637,6 +6637,11 @@ class Ui_MainWindow(object):
 
         self.dumpsFormatKeysContainerQFrameHLayout.addWidget(self.dumpsGenerateQPushButton, 0, Qt.AlignBottom)
 
+        self.dumpsSaveAndGenerateQPushButton = QPushButton(self.dumpsFormatKeysContainerQGroupBox)
+        self.dumpsSaveAndGenerateQPushButton.setObjectName(u"dumpsSaveAndGenerateQPushButton")
+
+        self.dumpsFormatKeysContainerQFrameHLayout.addWidget(self.dumpsSaveAndGenerateQPushButton, 0, Qt.AlignBottom)
+
 
         self.verticalLayout_3.addWidget(self.dumpsFormatKeysContainerQGroupBox)
 
@@ -6710,37 +6715,11 @@ class Ui_MainWindow(object):
         sizePolicy6.setVerticalStretch(0)
         sizePolicy6.setHeightForWidth(self.outputWidgetTopContainerQFrame.sizePolicy().hasHeightForWidth())
         self.outputWidgetTopContainerQFrame.setSizePolicy(sizePolicy6)
-        self.outputWidgetTopContainerQFrame.setMinimumSize(QSize(120, 0))
+        self.outputWidgetTopContainerQFrame.setMinimumSize(QSize(30, 0))
         self.outputWidgetTopContainerQFrameHLayout = QHBoxLayout(self.outputWidgetTopContainerQFrame)
-        self.outputWidgetTopContainerQFrameHLayout.setSpacing(15)
+        self.outputWidgetTopContainerQFrameHLayout.setSpacing(20)
         self.outputWidgetTopContainerQFrameHLayout.setObjectName(u"outputWidgetTopContainerQFrameHLayout")
-        self.outputWidgetTopContainerQFrameHLayout.setContentsMargins(15, 15, 15, 15)
-        self.clearTerminalQFrame = QFrame(self.outputWidgetTopContainerQFrame)
-        self.clearTerminalQFrame.setObjectName(u"clearTerminalQFrame")
-        self.clearTerminalQFrame.setMinimumSize(QSize(20, 20))
-        self.clearTerminalQFrame.setMaximumSize(QSize(20, 20))
-        self.clearTerminalQFrame.setFrameShape(QFrame.StyledPanel)
-        self.clearTerminalQFrame.setFrameShadow(QFrame.Raised)
-        self.clearTerminalQFrameVLayout = QVBoxLayout(self.clearTerminalQFrame)
-        self.clearTerminalQFrameVLayout.setSpacing(0)
-        self.clearTerminalQFrameVLayout.setObjectName(u"clearTerminalQFrameVLayout")
-        self.clearTerminalQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-
-        self.outputWidgetTopContainerQFrameHLayout.addWidget(self.clearTerminalQFrame)
-
-        self.saveTerminalQFrame = QFrame(self.outputWidgetTopContainerQFrame)
-        self.saveTerminalQFrame.setObjectName(u"saveTerminalQFrame")
-        self.saveTerminalQFrame.setMinimumSize(QSize(20, 20))
-        self.saveTerminalQFrame.setMaximumSize(QSize(20, 20))
-        self.saveTerminalQFrame.setFrameShape(QFrame.StyledPanel)
-        self.saveTerminalQFrame.setFrameShadow(QFrame.Raised)
-        self.saveTerminalQFrameVLayout = QVBoxLayout(self.saveTerminalQFrame)
-        self.saveTerminalQFrameVLayout.setSpacing(0)
-        self.saveTerminalQFrameVLayout.setObjectName(u"saveTerminalQFrameVLayout")
-        self.saveTerminalQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-
-        self.outputWidgetTopContainerQFrameHLayout.addWidget(self.saveTerminalQFrame)
-
+        self.outputWidgetTopContainerQFrameHLayout.setContentsMargins(5, 15, 5, 15)
         self.expandAndCollapseTerminalQFrame = QFrame(self.outputWidgetTopContainerQFrame)
         self.expandAndCollapseTerminalQFrame.setObjectName(u"expandAndCollapseTerminalQFrame")
         self.expandAndCollapseTerminalQFrame.setMinimumSize(QSize(20, 20))
@@ -6771,6 +6750,19 @@ class Ui_MainWindow(object):
 
         self.outputTerminalActionQWidgetHLayout.addWidget(self.outputTerminalQLineEdit)
 
+        self.clearTerminalQFrame = QFrame(self.outputTerminalActionQWidget)
+        self.clearTerminalQFrame.setObjectName(u"clearTerminalQFrame")
+        self.clearTerminalQFrame.setMinimumSize(QSize(20, 20))
+        self.clearTerminalQFrame.setMaximumSize(QSize(20, 20))
+        self.clearTerminalQFrame.setFrameShape(QFrame.StyledPanel)
+        self.clearTerminalQFrame.setFrameShadow(QFrame.Raised)
+        self.clearTerminalQFrameVLayout = QVBoxLayout(self.clearTerminalQFrame)
+        self.clearTerminalQFrameVLayout.setSpacing(0)
+        self.clearTerminalQFrameVLayout.setObjectName(u"clearTerminalQFrameVLayout")
+        self.clearTerminalQFrameVLayout.setContentsMargins(0, 0, 0, 0)
+
+        self.outputTerminalActionQWidgetHLayout.addWidget(self.clearTerminalQFrame)
+
         self.outputTerminalQPushButton = QPushButton(self.outputTerminalActionQWidget)
         self.outputTerminalQPushButton.setObjectName(u"outputTerminalQPushButton")
 
@@ -6793,7 +6785,7 @@ class Ui_MainWindow(object):
         self.electrumV1QStackedWidget.setCurrentIndex(2)
         self.electrumV2QStackedWidget.setCurrentIndex(2)
         self.moneroQStackedWidget.setCurrentIndex(5)
-        self.derivationsQStackedWidget.setCurrentIndex(8)
+        self.derivationsQStackedWidget.setCurrentIndex(5)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -7292,7 +7284,7 @@ class Ui_MainWindow(object):
         self.bip44CoinTypeQLineEdit.setText("")
         self.bip44CoinTypeQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bip44AccountQLabel.setText(QCoreApplication.translate("MainWindow", u"Account", None))
-        self.bip44AccountQLineEdit.setText("")
+        self.bip44AccountQLineEdit.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bip44AccountQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bip44ChangeQLabel.setText(QCoreApplication.translate("MainWindow", u"Change", None))
         self.bip44ChangeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"External", None))
@@ -7300,7 +7292,7 @@ class Ui_MainWindow(object):
 
         self.bip44ChangeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.bip44AddressQLabel.setText(QCoreApplication.translate("MainWindow", u"Address", None))
-        self.bip44AddressQLineEdit.setText("")
+        self.bip44AddressQLineEdit.setText(QCoreApplication.translate("MainWindow", u"0-10", None))
         self.bip44AddressQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bip49PurposeQLabel.setText(QCoreApplication.translate("MainWindow", u"Purpose", None))
         self.bip49PurposeQLineEdit.setText("")
@@ -7309,7 +7301,7 @@ class Ui_MainWindow(object):
         self.bip49CoinTypeQLineEdit.setText("")
         self.bip49CoinTypeQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bip49AccountQLabel.setText(QCoreApplication.translate("MainWindow", u"Account", None))
-        self.bip49AccountQLineEdit.setText("")
+        self.bip49AccountQLineEdit.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bip49AccountQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bip49ChangeQLabel.setText(QCoreApplication.translate("MainWindow", u"Change", None))
         self.bip49ChangeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"External", None))
@@ -7317,7 +7309,7 @@ class Ui_MainWindow(object):
 
         self.bip49ChangeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.bip49AddressQLabel.setText(QCoreApplication.translate("MainWindow", u"Address", None))
-        self.bip49AddressQLineEdit.setText("")
+        self.bip49AddressQLineEdit.setText(QCoreApplication.translate("MainWindow", u"0-10", None))
         self.bip49AddressQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bip84PurposeQLabel.setText(QCoreApplication.translate("MainWindow", u"Purpose", None))
         self.bip84PurposeQLineEdit.setText("")
@@ -7326,7 +7318,7 @@ class Ui_MainWindow(object):
         self.bip84CoinTypeQLineEdit.setText("")
         self.bip84CoinTypeQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bip84AccountQLabel.setText(QCoreApplication.translate("MainWindow", u"Account", None))
-        self.bip84AccountQLineEdit.setText("")
+        self.bip84AccountQLineEdit.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bip84AccountQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bip84ChangeQLabel.setText(QCoreApplication.translate("MainWindow", u"Change", None))
         self.bip84ChangeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"External", None))
@@ -7334,7 +7326,7 @@ class Ui_MainWindow(object):
 
         self.bip84ChangeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.bip84AddressQLabel.setText(QCoreApplication.translate("MainWindow", u"Address", None))
-        self.bip84AddressQLineEdit.setText("")
+        self.bip84AddressQLineEdit.setText(QCoreApplication.translate("MainWindow", u"0-10", None))
         self.bip84AddressQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bip86PurposeQLabel.setText(QCoreApplication.translate("MainWindow", u"Purpose", None))
         self.bip86PurposeQLineEdit.setText("")
@@ -7343,7 +7335,7 @@ class Ui_MainWindow(object):
         self.bip86CoinTypeQLineEdit.setText("")
         self.bip86CoinTypeQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bip86AccountQLabel.setText(QCoreApplication.translate("MainWindow", u"Account", None))
-        self.bip86AccountQLineEdit.setText("")
+        self.bip86AccountQLineEdit.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bip86AccountQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bip86ChangeQLabel.setText(QCoreApplication.translate("MainWindow", u"Change", None))
         self.bip86ChangeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"External", None))
@@ -7351,7 +7343,7 @@ class Ui_MainWindow(object):
 
         self.bip86ChangeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.bip86AddressQLabel.setText(QCoreApplication.translate("MainWindow", u"Address", None))
-        self.bip86AddressQLineEdit.setText("")
+        self.bip86AddressQLineEdit.setText(QCoreApplication.translate("MainWindow", u"0-10", None))
         self.bip86AddressQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.bip141PathQLabel.setText(QCoreApplication.translate("MainWindow", u"Path", None))
         self.bip141PathQLineEdit.setText("")
@@ -7370,7 +7362,7 @@ class Ui_MainWindow(object):
         self.cip1852CoinTypeQLineEdit.setText("")
         self.cip1852CoinTypeQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"1815", None))
         self.cip1852AccountQLabel.setText(QCoreApplication.translate("MainWindow", u"Account", None))
-        self.cip1852AccountQLineEdit.setText("")
+        self.cip1852AccountQLineEdit.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.cip1852AccountQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.cip1852ChangeQLabel.setText(QCoreApplication.translate("MainWindow", u"Role", None))
         self.cip1852ChangeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"External", None))
@@ -7379,19 +7371,19 @@ class Ui_MainWindow(object):
 
         self.cip1852ChangeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cip1852AddressQLabel.setText(QCoreApplication.translate("MainWindow", u"Address", None))
-        self.cip1852AddressQLineEdit.setText("")
+        self.cip1852AddressQLineEdit.setText(QCoreApplication.translate("MainWindow", u"0-10", None))
         self.cip1852AddressQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.electrumChangeQLabel.setText(QCoreApplication.translate("MainWindow", u"Change", None))
-        self.electrumChangeQLineEdit.setText("")
+        self.electrumChangeQLineEdit.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.electrumChangeQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.electrumAddressQLabel.setText(QCoreApplication.translate("MainWindow", u"Address", None))
-        self.electrumAddressQLineEdit.setText("")
+        self.electrumAddressQLineEdit.setText(QCoreApplication.translate("MainWindow", u"0-10", None))
         self.electrumAddressQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.moneroMinorQLabel.setText(QCoreApplication.translate("MainWindow", u"Minor", None))
-        self.moneroMinorQLineEdit.setText("")
+        self.moneroMinorQLineEdit.setText(QCoreApplication.translate("MainWindow", u"1", None))
         self.moneroMinorQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"1", None))
         self.moneroMajorQLabel.setText(QCoreApplication.translate("MainWindow", u"Major", None))
-        self.moneroMajorQLineEdit.setText("")
+        self.moneroMajorQLineEdit.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.moneroMajorQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.dumpsFormatQLabel.setText(QCoreApplication.translate("MainWindow", u"Format", None))
         self.dumpsFormatQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"JSON", None))
@@ -7400,7 +7392,11 @@ class Ui_MainWindow(object):
         self.dumpsFormatQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.dumpsExcludeOrIncludeQLabel.setText(QCoreApplication.translate("MainWindow", u"Exclude / Include", None))
         self.dumpsGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
+        self.dumpsSaveAndGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate And Save", None))
         self.outputTerminalQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Command Line Interface (CLI)", None))
+#if QT_CONFIG(tooltip)
+        self.clearTerminalQFrame.setToolTip(QCoreApplication.translate("MainWindow", u"Clear", None))
+#endif // QT_CONFIG(tooltip)
         self.outputTerminalQPushButton.setText(QCoreApplication.translate("MainWindow", u"Execute", None))
     # retranslateUi
 

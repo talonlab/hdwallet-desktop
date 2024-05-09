@@ -12310,7 +12310,7 @@
                        </sizepolicy>
                       </property>
                       <property name="currentIndex">
-                       <number>8</number>
+                       <number>5</number>
                       </property>
                       <widget class="QWidget" name="customQStackedWidgetPage">
                        <layout class="QHBoxLayout" name="BIP32HLayout">
@@ -12738,7 +12738,7 @@
                            <item>
                             <widget class="QLineEdit" name="bip44AccountQLineEdit">
                              <property name="text">
-                              <string/>
+                              <string>0</string>
                              </property>
                              <property name="placeholderText">
                               <string>0</string>
@@ -12889,7 +12889,7 @@
                            <item>
                             <widget class="QLineEdit" name="bip44AddressQLineEdit">
                              <property name="text">
-                              <string/>
+                              <string>0-10</string>
                              </property>
                              <property name="placeholderText">
                               <string>0</string>
@@ -13130,7 +13130,7 @@
                            <item>
                             <widget class="QLineEdit" name="bip49AccountQLineEdit">
                              <property name="text">
-                              <string/>
+                              <string>0</string>
                              </property>
                              <property name="placeholderText">
                               <string>0</string>
@@ -13281,7 +13281,7 @@
                            <item>
                             <widget class="QLineEdit" name="bip49AddressQLineEdit">
                              <property name="text">
-                              <string/>
+                              <string>0-10</string>
                              </property>
                              <property name="placeholderText">
                               <string>0</string>
@@ -13522,7 +13522,7 @@
                            <item>
                             <widget class="QLineEdit" name="bip84AccountQLineEdit">
                              <property name="text">
-                              <string/>
+                              <string>0</string>
                              </property>
                              <property name="placeholderText">
                               <string>0</string>
@@ -13673,7 +13673,7 @@
                            <item>
                             <widget class="QLineEdit" name="bip84AddressQLineEdit">
                              <property name="text">
-                              <string/>
+                              <string>0-10</string>
                              </property>
                              <property name="placeholderText">
                               <string>0</string>
@@ -13914,7 +13914,7 @@
                            <item>
                             <widget class="QLineEdit" name="bip86AccountQLineEdit">
                              <property name="text">
-                              <string/>
+                              <string>0</string>
                              </property>
                              <property name="placeholderText">
                               <string>0</string>
@@ -14065,7 +14065,7 @@
                            <item>
                             <widget class="QLineEdit" name="bip86AddressQLineEdit">
                              <property name="text">
-                              <string/>
+                              <string>0-10</string>
                              </property>
                              <property name="placeholderText">
                               <string>0</string>
@@ -14486,7 +14486,7 @@
                            <item>
                             <widget class="QLineEdit" name="cip1852AccountQLineEdit">
                              <property name="text">
-                              <string/>
+                              <string>0</string>
                              </property>
                              <property name="placeholderText">
                               <string>0</string>
@@ -14642,7 +14642,7 @@
                            <item>
                             <widget class="QLineEdit" name="cip1852AddressQLineEdit">
                              <property name="text">
-                              <string/>
+                              <string>0-10</string>
                              </property>
                              <property name="placeholderText">
                               <string>0</string>
@@ -14733,7 +14733,7 @@
                            <item>
                             <widget class="QLineEdit" name="electrumChangeQLineEdit">
                              <property name="text">
-                              <string/>
+                              <string>0</string>
                              </property>
                              <property name="placeholderText">
                               <string>0</string>
@@ -14805,7 +14805,7 @@
                            <item>
                             <widget class="QLineEdit" name="electrumAddressQLineEdit">
                              <property name="text">
-                              <string/>
+                              <string>0-10</string>
                              </property>
                              <property name="placeholderText">
                               <string>0</string>
@@ -14896,7 +14896,7 @@
                            <item>
                             <widget class="QLineEdit" name="moneroMinorQLineEdit">
                              <property name="text">
-                              <string/>
+                              <string>1</string>
                              </property>
                              <property name="placeholderText">
                               <string>1</string>
@@ -14968,7 +14968,7 @@
                            <item>
                             <widget class="QLineEdit" name="moneroMajorQLineEdit">
                              <property name="text">
-                              <string/>
+                              <string>0</string>
                              </property>
                              <property name="placeholderText">
                               <string>0</string>
@@ -15241,6 +15241,13 @@
                    </property>
                   </widget>
                  </item>
+                 <item alignment="Qt::AlignBottom">
+                  <widget class="QPushButton" name="dumpsSaveAndGenerateQPushButton">
+                   <property name="text">
+                    <string>Generate And Save</string>
+                   </property>
+                  </widget>
+                 </item>
                 </layout>
                </widget>
               </item>
@@ -15396,118 +15403,46 @@
            </property>
            <item>
             <widget class="QFrame" name="outputWidgetTopContainerQFrame">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="minimumSize">
               <size>
-               <width>200</width>
+               <width>110</width>
                <height>0</height>
               </size>
              </property>
              <layout class="QHBoxLayout" name="outputWidgetTopContainerQFrameHLayout">
               <property name="spacing">
-               <number>10</number>
+               <number>20</number>
               </property>
               <property name="leftMargin">
-               <number>15</number>
+               <number>5</number>
               </property>
               <property name="topMargin">
                <number>15</number>
               </property>
               <property name="rightMargin">
-               <number>15</number>
+               <number>5</number>
               </property>
               <property name="bottomMargin">
                <number>15</number>
               </property>
               <item>
-               <widget class="QFrame" name="saveTerminalQFrame">
-                <property name="minimumSize">
-                 <size>
-                  <width>25</width>
-                  <height>25</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>25</width>
-                  <height>25</height>
-                 </size>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <layout class="QVBoxLayout" name="saveTerminalQFrameVLayout">
-                 <property name="spacing">
-                  <number>0</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QFrame" name="clearTerminalQFrame">
-                <property name="minimumSize">
-                 <size>
-                  <width>25</width>
-                  <height>25</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>25</width>
-                  <height>25</height>
-                 </size>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <layout class="QVBoxLayout" name="clearTerminalQFrameVLayout">
-                 <property name="spacing">
-                  <number>0</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                </layout>
-               </widget>
-              </item>
-              <item>
                <widget class="QFrame" name="expandAndCollapseTerminalQFrame">
                 <property name="minimumSize">
                  <size>
-                  <width>25</width>
-                  <height>25</height>
+                  <width>20</width>
+                  <height>20</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>25</width>
-                  <height>25</height>
+                  <width>20</width>
+                  <height>20</height>
                  </size>
                 </property>
                 <property name="frameShape">
@@ -15571,6 +15506,13 @@
            <widget class="QPushButton" name="outputTerminalQPushButton">
             <property name="text">
              <string>Execute</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clearTerminalQPushButton">
+            <property name="text">
+             <string>Clear</string>
             </property>
            </widget>
           </item>

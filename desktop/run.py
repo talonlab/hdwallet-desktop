@@ -74,6 +74,7 @@ from ui.ui_hdwallet import Ui_MainWindow
 from widget.SvgButton import SvgButton
 from file_saver import FileSaver
 from worker import Worker, WorkerSignals
+from validator import Validator
 
 def clear_layout(layout: QLayout, delete: bool = True) -> None:
     if layout is not None:
@@ -225,19 +226,12 @@ class MyMainWindow(QMainWindow):
         self.ui.generateLengthContainerQFrame.setSizePolicy(
             QSizePolicy.Expanding, QSizePolicy.Expanding
         )
-
         LogHighlighter(self.ui.outputTerminalQTextEdit.document())
 
-        self.save_file_button = SvgButton(
-            parent_widget=self.ui.saveTerminalQFrame,
-            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/all_Icons/save-white.svg"),
-            icon_width=20,
-            icon_height=20
+        self.ui.dumpsSaveAndGenerateQPushButton.clicked.connect(
+            lambda: FileSaver.save_file(self.ui.outputTerminalQTextEdit)
         )
 
-        self.save_file_button.clicked.connect(
-            lambda: FileSaver.save_file(self.ui.outputTerminalQTextEdit, self.ui.dumpsFormatQComboBox)
-        )
         self.clear_terminal_button = SvgButton(
             parent_widget=self.ui.clearTerminalQFrame,
             icon_path=os.path.join(os.path.dirname(__file__), "ui/images/all_Icons/clean-white.svg"),
@@ -256,6 +250,23 @@ class MyMainWindow(QMainWindow):
         )
 
         self.ui.generateQPushButton.click()
+        vali= [
+            self.ui.bip44AccountQLineEdit,
+            self.ui.bip44AddressQLineEdit,
+            self.ui.bip49AccountQLineEdit,
+            self.ui.bip49AddressQLineEdit,
+            self.ui.bip84AccountQLineEdit,
+            self.ui.bip84AddressQLineEdit,
+            self.ui.bip86AccountQLineEdit,
+            self.ui.bip86AddressQLineEdit,
+            self.ui.cip1852AccountQLineEdit,
+            self.ui.cip1852AddressQLineEdit,
+            self.ui.electrumChangeQLineEdit,
+            self.ui.electrumAddressQLineEdit,
+            self.ui.moneroMinorQLineEdit,
+            self.ui.moneroMajorQLineEdit
+        ]
+        Validator.validate_input(vali)
 
         self._setup_generate_stack()
         self._setup_dump_stack()

@@ -5,7 +5,7 @@ import re
 class Validator:
     @staticmethod
     def validate_string(input_string):
-        pattern = r'^\d[1]-\d[1]$'
+        pattern = r'^\d-\d$'
         return bool(re.match(pattern, input_string))
 
     @staticmethod
@@ -28,3 +28,10 @@ class Validator:
         callback()
 
         return callback
+
+    @staticmethod
+    def validate_input(lineedits):
+        for lineedit in lineedits:
+            lineedit.textChanged.connect(
+                Validator.text_changed_callback(lineedit)
+            )
