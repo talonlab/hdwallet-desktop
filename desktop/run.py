@@ -11,7 +11,7 @@ from typing import *
 from PySide6.QtWidgets import (
     QPushButton, QLineEdit, QLayout, QWidget, QApplication, QMainWindow, QFileDialog
 )
-from PySide6.QtCore import QSize
+from PySide6.QtCore import QSize, QThreadPool
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtSvgWidgets import QSvgWidget
 from PySide6.QtWidgets import (
@@ -28,7 +28,6 @@ import string
 
 from hdwallet import HDWallet
 from hdwallet.hds import HDS
-from widget.file_saver import FileSaver
 
 from hdwallet.entropies import (
     AlgorandEntropy, ALGORAND_ENTROPY_STRENGTHS,
@@ -73,7 +72,8 @@ from hdwallet.seeds import (
 
 from ui.ui_hdwallet import Ui_MainWindow
 from widget.SvgButton import SvgButton
-
+from widget.file_saver import FileSaver
+from worker import Worker
 
 def clear_layout(layout: QLayout, delete: bool = True) -> None:
     if layout is not None:
@@ -135,7 +135,7 @@ class DetachedWindow(QWidget):
 
     def center_window(self):
         # Get the screen resolution from the application
-        screen = QApplication.primaryScreen().geometry()
+        screen = self.screen().geometry()
         x = (screen.width() - self.width()) // 2
         y = (screen.height() - self.height()) // 2
         self.move(x, y)
@@ -167,6 +167,7 @@ class MyMainWindow(QMainWindow):
         self.toggle_expand_terminal.setCheckable(True)
         self.toggle_expand_terminal.toggled.connect(self.toggle_expand)
         self.ui.outputTerminalQLineEdit.returnPressed.connect(self.process_command)
+        self.ui.outputTerminalQPushButton.clicked.connect(self.process_command)
 
         self.ui.generateQPushButton.clicked.connect(
             lambda: self.change_page("hdwalletQStackedWidget", "generatePageQStackedWidget"))
@@ -349,6 +350,9 @@ class MyMainWindow(QMainWindow):
             data["button"].clicked.connect(
                 functools.partial(self.derivation_tab_changed, data["widget"], data["button"]))
 
+        self.ui.dumpsExcludeOrIncludeQLabel.setText("Exclude")
+        self.ui.dumpsFormatQComboBox.currentIndexChanged.connect(self._dump_format_changed)
+
         self.ui.dumpsHdQComboBox.currentIndexChanged.connect(self._dump_hd_changed)
         self.ui.dumpsFromQComboBox.currentIndexChanged.connect(self._dump_from_changed)
 
@@ -461,10 +465,10 @@ class MyMainWindow(QMainWindow):
             staking.setEnabled(False)
 
     def _dumps(self):
-        try:
-            self.__dumps()
-        except Exception as e:
-            self.println(f"ERROR: {e}")
+        def _error(e): self.println(f"ERROR: {e}")
+        job = Worker(self.__dumps)
+        job.signals.interval_error.connect(_error)
+        QThreadPool.globalInstance().start(job)
 
     def __dumps(self):
         current_hd = self.ui.dumpsHdQComboBox.currentText()
@@ -484,7 +488,7 @@ class MyMainWindow(QMainWindow):
             if current_hd == 'BIP141':
                 semantic_indx = self.ui.bip141ScriptSemanticsQComboBox.currentIndex()
                 hd_kwargs["semantic"] = self.script_semantics[semantic_indx]
-            hd = self._dump_bips(current_hd, dump_from, hd_kwargs)
+            hd = self._dump_bips(dump_from, hd_kwargs)
         elif current_hd == 'Cardano':
             hd = self._dump_cardano(dump_from, hd_kwargs)
         elif current_hd == 'Electrum-V1':
@@ -540,7 +544,7 @@ class MyMainWindow(QMainWindow):
                             )
                         else:
                             _derivation: IDerivation = DERIVATIONS.derivation(
-                                name=derivation_name  #at:path,addresses:p2pkh,public_key,wif
+                                name=derivation_name
                             ).__call__(
                                 path="m/" + "/".join(
                                     [str(item[0]) + "'" if item[1] else str(item[0]) for item in current_derivation]
@@ -581,7 +585,10 @@ class MyMainWindow(QMainWindow):
         else:
             if derivation != None:
                 hd = hd.from_derivation(derivation=derivation)
-            self.println(json.dumps(hd.dump(exclude=exclude_set), indent=4, ensure_ascii=False))
+                self.println(json.dumps(hd.dumps(exclude=exclude_set), indent=4, ensure_ascii=False))
+            else:
+                self.println(json.dumps(hd.dump(exclude=exclude_set), indent=4, ensure_ascii=False))
+
 
     def __selected_dervation_name(self):
         current_widget = self.ui.derivationsQStackedWidget.currentWidget().objectName()
@@ -652,7 +659,7 @@ class MyMainWindow(QMainWindow):
                 major=self.ui.moneroMajorQLineEdit.text()
             )
 
-    def _dump_bips(self, hd, dump_from, hd_kwargs):
+    def _dump_bips(self, dump_from, hd_kwargs):
         if dump_from == "Entropy":
             hd_kwargs["language"] = self.ui.bipFromEntropyLanguageQComboBox.currentText().lower()
             hd_kwargs["passphrase"] = self.ui.bipFromEntropyPassphraseQLineEdit.text()
@@ -904,6 +911,42 @@ class MyMainWindow(QMainWindow):
         self.ui.dumpsNetworkQComboBox.addItems(nets)
         self.ui.dumpsNetworkQComboBox.setCurrentText("Mainnet")
 
+    def _dump_format_changed(self):
+        f = self.ui.dumpsFormatQComboBox.currentText()
+        
+        if f == "CSV":
+            self.ui.dumpsExcludeOrIncludeQLabel.setText("Include")
+            self.__default_csv_include()
+        else:
+            self.ui.dumpsExcludeOrIncludeQLabel.setText("Exclude")
+            self.ui.dumpsExcludeOrIncludeQLineEdit.setText(None)
+
+
+    def __default_csv_include(self):
+        hd = self.ui.dumpsHdQComboBox.currentText()
+
+        if hd == "BIP32":
+            _include: str = "at:path,addresses:p2pkh,public_key,wif"
+        elif hd in [
+            "BIP44", "BIP49", "BIP84", "BIP86"
+        ]:
+            _include: str = "at:path,address,public_key,wif"
+        elif hd == "BIP141":
+            _include: str = f"at:path,addresses:p2wpkh,public_key,wif"
+        elif hd == "Cardano":
+            _include: str = "at:path,address,public_key,private_key"
+        elif hd in [
+            "Electrum-V1", "Electrum-V2"
+        ]:
+            _include: str = "at:change,at:address,address,public_key,wif"
+        elif hd == "Monero":
+            _include: str = "at:minor,at:major,sub_address"
+        else:
+            _include = None
+
+        self.ui.dumpsExcludeOrIncludeQLineEdit.setText(_include)
+
+
     def _dump_hd_changed(self):
         current_hd = self.ui.dumpsHdQComboBox.currentText()
 
@@ -926,6 +969,9 @@ class MyMainWindow(QMainWindow):
         self.ui.dumpsFromQComboBox.clear()
         self.ui.dumpsFromQComboBox.addItems(sorted(keys))
         self.ui.dumpsFromQComboBox.setCurrentIndex(0)
+
+        if self.ui.dumpsFormatQComboBox.currentText() == "CSV":
+            self.__default_csv_include()
 
     def __filter_derivation_tab(self, k):
         first_name = None
@@ -990,7 +1036,7 @@ class MyMainWindow(QMainWindow):
         self.ui.generatePassphraseUpperCaseQCheckBox.setChecked(True)
         self.ui.generatePassphraseLowerCaseQCheckBox.setChecked(True)
         self.ui.generatePassphraseNumberQCheckBox.setChecked(True)
-        self.ui.generatePassphraseCharacterQCheckBox.setChecked(True)
+        self.ui.generatePassphraseCharacterQCheckBox.setChecked(False)
 
         self.ui.generateSeedCardanoTypeQComboBox.addItems([i.title() for i in Cardano.TYPES.get_cardano_types()])
         self.ui.generateSeedMnemonicTypeQComboBox.addItems(
@@ -1192,16 +1238,20 @@ class MyMainWindow(QMainWindow):
             print(f"ERROR changing page: '{stacked_name}' '{widget_name}'")
 
     def process_command(self):
-        result = subprocess.run(
-            f'hdwallet {self.ui.outputTerminalQLineEdit.text()}',
-            shell=True,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE
-        )
+        def process():
+            result = subprocess.run(
+                f'hdwallet {self.ui.outputTerminalQLineEdit.text()}',
+                shell=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE
+            )
 
-        output = result.stderr if result.stderr else result.stdout
-        self.ui.outputTerminalQLineEdit.setText(None)
-        self.println(output.decode())
+            output = result.stderr if result.stderr else result.stdout
+            self.ui.outputTerminalQLineEdit.setText(None)
+            self.println(output.decode())
+ 
+        job = Worker(process)
+        QThreadPool.globalInstance().start(job)
 
     def println(self, s):
         # just for now
@@ -1285,7 +1335,7 @@ class MyMainWindow(QMainWindow):
 
     def center_window(self):
         # Get the screen resolution from the application
-        screen = QApplication.primaryScreen().geometry()
+        screen = self.screen().geometry()
         x = (screen.width() - self.width()) // 2
         y = (screen.height() - self.height()) // 2
         self.move(x, y)
@@ -1296,7 +1346,6 @@ class MyMainWindow(QMainWindow):
 
     def update_style(self, widget: QWidget):
         widget.setStyleSheet(widget.styleSheet())
-
 
     def widget_changed(self, stacked_name: str, page_name: str, button: QWidget, qWidget: QWidget) -> None:
         for btn in qWidget.findChildren(QWidget):
