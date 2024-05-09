@@ -73,7 +73,7 @@ from hdwallet.seeds import (
 from ui.ui_hdwallet import Ui_MainWindow
 from widget.SvgButton import SvgButton
 from file_saver import FileSaver
-from worker import Worker
+from worker import Worker, WorkerSignals
 
 def clear_layout(layout: QLayout, delete: bool = True) -> None:
     if layout is not None:
@@ -97,8 +97,6 @@ def put_svg(layout: QLayout, path: str, width: int, height: int) -> QSvgWidget:
 
 def clear_text_area(text_edit):
     text_edit.clear()
-
-
 
 class DetachedWindow(QWidget):
     def __init__(self, p):
@@ -140,6 +138,49 @@ class DetachedWindow(QWidget):
         y = (screen.height() - self.height()) // 2
         self.move(x, y)
 
+class Highlighter(QSyntaxHighlighter):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.highlighting_rules = []
+
+    def add_highlighting_rule(self, pattern, char_format):
+        self.highlighting_rules.append((QRegularExpression(pattern), char_format))
+
+    def highlightBlock(self, text):
+        for pattern, char_format in self.highlighting_rules:
+            matcher = pattern.globalMatch(text)
+            while matcher.hasNext():
+                match = matcher.next()
+                self.setFormat(match.capturedStart(), match.capturedLength(), char_format)
+
+class LogHighlighter(Highlighter):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+
+        # Punctuation highlighting
+        punctuation_format = QTextCharFormat()
+        punctuation_format.setForeground(QColor(255, 255, 255))
+        self.add_highlighting_rule(r'[^\w\s]', punctuation_format)
+
+        # Digit highlighting
+        digit_format = QTextCharFormat()
+        digit_format.setForeground(QColor(0, 120, 215))
+        self.add_highlighting_rule(r'\b\d+\b', digit_format)
+
+        # Character highlighting
+        character_format = QTextCharFormat()
+        character_format.setForeground(QColor(6, 240, 111))
+        self.add_highlighting_rule(r'\b[a-zA-Z]+\b', character_format)
+
+        # Values within single or double quotes
+        quoted_value_format = QTextCharFormat()
+        quoted_value_format.setForeground(QColor(6, 240, 111))
+        self.add_highlighting_rule(r'["\'].*?["\']', quoted_value_format)
+
+        # Highlight lines starting with "ERROR:"
+        error_format = QTextCharFormat()
+        error_format.setForeground(QColor(255, 96, 96))
+        self.add_highlighting_rule(r'^ERROR:.*$', error_format)
 
 class MyMainWindow(QMainWindow):
     def __init__(self):
@@ -184,6 +225,8 @@ class MyMainWindow(QMainWindow):
         self.ui.generateLengthContainerQFrame.setSizePolicy(
             QSizePolicy.Expanding, QSizePolicy.Expanding
         )
+
+        LogHighlighter(self.ui.outputTerminalQTextEdit.document())
 
         self.save_file_button = SvgButton(
             parent_widget=self.ui.saveTerminalQFrame,
@@ -476,12 +519,28 @@ class MyMainWindow(QMainWindow):
             staking.setEnabled(False)
 
     def _dumps(self):
-        def _error(e): self.println(f"ERROR: {e}")
-        job = Worker(self.__dumps)
+        def _error(e): 
+            self.println(f"ERROR: {e}")
+        
+        def _enable_generate(): 
+            self.ui.dumpsGenerateQPushButton.setEnabled(True)
+
+        self.ui.dumpsGenerateQPushButton.setEnabled(False)
+
+        mysignals = WorkerSignals()
+        job = Worker(self.__dumps, signal=mysignals)
+        job.signals = mysignals
+
+        job.signals.interval_output.connect(self.println)
+
         job.signals.interval_error.connect(_error)
+        job.signals.interval_finished.connect(self.println)
+        job.signals.interval_error.connect(_enable_generate)
+        job.signals.interval_finished.connect(_enable_generate)
+
         QThreadPool.globalInstance().start(job)
 
-    def __dumps(self):
+    def __dumps(self, signal):
         current_hd = self.ui.dumpsHdQComboBox.currentText()
         dump_from = self.ui.dumpsFromQComboBox.currentText()
         network = self.ui.dumpsNetworkQComboBox.currentText()
@@ -572,7 +631,7 @@ class MyMainWindow(QMainWindow):
                                 csv_data.append(dump[key[0]][key[1]])
                             else:
                                 csv_data.append(dump[key[0]])
-                        self.println(", ".join(csv_data))
+                        signal.interval_output.emit(", ".join(csv_data))
                         return [_derivation.path()]
 
                     path: List[str] = []
@@ -596,9 +655,11 @@ class MyMainWindow(QMainWindow):
         else:
             if derivation != None:
                 hd = hd.from_derivation(derivation=derivation)
-                self.println(json.dumps(hd.dumps(exclude=exclude_set), indent=4, ensure_ascii=False))
+                result = json.dumps(hd.dumps(exclude=exclude_set), indent=4, ensure_ascii=False)
             else:
-                self.println(json.dumps(hd.dump(exclude=exclude_set), indent=4, ensure_ascii=False))
+                result = json.dumps(hd.dump(exclude=exclude_set), indent=4, ensure_ascii=False)
+
+            return result
 
 
     def __selected_dervation_name(self):
@@ -1250,6 +1311,7 @@ class MyMainWindow(QMainWindow):
 
     def process_command(self):
         def process():
+            self.ui.outputTerminalQLineEdit.setText(None)
             result = subprocess.run(
                 f'hdwallet {self.ui.outputTerminalQLineEdit.text()}',
                 shell=True,
@@ -1258,10 +1320,10 @@ class MyMainWindow(QMainWindow):
             )
 
             output = result.stderr if result.stderr else result.stdout
-            self.ui.outputTerminalQLineEdit.setText(None)
-            self.println(output.decode())
+            return output.decode()
  
         job = Worker(process)
+        job.signals.interval_finished.connect(self.println)
         QThreadPool.globalInstance().start(job)
 
     def println(self, s):
@@ -1272,7 +1334,7 @@ class MyMainWindow(QMainWindow):
         else:
             newtext = str(s)
 
-        self.ui.outputTerminalQTextEdit.append(f"{newtext}\n\n")
+        self.ui.outputTerminalQTextEdit.append(f"{newtext}")
 
     def toggle_expand(self):
         if self.toggle_expand_terminal.isChecked():

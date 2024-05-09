@@ -5,6 +5,7 @@ from PySide6.QtCore import QTimer, QRunnable, Slot, Signal, QObject, QThreadPool
 
 class WorkerSignals(QObject):
     interval_finished = Signal(object)
+    interval_output = Signal(object)
     interval_error = Signal(object)
 
 class Worker(QRunnable):
