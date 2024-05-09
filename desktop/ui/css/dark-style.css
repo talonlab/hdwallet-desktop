@@ -1,9 +1,5 @@
 
 /* ///////////////////////////////////////////// */
-* {
-    selection-color: #000000;
-    selection-background-color: #83b9ff;
-}
 QMainWindow {
     background-color: #1E1E1E;
 
@@ -211,6 +207,8 @@ QLineEdit {
     color: rgb(255, 255, 255);
     padding: 5px 10px;
     height: 25px;
+    selection-color: #000000;
+    selection-background-color: #83b9ff;
         /*selection-color: black;*/
     /*selection-background-color: white;*/
 }
