@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletwQFpiQ.ui'
+## Form generated from reading UI file 'hdwalletYezuJt.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -6757,7 +6757,7 @@ class Ui_MainWindow(object):
         self.outputTerminalActionQWidgetHLayout = QHBoxLayout(self.outputTerminalActionQWidget)
         self.outputTerminalActionQWidgetHLayout.setSpacing(15)
         self.outputTerminalActionQWidgetHLayout.setObjectName(u"outputTerminalActionQWidgetHLayout")
-        self.outputTerminalActionQWidgetHLayout.setContentsMargins(15, 15, 15, 15)
+        self.outputTerminalActionQWidgetHLayout.setContentsMargins(15, 0, 15, 15)
         self.outputTerminalQLineEdit = QLineEdit(self.outputTerminalActionQWidget)
         self.outputTerminalQLineEdit.setObjectName(u"outputTerminalQLineEdit")
 
