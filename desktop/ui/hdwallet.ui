@@ -15363,6 +15363,9 @@
              <property name="sizeAdjustPolicy">
               <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
              </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
              <property name="maximumBlockCount">
               <number>2500</number>
              </property>
