@@ -9,7 +9,7 @@ from random import choice
 from typing import *
 
 from PySide6.QtWidgets import (
-    QPushButton, QLineEdit, QLayout, QWidget, QApplication, QMainWindow, QFileDialog, QTextEdit
+    QPushButton, QLineEdit, QLayout, QWidget, QApplication, QMainWindow, QFileDialog, QTextEdit, QPlainTextEdit
 )
 from PySide6.QtCore import QSize, QThreadPool, QEvent
 from PySide6.QtGui import QGuiApplication
@@ -125,7 +125,7 @@ class DetachedWindow(QWidget):
             outputTerminalQWidget: QWidget = self.layout().itemAt(0).widget().findChild(QWidget, "outputTerminalQWidget")
             outputWidgetTopContainerQFrame: QFrame = self.layout().itemAt(0).widget().findChild(QFrame,
                                                                                                 "outputWidgetTopContainerQFrame")
-            outputTerminalQPlainTextEdit: QTextEdit = self.layout().itemAt(0).widget().findChild(QTextEdit,
+            outputTerminalQPlainTextEdit: QPlainTextEdit = self.layout().itemAt(0).widget().findChild(QPlainTextEdit,
                                                                                                 "outputTerminalQPlainTextEdit")
             outputWidgetTopContainerQWidget.setGeometry(QRect(
                 (
