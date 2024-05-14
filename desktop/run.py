@@ -1400,7 +1400,7 @@ class MyMainWindow(QMainWindow):
         # just for now
 
         if isinstance(s, dict):
-            newtext = json.dumps(s, indent=4)
+            newtext = json.dumps(s, indent=4, ensure_ascii=False)
         elif s == None:
             return None
         else:
