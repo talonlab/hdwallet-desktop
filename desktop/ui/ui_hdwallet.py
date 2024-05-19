@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletwqHtUH.ui'
+## Form generated from reading UI file 'hdwalletiJmsSd.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -6542,7 +6542,7 @@ class Ui_MainWindow(object):
         self.outputTerminalQPlainTextEdit.setFrameShape(QFrame.NoFrame)
         self.outputTerminalQPlainTextEdit.setFrameShadow(QFrame.Plain)
         self.outputTerminalQPlainTextEdit.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
-        self.outputTerminalQPlainTextEdit.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.outputTerminalQPlainTextEdit.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.outputTerminalQPlainTextEdit.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContentsOnFirstShow)
         self.outputTerminalQPlainTextEdit.setReadOnly(True)
         self.outputTerminalQPlainTextEdit.setTextInteractionFlags(Qt.TextSelectableByMouse)

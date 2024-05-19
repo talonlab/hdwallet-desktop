@@ -14982,7 +14982,7 @@
               <enum>Qt::ScrollBarAsNeeded</enum>
              </property>
              <property name="horizontalScrollBarPolicy">
-              <enum>Qt::ScrollBarAlwaysOn</enum>
+              <enum>Qt::ScrollBarAlwaysOff</enum>
              </property>
              <property name="sizeAdjustPolicy">
               <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
