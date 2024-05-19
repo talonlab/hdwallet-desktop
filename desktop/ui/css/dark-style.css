@@ -537,8 +537,9 @@ QTabBar, QTabBar::tab, QTabBar::tab:hover, QTabBar::tab:focus {
     border: none;
     border-radius: 0;
 }
-
-#donationsDetailsQLabel,
+#donationsCharityCaptionQLabel,
+#donationsCharityAddressQLabel,
+#donationsCaptionQLabel,
 #donationsAddressQLabel{
     color: white;
     font: 10pt "Tahoma";
@@ -548,19 +549,20 @@ QTabBar, QTabBar::tab, QTabBar::tab:hover, QTabBar::tab:focus {
     border-radius: 0;
 }
 
-#donationsCharityCopyCustomQFrame,
-#donationsCopyCustomQFrame{
-    background-color: rgb(25, 30, 36);
-    color: rgb(255, 255, 255);
+#donationsCharityAddressQLabel,
+#donationsAddressQLabel{
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 5px;
 }
 
-#donationsCharityCopyCustomQFrame:hover,
-#donationsCopyCustomQFrame:hover{
-    background-color: rgba(25, 30, 36, 100);
+
+#modalQFrame{
+    border-radius: 5px;
 }
 
-#donationsCharityCopyCustomQFrame:pressed,
-#donationsCopyCustomQFrame:pressed{
+#donationCharityQRCodeContainerQFrame,
+#donationQRCodeContainerQFrame{
     background-color: rgb(25, 30, 36);
+    border-radius: 5px;
 }
 

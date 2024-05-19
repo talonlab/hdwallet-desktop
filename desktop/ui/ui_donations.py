@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'donationsSEpjEf.ui'
+## Form generated from reading UI file 'donationsNLsQkr.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -72,15 +72,6 @@ class Ui_Form(object):
 
         self.verticalLayout_2.addWidget(self.donationsNavbarQFrame)
 
-        self.frame = QFrame(Form)
-        self.frame.setObjectName(u"frame")
-        self.frame.setFrameShape(QFrame.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_10 = QHBoxLayout(self.frame)
-        self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
-
-        self.verticalLayout_2.addWidget(self.frame)
-
         self.stackedWidget = QStackedWidget(Form)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.donationsCoreTeamQWidget = QWidget()
@@ -105,12 +96,21 @@ class Ui_Form(object):
 
         self.horizontalLayout_3.addItem(self.horizontalSpacer)
 
-        self.donationsQRCodeQLabel = QLabel(self.frame_5)
+        self.donationQRCodeContainerQFrame = QFrame(self.frame_5)
+        self.donationQRCodeContainerQFrame.setObjectName(u"donationQRCodeContainerQFrame")
+        self.verticalLayout_5 = QVBoxLayout(self.donationQRCodeContainerQFrame)
+        self.verticalLayout_5.setSpacing(0)
+        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+        self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.donationsQRCodeQLabel = QLabel(self.donationQRCodeContainerQFrame)
         self.donationsQRCodeQLabel.setObjectName(u"donationsQRCodeQLabel")
         self.donationsQRCodeQLabel.setMinimumSize(QSize(200, 200))
         self.donationsQRCodeQLabel.setMaximumSize(QSize(200, 200))
 
-        self.horizontalLayout_3.addWidget(self.donationsQRCodeQLabel)
+        self.verticalLayout_5.addWidget(self.donationsQRCodeQLabel)
+
+
+        self.horizontalLayout_3.addWidget(self.donationQRCodeContainerQFrame)
 
         self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
@@ -134,8 +134,6 @@ class Ui_Form(object):
 
         self.frame_6 = QFrame(self.frame_3)
         self.frame_6.setObjectName(u"frame_6")
-        self.frame_6.setFrameShape(QFrame.StyledPanel)
-        self.frame_6.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_4 = QHBoxLayout(self.frame_6)
         self.horizontalLayout_4.setSpacing(15)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
@@ -145,18 +143,10 @@ class Ui_Form(object):
 
         self.horizontalLayout_4.addWidget(self.donationsAddressQLabel)
 
-        self.donationsCopyCustomQFrame = QFrame(self.frame_6)
-        self.donationsCopyCustomQFrame.setObjectName(u"donationsCopyCustomQFrame")
-        self.donationsCopyCustomQFrame.setMinimumSize(QSize(25, 25))
-        self.donationsCopyCustomQFrame.setMaximumSize(QSize(25, 25))
-        self.donationsCopyCustomQFrame.setFrameShape(QFrame.StyledPanel)
-        self.donationsCopyCustomQFrame.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_20 = QHBoxLayout(self.donationsCopyCustomQFrame)
-        self.horizontalLayout_20.setSpacing(0)
-        self.horizontalLayout_20.setObjectName(u"horizontalLayout_20")
-        self.horizontalLayout_20.setContentsMargins(0, 0, 0, 0)
+        self.donationsAddressCopyQPushButton = QPushButton(self.frame_6)
+        self.donationsAddressCopyQPushButton.setObjectName(u"donationsAddressCopyQPushButton")
 
-        self.horizontalLayout_4.addWidget(self.donationsCopyCustomQFrame)
+        self.horizontalLayout_4.addWidget(self.donationsAddressCopyQPushButton)
 
 
         self.horizontalLayout_5.addWidget(self.frame_6)
@@ -207,19 +197,21 @@ class Ui_Form(object):
 
         self.frame_8 = QFrame(self.donationsCoreTeamQWidget)
         self.frame_8.setObjectName(u"frame_8")
-        self.frame_8.setFrameShape(QFrame.StyledPanel)
-        self.frame_8.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_17 = QHBoxLayout(self.frame_8)
         self.horizontalLayout_17.setSpacing(0)
         self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
         self.horizontalLayout_17.setContentsMargins(50, 0, 50, 0)
-        self.donationsDetailsQLabel = QLabel(self.frame_8)
-        self.donationsDetailsQLabel.setObjectName(u"donationsDetailsQLabel")
+        self.donationsCaptionQLabel = QLabel(self.frame_8)
+        self.donationsCaptionQLabel.setObjectName(u"donationsCaptionQLabel")
 
-        self.horizontalLayout_17.addWidget(self.donationsDetailsQLabel)
+        self.horizontalLayout_17.addWidget(self.donationsCaptionQLabel)
 
 
         self.verticalLayout.addWidget(self.frame_8)
+
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout.addItem(self.verticalSpacer_3)
 
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -248,12 +240,21 @@ class Ui_Form(object):
 
         self.horizontalLayout_12.addItem(self.horizontalSpacer_9)
 
-        self.donationsCharityQRCodeQLabel = QLabel(self.frame_11)
+        self.donationCharityQRCodeContainerQFrame = QFrame(self.frame_11)
+        self.donationCharityQRCodeContainerQFrame.setObjectName(u"donationCharityQRCodeContainerQFrame")
+        self.verticalLayout_4 = QVBoxLayout(self.donationCharityQRCodeContainerQFrame)
+        self.verticalLayout_4.setSpacing(0)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.donationsCharityQRCodeQLabel = QLabel(self.donationCharityQRCodeContainerQFrame)
         self.donationsCharityQRCodeQLabel.setObjectName(u"donationsCharityQRCodeQLabel")
         self.donationsCharityQRCodeQLabel.setMinimumSize(QSize(200, 200))
         self.donationsCharityQRCodeQLabel.setMaximumSize(QSize(200, 200))
 
-        self.horizontalLayout_12.addWidget(self.donationsCharityQRCodeQLabel, 0, Qt.AlignVCenter)
+        self.verticalLayout_4.addWidget(self.donationsCharityQRCodeQLabel)
+
+
+        self.horizontalLayout_12.addWidget(self.donationCharityQRCodeContainerQFrame)
 
         self.horizontalSpacer_10 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
@@ -277,8 +278,6 @@ class Ui_Form(object):
 
         self.frame_13 = QFrame(self.frame_12)
         self.frame_13.setObjectName(u"frame_13")
-        self.frame_13.setFrameShape(QFrame.StyledPanel)
-        self.frame_13.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_14 = QHBoxLayout(self.frame_13)
         self.horizontalLayout_14.setSpacing(15)
         self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
@@ -288,18 +287,10 @@ class Ui_Form(object):
 
         self.horizontalLayout_14.addWidget(self.donationsCharityAddressQLabel)
 
-        self.donationsCharityCopyCustomQFrame = QFrame(self.frame_13)
-        self.donationsCharityCopyCustomQFrame.setObjectName(u"donationsCharityCopyCustomQFrame")
-        self.donationsCharityCopyCustomQFrame.setMinimumSize(QSize(25, 25))
-        self.donationsCharityCopyCustomQFrame.setMaximumSize(QSize(25, 25))
-        self.donationsCharityCopyCustomQFrame.setFrameShape(QFrame.StyledPanel)
-        self.donationsCharityCopyCustomQFrame.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_19 = QHBoxLayout(self.donationsCharityCopyCustomQFrame)
-        self.horizontalLayout_19.setSpacing(0)
-        self.horizontalLayout_19.setObjectName(u"horizontalLayout_19")
-        self.horizontalLayout_19.setContentsMargins(0, 0, 0, 0)
+        self.donationsCharityAddressCopyQPushButton = QPushButton(self.frame_13)
+        self.donationsCharityAddressCopyQPushButton.setObjectName(u"donationsCharityAddressCopyQPushButton")
 
-        self.horizontalLayout_14.addWidget(self.donationsCharityCopyCustomQFrame)
+        self.horizontalLayout_14.addWidget(self.donationsCharityAddressCopyQPushButton)
 
 
         self.horizontalLayout_13.addWidget(self.frame_13)
@@ -353,13 +344,17 @@ class Ui_Form(object):
         self.horizontalLayout_18 = QHBoxLayout(self.frame_15)
         self.horizontalLayout_18.setObjectName(u"horizontalLayout_18")
         self.horizontalLayout_18.setContentsMargins(50, 0, 50, 0)
-        self.donationsCharityDetailsQLabel = QLabel(self.frame_15)
-        self.donationsCharityDetailsQLabel.setObjectName(u"donationsCharityDetailsQLabel")
+        self.donationsCharityCaptionQLabel = QLabel(self.frame_15)
+        self.donationsCharityCaptionQLabel.setObjectName(u"donationsCharityCaptionQLabel")
 
-        self.horizontalLayout_18.addWidget(self.donationsCharityDetailsQLabel)
+        self.horizontalLayout_18.addWidget(self.donationsCharityCaptionQLabel)
 
 
         self.verticalLayout_7.addWidget(self.frame_15)
+
+        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_7.addItem(self.verticalSpacer_4)
 
         self.verticalSpacer_2 = QSpacerItem(20, 30, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -372,7 +367,7 @@ class Ui_Form(object):
 
         self.retranslateUi(Form)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(Form)
@@ -385,13 +380,16 @@ class Ui_Form(object):
         self.donationsCharityQPushButton.setText(QCoreApplication.translate("Form", u"Charity", None))
         self.closeDonationsQPushButton.setText(QCoreApplication.translate("Form", u"X", None))
         self.donationsQRCodeQLabel.setText(QCoreApplication.translate("Form", u"QR Code", None))
-        self.donationsAddressQLabel.setText(QCoreApplication.translate("Form", u"TextLabel", None))
+        self.donationsAddressQLabel.setText(QCoreApplication.translate("Form", u"Address", None))
+        self.donationsAddressCopyQPushButton.setText(QCoreApplication.translate("Form", u"Copy", None))
         self.donationsCryptocurrencyQLabel.setText(QCoreApplication.translate("Form", u"Cryptocurrency", None))
-        self.donationsDetailsQLabel.setText(QCoreApplication.translate("Form", u"Text Label", None))
+        self.donationsCryptocurrencyQComboBox.setPlaceholderText(QCoreApplication.translate("Form", u"Select Cryptocurrency", None))
+        self.donationsCaptionQLabel.setText(QCoreApplication.translate("Form", u"Caption", None))
         self.donationsCharityQRCodeQLabel.setText(QCoreApplication.translate("Form", u"QR Code", None))
-        self.donationsCharityAddressQLabel.setText(QCoreApplication.translate("Form", u"TextLabel", None))
+        self.donationsCharityAddressQLabel.setText(QCoreApplication.translate("Form", u"Address", None))
+        self.donationsCharityAddressCopyQPushButton.setText(QCoreApplication.translate("Form", u"Copy", None))
         self.donationsCharityCryptocurrencyQLabel.setText(QCoreApplication.translate("Form", u"Cryptocurrency", None))
         self.donationsCharityCryptocurrencyQComboBox.setPlaceholderText(QCoreApplication.translate("Form", u"Select Cryptocurrency", None))
-        self.donationsCharityDetailsQLabel.setText(QCoreApplication.translate("Form", u"Text Label", None))
+        self.donationsCharityCaptionQLabel.setText(QCoreApplication.translate("Form", u"Caption", None))
     # retranslateUi
 

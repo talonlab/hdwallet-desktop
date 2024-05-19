@@ -324,14 +324,14 @@ class Donation(QFrame):
         crypto = self.ui.donationsCryptocurrencyQComboBox.currentText()
         addr = crypt_addresses[crypto]
 
-        self.ui.donationsAddressQLabel.setText(addr)
+        self.ui.donationsAddressQLabel.setText(f"{addr[:15]}...{addr[-10:]}")
         self.update_receive_qr(self.ui.donationsQRCodeQLabel, addr)
 
     def charity_crypto_changed(self):
         crypto = self.ui.donationsCharityCryptocurrencyQComboBox.currentText()
         addr = crypt_addresses[crypto]
 
-        self.ui.donationsCharityAddressQLabel.setText(addr)
+        self.ui.donationsCharityAddressQLabel.setText(f"{addr[:15]}...{addr[-10:]}")
         self.update_receive_qr(self.ui.donationsCharityQRCodeQLabel, addr)
 
 
@@ -359,31 +359,18 @@ class Donation(QFrame):
         donation_ui.donationsCharityCryptocurrencyQComboBox.setCurrentText("Ethereum")
 
         donation_ui.donationsCoreTeamQPushButton.click()
-        donation_ui.donationsCharityDetailsQLabel.setText("This donation is for the charity team, because without "
+        donation_ui.donationsCharityCaptionQLabel.setText("This donation is for the charity team, because without "
                                                           "them, we'd have no idea where our good intentions should "
                                                           "go. Cheers to our chaos coordinators! ")
-        donation_ui.donationsDetailsQLabel.setText("This donation is for the core team, because without them, we'd be "
+        donation_ui.donationsCaptionQLabel.setText("This donation is for the core team, because without them, we'd be "
                                                    "googling 'how to turn on a computer.' Cheers to our tech wizards!")
-        donation_ui.donationsDetailsQLabel.setWordWrap(True)
+        donation_ui.donationsCaptionQLabel.setWordWrap(True)
+        donation_ui.donationsCharityCaptionQLabel.setWordWrap(True)
 
-        copy_coreteam_address = SvgButton(
-            parent_widget=donation_ui.donationsCopyCustomQFrame,
-            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/svgs/copy-light.svg"),
-            icon_width=20,
-            icon_height=20
-        )
-
-        copy_charity_address = SvgButton(
-            parent_widget=donation_ui.donationsCharityCopyCustomQFrame,
-            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/svgs/copy-light.svg"),
-            icon_width=20,
-            icon_height=20
-        )
-
-        copy_coreteam_address.clicked.connect(
+        donation_ui.donationsAddressCopyQPushButton.clicked.connect(
             lambda: copy_to_clipboard(donation_ui.donationsAddressQLabel.text())
         )
-        copy_charity_address.clicked.connect(
+        donation_ui.donationsCharityAddressCopyQPushButton.clicked.connect(
             lambda: copy_to_clipboard(donation_ui.donationsCharityAddressQLabel.text())
         )
 

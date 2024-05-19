@@ -119,20 +119,9 @@
     </widget>
    </item>
    <item>
-    <widget class="QFrame" name="frame">
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_10"/>
-    </widget>
-   </item>
-   <item>
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="donationsCoreTeamQWidget" native="true">
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -192,22 +181,43 @@
               </spacer>
              </item>
              <item>
-              <widget class="QLabel" name="donationsQRCodeQLabel">
-               <property name="minimumSize">
-                <size>
-                 <width>200</width>
-                 <height>200</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>200</width>
-                 <height>200</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>QR Code</string>
-               </property>
+              <widget class="QFrame" name="donationQRCodeContainerQFrame">
+               <layout class="QVBoxLayout" name="verticalLayout_5">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="donationsQRCodeQLabel">
+                  <property name="minimumSize">
+                   <size>
+                    <width>200</width>
+                    <height>200</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>200</width>
+                    <height>200</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>QR Code</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
              <item>
@@ -262,12 +272,6 @@
           </item>
           <item>
            <widget class="QFrame" name="frame_6">
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
             <layout class="QHBoxLayout" name="horizontalLayout_4">
              <property name="spacing">
               <number>15</number>
@@ -287,47 +291,15 @@
              <item>
               <widget class="QLabel" name="donationsAddressQLabel">
                <property name="text">
-                <string>TextLabel</string>
+                <string>Address</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="donationsCopyCustomQFrame">
-               <property name="minimumSize">
-                <size>
-                 <width>25</width>
-                 <height>25</height>
-                </size>
+              <widget class="QPushButton" name="donationsAddressCopyQPushButton">
+               <property name="text">
+                <string>Copy</string>
                </property>
-               <property name="maximumSize">
-                <size>
-                 <width>25</width>
-                 <height>25</height>
-                </size>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_20">
-                <property name="spacing">
-                 <number>0</number>
-                </property>
-                <property name="leftMargin">
-                 <number>0</number>
-                </property>
-                <property name="topMargin">
-                 <number>0</number>
-                </property>
-                <property name="rightMargin">
-                 <number>0</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>0</number>
-                </property>
-               </layout>
               </widget>
              </item>
             </layout>
@@ -412,7 +384,11 @@
               </widget>
              </item>
              <item>
-              <widget class="QComboBox" name="donationsCryptocurrencyQComboBox"/>
+              <widget class="QComboBox" name="donationsCryptocurrencyQComboBox">
+               <property name="placeholderText">
+                <string>Select Cryptocurrency</string>
+               </property>
+              </widget>
              </item>
             </layout>
            </widget>
@@ -435,12 +411,6 @@
        </item>
        <item>
         <widget class="QFrame" name="frame_8">
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
          <layout class="QHBoxLayout" name="horizontalLayout_17">
           <property name="spacing">
            <number>0</number>
@@ -458,14 +428,27 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QLabel" name="donationsDetailsQLabel">
+           <widget class="QLabel" name="donationsCaptionQLabel">
             <property name="text">
-             <string>Text Label</string>
+             <string>Caption</string>
             </property>
            </widget>
           </item>
          </layout>
         </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item>
         <spacer name="verticalSpacer">
@@ -539,23 +522,44 @@
                </property>
               </spacer>
              </item>
-             <item alignment="Qt::AlignVCenter">
-              <widget class="QLabel" name="donationsCharityQRCodeQLabel">
-               <property name="minimumSize">
-                <size>
-                 <width>200</width>
-                 <height>200</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>200</width>
-                 <height>200</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>QR Code</string>
-               </property>
+             <item>
+              <widget class="QFrame" name="donationCharityQRCodeContainerQFrame">
+               <layout class="QVBoxLayout" name="verticalLayout_4">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="donationsCharityQRCodeQLabel">
+                  <property name="minimumSize">
+                   <size>
+                    <width>200</width>
+                    <height>200</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>200</width>
+                    <height>200</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>QR Code</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
              <item>
@@ -610,12 +614,6 @@
           </item>
           <item>
            <widget class="QFrame" name="frame_13">
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
             <layout class="QHBoxLayout" name="horizontalLayout_14">
              <property name="spacing">
               <number>15</number>
@@ -635,47 +633,15 @@
              <item>
               <widget class="QLabel" name="donationsCharityAddressQLabel">
                <property name="text">
-                <string>TextLabel</string>
+                <string>Address</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="donationsCharityCopyCustomQFrame">
-               <property name="minimumSize">
-                <size>
-                 <width>25</width>
-                 <height>25</height>
-                </size>
+              <widget class="QPushButton" name="donationsCharityAddressCopyQPushButton">
+               <property name="text">
+                <string>Copy</string>
                </property>
-               <property name="maximumSize">
-                <size>
-                 <width>25</width>
-                 <height>25</height>
-                </size>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_19">
-                <property name="spacing">
-                 <number>0</number>
-                </property>
-                <property name="leftMargin">
-                 <number>0</number>
-                </property>
-                <property name="topMargin">
-                 <number>0</number>
-                </property>
-                <property name="rightMargin">
-                 <number>0</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>0</number>
-                </property>
-               </layout>
               </widget>
              </item>
             </layout>
@@ -801,14 +767,27 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QLabel" name="donationsCharityDetailsQLabel">
+           <widget class="QLabel" name="donationsCharityCaptionQLabel">
             <property name="text">
-             <string>Text Label</string>
+             <string>Caption</string>
             </property>
            </widget>
           </item>
          </layout>
         </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item>
         <spacer name="verticalSpacer_2">
