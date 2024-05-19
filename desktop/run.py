@@ -53,7 +53,7 @@ from hdwallet.derivations import (
     BIP86Derivation, ElectrumDerivation, CIP1852Derivation, MoneroDerivation,
     CHANGES
 )
-
+7
 from hdwallet.const import (
     ELECTRUM_V2_MODES
 )
@@ -981,7 +981,6 @@ class CoreApp(QMainWindow):
     def _dump_monero(self, dump_from, hd_kwargs):
         if dump_from == "Entropy":
             hd_kwargs["language"] = self.ui.moneroFromEntropyLanguageQComboBox.currentText().lower()
-            hd_kwargs["passphrase"] = self.ui.moneroFromEntropyPassphraseQLineEdit.text()
             hd_kwargs["payment_id"] = self.ui.moneroFromEntropyPaymentIDQLineEdit.text().lower()
             return HDWallet(**hd_kwargs).from_entropy(
                 MoneroEntropy(
@@ -990,7 +989,6 @@ class CoreApp(QMainWindow):
             )
 
         elif dump_from == "Mnemonic":
-            hd_kwargs["passphrase"] = self.ui.moneroFromMnemonicPassphraseQLineEdit.text()
             hd_kwargs["payment_id"] = self.ui.moneroFromMnemonicPaymentIDQLineEdit.text().lower()
             return HDWallet(**hd_kwargs).from_mnemonic(
                 MoneroMnemonic(
