@@ -323,6 +323,13 @@ class Donation(QFrame):
         self.ui.donationsAddressQLabel.setText(addr)
         self.update_receive_qr(self.ui.donationsQRCodeQLabel, addr)
 
+    def charity_crypto_changed(self):
+        crypto = self.ui.donationsCharityCryptocurrencyQComboBox.currentText()
+        addr = crypt_addresses[crypto]
+
+        self.ui.donationsCharityAddressQLabel.setText(addr)
+        self.update_receive_qr(self.ui.donationsCharityQRCodeQLabel, addr)
+
 
     @staticmethod
     def show_donation(main_window):
@@ -341,6 +348,10 @@ class Donation(QFrame):
         donation_ui.donationsCryptocurrencyQComboBox.addItems(sorted(crypt_addresses.keys()))
         donation_ui.donationsCryptocurrencyQComboBox.currentIndexChanged.connect(frame.core_crypto_changed)
         donation_ui.donationsCryptocurrencyQComboBox.setCurrentText("Ethereum")
+
+        donation_ui.donationsCharityCryptocurrencyQComboBox.addItems(["Bitcoin", "Ethereum"])
+        donation_ui.donationsCharityCryptocurrencyQComboBox.currentIndexChanged.connect(frame.charity_crypto_changed)
+        donation_ui.donationsCharityCryptocurrencyQComboBox.setCurrentText("Ethereum")
 
         donation_ui.donationsCoreTeamQPushButton.click()
         frame.layout().addWidget(main_widget)
