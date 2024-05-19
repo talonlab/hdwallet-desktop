@@ -1380,10 +1380,13 @@ class MyMainWindow(QMainWindow):
             print(f"ERROR changing page: '{stacked_name}' '{widget_name}'")
 
     def process_command(self):
+        cmd = self.ui.outputTerminalQLineEdit.text()
         def process():
+            f_cmd = cmd if cmd.startswith('hdwallet ') else f"hdwallet {cmd}"
+
             self.ui.outputTerminalQLineEdit.setText(None)
             result = subprocess.run(
-                f'hdwallet {self.ui.outputTerminalQLineEdit.text()}',
+                f_cmd,
                 shell=True,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE
@@ -1391,10 +1394,14 @@ class MyMainWindow(QMainWindow):
 
             output = result.stderr if result.stderr else result.stdout
             return output.decode()
- 
-        job = Worker(process)
-        job.signals.interval_finished.connect(self.println)
-        QThreadPool.globalInstance().start(job)
+
+        if cmd.lower() == 'clear':
+            self.ui.outputTerminalQPlainTextEdit.setPlainText(None)
+            self.ui.outputTerminalQLineEdit.setText(None)
+        else:
+            job = Worker(process)
+            job.signals.interval_finished.connect(self.println)
+            QThreadPool.globalInstance().start(job)
 
     def println(self, s):
         # just for now
