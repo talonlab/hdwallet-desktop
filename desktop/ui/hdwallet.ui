@@ -170,7 +170,7 @@
           <item>
            <widget class="QStackedWidget" name="hdwalletQStackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="generatePageQStackedWidget">
              <layout class="QVBoxLayout" name="generatePageQStackedWidgetVLayout">
@@ -1740,7 +1740,7 @@
                     <number>0</number>
                    </property>
                    <property name="currentIndex">
-                    <number>2</number>
+                    <number>4</number>
                    </property>
                    <widget class="QWidget" name="bipsPageQWidget">
                     <layout class="QVBoxLayout" name="BIPsPageQWidgetVLayout">
@@ -10433,182 +10433,6 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QFrame" name="moneroFromEntropyPassphraseContainerQFrame">
-                              <layout class="QVBoxLayout" name="EPassphraseVLayout">
-                               <property name="spacing">
-                                <number>5</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QFrame" name="moneroFromEntropyPassphraseLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="EPassphraseLabelHLayout">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="moneroFromEntropyPassphraseQLabel">
-                                    <property name="text">
-                                     <string>Passphrase</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <spacer name="moneroFromEntropyPassphraseLabelContainerQFrameHSpacer">
-                                    <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
-                                    </property>
-                                    <property name="sizeHint" stdset="0">
-                                     <size>
-                                      <width>40</width>
-                                      <height>20</height>
-                                     </size>
-                                    </property>
-                                   </spacer>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QFrame" name="moneroFromEntropyPassphraseLineEditContainerQFrame">
-                                 <layout class="QHBoxLayout" name="horizontalLayout_15">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLineEdit" name="moneroFromEntropyPassphraseQLineEdit">
-                                    <property name="placeholderText">
-                                     <string>(Optional)</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QFrame" name="moneroFromEntropyPaymentIDContainerQFrame">
-                              <layout class="QVBoxLayout" name="verticalLayout_84">
-                               <property name="spacing">
-                                <number>5</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QFrame" name="moneroFromEntropyPaymentIDLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="horizontalLayout_81">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="moneroFromEntropyPaymentIDQLabel">
-                                    <property name="text">
-                                     <string>Payment ID</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <spacer name="moneroFromEntropyPaymentIDLabelContainerQFrameHSpacer">
-                                    <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
-                                    </property>
-                                    <property name="sizeHint" stdset="0">
-                                     <size>
-                                      <width>40</width>
-                                      <height>20</height>
-                                     </size>
-                                    </property>
-                                   </spacer>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QLineEdit" name="moneroFromEntropyPaymentIDQLineEdit"/>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="moneroFromEntropyLanguageWordsContainerQFrame">
-                           <layout class="QHBoxLayout" name="horizontalLayout_7">
-                            <property name="spacing">
-                             <number>15</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
                              <widget class="QFrame" name="moneroFromEntropyLanguageContainerQFrame">
                               <layout class="QVBoxLayout" name="ELanguageVLayout">
                                <property name="spacing">
@@ -10718,8 +10542,8 @@
                              </widget>
                             </item>
                             <item>
-                             <widget class="QFrame" name="moneroFromEntropyWordsContainerQFrame">
-                              <layout class="QVBoxLayout" name="EStrengthVLayout">
+                             <widget class="QFrame" name="moneroFromEntropyPaymentIDContainerQFrame">
+                              <layout class="QVBoxLayout" name="verticalLayout_84">
                                <property name="spacing">
                                 <number>5</number>
                                </property>
@@ -10736,8 +10560,8 @@
                                 <number>0</number>
                                </property>
                                <item>
-                                <widget class="QFrame" name="moneroFromEntropyWordsLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="EStrengthLabelHLayout">
+                                <widget class="QFrame" name="moneroFromEntropyPaymentIDLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="horizontalLayout_81">
                                   <property name="spacing">
                                    <number>15</number>
                                   </property>
@@ -10754,14 +10578,14 @@
                                    <number>0</number>
                                   </property>
                                   <item>
-                                   <widget class="QLabel" name="moneroFromEntropyWordsQLabel">
+                                   <widget class="QLabel" name="moneroFromEntropyPaymentIDQLabel">
                                     <property name="text">
-                                     <string>Words</string>
+                                     <string>Payment ID</string>
                                     </property>
                                    </widget>
                                   </item>
                                   <item>
-                                   <spacer name="moneroFromEntropyWordsLabelContainerQFrameHSpacer">
+                                   <spacer name="moneroFromEntropyPaymentIDLabelContainerQFrameHSpacer">
                                     <property name="orientation">
                                      <enum>Qt::Horizontal</enum>
                                     </property>
@@ -10777,42 +10601,26 @@
                                 </widget>
                                </item>
                                <item>
-                                <widget class="QComboBox" name="moneroFromEntropyWordsQComboBox">
-                                 <property name="placeholderText">
-                                  <string>(Select)</string>
-                                 </property>
-                                 <item>
-                                  <property name="text">
-                                   <string>12 Words</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>15 Words</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>18 Words</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>21 Words</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>24 Words</string>
-                                  </property>
-                                 </item>
-                                </widget>
+                                <widget class="QLineEdit" name="moneroFromEntropyPaymentIDQLineEdit"/>
                                </item>
                               </layout>
                              </widget>
                             </item>
                            </layout>
                           </widget>
+                         </item>
+                         <item>
+                          <spacer name="verticalSpacer_4">
+                           <property name="orientation">
+                            <enum>Qt::Vertical</enum>
+                           </property>
+                           <property name="sizeHint" stdset="0">
+                            <size>
+                             <width>20</width>
+                             <height>40</height>
+                            </size>
+                           </property>
+                          </spacer>
                          </item>
                         </layout>
                        </widget>
@@ -11004,96 +10812,6 @@
                                </item>
                                <item>
                                 <widget class="QLineEdit" name="moneroFromMnemonicPaymentIDQLineEdit"/>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QFrame" name="moneroFromMnemonicPassphraseContainerQFrame">
-                              <layout class="QVBoxLayout" name="EPassphraseVLayout_2">
-                               <property name="spacing">
-                                <number>5</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QFrame" name="moneroFromMnemonicPassphraseLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="MPassphraseLabelHLayout">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="moneroFromMnemonicPassphraseQLabel">
-                                    <property name="text">
-                                     <string>Passphrase</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <spacer name="moneroFromMnemonicPassphraseLabelContainerQFrameHSpacer">
-                                    <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
-                                    </property>
-                                    <property name="sizeHint" stdset="0">
-                                     <size>
-                                      <width>764</width>
-                                      <height>20</height>
-                                     </size>
-                                    </property>
-                                   </spacer>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QFrame" name="moneroFromMnemonicPassphraseLineEditContainerQFrame">
-                                 <layout class="QHBoxLayout" name="horizontalLayout_16">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLineEdit" name="moneroFromMnemonicPassphraseQLineEdit">
-                                    <property name="placeholderText">
-                                     <string>(Optional)</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                 </layout>
-                                </widget>
                                </item>
                               </layout>
                              </widget>

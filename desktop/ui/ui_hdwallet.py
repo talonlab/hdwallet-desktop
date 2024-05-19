@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletiJmsSd.ui'
+## Form generated from reading UI file 'hdwalletQCWhVD.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -22,9 +22,6 @@ from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QCheckBox, QCo
     QStackedWidget, QVBoxLayout, QWidget)
 
 from .HistoryLineEdit import HistoryLineEdit
-
-
-
 from .resources_rc import *
 
 class Ui_MainWindow(object):
@@ -4518,89 +4515,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_9.setSpacing(15)
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
         self.horizontalLayout_9.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromEntropyPassphraseContainerQFrame = QFrame(self.moneroFromEntropyPassphrasePaymentIDContainerQFrame)
-        self.moneroFromEntropyPassphraseContainerQFrame.setObjectName(u"moneroFromEntropyPassphraseContainerQFrame")
-        self.EPassphraseVLayout = QVBoxLayout(self.moneroFromEntropyPassphraseContainerQFrame)
-        self.EPassphraseVLayout.setSpacing(5)
-        self.EPassphraseVLayout.setObjectName(u"EPassphraseVLayout")
-        self.EPassphraseVLayout.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromEntropyPassphraseLabelContainerQFrame = QFrame(self.moneroFromEntropyPassphraseContainerQFrame)
-        self.moneroFromEntropyPassphraseLabelContainerQFrame.setObjectName(u"moneroFromEntropyPassphraseLabelContainerQFrame")
-        self.EPassphraseLabelHLayout = QHBoxLayout(self.moneroFromEntropyPassphraseLabelContainerQFrame)
-        self.EPassphraseLabelHLayout.setSpacing(15)
-        self.EPassphraseLabelHLayout.setObjectName(u"EPassphraseLabelHLayout")
-        self.EPassphraseLabelHLayout.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromEntropyPassphraseQLabel = QLabel(self.moneroFromEntropyPassphraseLabelContainerQFrame)
-        self.moneroFromEntropyPassphraseQLabel.setObjectName(u"moneroFromEntropyPassphraseQLabel")
-
-        self.EPassphraseLabelHLayout.addWidget(self.moneroFromEntropyPassphraseQLabel)
-
-        self.moneroFromEntropyPassphraseLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.EPassphraseLabelHLayout.addItem(self.moneroFromEntropyPassphraseLabelContainerQFrameHSpacer)
-
-
-        self.EPassphraseVLayout.addWidget(self.moneroFromEntropyPassphraseLabelContainerQFrame)
-
-        self.moneroFromEntropyPassphraseLineEditContainerQFrame = QFrame(self.moneroFromEntropyPassphraseContainerQFrame)
-        self.moneroFromEntropyPassphraseLineEditContainerQFrame.setObjectName(u"moneroFromEntropyPassphraseLineEditContainerQFrame")
-        self.horizontalLayout_15 = QHBoxLayout(self.moneroFromEntropyPassphraseLineEditContainerQFrame)
-        self.horizontalLayout_15.setSpacing(15)
-        self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
-        self.horizontalLayout_15.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromEntropyPassphraseQLineEdit = QLineEdit(self.moneroFromEntropyPassphraseLineEditContainerQFrame)
-        self.moneroFromEntropyPassphraseQLineEdit.setObjectName(u"moneroFromEntropyPassphraseQLineEdit")
-
-        self.horizontalLayout_15.addWidget(self.moneroFromEntropyPassphraseQLineEdit)
-
-
-        self.EPassphraseVLayout.addWidget(self.moneroFromEntropyPassphraseLineEditContainerQFrame)
-
-
-        self.horizontalLayout_9.addWidget(self.moneroFromEntropyPassphraseContainerQFrame)
-
-        self.moneroFromEntropyPaymentIDContainerQFrame = QFrame(self.moneroFromEntropyPassphrasePaymentIDContainerQFrame)
-        self.moneroFromEntropyPaymentIDContainerQFrame.setObjectName(u"moneroFromEntropyPaymentIDContainerQFrame")
-        self.verticalLayout_84 = QVBoxLayout(self.moneroFromEntropyPaymentIDContainerQFrame)
-        self.verticalLayout_84.setSpacing(5)
-        self.verticalLayout_84.setObjectName(u"verticalLayout_84")
-        self.verticalLayout_84.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromEntropyPaymentIDLabelContainerQFrame = QFrame(self.moneroFromEntropyPaymentIDContainerQFrame)
-        self.moneroFromEntropyPaymentIDLabelContainerQFrame.setObjectName(u"moneroFromEntropyPaymentIDLabelContainerQFrame")
-        self.horizontalLayout_81 = QHBoxLayout(self.moneroFromEntropyPaymentIDLabelContainerQFrame)
-        self.horizontalLayout_81.setSpacing(15)
-        self.horizontalLayout_81.setObjectName(u"horizontalLayout_81")
-        self.horizontalLayout_81.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromEntropyPaymentIDQLabel = QLabel(self.moneroFromEntropyPaymentIDLabelContainerQFrame)
-        self.moneroFromEntropyPaymentIDQLabel.setObjectName(u"moneroFromEntropyPaymentIDQLabel")
-
-        self.horizontalLayout_81.addWidget(self.moneroFromEntropyPaymentIDQLabel)
-
-        self.moneroFromEntropyPaymentIDLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.horizontalLayout_81.addItem(self.moneroFromEntropyPaymentIDLabelContainerQFrameHSpacer)
-
-
-        self.verticalLayout_84.addWidget(self.moneroFromEntropyPaymentIDLabelContainerQFrame)
-
-        self.moneroFromEntropyPaymentIDQLineEdit = QLineEdit(self.moneroFromEntropyPaymentIDContainerQFrame)
-        self.moneroFromEntropyPaymentIDQLineEdit.setObjectName(u"moneroFromEntropyPaymentIDQLineEdit")
-
-        self.verticalLayout_84.addWidget(self.moneroFromEntropyPaymentIDQLineEdit)
-
-
-        self.horizontalLayout_9.addWidget(self.moneroFromEntropyPaymentIDContainerQFrame)
-
-
-        self.verticalLayout_4.addWidget(self.moneroFromEntropyPassphrasePaymentIDContainerQFrame)
-
-        self.moneroFromEntropyLanguageWordsContainerQFrame = QFrame(self.moneroFromEntropyQStackedWidget)
-        self.moneroFromEntropyLanguageWordsContainerQFrame.setObjectName(u"moneroFromEntropyLanguageWordsContainerQFrame")
-        self.horizontalLayout_7 = QHBoxLayout(self.moneroFromEntropyLanguageWordsContainerQFrame)
-        self.horizontalLayout_7.setSpacing(15)
-        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
-        self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromEntropyLanguageContainerQFrame = QFrame(self.moneroFromEntropyLanguageWordsContainerQFrame)
+        self.moneroFromEntropyLanguageContainerQFrame = QFrame(self.moneroFromEntropyPassphrasePaymentIDContainerQFrame)
         self.moneroFromEntropyLanguageContainerQFrame.setObjectName(u"moneroFromEntropyLanguageContainerQFrame")
         self.ELanguageVLayout = QVBoxLayout(self.moneroFromEntropyLanguageContainerQFrame)
         self.ELanguageVLayout.setSpacing(5)
@@ -4638,47 +4553,46 @@ class Ui_MainWindow(object):
         self.ELanguageVLayout.addWidget(self.moneroFromEntropyLanguageQComboBox)
 
 
-        self.horizontalLayout_7.addWidget(self.moneroFromEntropyLanguageContainerQFrame)
+        self.horizontalLayout_9.addWidget(self.moneroFromEntropyLanguageContainerQFrame)
 
-        self.moneroFromEntropyWordsContainerQFrame = QFrame(self.moneroFromEntropyLanguageWordsContainerQFrame)
-        self.moneroFromEntropyWordsContainerQFrame.setObjectName(u"moneroFromEntropyWordsContainerQFrame")
-        self.EStrengthVLayout = QVBoxLayout(self.moneroFromEntropyWordsContainerQFrame)
-        self.EStrengthVLayout.setSpacing(5)
-        self.EStrengthVLayout.setObjectName(u"EStrengthVLayout")
-        self.EStrengthVLayout.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromEntropyWordsLabelContainerQFrame = QFrame(self.moneroFromEntropyWordsContainerQFrame)
-        self.moneroFromEntropyWordsLabelContainerQFrame.setObjectName(u"moneroFromEntropyWordsLabelContainerQFrame")
-        self.EStrengthLabelHLayout = QHBoxLayout(self.moneroFromEntropyWordsLabelContainerQFrame)
-        self.EStrengthLabelHLayout.setSpacing(15)
-        self.EStrengthLabelHLayout.setObjectName(u"EStrengthLabelHLayout")
-        self.EStrengthLabelHLayout.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromEntropyWordsQLabel = QLabel(self.moneroFromEntropyWordsLabelContainerQFrame)
-        self.moneroFromEntropyWordsQLabel.setObjectName(u"moneroFromEntropyWordsQLabel")
+        self.moneroFromEntropyPaymentIDContainerQFrame = QFrame(self.moneroFromEntropyPassphrasePaymentIDContainerQFrame)
+        self.moneroFromEntropyPaymentIDContainerQFrame.setObjectName(u"moneroFromEntropyPaymentIDContainerQFrame")
+        self.verticalLayout_84 = QVBoxLayout(self.moneroFromEntropyPaymentIDContainerQFrame)
+        self.verticalLayout_84.setSpacing(5)
+        self.verticalLayout_84.setObjectName(u"verticalLayout_84")
+        self.verticalLayout_84.setContentsMargins(0, 0, 0, 0)
+        self.moneroFromEntropyPaymentIDLabelContainerQFrame = QFrame(self.moneroFromEntropyPaymentIDContainerQFrame)
+        self.moneroFromEntropyPaymentIDLabelContainerQFrame.setObjectName(u"moneroFromEntropyPaymentIDLabelContainerQFrame")
+        self.horizontalLayout_81 = QHBoxLayout(self.moneroFromEntropyPaymentIDLabelContainerQFrame)
+        self.horizontalLayout_81.setSpacing(15)
+        self.horizontalLayout_81.setObjectName(u"horizontalLayout_81")
+        self.horizontalLayout_81.setContentsMargins(0, 0, 0, 0)
+        self.moneroFromEntropyPaymentIDQLabel = QLabel(self.moneroFromEntropyPaymentIDLabelContainerQFrame)
+        self.moneroFromEntropyPaymentIDQLabel.setObjectName(u"moneroFromEntropyPaymentIDQLabel")
 
-        self.EStrengthLabelHLayout.addWidget(self.moneroFromEntropyWordsQLabel)
+        self.horizontalLayout_81.addWidget(self.moneroFromEntropyPaymentIDQLabel)
 
-        self.moneroFromEntropyWordsLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.moneroFromEntropyPaymentIDLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.EStrengthLabelHLayout.addItem(self.moneroFromEntropyWordsLabelContainerQFrameHSpacer)
-
-
-        self.EStrengthVLayout.addWidget(self.moneroFromEntropyWordsLabelContainerQFrame)
-
-        self.moneroFromEntropyWordsQComboBox = QComboBox(self.moneroFromEntropyWordsContainerQFrame)
-        self.moneroFromEntropyWordsQComboBox.addItem("")
-        self.moneroFromEntropyWordsQComboBox.addItem("")
-        self.moneroFromEntropyWordsQComboBox.addItem("")
-        self.moneroFromEntropyWordsQComboBox.addItem("")
-        self.moneroFromEntropyWordsQComboBox.addItem("")
-        self.moneroFromEntropyWordsQComboBox.setObjectName(u"moneroFromEntropyWordsQComboBox")
-
-        self.EStrengthVLayout.addWidget(self.moneroFromEntropyWordsQComboBox)
+        self.horizontalLayout_81.addItem(self.moneroFromEntropyPaymentIDLabelContainerQFrameHSpacer)
 
 
-        self.horizontalLayout_7.addWidget(self.moneroFromEntropyWordsContainerQFrame)
+        self.verticalLayout_84.addWidget(self.moneroFromEntropyPaymentIDLabelContainerQFrame)
+
+        self.moneroFromEntropyPaymentIDQLineEdit = QLineEdit(self.moneroFromEntropyPaymentIDContainerQFrame)
+        self.moneroFromEntropyPaymentIDQLineEdit.setObjectName(u"moneroFromEntropyPaymentIDQLineEdit")
+
+        self.verticalLayout_84.addWidget(self.moneroFromEntropyPaymentIDQLineEdit)
 
 
-        self.verticalLayout_4.addWidget(self.moneroFromEntropyLanguageWordsContainerQFrame)
+        self.horizontalLayout_9.addWidget(self.moneroFromEntropyPaymentIDContainerQFrame)
+
+
+        self.verticalLayout_4.addWidget(self.moneroFromEntropyPassphrasePaymentIDContainerQFrame)
+
+        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_4.addItem(self.verticalSpacer_4)
 
         self.moneroQStackedWidget.addWidget(self.moneroFromEntropyQStackedWidget)
         self.moneroFromMnemonicQStackedWidget = QWidget()
@@ -4766,47 +4680,6 @@ class Ui_MainWindow(object):
 
 
         self.horizontalLayout_12.addWidget(self.moneroFromMnemonicPaymentIDContainerQFrame)
-
-        self.moneroFromMnemonicPassphraseContainerQFrame = QFrame(self.moneroFromMnemonicPaymentIDPassphraseContainerQFrame)
-        self.moneroFromMnemonicPassphraseContainerQFrame.setObjectName(u"moneroFromMnemonicPassphraseContainerQFrame")
-        self.EPassphraseVLayout_2 = QVBoxLayout(self.moneroFromMnemonicPassphraseContainerQFrame)
-        self.EPassphraseVLayout_2.setSpacing(5)
-        self.EPassphraseVLayout_2.setObjectName(u"EPassphraseVLayout_2")
-        self.EPassphraseVLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromMnemonicPassphraseLabelContainerQFrame = QFrame(self.moneroFromMnemonicPassphraseContainerQFrame)
-        self.moneroFromMnemonicPassphraseLabelContainerQFrame.setObjectName(u"moneroFromMnemonicPassphraseLabelContainerQFrame")
-        self.MPassphraseLabelHLayout = QHBoxLayout(self.moneroFromMnemonicPassphraseLabelContainerQFrame)
-        self.MPassphraseLabelHLayout.setSpacing(15)
-        self.MPassphraseLabelHLayout.setObjectName(u"MPassphraseLabelHLayout")
-        self.MPassphraseLabelHLayout.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromMnemonicPassphraseQLabel = QLabel(self.moneroFromMnemonicPassphraseLabelContainerQFrame)
-        self.moneroFromMnemonicPassphraseQLabel.setObjectName(u"moneroFromMnemonicPassphraseQLabel")
-
-        self.MPassphraseLabelHLayout.addWidget(self.moneroFromMnemonicPassphraseQLabel)
-
-        self.moneroFromMnemonicPassphraseLabelContainerQFrameHSpacer = QSpacerItem(764, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.MPassphraseLabelHLayout.addItem(self.moneroFromMnemonicPassphraseLabelContainerQFrameHSpacer)
-
-
-        self.EPassphraseVLayout_2.addWidget(self.moneroFromMnemonicPassphraseLabelContainerQFrame)
-
-        self.moneroFromMnemonicPassphraseLineEditContainerQFrame = QFrame(self.moneroFromMnemonicPassphraseContainerQFrame)
-        self.moneroFromMnemonicPassphraseLineEditContainerQFrame.setObjectName(u"moneroFromMnemonicPassphraseLineEditContainerQFrame")
-        self.horizontalLayout_16 = QHBoxLayout(self.moneroFromMnemonicPassphraseLineEditContainerQFrame)
-        self.horizontalLayout_16.setSpacing(15)
-        self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
-        self.horizontalLayout_16.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromMnemonicPassphraseQLineEdit = QLineEdit(self.moneroFromMnemonicPassphraseLineEditContainerQFrame)
-        self.moneroFromMnemonicPassphraseQLineEdit.setObjectName(u"moneroFromMnemonicPassphraseQLineEdit")
-
-        self.horizontalLayout_16.addWidget(self.moneroFromMnemonicPassphraseQLineEdit)
-
-
-        self.EPassphraseVLayout_2.addWidget(self.moneroFromMnemonicPassphraseLineEditContainerQFrame)
-
-
-        self.horizontalLayout_12.addWidget(self.moneroFromMnemonicPassphraseContainerQFrame)
 
 
         self.verticalLayout_7.addWidget(self.moneroFromMnemonicPaymentIDPassphraseContainerQFrame)
@@ -6621,8 +6494,8 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.hdwalletQStackedWidget.setCurrentIndex(0)
-        self.hdQStackedWidget.setCurrentIndex(2)
+        self.hdwalletQStackedWidget.setCurrentIndex(1)
+        self.hdQStackedWidget.setCurrentIndex(4)
         self.bipQStackedWidget.setCurrentIndex(0)
         self.cardanoQStackedWidget.setCurrentIndex(0)
         self.electrumV1QStackedWidget.setCurrentIndex(0)
@@ -7033,9 +6906,6 @@ class Ui_MainWindow(object):
 
         self.electrumV2FromSeedPublicKeyTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.moneroFromEntropyQLabel.setText(QCoreApplication.translate("MainWindow", u"Entropy", None))
-        self.moneroFromEntropyPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
-        self.moneroFromEntropyPassphraseQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
-        self.moneroFromEntropyPaymentIDQLabel.setText(QCoreApplication.translate("MainWindow", u"Payment ID", None))
         self.moneroFromEntropyLanguageQLabel.setText(QCoreApplication.translate("MainWindow", u"Language", None))
         self.moneroFromEntropyLanguageQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Chinese Simplified", None))
         self.moneroFromEntropyLanguageQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Chinese Traditional", None))
@@ -7047,18 +6917,9 @@ class Ui_MainWindow(object):
         self.moneroFromEntropyLanguageQComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Spanish", None))
 
         self.moneroFromEntropyLanguageQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
-        self.moneroFromEntropyWordsQLabel.setText(QCoreApplication.translate("MainWindow", u"Words", None))
-        self.moneroFromEntropyWordsQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"12 Words", None))
-        self.moneroFromEntropyWordsQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"15 Words", None))
-        self.moneroFromEntropyWordsQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"18 Words", None))
-        self.moneroFromEntropyWordsQComboBox.setItemText(3, QCoreApplication.translate("MainWindow", u"21 Words", None))
-        self.moneroFromEntropyWordsQComboBox.setItemText(4, QCoreApplication.translate("MainWindow", u"24 Words", None))
-
-        self.moneroFromEntropyWordsQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
+        self.moneroFromEntropyPaymentIDQLabel.setText(QCoreApplication.translate("MainWindow", u"Payment ID", None))
         self.moneroFromMnemonicQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic", None))
         self.moneroFromMnemonicPaymentIDQLabel.setText(QCoreApplication.translate("MainWindow", u"Payment ID", None))
-        self.moneroFromMnemonicPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
-        self.moneroFromMnemonicPassphraseQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
         self.moneroFromSeedQLabel.setText(QCoreApplication.translate("MainWindow", u"Seed", None))
         self.moneroFromSeedPaymentIDQLabel.setText(QCoreApplication.translate("MainWindow", u"Payment ID", None))
         self.moneroFromSpendPrivateKeyQLabel.setText(QCoreApplication.translate("MainWindow", u"Spend Private Key", None))
