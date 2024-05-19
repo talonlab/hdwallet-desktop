@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>389</width>
-    <height>268</height>
+    <height>359</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -106,7 +106,7 @@
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="donationsCoreTeamQWidget" native="true">
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -151,7 +151,23 @@
               </spacer>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="donationsQRCodeQHBoxLayout"/>
+              <widget class="QLabel" name="donationsQRCodeQLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>125</width>
+                 <height>125</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>125</width>
+                 <height>125</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>QR Code</string>
+               </property>
+              </widget>
              </item>
              <item>
               <spacer name="horizontalSpacer_2">
@@ -355,7 +371,23 @@
               </spacer>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="donationsCharityQRCodeQHBoxLayout"/>
+              <widget class="QLabel" name="donationsCharityQRCodeQLabel">
+               <property name="minimumSize">
+                <size>
+                 <width>125</width>
+                 <height>125</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>125</width>
+                 <height>125</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>QR Code</string>
+               </property>
+              </widget>
              </item>
              <item>
               <spacer name="horizontalSpacer_10">
@@ -509,7 +541,7 @@
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>11</height>
+           <height>102</height>
           </size>
          </property>
         </spacer>
