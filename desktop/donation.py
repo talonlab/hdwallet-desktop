@@ -2,7 +2,7 @@ import qrcode
 from PIL.ImageQt import ImageQt, Image
 
 from PySide6.QtWidgets import QWidget, QFrame, QVBoxLayout
-from PySide6.QtCore import QEvent, Qt
+from PySide6.QtCore import QEvent, Qt, Signal
 from PySide6.QtGui import QPixmap
 
 from ui.ui_donations import Ui_Form
@@ -218,6 +218,13 @@ crypt_addresses = {
     "ZooBC": "16rW592zpVDbQkVatMHCvhv9Lo38XTBusX"
 }
 
+class ClickableFrame(QFrame):
+    clicked = Signal()
+
+    def mousePressEvent(self, event):
+        if event.button() == Qt.LeftButton:
+            self.clicked.emit()
+
 class Donation(QFrame):
     def __init__(self, *args, **kwargs):
         super(Donation, self).__init__(*args, **kwargs)
@@ -228,8 +235,9 @@ class Donation(QFrame):
         self.width = 465
         self.height = 565
 
-        self.overlay_frame = QFrame(self.parent())
+        self.overlay_frame = ClickableFrame(self.parent())
         self.overlay_frame.setStyleSheet("background-color: rgba(0, 0, 0, 128);")
+        self.overlay_frame.clicked.connect(self.close)
 
         self.modal_parent_frame = self.parent().findChild(QFrame, "hdWalletContainerQFrame")
         self.modal_parent_frame.installEventFilter(self)

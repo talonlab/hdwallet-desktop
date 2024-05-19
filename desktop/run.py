@@ -187,23 +187,31 @@ class LogHighlighter(Highlighter):
 
         # Digit highlighting
         digit_format = QTextCharFormat()
-        digit_format.setForeground(QColor(0, 120, 215))
+        digit_format.setForeground(QColor(255, 165, 0))
         self.add_highlighting_rule(r'\b\d+\b', digit_format)
 
         # Character highlighting
         character_format = QTextCharFormat()
-        character_format.setForeground(QColor(6, 240, 111))
+        character_format.setForeground(QColor(255, 255, 255))
         self.add_highlighting_rule(r'\b[a-zA-Z]+\b', character_format)
 
         # Values within single or double quotes
         quoted_value_format = QTextCharFormat()
-        quoted_value_format.setForeground(QColor(6, 240, 111))
+        quoted_value_format.setForeground(QColor(131, 185, 255))
         self.add_highlighting_rule(r'["\'].*?["\']', quoted_value_format)
 
         # Highlight lines starting with "ERROR:"
         error_format = QTextCharFormat()
         error_format.setForeground(QColor(255, 96, 96))
         self.add_highlighting_rule(r'^ERROR:.*$', error_format)
+
+        mslash_format = QTextCharFormat()
+        mslash_format.setForeground(QColor(131, 185, 255))
+        self.add_highlighting_rule(r'\bm/.*?(?=\s)', mslash_format)
+        
+        json_string_value_format = QTextCharFormat()
+        json_string_value_format.setForeground(QColor(255, 255, 255))
+        self.add_highlighting_rule(r':\s*".*?"', json_string_value_format)
 
 class CoreApp(QMainWindow):
     def changeEvent(self, event):
@@ -676,7 +684,8 @@ class CoreApp(QMainWindow):
                                 csv_data.append(dump[key[0]][key[1]])
                             else:
                                 csv_data.append(dump[key[0]])
-                        csv_out = ", ".join(csv_data)
+                        csv_out = ", ".join(map(str, csv_data))
+
                         signal.interval_output.emit(csv_out)
                         if save_filepath != None:
                             saved_file.write(f"{csv_out}\n")
