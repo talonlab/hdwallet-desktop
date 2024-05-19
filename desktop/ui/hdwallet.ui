@@ -1740,7 +1740,7 @@
                     <number>0</number>
                    </property>
                    <property name="currentIndex">
-                    <number>1</number>
+                    <number>0</number>
                    </property>
                    <widget class="QWidget" name="bipsPageQWidget">
                     <layout class="QVBoxLayout" name="BIPsPageQWidgetVLayout">
@@ -1762,7 +1762,7 @@
                      <item>
                       <widget class="QStackedWidget" name="bipQStackedWidget">
                        <property name="currentIndex">
-                        <number>4</number>
+                        <number>0</number>
                        </property>
                        <widget class="QWidget" name="bipFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="BIPFromEntropyQStackedWidgetVLayout">
@@ -1971,117 +1971,6 @@
                              </widget>
                             </item>
                             <item>
-                             <widget class="QFrame" name="bipFromEntropyPassphraseContainerQFrame">
-                              <layout class="QVBoxLayout" name="BIPFromEntropyPassphraseContainerQFrameVLayout">
-                               <property name="spacing">
-                                <number>5</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QFrame" name="bipFromEntropyPassphraseLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="BIPFromEntropyPassphraseLabelContainerQFrameHLayout">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="bipFromEntropyPassphraseQLabel">
-                                    <property name="text">
-                                     <string>Passphrase</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <spacer name="bipFromEntropyPassphraseLabelContainerQFrameHSpacer">
-                                    <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
-                                    </property>
-                                    <property name="sizeHint" stdset="0">
-                                     <size>
-                                      <width>764</width>
-                                      <height>20</height>
-                                     </size>
-                                    </property>
-                                   </spacer>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QFrame" name="bipFromEntropyPassphraseGenerateContainerQFrame">
-                                 <layout class="QHBoxLayout" name="BIPFromEntropyPassphraseGenerateContainerQFrameHLayout">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLineEdit" name="bipFromEntropyPassphraseQLineEdit">
-                                    <property name="placeholderText">
-                                     <string>(Optional)</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="bipFromEntropyLanguageAndWordsContainerQFrame">
-                           <layout class="QHBoxLayout" name="BIPFromEntropyLanguageAndWordsContainerQFrameHLayout">
-                            <property name="spacing">
-                             <number>15</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
                              <widget class="QFrame" name="bipFromEntropyLanguageContainerQFrame">
                               <layout class="QVBoxLayout" name="BIPFromEntropyLanguageContainerQFrameVLayout">
                                <property name="spacing">
@@ -2188,8 +2077,8 @@
                              </widget>
                             </item>
                             <item>
-                             <widget class="QFrame" name="bipFromEntropyWordsContainerQFrame">
-                              <layout class="QVBoxLayout" name="BIPFromEntropyWordsContainerQFrameVLayout">
+                             <widget class="QFrame" name="bipFromEntropyPassphraseContainerQFrame">
+                              <layout class="QVBoxLayout" name="BIPFromEntropyPassphraseContainerQFrameVLayout">
                                <property name="spacing">
                                 <number>5</number>
                                </property>
@@ -2206,8 +2095,8 @@
                                 <number>0</number>
                                </property>
                                <item>
-                                <widget class="QFrame" name="bipFromEntropyWordsLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="BIPFromEntropyWordsLabelContainerQFrameHLayout">
+                                <widget class="QFrame" name="bipFromEntropyPassphraseLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="BIPFromEntropyPassphraseLabelContainerQFrameHLayout">
                                   <property name="spacing">
                                    <number>15</number>
                                   </property>
@@ -2224,20 +2113,20 @@
                                    <number>0</number>
                                   </property>
                                   <item>
-                                   <widget class="QLabel" name="bipFromEntropyWordsQLabel">
+                                   <widget class="QLabel" name="bipFromEntropyPassphraseQLabel">
                                     <property name="text">
-                                     <string>Words</string>
+                                     <string>Passphrase</string>
                                     </property>
                                    </widget>
                                   </item>
                                   <item>
-                                   <spacer name="bipFromEntropyWordsLabelContainerQFrameHSpacer">
+                                   <spacer name="bipFromEntropyPassphraseLabelContainerQFrameHSpacer">
                                     <property name="orientation">
                                      <enum>Qt::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
-                                      <width>40</width>
+                                      <width>764</width>
                                       <height>20</height>
                                      </size>
                                     </property>
@@ -2247,32 +2136,31 @@
                                 </widget>
                                </item>
                                <item>
-                                <widget class="QComboBox" name="bipFromEntropyWordsQComboBox">
-                                 <item>
-                                  <property name="text">
-                                   <string>12 Words</string>
+                                <widget class="QFrame" name="bipFromEntropyPassphraseGenerateContainerQFrame">
+                                 <layout class="QHBoxLayout" name="BIPFromEntropyPassphraseGenerateContainerQFrameHLayout">
+                                  <property name="spacing">
+                                   <number>15</number>
                                   </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>15 Words</string>
+                                  <property name="leftMargin">
+                                   <number>0</number>
                                   </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>18 Words</string>
+                                  <property name="topMargin">
+                                   <number>0</number>
                                   </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>21 Words</string>
+                                  <property name="rightMargin">
+                                   <number>0</number>
                                   </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>24 Words</string>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
                                   </property>
-                                 </item>
+                                  <item>
+                                   <widget class="QLineEdit" name="bipFromEntropyPassphraseQLineEdit">
+                                    <property name="placeholderText">
+                                     <string>(Optional)</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
                                 </widget>
                                </item>
                               </layout>
@@ -2280,6 +2168,19 @@
                             </item>
                            </layout>
                           </widget>
+                         </item>
+                         <item>
+                          <spacer name="verticalSpacer_3">
+                           <property name="orientation">
+                            <enum>Qt::Vertical</enum>
+                           </property>
+                           <property name="sizeHint" stdset="0">
+                            <size>
+                             <width>20</width>
+                             <height>40</height>
+                            </size>
+                           </property>
+                          </spacer>
                          </item>
                         </layout>
                        </widget>
@@ -4018,7 +3919,7 @@
                      <item>
                       <widget class="QStackedWidget" name="cardanoQStackedWidget">
                        <property name="currentIndex">
-                        <number>4</number>
+                        <number>0</number>
                        </property>
                        <widget class="QWidget" name="cardanoFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="cardanoFromEntropyQStackedWidgetVLayout">
@@ -4440,100 +4341,6 @@
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
-                                </widget>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QFrame" name="cardanoFromEntropyWordsContainerQFrame">
-                              <layout class="QVBoxLayout" name="EStrengthVLayout_3">
-                               <property name="spacing">
-                                <number>5</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QFrame" name="cardanoFromEntropyWordsLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="EStrengthLabelHLayout_3">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="cardanoFromEntropyWordsQLabel">
-                                    <property name="text">
-                                     <string>Words</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <spacer name="cardanoFromEntropyWordsLabelContainerQFrameHSpacer">
-                                    <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
-                                    </property>
-                                    <property name="sizeHint" stdset="0">
-                                     <size>
-                                      <width>40</width>
-                                      <height>20</height>
-                                     </size>
-                                    </property>
-                                   </spacer>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QComboBox" name="cardanoFromEntropyWordsQComboBox">
-                                 <property name="placeholderText">
-                                  <string>(Select)</string>
-                                 </property>
-                                 <item>
-                                  <property name="text">
-                                   <string>12 Words</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>15 Words</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>18 Words</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>21 Words</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>24 Words</string>
-                                  </property>
-                                 </item>
                                 </widget>
                                </item>
                               </layout>
@@ -7377,7 +7184,7 @@
                      <item>
                       <widget class="QStackedWidget" name="electrumV1QStackedWidget">
                        <property name="currentIndex">
-                        <number>2</number>
+                        <number>0</number>
                        </property>
                        <widget class="QWidget" name="electrumV1FromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="verticalLayout_46">
@@ -7586,117 +7393,6 @@
                              </widget>
                             </item>
                             <item>
-                             <widget class="QFrame" name="electrumV1FromEntropyPassphraseContainerQFrame">
-                              <layout class="QVBoxLayout" name="EPassphraseVLayout_7">
-                               <property name="spacing">
-                                <number>5</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QFrame" name="electrumV1FromEntropyPassphraseLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="EPassphraseLabelHLayout_7">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="electrumV1FromEntropyPassphraseQLabel">
-                                    <property name="text">
-                                     <string>Passphrase</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <spacer name="electrumV1FromEntropyPassphraseLabelContainerQFrameHSpacer">
-                                    <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
-                                    </property>
-                                    <property name="sizeHint" stdset="0">
-                                     <size>
-                                      <width>764</width>
-                                      <height>20</height>
-                                     </size>
-                                    </property>
-                                   </spacer>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QFrame" name="electrumV1FromEntropyPassphraseGenerateContainerQFrame">
-                                 <layout class="QHBoxLayout" name="horizontalLayout_45">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLineEdit" name="electrumV1FromEntropyPassphraseGenerateQLineEdit">
-                                    <property name="placeholderText">
-                                     <string>(Optional)</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="electrumV1FromEntropyLanguageAndWordsContainerQFrame">
-                           <layout class="QHBoxLayout" name="horizontalLayout_46">
-                            <property name="spacing">
-                             <number>15</number>
-                            </property>
-                            <property name="leftMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="topMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="rightMargin">
-                             <number>0</number>
-                            </property>
-                            <property name="bottomMargin">
-                             <number>0</number>
-                            </property>
-                            <item>
                              <widget class="QFrame" name="electrumV1FromEntropyLanguageContainerQFrame">
                               <layout class="QVBoxLayout" name="ELanguageVLayout_4">
                                <property name="spacing">
@@ -7806,8 +7502,8 @@
                              </widget>
                             </item>
                             <item>
-                             <widget class="QFrame" name="electrumV1FromEntropyWordsContainerQFrame">
-                              <layout class="QVBoxLayout" name="EStrengthVLayout_4">
+                             <widget class="QFrame" name="electrumV1FromEntropyPassphraseContainerQFrame">
+                              <layout class="QVBoxLayout" name="EPassphraseVLayout_7">
                                <property name="spacing">
                                 <number>5</number>
                                </property>
@@ -7824,8 +7520,8 @@
                                 <number>0</number>
                                </property>
                                <item>
-                                <widget class="QFrame" name="electrumV1FromEntropyWordsLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="EStrengthLabelHLayout_4">
+                                <widget class="QFrame" name="electrumV1FromEntropyPassphraseLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="EPassphraseLabelHLayout_7">
                                   <property name="spacing">
                                    <number>15</number>
                                   </property>
@@ -7842,20 +7538,20 @@
                                    <number>0</number>
                                   </property>
                                   <item>
-                                   <widget class="QLabel" name="electrumV1FromEntropyWordsQLabel">
+                                   <widget class="QLabel" name="electrumV1FromEntropyPassphraseQLabel">
                                     <property name="text">
-                                     <string>Words</string>
+                                     <string>Passphrase</string>
                                     </property>
                                    </widget>
                                   </item>
                                   <item>
-                                   <spacer name="electrumV1FromEntropyWordsLabelContainerQFrameHSpacer">
+                                   <spacer name="electrumV1FromEntropyPassphraseLabelContainerQFrameHSpacer">
                                     <property name="orientation">
                                      <enum>Qt::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
-                                      <width>40</width>
+                                      <width>764</width>
                                       <height>20</height>
                                      </size>
                                     </property>
@@ -7865,35 +7561,31 @@
                                 </widget>
                                </item>
                                <item>
-                                <widget class="QComboBox" name="electrumV1FromEntropyWordsQComboBox">
-                                 <property name="placeholderText">
-                                  <string>(Select)</string>
-                                 </property>
-                                 <item>
-                                  <property name="text">
-                                   <string>12 Words</string>
+                                <widget class="QFrame" name="electrumV1FromEntropyPassphraseGenerateContainerQFrame">
+                                 <layout class="QHBoxLayout" name="horizontalLayout_45">
+                                  <property name="spacing">
+                                   <number>15</number>
                                   </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>15 Words</string>
+                                  <property name="leftMargin">
+                                   <number>0</number>
                                   </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>18 Words</string>
+                                  <property name="topMargin">
+                                   <number>0</number>
                                   </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>21 Words</string>
+                                  <property name="rightMargin">
+                                   <number>0</number>
                                   </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>24 Words</string>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
                                   </property>
-                                 </item>
+                                  <item>
+                                   <widget class="QLineEdit" name="electrumV1FromEntropyPassphraseGenerateQLineEdit">
+                                    <property name="placeholderText">
+                                     <string>(Optional)</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
                                 </widget>
                                </item>
                               </layout>
@@ -7901,6 +7593,19 @@
                             </item>
                            </layout>
                           </widget>
+                         </item>
+                         <item>
+                          <spacer name="verticalSpacer_2">
+                           <property name="orientation">
+                            <enum>Qt::Vertical</enum>
+                           </property>
+                           <property name="sizeHint" stdset="0">
+                            <size>
+                             <width>20</width>
+                             <height>40</height>
+                            </size>
+                           </property>
+                          </spacer>
                          </item>
                         </layout>
                        </widget>
@@ -9322,7 +9027,7 @@
                      <item>
                       <widget class="QStackedWidget" name="electrumV2QStackedWidget">
                        <property name="currentIndex">
-                        <number>2</number>
+                        <number>0</number>
                        </property>
                        <widget class="QWidget" name="electrumV2FromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="verticalLayout_58" stretch="0,0,0">
@@ -9799,87 +9504,6 @@
                                  <item>
                                   <property name="text">
                                    <string>Spanish</string>
-                                  </property>
-                                 </item>
-                                </widget>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QFrame" name="electrumV2FromEntropyWordsContainerQFrame">
-                              <layout class="QVBoxLayout" name="EStrengthVLayout_5">
-                               <property name="spacing">
-                                <number>5</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QFrame" name="electrumV2FromEntropyWordsLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="EStrengthLabelHLayout_5">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="electrumV2FromEntropyWordsQLabel">
-                                    <property name="text">
-                                     <string>Words</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QComboBox" name="electrumV2FromEntropyWordsQComboBox">
-                                 <property name="placeholderText">
-                                  <string>(Select)</string>
-                                 </property>
-                                 <item>
-                                  <property name="text">
-                                   <string>12 Words</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>15 Words</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>18 Words</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>21 Words</string>
-                                  </property>
-                                 </item>
-                                 <item>
-                                  <property name="text">
-                                   <string>24 Words</string>
                                   </property>
                                  </item>
                                 </widget>
@@ -15435,48 +15059,6 @@
                <number>15</number>
               </property>
               <item>
-               <widget class="QFrame" name="clearTerminalQFrame">
-                <property name="minimumSize">
-                 <size>
-                  <width>20</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>20</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="toolTip">
-                 <string>Clear</string>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <layout class="QVBoxLayout" name="clearTerminalQFrameVLayout_2">
-                 <property name="spacing">
-                  <number>0</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                </layout>
-               </widget>
-              </item>
-              <item>
                <widget class="QFrame" name="expandAndCollapseTerminalQFrame">
                 <property name="minimumSize">
                  <size>
@@ -15532,7 +15114,7 @@
            <number>15</number>
           </property>
           <property name="topMargin">
-           <number>0</number>
+           <number>15</number>
           </property>
           <property name="rightMargin">
            <number>15</number>
@@ -15551,6 +15133,13 @@
            <widget class="QPushButton" name="outputTerminalQPushButton">
             <property name="text">
              <string>Execute</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clearTerminalQPushButton">
+            <property name="text">
+             <string>Clear</string>
             </property>
            </widget>
           </item>

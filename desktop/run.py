@@ -261,14 +261,7 @@ class MyMainWindow(QMainWindow):
             lambda: self._dumps(save=True)
         )
 
-        self.clear_terminal_button = SvgButton(
-            parent_widget=self.ui.clearTerminalQFrame,
-            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/all_Icons/clean-white.svg"),
-            icon_width=20,
-            icon_height=20
-        )
-
-        self.clear_terminal_button.clicked.connect(lambda: clear_text_area(self.ui.outputTerminalQPlainTextEdit))
+        self.ui.clearTerminalQPushButton.clicked.connect(lambda: clear_text_area(self.ui.outputTerminalQPlainTextEdit))
 
         self.ui.generateQPushButton.clicked.connect(
             functools.partial(self.generate_dump_tab_changed, "generatePageQStackedWidget", self.ui.generateQPushButton)
@@ -296,8 +289,6 @@ class MyMainWindow(QMainWindow):
             self.ui.moneroMajorQLineEdit
         ]
         Validator.validate_input(vali)
-
-        self.ui.clearTerminalQFrame.hide()
 
         self._setup_generate_stack()
         self._setup_dump_stack()
