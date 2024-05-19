@@ -128,6 +128,9 @@ QPushButton {
 QPushButton:hover {
     background-color: rgba(25, 30, 36, 100);
 }
+
+#donationsCharityCopyCustomQFrame:pressed,
+#donationsCopyCustomQFrame:pressed,
 QPushButton:pressed {
     background-color: rgb(25, 30, 36);
 }
@@ -478,6 +481,8 @@ QTabBar, QTabBar::tab, QTabBar::tab:hover, QTabBar::tab:focus {
     border-radius: 0;
 }
 
+#donationsCharityQPushButton,
+#donationsCoreTeamQPushButton,
 #generateAndDumpTabContainerQFrame QPushButton,
 #derivationTabButtonsContainerQFrame QPushButton{
     background-color: transparent;
@@ -485,12 +490,16 @@ QTabBar, QTabBar::tab, QTabBar::tab:hover, QTabBar::tab:focus {
     border-radius: 0;
 }
 
+#donationsCharityQPushButton:hover,
+#donationsCoreTeamQPushButton:hover,
 #generateAndDumpTabContainerQFrame QPushButton:hover,
 #derivationTabButtonsContainerQFrame QPushButton:hover{
     background-color: transparent;
     border-bottom: 2px solid #83b9ff;
 }
 
+#donationsCharityQPushButton[Active="true"],
+#donationsCoreTeamQPushButton[Active="true"],
 #generateAndDumpTabContainerQFrame QPushButton[Active="true"],
 #derivationTabButtonsContainerQFrame QPushButton[Active="true"]{
     border-bottom: 2px solid #83b9ff;
@@ -510,6 +519,48 @@ QTabBar, QTabBar::tab, QTabBar::tab:hover, QTabBar::tab:focus {
 }
 
 
+#donationsQLabel{
+    color: white;
+    font: 12pt "HDWallet";
+    letter-spacing: 1px;
+    background-color: rgb(16, 21, 27);
+    border: none;
+    border-radius: 0;
+}
 
+#donationsCharityCryptocurrencyQLabel,
+#donationsCryptocurrencyQLabel{
+    color: white;
+    font: 12pt "HDWallet";
+    letter-spacing: 1px;
+    background-color: rgb(16, 21, 27);
+    border: none;
+    border-radius: 0;
+}
 
+#donationsDetailsQLabel,
+#donationsAddressQLabel{
+    color: white;
+    font: 10pt "Tahoma";
+    letter-spacing: 1px;
+    background-color: rgb(16, 21, 27);
+    border: none;
+    border-radius: 0;
+}
+
+#donationsCharityCopyCustomQFrame,
+#donationsCopyCustomQFrame{
+    background-color: rgb(25, 30, 36);
+    color: rgb(255, 255, 255);
+}
+
+#donationsCharityCopyCustomQFrame:hover,
+#donationsCopyCustomQFrame:hover{
+    background-color: rgba(25, 30, 36, 100);
+}
+
+#donationsCharityCopyCustomQFrame:pressed,
+#donationsCopyCustomQFrame:pressed{
+    background-color: rgb(25, 30, 36);
+}
 

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>389</width>
-    <height>359</height>
+    <width>512</width>
+    <height>482</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,13 +30,13 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="QFrame" name="frame_8">
+    <widget class="QFrame" name="donationsNavbarQFrame">
      <layout class="QHBoxLayout" name="horizontalLayout_7">
       <property name="spacing">
-       <number>0</number>
+       <number>10</number>
       </property>
       <property name="leftMargin">
-       <number>0</number>
+       <number>10</number>
       </property>
       <property name="topMargin">
        <number>0</number>
@@ -48,10 +48,64 @@
        <number>0</number>
       </property>
       <item>
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="donationsQLabel">
         <property name="text">
          <string>Donations</string>
         </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_8">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_9">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_16">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="donationsCoreTeamQPushButton">
+           <property name="text">
+            <string>Core Team</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="donationsCharityQPushButton">
+           <property name="text">
+            <string>Charity</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </item>
       <item alignment="Qt::AlignRight">
@@ -72,44 +126,31 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_10">
-      <item>
-       <widget class="QPushButton" name="donationsCoreTeamQPushButton">
-        <property name="text">
-         <string>Core Team</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="donationsCharityQPushButton">
-        <property name="text">
-         <string>Charity</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer_8">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
+     <layout class="QHBoxLayout" name="horizontalLayout_10"/>
     </widget>
    </item>
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="donationsCoreTeamQWidget" native="true">
       <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>15</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item>
         <widget class="QFrame" name="frame_2">
          <layout class="QHBoxLayout" name="horizontalLayout">
@@ -154,14 +195,14 @@
               <widget class="QLabel" name="donationsQRCodeQLabel">
                <property name="minimumSize">
                 <size>
-                 <width>125</width>
-                 <height>125</height>
+                 <width>200</width>
+                 <height>200</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>125</width>
-                 <height>125</height>
+                 <width>200</width>
+                 <height>200</height>
                 </size>
                </property>
                <property name="text">
@@ -228,11 +269,65 @@
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <property name="spacing">
+              <number>15</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
              <item>
               <widget class="QLabel" name="donationsAddressQLabel">
                <property name="text">
                 <string>TextLabel</string>
                </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="donationsCopyCustomQFrame">
+               <property name="minimumSize">
+                <size>
+                 <width>25</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>25</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_20">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+               </layout>
               </widget>
              </item>
             </layout>
@@ -272,8 +367,27 @@
           <property name="bottomMargin">
            <number>0</number>
           </property>
-          <item alignment="Qt::AlignHCenter">
+          <item>
+           <spacer name="horizontalSpacer_15">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <widget class="QFrame" name="frame_7">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
             <layout class="QVBoxLayout" name="verticalLayout_3">
              <property name="spacing">
               <number>15</number>
@@ -290,8 +404,8 @@
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <item>
-              <widget class="QLabel" name="label_2">
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="donationsCryptocurrencyQLabel">
                <property name="text">
                 <string>Cryptocurrency</string>
                </property>
@@ -303,14 +417,54 @@
             </layout>
            </widget>
           </item>
+          <item>
+           <spacer name="horizontalSpacer_16">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
          </layout>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="donationsDetailsQLabel">
-         <property name="text">
-          <string>TextLabel</string>
+        <widget class="QFrame" name="frame_8">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
          </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_17">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>50</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>50</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="donationsDetailsQLabel">
+            <property name="text">
+             <string>Text Label</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -330,6 +484,21 @@
      </widget>
      <widget class="QWidget" name="donationsCharityQWidget" native="true">
       <layout class="QVBoxLayout" name="verticalLayout_7">
+       <property name="spacing">
+        <number>15</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item>
         <widget class="QFrame" name="frame_10">
          <layout class="QHBoxLayout" name="horizontalLayout_11">
@@ -370,18 +539,18 @@
                </property>
               </spacer>
              </item>
-             <item>
+             <item alignment="Qt::AlignVCenter">
               <widget class="QLabel" name="donationsCharityQRCodeQLabel">
                <property name="minimumSize">
                 <size>
-                 <width>125</width>
-                 <height>125</height>
+                 <width>200</width>
+                 <height>200</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>125</width>
-                 <height>125</height>
+                 <width>200</width>
+                 <height>200</height>
                 </size>
                </property>
                <property name="text">
@@ -448,11 +617,65 @@
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_14">
+             <property name="spacing">
+              <number>15</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
              <item>
               <widget class="QLabel" name="donationsCharityAddressQLabel">
                <property name="text">
                 <string>TextLabel</string>
                </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="donationsCharityCopyCustomQFrame">
+               <property name="minimumSize">
+                <size>
+                 <width>25</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>25</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_19">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+               </layout>
               </widget>
              </item>
             </layout>
@@ -492,8 +715,27 @@
           <property name="bottomMargin">
            <number>0</number>
           </property>
-          <item alignment="Qt::AlignHCenter">
+          <item>
+           <spacer name="horizontalSpacer_13">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <widget class="QFrame" name="frame_16">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
             <layout class="QVBoxLayout" name="verticalLayout_6">
              <property name="spacing">
               <number>15</number>
@@ -510,27 +752,62 @@
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <item>
-              <widget class="QLabel" name="label_5">
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="donationsCharityCryptocurrencyQLabel">
                <property name="text">
                 <string>Cryptocurrency</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QComboBox" name="donationsCharityCryptocurrencyQComboBox"/>
+              <widget class="QComboBox" name="donationsCharityCryptocurrencyQComboBox">
+               <property name="placeholderText">
+                <string>Select Cryptocurrency</string>
+               </property>
+              </widget>
              </item>
             </layout>
            </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_14">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="donationsCharityDetailsQLabel">
-         <property name="text">
-          <string>TextLabel</string>
-         </property>
+        <widget class="QFrame" name="frame_15">
+         <layout class="QHBoxLayout" name="horizontalLayout_18">
+          <property name="leftMargin">
+           <number>50</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>50</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="donationsCharityDetailsQLabel">
+            <property name="text">
+             <string>Text Label</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -541,7 +818,7 @@
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>102</height>
+           <height>30</height>
           </size>
          </property>
         </spacer>

@@ -1,3 +1,5 @@
+import os
+
 import qrcode
 from PIL.ImageQt import ImageQt, Image
 
@@ -5,7 +7,9 @@ from PySide6.QtWidgets import QWidget, QFrame, QVBoxLayout
 from PySide6.QtCore import QEvent, Qt, Signal
 from PySide6.QtGui import QPixmap
 
+from widget.SvgButton import SvgButton
 from ui.ui_donations import Ui_Form
+from clipboard import *
 
 crypt_addresses = {
     "Adcoin": "AYzMqvwQ6HGBRpsMahW7tCtHm6vmgoKkpf",
@@ -336,6 +340,7 @@ class Donation(QFrame):
         frame = Donation(main_window)
     
         main_widget = QWidget()
+        main_widget.setContentsMargins(0, 0, 0, 0)
         donation_ui = Ui_Form()
         donation_ui.setupUi(main_widget)
         frame.ui = donation_ui
@@ -354,6 +359,36 @@ class Donation(QFrame):
         donation_ui.donationsCharityCryptocurrencyQComboBox.setCurrentText("Ethereum")
 
         donation_ui.donationsCoreTeamQPushButton.click()
+        donation_ui.donationsCharityDetailsQLabel.setText("This donation is for the charity team, because without "
+                                                          "them, we'd have no idea where our good intentions should "
+                                                          "go. Cheers to our chaos coordinators! ")
+        donation_ui.donationsDetailsQLabel.setText("This donation is for the core team, because without them, we'd be "
+                                                   "googling 'how to turn on a computer.' Cheers to our tech wizards!")
+        donation_ui.donationsDetailsQLabel.setWordWrap(True)
+
+        copy_coreteam_address = SvgButton(
+            parent_widget=donation_ui.donationsCopyCustomQFrame,
+            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/svgs/copy-light.svg"),
+            icon_width=20,
+            icon_height=20
+        )
+
+        copy_charity_address = SvgButton(
+            parent_widget=donation_ui.donationsCharityCopyCustomQFrame,
+            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/svgs/copy-light.svg"),
+            icon_width=20,
+            icon_height=20
+        )
+
+        copy_coreteam_address.clicked.connect(
+            lambda: copy_to_clipboard(donation_ui.donationsAddressQLabel.text())
+        )
+        copy_charity_address.clicked.connect(
+            lambda: copy_to_clipboard(donation_ui.donationsCharityAddressQLabel.text())
+        )
+
+
+
         frame.layout().addWidget(main_widget)
         frame.re_adjust()
         frame.show()
