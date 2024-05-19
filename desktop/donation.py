@@ -48,7 +48,7 @@ crypt_addresses = {
     "Brit-Coin": "BCVHsGwA6zbSeZdJAQCzfTkRA27Y9pPcuB",
     "Canada-eCoin": "Cc74bMN7nUPWodKsC3QmmssCTnD5aKAnjH",
     "Cannacoin": "CQKBuxTYbqVwCHYkF5AghtRvJZqgtYdN7H",
-    "Cardano (Shelley Ledger)": "addr1q9p26pmu30s7ve2l6542eqtg05gyw64z02f49xmgecnh33ljrma797q8k3hpum3vs0ed5359wyeacjew6y9pl9vaa7rqh0zr0d",
+    "Cardano": "addr1q9p26pmu30s7ve2l6542eqtg05gyw64z02f49xmgecnh33ljrma797q8k3hpum3vs0ed5359wyeacjew6y9pl9vaa7rqh0zr0d",
     "Celo": "0x7ea4552Dd7e4B97ccd1E3DD08001005C0ce1C2B2",
     "Chihuahua": "chihuahua1m0aarljq5j5v2ckh2j7tu46fhw0kwzyk8yeyv4",
     "Clams": "xAsD6gkJEQkuXsDX7KEo4FQFyYhLPPyCcy",
