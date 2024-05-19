@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletmMkyLF.ui'
+## Form generated from reading UI file 'hdwalletBlrIki.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -20,6 +20,10 @@ from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QCheckBox, QCo
     QLabel, QLineEdit, QMainWindow, QPlainTextEdit,
     QPushButton, QRadioButton, QSizePolicy, QSpacerItem,
     QStackedWidget, QVBoxLayout, QWidget)
+
+from desktop.widget.HistoryLineEdit import HistoryLineEdit
+
+
 
 from .resources_rc import *
 
@@ -6591,7 +6595,7 @@ class Ui_MainWindow(object):
         self.outputTerminalActionQWidgetHLayout.setSpacing(15)
         self.outputTerminalActionQWidgetHLayout.setObjectName(u"outputTerminalActionQWidgetHLayout")
         self.outputTerminalActionQWidgetHLayout.setContentsMargins(15, 15, 15, 15)
-        self.outputTerminalQLineEdit = QLineEdit(self.outputTerminalActionQWidget)
+        self.outputTerminalQLineEdit = HistoryLineEdit(self.outputTerminalActionQWidget)
         self.outputTerminalQLineEdit.setObjectName(u"outputTerminalQLineEdit")
 
         self.outputTerminalActionQWidgetHLayout.addWidget(self.outputTerminalQLineEdit)

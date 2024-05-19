@@ -1,3 +1,7 @@
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QLineEdit
+
+
 class HistoryLineEdit(QLineEdit):
     def __init__(self, parent=None):
         super(HistoryLineEdit, self).__init__(parent)
