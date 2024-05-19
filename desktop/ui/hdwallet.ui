@@ -170,7 +170,7 @@
           <item>
            <widget class="QStackedWidget" name="hdwalletQStackedWidget">
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="generatePageQStackedWidget">
              <layout class="QVBoxLayout" name="generatePageQStackedWidgetVLayout">
@@ -1740,7 +1740,7 @@
                     <number>0</number>
                    </property>
                    <property name="currentIndex">
-                    <number>0</number>
+                    <number>2</number>
                    </property>
                    <widget class="QWidget" name="bipsPageQWidget">
                     <layout class="QVBoxLayout" name="BIPsPageQWidgetVLayout">
@@ -14982,13 +14982,16 @@
               <enum>Qt::ScrollBarAsNeeded</enum>
              </property>
              <property name="horizontalScrollBarPolicy">
-              <enum>Qt::ScrollBarAsNeeded</enum>
+              <enum>Qt::ScrollBarAlwaysOn</enum>
              </property>
              <property name="sizeAdjustPolicy">
               <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
              </property>
              <property name="readOnly">
               <bool>true</bool>
+             </property>
+             <property name="textInteractionFlags">
+              <set>Qt::TextSelectableByMouse</set>
              </property>
              <property name="maximumBlockCount">
               <number>2500</number>
@@ -15114,7 +15117,7 @@
            <number>15</number>
           </property>
           <property name="topMargin">
-           <number>15</number>
+           <number>10</number>
           </property>
           <property name="rightMargin">
            <number>15</number>

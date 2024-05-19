@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletBlrIki.ui'
+## Form generated from reading UI file 'hdwalletwqHtUH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.2
 ##
@@ -6542,9 +6542,10 @@ class Ui_MainWindow(object):
         self.outputTerminalQPlainTextEdit.setFrameShape(QFrame.NoFrame)
         self.outputTerminalQPlainTextEdit.setFrameShadow(QFrame.Plain)
         self.outputTerminalQPlainTextEdit.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
-        self.outputTerminalQPlainTextEdit.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.outputTerminalQPlainTextEdit.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
         self.outputTerminalQPlainTextEdit.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContentsOnFirstShow)
         self.outputTerminalQPlainTextEdit.setReadOnly(True)
+        self.outputTerminalQPlainTextEdit.setTextInteractionFlags(Qt.TextSelectableByMouse)
         self.outputTerminalQPlainTextEdit.setMaximumBlockCount(2500)
 
         self.outputTerminalQFrameVLayout.addWidget(self.outputTerminalQPlainTextEdit)
@@ -6594,7 +6595,7 @@ class Ui_MainWindow(object):
         self.outputTerminalActionQWidgetHLayout = QHBoxLayout(self.outputTerminalActionQWidget)
         self.outputTerminalActionQWidgetHLayout.setSpacing(15)
         self.outputTerminalActionQWidgetHLayout.setObjectName(u"outputTerminalActionQWidgetHLayout")
-        self.outputTerminalActionQWidgetHLayout.setContentsMargins(15, 15, 15, 15)
+        self.outputTerminalActionQWidgetHLayout.setContentsMargins(15, 10, 15, 15)
         self.outputTerminalQLineEdit = HistoryLineEdit(self.outputTerminalActionQWidget)
         self.outputTerminalQLineEdit.setObjectName(u"outputTerminalQLineEdit")
 
@@ -6620,8 +6621,8 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.hdwalletQStackedWidget.setCurrentIndex(1)
-        self.hdQStackedWidget.setCurrentIndex(0)
+        self.hdwalletQStackedWidget.setCurrentIndex(0)
+        self.hdQStackedWidget.setCurrentIndex(2)
         self.bipQStackedWidget.setCurrentIndex(0)
         self.cardanoQStackedWidget.setCurrentIndex(0)
         self.electrumV1QStackedWidget.setCurrentIndex(0)
