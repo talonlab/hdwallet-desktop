@@ -75,6 +75,7 @@ from widget.SvgButton import SvgButton
 from file_saver import FileSaver
 from worker import Worker, WorkerSignals
 from validator import Validator
+from donation import Donation
 
 def clear_layout(layout: QLayout, delete: bool = True) -> None:
     if layout is not None:
@@ -204,7 +205,7 @@ class LogHighlighter(Highlighter):
         error_format.setForeground(QColor(255, 96, 96))
         self.add_highlighting_rule(r'^ERROR:.*$', error_format)
 
-class MyMainWindow(QMainWindow):
+class CoreApp(QMainWindow):
     def changeEvent(self, event):
         super().changeEvent(event)
         if event.type() == QEvent.WindowStateChange:
@@ -212,6 +213,7 @@ class MyMainWindow(QMainWindow):
                 self.update_terminal_ui()
             elif self.windowState() == Qt.WindowNoState:
                 self.update_terminal_ui()
+
     def __init__(self):
         super().__init__()
         self.ui = Ui_MainWindow()
@@ -289,6 +291,8 @@ class MyMainWindow(QMainWindow):
             self.ui.moneroMajorQLineEdit
         ]
         Validator.validate_input(vali)
+
+        self.ui.donationHDWalletQPushButton.clicked.connect(lambda: Donation.show_donation(self.window()))
 
         self._setup_generate_stack()
         self._setup_dump_stack()
@@ -1492,7 +1496,7 @@ class MyMainWindow(QMainWindow):
         self.update_terminal_ui()
 
     def show(self):
-        super(MyMainWindow, self).show()
+        super(CoreApp, self).show()
         self.update_terminal_ui()
         self.update_terminal_ui()
 
@@ -1520,7 +1524,7 @@ class MyMainWindow(QMainWindow):
 if __name__ == "__main__":
     app = QApplication([])
 
-    main_window = MyMainWindow()
+    main_window = CoreApp()
     main_window.show()
 
     app.exec()
