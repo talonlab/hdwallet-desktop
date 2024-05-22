@@ -323,14 +323,14 @@ class Donation(QFrame):
     def core_crypto_changed(self):
         crypto = self.ui.donationsCryptocurrencyQComboBox.currentText()
         addr = crypt_addresses[crypto]
-
+        self.core_addr = addr
         self.ui.donationsAddressQLabel.setText(f"{addr[:15]}...{addr[-10:]}")
         self.update_receive_qr(self.ui.donationsQRCodeQLabel, addr)
 
     def charity_crypto_changed(self):
         crypto = self.ui.donationsCharityCryptocurrencyQComboBox.currentText()
         addr = crypt_addresses[crypto]
-
+        self.charity_addr = addr
         self.ui.donationsCharityAddressQLabel.setText(f"{addr[:15]}...{addr[-10:]}")
         self.update_receive_qr(self.ui.donationsCharityQRCodeQLabel, addr)
 
@@ -368,10 +368,10 @@ class Donation(QFrame):
         donation_ui.donationsCharityCaptionQLabel.setWordWrap(True)
 
         donation_ui.donationsAddressCopyQPushButton.clicked.connect(
-            lambda: copy_to_clipboard(donation_ui.donationsAddressQLabel.text())
+            lambda: copy_to_clipboard(frame.core_addr)
         )
         donation_ui.donationsCharityAddressCopyQPushButton.clicked.connect(
-            lambda: copy_to_clipboard(donation_ui.donationsCharityAddressQLabel.text())
+            lambda: copy_to_clipboard(frame.charity_addr)
         )
 
 
