@@ -67,7 +67,8 @@ class Application(QMainWindow):
 
         self.setWindowTitle("Hierarchical Deterministic Wallet")
         self.load_stylesheet(os.path.join(os.path.dirname(__file__), "../ui/css/dark-style.css"))
-        put_svg(self.ui.hdwalletLogoHLayout, os.path.join(os.path.dirname(__file__), "../ui/images/11.svg"), 132.04, 45)
+        put_svg(self.ui.hdwalletLogoHLayout, os.path.join(os.path.dirname(__file__),
+                                                          "../ui/images/svg/hdwalletLogoFullSize.svg"), 132.04, 45)
         QFontDatabase.addApplicationFont(os.path.join(os.path.dirname(__file__), "../ui/font/HD Wallet-Regular.ttf"))
 
     def load_stylesheet(self, path: str) -> None:

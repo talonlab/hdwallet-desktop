@@ -47,8 +47,8 @@ class MainApplication:
         """
         self.ui.toggle_expand_terminal = SvgButton(
             parent_widget=self.ui.expandAndCollapseTerminalQFrame,
-            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/all_Icons/expand-white-thin.svg"),
-            alt_icon_path=os.path.join(os.path.dirname(__file__), "ui/images/all_Icons/collapse-white-thin.svg"),
+            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/svg/expand-white-thin.svg"),
+            alt_icon_path=os.path.join(os.path.dirname(__file__), "ui/images/svg/collapse-white-thin.svg"),
             icon_width=20,
             icon_height=20
         )
