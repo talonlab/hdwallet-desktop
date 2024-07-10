@@ -125,10 +125,10 @@ class Generate:
         self.ui.generateMnemonicLanguageQComboBox.setCurrentText('English')
 
         if ElectrumV2Seed.name() == mnemonic_client:
-            self.ui.generateMnemonicTypeQComboBox.setEnabled(True)
+            self.ui.generateMnemonicTypeContainerQFrame.setEnabled(True)
             self.ui.generateMnemonicTypeQComboBox.setCurrentIndex(0)
         else:
-            self.ui.generateMnemonicTypeQComboBox.setEnabled(False)
+            self.ui.generateMnemonicTypeContainerQFrame.setEnabled(False)
             self.ui.generateMnemonicTypeQComboBox.setCurrentIndex(-1)
 
     def _generate_mnemonic_word_toggle(self):
@@ -136,13 +136,13 @@ class Generate:
             self.ui.generateMnemonicWordsQComboBox.setEnabled(True)
             self.ui.generateMnemonicWordsQComboBox.setCurrentIndex(0)
             self.ui.generateSeedMnemonicEntropyQLineEdit.setText(None)
-            self.ui.generateSeedMnemonicEntropyQLineEdit.setEnabled(False)
+            self.ui.generateMnemonicEntropyQFrame.setEnabled(False)
 
     def _generate_mnemonic_entropy_toggle(self):
         if self.ui.generateMnemonicEntropyQRadioButton.isChecked():
             self.ui.generateMnemonicWordsQComboBox.setEnabled(False)
             self.ui.generateMnemonicWordsQComboBox.setCurrentIndex(-1)
-            self.ui.generateSeedMnemonicEntropyQLineEdit.setEnabled(True)
+            self.ui.generateMnemonicEntropyQFrame.setEnabled(True)
 
     def _generate_mnemonic(self):
         mnemonic_client = self.ui.generateMnemonicClientQComboBox.currentText()
