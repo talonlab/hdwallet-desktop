@@ -14,7 +14,7 @@ class Toast(QFrame):
         super(Toast, self).__init__(*args, **kwargs)
         QHBoxLayout(self)
 
-        self.margin = 0
+        self.margin = -10
 
         self.timer = QTimer(singleShot=True, timeout=self.dispose)
 
@@ -32,18 +32,18 @@ class Toast(QFrame):
         self.animation.setDuration(300)
         self.animation.start()
 
-    def adjust_position(self, rect=None):
+    def adjust_position(self, frame=None):
         geo = self.geometry()
-        parent_rect = self.parent().rect() if not rect else rect
-        x_pos = (parent_rect.bottomRight().x() / 2) - (self.width() / 2)  # parent windows center
-        geo.moveBottomLeft(parent_rect.bottomLeft() + QPoint(x_pos, -self.margin))
+        parent = self.parent() if not frame else frame
+        x_pos = parent.geometry().x() + (parent.rect().bottomRight().x() / 2) - (self.width() / 2)  # parent windows center
+        geo.moveBottomLeft(parent.rect().bottomLeft() + QPoint(x_pos, -self.margin))
         self.setGeometry(geo)
 
     def closeEvent(self, event):
         self.deleteLater()
 
     @staticmethod
-    def show_toast(message: str, parent_rect: QRect = None, timeout: int = 1000) -> None:
+    def show_toast(message: str, parent_frame: QRect = None, timeout: int = 1000) -> None:
         toast = Toast(Application.instance().window())
 
         toast.setObjectName("toastQFrame")
@@ -51,7 +51,7 @@ class Toast(QFrame):
         toast.layout().addWidget(toast.message_label)
 
         toast.adjustSize()
-        toast.adjust_position(parent_rect)
+        toast.adjust_position(parent_frame)
 
         toast.timer.setInterval(timeout)
         toast.timer.start()

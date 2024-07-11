@@ -233,7 +233,7 @@ class Donation(QFrame):
         donation_ui.donationsCharityCaptionQLabel.setWordWrap(True)
 
         donation_ui.donationsAddressCopyQPushButton.clicked.connect(
-            lambda: copy_to_clipboard(text=frame.core_addr, show_toast=True, frame_rect=frame.rect())
+            lambda: copy_to_clipboard(text=frame.core_addr, show_toast=True, frame=frame)
         )
         donation_ui.donationsCharityAddressCopyQPushButton.clicked.connect(
             lambda: copy_to_clipboard(frame.charity_addr)

@@ -13,7 +13,7 @@ from PySide6.QtGui import (
 from desktop.widgets.toast import Toast
 
 
-def copy_to_clipboard(text: str, show_toast=True, frame_rect=None) -> None:
+def copy_to_clipboard(text: str, show_toast=True, frame=None) -> None:
     """
     Copy text to the system clipboard.
 
@@ -23,7 +23,8 @@ def copy_to_clipboard(text: str, show_toast=True, frame_rect=None) -> None:
     clipboard: QClipboard = QGuiApplication.clipboard()
     clipboard.setText(text)
     if show_toast:
-        Toast.show_toast(message="Copied!", parent_rect=frame_rect)
+        Toast.show_toast(message="Copied!", parent_frame=frame)
+
 
 def get_clipboard_text() -> str:
     """
@@ -34,6 +35,7 @@ def get_clipboard_text() -> str:
     """
     clipboard: QClipboard = QGuiApplication.clipboard()
     return clipboard.text()
+
 
 def clear_clipboard() -> None:
     """
