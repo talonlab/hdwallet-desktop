@@ -60,7 +60,6 @@ class MainApplication:
         )
         self.ui.outputTerminalQLineEdit.returnPressed.connect(self.process_command)
         self.ui.outputTerminalQPushButton.clicked.connect(self.process_command)
-        self.ui.outputTerminalQPlainTextEdit.textChanged.connect(self.app.update_terminal_ui)
         self.ui.clearTerminalQPushButton.clicked.connect(self.ui.outputTerminalQPlainTextEdit.clear)
 
         self.ui.generateQPushButton.clicked.connect(
