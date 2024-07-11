@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletvSSxGy.ui'
+## Form generated from reading UI file 'hdwalletqRZEaD.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -238,7 +238,36 @@ class Ui_MainWindow(object):
 
         self.generateMnemonicClientFromLanguageContainerQFrameHLayout.addWidget(self.generateMnemonicFromContainerQFrame)
 
-        self.generateMnemonicTypeContainerQFrame = QFrame(self.generateMnemonicClientFromLanguageContainerQFrame)
+        self.generateMnemonicLanguageContainerQFrame = QFrame(self.generateMnemonicClientFromLanguageContainerQFrame)
+        self.generateMnemonicLanguageContainerQFrame.setObjectName(u"generateMnemonicLanguageContainerQFrame")
+        self.generateMnemonicLanguageContainerQFrame.setMinimumSize(QSize(125, 0))
+        self.generateMnemonicLanguageContainerQFrameVLayout = QVBoxLayout(self.generateMnemonicLanguageContainerQFrame)
+        self.generateMnemonicLanguageContainerQFrameVLayout.setSpacing(5)
+        self.generateMnemonicLanguageContainerQFrameVLayout.setObjectName(u"generateMnemonicLanguageContainerQFrameVLayout")
+        self.generateMnemonicLanguageContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
+        self.generateMnemonicLanguageQLabel = QLabel(self.generateMnemonicLanguageContainerQFrame)
+        self.generateMnemonicLanguageQLabel.setObjectName(u"generateMnemonicLanguageQLabel")
+
+        self.generateMnemonicLanguageContainerQFrameVLayout.addWidget(self.generateMnemonicLanguageQLabel)
+
+        self.generateMnemonicLanguageQComboBox = QComboBox(self.generateMnemonicLanguageContainerQFrame)
+        self.generateMnemonicLanguageQComboBox.setObjectName(u"generateMnemonicLanguageQComboBox")
+
+        self.generateMnemonicLanguageContainerQFrameVLayout.addWidget(self.generateMnemonicLanguageQComboBox)
+
+
+        self.generateMnemonicClientFromLanguageContainerQFrameHLayout.addWidget(self.generateMnemonicLanguageContainerQFrame)
+
+
+        self.verticalLayout_6.addWidget(self.generateMnemonicClientFromLanguageContainerQFrame)
+
+        self.generateMnemonicLanguageWordsEntropyContainerQFrame = QFrame(self.generateMnemonicClientWordsLanguageContainerQGroupBox)
+        self.generateMnemonicLanguageWordsEntropyContainerQFrame.setObjectName(u"generateMnemonicLanguageWordsEntropyContainerQFrame")
+        self.generateMnemonicLanguageWordsEntropyContainerQFrameHLayout = QHBoxLayout(self.generateMnemonicLanguageWordsEntropyContainerQFrame)
+        self.generateMnemonicLanguageWordsEntropyContainerQFrameHLayout.setSpacing(15)
+        self.generateMnemonicLanguageWordsEntropyContainerQFrameHLayout.setObjectName(u"generateMnemonicLanguageWordsEntropyContainerQFrameHLayout")
+        self.generateMnemonicLanguageWordsEntropyContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
+        self.generateMnemonicTypeContainerQFrame = QFrame(self.generateMnemonicLanguageWordsEntropyContainerQFrame)
         self.generateMnemonicTypeContainerQFrame.setObjectName(u"generateMnemonicTypeContainerQFrame")
         sizePolicy.setHeightForWidth(self.generateMnemonicTypeContainerQFrame.sizePolicy().hasHeightForWidth())
         self.generateMnemonicTypeContainerQFrame.setSizePolicy(sizePolicy)
@@ -257,36 +286,7 @@ class Ui_MainWindow(object):
         self.generateMnemonicWordsContainerQFrameVLayout_3.addWidget(self.generateMnemonicTypeQComboBox)
 
 
-        self.generateMnemonicClientFromLanguageContainerQFrameHLayout.addWidget(self.generateMnemonicTypeContainerQFrame)
-
-
-        self.verticalLayout_6.addWidget(self.generateMnemonicClientFromLanguageContainerQFrame)
-
-        self.generateMnemonicLanguageWordsEntropyContainerQFrame = QFrame(self.generateMnemonicClientWordsLanguageContainerQGroupBox)
-        self.generateMnemonicLanguageWordsEntropyContainerQFrame.setObjectName(u"generateMnemonicLanguageWordsEntropyContainerQFrame")
-        self.generateMnemonicLanguageWordsEntropyContainerQFrameHLayout = QHBoxLayout(self.generateMnemonicLanguageWordsEntropyContainerQFrame)
-        self.generateMnemonicLanguageWordsEntropyContainerQFrameHLayout.setSpacing(15)
-        self.generateMnemonicLanguageWordsEntropyContainerQFrameHLayout.setObjectName(u"generateMnemonicLanguageWordsEntropyContainerQFrameHLayout")
-        self.generateMnemonicLanguageWordsEntropyContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.generateMnemonicLanguageContainerQFrame = QFrame(self.generateMnemonicLanguageWordsEntropyContainerQFrame)
-        self.generateMnemonicLanguageContainerQFrame.setObjectName(u"generateMnemonicLanguageContainerQFrame")
-        self.generateMnemonicLanguageContainerQFrame.setMinimumSize(QSize(125, 0))
-        self.generateMnemonicLanguageContainerQFrameVLayout = QVBoxLayout(self.generateMnemonicLanguageContainerQFrame)
-        self.generateMnemonicLanguageContainerQFrameVLayout.setSpacing(5)
-        self.generateMnemonicLanguageContainerQFrameVLayout.setObjectName(u"generateMnemonicLanguageContainerQFrameVLayout")
-        self.generateMnemonicLanguageContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.generateMnemonicLanguageQLabel = QLabel(self.generateMnemonicLanguageContainerQFrame)
-        self.generateMnemonicLanguageQLabel.setObjectName(u"generateMnemonicLanguageQLabel")
-
-        self.generateMnemonicLanguageContainerQFrameVLayout.addWidget(self.generateMnemonicLanguageQLabel)
-
-        self.generateMnemonicLanguageQComboBox = QComboBox(self.generateMnemonicLanguageContainerQFrame)
-        self.generateMnemonicLanguageQComboBox.setObjectName(u"generateMnemonicLanguageQComboBox")
-
-        self.generateMnemonicLanguageContainerQFrameVLayout.addWidget(self.generateMnemonicLanguageQComboBox)
-
-
-        self.generateMnemonicLanguageWordsEntropyContainerQFrameHLayout.addWidget(self.generateMnemonicLanguageContainerQFrame)
+        self.generateMnemonicLanguageWordsEntropyContainerQFrameHLayout.addWidget(self.generateMnemonicTypeContainerQFrame)
 
         self.generateMnemonicWordsContainerQFrame = QFrame(self.generateMnemonicLanguageWordsEntropyContainerQFrame)
         self.generateMnemonicWordsContainerQFrame.setObjectName(u"generateMnemonicWordsContainerQFrame")
@@ -3452,6 +3452,10 @@ class Ui_MainWindow(object):
 
         self.electrumV1FromMnemonicQStackedWidgetVLayout.addWidget(self.electrumV1FromMnemonicPublicKeyTypeAndPassphraseContainerQFrame)
 
+        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.electrumV1FromMnemonicQStackedWidgetVLayout.addItem(self.verticalSpacer_4)
+
         self.electrumV1QStackedWidget.addWidget(self.electrumV1FromMnemonicQStackedWidget)
         self.electrumV1FromSeedQStackedWidget = QWidget()
         self.electrumV1FromSeedQStackedWidget.setObjectName(u"electrumV1FromSeedQStackedWidget")
@@ -4696,7 +4700,10 @@ class Ui_MainWindow(object):
 
         self.moneroFromSeedAndPaymentIDContainerQFrameHLayout.addWidget(self.moneroFromSeedContainerQFrame)
 
-        self.moneroFromSeedPaymentIDContainerQFrame = QFrame(self.moneroFromSeedAndPaymentIDContainerQFrame)
+
+        self.moneroFromSeedSpacerContainerQFrameVLayout.addWidget(self.moneroFromSeedAndPaymentIDContainerQFrame)
+
+        self.moneroFromSeedPaymentIDContainerQFrame = QFrame(self.moneroFromSeedSpacerContainerQFrame)
         self.moneroFromSeedPaymentIDContainerQFrame.setObjectName(u"moneroFromSeedPaymentIDContainerQFrame")
         self.moneroFromSeedPaymentIDContainerQFrame.setMinimumSize(QSize(150, 0))
         self.moneroFromSeedPaymentIDContainerQFrameVLayout = QVBoxLayout(self.moneroFromSeedPaymentIDContainerQFrame)
@@ -4727,10 +4734,7 @@ class Ui_MainWindow(object):
         self.moneroFromSeedPaymentIDContainerQFrameVLayout.addWidget(self.moneroFromSeedPaymentIDQLineEdit)
 
 
-        self.moneroFromSeedAndPaymentIDContainerQFrameHLayout.addWidget(self.moneroFromSeedPaymentIDContainerQFrame)
-
-
-        self.moneroFromSeedSpacerContainerQFrameVLayout.addWidget(self.moneroFromSeedAndPaymentIDContainerQFrame)
+        self.moneroFromSeedSpacerContainerQFrameVLayout.addWidget(self.moneroFromSeedPaymentIDContainerQFrame)
 
         self.moneroFromSeedSpacerContainerQFrameVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -6459,14 +6463,14 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.hdwalletQStackedWidget.setCurrentIndex(0)
-        self.hdQStackedWidget.setCurrentIndex(1)
-        self.bipQStackedWidget.setCurrentIndex(4)
+        self.hdwalletQStackedWidget.setCurrentIndex(1)
+        self.hdQStackedWidget.setCurrentIndex(0)
+        self.bipQStackedWidget.setCurrentIndex(3)
         self.cardanoQStackedWidget.setCurrentIndex(4)
-        self.electrumV1QStackedWidget.setCurrentIndex(2)
-        self.electrumV2QStackedWidget.setCurrentIndex(0)
+        self.electrumV1QStackedWidget.setCurrentIndex(0)
+        self.electrumV2QStackedWidget.setCurrentIndex(2)
         self.moneroQStackedWidget.setCurrentIndex(5)
-        self.derivationsQStackedWidget.setCurrentIndex(5)
+        self.derivationsQStackedWidget.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -6490,10 +6494,10 @@ class Ui_MainWindow(object):
         self.generateMnemonicFromQLabel.setText(QCoreApplication.translate("MainWindow", u"From", None))
         self.generateMnemonicWordsQRadioButton.setText(QCoreApplication.translate("MainWindow", u"Words", None))
         self.generateMnemonicEntropyQRadioButton.setText(QCoreApplication.translate("MainWindow", u"Entopy", None))
-        self.generateMnemonicTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic Type", None))
-        self.generateMnemonicTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.generateMnemonicLanguageQLabel.setText(QCoreApplication.translate("MainWindow", u"Language", None))
         self.generateMnemonicLanguageQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
+        self.generateMnemonicTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic Type", None))
+        self.generateMnemonicTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.generateMnemonicWordsQLabel.setText(QCoreApplication.translate("MainWindow", u"Words", None))
         self.generateMnemonicWordsQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.generateMnemonicEntropyLabelQLabel.setText(QCoreApplication.translate("MainWindow", u"Entropy", None))

@@ -16,7 +16,8 @@ from PySide6.QtWidgets import (
     QMainWindow, QWidget, QStackedWidget, QVBoxLayout, QLayout
 )
 from PySide6.QtCore import (
-    Qt, QEvent, QThreadPool, QSize, QRect
+    Qt, QEvent, QThreadPool, QSize,
+    QRect, QFileSystemWatcher
 )
 from PySide6.QtSvgWidgets import QSvgWidget
 from PySide6.QtGui import QFontDatabase
@@ -66,10 +67,14 @@ class Application(QMainWindow):
         self.detached_window = None
 
         self.setWindowTitle("Hierarchical Deterministic Wallet")
-        self.load_stylesheet(os.path.join(os.path.dirname(__file__), "../ui/css/dark-style.css"))
+        qcss_path = os.path.join(os.path.dirname(__file__), "../ui/css/dark-style.css")
+        self.fs_watcher = QFileSystemWatcher([qcss_path])
+        self.fs_watcher.fileChanged.connect(lambda: self.load_stylesheet(qcss_path))
+        self.load_stylesheet(qcss_path)
         put_svg(self.ui.hdwalletLogoHLayout, os.path.join(os.path.dirname(__file__),
                                                           "../ui/images/svg/hdwalletLogoFullSize.svg"), 132.04, 45)
         QFontDatabase.addApplicationFont(os.path.join(os.path.dirname(__file__), "../ui/font/HD Wallet-Regular.ttf"))
+
 
     def load_stylesheet(self, path: str) -> None:
         """
@@ -142,7 +147,7 @@ class Application(QMainWindow):
         :param detach: Whether to detach the terminal window.
         """
         if detach:
-            self.setWindowFlags(self.windowFlags() & ~Qt.WindowMaximizeButtonHint)
+            self.setWindowFlag(Qt.WindowMaximizeButtonHint, False)
             self.setMaximumSize(
                 self.ui.hdWalletContainerQFrame.width(), self.ui.hdwalletMainQFrame.height()
             )
@@ -174,7 +179,8 @@ class Application(QMainWindow):
 
             self.ui.centralwidget.layout().addWidget(self.ui.outputQFrame)
 
-            self.setWindowFlags(self.windowFlags() | Qt.WindowMaximizeButtonHint)
+            self.setWindowFlag(Qt.WindowMaximizeButtonHint, True)
+
             self.setMaximumSize(16777215, 16777215)
             self.ui.outputQFrame.setGeometry(QRect(
                 0, 0, 600, self.ui.outputQFrame.height()

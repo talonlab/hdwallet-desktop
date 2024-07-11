@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'donationsUrSTHY.ui'
+## Form generated from reading UI file 'donationsBgozox.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.5.2
+## Created by: Qt User Interface Compiler version 6.5.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -66,6 +66,7 @@ class Ui_Form(object):
 
         self.closeDonationsQPushButton = QPushButton(self.donationsNavbarQFrame)
         self.closeDonationsQPushButton.setObjectName(u"closeDonationsQPushButton")
+        self.closeDonationsQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.horizontalLayout_7.addWidget(self.closeDonationsQPushButton, 0, Qt.AlignRight)
 

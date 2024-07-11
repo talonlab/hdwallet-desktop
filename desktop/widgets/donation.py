@@ -215,23 +215,28 @@ class Donation(QFrame):
         donation_ui.donationsCharityCryptocurrencyQComboBox.setCurrentText("Ethereum")
 
         donation_ui.donationsCoreTeamQPushButton.click()
+        donation_ui.donationsCharityCaptionQLabel.setTextFormat(Qt.RichText)
         donation_ui.donationsCharityCaptionQLabel.setText(
-            "This donation is for the charity team, because without them,\
-             we'd have no idea where our good intentions should go. \
-            Cheers to our chaos coordinators!"
+            """This donation is for the charity team, because without them,
+        we'd have no idea where our good intentions should go.<br>
+        Cheers to our chaos coordinators!"""
         )
+
+        donation_ui.donationsCaptionQLabel.setTextFormat(Qt.RichText)
         donation_ui.donationsCaptionQLabel.setText(
-            "This donation is for the core team, because without them,\
-            we'd be googling 'how to turn on a computer.' Cheers to our tech wizards!"
+            """This donation is for the core team, because without them,
+        we'd be googling 'how to turn on a computer.'<br>
+        Cheers to our tech wizards!"""
         )
+
         donation_ui.donationsCaptionQLabel.setWordWrap(True)
         donation_ui.donationsCharityCaptionQLabel.setWordWrap(True)
 
         donation_ui.donationsAddressCopyQPushButton.clicked.connect(
-            lambda: copy_to_clipboard(frame.core_addr)
+            lambda: copy_to_clipboard(text=frame.core_addr, show_toast=True, frame=frame)
         )
         donation_ui.donationsCharityAddressCopyQPushButton.clicked.connect(
-            lambda: copy_to_clipboard(frame.charity_addr)
+            lambda: copy_to_clipboard(frame.charity_addr, show_toast=True, frame=frame)
         )
 
         frame.layout().addWidget(main_widget)

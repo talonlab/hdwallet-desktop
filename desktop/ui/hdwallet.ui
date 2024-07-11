@@ -170,7 +170,7 @@
           <item>
            <widget class="QStackedWidget" name="hdwalletQStackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="generatePageQStackedWidget">
              <layout class="QVBoxLayout" name="generatePageQStackedWidgetVLayout">
@@ -470,68 +470,6 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QFrame" name="generateMnemonicTypeContainerQFrame">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <layout class="QVBoxLayout" name="generateMnemonicWordsContainerQFrameVLayout_3">
-                       <property name="spacing">
-                        <number>5</number>
-                       </property>
-                       <property name="leftMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="topMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="rightMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="bottomMargin">
-                        <number>0</number>
-                       </property>
-                       <item>
-                        <widget class="QLabel" name="generateMnemonicTypeQLabel">
-                         <property name="text">
-                          <string>Mnemonic Type</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QComboBox" name="generateMnemonicTypeQComboBox">
-                         <property name="placeholderText">
-                          <string>(Select)</string>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QFrame" name="generateMnemonicLanguageWordsEntropyContainerQFrame">
-                   <layout class="QHBoxLayout" name="generateMnemonicLanguageWordsEntropyContainerQFrameHLayout">
-                    <property name="spacing">
-                     <number>15</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
                      <widget class="QFrame" name="generateMnemonicLanguageContainerQFrame">
                       <property name="minimumSize">
                        <size>
@@ -564,6 +502,68 @@
                        </item>
                        <item>
                         <widget class="QComboBox" name="generateMnemonicLanguageQComboBox">
+                         <property name="placeholderText">
+                          <string>(Select)</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="generateMnemonicLanguageWordsEntropyContainerQFrame">
+                   <layout class="QHBoxLayout" name="generateMnemonicLanguageWordsEntropyContainerQFrameHLayout">
+                    <property name="spacing">
+                     <number>15</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QFrame" name="generateMnemonicTypeContainerQFrame">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <layout class="QVBoxLayout" name="generateMnemonicWordsContainerQFrameVLayout_3">
+                       <property name="spacing">
+                        <number>5</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="generateMnemonicTypeQLabel">
+                         <property name="text">
+                          <string>Mnemonic Type</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QComboBox" name="generateMnemonicTypeQComboBox">
                          <property name="placeholderText">
                           <string>(Select)</string>
                          </property>
@@ -1740,7 +1740,7 @@
                     <number>0</number>
                    </property>
                    <property name="currentIndex">
-                    <number>1</number>
+                    <number>0</number>
                    </property>
                    <widget class="QWidget" name="bipsPageQWidget">
                     <layout class="QVBoxLayout" name="bipsPageQWidgetVLayout">
@@ -1762,7 +1762,7 @@
                      <item>
                       <widget class="QStackedWidget" name="bipQStackedWidget">
                        <property name="currentIndex">
-                        <number>4</number>
+                        <number>3</number>
                        </property>
                        <widget class="QWidget" name="bipFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="bipFromEntropyQStackedWidgetVLayout">
@@ -7176,7 +7176,7 @@
                      <item>
                       <widget class="QStackedWidget" name="electrumV1QStackedWidget">
                        <property name="currentIndex">
-                        <number>2</number>
+                        <number>0</number>
                        </property>
                        <widget class="QWidget" name="electrumV1FromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="electrumV1FromEntropyQStackedWidgetVLayout">
@@ -8008,6 +8008,19 @@
                             </item>
                            </layout>
                           </widget>
+                         </item>
+                         <item>
+                          <spacer name="verticalSpacer_4">
+                           <property name="orientation">
+                            <enum>Qt::Vertical</enum>
+                           </property>
+                           <property name="sizeHint" stdset="0">
+                            <size>
+                             <width>20</width>
+                             <height>40</height>
+                            </size>
+                           </property>
+                          </spacer>
                          </item>
                         </layout>
                        </widget>
@@ -8921,7 +8934,7 @@
                      <item>
                       <widget class="QStackedWidget" name="electrumV2QStackedWidget">
                        <property name="currentIndex">
-                        <number>0</number>
+                        <number>2</number>
                        </property>
                        <widget class="QWidget" name="electrumV2FromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="electrumV2FromEntropyQStackedWidgetVLayout" stretch="0,0,0">
@@ -10865,17 +10878,38 @@
                                  </layout>
                                 </widget>
                                </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="moneroFromSeedPaymentIDContainerQFrame">
+                              <property name="minimumSize">
+                               <size>
+                                <width>150</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <layout class="QVBoxLayout" name="moneroFromSeedPaymentIDContainerQFrameVLayout">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
                                <item>
-                                <widget class="QFrame" name="moneroFromSeedPaymentIDContainerQFrame">
-                                 <property name="minimumSize">
-                                  <size>
-                                   <width>150</width>
-                                   <height>0</height>
-                                  </size>
-                                 </property>
-                                 <layout class="QVBoxLayout" name="moneroFromSeedPaymentIDContainerQFrameVLayout">
+                                <widget class="QFrame" name="moneroFromSeedPaymentIDLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="moneroFromSeedPaymentIDLabelContainerQFrameHLayout">
                                   <property name="spacing">
-                                   <number>5</number>
+                                   <number>15</number>
                                   </property>
                                   <property name="leftMargin">
                                    <number>0</number>
@@ -10890,51 +10924,30 @@
                                    <number>0</number>
                                   </property>
                                   <item>
-                                   <widget class="QFrame" name="moneroFromSeedPaymentIDLabelContainerQFrame">
-                                    <layout class="QHBoxLayout" name="moneroFromSeedPaymentIDLabelContainerQFrameHLayout">
-                                     <property name="spacing">
-                                      <number>15</number>
-                                     </property>
-                                     <property name="leftMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <property name="topMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <property name="rightMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <property name="bottomMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <item>
-                                      <widget class="QLabel" name="moneroFromSeedPaymentIDQLabel">
-                                       <property name="text">
-                                        <string>Payment ID</string>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                     <item>
-                                      <spacer name="moneroFromSeedPaymentIDLabelContainerQFrameHSpacer">
-                                       <property name="orientation">
-                                        <enum>Qt::Horizontal</enum>
-                                       </property>
-                                       <property name="sizeHint" stdset="0">
-                                        <size>
-                                         <width>40</width>
-                                         <height>20</height>
-                                        </size>
-                                       </property>
-                                      </spacer>
-                                     </item>
-                                    </layout>
+                                   <widget class="QLabel" name="moneroFromSeedPaymentIDQLabel">
+                                    <property name="text">
+                                     <string>Payment ID</string>
+                                    </property>
                                    </widget>
                                   </item>
                                   <item>
-                                   <widget class="QLineEdit" name="moneroFromSeedPaymentIDQLineEdit"/>
+                                   <spacer name="moneroFromSeedPaymentIDLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>40</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
                                   </item>
                                  </layout>
                                 </widget>
+                               </item>
+                               <item>
+                                <widget class="QLineEdit" name="moneroFromSeedPaymentIDQLineEdit"/>
                                </item>
                               </layout>
                              </widget>
@@ -11580,7 +11593,7 @@
                        </sizepolicy>
                       </property>
                       <property name="currentIndex">
-                       <number>5</number>
+                       <number>4</number>
                       </property>
                       <widget class="QWidget" name="customQStackedWidgetPage">
                        <layout class="QHBoxLayout" name="customQStackedWidgetPageHLayout">
