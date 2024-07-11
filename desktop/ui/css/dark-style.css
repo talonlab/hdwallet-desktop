@@ -568,3 +568,15 @@ QTabBar, QTabBar::tab, QTabBar::tab:hover, QTabBar::tab:focus {
     border-radius: 5px;
 }
 
+#toastQFrame{
+    background-color: rgb(25, 30, 36);
+    border-radius: 2px;
+}
+
+#toastQFrame QLabel{
+    font: 10pt "Tahoma";
+}
+
+#closeDonationsQPushButton:hover{
+    background-color: #ef3838;
+}

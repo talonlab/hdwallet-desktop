@@ -110,6 +110,9 @@
       </item>
       <item alignment="Qt::AlignRight">
        <widget class="QPushButton" name="closeDonationsQPushButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="text">
          <string>X</string>
         </property>
@@ -123,7 +126,7 @@
      <property name="currentIndex">
       <number>0</number>
      </property>
-     <widget class="QWidget" name="donationsCoreTeamQWidget" native="true">
+     <widget class="QWidget" name="donationsCoreTeamQWidget">
       <layout class="QVBoxLayout" name="verticalLayout">
        <property name="spacing">
         <number>15</number>
@@ -487,7 +490,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="donationsCharityQWidget" native="true">
+     <widget class="QWidget" name="donationsCharityQWidget">
       <layout class="QVBoxLayout" name="verticalLayout_7">
        <property name="spacing">
         <number>15</number>
