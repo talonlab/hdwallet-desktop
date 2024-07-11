@@ -17,7 +17,7 @@ from PySide6.QtWidgets import (
 )
 from PySide6.QtCore import (
     Qt, QEvent, QThreadPool, QSize,
-    QRect, QFileSystemWatcher
+    QRect, QFileSystemWatcher, QObject
 )
 from PySide6.QtSvgWidgets import QSvgWidget
 from PySide6.QtGui import QFontDatabase
@@ -25,8 +25,12 @@ from PySide6.QtGui import QFontDatabase
 from desktop.ui.ui_hdwallet import Ui_MainWindow
 from desktop.widgets.detached_window import DetachedTerminalWindow
 
+
 class Application(QMainWindow):
     _instance: Optional['Application'] = None
+    ui: Ui_MainWindow = None
+    detached_window: DetachedTerminalWindow = None
+    fs_watcher: QFileSystemWatcher = None
 
     def __new__(cls, *args, **kwargs) -> 'Application':
         """
@@ -67,14 +71,22 @@ class Application(QMainWindow):
         self.detached_window = None
 
         self.setWindowTitle("Hierarchical Deterministic Wallet")
-        qcss_path = os.path.join(os.path.dirname(__file__), "../ui/css/dark-style.css")
-        self.fs_watcher = QFileSystemWatcher([qcss_path])
-        self.fs_watcher.fileChanged.connect(lambda: self.load_stylesheet(qcss_path))
-        self.load_stylesheet(qcss_path)
-        put_svg(self.ui.hdwalletLogoHLayout, os.path.join(os.path.dirname(__file__),
-                                                          "../ui/images/svg/hdwalletLogoFullSize.svg"), 132.04, 45)
+        css_path = os.path.join(os.path.dirname(__file__), "../ui/css/dark-style.css")
+        self.fs_watcher = QFileSystemWatcher([css_path])
+        self.fs_watcher.fileChanged.connect(lambda: self.load_stylesheet(css_path))
+        self.load_stylesheet(css_path)
+        put_svg(
+            self.ui.hdwalletLogoHLayout,
+            os.path.join(os.path.dirname(__file__), "../ui/images/svg/hdwalletLogoFullSize.svg"),
+            132.04,
+            45
+        )
         QFontDatabase.addApplicationFont(os.path.join(os.path.dirname(__file__), "../ui/font/HD Wallet-Regular.ttf"))
 
+        self.resize_evt = ResizeEventFilter()
+        self.resize_evt.resize_event_callback = self.update_terminal_ui
+        self.ui.outputQFrame.installEventFilter(self.resize_evt)
+        self.ui.outputTerminalQPlainTextEdit.verticalScrollBar().rangeChanged.connect(self.update_terminal_ui)
 
     def load_stylesheet(self, path: str) -> None:
         """
@@ -147,10 +159,10 @@ class Application(QMainWindow):
         :param detach: Whether to detach the terminal window.
         """
         if detach:
-            self.setWindowFlag(Qt.WindowMaximizeButtonHint, False)
             self.setMaximumSize(
                 self.ui.hdWalletContainerQFrame.width(), self.ui.hdwalletMainQFrame.height()
             )
+            self.setWindowFlag(Qt.WindowMaximizeButtonHint, False)
             self.showNormal()
 
             self.layout().removeWidget(self.ui.outputQFrame)
@@ -179,13 +191,23 @@ class Application(QMainWindow):
 
             self.ui.centralwidget.layout().addWidget(self.ui.outputQFrame)
 
-            self.setWindowFlag(Qt.WindowMaximizeButtonHint, True)
 
             self.setMaximumSize(16777215, 16777215)
             self.ui.outputQFrame.setGeometry(QRect(
                 0, 0, 600, self.ui.outputQFrame.height()
             ))
+            self.setWindowFlag(Qt.WindowMaximizeButtonHint, True)
             self.show()
+
+    def closeEvent(self, event: QEvent) -> None:
+        """
+        Handle the close event, ensuring any detached windows are closed.
+
+        :param event: The close event.
+        """
+        if self.detached_window:
+            self.detached_window.close()
+        super().closeEvent(event)
 
     def update_terminal_ui(self) -> None:
         """
@@ -205,38 +227,6 @@ class Application(QMainWindow):
             0, 0, self.ui.noLayoutQWidget.width(), self.ui.noLayoutQWidget.height()
         ))
         self.ui.outputWidgetTopContainerQWidget.raise_()
-        self.ui.outputTerminalQWidget.lower()
-
-    def closeEvent(self, event: QEvent) -> None:
-        """
-        Handle the close event, ensuring any detached windows are closed.
-
-        :param event: The close event.
-        """
-        if self.detached_window:
-            self.detached_window.close()
-        super().closeEvent(event)
-
-    def resizeEvent(self, event: QEvent) -> None:
-        """
-        Handle the resize event, updating the terminal UI.
-
-        :param event: The resize event.
-        """
-        self.update_terminal_ui()
-
-    def changeEvent(self, event: QEvent) -> None:
-        """
-        Handle the change event, updating the terminal UI if the window state changes.
-
-        :param event: The change event.
-        """
-        super().changeEvent(event)
-        if event.type() == QEvent.WindowStateChange:
-            if self.isMaximized():
-                self.update_terminal_ui()
-            elif self.windowState() == Qt.WindowNoState:
-                self.update_terminal_ui()
 
     def show(self) -> None:
         """
@@ -244,8 +234,15 @@ class Application(QMainWindow):
         """
         super(Application, self).show()
         self.update_terminal_ui()
-        self.update_terminal_ui()
 
+
+class ResizeEventFilter(QObject):
+    resize_event_callback = None
+    def eventFilter(self, obj, event):
+        if event.type() == QEvent.Resize:
+            if self.resize_event_callback != None:
+                self.resize_event_callback()
+        return super().eventFilter(obj, event)
 
 def clear_layout(layout: QLayout, delete: bool = True) -> None:
     """
