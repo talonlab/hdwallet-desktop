@@ -76,7 +76,7 @@ class MainApplication:
 
         Highlighter(self.ui.outputTerminalQPlainTextEdit.document())
 
-        self.ui.generateEntropyClientContainerQFrame.setSizePolicy(
+        self.ui.generateClientAndStrengthContainerQGroupBox.setSizePolicy(
             QSizePolicy.Expanding, QSizePolicy.Expanding
         )
         self.ui.generateSeedMnemonicContainerQFrame.setSizePolicy(
