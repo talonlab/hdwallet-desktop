@@ -440,6 +440,7 @@ QGroupBox::title:disabled{
  }
 
 
+#outputTerminalQWidget,
 #outputQFrame{
     background-color: rgb(0, 0, 0);
 }

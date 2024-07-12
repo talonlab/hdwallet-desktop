@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletqRZEaD.ui'
+## Form generated from reading UI file 'hdwalletaqsfHp.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -105,14 +105,7 @@ class Ui_MainWindow(object):
         self.generatePageQStackedWidgetVLayout.setSpacing(10)
         self.generatePageQStackedWidgetVLayout.setObjectName(u"generatePageQStackedWidgetVLayout")
         self.generatePageQStackedWidgetVLayout.setContentsMargins(0, 0, 0, 0)
-        self.generateEntopyClientAndStrengthContainerQFrame = QFrame(self.generatePageQStackedWidget)
-        self.generateEntopyClientAndStrengthContainerQFrame.setObjectName(u"generateEntopyClientAndStrengthContainerQFrame")
-        self.generateEntopyClientAndStrengthContainerQFrame.setLineWidth(0)
-        self.generateEntopyClientAndStrengthContainerQFrameVLayout = QVBoxLayout(self.generateEntopyClientAndStrengthContainerQFrame)
-        self.generateEntopyClientAndStrengthContainerQFrameVLayout.setSpacing(15)
-        self.generateEntopyClientAndStrengthContainerQFrameVLayout.setObjectName(u"generateEntopyClientAndStrengthContainerQFrameVLayout")
-        self.generateEntopyClientAndStrengthContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.generateClientAndStrengthContainerQGroupBox = QGroupBox(self.generateEntopyClientAndStrengthContainerQFrame)
+        self.generateClientAndStrengthContainerQGroupBox = QGroupBox(self.generatePageQStackedWidget)
         self.generateClientAndStrengthContainerQGroupBox.setObjectName(u"generateClientAndStrengthContainerQGroupBox")
         self.generateClientAndStrengthContainerQFrameHLayout = QHBoxLayout(self.generateClientAndStrengthContainerQGroupBox)
         self.generateClientAndStrengthContainerQFrameHLayout.setSpacing(15)
@@ -164,10 +157,7 @@ class Ui_MainWindow(object):
         self.generateClientAndStrengthContainerQFrameHLayout.addWidget(self.generateEntropyClientAndStrengthQPushButton, 0, Qt.AlignBottom)
 
 
-        self.generateEntopyClientAndStrengthContainerQFrameVLayout.addWidget(self.generateClientAndStrengthContainerQGroupBox)
-
-
-        self.generatePageQStackedWidgetVLayout.addWidget(self.generateEntopyClientAndStrengthContainerQFrame)
+        self.generatePageQStackedWidgetVLayout.addWidget(self.generateClientAndStrengthContainerQGroupBox)
 
         self.generateMnemonicClientWordsLanguageContainerQGroupBox = QGroupBox(self.generatePageQStackedWidget)
         self.generateMnemonicClientWordsLanguageContainerQGroupBox.setObjectName(u"generateMnemonicClientWordsLanguageContainerQGroupBox")
@@ -980,10 +970,6 @@ class Ui_MainWindow(object):
 
         self.bipFromEntropyQStackedWidgetVLayout.addWidget(self.bipFromEntropyPublicKeyAndPassphraseContainerQFrame)
 
-        self.bipFromEntropyPassphraseContainerQFrameVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.bipFromEntropyQStackedWidgetVLayout.addItem(self.bipFromEntropyPassphraseContainerQFrameVSpacer)
-
         self.bipQStackedWidget.addWidget(self.bipFromEntropyQStackedWidget)
         self.bipFromMnemonicQStackedWidget = QWidget()
         self.bipFromMnemonicQStackedWidget.setObjectName(u"bipFromMnemonicQStackedWidget")
@@ -1116,10 +1102,6 @@ class Ui_MainWindow(object):
 
 
         self.bipFromMnemonicQStackedWidgetVLayout.addWidget(self.bipFromMnemonicPublicKeyTypeAndPassphraseQFrame)
-
-        self.bipFromMnemonicQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.bipFromMnemonicQStackedWidgetVLayout.addItem(self.bipFromMnemonicQStackedWidgetVSpacer)
 
         self.bipQStackedWidget.addWidget(self.bipFromMnemonicQStackedWidget)
         self.bipFromSeedQStackedWidget = QWidget()
@@ -1540,10 +1522,6 @@ class Ui_MainWindow(object):
 
         self.bipFromWIFQStackedWidgetVLayout.addWidget(self.bipFromWIFPublicKeyAndBIP38PassphraseContainerQFrame)
 
-        self.bipFromWIFQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.bipFromWIFQStackedWidgetVLayout.addItem(self.bipFromWIFQStackedWidgetVSpacer)
-
         self.bipQStackedWidget.addWidget(self.bipFromWIFQStackedWidget)
         self.bipFromPrivateKeyQStackedWidget = QWidget()
         self.bipFromPrivateKeyQStackedWidget.setObjectName(u"bipFromPrivateKeyQStackedWidget")
@@ -1906,38 +1884,6 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_36.addWidget(self.cardanoFromEntropyStakingContainerQFrame)
 
-        self.cardanoFromEntropyPassphraseContainerQFrame = QFrame(self.cardanoFromEntropyLanguageAddressTypeAndWordsContainerQFrame)
-        self.cardanoFromEntropyPassphraseContainerQFrame.setObjectName(u"cardanoFromEntropyPassphraseContainerQFrame")
-        self.EPassphraseVLayout_5 = QVBoxLayout(self.cardanoFromEntropyPassphraseContainerQFrame)
-        self.EPassphraseVLayout_5.setSpacing(5)
-        self.EPassphraseVLayout_5.setObjectName(u"EPassphraseVLayout_5")
-        self.EPassphraseVLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.cardanoFromEntropyPassphraseLabelContainerQFrame = QFrame(self.cardanoFromEntropyPassphraseContainerQFrame)
-        self.cardanoFromEntropyPassphraseLabelContainerQFrame.setObjectName(u"cardanoFromEntropyPassphraseLabelContainerQFrame")
-        self.EPassphraseLabelHLayout_5 = QHBoxLayout(self.cardanoFromEntropyPassphraseLabelContainerQFrame)
-        self.EPassphraseLabelHLayout_5.setSpacing(15)
-        self.EPassphraseLabelHLayout_5.setObjectName(u"EPassphraseLabelHLayout_5")
-        self.EPassphraseLabelHLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.cardanoFromEntropyPassphraseQLabel = QLabel(self.cardanoFromEntropyPassphraseLabelContainerQFrame)
-        self.cardanoFromEntropyPassphraseQLabel.setObjectName(u"cardanoFromEntropyPassphraseQLabel")
-
-        self.EPassphraseLabelHLayout_5.addWidget(self.cardanoFromEntropyPassphraseQLabel)
-
-        self.cardanoFromEntropyPassphraseLabelContainerQFrameHSpacer = QSpacerItem(764, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.EPassphraseLabelHLayout_5.addItem(self.cardanoFromEntropyPassphraseLabelContainerQFrameHSpacer)
-
-
-        self.EPassphraseVLayout_5.addWidget(self.cardanoFromEntropyPassphraseLabelContainerQFrame)
-
-        self.cardanoFromEntropyPassphraseQLineEdit = QLineEdit(self.cardanoFromEntropyPassphraseContainerQFrame)
-        self.cardanoFromEntropyPassphraseQLineEdit.setObjectName(u"cardanoFromEntropyPassphraseQLineEdit")
-
-        self.EPassphraseVLayout_5.addWidget(self.cardanoFromEntropyPassphraseQLineEdit)
-
-
-        self.horizontalLayout_36.addWidget(self.cardanoFromEntropyPassphraseContainerQFrame)
-
         self.cardanoFromEntropyAddressTypeContainerQFrame = QFrame(self.cardanoFromEntropyLanguageAddressTypeAndWordsContainerQFrame)
         self.cardanoFromEntropyAddressTypeContainerQFrame.setObjectName(u"cardanoFromEntropyAddressTypeContainerQFrame")
         self.verticalLayout_89 = QVBoxLayout(self.cardanoFromEntropyAddressTypeContainerQFrame)
@@ -1970,12 +1916,40 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_36.addWidget(self.cardanoFromEntropyAddressTypeContainerQFrame)
 
+        self.cardanoFromEntropyPassphraseContainerQFrame = QFrame(self.cardanoFromEntropyLanguageAddressTypeAndWordsContainerQFrame)
+        self.cardanoFromEntropyPassphraseContainerQFrame.setObjectName(u"cardanoFromEntropyPassphraseContainerQFrame")
+        self.EPassphraseVLayout_5 = QVBoxLayout(self.cardanoFromEntropyPassphraseContainerQFrame)
+        self.EPassphraseVLayout_5.setSpacing(5)
+        self.EPassphraseVLayout_5.setObjectName(u"EPassphraseVLayout_5")
+        self.EPassphraseVLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.cardanoFromEntropyPassphraseLabelContainerQFrame = QFrame(self.cardanoFromEntropyPassphraseContainerQFrame)
+        self.cardanoFromEntropyPassphraseLabelContainerQFrame.setObjectName(u"cardanoFromEntropyPassphraseLabelContainerQFrame")
+        self.EPassphraseLabelHLayout_5 = QHBoxLayout(self.cardanoFromEntropyPassphraseLabelContainerQFrame)
+        self.EPassphraseLabelHLayout_5.setSpacing(15)
+        self.EPassphraseLabelHLayout_5.setObjectName(u"EPassphraseLabelHLayout_5")
+        self.EPassphraseLabelHLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.cardanoFromEntropyPassphraseQLabel = QLabel(self.cardanoFromEntropyPassphraseLabelContainerQFrame)
+        self.cardanoFromEntropyPassphraseQLabel.setObjectName(u"cardanoFromEntropyPassphraseQLabel")
+
+        self.EPassphraseLabelHLayout_5.addWidget(self.cardanoFromEntropyPassphraseQLabel)
+
+        self.cardanoFromEntropyPassphraseLabelContainerQFrameHSpacer = QSpacerItem(764, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.EPassphraseLabelHLayout_5.addItem(self.cardanoFromEntropyPassphraseLabelContainerQFrameHSpacer)
+
+
+        self.EPassphraseVLayout_5.addWidget(self.cardanoFromEntropyPassphraseLabelContainerQFrame)
+
+        self.cardanoFromEntropyPassphraseQLineEdit = QLineEdit(self.cardanoFromEntropyPassphraseContainerQFrame)
+        self.cardanoFromEntropyPassphraseQLineEdit.setObjectName(u"cardanoFromEntropyPassphraseQLineEdit")
+
+        self.EPassphraseVLayout_5.addWidget(self.cardanoFromEntropyPassphraseQLineEdit)
+
+
+        self.horizontalLayout_36.addWidget(self.cardanoFromEntropyPassphraseContainerQFrame)
+
 
         self.cardanoFromEntropyQStackedWidgetVLayout.addWidget(self.cardanoFromEntropyLanguageAddressTypeAndWordsContainerQFrame)
-
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.cardanoFromEntropyQStackedWidgetVLayout.addItem(self.verticalSpacer)
 
         self.cardanoQStackedWidget.addWidget(self.cardanoFromEntropyQStackedWidget)
         self.cardanoFromMnemonicQStackedWidget = QWidget()
@@ -2188,10 +2162,6 @@ class Ui_MainWindow(object):
 
         self.cardanoFromMnemonicQStackedWidgetVLayout.addWidget(self.cardanoFromMnemonicClientAndPassphraseContainerQFrame)
 
-        self.cardanoFromMnemonicClientAndPassphraseContainerQFrameVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.cardanoFromMnemonicQStackedWidgetVLayout.addItem(self.cardanoFromMnemonicClientAndPassphraseContainerQFrameVSpacer)
-
         self.cardanoQStackedWidget.addWidget(self.cardanoFromMnemonicQStackedWidget)
         self.cardanoFromSeedQStackedWidget = QWidget()
         self.cardanoFromSeedQStackedWidget.setObjectName(u"cardanoFromSeedQStackedWidget")
@@ -2391,10 +2361,6 @@ class Ui_MainWindow(object):
 
         self.cardanoFromSeedQStackedWidgetVLayout.addWidget(self.cardanoFromSeedCardanoTypeAddressTypeAndPassphraseContainerQFrame)
 
-        self.cardanoFromSeedQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.cardanoFromSeedQStackedWidgetVLayout.addItem(self.cardanoFromSeedQStackedWidgetVSpacer)
-
         self.cardanoQStackedWidget.addWidget(self.cardanoFromSeedQStackedWidget)
         self.cardanoFromXPrivateKeyQStackedWidget = QWidget()
         self.cardanoFromXPrivateKeyQStackedWidget.setObjectName(u"cardanoFromXPrivateKeyQStackedWidget")
@@ -2566,10 +2532,6 @@ class Ui_MainWindow(object):
 
 
         self.cardanoFromXPrivateKeyQStackedWidgetVLayout.addWidget(self.cardanoFromXPrivateKeyCardanoTypeAndAddressTypeContainerQFrame)
-
-        self.cardanoFromXPrivateKeyQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.cardanoFromXPrivateKeyQStackedWidgetVLayout.addItem(self.cardanoFromXPrivateKeyQStackedWidgetVSpacer)
 
         self.cardanoQStackedWidget.addWidget(self.cardanoFromXPrivateKeyQStackedWidget)
         self.cardanoFromXPublicKeyQStackedWidget = QWidget()
@@ -2743,10 +2705,6 @@ class Ui_MainWindow(object):
 
         self.cardanoFromXPublicKeyQStackedWidgetVLayout.addWidget(self.cardanoFromXPublicKeyCardanoTypeAndAddressTypeContainerQFrame)
 
-        self.cardanoFromXPublicKeyQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.cardanoFromXPublicKeyQStackedWidgetVLayout.addItem(self.cardanoFromXPublicKeyQStackedWidgetVSpacer)
-
         self.cardanoQStackedWidget.addWidget(self.cardanoFromXPublicKeyQStackedWidget)
         self.cardanoFromPrivateKeyQStackedWidget = QWidget()
         self.cardanoFromPrivateKeyQStackedWidget.setObjectName(u"cardanoFromPrivateKeyQStackedWidget")
@@ -2915,10 +2873,6 @@ class Ui_MainWindow(object):
 
         self.cardanoFromPrivateKeyQStackedWidgetVLayout.addWidget(self.cardanoFromPrivateKeyCardanoTypeAndAddressTypeContainerQFrame)
 
-        self.cardanoFromPrivateKeyQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.cardanoFromPrivateKeyQStackedWidgetVLayout.addItem(self.cardanoFromPrivateKeyQStackedWidgetVSpacer)
-
         self.cardanoQStackedWidget.addWidget(self.cardanoFromPrivateKeyQStackedWidget)
         self.cardanoFromPublicKeyQStackedWidget = QWidget()
         self.cardanoFromPublicKeyQStackedWidget.setObjectName(u"cardanoFromPublicKeyQStackedWidget")
@@ -3085,10 +3039,6 @@ class Ui_MainWindow(object):
 
 
         self.cardanoFromPublicKeyQStackedWidgetVLayout.addWidget(self.cardanoFromPublicKeyCardanoTypeAndAddressTypeContainerQFrame)
-
-        self.cardanoFromPublicKeyQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.cardanoFromPublicKeyQStackedWidgetVLayout.addItem(self.cardanoFromPublicKeyQStackedWidgetVSpacer)
 
         self.cardanoQStackedWidget.addWidget(self.cardanoFromPublicKeyQStackedWidget)
 
@@ -3275,10 +3225,6 @@ class Ui_MainWindow(object):
 
         self.electrumV1FromEntropyQStackedWidgetVLayout.addWidget(self.electrumV1FromEntropyPublicKeyTypeAndPassphraseContainerQFrame)
 
-        self.electrumV1FromEntropyPublicKeyTypeAndPassphraseContainerQFrameVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.electrumV1FromEntropyQStackedWidgetVLayout.addItem(self.electrumV1FromEntropyPublicKeyTypeAndPassphraseContainerQFrameVSpacer)
-
         self.electrumV1QStackedWidget.addWidget(self.electrumV1FromEntropyQStackedWidget)
         self.electrumV1FromMnemonicQStackedWidget = QWidget()
         self.electrumV1FromMnemonicQStackedWidget.setObjectName(u"electrumV1FromMnemonicQStackedWidget")
@@ -3451,10 +3397,6 @@ class Ui_MainWindow(object):
 
 
         self.electrumV1FromMnemonicQStackedWidgetVLayout.addWidget(self.electrumV1FromMnemonicPublicKeyTypeAndPassphraseContainerQFrame)
-
-        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.electrumV1FromMnemonicQStackedWidgetVLayout.addItem(self.verticalSpacer_4)
 
         self.electrumV1QStackedWidget.addWidget(self.electrumV1FromMnemonicQStackedWidget)
         self.electrumV1FromSeedQStackedWidget = QWidget()
@@ -3658,10 +3600,6 @@ class Ui_MainWindow(object):
 
 
         self.electrumV1FromWIFQStackedWidgetVLayout.addWidget(self.electrumV1FromWIFBIP38AndPublicKeyTypeContainerQFrame)
-
-        self.electrumV1FromWIFQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.electrumV1FromWIFQStackedWidgetVLayout.addItem(self.electrumV1FromWIFQStackedWidgetVSpacer)
 
         self.electrumV1QStackedWidget.addWidget(self.electrumV1FromWIFQStackedWidget)
         self.electrumV1FromPrivateKeyQStackedWidget = QWidget()
@@ -4079,10 +4017,6 @@ class Ui_MainWindow(object):
 
         self.electrumV2FromEntropyQStackedWidgetVLayout.addWidget(self.electrumV2FromEntropyLanguageMnemonicTypeAndWordsContainerQFrame)
 
-        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.electrumV2FromEntropyQStackedWidgetVLayout.addItem(self.verticalSpacer_3)
-
         self.electrumV2QStackedWidget.addWidget(self.electrumV2FromEntropyQStackedWidget)
         self.electrumV2FromMnemonicQStackedWidget = QWidget()
         self.electrumV2FromMnemonicQStackedWidget.setObjectName(u"electrumV2FromMnemonicQStackedWidget")
@@ -4289,10 +4223,6 @@ class Ui_MainWindow(object):
 
         self.electrumV2FromMnemonicQStackedWidgetVLayout.addWidget(self.electrumV2FromMnemonicModePublicKeyTypeAndPassphraseContainerQFrame)
 
-        self.electrumV2FromMnemonicQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.electrumV2FromMnemonicQStackedWidgetVLayout.addItem(self.electrumV2FromMnemonicQStackedWidgetVSpacer)
-
         self.electrumV2QStackedWidget.addWidget(self.electrumV2FromMnemonicQStackedWidget)
         self.electrumV2FromSeedQStackedWidget = QWidget()
         self.electrumV2FromSeedQStackedWidget.setObjectName(u"electrumV2FromSeedQStackedWidget")
@@ -4452,19 +4382,10 @@ class Ui_MainWindow(object):
 
         self.moneroFromEntropyContainerQFrameVLayout.addWidget(self.moneroFromEntropyLabelContainerQFrame)
 
-        self.moneroFromEntropyLineEditContainerQFrame = QFrame(self.moneroFromEntropyContainerQFrame)
-        self.moneroFromEntropyLineEditContainerQFrame.setObjectName(u"moneroFromEntropyLineEditContainerQFrame")
-        self.moneroFromEntropyLineEditContainerQFrameHLayout = QHBoxLayout(self.moneroFromEntropyLineEditContainerQFrame)
-        self.moneroFromEntropyLineEditContainerQFrameHLayout.setSpacing(15)
-        self.moneroFromEntropyLineEditContainerQFrameHLayout.setObjectName(u"moneroFromEntropyLineEditContainerQFrameHLayout")
-        self.moneroFromEntropyLineEditContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromEntropyQLineEdit = QLineEdit(self.moneroFromEntropyLineEditContainerQFrame)
+        self.moneroFromEntropyQLineEdit = QLineEdit(self.moneroFromEntropyContainerQFrame)
         self.moneroFromEntropyQLineEdit.setObjectName(u"moneroFromEntropyQLineEdit")
 
-        self.moneroFromEntropyLineEditContainerQFrameHLayout.addWidget(self.moneroFromEntropyQLineEdit)
-
-
-        self.moneroFromEntropyContainerQFrameVLayout.addWidget(self.moneroFromEntropyLineEditContainerQFrame)
+        self.moneroFromEntropyContainerQFrameVLayout.addWidget(self.moneroFromEntropyQLineEdit)
 
 
         self.moneroFromEntropyQStackedWidgetVLayout.addWidget(self.moneroFromEntropyContainerQFrame)
@@ -4550,10 +4471,6 @@ class Ui_MainWindow(object):
 
         self.moneroFromEntropyQStackedWidgetVLayout.addWidget(self.moneroFromEntropyPassphrasePaymentIDContainerQFrame)
 
-        self.moneroFromEntropyQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.moneroFromEntropyQStackedWidgetVLayout.addItem(self.moneroFromEntropyQStackedWidgetVSpacer)
-
         self.moneroQStackedWidget.addWidget(self.moneroFromEntropyQStackedWidget)
         self.moneroFromMnemonicQStackedWidget = QWidget()
         self.moneroFromMnemonicQStackedWidget.setObjectName(u"moneroFromMnemonicQStackedWidget")
@@ -4585,19 +4502,10 @@ class Ui_MainWindow(object):
 
         self.moneroFromMnemonicContainerQFrameVLayout.addWidget(self.moneroFromMnemonicLabelContainerQFrame)
 
-        self.moneroFromMnemonicLineEditContainerQFrame = QFrame(self.moneroFromMnemonicContainerQFrame)
-        self.moneroFromMnemonicLineEditContainerQFrame.setObjectName(u"moneroFromMnemonicLineEditContainerQFrame")
-        self.moneroFromMnemonicLineEditContainerQFrameHLayout = QHBoxLayout(self.moneroFromMnemonicLineEditContainerQFrame)
-        self.moneroFromMnemonicLineEditContainerQFrameHLayout.setSpacing(15)
-        self.moneroFromMnemonicLineEditContainerQFrameHLayout.setObjectName(u"moneroFromMnemonicLineEditContainerQFrameHLayout")
-        self.moneroFromMnemonicLineEditContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromMnemonicQLineEdit = QLineEdit(self.moneroFromMnemonicLineEditContainerQFrame)
+        self.moneroFromMnemonicQLineEdit = QLineEdit(self.moneroFromMnemonicContainerQFrame)
         self.moneroFromMnemonicQLineEdit.setObjectName(u"moneroFromMnemonicQLineEdit")
 
-        self.moneroFromMnemonicLineEditContainerQFrameHLayout.addWidget(self.moneroFromMnemonicQLineEdit)
-
-
-        self.moneroFromMnemonicContainerQFrameVLayout.addWidget(self.moneroFromMnemonicLineEditContainerQFrame)
+        self.moneroFromMnemonicContainerQFrameVLayout.addWidget(self.moneroFromMnemonicQLineEdit)
 
 
         self.moneroFromMnemonicQStackedWidgetVLayout.addWidget(self.moneroFromMnemonicContainerQFrame)
@@ -4605,7 +4513,7 @@ class Ui_MainWindow(object):
         self.moneroFromMnemonicPaymentIDPassphraseContainerQFrame = QFrame(self.moneroFromMnemonicQStackedWidget)
         self.moneroFromMnemonicPaymentIDPassphraseContainerQFrame.setObjectName(u"moneroFromMnemonicPaymentIDPassphraseContainerQFrame")
         self.moneroFromMnemonicPaymentIDPassphraseContainerQFrameHLayout = QHBoxLayout(self.moneroFromMnemonicPaymentIDPassphraseContainerQFrame)
-        self.moneroFromMnemonicPaymentIDPassphraseContainerQFrameHLayout.setSpacing(15)
+        self.moneroFromMnemonicPaymentIDPassphraseContainerQFrameHLayout.setSpacing(5)
         self.moneroFromMnemonicPaymentIDPassphraseContainerQFrameHLayout.setObjectName(u"moneroFromMnemonicPaymentIDPassphraseContainerQFrameHLayout")
         self.moneroFromMnemonicPaymentIDPassphraseContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
         self.moneroFromMnemonicPaymentIDContainerQFrame = QFrame(self.moneroFromMnemonicPaymentIDPassphraseContainerQFrame)
@@ -4644,10 +4552,6 @@ class Ui_MainWindow(object):
 
         self.moneroFromMnemonicQStackedWidgetVLayout.addWidget(self.moneroFromMnemonicPaymentIDPassphraseContainerQFrame)
 
-        self.moneroFromMnemonicQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.moneroFromMnemonicQStackedWidgetVLayout.addItem(self.moneroFromMnemonicQStackedWidgetVSpacer)
-
         self.moneroQStackedWidget.addWidget(self.moneroFromMnemonicQStackedWidget)
         self.moneroFromSeedQStackedWidget = QWidget()
         self.moneroFromSeedQStackedWidget.setObjectName(u"moneroFromSeedQStackedWidget")
@@ -4659,7 +4563,7 @@ class Ui_MainWindow(object):
         self.moneroFromSeedSpacerContainerQFrame.setObjectName(u"moneroFromSeedSpacerContainerQFrame")
         self.moneroFromSeedSpacerContainerQFrame.setMinimumSize(QSize(400, 0))
         self.moneroFromSeedSpacerContainerQFrameVLayout = QVBoxLayout(self.moneroFromSeedSpacerContainerQFrame)
-        self.moneroFromSeedSpacerContainerQFrameVLayout.setSpacing(5)
+        self.moneroFromSeedSpacerContainerQFrameVLayout.setSpacing(15)
         self.moneroFromSeedSpacerContainerQFrameVLayout.setObjectName(u"moneroFromSeedSpacerContainerQFrameVLayout")
         self.moneroFromSeedSpacerContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
         self.moneroFromSeedAndPaymentIDContainerQFrame = QFrame(self.moneroFromSeedSpacerContainerQFrame)
@@ -4736,10 +4640,6 @@ class Ui_MainWindow(object):
 
         self.moneroFromSeedSpacerContainerQFrameVLayout.addWidget(self.moneroFromSeedPaymentIDContainerQFrame)
 
-        self.moneroFromSeedSpacerContainerQFrameVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.moneroFromSeedSpacerContainerQFrameVLayout.addItem(self.moneroFromSeedSpacerContainerQFrameVSpacer)
-
 
         self.moneroFromSeedQStackedWidgetVLayout.addWidget(self.moneroFromSeedSpacerContainerQFrame)
 
@@ -4782,28 +4682,39 @@ class Ui_MainWindow(object):
 
         self.moneroFromSpendPrivateKeyQStackedWidgetVLayout.addWidget(self.moneroFromSpendPrivateKeyContainerQFrame)
 
-        self.moneroFromSpendPrivateKeyPaymentIDContainerQFrame = QFrame(self.moneroFromSpendPrivateKeyQStackedWidget)
-        self.moneroFromSpendPrivateKeyPaymentIDContainerQFrame.setObjectName(u"moneroFromSpendPrivateKeyPaymentIDContainerQFrame")
-        self.moneroFromSpendPrivateKeyPaymentIDContainerQFrameVLayout = QVBoxLayout(self.moneroFromSpendPrivateKeyPaymentIDContainerQFrame)
-        self.moneroFromSpendPrivateKeyPaymentIDContainerQFrameVLayout.setSpacing(5)
-        self.moneroFromSpendPrivateKeyPaymentIDContainerQFrameVLayout.setObjectName(u"moneroFromSpendPrivateKeyPaymentIDContainerQFrameVLayout")
-        self.moneroFromSpendPrivateKeyPaymentIDContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromSpendPrivateKeyPaymentIDQLabel = QLabel(self.moneroFromSpendPrivateKeyPaymentIDContainerQFrame)
+        self.moneroFromSpendPaymentIDContainerQFrame = QFrame(self.moneroFromSpendPrivateKeyQStackedWidget)
+        self.moneroFromSpendPaymentIDContainerQFrame.setObjectName(u"moneroFromSpendPaymentIDContainerQFrame")
+        self.moneroFromSpendPaymentIDContainerQFrameVLayout = QVBoxLayout(self.moneroFromSpendPaymentIDContainerQFrame)
+        self.moneroFromSpendPaymentIDContainerQFrameVLayout.setSpacing(5)
+        self.moneroFromSpendPaymentIDContainerQFrameVLayout.setObjectName(u"moneroFromSpendPaymentIDContainerQFrameVLayout")
+        self.moneroFromSpendPaymentIDContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
+        self.moneroFromSpendPaymentIDLabelContainerQFrame = QFrame(self.moneroFromSpendPaymentIDContainerQFrame)
+        self.moneroFromSpendPaymentIDLabelContainerQFrame.setObjectName(u"moneroFromSpendPaymentIDLabelContainerQFrame")
+        self.moneroFromSpendPaymentIDLabelContainerQFrame.setFrameShape(QFrame.StyledPanel)
+        self.moneroFromSpendPaymentIDLabelContainerQFrame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout = QHBoxLayout(self.moneroFromSpendPaymentIDLabelContainerQFrame)
+        self.horizontalLayout.setSpacing(15)
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.moneroFromSpendPrivateKeyPaymentIDQLabel = QLabel(self.moneroFromSpendPaymentIDLabelContainerQFrame)
         self.moneroFromSpendPrivateKeyPaymentIDQLabel.setObjectName(u"moneroFromSpendPrivateKeyPaymentIDQLabel")
 
-        self.moneroFromSpendPrivateKeyPaymentIDContainerQFrameVLayout.addWidget(self.moneroFromSpendPrivateKeyPaymentIDQLabel)
+        self.horizontalLayout.addWidget(self.moneroFromSpendPrivateKeyPaymentIDQLabel)
 
-        self.moneroFromSpendPrivateKeyPaymentIDQLineEdit = QLineEdit(self.moneroFromSpendPrivateKeyPaymentIDContainerQFrame)
+        self.moneroFromSpendPaymentIDLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout.addItem(self.moneroFromSpendPaymentIDLabelContainerQFrameHSpacer)
+
+
+        self.moneroFromSpendPaymentIDContainerQFrameVLayout.addWidget(self.moneroFromSpendPaymentIDLabelContainerQFrame)
+
+        self.moneroFromSpendPrivateKeyPaymentIDQLineEdit = QLineEdit(self.moneroFromSpendPaymentIDContainerQFrame)
         self.moneroFromSpendPrivateKeyPaymentIDQLineEdit.setObjectName(u"moneroFromSpendPrivateKeyPaymentIDQLineEdit")
 
-        self.moneroFromSpendPrivateKeyPaymentIDContainerQFrameVLayout.addWidget(self.moneroFromSpendPrivateKeyPaymentIDQLineEdit)
+        self.moneroFromSpendPaymentIDContainerQFrameVLayout.addWidget(self.moneroFromSpendPrivateKeyPaymentIDQLineEdit)
 
 
-        self.moneroFromSpendPrivateKeyQStackedWidgetVLayout.addWidget(self.moneroFromSpendPrivateKeyPaymentIDContainerQFrame)
-
-        self.moneroFromSpendPrivateKeyQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.moneroFromSpendPrivateKeyQStackedWidgetVLayout.addItem(self.moneroFromSpendPrivateKeyQStackedWidgetVSpacer)
+        self.moneroFromSpendPrivateKeyQStackedWidgetVLayout.addWidget(self.moneroFromSpendPaymentIDContainerQFrame)
 
         self.moneroQStackedWidget.addWidget(self.moneroFromSpendPrivateKeyQStackedWidget)
         self.moneroFromPrivateKeyQStackedWidget = QWidget()
@@ -4850,10 +4761,23 @@ class Ui_MainWindow(object):
         self.moneroFromPrivateKeyPaymentIDContainerQFrameVLayout.setSpacing(5)
         self.moneroFromPrivateKeyPaymentIDContainerQFrameVLayout.setObjectName(u"moneroFromPrivateKeyPaymentIDContainerQFrameVLayout")
         self.moneroFromPrivateKeyPaymentIDContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromPrivateKeyPaymentIDQLabel = QLabel(self.moneroFromPrivateKeyPaymentIDContainerQFrame)
+        self.moneroFromPrivateKeyPaymentIDLabelContainerQFrame = QFrame(self.moneroFromPrivateKeyPaymentIDContainerQFrame)
+        self.moneroFromPrivateKeyPaymentIDLabelContainerQFrame.setObjectName(u"moneroFromPrivateKeyPaymentIDLabelContainerQFrame")
+        self.moneroFromPrivateKeyPaymentIDLabelContainerQFrameHLayout = QHBoxLayout(self.moneroFromPrivateKeyPaymentIDLabelContainerQFrame)
+        self.moneroFromPrivateKeyPaymentIDLabelContainerQFrameHLayout.setSpacing(15)
+        self.moneroFromPrivateKeyPaymentIDLabelContainerQFrameHLayout.setObjectName(u"moneroFromPrivateKeyPaymentIDLabelContainerQFrameHLayout")
+        self.moneroFromPrivateKeyPaymentIDLabelContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
+        self.moneroFromPrivateKeyPaymentIDQLabel = QLabel(self.moneroFromPrivateKeyPaymentIDLabelContainerQFrame)
         self.moneroFromPrivateKeyPaymentIDQLabel.setObjectName(u"moneroFromPrivateKeyPaymentIDQLabel")
 
-        self.moneroFromPrivateKeyPaymentIDContainerQFrameVLayout.addWidget(self.moneroFromPrivateKeyPaymentIDQLabel)
+        self.moneroFromPrivateKeyPaymentIDLabelContainerQFrameHLayout.addWidget(self.moneroFromPrivateKeyPaymentIDQLabel)
+
+        self.moneroFromPrivateKeyPaymentIDLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.moneroFromPrivateKeyPaymentIDLabelContainerQFrameHLayout.addItem(self.moneroFromPrivateKeyPaymentIDLabelContainerQFrameHSpacer)
+
+
+        self.moneroFromPrivateKeyPaymentIDContainerQFrameVLayout.addWidget(self.moneroFromPrivateKeyPaymentIDLabelContainerQFrame)
 
         self.moneroFromPrivateKeyPaymentIDQLineEdit = QLineEdit(self.moneroFromPrivateKeyPaymentIDContainerQFrame)
         self.moneroFromPrivateKeyPaymentIDQLineEdit.setObjectName(u"moneroFromPrivateKeyPaymentIDQLineEdit")
@@ -4862,10 +4786,6 @@ class Ui_MainWindow(object):
 
 
         self.moneroFromPrivateKeyQStackedWidgetVLayout.addWidget(self.moneroFromPrivateKeyPaymentIDContainerQFrame)
-
-        self.moneroFromPrivateKeyQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.moneroFromPrivateKeyQStackedWidgetVLayout.addItem(self.moneroFromPrivateKeyQStackedWidgetVSpacer)
 
         self.moneroQStackedWidget.addWidget(self.moneroFromPrivateKeyQStackedWidget)
         self.moneroFromWatchOnlyQStackedWidget = QWidget()
@@ -4878,10 +4798,18 @@ class Ui_MainWindow(object):
         self.moneroFromWatchOnlyViewPrivateKeyContainerQFrame.setObjectName(u"moneroFromWatchOnlyViewPrivateKeyContainerQFrame")
         self.moneroFromWatchOnlyViewPrivateKeyContainerQFrame.setMinimumSize(QSize(400, 0))
         self.moneroFromWatchOnlyViewPrivateKeyContainerQFrameVLayout = QVBoxLayout(self.moneroFromWatchOnlyViewPrivateKeyContainerQFrame)
-        self.moneroFromWatchOnlyViewPrivateKeyContainerQFrameVLayout.setSpacing(5)
+        self.moneroFromWatchOnlyViewPrivateKeyContainerQFrameVLayout.setSpacing(15)
         self.moneroFromWatchOnlyViewPrivateKeyContainerQFrameVLayout.setObjectName(u"moneroFromWatchOnlyViewPrivateKeyContainerQFrameVLayout")
         self.moneroFromWatchOnlyViewPrivateKeyContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromWatchOnlyViewPrivateKeyLabelContainerQFrame = QFrame(self.moneroFromWatchOnlyViewPrivateKeyContainerQFrame)
+        self.moneroFromWatchOnlyViewPrivateKeyQFrame = QFrame(self.moneroFromWatchOnlyViewPrivateKeyContainerQFrame)
+        self.moneroFromWatchOnlyViewPrivateKeyQFrame.setObjectName(u"moneroFromWatchOnlyViewPrivateKeyQFrame")
+        self.moneroFromWatchOnlyViewPrivateKeyQFrame.setFrameShape(QFrame.StyledPanel)
+        self.moneroFromWatchOnlyViewPrivateKeyQFrame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout = QVBoxLayout(self.moneroFromWatchOnlyViewPrivateKeyQFrame)
+        self.verticalLayout.setSpacing(5)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.moneroFromWatchOnlyViewPrivateKeyLabelContainerQFrame = QFrame(self.moneroFromWatchOnlyViewPrivateKeyQFrame)
         self.moneroFromWatchOnlyViewPrivateKeyLabelContainerQFrame.setObjectName(u"moneroFromWatchOnlyViewPrivateKeyLabelContainerQFrame")
         self.moneroFromWatchOnlyViewPrivateKeyLabelContainerQFrameHLayout = QHBoxLayout(self.moneroFromWatchOnlyViewPrivateKeyLabelContainerQFrame)
         self.moneroFromWatchOnlyViewPrivateKeyLabelContainerQFrameHLayout.setSpacing(15)
@@ -4897,12 +4825,15 @@ class Ui_MainWindow(object):
         self.moneroFromWatchOnlyViewPrivateKeyLabelContainerQFrameHLayout.addItem(self.moneroFromWatchOnlyViewPrivateKeyLabelContainerQFrameHSpacer)
 
 
-        self.moneroFromWatchOnlyViewPrivateKeyContainerQFrameVLayout.addWidget(self.moneroFromWatchOnlyViewPrivateKeyLabelContainerQFrame)
+        self.verticalLayout.addWidget(self.moneroFromWatchOnlyViewPrivateKeyLabelContainerQFrame)
 
-        self.moneroFromWatchOnlyViewPrivateKeyQLIneEdit = QLineEdit(self.moneroFromWatchOnlyViewPrivateKeyContainerQFrame)
+        self.moneroFromWatchOnlyViewPrivateKeyQLIneEdit = QLineEdit(self.moneroFromWatchOnlyViewPrivateKeyQFrame)
         self.moneroFromWatchOnlyViewPrivateKeyQLIneEdit.setObjectName(u"moneroFromWatchOnlyViewPrivateKeyQLIneEdit")
 
-        self.moneroFromWatchOnlyViewPrivateKeyContainerQFrameVLayout.addWidget(self.moneroFromWatchOnlyViewPrivateKeyQLIneEdit)
+        self.verticalLayout.addWidget(self.moneroFromWatchOnlyViewPrivateKeyQLIneEdit)
+
+
+        self.moneroFromWatchOnlyViewPrivateKeyContainerQFrameVLayout.addWidget(self.moneroFromWatchOnlyViewPrivateKeyQFrame)
 
         self.moneroFromWatchOnlySpendKeyAndPaymentIDContainerQFrame = QFrame(self.moneroFromWatchOnlyViewPrivateKeyContainerQFrame)
         self.moneroFromWatchOnlySpendKeyAndPaymentIDContainerQFrame.setObjectName(u"moneroFromWatchOnlySpendKeyAndPaymentIDContainerQFrame")
@@ -4919,14 +4850,20 @@ class Ui_MainWindow(object):
         self.moneroFromWatchOnlySpendPublicKeyContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
         self.moneroFromWatchOnlySpendPublicKeyLabelContainerQFrame = QFrame(self.moneroFromWatchOnlySpendPublicKeyContainerQFrame)
         self.moneroFromWatchOnlySpendPublicKeyLabelContainerQFrame.setObjectName(u"moneroFromWatchOnlySpendPublicKeyLabelContainerQFrame")
-        self.moneroFromWatchOnlySpendPublicKeyLabelContainerQFrameHLayout = QHBoxLayout(self.moneroFromWatchOnlySpendPublicKeyLabelContainerQFrame)
-        self.moneroFromWatchOnlySpendPublicKeyLabelContainerQFrameHLayout.setSpacing(15)
-        self.moneroFromWatchOnlySpendPublicKeyLabelContainerQFrameHLayout.setObjectName(u"moneroFromWatchOnlySpendPublicKeyLabelContainerQFrameHLayout")
-        self.moneroFromWatchOnlySpendPublicKeyLabelContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
+        self.moneroFromWatchOnlySpendPublicKeyLabelContainerQFrame.setFrameShape(QFrame.StyledPanel)
+        self.moneroFromWatchOnlySpendPublicKeyLabelContainerQFrame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_3 = QHBoxLayout(self.moneroFromWatchOnlySpendPublicKeyLabelContainerQFrame)
+        self.horizontalLayout_3.setSpacing(15)
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.moneroFromWatchOnlySpendPublicKeyQLabel = QLabel(self.moneroFromWatchOnlySpendPublicKeyLabelContainerQFrame)
         self.moneroFromWatchOnlySpendPublicKeyQLabel.setObjectName(u"moneroFromWatchOnlySpendPublicKeyQLabel")
 
-        self.moneroFromWatchOnlySpendPublicKeyLabelContainerQFrameHLayout.addWidget(self.moneroFromWatchOnlySpendPublicKeyQLabel)
+        self.horizontalLayout_3.addWidget(self.moneroFromWatchOnlySpendPublicKeyQLabel)
+
+        self.moneroFromWatchOnlySpendPublicKeyLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_3.addItem(self.moneroFromWatchOnlySpendPublicKeyLabelContainerQFrameHSpacer)
 
 
         self.moneroFromWatchOnlySpendPublicKeyContainerQFrameVLayout.addWidget(self.moneroFromWatchOnlySpendPublicKeyLabelContainerQFrame)
@@ -4945,10 +4882,25 @@ class Ui_MainWindow(object):
         self.moneroFromWatchOnlyPaymentIDContainerQFrameVLayout.setSpacing(5)
         self.moneroFromWatchOnlyPaymentIDContainerQFrameVLayout.setObjectName(u"moneroFromWatchOnlyPaymentIDContainerQFrameVLayout")
         self.moneroFromWatchOnlyPaymentIDContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.moneroFromWatchOnlyPaymentIDQLabel = QLabel(self.moneroFromWatchOnlyPaymentIDContainerQFrame)
+        self.moneroFromWatchOnlyPaymentIDLabelContainerQFrame = QFrame(self.moneroFromWatchOnlyPaymentIDContainerQFrame)
+        self.moneroFromWatchOnlyPaymentIDLabelContainerQFrame.setObjectName(u"moneroFromWatchOnlyPaymentIDLabelContainerQFrame")
+        self.moneroFromWatchOnlyPaymentIDLabelContainerQFrame.setFrameShape(QFrame.StyledPanel)
+        self.moneroFromWatchOnlyPaymentIDLabelContainerQFrame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.moneroFromWatchOnlyPaymentIDLabelContainerQFrame)
+        self.horizontalLayout_4.setSpacing(15)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.moneroFromWatchOnlyPaymentIDQLabel = QLabel(self.moneroFromWatchOnlyPaymentIDLabelContainerQFrame)
         self.moneroFromWatchOnlyPaymentIDQLabel.setObjectName(u"moneroFromWatchOnlyPaymentIDQLabel")
 
-        self.moneroFromWatchOnlyPaymentIDContainerQFrameVLayout.addWidget(self.moneroFromWatchOnlyPaymentIDQLabel)
+        self.horizontalLayout_4.addWidget(self.moneroFromWatchOnlyPaymentIDQLabel)
+
+        self.moneroFromWatchOnlyPaymentIDLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_4.addItem(self.moneroFromWatchOnlyPaymentIDLabelContainerQFrameHSpacer)
+
+
+        self.moneroFromWatchOnlyPaymentIDContainerQFrameVLayout.addWidget(self.moneroFromWatchOnlyPaymentIDLabelContainerQFrame)
 
         self.moneroFromWatchOnlyPaymentIDQLineEdit = QLineEdit(self.moneroFromWatchOnlyPaymentIDContainerQFrame)
         self.moneroFromWatchOnlyPaymentIDQLineEdit.setObjectName(u"moneroFromWatchOnlyPaymentIDQLineEdit")
@@ -4960,10 +4912,6 @@ class Ui_MainWindow(object):
 
 
         self.moneroFromWatchOnlyViewPrivateKeyContainerQFrameVLayout.addWidget(self.moneroFromWatchOnlySpendKeyAndPaymentIDContainerQFrame)
-
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.moneroFromWatchOnlyViewPrivateKeyContainerQFrameVLayout.addItem(self.verticalSpacer_2)
 
 
         self.moneroFromWatchOnlyQStackedWidgetVLayout.addWidget(self.moneroFromWatchOnlyViewPrivateKeyContainerQFrame)
@@ -6336,6 +6284,10 @@ class Ui_MainWindow(object):
 
         self.dumpsPageQStackedWidgetVLayout.addWidget(self.dumpsFormatKeysContainerQGroupBox)
 
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.dumpsPageQStackedWidgetVLayout.addItem(self.verticalSpacer)
+
         self.hdwalletQStackedWidget.addWidget(self.dumpsPageQStackedWidget)
 
         self.hdwalletMainQFrameVLayout.addWidget(self.hdwalletQStackedWidget)
@@ -6375,7 +6327,7 @@ class Ui_MainWindow(object):
         self.outputTerminalQFrameVLayout = QVBoxLayout(self.outputTerminalQWidget)
         self.outputTerminalQFrameVLayout.setSpacing(0)
         self.outputTerminalQFrameVLayout.setObjectName(u"outputTerminalQFrameVLayout")
-        self.outputTerminalQFrameVLayout.setContentsMargins(0, 0, 0, 0)
+        self.outputTerminalQFrameVLayout.setContentsMargins(0, 10, 0, 0)
         self.outputTerminalQPlainTextEdit = QPlainTextEdit(self.outputTerminalQWidget)
         self.outputTerminalQPlainTextEdit.setObjectName(u"outputTerminalQPlainTextEdit")
         self.outputTerminalQPlainTextEdit.setEnabled(True)
@@ -6463,13 +6415,13 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.hdwalletQStackedWidget.setCurrentIndex(1)
-        self.hdQStackedWidget.setCurrentIndex(0)
-        self.bipQStackedWidget.setCurrentIndex(3)
-        self.cardanoQStackedWidget.setCurrentIndex(4)
+        self.hdwalletQStackedWidget.setCurrentIndex(0)
+        self.hdQStackedWidget.setCurrentIndex(1)
+        self.bipQStackedWidget.setCurrentIndex(7)
+        self.cardanoQStackedWidget.setCurrentIndex(0)
         self.electrumV1QStackedWidget.setCurrentIndex(0)
-        self.electrumV2QStackedWidget.setCurrentIndex(2)
-        self.moneroQStackedWidget.setCurrentIndex(5)
+        self.electrumV2QStackedWidget.setCurrentIndex(0)
+        self.moneroQStackedWidget.setCurrentIndex(0)
         self.derivationsQStackedWidget.setCurrentIndex(4)
 
 
@@ -6642,10 +6594,10 @@ class Ui_MainWindow(object):
 
         self.cardanoFromEntropyCardanoTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.cardanoFromEntropyStakingQLabel.setText(QCoreApplication.translate("MainWindow", u"Staking Public Key", None))
-        self.cardanoFromEntropyPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
-        self.cardanoFromEntropyPassphraseQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
         self.cardanoFromEntropyAddressTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Address Type", None))
         self.cardanoFromEntropyAddressTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
+        self.cardanoFromEntropyPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
+        self.cardanoFromEntropyPassphraseQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
         self.cardanoFromMnemonicQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic", None))
         self.cardanoFromMnemonicCardanoTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Cardano Type", None))
         self.cardanoFromMnemonicCardanoTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Algorand", None))
