@@ -170,7 +170,7 @@
           <item>
            <widget class="QStackedWidget" name="hdwalletQStackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="generatePageQStackedWidget">
              <layout class="QVBoxLayout" name="generatePageQStackedWidgetVLayout">
@@ -1716,7 +1716,7 @@
                     <number>0</number>
                    </property>
                    <property name="currentIndex">
-                    <number>1</number>
+                    <number>4</number>
                    </property>
                    <widget class="QWidget" name="bipsPageQWidget">
                     <layout class="QVBoxLayout" name="bipsPageQWidgetVLayout">
@@ -1738,7 +1738,7 @@
                      <item>
                       <widget class="QStackedWidget" name="bipQStackedWidget">
                        <property name="currentIndex">
-                        <number>7</number>
+                        <number>5</number>
                        </property>
                        <widget class="QWidget" name="bipFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="bipFromEntropyQStackedWidgetVLayout">
@@ -2778,11 +2778,45 @@
                               </layout>
                              </widget>
                             </item>
-                            <item alignment="Qt::AlignBottom">
-                             <widget class="QCheckBox" name="bipFromXPrivateKeyStrictQCheckBox">
-                              <property name="text">
-                               <string>Strict</string>
-                              </property>
+                            <item>
+                             <widget class="QFrame" name="frame_2">
+                              <layout class="QVBoxLayout" name="verticalLayout_3">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <spacer name="verticalSpacer_3">
+                                 <property name="orientation">
+                                  <enum>Qt::Vertical</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>20</width>
+                                   <height>40</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                               <item>
+                                <widget class="QCheckBox" name="bipFromXPrivateKeyStrictQCheckBox">
+                                 <property name="text">
+                                  <string>Strict</string>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
@@ -2988,11 +3022,45 @@
                               </layout>
                              </widget>
                             </item>
-                            <item alignment="Qt::AlignBottom">
-                             <widget class="QCheckBox" name="bipFromXPublicKeyStrictQCheckBox">
-                              <property name="text">
-                               <string>Strict</string>
-                              </property>
+                            <item>
+                             <widget class="QFrame" name="frame">
+                              <layout class="QVBoxLayout" name="verticalLayout_2">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <spacer name="verticalSpacer_2">
+                                 <property name="orientation">
+                                  <enum>Qt::Vertical</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>20</width>
+                                   <height>40</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                               <item>
+                                <widget class="QCheckBox" name="bipFromXPublicKeyStrictQCheckBox">
+                                 <property name="text">
+                                  <string>Strict</string>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
@@ -3345,6 +3413,47 @@
                              </widget>
                             </item>
                             <item>
+                             <widget class="QFrame" name="frame_3">
+                              <layout class="QVBoxLayout" name="verticalLayout_4">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <spacer name="verticalSpacer_4">
+                                 <property name="orientation">
+                                  <enum>Qt::Vertical</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>20</width>
+                                   <height>40</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                               <item>
+                                <widget class="QCheckBox" name="bipFromWIFBIP38PassphraseQCheckBox">
+                                 <property name="text">
+                                  <string>BIP38</string>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
                              <widget class="QFrame" name="bipFromWIFBIP38PassphraseContainerQFrame">
                               <layout class="QVBoxLayout" name="bipFromWIFBIP38PassphraseContainerQFrameVLayout">
                                <property name="spacing">
@@ -3381,9 +3490,9 @@
                                    <number>0</number>
                                   </property>
                                   <item>
-                                   <widget class="QCheckBox" name="bipFromWIFBIP38PassphraseQCheckBox">
+                                   <widget class="QLabel" name="label">
                                     <property name="text">
-                                     <string>BIP38 Passphrase</string>
+                                     <string>Passphrase</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -3856,7 +3965,7 @@
                      <item>
                       <widget class="QStackedWidget" name="cardanoQStackedWidget">
                        <property name="currentIndex">
-                        <number>0</number>
+                        <number>4</number>
                        </property>
                        <widget class="QWidget" name="cardanoFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="cardanoFromEntropyQStackedWidgetVLayout">
@@ -5474,11 +5583,45 @@
                               </layout>
                              </widget>
                             </item>
-                            <item alignment="Qt::AlignVCenter">
-                             <widget class="QCheckBox" name="cardanoFromXPrivateKeyStrictQCheckBox">
-                              <property name="text">
-                               <string>Strict</string>
-                              </property>
+                            <item>
+                             <widget class="QFrame" name="frame_4">
+                              <layout class="QVBoxLayout" name="verticalLayout_5">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <spacer name="verticalSpacer_5">
+                                 <property name="orientation">
+                                  <enum>Qt::Vertical</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>20</width>
+                                   <height>40</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                               <item>
+                                <widget class="QCheckBox" name="cardanoFromXPrivateKeyStrictQCheckBox">
+                                 <property name="text">
+                                  <string>Strict</string>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
                              </widget>
                             </item>
                             <item>
@@ -5848,7 +5991,7 @@
                                    <number>0</number>
                                   </property>
                                   <property name="rightMargin">
-                                   <number>15</number>
+                                   <number>0</number>
                                   </property>
                                   <property name="bottomMargin">
                                    <number>0</number>
@@ -5873,18 +6016,52 @@
                                     </property>
                                    </spacer>
                                   </item>
-                                  <item>
-                                   <widget class="QCheckBox" name="cardanoFromXPublicKeyStrictQCheckBox">
-                                    <property name="text">
-                                     <string>Strict</string>
-                                    </property>
-                                   </widget>
-                                  </item>
                                  </layout>
                                 </widget>
                                </item>
                                <item>
                                 <widget class="QLineEdit" name="cardanoFromXPublicKeyQLineEdit"/>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="frame_5">
+                              <layout class="QVBoxLayout" name="verticalLayout_7">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <spacer name="verticalSpacer_6">
+                                 <property name="orientation">
+                                  <enum>Qt::Vertical</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>20</width>
+                                   <height>40</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                               <item>
+                                <widget class="QCheckBox" name="cardanoFromXPublicKeyStrictQCheckBox">
+                                 <property name="text">
+                                  <string>Strict</string>
+                                 </property>
+                                </widget>
                                </item>
                               </layout>
                              </widget>
@@ -7022,7 +7199,7 @@
                      <item>
                       <widget class="QStackedWidget" name="electrumV1QStackedWidget">
                        <property name="currentIndex">
-                        <number>0</number>
+                        <number>3</number>
                        </property>
                        <widget class="QWidget" name="electrumV1FromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="electrumV1FromEntropyQStackedWidgetVLayout">
@@ -8239,6 +8416,47 @@
                              </widget>
                             </item>
                             <item>
+                             <widget class="QFrame" name="frame_6">
+                              <layout class="QVBoxLayout" name="verticalLayout_8">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <spacer name="verticalSpacer_7">
+                                 <property name="orientation">
+                                  <enum>Qt::Vertical</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>20</width>
+                                   <height>40</height>
+                                  </size>
+                                 </property>
+                                </spacer>
+                               </item>
+                               <item>
+                                <widget class="QCheckBox" name="electrumV1FromWIFBIP38PassphraseQCheckBox">
+                                 <property name="text">
+                                  <string>BIP38</string>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
                              <widget class="QFrame" name="electrumV1FromWIFBIP38PassphraseContainerQFrame">
                               <layout class="QVBoxLayout" name="electrumV1FromWIFBIP38PassphraseContainerQFrameVLayout">
                                <property name="spacing">
@@ -8275,9 +8493,9 @@
                                    <number>0</number>
                                   </property>
                                   <item>
-                                   <widget class="QCheckBox" name="electrumV1FromWIFBIP38PassphraseQCheckBox">
+                                   <widget class="QLabel" name="label_2">
                                     <property name="text">
-                                     <string>BIP38 Passphrase</string>
+                                     <string>Passphrase</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -8741,7 +8959,7 @@
                      <item>
                       <widget class="QStackedWidget" name="electrumV2QStackedWidget">
                        <property name="currentIndex">
-                        <number>0</number>
+                        <number>1</number>
                        </property>
                        <widget class="QWidget" name="electrumV2FromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="electrumV2FromEntropyQStackedWidgetVLayout" stretch="0,0">
@@ -10010,7 +10228,7 @@
                      <item>
                       <widget class="QStackedWidget" name="moneroQStackedWidget">
                        <property name="currentIndex">
-                        <number>0</number>
+                        <number>5</number>
                        </property>
                        <widget class="QWidget" name="moneroFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="moneroFromEntropyQStackedWidgetVLayout">
@@ -11300,7 +11518,7 @@
                      <number>10</number>
                     </property>
                     <property name="topMargin">
-                     <number>15</number>
+                     <number>10</number>
                     </property>
                     <property name="rightMargin">
                      <number>10</number>
@@ -11632,6 +11850,9 @@
                         </property>
                         <item>
                          <widget class="QFrame" name="bip44PurposeQFrame">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
                           <layout class="QVBoxLayout" name="bip44PurposeQFrameVLayout">
                            <property name="spacing">
                             <number>5</number>
@@ -11707,6 +11928,9 @@
                         </item>
                         <item>
                          <widget class="QFrame" name="bip44CoinTypeQFrame">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
                           <layout class="QVBoxLayout" name="bip44CoinTypeQFrameVLayout">
                            <property name="spacing">
                             <number>5</number>
@@ -12024,6 +12248,9 @@
                         </property>
                         <item>
                          <widget class="QFrame" name="bip49PurposeQFrame">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
                           <layout class="QVBoxLayout" name="bip49PurposeQFrameVLayout">
                            <property name="spacing">
                             <number>5</number>
@@ -12099,6 +12326,9 @@
                         </item>
                         <item>
                          <widget class="QFrame" name="bip49CoinTypeQFrame">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
                           <layout class="QVBoxLayout" name="bip49CoinTypeQFrameVLayout">
                            <property name="spacing">
                             <number>5</number>
@@ -12416,6 +12646,9 @@
                         </property>
                         <item>
                          <widget class="QFrame" name="bip84PurposeQFrame">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
                           <layout class="QVBoxLayout" name="bip84PurposeQFrameVLayout">
                            <property name="spacing">
                             <number>5</number>
@@ -12491,6 +12724,9 @@
                         </item>
                         <item>
                          <widget class="QFrame" name="bip84CoinTypeQFrame">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
                           <layout class="QVBoxLayout" name="bip84CoinTypeQFrameVLayout">
                            <property name="spacing">
                             <number>5</number>
@@ -12808,6 +13044,9 @@
                         </property>
                         <item>
                          <widget class="QFrame" name="bip86PurposeQFrame">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
                           <layout class="QVBoxLayout" name="bip86PurposeQFrameVLayout">
                            <property name="spacing">
                             <number>5</number>
@@ -12883,6 +13122,9 @@
                         </item>
                         <item>
                          <widget class="QFrame" name="bip86CoinTypeQFrame">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
                           <layout class="QVBoxLayout" name="bip86CoinTypeQFrameVLayout">
                            <property name="spacing">
                             <number>5</number>
@@ -13380,6 +13622,9 @@
                         </property>
                         <item>
                          <widget class="QFrame" name="cip1852PurposeQFrame">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
                           <layout class="QVBoxLayout" name="cip1852PurposeQFrameVLayout">
                            <property name="spacing">
                             <number>5</number>
@@ -13455,6 +13700,9 @@
                         </item>
                         <item>
                          <widget class="QFrame" name="cip1852CoinTypeQFrame">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
                           <layout class="QVBoxLayout" name="cip1852CoinTypeQFrameVLayout">
                            <property name="spacing">
                             <number>5</number>

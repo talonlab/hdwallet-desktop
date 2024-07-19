@@ -581,3 +581,12 @@ QTabBar, QTabBar::tab, QTabBar::tab:hover, QTabBar::tab:focus {
 #closeDonationsQPushButton:hover{
     background-color: #ef3838;
 }
+
+#electrumV1FromWIFBIP38PassphraseQCheckBox,
+#cardanoFromXPublicKeyStrictQCheckBox,
+#cardanoFromXPrivateKeyStrictQCheckBox,
+#bipFromWIFBIP38PassphraseQCheckBox,
+#bipFromXPrivateKeyStrictQCheckBox,
+#bipFromXPublicKeyStrictQCheckBox{
+    height: 40px;
+}

@@ -84,6 +84,9 @@ class MainApplication:
         self.ui.generateLengthContainerQFrame.setSizePolicy(
             QSizePolicy.Expanding, QSizePolicy.Expanding
         )
+        self.ui.helpHDWalletQPushButton.clicked.connect(
+            lambda: os.startfile(os.path.join(os.path.dirname(__file__), "../docs/static/hdwallet.pdf"))
+        )
 
         inputs = [
             self.ui.bip44AccountQLineEdit,

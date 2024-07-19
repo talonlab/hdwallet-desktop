@@ -133,14 +133,14 @@ class Generate:
 
     def _generate_mnemonic_word_toggle(self):
         if self.ui.generateMnemonicWordsQRadioButton.isChecked():
-            self.ui.generateMnemonicWordsQComboBox.setEnabled(True)
+            self.ui.generateMnemonicWordsContainerQFrame.setEnabled(True)
             self.ui.generateMnemonicWordsQComboBox.setCurrentIndex(0)
             self.ui.generateSeedMnemonicEntropyQLineEdit.setText(None)
             self.ui.generateMnemonicEntropyQFrame.setEnabled(False)
 
     def _generate_mnemonic_entropy_toggle(self):
         if self.ui.generateMnemonicEntropyQRadioButton.isChecked():
-            self.ui.generateMnemonicWordsQComboBox.setEnabled(False)
+            self.ui.generateMnemonicWordsContainerQFrame.setEnabled(False)
             self.ui.generateMnemonicWordsQComboBox.setCurrentIndex(-1)
             self.ui.generateMnemonicEntropyQFrame.setEnabled(True)
 
