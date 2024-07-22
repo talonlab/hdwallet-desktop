@@ -71,7 +71,7 @@ class Application(QMainWindow):
         self.detached_window = None
 
         self.setWindowTitle("Hierarchical Deterministic Wallet")
-        css_path = os.path.join(os.path.dirname(__file__), "../ui/css/dark-style.css")
+        css_path = os.path.join(os.path.dirname(__file__), "../ui/css/theme.css")
         self.fs_watcher = QFileSystemWatcher([css_path])
         self.fs_watcher.fileChanged.connect(lambda: self.load_stylesheet(css_path))
         self.load_stylesheet(css_path)
