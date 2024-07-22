@@ -79,9 +79,10 @@ class Generate:
         self.ui.generatePassphraseCharacterQCheckBox.setChecked(False)
 
         self.ui.generateSeedCardanoTypeQComboBox.addItems([i.title() for i in Cardano.TYPES.get_cardano_types()])
-        self.ui.generateSeedMnemonicTypeQComboBox.addItems(
-            [i.title() for i in ElectrumV2Mnemonic.mnemonic_types.keys()])
-        self.ui.generateMnemonicTypeQComboBox.addItems([i.title() for i in ElectrumV2Mnemonic.mnemonic_types.keys()])
+
+        electrum_v2_mnemonic_types = [i.title() for i in ElectrumV2Mnemonic.mnemonic_types.keys()]
+        self.ui.generateSeedMnemonicTypeQComboBox.addItems(electrum_v2_mnemonic_types)
+        self.ui.generateMnemonicTypeQComboBox.addItems(electrum_v2_mnemonic_types)
 
         self.ui.generatePassphraseQPushButton.clicked.connect(self._generate_passphrase)
 
@@ -119,7 +120,8 @@ class Generate:
             )
         )
         self.ui.generateMnemonicLanguageQComboBox.addItems(
-            [i.title() for i in MNEMONICS.mnemonic(mnemonic_client).languages])
+            [i.title() for i in MNEMONICS.mnemonic(mnemonic_client).languages]
+        )
 
         self.ui.generateMnemonicWordsQComboBox.setCurrentIndex(0)
         self.ui.generateMnemonicLanguageQComboBox.setCurrentText('English')

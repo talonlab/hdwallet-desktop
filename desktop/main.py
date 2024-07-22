@@ -5,10 +5,6 @@
 #             2024, Eyoel Tadesse <eyoel_tadesse@proton.me>
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit
-import os
-import re
-import functools
-import subprocess
 
 from PySide6.QtCore import (
     QThreadPool, QRegularExpression, Slot
@@ -17,7 +13,16 @@ from PySide6.QtWidgets import (
     QSizePolicy, QWidget, QPushButton, QLineEdit
 )
 from PySide6.QtGui import QRegularExpressionValidator
+from click.testing import CliRunner
+from hdwallet.cli.__main__ import cli_main
 
+import os
+import re
+import shlex
+import functools
+import subprocess
+
+from desktop.utils import resolve_path
 from desktop.widgets.core import *
 from desktop.widgets.svg_button import SvgButton
 from desktop.widgets.donation import Donation
@@ -38,6 +43,7 @@ class MainApplication:
 
         self.app = Application.instance()
         self.ui = self.app.ui
+        self.cli_runner = CliRunner()
 
         self.__init_ui()
 
@@ -47,8 +53,8 @@ class MainApplication:
         """
         self.ui.toggle_expand_terminal = SvgButton(
             parent_widget=self.ui.expandAndCollapseTerminalQFrame,
-            icon_path=os.path.join(os.path.dirname(__file__), "ui/images/svg/expand-white-thin.svg"),
-            alt_icon_path=os.path.join(os.path.dirname(__file__), "ui/images/svg/collapse-white-thin.svg"),
+            icon_path=resolve_path("desktop/ui/images/svg/expand-white-thin.svg"),
+            alt_icon_path=resolve_path("desktop/ui/images/svg/collapse-white-thin.svg"),
             icon_width=20,
             icon_height=20
         )
@@ -85,7 +91,7 @@ class MainApplication:
             QSizePolicy.Expanding, QSizePolicy.Expanding
         )
         self.ui.helpHDWalletQPushButton.clicked.connect(
-            lambda: os.startfile(os.path.join(os.path.dirname(__file__), "../docs/static/hdwallet.pdf"))
+            lambda: os.startfile(resolve_path("docs/static/hdwallet.pdf"))
         )
 
         inputs = [
@@ -138,24 +144,17 @@ class MainApplication:
         """
         Process the command entered in the terminal input.
         """
-        cmd = self.ui.outputTerminalQLineEdit.text()
+        cmd = self.ui.outputTerminalQLineEdit.text().removeprefix('hdwallet ')
+        self.ui.outputTerminalQLineEdit.setText(None)
 
         def process() -> str:
-            f_cmd = cmd if cmd.startswith('hdwallet ') else f"hdwallet {cmd}"
-
-            self.ui.outputTerminalQLineEdit.setText(None)
-            result = subprocess.run(
-                f_cmd,
-                shell=True,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE
+            cli = self.cli_runner.invoke(
+                cli_main, shlex.split(cmd)
             )
-
-            output = result.stderr if result.stderr else result.stdout
-            return output.decode()
+            return cli.output
 
         if cmd.lower() == 'clear':
-            self.ui.outputTerminalQPlainTextEdit.setPlainText(None)
+            self.ui.outputTerminalQPlainTextEdit.clear()
             self.ui.outputTerminalQLineEdit.setText(None)
         else:
             job = Worker(process)

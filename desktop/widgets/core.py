@@ -19,12 +19,15 @@ from PySide6.QtCore import (
     Qt, QEvent, QThreadPool, QSize,
     QRect, QFileSystemWatcher, QObject
 )
-from PySide6.QtSvgWidgets import QSvgWidget
-from PySide6.QtGui import QFontDatabase
+from PySide6.QtGui import (
+    QFontDatabase, QIcon
+)
 
+from desktop.utils import (
+    put_svg, update_style, resolve_path
+)
 from desktop.ui.ui_hdwallet import Ui_MainWindow
 from desktop.widgets.detached_window import DetachedTerminalWindow
-
 
 class Application(QMainWindow):
     _instance: Optional['Application'] = None
@@ -71,17 +74,18 @@ class Application(QMainWindow):
         self.detached_window = None
 
         self.setWindowTitle("Hierarchical Deterministic Wallet")
-        css_path = os.path.join(os.path.dirname(__file__), "../ui/css/theme.css")
+        self.setWindowIcon(QIcon(resolve_path("desktop/ui/images/icon/icon.ico")))
+        css_path = resolve_path("desktop/ui/css/theme.css")
         self.fs_watcher = QFileSystemWatcher([css_path])
         self.fs_watcher.fileChanged.connect(lambda: self.load_stylesheet(css_path))
         self.load_stylesheet(css_path)
         put_svg(
             self.ui.hdwalletLogoHLayout,
-            os.path.join(os.path.dirname(__file__), "../ui/images/svg/hdwalletLogoFullSize.svg"),
+            resolve_path("desktop/ui/images/svg/hdwalletLogoFullSize.svg"),
             132.04,
             45
         )
-        QFontDatabase.addApplicationFont(os.path.join(os.path.dirname(__file__), "../ui/font/HD Wallet-Regular.ttf"))
+        QFontDatabase.addApplicationFont(resolve_path("desktop/ui/font/HD Wallet-Regular.ttf"))
 
         self.resize_evt = ResizeEventFilter()
         self.resize_evt.resize_event_callback = self.update_terminal_ui
@@ -243,47 +247,3 @@ class ResizeEventFilter(QObject):
             if self.resize_event_callback != None:
                 self.resize_event_callback()
         return super().eventFilter(obj, event)
-
-def clear_layout(layout: QLayout, delete: bool = True) -> None:
-    """
-    Clear all widgets from a layout.
-
-    :param layout: The layout to clear.
-    :param delete: Whether to delete the widgets after removing them from the layout.
-    """
-    if layout is not None:
-        while layout.count():
-            item = layout.takeAt(0)
-            widget = item.widget()
-            if widget is not None and delete:
-                widget.deleteLater()
-            else:
-                clear_layout(item.layout())
-
-
-def put_svg(layout: QLayout, path: str, width: int, height: int) -> QSvgWidget:
-    """
-    Add an SVG widget to a layout.
-
-    :param layout: The layout to add the SVG widget to.
-    :param path: The path to the SVG file.
-    :param width: The width of the SVG widget.
-    :param height: The height of the SVG widget.
-    :return: The SVG widget.
-    """
-    clear_layout(layout)
-    svg = QSvgWidget(path)
-    svg.setMinimumSize(QSize(width, height))
-    svg.setMaximumSize(QSize(width, height))
-    svg.setStyleSheet("background: transparent")
-    layout.addWidget(svg)
-    return svg
-
-
-def update_style(widget: QWidget) -> None:
-    """
-    Update the style of a widget.
-
-    :param widget: The widget to update the style for.
-    """
-    widget.setStyleSheet(widget.styleSheet())
