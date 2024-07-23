@@ -72,11 +72,12 @@ QCheckBox::indicator:hover {
 }
 QCheckBox::indicator:checked {
     /*background: rgb(25, 30, 36);*/
-    /*background-image: url(:/icons/images/icons/cil-check-alt.png);*/
-    /*background-position: center;*/
-    /*background-repeat: no-reperat;*/
+    /*background: 2px solid #83b9ff;*/
+    background-image: url(:/png/images/png/cil-check-alt.png);
+    background-position: center;
+    background-repeat: no-reperat;
 
-    background: 2px solid #83b9ff;
+
     /*border: 2px solid #83b9ff;*/
 }
 
