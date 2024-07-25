@@ -74,7 +74,8 @@ class Application(QMainWindow):
         self.detached_window = None
 
         self.setWindowTitle("Hierarchical Deterministic Wallet")
-        self.setWindowIcon(QIcon(resolve_path("desktop/ui/images/icon/icon.ico")))
+        self.hdwallet_icon = QIcon(resolve_path("desktop/ui/images/icon/icon.ico"))
+        self.setWindowIcon(self.hdwallet_icon)
         css_path = resolve_path("desktop/ui/css/theme.css")
         self.fs_watcher = QFileSystemWatcher([css_path])
         self.fs_watcher.fileChanged.connect(lambda: self.load_stylesheet(css_path))
@@ -172,6 +173,7 @@ class Application(QMainWindow):
             self.layout().removeWidget(self.ui.outputQFrame)
             self.detached_window = DetachedTerminalWindow(self)
             self.detached_window.setWindowTitle("Terminal")
+            self.detached_window.setWindowIcon(self.hdwallet_icon)
             self.detached_window.resize(self.ui.outputQFrame.width(), self.ui.outputQFrame.height())
             self.detached_window.setMinimumHeight(self.minimumHeight())
 

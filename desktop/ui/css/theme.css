@@ -166,7 +166,7 @@ QComboBox::drop-down {
     width: 30px;
     border-left-width: 3px;
     border-left-style: solid;
-    background-image: url(:/icons/images/icons/cil-arrow-bottom.png);
+    background-image: url(:/png/images/png/cil-arrow-bottom.png);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -178,7 +178,7 @@ QComboBox::drop-down:hover {
 
 
 QComboBox::drop-down:checked {
-     background-image: url(:/icons/images/icons/cil-arrow-top.png);
+     background-image: url(:/png/images/png/cil-arrow-top.png);
 }
 
 QComboBox QAbstractItemView  {
