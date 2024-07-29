@@ -77,7 +77,11 @@ class MainApplication:
         )
         self.ui.dumpQPushButton.click()
 
-        self.ui.donationHDWalletQPushButton.clicked.connect(lambda: Donation.show_donation(self.app.window()))
+        self.ui.donationHDWalletQPushButton.clicked.connect(
+            lambda: Donation.show_donation(
+                main_window=self.app.window(), parent_frame=self.ui.hdWalletContainerQFrame
+            )
+        )
 
         Highlighter(self.ui.outputTerminalQPlainTextEdit.document())
 

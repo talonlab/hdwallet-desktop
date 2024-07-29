@@ -82,13 +82,14 @@ class Donation(Modal):
         put_qr_code(self.ui.donationsCharityQRCodeQLabel, addr)
 
     @staticmethod
-    def show_donation(main_window: QWidget) -> None:
+    def show_donation(main_window: QWidget, parent_frame: QWidget) -> None:
         """
         Display the donation frame within the given main window.
 
         :param main_window: The main application window.
+        :param parent_frame: Modal parent frame
         """
-        frame: Donation = Donation(main_window)
+        frame: Donation = Donation(parent=main_window, parent_frame=parent_frame)
 
         main_widget = QWidget()
         main_widget.setContentsMargins(0, 0, 0, 0)

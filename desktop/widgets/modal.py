@@ -33,6 +33,7 @@ class Modal(QFrame):
         """
         Initialize the Modal frame.
         """
+        self.parent_frame = kwargs.pop('parent_frame', None)
         super(Modal, self).__init__(*args, **kwargs)
         QVBoxLayout(self)
 
@@ -44,9 +45,7 @@ class Modal(QFrame):
         self.overlay_frame.setStyleSheet("background-color: rgba(0, 0, 0, 128);")
         self.overlay_frame.clicked.connect(self.close)
 
-        self.modal_parent_frame = self.parent().findChild(QFrame, "hdWalletContainerQFrame")
-        self.modal_parent_frame.installEventFilter(self)
-
+        self.parent_frame.installEventFilter(self)
         self.setObjectName("modalQFrame")
 
     def re_adjust(self) -> None:
@@ -54,7 +53,7 @@ class Modal(QFrame):
         Re-adjust the frame and overlay positions.
         """
         parent_rect = self.parent().rect()
-        geo = self.modal_parent_frame.geometry()
+        geo = self.parent_frame.geometry()
         geo.setHeight(geo.height())
 
         x_pos = geo.width() / 2 - self.width / 2
