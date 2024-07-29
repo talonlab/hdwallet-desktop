@@ -8,12 +8,15 @@
 
 import os
 
+import qrcode
+from PIL.ImageQt import ImageQt, Image
+
 from PySide6.QtWidgets import (
-    QWidget, QLayout
+    QWidget, QLayout, QLabel
 )
 from PySide6.QtSvgWidgets import QSvgWidget
-from PySide6.QtCore import QSize
-
+from PySide6.QtCore import Qt, QSize
+from PySide6.QtGui import QPixmap
 
 def clear_layout(layout: QLayout, delete: bool = True) -> None:
     """
@@ -61,6 +64,38 @@ def put_svg(layout: QLayout, path: str, width: int, height: int) -> QSvgWidget:
     svg.setStyleSheet("background: transparent")
     layout.addWidget(svg)
     return svg
+
+
+def put_qr_code(qr_label: QLabel, text: str) -> None:
+        """
+        Generate and display a QR code.
+
+        :param qr_label: The QLabel to display the QR code.
+        :param text: The text data to encode in the QR code.
+        """
+        qr_label.setText(None)
+
+        qr = qrcode.QRCode(
+            version=1,
+            error_correction=qrcode.constants.ERROR_CORRECT_L,
+            box_size=10,
+            border=4
+        )
+        qr.add_data(text)
+        qr.make(fit=True)
+
+        img = qr.make_image(
+            fill_color="white",
+            back_color="#191e24"
+        )
+
+        qimage = ImageQt(img)
+
+        pixmap = QPixmap.fromImage(qimage)
+
+        qr_label.setPixmap(pixmap)
+        qr_label.setAlignment(Qt.AlignCenter)
+        qr_label.setScaledContents(True)
 
 
 def update_style(widget: QWidget) -> None:

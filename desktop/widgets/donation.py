@@ -7,20 +7,17 @@
 # file COPYING or https://opensource.org/license/mit
 import os
 
-import qrcode
-from PIL.ImageQt import ImageQt, Image
-
 from PySide6.QtWidgets import (
     QWidget, QFrame, QVBoxLayout, QLabel
 )
 from PySide6.QtCore import Qt
-from PySide6.QtGui import QPixmap
 
 from desktop.widgets.modal import Modal
 from desktop.widgets.svg_button import SvgButton
 from desktop.ui.ui_donations import Ui_Form
-from desktop.utils.clipboard import copy_to_clipboard
 from desktop.addresses import crypto_addresses
+from desktop.utils import put_qr_code
+from desktop.utils.clipboard import copy_to_clipboard
 
 
 class Donation(Modal):
@@ -34,36 +31,6 @@ class Donation(Modal):
         super(Donation, self).__init__(*args, **kwargs)
         self.ui: Optional[Ui_Form] = None
 
-    def update_receive_qr(self, qr_label: QLabel, text: str) -> None:
-        """
-        Generate and update a QR code for receiving cryptocurrency.
-
-        :param qr_label: The QLabel to display the QR code.
-        :param text: The text data to encode in the QR code.
-        """
-        qr_label.setText(None)
-
-        qr = qrcode.QRCode(
-            version=1,
-            error_correction=qrcode.constants.ERROR_CORRECT_L,
-            box_size=10,
-            border=4,
-        )
-        qr.add_data(text)
-        qr.make(fit=True)
-
-        img = qr.make_image(
-            fill_color="white",
-            back_color="#191e24"
-        )
-
-        qimage = ImageQt(img)
-
-        pixmap = QPixmap.fromImage(qimage)
-
-        qr_label.setPixmap(pixmap)
-        qr_label.setAlignment(Qt.AlignCenter)
-        qr_label.setScaledContents(True)
 
     def __update_btns(self) -> None:
         """
@@ -102,7 +69,7 @@ class Donation(Modal):
         addr = crypto_addresses[crypto]
         self.core_addr = addr
         self.ui.donationsAddressQLabel.setText(f"{addr[:15]}...{addr[-10:]}")
-        self.update_receive_qr(self.ui.donationsQRCodeQLabel, addr)
+        put_qr_code(self.ui.donationsQRCodeQLabel, addr)
 
     def charity_crypto_changed(self) -> None:
         """
@@ -112,7 +79,7 @@ class Donation(Modal):
         addr = crypto_addresses[crypto]
         self.charity_addr = addr
         self.ui.donationsCharityAddressQLabel.setText(f"{addr[:15]}...{addr[-10:]}")
-        self.update_receive_qr(self.ui.donationsCharityQRCodeQLabel, addr)
+        put_qr_code(self.ui.donationsCharityQRCodeQLabel, addr)
 
     @staticmethod
     def show_donation(main_window: QWidget) -> None:
