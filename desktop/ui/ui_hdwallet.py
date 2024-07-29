@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwallettiOHWe.ui'
+## Form generated from reading UI file 'hdwalletYwDFae.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -77,6 +77,11 @@ class Ui_MainWindow(object):
 
 
         self.hdWalletHeaderContainerQFrameHLayout.addWidget(self.generateAndDumpTabContainerQFrame)
+
+        self.addressGenerateToModalQPushButton = QPushButton(self.hdWalletHeaderContainerQFrame)
+        self.addressGenerateToModalQPushButton.setObjectName(u"addressGenerateToModalQPushButton")
+
+        self.hdWalletHeaderContainerQFrameHLayout.addWidget(self.addressGenerateToModalQPushButton)
 
         self.donationHDWalletQPushButton = QPushButton(self.hdWalletHeaderContainerQFrame)
         self.donationHDWalletQPushButton.setObjectName(u"donationHDWalletQPushButton")
@@ -6513,7 +6518,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.hdwalletQStackedWidget.setCurrentIndex(1)
+        self.hdwalletQStackedWidget.setCurrentIndex(0)
         self.hdQStackedWidget.setCurrentIndex(4)
         self.bipQStackedWidget.setCurrentIndex(5)
         self.cardanoQStackedWidget.setCurrentIndex(4)
@@ -6530,6 +6535,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.generateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
         self.dumpQPushButton.setText(QCoreApplication.translate("MainWindow", u"Dumps", None))
+        self.addressGenerateToModalQPushButton.setText(QCoreApplication.translate("MainWindow", u"Address", None))
         self.donationHDWalletQPushButton.setText(QCoreApplication.translate("MainWindow", u"Donation", None))
         self.helpHDWalletQPushButton.setText(QCoreApplication.translate("MainWindow", u"Help", None))
         self.generateClientAndStrengthContainerQGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Entropy", None))

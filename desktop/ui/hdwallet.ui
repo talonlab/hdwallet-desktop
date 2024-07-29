@@ -133,6 +133,13 @@
            </widget>
           </item>
           <item>
+           <widget class="QPushButton" name="addressGenerateToModalQPushButton">
+            <property name="text">
+             <string>Address</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="donationHDWalletQPushButton">
             <property name="text">
              <string>Donation</string>
@@ -170,7 +177,7 @@
           <item>
            <widget class="QStackedWidget" name="hdwalletQStackedWidget">
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="generatePageQStackedWidget">
              <layout class="QVBoxLayout" name="generatePageQStackedWidgetVLayout">
