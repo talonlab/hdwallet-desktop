@@ -126,7 +126,7 @@
            </property>
            <layout class="QVBoxLayout" name="addressCryptocurrencyContainerQFrameVLayout">
             <property name="spacing">
-             <number>15</number>
+             <number>5</number>
             </property>
             <property name="leftMargin">
              <number>0</number>
@@ -140,15 +140,15 @@
             <property name="bottomMargin">
              <number>0</number>
             </property>
-            <item alignment="Qt::AlignHCenter">
-             <widget class="QLabel" name="donationsCryptocurrencyQLabel">
+            <item alignment="Qt::AlignLeft">
+             <widget class="QLabel" name="addressesCryptocurrencyQLabel">
               <property name="text">
                <string>Cryptocurrency</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="donationsCryptocurrencyQComboBox">
+             <widget class="QComboBox" name="addressesCryptocurrencyQComboBox">
               <property name="placeholderText">
                <string>Select Cryptocurrency</string>
               </property>
@@ -161,7 +161,7 @@
           <widget class="QFrame" name="addressPublicKeyContainerQFrame">
            <layout class="QVBoxLayout" name="addressPublicKeyContainerQFrameVLayout">
             <property name="spacing">
-             <number>15</number>
+             <number>5</number>
             </property>
             <property name="leftMargin">
              <number>0</number>
@@ -416,7 +416,7 @@
         <property name="sizeHint" stdset="0">
          <size>
           <width>20</width>
-          <height>7</height>
+          <height>17</height>
          </size>
         </property>
        </spacer>

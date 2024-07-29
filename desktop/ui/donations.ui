@@ -109,7 +109,7 @@
        </widget>
       </item>
       <item alignment="Qt::AlignRight">
-       <widget class="QPushButton" name="closeDonationsQPushButton">
+       <widget class="QPushButton" name="closeModalQPushButton">
         <property name="cursor">
          <cursorShape>PointingHandCursor</cursorShape>
         </property>

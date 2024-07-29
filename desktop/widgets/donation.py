@@ -22,7 +22,7 @@ from desktop.utils.clipboard import copy_to_clipboard
 
 class Donation(Modal):
     """
-    A custom QFrame to handle donations, including UI setup and QR code generation.
+    Donation modal implementation
     """
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -82,7 +82,7 @@ class Donation(Modal):
         put_qr_code(self.ui.donationsCharityQRCodeQLabel, addr)
 
     @staticmethod
-    def show_donation(main_window: QWidget, parent_frame: QWidget) -> None:
+    def show_donation_modal(main_window: QWidget, parent_frame: QWidget) -> None:
         """
         Display the donation frame within the given main window.
 
@@ -97,7 +97,7 @@ class Donation(Modal):
         donation_ui.setupUi(main_widget)
         frame.ui = donation_ui
 
-        donation_ui.closeDonationsQPushButton.clicked.connect(frame.close)
+        donation_ui.closeModalQPushButton.clicked.connect(frame.close)
 
         donation_ui.donationsCoreTeamQPushButton.clicked.connect(frame.show_core)
         donation_ui.donationsCharityQPushButton.clicked.connect(frame.show_charity)

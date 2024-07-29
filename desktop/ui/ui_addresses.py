@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'addressesHiLIuy.ui'
+## Form generated from reading UI file 'addresseseZopWE.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -43,11 +43,11 @@ class Ui_addressModalQWidget(object):
 
         self.addressNavbarQFrameHLayout.addItem(self.addressNavbarQFrameHSpacer)
 
-        self.closeAddressQPushButton = QPushButton(self.addressNavbarQFrame)
-        self.closeAddressQPushButton.setObjectName(u"closeAddressQPushButton")
-        self.closeAddressQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.closeModalQPushButton = QPushButton(self.addressNavbarQFrame)
+        self.closeModalQPushButton.setObjectName(u"closeModalQPushButton")
+        self.closeModalQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
-        self.addressNavbarQFrameHLayout.addWidget(self.closeAddressQPushButton, 0, Qt.AlignRight)
+        self.addressNavbarQFrameHLayout.addWidget(self.closeModalQPushButton, 0, Qt.AlignRight)
 
 
         self.addressModalQWidgetVLayout.addWidget(self.addressNavbarQFrame)
@@ -68,18 +68,18 @@ class Ui_addressModalQWidget(object):
         self.addressCryptocurrencyContainerQFrame.setObjectName(u"addressCryptocurrencyContainerQFrame")
         self.addressCryptocurrencyContainerQFrame.setMinimumSize(QSize(150, 0))
         self.addressCryptocurrencyContainerQFrameVLayout = QVBoxLayout(self.addressCryptocurrencyContainerQFrame)
-        self.addressCryptocurrencyContainerQFrameVLayout.setSpacing(15)
+        self.addressCryptocurrencyContainerQFrameVLayout.setSpacing(5)
         self.addressCryptocurrencyContainerQFrameVLayout.setObjectName(u"addressCryptocurrencyContainerQFrameVLayout")
         self.addressCryptocurrencyContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.donationsCryptocurrencyQLabel = QLabel(self.addressCryptocurrencyContainerQFrame)
-        self.donationsCryptocurrencyQLabel.setObjectName(u"donationsCryptocurrencyQLabel")
+        self.addressesCryptocurrencyQLabel = QLabel(self.addressCryptocurrencyContainerQFrame)
+        self.addressesCryptocurrencyQLabel.setObjectName(u"addressesCryptocurrencyQLabel")
 
-        self.addressCryptocurrencyContainerQFrameVLayout.addWidget(self.donationsCryptocurrencyQLabel, 0, Qt.AlignHCenter)
+        self.addressCryptocurrencyContainerQFrameVLayout.addWidget(self.addressesCryptocurrencyQLabel, 0, Qt.AlignLeft)
 
-        self.donationsCryptocurrencyQComboBox = QComboBox(self.addressCryptocurrencyContainerQFrame)
-        self.donationsCryptocurrencyQComboBox.setObjectName(u"donationsCryptocurrencyQComboBox")
+        self.addressesCryptocurrencyQComboBox = QComboBox(self.addressCryptocurrencyContainerQFrame)
+        self.addressesCryptocurrencyQComboBox.setObjectName(u"addressesCryptocurrencyQComboBox")
 
-        self.addressCryptocurrencyContainerQFrameVLayout.addWidget(self.donationsCryptocurrencyQComboBox)
+        self.addressCryptocurrencyContainerQFrameVLayout.addWidget(self.addressesCryptocurrencyQComboBox)
 
 
         self.addressCryptocurrencyAndPublicKeyContainerQFrameHLayout.addWidget(self.addressCryptocurrencyContainerQFrame)
@@ -87,7 +87,7 @@ class Ui_addressModalQWidget(object):
         self.addressPublicKeyContainerQFrame = QFrame(self.addressCryptocurrencyAndPublicKeyContainerQFrame)
         self.addressPublicKeyContainerQFrame.setObjectName(u"addressPublicKeyContainerQFrame")
         self.addressPublicKeyContainerQFrameVLayout = QVBoxLayout(self.addressPublicKeyContainerQFrame)
-        self.addressPublicKeyContainerQFrameVLayout.setSpacing(15)
+        self.addressPublicKeyContainerQFrameVLayout.setSpacing(5)
         self.addressPublicKeyContainerQFrameVLayout.setObjectName(u"addressPublicKeyContainerQFrameVLayout")
         self.addressPublicKeyContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
         self.addressPublicKeyQLabel = QLabel(self.addressPublicKeyContainerQFrame)
@@ -194,7 +194,7 @@ class Ui_addressModalQWidget(object):
 
         self.addressBodyQFrameVLayout.addWidget(self.generatedAddressContainerQFrame)
 
-        self.addressBodyQFrameVSpacer = QSpacerItem(20, 7, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.addressBodyQFrameVSpacer = QSpacerItem(20, 17, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.addressBodyQFrameVLayout.addItem(self.addressBodyQFrameVSpacer)
 
@@ -210,9 +210,9 @@ class Ui_addressModalQWidget(object):
     def retranslateUi(self, addressModalQWidget):
         addressModalQWidget.setWindowTitle(QCoreApplication.translate("addressModalQWidget", u"Form", None))
         self.addressQLabel.setText(QCoreApplication.translate("addressModalQWidget", u"Addresses", None))
-        self.closeAddressQPushButton.setText(QCoreApplication.translate("addressModalQWidget", u"X", None))
-        self.donationsCryptocurrencyQLabel.setText(QCoreApplication.translate("addressModalQWidget", u"Cryptocurrency", None))
-        self.donationsCryptocurrencyQComboBox.setPlaceholderText(QCoreApplication.translate("addressModalQWidget", u"Select Cryptocurrency", None))
+        self.closeModalQPushButton.setText(QCoreApplication.translate("addressModalQWidget", u"X", None))
+        self.addressesCryptocurrencyQLabel.setText(QCoreApplication.translate("addressModalQWidget", u"Cryptocurrency", None))
+        self.addressesCryptocurrencyQComboBox.setPlaceholderText(QCoreApplication.translate("addressModalQWidget", u"Select Cryptocurrency", None))
         self.addressPublicKeyQLabel.setText(QCoreApplication.translate("addressModalQWidget", u"Public Key", None))
         self.addressGenerateQPushButton.setText(QCoreApplication.translate("addressModalQWidget", u"Generate", None))
         self.generatedAddressQRCodeQLabel.setText(QCoreApplication.translate("addressModalQWidget", u"QR Code", None))

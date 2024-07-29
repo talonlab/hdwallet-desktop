@@ -10,13 +10,15 @@ import os
 
 import qrcode
 from PIL.ImageQt import ImageQt, Image
+from PySide6.QtSvg import QSvgRenderer
 
 from PySide6.QtWidgets import (
     QWidget, QLayout, QLabel
 )
 from PySide6.QtSvgWidgets import QSvgWidget
 from PySide6.QtCore import Qt, QSize
-from PySide6.QtGui import QPixmap
+from PySide6.QtGui import QPixmap, QPainter
+
 
 def clear_layout(layout: QLayout, delete: bool = True) -> None:
     """
@@ -45,6 +47,27 @@ def resolve_path(path: str) -> str:
     :rtype: str
     """
     return os.path.abspath(os.path.join(os.path.dirname(__file__), "../../", path))
+
+
+def render_svg_on_label(label, svg_path):
+    """
+    Renders an SVG image on a given QLabel.
+
+    :param label: QLabel object where the SVG image will be rendered.
+    :type label: QLabel
+    :param svg_path: The file path to the SVG image.
+    :type svg_path: str
+
+    :returns: None
+    """
+
+    svg_renderer = QSvgRenderer(svg_path)
+    pixmap = QPixmap(180, 180)
+    pixmap.fill(Qt.white)
+    painter = QPainter(pixmap)
+    svg_renderer.render(painter)
+    painter.end()
+    label.setPixmap(pixmap)
 
 
 def put_svg(layout: QLayout, path: str, width: int, height: int) -> QSvgWidget:
