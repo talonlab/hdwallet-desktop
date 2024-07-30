@@ -112,7 +112,9 @@ class MainApplication:
             self.ui.electrumChangeQLineEdit,
             self.ui.electrumAddressQLineEdit,
             self.ui.moneroMinorQLineEdit,
-            self.ui.moneroMajorQLineEdit
+            self.ui.moneroMajorQLineEdit,
+            self.ui.hdwAccountQLineEdit,
+            self.ui.hdwAddressQLineEdit
         ]
         self.__validate_inputs(inputs)
 

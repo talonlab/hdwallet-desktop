@@ -54,7 +54,7 @@ from hdwallet.seeds import (
 from hdwallet.derivations import (
     IDerivation, DERIVATIONS,
     CustomDerivation, BIP44Derivation, BIP49Derivation, BIP84Derivation,
-    BIP86Derivation, ElectrumDerivation, CIP1852Derivation, MoneroDerivation,
+    BIP86Derivation, ElectrumDerivation, CIP1852Derivation, MoneroDerivation, HDWDerivation,
     CHANGES
 )
 
@@ -105,7 +105,7 @@ class Dumps:
         }
 
         self.hd_allowed_derivation = {
-            'BIP32': ["Custom", "BIP44", "BIP49", "BIP84", "BIP86", "BIP141", "CIP1852"],
+            'BIP32': ["Custom", "BIP44", "BIP49", "BIP84", "BIP86", "BIP141", "CIP1852", "HDW"],
             'BIP32XPUB': ["Custom", "BIP141"],
             'BIP44': ["BIP44"],
             'BIP49': ["BIP49"],
@@ -123,47 +123,52 @@ class Dumps:
 
         self.derivation_tab["Custom"] = {
             "button": self.ui.customTabQPushButton,
-            "widget": "customQStackedWidgetPage",
+            "widget": "customQStackedWidgetPage"
         }
 
         self.derivation_tab["BIP44"] = {
             "button": self.ui.bip44TabQPushButton,
-            "widget": "bip44QStackedWidgetPage",
+            "widget": "bip44QStackedWidgetPage"
         }
 
         self.derivation_tab["BIP49"] = {
             "button": self.ui.bip49TabQPushButton,
-            "widget": "bip49QStackedWidgetPage",
+            "widget": "bip49QStackedWidgetPage"
         }
 
         self.derivation_tab["BIP84"] = {
             "button": self.ui.bip84TabQPushButton,
-            "widget": "bip84QStackedWidgetPage",
+            "widget": "bip84QStackedWidgetPage"
         }
 
         self.derivation_tab["BIP86"] = {
             "button": self.ui.bip86TabQPushButton,
-            "widget": "bip86QStackedWidgetPage",
+            "widget": "bip86QStackedWidgetPage"
         }
 
         self.derivation_tab["BIP141"] = {
             "button": self.ui.bip141TabQPushButton,
-            "widget": "bip141QStackedWidgetPage",
+            "widget": "bip141QStackedWidgetPage"
         }
 
         self.derivation_tab["CIP1852"] = {
             "button": self.ui.cip1852TabQPushButton,
-            "widget": "cip1852QStackedWidgetPage",
+            "widget": "cip1852QStackedWidgetPage"
         }
 
         self.derivation_tab["Electrum"] = {
             "button": self.ui.electrumTabQPushButton,
-            "widget": "electrumQStackedWidgetPage",
+            "widget": "electrumQStackedWidgetPage"
         }
 
         self.derivation_tab["Monero"] = {
             "button": self.ui.moneroTabQPushButton,
-            "widget": "moneroQStackedWidgetPage",
+            "widget": "moneroQStackedWidgetPage"
+        }
+
+        self.derivation_tab["HDW"] = {
+            "button": self.ui.hdwTabQPushButton,
+            "widget": "hdwQStackedWidgetPage"
         }
 
         self.stack_from_widgets = {
@@ -217,6 +222,10 @@ class Dumps:
         for name, data in self.derivation_tab.items():
             data["button"].clicked.connect(
                 functools.partial(self.derivation_tab_changed, data["widget"], data["button"]))
+
+        self.ui.hdwEccQComboBox.clear()
+        self.ui.hdwEccQComboBox.addItems(HDWDerivation.eccs.keys())
+        self.ui.hdwEccQFrame.setEnabled(False)
 
         self.ui.dumpsExcludeOrIncludeQLabel.setText("Exclude")
         self.ui.dumpsFormatQComboBox.currentIndexChanged.connect(self._dump_format_changed)
@@ -576,6 +585,13 @@ class Dumps:
                 major=self.ui.moneroMajorQLineEdit.text()
             )
 
+        elif current_tab == "HDW":
+            return HDWDerivation(
+                account=self.ui.hdwAccountQLineEdit.text(),
+                ecc=self.ui.hdwEccQComboBox.currentText(),
+                address=self.ui.hdwAddressQLineEdit.text()
+            )
+
     def _dump_bips(self, dump_from, hd_kwargs):
         if dump_from == "Entropy":
             hd_kwargs["language"] = self.ui.bipFromEntropyLanguageQComboBox.currentText().lower()
@@ -824,12 +840,13 @@ class Dumps:
 
         self.ui.dumpsHdQComboBox.clear()
         self.ui.dumpsHdQComboBox.addItems(crypto_obj.HDS.get_hds())
-        self.ui.dumpsHdQComboBox.setCurrentIndex(0)
+        self.ui.dumpsHdQComboBox.setCurrentText(crypto_obj.DEFAULT_HD)
 
         nets = [i.title() for i in crypto_obj.NETWORKS.get_networks()]
         self.ui.dumpsNetworkQComboBox.clear()
         self.ui.dumpsNetworkQComboBox.addItems(nets)
         self.ui.dumpsNetworkQComboBox.setCurrentText("Mainnet")
+        self.ui.hdwEccQComboBox.setCurrentText(crypto_obj.ECC.NAME)
 
         coin_typs_derviation = [
             self.ui.bip44CoinTypeQLineEdit,
