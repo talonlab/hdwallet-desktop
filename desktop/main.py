@@ -26,7 +26,6 @@ from desktop.utils import resolve_path
 from desktop.widgets.core import *
 from desktop.widgets.svg_button import SvgButton
 from desktop.widgets.donation import Donation
-from desktop.widgets.addresses import Addresses
 from desktop.utils.worker import Worker
 from desktop.utils.highlighter import Highlighter
 from desktop.generate import Generate
@@ -80,11 +79,6 @@ class MainApplication:
 
         self.ui.donationHDWalletQPushButton.clicked.connect(
             lambda: Donation.show_donation_modal(
-                main_window=self.app.window(), parent_frame=self.ui.hdWalletContainerQFrame
-            )
-        )
-        self.ui.addressGenerateToModalQPushButton.clicked.connect(
-            lambda: Addresses.show_address_modal(
                 main_window=self.app.window(), parent_frame=self.ui.hdWalletContainerQFrame
             )
         )
