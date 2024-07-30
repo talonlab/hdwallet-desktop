@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletLWSjPK.ui'
+## Form generated from reading UI file 'hdwalletQSGdTV.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -5078,6 +5078,11 @@ class Ui_MainWindow(object):
 
         self.derivationTabButtonsContainerQFrameHLayout.addWidget(self.moneroTabQPushButton)
 
+        self.hdwTabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
+        self.hdwTabQPushButton.setObjectName(u"hdwTabQPushButton")
+
+        self.derivationTabButtonsContainerQFrameHLayout.addWidget(self.hdwTabQPushButton)
+
         self.derivationTabButtonsContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.derivationTabButtonsContainerQFrameHLayout.addItem(self.derivationTabButtonsContainerQFrameHSpacer)
@@ -6111,6 +6116,110 @@ class Ui_MainWindow(object):
         self.cip1852QStackedWidgetPageHLayout.addWidget(self.cip1852AddressQFrame)
 
         self.derivationsQStackedWidget.addWidget(self.cip1852QStackedWidgetPage)
+        self.hdwQStackedWidgetPage = QWidget()
+        self.hdwQStackedWidgetPage.setObjectName(u"hdwQStackedWidgetPage")
+        self.horizontalLayout_2 = QHBoxLayout(self.hdwQStackedWidgetPage)
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.hdwAccountQFrame = QFrame(self.hdwQStackedWidgetPage)
+        self.hdwAccountQFrame.setObjectName(u"hdwAccountQFrame")
+        self.hdwAccountQFrameVLayout = QVBoxLayout(self.hdwAccountQFrame)
+        self.hdwAccountQFrameVLayout.setSpacing(5)
+        self.hdwAccountQFrameVLayout.setObjectName(u"hdwAccountQFrameVLayout")
+        self.hdwAccountQFrameVLayout.setContentsMargins(0, 0, 0, 0)
+        self.hdwAccountLabelQFrame = QFrame(self.hdwAccountQFrame)
+        self.hdwAccountLabelQFrame.setObjectName(u"hdwAccountLabelQFrame")
+        self.hdwAccountLabelQFrameHLayout = QHBoxLayout(self.hdwAccountLabelQFrame)
+        self.hdwAccountLabelQFrameHLayout.setSpacing(15)
+        self.hdwAccountLabelQFrameHLayout.setObjectName(u"hdwAccountLabelQFrameHLayout")
+        self.hdwAccountLabelQFrameHLayout.setContentsMargins(0, 0, 0, 0)
+        self.hdwAccountQLabel = QLabel(self.hdwAccountLabelQFrame)
+        self.hdwAccountQLabel.setObjectName(u"hdwAccountQLabel")
+
+        self.hdwAccountLabelQFrameHLayout.addWidget(self.hdwAccountQLabel)
+
+        self.hdwAccountLabelHSpacer = QSpacerItem(764, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.hdwAccountLabelQFrameHLayout.addItem(self.hdwAccountLabelHSpacer)
+
+
+        self.hdwAccountQFrameVLayout.addWidget(self.hdwAccountLabelQFrame)
+
+        self.hdwAccountQLineEdit = QLineEdit(self.hdwAccountQFrame)
+        self.hdwAccountQLineEdit.setObjectName(u"hdwAccountQLineEdit")
+
+        self.hdwAccountQFrameVLayout.addWidget(self.hdwAccountQLineEdit)
+
+
+        self.horizontalLayout_2.addWidget(self.hdwAccountQFrame)
+
+        self.hdwEccQFrame = QFrame(self.hdwQStackedWidgetPage)
+        self.hdwEccQFrame.setObjectName(u"hdwEccQFrame")
+        self.hdwEccQFrameVLayout = QVBoxLayout(self.hdwEccQFrame)
+        self.hdwEccQFrameVLayout.setSpacing(5)
+        self.hdwEccQFrameVLayout.setObjectName(u"hdwEccQFrameVLayout")
+        self.hdwEccQFrameVLayout.setContentsMargins(0, 0, 0, 0)
+        self.hdwEccLabelQFrame = QFrame(self.hdwEccQFrame)
+        self.hdwEccLabelQFrame.setObjectName(u"hdwEccLabelQFrame")
+        self.hdwEccLabelQFrameHLayout = QHBoxLayout(self.hdwEccLabelQFrame)
+        self.hdwEccLabelQFrameHLayout.setSpacing(15)
+        self.hdwEccLabelQFrameHLayout.setObjectName(u"hdwEccLabelQFrameHLayout")
+        self.hdwEccLabelQFrameHLayout.setContentsMargins(0, 0, 0, 0)
+        self.hdwEccQLabel = QLabel(self.hdwEccLabelQFrame)
+        self.hdwEccQLabel.setObjectName(u"hdwEccQLabel")
+
+        self.hdwEccLabelQFrameHLayout.addWidget(self.hdwEccQLabel)
+
+        self.hdwEccLabelHSpacer = QSpacerItem(764, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.hdwEccLabelQFrameHLayout.addItem(self.hdwEccLabelHSpacer)
+
+
+        self.hdwEccQFrameVLayout.addWidget(self.hdwEccLabelQFrame)
+
+        self.hdwEccQComboBox = QComboBox(self.hdwEccQFrame)
+        self.hdwEccQComboBox.addItem("")
+        self.hdwEccQComboBox.addItem("")
+        self.hdwEccQComboBox.addItem("")
+        self.hdwEccQComboBox.setObjectName(u"hdwEccQComboBox")
+
+        self.hdwEccQFrameVLayout.addWidget(self.hdwEccQComboBox)
+
+
+        self.horizontalLayout_2.addWidget(self.hdwEccQFrame)
+
+        self.hdwAddressQFrame = QFrame(self.hdwQStackedWidgetPage)
+        self.hdwAddressQFrame.setObjectName(u"hdwAddressQFrame")
+        self.hdwAddressQFrameVLayout = QVBoxLayout(self.hdwAddressQFrame)
+        self.hdwAddressQFrameVLayout.setSpacing(5)
+        self.hdwAddressQFrameVLayout.setObjectName(u"hdwAddressQFrameVLayout")
+        self.hdwAddressQFrameVLayout.setContentsMargins(0, 0, 0, 0)
+        self.hdwAddressLabelQFrame = QFrame(self.hdwAddressQFrame)
+        self.hdwAddressLabelQFrame.setObjectName(u"hdwAddressLabelQFrame")
+        self.hdwAddressLabelQFrameHLayout = QHBoxLayout(self.hdwAddressLabelQFrame)
+        self.hdwAddressLabelQFrameHLayout.setSpacing(15)
+        self.hdwAddressLabelQFrameHLayout.setObjectName(u"hdwAddressLabelQFrameHLayout")
+        self.hdwAddressLabelQFrameHLayout.setContentsMargins(0, 0, 0, 0)
+        self.hdwAddressQLabel = QLabel(self.hdwAddressLabelQFrame)
+        self.hdwAddressQLabel.setObjectName(u"hdwAddressQLabel")
+
+        self.hdwAddressLabelQFrameHLayout.addWidget(self.hdwAddressQLabel)
+
+        self.hdwAddressLabelHSpacer = QSpacerItem(764, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.hdwAddressLabelQFrameHLayout.addItem(self.hdwAddressLabelHSpacer)
+
+
+        self.hdwAddressQFrameVLayout.addWidget(self.hdwAddressLabelQFrame)
+
+        self.hdwAddressQLineEdit = QLineEdit(self.hdwAddressQFrame)
+        self.hdwAddressQLineEdit.setObjectName(u"hdwAddressQLineEdit")
+
+        self.hdwAddressQFrameVLayout.addWidget(self.hdwAddressQLineEdit)
+
+
+        self.horizontalLayout_2.addWidget(self.hdwAddressQFrame)
+
+        self.derivationsQStackedWidget.addWidget(self.hdwQStackedWidgetPage)
         self.electrumQStackedWidgetPage = QWidget()
         self.electrumQStackedWidgetPage.setObjectName(u"electrumQStackedWidgetPage")
         self.electrumQStackedWidgetPageHLayout = QHBoxLayout(self.electrumQStackedWidgetPage)
@@ -6513,14 +6622,14 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.hdwalletQStackedWidget.setCurrentIndex(0)
+        self.hdwalletQStackedWidget.setCurrentIndex(1)
         self.hdQStackedWidget.setCurrentIndex(4)
         self.bipQStackedWidget.setCurrentIndex(5)
         self.cardanoQStackedWidget.setCurrentIndex(4)
         self.electrumV1QStackedWidget.setCurrentIndex(3)
         self.electrumV2QStackedWidget.setCurrentIndex(1)
         self.moneroQStackedWidget.setCurrentIndex(5)
-        self.derivationsQStackedWidget.setCurrentIndex(4)
+        self.derivationsQStackedWidget.setCurrentIndex(7)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -6956,6 +7065,7 @@ class Ui_MainWindow(object):
         self.cip1852TabQPushButton.setText(QCoreApplication.translate("MainWindow", u"CIP1852", None))
         self.electrumTabQPushButton.setText(QCoreApplication.translate("MainWindow", u"Electrum", None))
         self.moneroTabQPushButton.setText(QCoreApplication.translate("MainWindow", u"Monero", None))
+        self.hdwTabQPushButton.setText(QCoreApplication.translate("MainWindow", u"HDW", None))
         self.customPathQLabel.setText(QCoreApplication.translate("MainWindow", u"Path", None))
         self.customPathQLineEdit.setText("")
         self.customPathQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"m/0'/0", None))
@@ -7063,6 +7173,18 @@ class Ui_MainWindow(object):
         self.cip1852AddressQLabel.setText(QCoreApplication.translate("MainWindow", u"Address", None))
         self.cip1852AddressQLineEdit.setText(QCoreApplication.translate("MainWindow", u"0-10", None))
         self.cip1852AddressQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.hdwAccountQLabel.setText(QCoreApplication.translate("MainWindow", u"Account", None))
+        self.hdwAccountQLineEdit.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.hdwAccountQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.hdwEccQLabel.setText(QCoreApplication.translate("MainWindow", u"ECC", None))
+        self.hdwEccQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"External", None))
+        self.hdwEccQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Internal", None))
+        self.hdwEccQComboBox.setItemText(2, QCoreApplication.translate("MainWindow", u"Staking", None))
+
+        self.hdwEccQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
+        self.hdwAddressQLabel.setText(QCoreApplication.translate("MainWindow", u"Address", None))
+        self.hdwAddressQLineEdit.setText(QCoreApplication.translate("MainWindow", u"0-10", None))
+        self.hdwAddressQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))
         self.electrumChangeQLabel.setText(QCoreApplication.translate("MainWindow", u"Change", None))
         self.electrumChangeQLineEdit.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.electrumChangeQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"0", None))

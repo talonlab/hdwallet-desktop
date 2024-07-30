@@ -112,13 +112,13 @@
        <widget class="QFrame" name="closeModalButtonQFrame">
         <property name="minimumSize">
          <size>
-          <width>40</width>
+          <width>35</width>
           <height>25</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>40</width>
+          <width>35</width>
           <height>25</height>
          </size>
         </property>
@@ -133,10 +133,10 @@
           <number>0</number>
          </property>
          <property name="leftMargin">
-          <number>0</number>
+          <number>12</number>
          </property>
          <property name="topMargin">
-          <number>0</number>
+          <number>8</number>
          </property>
          <property name="rightMargin">
           <number>0</number>

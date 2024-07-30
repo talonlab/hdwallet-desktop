@@ -170,7 +170,7 @@
           <item>
            <widget class="QStackedWidget" name="hdwalletQStackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="generatePageQStackedWidget">
              <layout class="QVBoxLayout" name="generatePageQStackedWidgetVLayout">
@@ -11608,6 +11608,13 @@
                         </widget>
                        </item>
                        <item>
+                        <widget class="QPushButton" name="hdwTabQPushButton">
+                         <property name="text">
+                          <string>HDW</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
                         <spacer name="derivationTabButtonsContainerQFrameHSpacer">
                          <property name="orientation">
                           <enum>Qt::Horizontal</enum>
@@ -11632,7 +11639,7 @@
                        </sizepolicy>
                       </property>
                       <property name="currentIndex">
-                       <number>4</number>
+                       <number>7</number>
                       </property>
                       <widget class="QWidget" name="customQStackedWidgetPage">
                        <layout class="QHBoxLayout" name="customQStackedWidgetPageHLayout">
@@ -13993,6 +14000,238 @@
                            </item>
                            <item>
                             <widget class="QLineEdit" name="cip1852AddressQLineEdit">
+                             <property name="text">
+                              <string>0-10</string>
+                             </property>
+                             <property name="placeholderText">
+                              <string>0</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                      <widget class="QWidget" name="hdwQStackedWidgetPage">
+                       <layout class="QHBoxLayout" name="horizontalLayout_2">
+                        <item>
+                         <widget class="QFrame" name="hdwAccountQFrame">
+                          <layout class="QVBoxLayout" name="hdwAccountQFrameVLayout">
+                           <property name="spacing">
+                            <number>5</number>
+                           </property>
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="hdwAccountLabelQFrame">
+                             <layout class="QHBoxLayout" name="hdwAccountLabelQFrameHLayout">
+                              <property name="spacing">
+                               <number>15</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="hdwAccountQLabel">
+                                <property name="text">
+                                 <string>Account</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <spacer name="hdwAccountLabelHSpacer">
+                                <property name="orientation">
+                                 <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="sizeHint" stdset="0">
+                                 <size>
+                                  <width>764</width>
+                                  <height>20</height>
+                                 </size>
+                                </property>
+                               </spacer>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="hdwAccountQLineEdit">
+                             <property name="text">
+                              <string>0</string>
+                             </property>
+                             <property name="placeholderText">
+                              <string>0</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="hdwEccQFrame">
+                          <layout class="QVBoxLayout" name="hdwEccQFrameVLayout">
+                           <property name="spacing">
+                            <number>5</number>
+                           </property>
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="hdwEccLabelQFrame">
+                             <layout class="QHBoxLayout" name="hdwEccLabelQFrameHLayout">
+                              <property name="spacing">
+                               <number>15</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="hdwEccQLabel">
+                                <property name="text">
+                                 <string>ECC</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <spacer name="hdwEccLabelHSpacer">
+                                <property name="orientation">
+                                 <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="sizeHint" stdset="0">
+                                 <size>
+                                  <width>764</width>
+                                  <height>20</height>
+                                 </size>
+                                </property>
+                               </spacer>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QComboBox" name="hdwEccQComboBox">
+                             <property name="placeholderText">
+                              <string>(Select)</string>
+                             </property>
+                             <item>
+                              <property name="text">
+                               <string>External</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Internal</string>
+                              </property>
+                             </item>
+                             <item>
+                              <property name="text">
+                               <string>Staking</string>
+                              </property>
+                             </item>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="hdwAddressQFrame">
+                          <layout class="QVBoxLayout" name="hdwAddressQFrameVLayout">
+                           <property name="spacing">
+                            <number>5</number>
+                           </property>
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QFrame" name="hdwAddressLabelQFrame">
+                             <layout class="QHBoxLayout" name="hdwAddressLabelQFrameHLayout">
+                              <property name="spacing">
+                               <number>15</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="hdwAddressQLabel">
+                                <property name="text">
+                                 <string>Address</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <spacer name="hdwAddressLabelHSpacer">
+                                <property name="orientation">
+                                 <enum>Qt::Horizontal</enum>
+                                </property>
+                                <property name="sizeHint" stdset="0">
+                                 <size>
+                                  <width>764</width>
+                                  <height>20</height>
+                                 </size>
+                                </property>
+                               </spacer>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="hdwAddressQLineEdit">
                              <property name="text">
                               <string>0-10</string>
                              </property>

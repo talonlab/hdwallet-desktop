@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'donationskgfxtN.ui'
+## Form generated from reading UI file 'donationsPqkOYZ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -66,14 +66,14 @@ class Ui_Form(object):
 
         self.closeModalButtonQFrame = QFrame(self.donationsNavbarQFrame)
         self.closeModalButtonQFrame.setObjectName(u"closeModalButtonQFrame")
-        self.closeModalButtonQFrame.setMinimumSize(QSize(40, 25))
-        self.closeModalButtonQFrame.setMaximumSize(QSize(40, 25))
+        self.closeModalButtonQFrame.setMinimumSize(QSize(35, 25))
+        self.closeModalButtonQFrame.setMaximumSize(QSize(35, 25))
         self.closeModalButtonQFrame.setFrameShape(QFrame.StyledPanel)
         self.closeModalButtonQFrame.setFrameShadow(QFrame.Raised)
         self.closeModalButtonQFrameVLayout = QVBoxLayout(self.closeModalButtonQFrame)
         self.closeModalButtonQFrameVLayout.setSpacing(0)
         self.closeModalButtonQFrameVLayout.setObjectName(u"closeModalButtonQFrameVLayout")
-        self.closeModalButtonQFrameVLayout.setContentsMargins(0, 0, 0, 0)
+        self.closeModalButtonQFrameVLayout.setContentsMargins(12, 8, 0, 0)
 
         self.horizontalLayout_7.addWidget(self.closeModalButtonQFrame)
 

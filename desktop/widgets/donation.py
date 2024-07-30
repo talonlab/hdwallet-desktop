@@ -100,8 +100,8 @@ class Donation(Modal):
         donation_ui.closeModalButtonQFrame = SvgButton(
             parent_widget=donation_ui.closeModalButtonQFrame,
             icon_path=resolve_path("desktop/ui/images/svg/icon_close.svg"),
-            icon_width=16,
-            icon_height=16
+            icon_width=9,
+            icon_height=9
         )
 
         donation_ui.closeModalButtonQFrame.clicked.connect(
