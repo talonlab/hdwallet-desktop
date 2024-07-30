@@ -54,48 +54,23 @@ QCheckBox {
 
 QCheckBox::indicator {
     background: rgb(25, 30, 36);
-    /*width: 25px;*/
-    /*height: 25px;*/
     border-radius: 2px;
-    /*margin-right: 5px;*/
-    /*border: 2px solid rgb(25, 30, 36);*/
     width: 15px;
     height: 15px;
-    /*background: rgb(16, 21, 27);*/
 }
 
 QCheckBox::indicator:hover {
     background: rgba(25, 30, 36, 100);
-    /*border: 2px solid rgba(25, 30, 36, 100);*/
 }
 
 QCheckBox::indicator:checked {
     /*background: rgb(25, 30, 36);*/
-    /*background: 2px solid #83b9ff;*/
-    background-image: url(:/png/images/png/cil-check-alt.png);
-    background-position: center;
-    background-repeat: no-reperat;
+    background: 2px solid #83b9ff;
+    /*background-image: url(:/png/images/png/cil-check-alt.png);*/
+    /*background-position: center;*/
+    /*background-repeat: no-reperat;*/
     /*border: 2px solid #83b9ff;*/
 }
-
-/*QRadioButton::indicator {*/
-/*    border: 3px solid rgb(25, 30, 36);*/
-/*    width: 15px;*/
-/*    height: 15px;*/
-/*    border-radius: 10px;*/
-/*    !*background: rgb(16, 21, 27);*!*/
-/*    background: rgb(25, 30, 36);*/
-/*}*/
-
-/*QRadioButton::indicator:hover {*/
-/*    background: rgba(25, 30, 36, 100);*/
-/*    border: 3px solid rgba(25, 30, 36, 100);*/
-/*}*/
-
-/*QRadioButton::indicator:checked {*/
-/*    !*background: 2px solid #83b9ff;*!*/
-/*    border: 3px solid #83b9ff;*/
-/*}*/
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
 QLabel */
@@ -120,7 +95,6 @@ QPushButton {
     color: rgb(255, 255, 255);
     padding: 5px 10px;
     height: 25px;
-    /*margin: 0px 10px;*/
 }
 
 QPushButton:hover {
@@ -132,10 +106,6 @@ QPushButton:hover {
 QPushButton:pressed {
     background-color: rgb(25, 30, 36);
 }
-
-/*QPushButton:disabled{*/
-/*    color: rgb(101, 101, 101);*/
-/*}*/
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
 ComboBox */
@@ -149,7 +119,6 @@ QComboBox {
 }
 
 QComboBox:disabled{
-    /*color: rgb(101, 101, 101);*/
     background-color: rgba(25, 30, 36, 0.5);
 }
 
@@ -207,8 +176,6 @@ QLineEdit {
     height: 25px;
     selection-color: #000000;
     selection-background-color: #83b9ff;
-    /*selection-color: black;*/
-    /*selection-background-color: white;*/
 }
 
 QLineEdit:hover {
@@ -220,12 +187,10 @@ QLineEdit:focus {
 }
 
 QLineEdit::disabled {
-    /*color: rgb(101, 101, 101);*/
     background-color: rgba(25, 30, 36, 0.5);
 }
 
 QPlainTextEdit {
-    /*font: 11pt "Segoe UI";*/
     background-color: #000000;
     border-color: rgb(25, 30, 36);
     border-radius: 5px;
@@ -234,13 +199,7 @@ QPlainTextEdit {
     height: 25px;
     selection-color: #000000;
     selection-background-color: #83b9ff;
-    /*selection-color: black;*/
-    /*selection-background-color: white;*/
 }
-
-/* Styles for enabled QTabBar */
-/*QTabWidget QWidget{*/
-/*    border: none;*/
 
 /*}*/
 QTabBar {
@@ -317,7 +276,7 @@ QScrollBar {
 
 /* For horizontal scrollbar */
 QScrollBar:horizontal {
-    border: none; /* Remove the border */
+    border: none;
     background: #83b9ff;
     height: 8px;
     margin: 0px 21px 0 21px;
@@ -363,10 +322,9 @@ QScrollBar::sub-page:horizontal
 
 /* For vertical scrollbar */
 QScrollBar:vertical {
-    border: none; /* Remove the border */
+    border: none;
     background: rgb(16, 21, 27);
     width: 8px;
-    /*margin: 21px 0px 21px 0px;*/
     border-radius: 4px;
 }
 
@@ -408,7 +366,7 @@ QScrollBar::sub-page:vertical{
 QGroupBox {
     border: 1px solid rgba(128, 128, 128, 0.25);
     border-radius: 4px;
-    margin-top: 1ex; /* leave space at the top for the title */
+    margin-top: 1ex;
     font: 11pt "HDWallet";
 }
 
@@ -451,7 +409,6 @@ QGroupBox::title:disabled{
 }
 
 #outputTerminalActionQWidget{
-    /*background-color: rgb(0, 0, 0);*/
     background-color: transparent;
  }
 
@@ -583,9 +540,16 @@ QTabBar::tab:focus {
 #toastQFrame QLabel{
     font: 10pt "Tahoma";
 }
+#closeModalButtonQFrame QSvgWidget{
+    background-color: transparent;
+}
 
-#closeModalQPushButton:hover{
-    background-color: #ef3838;
+#closeModalButtonQFrame {
+    border-radius: 6px;
+}
+
+#closeModalButtonQFrame:hover{
+    background-color: #e22828;
 }
 
 #electrumV1FromWIFBIP38PassphraseQCheckBox,

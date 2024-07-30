@@ -16,7 +16,7 @@ from desktop.widgets.modal import Modal
 from desktop.widgets.svg_button import SvgButton
 from desktop.ui.ui_donations import Ui_Form
 from desktop.addresses import crypto_addresses
-from desktop.utils import put_qr_code
+from desktop.utils import put_qr_code, resolve_path
 from desktop.utils.clipboard import copy_to_clipboard
 
 
@@ -97,7 +97,16 @@ class Donation(Modal):
         donation_ui.setupUi(main_widget)
         frame.ui = donation_ui
 
-        donation_ui.closeModalQPushButton.clicked.connect(frame.close)
+        donation_ui.closeModalButtonQFrame = SvgButton(
+            parent_widget=donation_ui.closeModalButtonQFrame,
+            icon_path=resolve_path("desktop/ui/images/svg/icon_close.svg"),
+            icon_width=16,
+            icon_height=16
+        )
+
+        donation_ui.closeModalButtonQFrame.clicked.connect(
+            lambda: frame.close()
+            )
 
         donation_ui.donationsCoreTeamQPushButton.clicked.connect(frame.show_core)
         donation_ui.donationsCharityQPushButton.clicked.connect(frame.show_charity)
