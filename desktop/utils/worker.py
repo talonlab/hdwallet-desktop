@@ -74,13 +74,13 @@ class Worker(QRunnable):
         """
         while self.alive:
             if self.remaining <= 0:
-                #try: 
-                result: Any = self.function(*self.args, **self.kwargs)
-                if self.alive:
-                    self.signals.interval_finished.emit(result)
-                # #except Exception as e:
-                #     if self.alive:
-                #         self.signals.interval_error.emit(e)
+                try: 
+                    result: Any = self.function(*self.args, **self.kwargs)
+                    if self.alive:
+                        self.signals.interval_finished.emit(result)
+                except Exception as e:
+                    if self.alive:
+                        self.signals.interval_error.emit(e)
                 if self.interval is None:
                     break
                 self.remaining = self.interval
