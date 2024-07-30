@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'donationsBgozox.ui'
+## Form generated from reading UI file 'donationsPqkOYZ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -64,11 +64,18 @@ class Ui_Form(object):
 
         self.horizontalLayout_7.addWidget(self.frame_9)
 
-        self.closeDonationsQPushButton = QPushButton(self.donationsNavbarQFrame)
-        self.closeDonationsQPushButton.setObjectName(u"closeDonationsQPushButton")
-        self.closeDonationsQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.closeModalButtonQFrame = QFrame(self.donationsNavbarQFrame)
+        self.closeModalButtonQFrame.setObjectName(u"closeModalButtonQFrame")
+        self.closeModalButtonQFrame.setMinimumSize(QSize(35, 25))
+        self.closeModalButtonQFrame.setMaximumSize(QSize(35, 25))
+        self.closeModalButtonQFrame.setFrameShape(QFrame.StyledPanel)
+        self.closeModalButtonQFrame.setFrameShadow(QFrame.Raised)
+        self.closeModalButtonQFrameVLayout = QVBoxLayout(self.closeModalButtonQFrame)
+        self.closeModalButtonQFrameVLayout.setSpacing(0)
+        self.closeModalButtonQFrameVLayout.setObjectName(u"closeModalButtonQFrameVLayout")
+        self.closeModalButtonQFrameVLayout.setContentsMargins(12, 8, 0, 0)
 
-        self.horizontalLayout_7.addWidget(self.closeDonationsQPushButton, 0, Qt.AlignRight)
+        self.horizontalLayout_7.addWidget(self.closeModalButtonQFrame)
 
 
         self.verticalLayout_2.addWidget(self.donationsNavbarQFrame)
@@ -378,7 +385,6 @@ class Ui_Form(object):
         self.donationsQLabel.setText(QCoreApplication.translate("Form", u"Donations", None))
         self.donationsCoreTeamQPushButton.setText(QCoreApplication.translate("Form", u"Core Team", None))
         self.donationsCharityQPushButton.setText(QCoreApplication.translate("Form", u"Charity", None))
-        self.closeDonationsQPushButton.setText(QCoreApplication.translate("Form", u"X", None))
         self.donationsQRCodeQLabel.setText(QCoreApplication.translate("Form", u"QR Code", None))
         self.donationsAddressQLabel.setText(QCoreApplication.translate("Form", u"Address", None))
         self.donationsAddressCopyQPushButton.setText(QCoreApplication.translate("Form", u"Copy", None))

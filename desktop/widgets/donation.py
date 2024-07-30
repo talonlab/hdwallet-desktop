@@ -7,135 +7,30 @@
 # file COPYING or https://opensource.org/license/mit
 import os
 
-import qrcode
-from PIL.ImageQt import ImageQt, Image
-
 from PySide6.QtWidgets import (
     QWidget, QFrame, QVBoxLayout, QLabel
 )
-from PySide6.QtCore import QEvent, Qt, Signal
-from PySide6.QtGui import QPixmap
+from PySide6.QtCore import Qt
 
+from desktop.widgets.modal import Modal
 from desktop.widgets.svg_button import SvgButton
 from desktop.ui.ui_donations import Ui_Form
-from desktop.utils.clipboard import copy_to_clipboard
 from desktop.addresses import crypto_addresses
+from desktop.utils import put_qr_code, resolve_path
+from desktop.utils.clipboard import copy_to_clipboard
 
 
-class ClickableFrame(QFrame):
+class Donation(Modal):
     """
-    A custom QFrame that emits a clicked signal when pressed.
+    Donation modal implementation
     """
-    clicked = Signal()
-
-    def mousePressEvent(self, event: QEvent) -> None:
-        """
-        Override the mousePressEvent to emit a clicked signal.
-
-        :param event: The mouse press event.
-        """
-        if event.button() == Qt.LeftButton:
-            self.clicked.emit()
-
-
-class Donation(QFrame):
-    """
-    A custom QFrame to handle donations, including UI setup and QR code generation.
-    """
-    def __init__(self, *args, **kwargs) -> None:
+    def __init__(self, parent, parent_frame) -> None:
         """
         Initialize the Donation frame.
         """
-        super(Donation, self).__init__(*args, **kwargs)
-        QVBoxLayout(self)
-
+        super(Donation, self).__init__(parent, parent_frame)
         self.ui: Optional[Ui_Form] = None
-        self.margin: int = 15
-        self.width: int = 465
-        self.height: int = 565
 
-        self.overlay_frame: ClickableFrame = ClickableFrame(self.parent())
-        self.overlay_frame.setStyleSheet("background-color: rgba(0, 0, 0, 128);")
-        self.overlay_frame.clicked.connect(self.close)
-
-        self.modal_parent_frame = self.parent().findChild(QFrame, "hdWalletContainerQFrame")
-        self.modal_parent_frame.installEventFilter(self)
-
-        self.setObjectName("modalQFrame")
-
-    def re_adjust(self) -> None:
-        """
-        Re-adjust the frame and overlay positions.
-        """
-        parent_rect = self.parent().rect()
-        geo = self.modal_parent_frame.geometry()
-        geo.setHeight(geo.height())
-
-        x_pos = geo.width() / 2 - self.width / 2
-        y_pos = geo.height() / 2 - self.height / 2
-        self.setGeometry(x_pos, y_pos, self.width, self.height)
-
-        self.overlay_frame.setGeometry(0, 0, geo.width(), geo.height())
-
-    def eventFilter(self, obj: QFrame, event: QEvent) -> bool:
-        """
-        Override the event filter to handle resize events.
-
-        :param obj: The object being filtered.
-        :param event: The event being filtered.
-        :return: True if the event should be filtered out, False otherwise.
-        """
-        if event.type() == QEvent.Resize:
-            self.re_adjust()
-        return super().eventFilter(obj, event)
-
-    def show(self) -> None:
-        """
-        Override the show method to display the overlay frame and re-adjust the layout.
-        """
-        self.overlay_frame.show()
-        self.raise_()
-        super().show()
-
-    def closeEvent(self, event: QEvent) -> None:
-        """
-        Handle the close event, deleting the overlay frame.
-
-        :param event: The close event.
-        """
-        self.overlay_frame.deleteLater()
-        self.deleteLater()
-
-    def update_receive_qr(self, qr_label: QLabel, text: str) -> None:
-        """
-        Generate and update a QR code for receiving cryptocurrency.
-
-        :param qr_label: The QLabel to display the QR code.
-        :param text: The text data to encode in the QR code.
-        """
-        qr_label.setText(None)
-
-        qr = qrcode.QRCode(
-            version=1,
-            error_correction=qrcode.constants.ERROR_CORRECT_L,
-            box_size=10,
-            border=4,
-        )
-        qr.add_data(text)
-        qr.make(fit=True)
-
-        img = qr.make_image(
-            fill_color="white",
-            back_color="#191e24"
-        )
-
-        qimage = ImageQt(img)
-
-        pixmap = QPixmap.fromImage(qimage)
-
-        qr_label.setPixmap(pixmap)
-        qr_label.setAlignment(Qt.AlignCenter)
-        qr_label.setScaledContents(True)
 
     def __update_btns(self) -> None:
         """
@@ -174,7 +69,7 @@ class Donation(QFrame):
         addr = crypto_addresses[crypto]
         self.core_addr = addr
         self.ui.donationsAddressQLabel.setText(f"{addr[:15]}...{addr[-10:]}")
-        self.update_receive_qr(self.ui.donationsQRCodeQLabel, addr)
+        put_qr_code(self.ui.donationsQRCodeQLabel, addr)
 
     def charity_crypto_changed(self) -> None:
         """
@@ -184,16 +79,17 @@ class Donation(QFrame):
         addr = crypto_addresses[crypto]
         self.charity_addr = addr
         self.ui.donationsCharityAddressQLabel.setText(f"{addr[:15]}...{addr[-10:]}")
-        self.update_receive_qr(self.ui.donationsCharityQRCodeQLabel, addr)
+        put_qr_code(self.ui.donationsCharityQRCodeQLabel, addr)
 
     @staticmethod
-    def show_donation(main_window: QWidget) -> None:
+    def show_donation_modal(main_window: QWidget, parent_frame: QWidget) -> None:
         """
         Display the donation frame within the given main window.
 
         :param main_window: The main application window.
+        :param parent_frame: Modal parent frame
         """
-        frame: Donation = Donation(main_window)
+        frame: Donation = Donation(parent=main_window, parent_frame=parent_frame)
 
         main_widget = QWidget()
         main_widget.setContentsMargins(0, 0, 0, 0)
@@ -201,7 +97,16 @@ class Donation(QFrame):
         donation_ui.setupUi(main_widget)
         frame.ui = donation_ui
 
-        donation_ui.closeDonationsQPushButton.clicked.connect(frame.close)
+        donation_ui.closeModalButtonQFrame = SvgButton(
+            parent_widget=donation_ui.closeModalButtonQFrame,
+            icon_path=resolve_path("desktop/ui/images/svg/icon_close.svg"),
+            icon_width=9,
+            icon_height=9
+        )
+
+        donation_ui.closeModalButtonQFrame.clicked.connect(
+            lambda: frame.close()
+            )
 
         donation_ui.donationsCoreTeamQPushButton.clicked.connect(frame.show_core)
         donation_ui.donationsCharityQPushButton.clicked.connect(frame.show_charity)

@@ -14,7 +14,7 @@ class Toast(QFrame):
         super(Toast, self).__init__(*args, **kwargs)
         QHBoxLayout(self)
 
-        self.margin = -10
+        self.margin = 60
 
         self.timer = QTimer(singleShot=True, timeout=self.dispose)
 
@@ -36,7 +36,8 @@ class Toast(QFrame):
         geo = self.geometry()
         parent = self.parent() if not frame else frame
         x_pos = parent.geometry().x() + (parent.rect().bottomRight().x() / 2) - (self.width() / 2)  # parent windows center
-        geo.moveBottomLeft(parent.rect().bottomLeft() + QPoint(x_pos, -self.margin))
+        y_pos = parent.geometry().y() + parent.geometry().height() - self.margin
+        geo.moveTo(QPoint(x_pos, y_pos))
         self.setGeometry(geo)
 
     def closeEvent(self, event):

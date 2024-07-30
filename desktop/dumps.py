@@ -74,6 +74,7 @@ class Dumps:
         self.ui.dumpsSaveAndGenerateQPushButton.clicked.connect(
             lambda: self._dumps(save=True)
         )
+        self.ui.dumpsGenerateQPushButton.clicked.connect(self._dumps)
 
         self.script_semantics = ["P2WPKH", "P2WPKH_IN_P2SH", "P2WSH", "P2WSH_IN_P2SH"]
 
@@ -232,13 +233,13 @@ class Dumps:
         self.ui.bipFromEntropyLanguageQComboBox.addItems([i.title() for i in BIP39Mnemonic.languages])
         self.ui.bipFromEntropyLanguageQComboBox.setCurrentText("English")
 
-        self.ui.bipFromEntropyLanguageQComboBox.clear()
-        self.ui.bipFromEntropyLanguageQComboBox.addItems([i.title() for i in BIP39Mnemonic.languages])
-        self.ui.bipFromEntropyLanguageQComboBox.setCurrentText("English")
-
         self.ui.cardanoFromEntropyLanguageQComboBox.clear()
         self.ui.cardanoFromEntropyLanguageQComboBox.addItems([i.title() for i in BIP39Mnemonic.languages])
         self.ui.cardanoFromEntropyLanguageQComboBox.setCurrentText("English")
+
+        self.ui.electrumV1FromEntropyLanguageQComboBox.clear()
+        self.ui.electrumV1FromEntropyLanguageQComboBox.addItems([i.title() for i in ElectrumV1Mnemonic.languages])
+        self.ui.electrumV1FromEntropyLanguageQComboBox.setCurrentText("English")
 
         self.ui.electrumV2FromEntropyLanguageQComboBox.clear()
         self.ui.electrumV2FromEntropyLanguageQComboBox.addItems([i.title() for i in ElectrumV2Mnemonic.languages])
@@ -248,14 +249,12 @@ class Dumps:
         self.ui.moneroFromEntropyLanguageQComboBox.addItems([i.title() for i in MoneroMnemonic.languages])
         self.ui.moneroFromEntropyLanguageQComboBox.setCurrentText("English")
 
-        self.ui.electrumV2FromEntropyMnemonicTypeQComboBox.addItems(
-            [i.title() for i in ElectrumV2Mnemonic.mnemonic_types.keys()])
+        self.ui.electrumV2FromEntropyMnemonicTypeQComboBox.addItems([i.title() for i in ElectrumV2Mnemonic.mnemonic_types.keys()])
         self.ui.electrumV2FromEntropyModeQComboBox.addItems([i.title() for i in ELECTRUM_V2_MODES.get_modes()])
         self.ui.electrumV2FromEntropyMnemonicTypeQComboBox.setCurrentIndex(0)
         self.ui.electrumV2FromEntropyModeQComboBox.setCurrentIndex(0)
 
-        self.ui.electrumV2FromMnemonicMnemonicTypeQComboBox.addItems(
-            [i.title() for i in ElectrumV2Mnemonic.mnemonic_types.keys()])
+        self.ui.electrumV2FromMnemonicMnemonicTypeQComboBox.addItems([i.title() for i in ElectrumV2Mnemonic.mnemonic_types.keys()])
         self.ui.electrumV2FromMnemonicModeQComboBox.addItems([i.title() for i in ELECTRUM_V2_MODES.get_modes()])
         self.ui.electrumV2FromMnemonicMnemonicTypeQComboBox.setCurrentIndex(0)
         self.ui.electrumV2FromMnemonicModeQComboBox.setCurrentIndex(0)
@@ -314,7 +313,6 @@ class Dumps:
             pair[2].setEnabled(False)
             pair[0].setCurrentIndex(0)
 
-        self.ui.dumpsGenerateQPushButton.clicked.connect(self._dumps)
 
     def __pair_ca_address_type(self, c_addr, c_list, idx):
         if c_list.currentText().lower().startswith("shelley"):
