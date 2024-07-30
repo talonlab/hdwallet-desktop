@@ -6,10 +6,20 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit
 
-from PySide6.QtWidgets import QFrame, QVBoxLayout
-from PySide6.QtCore import QEvent, Qt, Signal
+from PySide6.QtWidgets import (
+    QFrame, QVBoxLayout, QGraphicsBlurEffect,
+    QGraphicsPixmapItem, QGraphicsScene
+)
+from PySide6.QtGui import (
+    QPixmap, QPainter
+)
+from PySide6.QtCore import (
+    QEvent, Qt, Signal,
+    QSize, QRectF
+)
 
-class ClickableFrame(QFrame):
+
+class OverlayFrame(QFrame):
     """
     A custom QFrame that emits a clicked signal when pressed.
     """
@@ -29,19 +39,19 @@ class Modal(QFrame):
     """
     A custom modal implementation.
     """
-    def __init__(self, *args, **kwargs) -> None:
+    def __init__(self, parent, parent_frame) -> None:
         """
         Initialize the Modal frame.
         """
-        self.parent_frame = kwargs.pop('parent_frame', None)
-        super(Modal, self).__init__(*args, **kwargs)
+        super(Modal, self).__init__(parent)
         QVBoxLayout(self)
 
         self.margin: int = 15
         self.width: int = 465
         self.height: int = 565
 
-        self.overlay_frame: ClickableFrame = ClickableFrame(self.parent())
+        self.parent_frame = parent_frame
+        self.overlay_frame: OverlayFrame = OverlayFrame(self.parent())
         self.overlay_frame.setStyleSheet("background-color: rgba(0, 0, 0, 128);")
         self.overlay_frame.clicked.connect(self.close)
 

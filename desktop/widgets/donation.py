@@ -24,11 +24,11 @@ class Donation(Modal):
     """
     Donation modal implementation
     """
-    def __init__(self, *args, **kwargs) -> None:
+    def __init__(self, parent, parent_frame) -> None:
         """
         Initialize the Donation frame.
         """
-        super(Donation, self).__init__(*args, **kwargs)
+        super(Donation, self).__init__(parent, parent_frame)
         self.ui: Optional[Ui_Form] = None
 
 
