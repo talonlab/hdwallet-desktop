@@ -7,15 +7,10 @@
 # file COPYING or https://opensource.org/license/mit
 
 from PySide6.QtWidgets import (
-    QFrame, QVBoxLayout, QGraphicsBlurEffect,
-    QGraphicsPixmapItem, QGraphicsScene
-)
-from PySide6.QtGui import (
-    QPixmap, QPainter
+    QFrame, QVBoxLayout
 )
 from PySide6.QtCore import (
-    QEvent, Qt, Signal,
-    QSize, QRectF
+    QEvent, Qt, Signal
 )
 
 
