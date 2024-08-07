@@ -79,44 +79,44 @@ class Dumps:
         self.script_semantics = ["P2WPKH", "P2WPKH_IN_P2SH", "P2WSH", "P2WSH_IN_P2SH"]
 
         self.stack_hd_widgets = {
-            'BIP32': "bipsPageQWidget",
-            'BIP44': "bipsPageQWidget",
-            'BIP49': "bipsPageQWidget",
-            'BIP84': "bipsPageQWidget",
-            'BIP86': "bipsPageQWidget",
-            'BIP141': "bipsPageQWidget",
-            'Cardano': "cardanoPageQWidget",
-            'Electrum-V1': "electrumV1PageQWidget",
-            'Electrum-V2': "electrumV2PageQWidget",
-            'Monero': "moneroPageQWidget"
+            "BIP32": "bipsPageQWidget",
+            "BIP44": "bipsPageQWidget",
+            "BIP49": "bipsPageQWidget",
+            "BIP84": "bipsPageQWidget",
+            "BIP86": "bipsPageQWidget",
+            "BIP141": "bipsPageQWidget",
+            "Cardano": "cardanoPageQWidget",
+            "Electrum-V1": "electrumV1PageQWidget",
+            "Electrum-V2": "electrumV2PageQWidget",
+            "Monero": "moneroPageQWidget"
         }
 
-        self.hd_drivable_methods = {
-            'BIP32': ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"],
-            'BIP44': ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"],
-            'BIP49': ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"],
-            'BIP84': ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"],
-            'BIP86': ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"],
-            'BIP141': ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"],
-            'Electrum-V1': ["Entropy", "Mnemonic", "Private key", "Public key", "Seed", "WIF"],
-            'Electrum-V2': ["Entropy", "Mnemonic", "Seed"],
-            'Cardano': ["Entropy", "Mnemonic", "Seed", "XPrivate key", "XPublic key"],
-            'Monero': ["Entropy", "Mnemonic", "Private key", "Seed", "Spend private key", "Watch only"]
+        self.hd_undrivable_methods = {
+            "BIP32": ["WIF", "Private key", "Public key"],
+            "BIP44": ["WIF", "Private key", "Public key"],
+            "BIP49": ["WIF", "Private key", "Public key"],
+            "BIP84": ["WIF", "Private key", "Public key"],
+            "BIP86": ["WIF", "Private key", "Public key"],
+            "BIP141": ["WIF", "Private key", "Public key"],
+            "Electrum-V1": [],
+            "Electrum-V2": [],
+            "Cardano": ["Private key", "Public key"],
+            "Monero": []
         }
 
         self.hd_allowed_derivation = {
-            'BIP32': ["Custom", "BIP44", "BIP49", "BIP84", "BIP86", "BIP141", "CIP1852", "HDW"],
-            'BIP32XPUB': ["Custom", "BIP141"],
-            'BIP44': ["BIP44"],
-            'BIP49': ["BIP49"],
-            'BIP84': ["BIP84"],
-            'BIP86': ["BIP86"],
-            'BIP141': ["BIP141"],
-            'Cardano': ["Custom", "BIP44", "CIP1852"],
-            'CardanoXPUB': ["Custom"],
-            'Electrum-V1': ["Electrum"],
-            'Electrum-V2': ["Electrum"],
-            'Monero': ["Monero"]
+            "BIP32": ["Custom", "BIP44", "BIP49", "BIP84", "BIP86", "BIP141", "CIP1852", "HDW"],
+            "BIP32XPUB": ["Custom", "BIP141"],
+            "BIP44": ["BIP44"],
+            "BIP49": ["BIP49"],
+            "BIP84": ["BIP84"],
+            "BIP86": ["BIP86"],
+            "BIP141": ["BIP141"],
+            "Cardano": ["Custom", "BIP44", "CIP1852"],
+            "CardanoXPUB": ["Custom"],
+            "Electrum-V1": ["Electrum"],
+            "Electrum-V2": ["Electrum"],
+            "Monero": ["Monero"]
         }
 
         self.derivation_tab = OrderedDict()
@@ -219,9 +219,22 @@ class Dumps:
             }
         }
 
+        self.custom_paths = {
+            "Custom": None,
+            "Bitcoin Core": "m/0'/0'",
+            "blockchain.info": "m/44'/0'/0'",
+            "MultiBit HD": "m/0'/0",
+            "Coinomi, Ledger": "m/44'/0'/0'"
+        }
+
         for name, data in self.derivation_tab.items():
             data["button"].clicked.connect(
                 functools.partial(self.derivation_tab_changed, data["widget"], data["button"]))
+
+        self.ui.customClientQComboBox.clear()
+        self.ui.customClientQComboBox.addItems(self.custom_paths.keys())
+        self.ui.customClientQComboBox.currentIndexChanged.connect(self._custom_path_client_changed)
+        self.ui.customClientQComboBox.setCurrentIndex(0)
 
         self.ui.hdwEccQComboBox.clear()
         self.ui.hdwEccQComboBox.addItems(HDWDerivation.eccs.keys())
@@ -952,7 +965,7 @@ class Dumps:
 
         self.app.change_page(current_from_stack, current_from_widget)
 
-        is_drived = dump_from in self.hd_drivable_methods[current_hd]
+        is_drived = dump_from not in self.hd_undrivable_methods[current_hd]
         self.ui.derivationQGroupBox.setEnabled(is_drived)
 
         if is_drived:
@@ -967,3 +980,11 @@ class Dumps:
     def derivation_tab_changed(self, page_name: str, qPushButton: QPushButton) -> None:
         widget = self.ui.derivationTabButtonsContainerQFrame
         self.app.tab_changed("derivationsQStackedWidget", page_name, qPushButton, widget)
+
+    def _custom_path_client_changed(self):
+        path = self.custom_paths[self.ui.customClientQComboBox.currentText()]
+        
+        if path != None:
+            self.ui.customPathQLineEdit.setText(path)
+
+        self.ui.customPathQLineEdit.setEnabled(path == None)
