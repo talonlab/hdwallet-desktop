@@ -7,12 +7,14 @@
 # file COPYING or https://opensource.org/license/mit
 
 from PySide6.QtCore import (
-    QThreadPool, QRegularExpression, Slot
+    QThreadPool, QRegularExpression, Slot, Qt, QSize
 )
 from PySide6.QtWidgets import (
-    QSizePolicy, QWidget, QPushButton, QLineEdit
+    QSizePolicy, QWidget, QPushButton, QLineEdit, QPushButton
 )
-from PySide6.QtGui import QRegularExpressionValidator
+from PySide6.QtGui import (
+    QRegularExpressionValidator, QCursor
+)
 from click.testing import CliRunner
 from hdwallet.cli.__main__ import cli_main
 
@@ -24,7 +26,6 @@ import subprocess
 
 from desktop.utils import resolve_path
 from desktop.widgets.core import *
-from desktop.widgets.svg_button import SvgButton
 from desktop.widgets.donation import Donation
 from desktop.utils.worker import Worker
 from desktop.utils.highlighter import Highlighter
@@ -51,19 +52,21 @@ class MainApplication:
         """
         Initialize the UI components and their connections.
         """
-        self.ui.toggle_expand_terminal = SvgButton(
-            parent_widget=self.ui.expandAndCollapseTerminalQFrame,
-            icon_path=resolve_path("desktop/ui/images/svg/expand-white-thin.svg"),
-            alt_icon_path=resolve_path("desktop/ui/images/svg/collapse-white-thin.svg"),
-            icon_width=20,
-            icon_height=20
-        )
+
+        self.terminal_expand_icon = QIcon(resolve_path("desktop/ui/images/svg/expand-white-thin.svg"))
+        self.terminal_collapse_icon = QIcon(resolve_path("desktop/ui/images/svg/collapse-white-thin.svg"))
+
+        self.ui.toggle_expand_terminal = QPushButton(None)
         self.ui.toggle_expand_terminal.setCheckable(True)
-        self.ui.toggle_expand_terminal.toggled.connect(
-            lambda: self.app.toggle_expand(
-                self.ui.toggle_expand_terminal.isChecked()
-            )
-        )
+        self.ui.toggle_expand_terminal.setChecked(False)
+        self.ui.toggle_expand_terminal.setIcon(self.terminal_expand_icon)
+        self.ui.toggle_expand_terminal.setIconSize(QSize(20, 20))
+
+        self.ui.toggle_expand_terminal.setCursor(QCursor(Qt.PointingHandCursor))
+        self.ui.toggle_expand_terminal.toggled.connect(self._toggle_terminal)
+
+        self.ui.expandAndCollapseTerminalQFrame.layout().addWidget(self.ui.toggle_expand_terminal)
+
         self.ui.outputTerminalQLineEdit.returnPressed.connect(self.process_command)
         self.ui.outputTerminalQPushButton.clicked.connect(self.process_command)
         self.ui.clearTerminalQPushButton.clicked.connect(self.ui.outputTerminalQPlainTextEdit.clear)
@@ -176,3 +179,12 @@ class MainApplication:
         """
         widget = self.ui.generateAndDumpTabContainerQFrame
         self.app.tab_changed("hdwalletQStackedWidget", page_name, qPushButton, widget)
+
+    def _toggle_terminal(self) -> None:
+        """
+        Toggles terminal expand/collapse (detach/attach)
+        """
+        state = self.ui.toggle_expand_terminal.isChecked()
+        icon = self.terminal_collapse_icon if state else self.terminal_expand_icon
+        self.ui.toggle_expand_terminal.setIcon(icon)
+        self.app.toggle_expand(state)
