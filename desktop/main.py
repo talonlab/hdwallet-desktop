@@ -95,7 +95,7 @@ class MainApplication:
             QSizePolicy.Expanding, QSizePolicy.Expanding
         )
         self.ui.helpHDWalletQPushButton.clicked.connect(
-            lambda: os.startfile(resolve_path("docs/static/hdwallet.pdf"))
+            lambda: os.startfile(resolve_path("desktop/data/hdwallet.pdf"))
         )
 
         inputs = [
