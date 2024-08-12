@@ -6,6 +6,7 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit
 
+import inspect
 import functools
 import json
 import os
@@ -16,6 +17,10 @@ from PySide6.QtWidgets import (
     QPushButton, QFileDialog
 )
 from PySide6.QtCore import QThreadPool
+
+from bip38 import (
+    cryptocurrencies, BIP38
+)
 
 from hdwallet import HDWallet
 from hdwallet.hds import HDS
@@ -219,6 +224,11 @@ class Dumps:
             }
         }
 
+        self.bip38_cryptocurrencies = {
+            name: cls for name, cls in inspect.getmembers(cryptocurrencies, inspect.isclass)
+            if issubclass(cls, cryptocurrencies.ICryptocurrency)
+        }
+
         self.custom_paths = {
             "Custom": None,
             "Bitcoin Core": "m/0'/0'",
@@ -283,6 +293,31 @@ class Dumps:
 
         self.ui.electrumV2FromSeedModeQComboBox.addItems([i.title() for i in ELECTRUM_V2_MODES.get_modes()])
         self.ui.electrumV2FromSeedModeQComboBox.setCurrentIndex(0)
+
+        # BIPs WIF BIP38 events
+        self.ui.bipFromWIFBIP38PassphraseQLineEdit.setEnabled(False)
+        self.ui.bipFromWIFBIP38PassphraseQCheckBox.setChecked(False)
+        self.ui.bipFromWIFBIP38PassphraseQCheckBox.toggled.connect(
+            lambda:
+                self._bip38_toggled(
+                    self.ui.bipFromWIFBIP38PassphraseQCheckBox,
+                    self.ui.bipFromWIFBIP38PassphraseQLineEdit,
+                    self.ui.bipFromWIFQLabel
+                )
+        )
+
+        # ElectrumV2 WIF BIP38 events
+        self.ui.electrumV1FromWIFBIP38PassphraseQLineEdit.setEnabled(False)
+        self.ui.electrumV1FromWIFBIP38PassphraseQCheckBox.setChecked(False)
+        self.ui.electrumV1FromWIFBIP38PassphraseQCheckBox.toggled.connect(
+            lambda:
+                self._bip38_toggled(
+                    self.ui.electrumV1FromWIFBIP38PassphraseQCheckBox,
+                    self.ui.electrumV1FromWIFBIP38PassphraseQLineEdit,
+                    self.ui.electrumV1FromWIFQLabel
+                )
+        )
+
 
         cardano_and_address_type = [
             (
@@ -650,8 +685,19 @@ class Dumps:
             )
         elif dump_from == "WIF":
             hd_kwargs["public_key_type"] = self.ui.bipFromWIFPublicKeyTypeQComboBox.currentText().lower()
+            wif = self.ui.bipFromWIFQLineEdit.text()
+
+            if self.ui.bipFromWIFBIP38PassphraseQCheckBox.isChecked():
+                crypto_name = hd_kwargs["cryptocurrency"].NAME
+                passphrase = self.ui.bipFromWIFBIP38PassphraseQLineEdit.text()
+
+                bip38: BIP38 = BIP38(
+                  cryptocurrency=self.bip38_cryptocurrencies[crypto_name] , network=hd_kwargs["network"]
+                )
+                wif = bip38.decrypt(encrypted_wif=wif, passphrase=passphrase)
+
             return HDWallet(**hd_kwargs).from_wif(
-                wif=self.ui.bipFromWIFQLineEdit.text()
+                wif=wif
             )
         elif dump_from == "XPrivate key":
             hd_kwargs["public_key_type"] = self.ui.bipFromXPrivateKeyPublicKeyTypeQComboBox.currentText().lower()
@@ -767,8 +813,20 @@ class Dumps:
             )
         elif dump_from == "WIF":
             hd_kwargs["public_key_type"] = self.ui.electrumV1FromWIFPublicKeyTypeQComboBox.currentText().lower()
+            wif = self.ui.electrumV1FromWIFQLineEdit.text()
+
+            if self.ui.electrumV1FromWIFBIP38PassphraseQCheckBox.isChecked():
+                crypto_name = hd_kwargs["cryptocurrency"].NAME
+                passphrase = self.ui.electrumV1FromWIFBIP38PassphraseQLineEdit.text()
+
+                bip38: BIP38 = BIP38(
+                  cryptocurrency=self.bip38_cryptocurrencies[crypto_name] , network=hd_kwargs["network"]
+                )
+                wif = bip38.decrypt(encrypted_wif=wif, passphrase=passphrase)
+
+
             return HDWallet(**hd_kwargs).from_wif(
-                wif=self.ui.electrumV1FromWIFQLineEdit.text()
+                wif=wif
             )
 
     def _dump_ev2(self, dump_from, hd_kwargs):
@@ -876,6 +934,14 @@ class Dumps:
             self.ui.bip86CoinTypeQLineEdit,
             self.ui.cip1852CoinTypeQLineEdit
         ]
+
+        is_bip38_supported = crypto_obj.NAME in self.bip38_cryptocurrencies
+
+        self.ui.bipFromWIFBIP38PassphraseQCheckBox.setChecked(False)
+        self.ui.bipFromWIFBIP38PassphraseQCheckBox.setEnabled(is_bip38_supported)
+        self.ui.electrumV1FromWIFBIP38PassphraseQCheckBox.setChecked(False)
+        self.ui.electrumV1FromWIFBIP38PassphraseQCheckBox.setEnabled(is_bip38_supported)
+        
 
         for c in coin_typs_derviation: c.setText(str(crypto_obj.COIN_TYPE))
 
@@ -988,3 +1054,13 @@ class Dumps:
             self.ui.customPathQLineEdit.setText(path)
 
         self.ui.customPathQLineEdit.setEnabled(path == None)
+
+    def _bip38_toggled(self, chkbox, passphrase, lable):
+        chkbox_state = chkbox.isChecked()
+        passphrase.setText(None)
+        passphrase.setEnabled(chkbox_state)
+
+        if chkbox_state:
+            lable.setText("Encrypted Wallet Important Format")
+        else:
+            lable.setText("Wallet Important Format")
