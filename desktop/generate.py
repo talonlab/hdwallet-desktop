@@ -51,12 +51,12 @@ class Generate:
 
     def _setup_generate_stack(self):
         self.ui.generateEntropyClientQComboBox.addItems(ENTROPIES.names())
-        self.ui.generateEntropyClientQComboBox.currentIndexChanged.connect(self._generate_entropy_change)
+        self.ui.generateEntropyClientQComboBox.currentTextChanged.connect(self._generate_entropy_change)
         self.ui.generateEntropyClientQComboBox.setCurrentText(BIP39Entropy.name())
         self.ui.generateEntropyClientAndStrengthQPushButton.clicked.connect(self._generate_entropy)
 
         self.ui.generateMnemonicClientQComboBox.addItems(MNEMONICS.names())
-        self.ui.generateMnemonicClientQComboBox.currentIndexChanged.connect(self._generate_mnemonic_change)
+        self.ui.generateMnemonicClientQComboBox.currentTextChanged.connect(self._generate_mnemonic_change)
         self.ui.generateMnemonicClientQComboBox.setCurrentText(BIP39Mnemonic.name())
         self.ui.generateMnemonicClientWordsAndLanguageQPushButton.clicked.connect(self._generate_mnemonic)
 
@@ -65,9 +65,9 @@ class Generate:
         self.ui.generateMnemonicWordsQRadioButton.setChecked(True)
 
         self.ui.generateSeedClientQComboBox.addItems(SEEDS.names())
-        self.ui.generateSeedClientQComboBox.currentIndexChanged.connect(self._generate_seed_change)
+        self.ui.generateSeedClientQComboBox.currentTextChanged.connect(self._generate_seed_change)
         self.ui.generateSeedClientQComboBox.setCurrentText(BIP39Mnemonic.name())
-        self.ui.generateSeedCardanoTypeQComboBox.currentIndexChanged.connect(self._cardano_type_changed)
+        self.ui.generateSeedCardanoTypeQComboBox.currentTextChanged.connect(self._cardano_type_changed)
         self.ui.generateSeedPassphraseGenerateQPushButton.clicked.connect(self._generate_seed)
 
         self.ui.generateLengthQLineEdit.setText("12")
@@ -86,8 +86,7 @@ class Generate:
 
         self.ui.generatePassphraseQPushButton.clicked.connect(self._generate_passphrase)
 
-    def _generate_entropy_change(self):
-        entropy_client = self.ui.generateEntropyClientQComboBox.currentText()
+    def _generate_entropy_change(self, entropy_client):
         self.ui.generateEntropyStrengthQComboBox.clear()
         self.ui.generateEntropyStrengthQComboBox.addItems(
             map(
@@ -109,8 +108,7 @@ class Generate:
 
         self.app.println(output)
 
-    def _generate_mnemonic_change(self):
-        mnemonic_client = self.ui.generateMnemonicClientQComboBox.currentText()
+    def _generate_mnemonic_change(self, mnemonic_client):
         self.ui.generateMnemonicWordsQComboBox.clear()
         self.ui.generateMnemonicLanguageQComboBox.clear()
 
@@ -175,9 +173,7 @@ class Generate:
 
         self.app.println(output)
 
-    def _generate_seed_change(self):
-        seed_client = self.ui.generateSeedClientQComboBox.currentText()
-
+    def _generate_seed_change(self, seed_client):
         self.ui.generateSeedCardanoTypeQComboBox.setCurrentIndex(-1)
         self.ui.generateSeedMnemonicTypeQComboBox.setCurrentIndex(-1)
 
@@ -197,8 +193,8 @@ class Generate:
         if seed_client in (BIP39Seed.name(), ElectrumV2Seed.name()):
             self.ui.generateSeedPassphraseGenerateContainerQFrame.setEnabled(True)
 
-    def _cardano_type_changed(self):
-        cardano_type = self.ui.generateSeedCardanoTypeQComboBox.currentText().lower()
+    def _cardano_type_changed(self, cardano_type):
+        cardano_type = cardano_type.lower()
         if cardano_type == 'byron-ledger' or cardano_type == 'shelley-ledger':
             self.ui.generateSeedPassphraseGenerateContainerQFrame.setEnabled(True)
         else:

@@ -251,7 +251,7 @@ class Dumps:
         self.ui.hdwEccQFrame.setEnabled(False)
 
         self.ui.dumpsExcludeOrIncludeQLabel.setText("Exclude")
-        self.ui.dumpsFormatQComboBox.currentIndexChanged.connect(self._dump_format_changed)
+        self.ui.dumpsFormatQComboBox.currentTextChanged.connect(self._dump_format_changed)
 
         self.ui.dumpsHdQComboBox.currentIndexChanged.connect(self._dump_hd_changed)
         self.ui.dumpsFromQComboBox.currentIndexChanged.connect(self._dump_from_changed)
@@ -281,17 +281,19 @@ class Dumps:
         self.ui.moneroFromEntropyLanguageQComboBox.addItems([i.title() for i in MoneroMnemonic.languages])
         self.ui.moneroFromEntropyLanguageQComboBox.setCurrentText("English")
 
+        electrum_v2_modes = [i.title() for i in ELECTRUM_V2_MODES.get_modes()]
+
         self.ui.electrumV2FromEntropyMnemonicTypeQComboBox.addItems([i.title() for i in ElectrumV2Mnemonic.mnemonic_types.keys()])
-        self.ui.electrumV2FromEntropyModeQComboBox.addItems([i.title() for i in ELECTRUM_V2_MODES.get_modes()])
+        self.ui.electrumV2FromEntropyModeQComboBox.addItems(electrum_v2_modes)
         self.ui.electrumV2FromEntropyMnemonicTypeQComboBox.setCurrentIndex(0)
         self.ui.electrumV2FromEntropyModeQComboBox.setCurrentIndex(0)
 
         self.ui.electrumV2FromMnemonicMnemonicTypeQComboBox.addItems([i.title() for i in ElectrumV2Mnemonic.mnemonic_types.keys()])
-        self.ui.electrumV2FromMnemonicModeQComboBox.addItems([i.title() for i in ELECTRUM_V2_MODES.get_modes()])
+        self.ui.electrumV2FromMnemonicModeQComboBox.addItems(electrum_v2_modes)
         self.ui.electrumV2FromMnemonicMnemonicTypeQComboBox.setCurrentIndex(0)
         self.ui.electrumV2FromMnemonicModeQComboBox.setCurrentIndex(0)
 
-        self.ui.electrumV2FromSeedModeQComboBox.addItems([i.title() for i in ELECTRUM_V2_MODES.get_modes()])
+        self.ui.electrumV2FromSeedModeQComboBox.addItems(electrum_v2_modes)
         self.ui.electrumV2FromSeedModeQComboBox.setCurrentIndex(0)
 
         # BIPs WIF BIP38 events
@@ -945,10 +947,8 @@ class Dumps:
 
         for c in coin_typs_derviation: c.setText(str(crypto_obj.COIN_TYPE))
 
-    def _dump_format_changed(self):
-        f = self.ui.dumpsFormatQComboBox.currentText()
-        
-        if f == "CSV":
+    def _dump_format_changed(self, export_format):
+        if export_format == "CSV":
             self.ui.dumpsExcludeOrIncludeQLabel.setText("Include")
             self.__default_csv_include()
         else:
