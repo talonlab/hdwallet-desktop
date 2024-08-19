@@ -8,12 +8,16 @@
 import os
 
 from PySide6.QtWidgets import (
-    QWidget, QFrame, QVBoxLayout, QLabel
+    QWidget, QFrame, QVBoxLayout, QLabel, QPushButton
 )
-from PySide6.QtCore import Qt
+from PySide6.QtCore import (
+    Qt, QSize
+)
+from PySide6.QtGui import (
+    QIcon, QCursor
+)
 
 from desktop.widgets.modal import Modal
-from desktop.widgets.svg_button import SvgButton
 from desktop.ui.ui_donations import Ui_Form
 from desktop.addresses import crypto_addresses
 from desktop.utils import put_qr_code, resolve_path
@@ -97,16 +101,14 @@ class Donation(Modal):
         donation_ui.setupUi(main_widget)
         frame.ui = donation_ui
 
-        donation_ui.closeModalButtonQFrame = SvgButton(
-            parent_widget=donation_ui.closeModalButtonQFrame,
-            icon_path=resolve_path("desktop/ui/images/svg/icon_close.svg"),
-            icon_width=9,
-            icon_height=9
-        )
+        close_icon = QIcon(resolve_path("desktop/ui/images/svg/icon_close.svg"))
 
-        donation_ui.closeModalButtonQFrame.clicked.connect(
-            lambda: frame.close()
-            )
+        frame.close_button = QPushButton(None)
+        frame.close_button.setIcon(close_icon)
+        frame.close_button.setIconSize(QSize(12, 12))
+        frame.close_button.clicked.connect(frame.close)
+        frame.close_button.setCursor(QCursor(Qt.PointingHandCursor))
+        donation_ui.closeModalButtonQFrame.layout().addWidget(frame.close_button)
 
         donation_ui.donationsCoreTeamQPushButton.clicked.connect(frame.show_core)
         donation_ui.donationsCharityQPushButton.clicked.connect(frame.show_charity)
@@ -123,15 +125,15 @@ class Donation(Modal):
         donation_ui.donationsCharityCaptionQLabel.setTextFormat(Qt.RichText)
         donation_ui.donationsCharityCaptionQLabel.setText(
             """This donation is for the charity team, because without them,
-        we'd have no idea where our good intentions should go.<br>
-        Cheers to our chaos coordinators!"""
+            we'd have no idea where our good intentions should go.<br>
+            Cheers to our chaos coordinators!"""
         )
 
         donation_ui.donationsCaptionQLabel.setTextFormat(Qt.RichText)
         donation_ui.donationsCaptionQLabel.setText(
             """This donation is for the core team, because without them,
-        we'd be googling 'how to turn on a computer.'<br>
-        Cheers to our tech wizards!"""
+            we'd be googling 'how to turn on a computer.'<br>
+            Cheers to our tech wizards!"""
         )
 
         donation_ui.donationsCaptionQLabel.setWordWrap(True)

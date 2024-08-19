@@ -418,6 +418,10 @@ QGroupBox::title:disabled{
     background-color: transparent;
 }
 
+#expandAndCollapseTerminalQFrame QPushButton {
+    background-color: transparent;
+}
+
 QRadioButton::indicator {
     border: 3px solid rgb(25, 30, 36);
     width: 15px;
@@ -540,15 +544,12 @@ QTabBar::tab:focus {
 #toastQFrame QLabel{
     font: 10pt "Tahoma";
 }
-#closeModalButtonQFrame QSvgWidget{
+
+#closeModalButtonQFrame QPushButton{
     background-color: transparent;
 }
 
-#closeModalButtonQFrame {
-    border-radius: 6px;
-}
-
-#closeModalButtonQFrame:hover{
+#closeModalButtonQFrame QPushButton:hover{
     background-color: #e22828;
 }
 
