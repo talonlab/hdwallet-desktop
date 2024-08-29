@@ -49,7 +49,7 @@ bdist_msi_opt = {
 }
 
 build_exe_opt = {
-    "packages": [],
+    "packages": ["_scrypt"],
     "excludes": ["tkinter"],
     "include_msvcr": True
 }
