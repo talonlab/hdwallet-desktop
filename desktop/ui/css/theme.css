@@ -18,6 +18,10 @@ QWidget:disabled{
     background-color: transparent;
 }
 
+QWidget:focus { 
+    outline: none; 
+}
+
 QFrame{
     font: 10pt "Tahoma";
     letter-spacing: 1px;
@@ -95,6 +99,7 @@ QPushButton {
     color: rgb(255, 255, 255);
     padding: 5px 10px;
     height: 25px;
+    outline: none;
 }
 
 QPushButton:hover {
@@ -116,6 +121,7 @@ QComboBox {
     color: rgb(255, 255, 255);
     padding: 5px 10px;
     height: 25px;
+    border: 1px solid transparent;
 }
 
 QComboBox:disabled{
@@ -164,6 +170,7 @@ QComboBox QAbstractItemView::item:selected {
     outline: none;
 }
 
+
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
 LineEdit */
 
@@ -201,7 +208,9 @@ QPlainTextEdit {
     selection-background-color: #83b9ff;
 }
 
-/*}*/
+/* /////////////////////////////////////////////////////////////////////////////////////////////////
+Tab Bar */
+
 QTabBar {
     font: 10pt "HDWallet";
     font-weight: lighter;
@@ -269,6 +278,15 @@ QTabBar:disabled {
 QTabBar::tab:disabled {
     color: rgba(255, 255, 255, 0.5);
 }
+
+QTabBar, QTabBar::tab,
+QTabBar::tab:hover,
+QTabBar::tab:focus {
+    border: none;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////
+Scroll Bar */
 
 QScrollBar {
     border: none;
@@ -363,6 +381,9 @@ QScrollBar::sub-page:vertical{
     background: rgb(16, 21, 27);
 }
 
+/* /////////////////////////////////////////////////////////////////////////////////////////////////
+GroupBox */
+
 QGroupBox {
     border: 1px solid rgba(128, 128, 128, 0.25);
     border-radius: 4px;
@@ -395,6 +416,25 @@ QGroupBox::title:disabled{
     color: rgba(255, 255, 255, 0.5);
 }
 
+/* /////////////////////////////////////////////////////////////////////////////////////////////////
+Radio Button */
+
+QRadioButton::indicator {
+    border: 3px solid rgb(25, 30, 36);
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    background: rgb(16, 21, 27);
+}
+
+QRadioButton::indicator:hover {
+    border: 3px solid rgba(25, 30, 36, 100);
+}
+QRadioButton::indicator:checked {
+    background: 3px solid #83b9ff;
+    border: 3px solid rgb(25, 30, 36);
+}
+
 #outputWidgetTopContainerQWidget{
     background-color: rgba(0, 0, 0, 0)
 }
@@ -422,31 +462,13 @@ QGroupBox::title:disabled{
     background-color: transparent;
 }
 
-QRadioButton::indicator {
-    border: 3px solid rgb(25, 30, 36);
-    width: 15px;
-    height: 15px;
-    border-radius: 10px;
-    background: rgb(16, 21, 27);
-}
 
-QRadioButton::indicator:hover {
-    border: 3px solid rgba(25, 30, 36, 100);
-}
-QRadioButton::indicator:checked {
-    background: 3px solid #83b9ff;
-    border: 3px solid rgb(25, 30, 36);
-}
 
 #outputTerminalQLineEdit{
     background-color: rgba(25, 30, 36, 0.5);
 }
 
-QTabBar, QTabBar::tab,
-QTabBar::tab:hover,
-QTabBar::tab:focus {
-    border: none;
-}
+
 
 #outputTerminalQPlainTextEdit{
     border-radius: 0;
