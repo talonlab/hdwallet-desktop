@@ -72,7 +72,7 @@ class Generate:
         self.ui.generateSeedPassphraseGenerateQPushButton.clicked.connect(self._generate_seed)
 
         self.ui.generateLengthQLineEdit.setText("12")
-        self.ui.generateLengthQLineEdit.setValidator(QIntValidator(1, 1000))
+        self.ui.generateLengthQLineEdit.setValidator(QRegularExpressionValidator(QRegularExpression(r"^(1000|[1-9][0-9]{0,2}|[1-9][0-9]{0,2})$")))
 
         self.ui.generatePassphraseUpperCaseQCheckBox.setChecked(True)
         self.ui.generatePassphraseLowerCaseQCheckBox.setChecked(True)
