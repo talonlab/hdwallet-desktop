@@ -418,6 +418,9 @@ QGroupBox::title:disabled{
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
 Radio Button */
+QRadioButton{
+    padding: 5px 10px;
+}
 
 QRadioButton::indicator {
     border: 3px solid rgb(25, 30, 36);
