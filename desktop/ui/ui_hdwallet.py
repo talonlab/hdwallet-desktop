@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletQSGdTV.ui'
+## Form generated from reading UI file 'hdwalletCksKdH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -6607,6 +6607,11 @@ class Ui_MainWindow(object):
 
         self.outputTerminalActionQWidgetHLayout.addWidget(self.outputTerminalQPushButton)
 
+        self.stopTerminalQPushButton = QPushButton(self.outputTerminalActionQWidget)
+        self.stopTerminalQPushButton.setObjectName(u"stopTerminalQPushButton")
+
+        self.outputTerminalActionQWidgetHLayout.addWidget(self.stopTerminalQPushButton)
+
         self.clearTerminalQPushButton = QPushButton(self.outputTerminalActionQWidget)
         self.clearTerminalQPushButton.setObjectName(u"clearTerminalQPushButton")
 
@@ -6623,8 +6628,8 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.hdwalletQStackedWidget.setCurrentIndex(1)
-        self.hdQStackedWidget.setCurrentIndex(4)
-        self.bipQStackedWidget.setCurrentIndex(5)
+        self.hdQStackedWidget.setCurrentIndex(0)
+        self.bipQStackedWidget.setCurrentIndex(1)
         self.cardanoQStackedWidget.setCurrentIndex(4)
         self.electrumV1QStackedWidget.setCurrentIndex(3)
         self.electrumV2QStackedWidget.setCurrentIndex(1)
@@ -7207,6 +7212,7 @@ class Ui_MainWindow(object):
         self.dumpsSaveAndGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate And Save", None))
         self.outputTerminalQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Command Line Interface (CLI)", None))
         self.outputTerminalQPushButton.setText(QCoreApplication.translate("MainWindow", u"Execute", None))
+        self.stopTerminalQPushButton.setText(QCoreApplication.translate("MainWindow", u"Stop", None))
         self.clearTerminalQPushButton.setText(QCoreApplication.translate("MainWindow", u"Clear", None))
     # retranslateUi
 

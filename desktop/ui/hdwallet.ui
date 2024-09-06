@@ -15120,6 +15120,13 @@
            </widget>
           </item>
           <item>
+           <widget class="QPushButton" name="stopTerminalQPushButton">
+            <property name="text">
+             <string>Stop</string>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QPushButton" name="clearTerminalQPushButton">
             <property name="text">
              <string>Clear</string>
