@@ -14,7 +14,7 @@ from typing import *
 from collections import OrderedDict
 
 from PySide6.QtWidgets import (
-    QPushButton, QFileDialog
+    QPushButton, QFileDialog, QComboBox, QFrame
 )
 from PySide6.QtCore import QThreadPool
 
@@ -246,8 +246,7 @@ class Dumps:
         self.ui.customClientQComboBox.currentIndexChanged.connect(self._custom_path_client_changed)
         self.ui.customClientQComboBox.setCurrentIndex(0)
 
-        self.ui.hdwEccQComboBox.clear()
-        self.ui.hdwEccQComboBox.addItems(HDWDerivation.eccs.keys())
+        self.ui.hdwEccQLineEdit.setText(str(list(HDWDerivation.eccs.keys())))
         self.ui.hdwEccQFrame.setEnabled(False)
 
         self.ui.dumpsExcludeOrIncludeQLabel.setText("Exclude")
@@ -325,68 +324,97 @@ class Dumps:
             (
                 self.ui.cardanoFromEntropyCardanoTypeQComboBox,
                 self.ui.cardanoFromEntropyAddressTypeQComboBox,
-                self.ui.cardanoFromEntropyStakingQLineEdit
+                self.ui.cardanoFromEntropyStakingQLineEdit,
+                self.ui.cardanoFromEntropyAddressTypeContainerQFrame,
+                self.ui.cardanoFromEntropyStakingContainerQFrame
             ),
             (
                 self.ui.cardanoFromMnemonicCardanoTypeQComboBox,
                 self.ui.cardanoFromMnemonicAddressTypeQComboBox,
-                self.ui.cardanoFromMnemonicStakingQLineEdit
+                self.ui.cardanoFromMnemonicStakingQLineEdit,
+                self.ui.cardanoFromMnemonicAddressTypeContainerQFrame,
+                self.ui.cardanoFromMnemonicStakingContainerQFrame
+
             ),
             (
                 self.ui.cardanoFromPrivateKeyCardanoTypeQComboBox,
                 self.ui.cardanoFromPrivateKeyAddressTypeQComboBox,
-                self.ui.cardanoFromPrivateKeyStakingQLineEdit
+                self.ui.cardanoFromPrivateKeyStakingQLineEdit,
+                self.ui.cardanoFromPrivateKeyAddressTypeContainerQFrame,
+                self.ui.cardanoFromPrivateKeyStakingContainerQFrame
             ),
             (
                 self.ui.cardanoFromPublicKeyCardanoTypeQComboBox,
                 self.ui.cardanoFromPublicKeyAddressTypeQComboBox,
-                self.ui.cardanoFromPublicKeyStakingQLineEdit
+                self.ui.cardanoFromPublicKeyStakingQLineEdit,
+                self.ui.cardanoFromPublicKeyAddressTypeContainerQFrame,
+                self.ui.cardanoFromPublicKeyStakingContainerQFrame
             ),
             (
                 self.ui.cardanoFromSeedCardanoTypeQComboBox,
                 self.ui.cardanoFromSeedAddressTypeQComboBox,
-                self.ui.cardanoFromSeedStakingQLineEdit
+                self.ui.cardanoFromSeedStakingQLineEdit,
+                self.ui.cardanoFromSeedAddressTypeContainerQFrame,
+                self.ui.cardanoFromSeedStakingContainerQFrame
             ),
             (
                 self.ui.cardanoFromXPrivateKeyCardanoTypeQComboBox,
                 self.ui.cardanoFromXPrivateKeyAddressTypeQComboBox,
-                self.ui.cardanoFromXPrivateKeyStakingQLineEdit
+                self.ui.cardanoFromXPrivateKeyStakingQLineEdit,
+                self.ui.cardanoFromXPrivateKeyAddressTypeContainerQFrame,
+                self.ui.cardanoFromXPrivateKeyStakingContainerQFrame
             ),
             (
                 self.ui.cardanoFromXPublicKeyCardanoTypeQComboBox,
                 self.ui.cardanoFromXPublicKeyAddressTypeQComboBox,
-                self.ui.cardanoFromXPublicKeyStakingQLineEdit
+                self.ui.cardanoFromXPublicKeyStakingQLineEdit,
+                self.ui.cardanoFromXPublicKeyAddressTypeContainerQFrame,
+                self.ui.cardanoFromXPublicKeyStakingContainerQFrame
             ),
         ]
+
 
         cardano_list = [i.title() for i in Cardano.TYPES.get_cardano_types()]
         c_address_list = ["Payment", "Staking"]
 
         for pair in cardano_and_address_type:
-            pair[0].clear()
-            pair[1].clear()
+            if isinstance(pair[0], QComboBox):
+                pair[0].clear()
+            if isinstance(pair[1], QComboBox):
+                pair[1].clear()
             pair[0].addItems(cardano_list)
             pair[1].addItems(c_address_list)
-            pair[0].currentIndexChanged.connect(functools.partial(self.__pair_ca_address_type, pair[1], pair[0]))
-            pair[1].currentIndexChanged.connect(functools.partial(self.__pair_addr_staking, pair[1], pair[2]))
+            pair[0].currentIndexChanged.connect(functools.partial(self.__pair_ca_address_type, pair[1], pair[0], pair[3]))
+            pair[1].currentIndexChanged.connect(functools.partial(self.__pair_addr_staking, pair[1], pair[2], pair[4]))
             pair[2].setEnabled(False)
+            pair[4].setEnabled(False)
             pair[0].setCurrentIndex(0)
+            
+
+        self.ui.cardanoFromXPublicKeyStrictQCheckBox.setChecked(True)
+        self.ui.cardanoFromXPrivateKeyStrictQCheckBox.setChecked(True)
+        self.ui.bipFromXPrivateKeyStrictQCheckBox.setChecked(True)
+        self.ui.bipFromXPublicKeyStrictQCheckBox.setChecked(True)
 
 
-    def __pair_ca_address_type(self, c_addr, c_list, idx):
+    def __pair_ca_address_type(self, c_addr, c_list, cd_addr, idx):
         if c_list.currentText().lower().startswith("shelley"):
             c_addr.setEnabled(True)
+            cd_addr.setEnabled(True)
             c_addr.setCurrentIndex(0)
         else:
             c_addr.setCurrentIndex(-1)
             c_addr.setEnabled(False)
+            cd_addr.setEnabled(False)
 
-    def __pair_addr_staking(self, c_addr, staking, idx):
+    def __pair_addr_staking(self, c_addr, staking, cd_addr,idx):
         if c_addr.currentText() == "Payment":
             staking.setEnabled(True)
+            cd_addr.setEnabled(True)
         else:
             staking.setText(None)
             staking.setEnabled(False)
+            cd_addr.setEnabled(False)
 
     def _file_locator(self, format):
         options = QFileDialog.Options()
@@ -927,7 +955,8 @@ class Dumps:
         self.ui.dumpsNetworkQComboBox.clear()
         self.ui.dumpsNetworkQComboBox.addItems(nets)
         self.ui.dumpsNetworkQComboBox.setCurrentText("Mainnet")
-        self.ui.hdwEccQComboBox.setCurrentText(crypto_obj.ECC.NAME)
+        self.ui.hdwEccQLineEdit.setText(crypto_obj.ECC.NAME)
+
 
         coin_typs_derviation = [
             self.ui.bip44CoinTypeQLineEdit,
