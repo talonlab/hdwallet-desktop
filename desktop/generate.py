@@ -9,7 +9,8 @@
 import string
 from random import choice
 
-from PySide6.QtGui import QIntValidator
+from PySide6.QtGui import QIntValidator, QRegularExpressionValidator
+from PySide6.QtCore import QRegularExpression
 
 from hdwallet.cryptocurrencies import (
     Cardano, CRYPTOCURRENCIES
@@ -71,7 +72,7 @@ class Generate:
         self.ui.generateSeedPassphraseGenerateQPushButton.clicked.connect(self._generate_seed)
 
         self.ui.generateLengthQLineEdit.setText("12")
-        self.ui.generateLengthQLineEdit.setValidator(QIntValidator(1, 1000))
+        self.ui.generateLengthQLineEdit.setValidator(QRegularExpressionValidator(QRegularExpression(r'^[1-9]\d{0,2}$')))
 
         self.ui.generatePassphraseUpperCaseQCheckBox.setChecked(True)
         self.ui.generatePassphraseLowerCaseQCheckBox.setChecked(True)
@@ -153,23 +154,29 @@ class Generate:
         kwargs = {
             "language": lang
         }
+        try:
+            if ElectrumV2Seed.name() == mnemonic_client:
+                kwargs["mnemonic_type"] = self.ui.generateMnemonicTypeQComboBox.currentText().lower()
 
-        if ElectrumV2Seed.name() == mnemonic_client:
-            kwargs["mnemonic_type"] = self.ui.generateMnemonicTypeQComboBox.currentText().lower()
+            if self.ui.generateMnemonicWordsQRadioButton.isChecked():
+                kwargs["words"] = int(word)
+                gen_mnemonic = MNEMONICS.mnemonic(mnemonic_client).from_words(**kwargs)
+            else:
+                if len(entropy) == 0:
+                    raise Exception("Entropy is required to generate mnemonic!")
+                kwargs["entropy"] = entropy
+                gen_mnemonic = MNEMONICS.mnemonic(mnemonic_client).from_entropy(**kwargs)
 
-        if self.ui.generateMnemonicWordsQRadioButton.isChecked():
-            kwargs["words"] = int(word)
-            gen_mnemonic = MNEMONICS.mnemonic(mnemonic_client).from_words(**kwargs)
+        except Exception as e:
+            output = f"ERROR: {e}"
+
         else:
-            kwargs["entropy"] = entropy
-            gen_mnemonic = MNEMONICS.mnemonic(mnemonic_client).from_entropy(**kwargs)
+            output = {
+                "name": mnemonic_client,
+                "mnemonic": gen_mnemonic
+            }
 
-        output = {
-            "name": mnemonic_client,
-            "mnemonic": gen_mnemonic
-        }
-
-        output.update(kwargs)
+            output.update(kwargs)
 
         self.app.println(output)
 
