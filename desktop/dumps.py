@@ -8,6 +8,7 @@
 
 import inspect
 import functools
+import time
 import json
 import os
 from typing import *
@@ -62,6 +63,8 @@ from hdwallet.derivations import (
     BIP86Derivation, ElectrumDerivation, CIP1852Derivation, MoneroDerivation, HDWDerivation,
     CHANGES
 )
+
+from hdwallet.const import SLIP10_SECP256K1_CONST
 
 from desktop.utils.worker import (
     Worker, WorkerSignals
@@ -574,6 +577,10 @@ class Dumps:
                         csv_out = ", ".join(map(str, csv_data))
 
                         signal.interval_output.emit(csv_out)
+                        
+                        if hd_kwargs["cryptocurrency"].ECC.NAME != "SLIP10-Secp256k1" and SLIP10_SECP256K1_CONST.USE == "coincurve":
+                            time.sleep(0.03)
+                        
                         if save_filepath != None:
                             saved_file.write(f"{csv_out}\n")
                         return [_derivation.path()]
