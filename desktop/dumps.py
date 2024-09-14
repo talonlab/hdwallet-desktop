@@ -241,6 +241,11 @@ class Dumps:
             data["button"].clicked.connect(
                 functools.partial(self.derivation_tab_changed, data["widget"], data["button"]))
 
+        self._update_terminal_state(False, False)
+        self.ui.stopTerminalQPushButton.clicked.connect(
+            lambda: self._update_terminal_state(False, True)
+        )
+
         self.ui.customClientQComboBox.clear()
         self.ui.customClientQComboBox.addItems(self.custom_paths.keys())
         self.ui.customClientQComboBox.currentIndexChanged.connect(self._custom_path_client_changed)
@@ -441,8 +446,10 @@ class Dumps:
         def _error(e): 
             self.app.println(f"ERROR: {e}")
         
-        def _enable_generate(): 
+        def _task_ended(): 
             self.ui.dumpsGenerateQPushButton.setEnabled(True)
+            if self.terminal_cancelled:
+                self._update_terminal_state(False, False)
 
         self.ui.dumpsGenerateQPushButton.setEnabled(False)
 
@@ -454,8 +461,11 @@ class Dumps:
 
         job.signals.interval_error.connect(_error)
         job.signals.interval_finished.connect(self.app.println)
-        job.signals.interval_error.connect(_enable_generate)
-        job.signals.interval_finished.connect(_enable_generate)
+        job.signals.interval_error.connect(_task_ended)
+        job.signals.interval_finished.connect(_task_ended)
+
+        if self.ui.dumpsFormatQComboBox.currentText() == "CSV":
+            self._update_terminal_state(True, False)
 
         QThreadPool.globalInstance().start(job)
 
@@ -571,6 +581,8 @@ class Dumps:
                     path: List[str] = []
                     if len(derivations[0]) == 3:
                         for value in range(derivations[0][0], derivations[0][1] + 1):
+                            if self.terminal_cancelled:
+                               break
                             path += drive_helper(
                                 derivations[1:], current_derivation + [(value, derivations[0][2])]
                             )
@@ -1093,3 +1105,7 @@ class Dumps:
             lable.setText("Encrypted Wallet Important Format")
         else:
             lable.setText("Wallet Important Format")
+
+    def _update_terminal_state(self, stop_btn_visible, terminal_cancelled):
+        self.ui.stopTerminalQPushButton.setVisible(stop_btn_visible)
+        self.terminal_cancelled = terminal_cancelled
