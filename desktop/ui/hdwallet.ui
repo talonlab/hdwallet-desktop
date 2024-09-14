@@ -176,7 +176,7 @@
           <item>
            <widget class="QStackedWidget" name="hdwalletQStackedWidget">
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="generatePageQStackedWidget">
              <layout class="QVBoxLayout" name="generatePageQStackedWidgetVLayout">
@@ -202,7 +202,7 @@
                 </property>
                 <layout class="QHBoxLayout" name="generateClientAndStrengthContainerQFrameHLayout">
                  <property name="spacing">
-                  <number>15</number>
+                  <number>10</number>
                  </property>
                  <property name="leftMargin">
                   <number>10</number>
@@ -321,7 +321,7 @@
                 </property>
                 <layout class="QVBoxLayout" name="generateMnemonicClientWordsLanguageContainerQGroupBoxVLayout">
                  <property name="spacing">
-                  <number>15</number>
+                  <number>10</number>
                  </property>
                  <property name="leftMargin">
                   <number>10</number>
@@ -339,7 +339,7 @@
                   <widget class="QFrame" name="generateMnemonicClientFromLanguageContainerQFrame">
                    <layout class="QHBoxLayout" name="generateMnemonicClientFromLanguageContainerQFrameHLayout">
                     <property name="spacing">
-                     <number>15</number>
+                     <number>10</number>
                     </property>
                     <property name="leftMargin">
                      <number>0</number>
@@ -505,7 +505,7 @@
                   <widget class="QFrame" name="generateMnemonicLanguageWordsEntropyContainerQFrame">
                    <layout class="QHBoxLayout" name="generateMnemonicLanguageWordsEntropyContainerQFrameHLayout">
                     <property name="spacing">
-                     <number>15</number>
+                     <number>10</number>
                     </property>
                     <property name="leftMargin">
                      <number>0</number>
@@ -522,7 +522,7 @@
                     <item>
                      <widget class="QFrame" name="generateMnemonicTypeContainerQFrame">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
@@ -668,11 +668,8 @@
                        </item>
                        <item>
                         <widget class="QLineEdit" name="generateSeedMnemonicEntropyQLineEdit">
-                         <property name="minimumSize">
-                          <size>
-                           <width>350</width>
-                           <height>0</height>
-                          </size>
+                         <property name="dragEnabled">
+                          <bool>false</bool>
                          </property>
                         </widget>
                        </item>
@@ -699,7 +696,7 @@
                 </property>
                 <layout class="QVBoxLayout" name="seedGroupBoxContainerQGroupBoxVLayout">
                  <property name="spacing">
-                  <number>15</number>
+                  <number>10</number>
                  </property>
                  <property name="leftMargin">
                   <number>10</number>
@@ -720,7 +717,7 @@
                    </property>
                    <layout class="QHBoxLayout" name="generateSeedGenerateContainerQFrameHLayout">
                     <property name="spacing">
-                     <number>15</number>
+                     <number>10</number>
                     </property>
                     <property name="leftMargin">
                      <number>0</number>
@@ -846,7 +843,7 @@
                   <widget class="QFrame" name="generateSeedClientMnemonicContainerQFrame">
                    <layout class="QHBoxLayout" name="generateMnemonicClientWordsLanguageContainerQFrameHLayout_2">
                     <property name="spacing">
-                     <number>15</number>
+                     <number>10</number>
                     </property>
                     <property name="leftMargin">
                      <number>0</number>
@@ -1036,7 +1033,7 @@
                 </property>
                 <layout class="QHBoxLayout" name="generateLengthAndPassphraseQFrameHLayout">
                  <property name="spacing">
-                  <number>15</number>
+                  <number>10</number>
                  </property>
                  <property name="leftMargin">
                   <number>10</number>
@@ -1262,7 +1259,7 @@
                <widget class="QGroupBox" name="dumpsHDFromCryptocurrencyAndNetworkContainerQGroupBox">
                 <layout class="QHBoxLayout" name="dumpsHDFromCryptocurrencyAndNetworkContainerQFrameHLayout">
                  <property name="spacing">
-                  <number>15</number>
+                  <number>10</number>
                  </property>
                  <property name="leftMargin">
                   <number>10</number>
@@ -1746,7 +1743,7 @@
                        <widget class="QWidget" name="bipFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="bipFromEntropyQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -1764,7 +1761,7 @@
                           <widget class="QFrame" name="bipFromEntropyContainerQFrame">
                            <layout class="QVBoxLayout" name="bipFromEntropyContainerQFrameVLayout">
                             <property name="spacing">
-                             <number>5</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -1850,7 +1847,7 @@
                           <widget class="QFrame" name="bipFromEntropyPublicKeyAndPassphraseContainerQFrame">
                            <layout class="QHBoxLayout" name="bipFromEntropyPublicKeyAndPassphraseContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -2153,7 +2150,7 @@
                        <widget class="QWidget" name="bipFromMnemonicQStackedWidget">
                         <layout class="QVBoxLayout" name="bipFromMnemonicQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -2171,7 +2168,7 @@
                           <widget class="QFrame" name="bipFromMnemonicContainerQFrame">
                            <layout class="QVBoxLayout" name="bipFromMnemonicContainerQFrameVLayout">
                             <property name="spacing">
-                             <number>5</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -2257,7 +2254,7 @@
                           <widget class="QFrame" name="bipFromMnemonicPublicKeyTypeAndPassphraseQFrame">
                            <layout class="QHBoxLayout" name="bipFromMnemonicPublicKeyTypeAndPassphraseQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -2454,7 +2451,7 @@
                        <widget class="QWidget" name="bipFromSeedQStackedWidget">
                         <layout class="QVBoxLayout" name="bipFromSeedQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -2469,16 +2466,16 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="bipFromSeedContainerQFrame">
-                           <property name="minimumSize">
-                            <size>
-                             <width>400</width>
-                             <height>0</height>
-                            </size>
+                          <widget class="QFrame" name="bipFromSeedQFrame">
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
                            </property>
-                           <layout class="QVBoxLayout" name="bipFromSeedContainerQFrameVLayout">
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="bipFromSeedQFrameVLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>5</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -2493,10 +2490,10 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QFrame" name="bipFromSeedAndPublicKeyTypeContainerQFrame">
-                              <layout class="QHBoxLayout" name="bipFromSeedAndPublicKeyTypeContainerQFrameHLayout">
+                             <widget class="QFrame" name="bipFromSeedsLabelContainerQFrame">
+                              <layout class="QHBoxLayout" name="bipFromSeedsLabelContainerQFrameHLayout">
                                <property name="spacing">
-                                <number>15</number>
+                                <number>10</number>
                                </property>
                                <property name="leftMargin">
                                 <number>0</number>
@@ -2511,76 +2508,61 @@
                                 <number>0</number>
                                </property>
                                <item>
-                                <widget class="QFrame" name="bipFromSeedsContainerQFrame">
-                                 <layout class="QVBoxLayout" name="bipFromSeedsContainerQFrameVLayout">
-                                  <property name="spacing">
-                                   <number>5</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QFrame" name="bipFromSeedsLabelContainerQFrame">
-                                    <layout class="QHBoxLayout" name="bipFromSeedsLabelContainerQFrameHLayout">
-                                     <property name="spacing">
-                                      <number>15</number>
-                                     </property>
-                                     <property name="leftMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <property name="topMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <property name="rightMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <property name="bottomMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <item>
-                                      <widget class="QLabel" name="bipFromSeedsQLabel">
-                                       <property name="text">
-                                        <string>Seed</string>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                     <item>
-                                      <spacer name="bipFromSeedsLabelContainerQFrameHSpacer">
-                                       <property name="orientation">
-                                        <enum>Qt::Horizontal</enum>
-                                       </property>
-                                       <property name="sizeHint" stdset="0">
-                                        <size>
-                                         <width>764</width>
-                                         <height>20</height>
-                                        </size>
-                                       </property>
-                                      </spacer>
-                                     </item>
-                                    </layout>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <widget class="QLineEdit" name="bipFromSeedsQLineEdit"/>
-                                  </item>
-                                 </layout>
+                                <widget class="QLabel" name="bipFromSeedsQLabel">
+                                 <property name="text">
+                                  <string>Seed</string>
+                                 </property>
                                 </widget>
+                               </item>
+                               <item>
+                                <spacer name="bipFromSeedsLabelContainerQFrameHSpacer">
+                                 <property name="orientation">
+                                  <enum>Qt::Horizontal</enum>
+                                 </property>
+                                 <property name="sizeHint" stdset="0">
+                                  <size>
+                                   <width>764</width>
+                                   <height>20</height>
+                                  </size>
+                                 </property>
+                                </spacer>
                                </item>
                               </layout>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QFrame" name="bipFromSeedPublicKeyTypeQFrame">
-                              <layout class="QHBoxLayout" name="bipFromSeedPublicKeyTypeQFrameHLayout">
+                             <widget class="QLineEdit" name="bipFromSeedsQLineEdit"/>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="bipFromSeedPublicKeyTypeQFrame">
+                           <layout class="QHBoxLayout" name="bipFromSeedPublicKeyTypeQFrameHLayout">
+                            <property name="spacing">
+                             <number>10</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="bipFromSeedPublicKeyTypeContainerQFrame">
+                              <property name="minimumSize">
+                               <size>
+                                <width>150</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <layout class="QVBoxLayout" name="bipFromSeedPublicKeyTypeContainerQFrameVLayout">
                                <property name="spacing">
                                 <number>5</number>
                                </property>
@@ -2597,16 +2579,10 @@
                                 <number>0</number>
                                </property>
                                <item>
-                                <widget class="QFrame" name="bipFromSeedPublicKeyTypeContainerQFrame">
-                                 <property name="minimumSize">
-                                  <size>
-                                   <width>150</width>
-                                   <height>0</height>
-                                  </size>
-                                 </property>
-                                 <layout class="QVBoxLayout" name="bipFromSeedPublicKeyTypeContainerQFrameVLayout">
+                                <widget class="QFrame" name="bipFromSeedPublicKeyTypeLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="bipFromSeedPublicKeyTypeLabelContainerQFrameHLayout">
                                   <property name="spacing">
-                                   <number>5</number>
+                                   <number>15</number>
                                   </property>
                                   <property name="leftMargin">
                                    <number>0</number>
@@ -2621,68 +2597,47 @@
                                    <number>0</number>
                                   </property>
                                   <item>
-                                   <widget class="QFrame" name="bipFromSeedPublicKeyTypeLabelContainerQFrame">
-                                    <layout class="QHBoxLayout" name="bipFromSeedPublicKeyTypeLabelContainerQFrameHLayout">
-                                     <property name="spacing">
-                                      <number>15</number>
-                                     </property>
-                                     <property name="leftMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <property name="topMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <property name="rightMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <property name="bottomMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <item>
-                                      <widget class="QLabel" name="bipFromSeedPublicKeyTypeQLabel">
-                                       <property name="text">
-                                        <string>Public Key Type</string>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                    </layout>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <widget class="QComboBox" name="bipFromSeedPublicKeyTypeQComboBox">
-                                    <property name="placeholderText">
-                                     <string>(Select)</string>
+                                   <widget class="QLabel" name="bipFromSeedPublicKeyTypeQLabel">
+                                    <property name="text">
+                                     <string>Public Key Type</string>
                                     </property>
-                                    <item>
-                                     <property name="text">
-                                      <string>Compressed</string>
-                                     </property>
-                                    </item>
-                                    <item>
-                                     <property name="text">
-                                      <string>Uncompressed</string>
-                                     </property>
-                                    </item>
                                    </widget>
                                   </item>
                                  </layout>
                                 </widget>
                                </item>
                                <item>
-                                <spacer name="bipFromSeedPublicKeyTypeQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
+                                <widget class="QComboBox" name="bipFromSeedPublicKeyTypeQComboBox">
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
                                  </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>40</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
+                                 <item>
+                                  <property name="text">
+                                   <string>Compressed</string>
+                                  </property>
+                                 </item>
+                                 <item>
+                                  <property name="text">
+                                   <string>Uncompressed</string>
+                                  </property>
+                                 </item>
+                                </widget>
                                </item>
                               </layout>
                              </widget>
+                            </item>
+                            <item>
+                             <spacer name="bipFromSeedPublicKeyTypeQFrameHSpacer">
+                              <property name="orientation">
+                               <enum>Qt::Horizontal</enum>
+                              </property>
+                              <property name="sizeHint" stdset="0">
+                               <size>
+                                <width>40</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                             </spacer>
                             </item>
                            </layout>
                           </widget>
@@ -2692,7 +2647,7 @@
                        <widget class="QWidget" name="bipFromXPrivateKeyQStackedWidget">
                         <layout class="QVBoxLayout" name="bipFromXPrivateKeyQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -2710,7 +2665,7 @@
                           <widget class="QFrame" name="bipFromXPrivateKeyAndPublicKeyTypeQFrame">
                            <layout class="QHBoxLayout" name="bipFromXPrivateKeyAndPublicKeyTypeQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -2837,7 +2792,7 @@
                           <widget class="QFrame" name="bipFromXPrivateKeyPublicKeyTypeQFrame">
                            <layout class="QHBoxLayout" name="bipFromXPrivateKeyPublicKeyTypeQFrameHLayout">
                             <property name="spacing">
-                             <number>5</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -2944,7 +2899,7 @@
                        <widget class="QWidget" name="bipFromXPublicKeyQStackedWidget">
                         <layout class="QVBoxLayout" name="bipFromXPublicKeyQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -2962,7 +2917,7 @@
                           <widget class="QFrame" name="bipFromXPublicKeyAndPublicKeyTypeContainerQFrame">
                            <layout class="QHBoxLayout" name="bipFromXPublicKeyAndPublicKeyTypeContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -3089,7 +3044,7 @@
                           <widget class="QFrame" name="bipFromXPublicKeyPublicKeyTypeQFrame">
                            <layout class="QHBoxLayout" name="bipFromXPublicKeyPublicKeyTypeQFrameHLayout">
                             <property name="spacing">
-                             <number>5</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -3196,7 +3151,7 @@
                        <widget class="QWidget" name="bipFromWIFQStackedWidget">
                         <layout class="QVBoxLayout" name="bipFromWIFQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -3285,7 +3240,7 @@
                           <widget class="QFrame" name="bipFromWIFPublicKeyAndBIP38PassphraseContainerQFrame">
                            <layout class="QHBoxLayout" name="bipFromWIFPublicKeyAndBIP38PassphraseContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -3498,7 +3453,7 @@
                        <widget class="QWidget" name="bipFromPrivateKeyQStackedWidget">
                         <layout class="QVBoxLayout" name="bipFromPrivateKeyQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -3516,7 +3471,7 @@
                           <widget class="QFrame" name="bipFromPrivateKeyAndPublicKeyTypeContainerQFrame">
                            <layout class="QHBoxLayout" name="bipFromPrivateKeyAndPublicKeyTypeContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -3608,7 +3563,7 @@
                           <widget class="QFrame" name="bipFromPrivateKeyAndPublicKeyTypeQFrame">
                            <layout class="QHBoxLayout" name="bipFromPrivateKeyAndPublicKeyTypeQFrameHLayout">
                             <property name="spacing">
-                             <number>5</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -3715,7 +3670,7 @@
                        <widget class="QWidget" name="bipFromPublicKeyQStackedWidget">
                         <layout class="QVBoxLayout" name="bipFromPublicKeyQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -3733,7 +3688,7 @@
                           <widget class="QFrame" name="bipFromPublicKeyAndPublicKeyTypeContainerQFrame">
                            <layout class="QHBoxLayout" name="bipFromPublicKeyAndPublicKeyTypeContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -3825,7 +3780,7 @@
                           <widget class="QFrame" name="bipFromPublicKeyPublicKeyTypeQFrame">
                            <layout class="QHBoxLayout" name="bipFromPublicKeyPublicKeyTypeQFrameHLayout">
                             <property name="spacing">
-                             <number>5</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -3958,7 +3913,7 @@
                        <widget class="QWidget" name="cardanoFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="cardanoFromEntropyQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -3976,7 +3931,7 @@
                           <widget class="QFrame" name="cardanoFromEntropyAndCardanoTypeQFrame">
                            <layout class="QHBoxLayout" name="cardanoFromEntropyAndCardanoTypeQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -4297,7 +4252,7 @@
                           <widget class="QFrame" name="cardanoFromEntropyLanguageAddressTypeAndWordsContainerQFrame">
                            <layout class="QHBoxLayout" name="cardanoFromEntropyLanguageAddressTypeAndWordsContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -4528,7 +4483,7 @@
                        <widget class="QWidget" name="cardanoFromMnemonicQStackedWidget">
                         <layout class="QVBoxLayout" name="cardanoFromMnemonicQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -4546,7 +4501,7 @@
                           <widget class="QFrame" name="cardanoFromMnemonicAndCardanoTypeQFrame">
                            <layout class="QHBoxLayout" name="cardanoFromMnemonicAndCardanoTypeQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -4758,7 +4713,7 @@
                           <widget class="QFrame" name="cardanoFromMnemonicClientAndPassphraseContainerQFrame">
                            <layout class="QHBoxLayout" name="cardanoFromMnemonicClientAndPassphraseContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -5010,7 +4965,7 @@
                        <widget class="QWidget" name="cardanoFromSeedQStackedWidget">
                         <layout class="QVBoxLayout" name="cardanoFromSeedQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -5028,7 +4983,7 @@
                           <widget class="QFrame" name="cardanoFromSeedAndCardanoContainerQFrame">
                            <layout class="QHBoxLayout" name="cardanoFromSeedAndCardanoContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -5219,7 +5174,7 @@
                           <widget class="QFrame" name="cardanoFromSeedCardanoTypeAddressTypeAndPassphraseContainerQFrame">
                            <layout class="QHBoxLayout" name="cardanoFromSeedCardanoTypeAddressTypeAndPassphraseContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -5480,7 +5435,7 @@
                        <widget class="QWidget" name="cardanoFromXPrivateKeyQStackedWidget">
                         <layout class="QVBoxLayout" name="cardanoFromXPrivateKeyQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -5498,7 +5453,7 @@
                           <widget class="QFrame" name="cardanoFromXPrivateKeyStrictXPrivateKeyContainerQFrame">
                            <layout class="QHBoxLayout" name="cardanoFromXPrivateKeyStrictXPrivateKeyContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -5730,7 +5685,7 @@
                           <widget class="QFrame" name="cardanoFromXPrivateKeyCardanoTypeAndAddressTypeContainerQFrame">
                            <layout class="QHBoxLayout" name="cardanoFromXPrivateKeyCardanoTypeAndAddressTypeContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -5922,7 +5877,7 @@
                        <widget class="QWidget" name="cardanoFromXPublicKeyQStackedWidget">
                         <layout class="QVBoxLayout" name="cardanoFromXPublicKeyQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -5940,7 +5895,7 @@
                           <widget class="QFrame" name="cardanoFromXPublicKeyStrictXPublicKeyContainerQFrame">
                            <layout class="QHBoxLayout" name="cardanoFromXPublicKeyStrictXPublicKeyContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -6172,7 +6127,7 @@
                           <widget class="QFrame" name="cardanoFromXPublicKeyCardanoTypeAndAddressTypeContainerQFrame">
                            <layout class="QHBoxLayout" name="cardanoFromXPublicKeyCardanoTypeAndAddressTypeContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -6364,7 +6319,7 @@
                        <widget class="QWidget" name="cardanoFromPrivateKeyQStackedWidget">
                         <layout class="QVBoxLayout" name="cardanoFromPrivateKeyQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -6382,7 +6337,7 @@
                           <widget class="QFrame" name="cardanoFromPrivateKeyAndCardanoTypeQFrame">
                            <layout class="QHBoxLayout" name="cardanoFromPrivateKeyAndCardanoTypeQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -6579,7 +6534,7 @@
                           <widget class="QFrame" name="cardanoFromPrivateKeyCardanoTypeAndAddressTypeContainerQFrame">
                            <layout class="QHBoxLayout" name="cardanoFromPrivateKeyCardanoTypeAndAddressTypeContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -6771,7 +6726,7 @@
                        <widget class="QWidget" name="cardanoFromPublicKeyQStackedWidget">
                         <layout class="QVBoxLayout" name="cardanoFromPublicKeyQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -6789,7 +6744,7 @@
                           <widget class="QFrame" name="cardanoFromPublicKeyAndCardanoTypeQFrame">
                            <layout class="QHBoxLayout" name="cardanoFromPublicKeyAndCardanoTypeQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -6980,7 +6935,7 @@
                           <widget class="QFrame" name="cardanoFromPublicKeyCardanoTypeAndAddressTypeContainerQFrame">
                            <layout class="QHBoxLayout" name="cardanoFromPublicKeyCardanoTypeAndAddressTypeContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -7198,7 +7153,7 @@
                        <widget class="QWidget" name="electrumV1FromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="electrumV1FromEntropyQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -7302,7 +7257,7 @@
                           <widget class="QFrame" name="electrumV1FromEntropyPublicKeyTypeAndPassphraseContainerQFrame">
                            <layout class="QHBoxLayout" name="electrumV1FromEntropyPublicKeyTypeAndPassphraseContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -7608,7 +7563,7 @@
                        <widget class="QWidget" name="electrumV1FromMnemonicQStackedWidget">
                         <layout class="QVBoxLayout" name="electrumV1FromMnemonicQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -7712,7 +7667,7 @@
                           <widget class="QFrame" name="electrumV1FromMnemonicPublicKeyTypeAndPassphraseContainerQFrame">
                            <layout class="QHBoxLayout" name="electrumV1FromMnemonicPublicKeyTypeAndPassphraseContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -7909,7 +7864,7 @@
                        <widget class="QWidget" name="electrumV1FromSeedQStackedWidget">
                         <layout class="QVBoxLayout" name="electrumV1FromSeedQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -7927,7 +7882,7 @@
                           <widget class="QFrame" name="electrumV1FromSeedAndPublicKeyTypeContainerQFrame">
                            <layout class="QHBoxLayout" name="electrumV1FromSeedAndPublicKeyTypeContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -8011,9 +7966,9 @@
                          </item>
                          <item>
                           <widget class="QFrame" name="electrumV1FromSeedsPublicKeyTypeQFrame">
-                           <layout class="QHBoxLayout" name="horizontalLayout_13">
+                           <layout class="QHBoxLayout" name="electrumV1FromSeedsPublicKeyTypeQFrameHLayout">
                             <property name="spacing">
-                             <number>5</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -8120,7 +8075,7 @@
                        <widget class="QWidget" name="electrumV1FromWIFQStackedWidget">
                         <layout class="QVBoxLayout" name="electrumV1FromWIFQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -8203,7 +8158,7 @@
                           <widget class="QFrame" name="electrumV1FromWIFBIP38AndPublicKeyTypeContainerQFrame">
                            <layout class="QHBoxLayout" name="electrumV1FromWIFBIP38AndPublicKeyTypeContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -8416,7 +8371,7 @@
                        <widget class="QWidget" name="electrumV1FromPrivateKeyQStackedWidget">
                         <layout class="QVBoxLayout" name="electrumV1FromPrivateKeyQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -8523,7 +8478,7 @@
                           <widget class="QFrame" name="electrumV1FromPrivateKeyPublicKeyTypeQFrame">
                            <layout class="QHBoxLayout" name="electrumV1FromPrivateKeyPublicKeyTypeQFrameHLayout">
                             <property name="spacing">
-                             <number>5</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -8630,7 +8585,7 @@
                        <widget class="QWidget" name="electrumV1FromPublicKeyQStackedWidget">
                         <layout class="QVBoxLayout" name="electrumV1FromPublicKeyQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -8648,7 +8603,7 @@
                           <widget class="QFrame" name="electrumV1FromPublicKeyAndPublicKeyTypeContainerQFrame">
                            <layout class="QHBoxLayout" name="electrumV1FromPublicKeyAndPublicKeyTypeContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -8732,9 +8687,9 @@
                          </item>
                          <item>
                           <widget class="QFrame" name="electrumV1FromPublicKeyPublicTypeQFrame">
-                           <layout class="QHBoxLayout" name="horizontalLayout_12">
+                           <layout class="QHBoxLayout" name="electrumV1FromPublicKeyPublicTypeQFrameHLayout">
                             <property name="spacing">
-                             <number>5</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -8867,7 +8822,7 @@
                        <widget class="QWidget" name="electrumV2FromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="electrumV2FromEntropyQStackedWidgetVLayout" stretch="0,0">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -8885,7 +8840,7 @@
                           <widget class="QFrame" name="electrumV2FromEntropyModePublicKeyTypeAndPassphraseContainerQFrame">
                            <layout class="QHBoxLayout" name="electrumV2FromEntropyModePublicKeyTypeAndPassphraseContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -9061,7 +9016,7 @@
                           <widget class="QFrame" name="electrumV2FromEntropyLanguageMnemonicTypeAndWordsContainerQFrame">
                            <layout class="QHBoxLayout" name="electrumV2FromEntropyLanguageMnemonicTypeAndWordsContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -9351,7 +9306,7 @@
                        <widget class="QWidget" name="electrumV2FromMnemonicQStackedWidget">
                         <layout class="QVBoxLayout" name="electrumV2FromMnemonicQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -9369,7 +9324,7 @@
                           <widget class="QFrame" name="electrumV2FromMnemonicAndMnemonicTypeContainerQFrame">
                            <layout class="QHBoxLayout" name="electrumV2FromMnemonicAndMnemonicTypeContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -9545,7 +9500,7 @@
                           <widget class="QFrame" name="electrumV2FromMnemonicModePublicKeyTypeAndPassphraseContainerQFrame">
                            <layout class="QHBoxLayout" name="electrumV2FromMnemonicModePublicKeyTypeAndPassphraseContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -9814,7 +9769,7 @@
                        <widget class="QWidget" name="electrumV2FromSeedQStackedWidget">
                         <layout class="QVBoxLayout" name="electrumV2FromSeedQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -9829,10 +9784,10 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="electrumV2FromSeedContainerQFrame">
-                           <layout class="QVBoxLayout" name="electrumV2FromSeedContainerQFrameVLayout">
+                          <widget class="QFrame" name="electrumV2FromSeedModeAndPublicKeyTypeContainerQFrame">
+                           <layout class="QHBoxLayout" name="electrumV2FromSeedModeAndPublicKeyTypeContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -9847,129 +9802,8 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QFrame" name="electrumV2FromSeedModeAndPublicKeyTypeContainerQFrame">
-                              <layout class="QHBoxLayout" name="electrumV2FromSeedModeAndPublicKeyTypeContainerQFrameHLayout">
-                               <property name="spacing">
-                                <number>15</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QFrame" name="electrumV2FromSeedsContainerQFrame">
-                                 <layout class="QVBoxLayout" name="electrumV2FromSeedsContainerQFrameVLayout">
-                                  <property name="spacing">
-                                   <number>5</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QFrame" name="electrumV2FromSeedsLabelContainerQFrame">
-                                    <layout class="QHBoxLayout" name="electrumV2FromSeedsLabelContainerQFrameHLayout">
-                                     <property name="spacing">
-                                      <number>15</number>
-                                     </property>
-                                     <property name="leftMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <property name="topMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <property name="rightMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <property name="bottomMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <item>
-                                      <widget class="QLabel" name="electrumV2FromSeedsQLabel">
-                                       <property name="text">
-                                        <string>Seed</string>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                     <item>
-                                      <spacer name="electrumV2FromSeedsLabelContainerQFrameHSpacer">
-                                       <property name="orientation">
-                                        <enum>Qt::Horizontal</enum>
-                                       </property>
-                                       <property name="sizeHint" stdset="0">
-                                        <size>
-                                         <width>764</width>
-                                         <height>20</height>
-                                        </size>
-                                       </property>
-                                      </spacer>
-                                     </item>
-                                    </layout>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <widget class="QLineEdit" name="electrumV2FromSeedsQLineEdit"/>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QFrame" name="electrumV2FromSeedModeContainerQFrame">
-                                 <layout class="QVBoxLayout" name="electrumV2FromSeedModeContainerQFrameVLayout">
-                                  <property name="spacing">
-                                   <number>5</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="electrumV2FromSeedModeQLabel">
-                                    <property name="text">
-                                     <string>Mode</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <widget class="QComboBox" name="electrumV2FromSeedModeQComboBox">
-                                    <property name="placeholderText">
-                                     <string>(Select)</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QFrame" name="electrumV2FromSeedPublicKeyTypeQFrame">
-                              <layout class="QHBoxLayout" name="electrumV2FromSeedPublicKeyTypeQFrameHLayout">
+                             <widget class="QFrame" name="electrumV2FromSeedsContainerQFrame">
+                              <layout class="QVBoxLayout" name="electrumV2FromSeedsContainerQFrameVLayout">
                                <property name="spacing">
                                 <number>5</number>
                                </property>
@@ -9986,16 +9820,10 @@
                                 <number>0</number>
                                </property>
                                <item>
-                                <widget class="QFrame" name="electrumV2FromSeedPublicKeyTypeContainerQFrame">
-                                 <property name="minimumSize">
-                                  <size>
-                                   <width>150</width>
-                                   <height>0</height>
-                                  </size>
-                                 </property>
-                                 <layout class="QVBoxLayout" name="electrumV2FromSeedPublicKeyTypeContainerQFrameVLayout">
+                                <widget class="QFrame" name="electrumV2FromSeedsLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="electrumV2FromSeedsLabelContainerQFrameHLayout_3">
                                   <property name="spacing">
-                                   <number>5</number>
+                                   <number>15</number>
                                   </property>
                                   <property name="leftMargin">
                                    <number>0</number>
@@ -10010,68 +9838,174 @@
                                    <number>0</number>
                                   </property>
                                   <item>
-                                   <widget class="QFrame" name="electrumV2FromSeedPublicKeyTypeLabelContainerQFrame">
-                                    <layout class="QHBoxLayout" name="electrumV2FromSeedPublicKeyTypeLabelContainerQFrameHLayout">
-                                     <property name="spacing">
-                                      <number>15</number>
-                                     </property>
-                                     <property name="leftMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <property name="topMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <property name="rightMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <property name="bottomMargin">
-                                      <number>0</number>
-                                     </property>
-                                     <item>
-                                      <widget class="QLabel" name="electrumV2FromSeedPublicKeyTypeQLabel">
-                                       <property name="text">
-                                        <string>Public Key Type</string>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                    </layout>
+                                   <widget class="QLabel" name="electrumV2FromSeedsQLabel">
+                                    <property name="text">
+                                     <string>Seed</string>
+                                    </property>
                                    </widget>
                                   </item>
                                   <item>
-                                   <widget class="QComboBox" name="electrumV2FromSeedPublicKeyTypeQComboBox">
-                                    <property name="placeholderText">
-                                     <string>(Select)</string>
+                                   <spacer name="electrumV2FromSeedsLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
                                     </property>
-                                    <item>
-                                     <property name="text">
-                                      <string>Uncompressed</string>
-                                     </property>
-                                    </item>
-                                    <item>
-                                     <property name="text">
-                                      <string>Compressed</string>
-                                     </property>
-                                    </item>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLineEdit" name="electrumV2FromSeedsQLineEdit"/>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="electrumV2FromSeedModeContainerQFrame">
+                              <layout class="QVBoxLayout" name="electrumV2FromSeedModeContainerQFrameVLayout">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QLabel" name="electrumV2FromSeedModeQLabel">
+                                 <property name="text">
+                                  <string>Mode</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QComboBox" name="electrumV2FromSeedModeQComboBox">
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="electrumV2FromSeedPublicKeyTypeQFrame">
+                           <layout class="QHBoxLayout" name="electrumV2FromSeedPublicKeyTypeQFrameHLayout">
+                            <property name="spacing">
+                             <number>10</number>
+                            </property>
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="electrumV2FromSeedPublicKeyTypeContainerQFrame">
+                              <property name="minimumSize">
+                               <size>
+                                <width>150</width>
+                                <height>0</height>
+                               </size>
+                              </property>
+                              <layout class="QVBoxLayout" name="electrumV2FromSeedPublicKeyTypeContainerQFrameVLayout">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="electrumV2FromSeedPublicKeyTypeLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="electrumV2FromSeedPublicKeyTypeLabelContainerQFrameHLayout">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="electrumV2FromSeedPublicKeyTypeQLabel">
+                                    <property name="text">
+                                     <string>Public Key Type</string>
+                                    </property>
                                    </widget>
                                   </item>
                                  </layout>
                                 </widget>
                                </item>
                                <item>
-                                <spacer name="electrumV2FromSeedPublicKeyTypeQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
+                                <widget class="QComboBox" name="electrumV2FromSeedPublicKeyTypeQComboBox">
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
                                  </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>40</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
+                                 <item>
+                                  <property name="text">
+                                   <string>Uncompressed</string>
+                                  </property>
+                                 </item>
+                                 <item>
+                                  <property name="text">
+                                   <string>Compressed</string>
+                                  </property>
+                                 </item>
+                                </widget>
                                </item>
                               </layout>
                              </widget>
+                            </item>
+                            <item>
+                             <spacer name="electrumV2FromSeedPublicKeyTypeQFrameHSpacer">
+                              <property name="orientation">
+                               <enum>Qt::Horizontal</enum>
+                              </property>
+                              <property name="sizeHint" stdset="0">
+                               <size>
+                                <width>40</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                             </spacer>
                             </item>
                            </layout>
                           </widget>
@@ -10107,7 +10041,7 @@
                        <widget class="QWidget" name="moneroFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="moneroFromEntropyQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -10190,7 +10124,7 @@
                           <widget class="QFrame" name="moneroFromEntropyPassphrasePaymentIDContainerQFrame">
                            <layout class="QHBoxLayout" name="moneroFromEntropyPassphrasePaymentIDContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -10386,7 +10320,7 @@
                        <widget class="QWidget" name="moneroFromMnemonicQStackedWidget">
                         <layout class="QVBoxLayout" name="moneroFromMnemonicQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -10469,7 +10403,7 @@
                           <widget class="QFrame" name="moneroFromMnemonicPaymentIDPassphraseContainerQFrame">
                            <layout class="QHBoxLayout" name="moneroFromMnemonicPaymentIDPassphraseContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>5</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -10562,7 +10496,7 @@
                        <widget class="QWidget" name="moneroFromSeedQStackedWidget">
                         <layout class="QVBoxLayout" name="moneroFromSeedQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -10753,7 +10687,7 @@
                        <widget class="QWidget" name="moneroFromSpendPrivateKeyQStackedWidget">
                         <layout class="QVBoxLayout" name="moneroFromSpendPrivateKeyQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -10908,7 +10842,7 @@
                        <widget class="QWidget" name="moneroFromPrivateKeyQStackedWidget">
                         <layout class="QVBoxLayout" name="moneroFromPrivateKeyQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -11057,7 +10991,7 @@
                        <widget class="QWidget" name="moneroFromWatchOnlyQStackedWidget">
                         <layout class="QVBoxLayout" name="moneroFromWatchOnlyQStackedWidgetVLayout">
                          <property name="spacing">
-                          <number>15</number>
+                          <number>10</number>
                          </property>
                          <property name="leftMargin">
                           <number>0</number>
@@ -11164,7 +11098,7 @@
                              <widget class="QFrame" name="moneroFromWatchOnlySpendKeyAndPaymentIDContainerQFrame">
                               <layout class="QHBoxLayout" name="moneroFromWatchOnlySpendKeyAndPaymentIDContainerQFrameHLayout">
                                <property name="spacing">
-                                <number>15</number>
+                                <number>10</number>
                                </property>
                                <property name="leftMargin">
                                 <number>0</number>
@@ -11477,12 +11411,12 @@
                     </sizepolicy>
                    </property>
                    <property name="currentIndex">
-                    <number>7</number>
+                    <number>1</number>
                    </property>
                    <widget class="QWidget" name="customQStackedWidgetPage">
                     <layout class="QHBoxLayout" name="customQStackedWidgetPageHLayout">
                      <property name="spacing">
-                      <number>15</number>
+                      <number>10</number>
                      </property>
                      <property name="leftMargin">
                       <number>0</number>
@@ -11679,7 +11613,7 @@
                    <widget class="QWidget" name="bip44QStackedWidgetPage">
                     <layout class="QHBoxLayout" name="bip44QStackedWidgetPageHLayout">
                      <property name="spacing">
-                      <number>15</number>
+                      <number>10</number>
                      </property>
                      <property name="leftMargin">
                       <number>0</number>
@@ -12077,7 +12011,7 @@
                    <widget class="QWidget" name="bip49QStackedWidgetPage">
                     <layout class="QHBoxLayout" name="bip49QStackedWidgetPageHLayout">
                      <property name="spacing">
-                      <number>15</number>
+                      <number>10</number>
                      </property>
                      <property name="leftMargin">
                       <number>0</number>
@@ -12475,7 +12409,7 @@
                    <widget class="QWidget" name="bip84QStackedWidgetPage">
                     <layout class="QHBoxLayout" name="bip84QStackedWidgetPageHLayout">
                      <property name="spacing">
-                      <number>15</number>
+                      <number>10</number>
                      </property>
                      <property name="leftMargin">
                       <number>0</number>
@@ -12873,7 +12807,7 @@
                    <widget class="QWidget" name="bip86QStackedWidgetPage">
                     <layout class="QHBoxLayout" name="bip86QStackedWidgetPageHLayout">
                      <property name="spacing">
-                      <number>15</number>
+                      <number>10</number>
                      </property>
                      <property name="leftMargin">
                       <number>0</number>
@@ -13271,7 +13205,7 @@
                    <widget class="QWidget" name="bip141QStackedWidgetPage">
                     <layout class="QHBoxLayout" name="bip141QStackedWidgetPageHLayout">
                      <property name="spacing">
-                      <number>15</number>
+                      <number>10</number>
                      </property>
                      <property name="leftMargin">
                       <number>0</number>
@@ -13451,7 +13385,7 @@
                    <widget class="QWidget" name="cip1852QStackedWidgetPage">
                     <layout class="QHBoxLayout" name="cip1852QStackedWidgetPageHLayout">
                      <property name="spacing">
-                      <number>15</number>
+                      <number>10</number>
                      </property>
                      <property name="leftMargin">
                       <number>0</number>
@@ -13854,7 +13788,7 @@
                    <widget class="QWidget" name="hdwQStackedWidgetPage">
                     <layout class="QHBoxLayout" name="hdwQStackedWidgetPageHLayout">
                      <property name="spacing">
-                      <number>5</number>
+                      <number>10</number>
                      </property>
                      <property name="leftMargin">
                       <number>0</number>
@@ -14082,7 +14016,7 @@
                    <widget class="QWidget" name="electrumQStackedWidgetPage">
                     <layout class="QHBoxLayout" name="electrumQStackedWidgetPageHLayout">
                      <property name="spacing">
-                      <number>15</number>
+                      <number>10</number>
                      </property>
                      <property name="leftMargin">
                       <number>0</number>
@@ -14245,7 +14179,7 @@
                    <widget class="QWidget" name="moneroQStackedWidgetPage">
                     <layout class="QHBoxLayout" name="moneroQStackedWidgetPageHLayout">
                      <property name="spacing">
-                      <number>15</number>
+                      <number>10</number>
                      </property>
                      <property name="leftMargin">
                       <number>0</number>
@@ -14414,7 +14348,7 @@
                <widget class="QGroupBox" name="dumpsFormatKeysContainerQGroupBox">
                 <layout class="QHBoxLayout" name="dumpsFormatKeysContainerQGroupBoxHLayout">
                  <property name="spacing">
-                  <number>15</number>
+                  <number>10</number>
                  </property>
                  <property name="leftMargin">
                   <number>10</number>
