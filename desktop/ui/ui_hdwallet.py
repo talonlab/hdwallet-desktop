@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwallettNlQAj.ui'
+## Form generated from reading UI file 'hdwalletkJQBKf.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -4980,7 +4980,7 @@ class Ui_MainWindow(object):
         self.derivationQGroupBoxVLayout = QVBoxLayout(self.derivationQGroupBox)
         self.derivationQGroupBoxVLayout.setSpacing(0)
         self.derivationQGroupBoxVLayout.setObjectName(u"derivationQGroupBoxVLayout")
-        self.derivationQGroupBoxVLayout.setContentsMargins(10, 7, 10, 10)
+        self.derivationQGroupBoxVLayout.setContentsMargins(10, 10, 10, 10)
         self.derivationTabButtonsContainerQFrame = QFrame(self.derivationQGroupBox)
         self.derivationTabButtonsContainerQFrame.setObjectName(u"derivationTabButtonsContainerQFrame")
         self.derivationTabButtonsContainerQFrameHLayout = QHBoxLayout(self.derivationTabButtonsContainerQFrame)
@@ -6573,7 +6573,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.hdwalletQStackedWidget.setCurrentIndex(0)
+        self.hdwalletQStackedWidget.setCurrentIndex(1)
         self.hdQStackedWidget.setCurrentIndex(4)
         self.bipQStackedWidget.setCurrentIndex(4)
         self.cardanoQStackedWidget.setCurrentIndex(4)

@@ -176,7 +176,7 @@
           <item>
            <widget class="QStackedWidget" name="hdwalletQStackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="generatePageQStackedWidget">
              <layout class="QVBoxLayout" name="generatePageQStackedWidgetVLayout">
@@ -11290,7 +11290,7 @@
                   <number>10</number>
                  </property>
                  <property name="topMargin">
-                  <number>7</number>
+                  <number>10</number>
                  </property>
                  <property name="rightMargin">
                   <number>10</number>
