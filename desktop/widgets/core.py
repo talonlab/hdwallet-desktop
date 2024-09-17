@@ -7,6 +7,7 @@
 # file COPYING or https://opensource.org/license/mit
 
 import os
+import re
 import json
 from typing import (
     Optional, Union
@@ -20,7 +21,8 @@ from PySide6.QtCore import (
     QRect, QFileSystemWatcher, QObject
 )
 from PySide6.QtGui import (
-    QFontDatabase, QIcon
+    QFontDatabase, QIcon,
+    QTextCharFormat, QTextCursor, QColor
 )
 
 from desktop.utils import (
@@ -34,6 +36,17 @@ class Application(QMainWindow):
     ui: Ui_MainWindow = None
     detached_window: DetachedTerminalWindow = None
     fs_watcher: QFileSystemWatcher = None
+
+    TEXT_COLOR: QColor = QColor(255, 255, 255)
+    HIGHLIGHT_PATTERN = [
+        (re.compile(r'^ERROR:.*$'), QColor(255, 96, 96)),         # ERROR
+        (re.compile(r'\".*?\"(?=\s*:)'), QColor(131, 185, 255)),  # keys
+        (re.compile(r'\".*?\"'), QColor(255, 255, 255)),          # string
+        (re.compile(r'\b\d+\b'), QColor(255, 165, 0)),            # numbers
+        (re.compile(r'\btrue\b|\bfalse\b|\bnull\b'), QColor(255, 165, 0)),   # boolean/null
+        (re.compile(r'[{}[\],:]'), QColor(255, 255, 255)),                   # punctuation
+        (re.compile(r'\bm/.*?(?=\s)'), QColor(131, 185, 255))                # "m/" path
+    ]
 
     def __new__(cls, *args, **kwargs) -> 'Application':
         """
@@ -143,19 +156,70 @@ class Application(QMainWindow):
         else:
             print(f"ERROR changing page: '{stacked_name}' '{widget_name}'")
 
-    def println(self, s: Union[dict, str, None]) -> None:
+    def println(self, data: Optional[Union[str, dict]], end="\n") -> None:
         """
         Print a message to the terminal UI.
 
-        :param s: The message to print. Can be a dictionary, string, or None.
+        :param data: The message to print. Can be a dictionary, string, or None.
         """
-        if isinstance(s, dict):
-            newtext = json.dumps(s, indent=4, ensure_ascii=False)
-        elif s is None:
+
+        if isinstance(data, dict):
+            data = json.dumps(data, indent=4, ensure_ascii=False)
+        elif data is None:
             return
-        else:
-            newtext = str(s)
-        self.ui.outputTerminalQPlainTextEdit.appendPlainText(f"{newtext}")
+
+        cursor = self.ui.outputTerminalQPlainTextEdit.textCursor()
+        cursor.movePosition(QTextCursor.End)
+
+        default_format = QTextCharFormat()
+        default_format.setForeground(Application.TEXT_COLOR)
+
+        # Group all edits into a single operation
+        cursor.beginEditBlock()
+
+        for line in data.splitlines():
+            pos = 0
+            matches = []
+            matched_ranges = []
+
+            # Collect all matches for the line, avoiding overlaps
+            for pattern, color in Application.HIGHLIGHT_PATTERN:
+                for match in pattern.finditer(line):
+                    start, end_pos = match.start(), match.end()
+                    # Check if this match overlaps with any existing matched ranges
+                    overlaps = False
+                    for m_start, m_end in matched_ranges:
+                        if start < m_end and end_pos > m_start:
+                            overlaps = True
+                            break
+                    if not overlaps:
+                        matches.append((start, end_pos, color, match.group()))
+                        matched_ranges.append((start, end_pos))
+
+            # Sort matches by start position
+            matches.sort(key=lambda x: x[0])
+
+            # Insert text with formatting
+            while pos < len(line):
+                # Check if there's a match starting at the current position
+                if matches and matches[0][0] == pos:
+                    start, end_pos, color, text = matches.pop(0)
+                    cformat = QTextCharFormat()
+                    cformat.setForeground(color)
+                    cursor.insertText(text, cformat)
+                    pos = end_pos
+                else:
+                    # Insert unformatted text up to the next match or end of line
+                    next_match_start = matches[0][0] if matches else len(line)
+                    cursor.insertText(line[pos:next_match_start], default_format)
+                    pos = next_match_start
+            cursor.insertText(end, default_format)  # Newline or other end character
+
+        cursor.endEditBlock()
+
+        # Update the cursor and ensure it's visible
+        self.ui.outputTerminalQPlainTextEdit.setTextCursor(cursor)
+        self.ui.outputTerminalQPlainTextEdit.ensureCursorVisible()
 
     def toggle_expand(self, detach: bool) -> None:
         """

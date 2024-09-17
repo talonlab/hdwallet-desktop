@@ -28,7 +28,6 @@ from desktop.utils import resolve_path
 from desktop.widgets.core import *
 from desktop.widgets.donation import Donation
 from desktop.utils.worker import Worker
-from desktop.utils.highlighter import Highlighter
 from desktop.generate import Generate
 from desktop.dumps import Dumps
 
@@ -85,8 +84,6 @@ class MainApplication:
                 main_window=self.app.window(), parent_frame=self.ui.hdWalletContainerQFrame
             )
         )
-
-        Highlighter(self.ui.outputTerminalQPlainTextEdit.document())
 
         self.ui.generateClientAndStrengthContainerQGroupBox.setSizePolicy(
             QSizePolicy.Expanding, QSizePolicy.Expanding
