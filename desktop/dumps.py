@@ -477,8 +477,10 @@ class Dumps:
         dformat = self.ui.dumpsFormatQComboBox.currentText()
         exclude_include = [p.strip() for p in self.ui.dumpsExcludeOrIncludeQLineEdit.text().split(",")]
 
+        saved_file = None
         if save_filepath != None:
             saved_file = open(save_filepath, 'w')
+            signal.interval_finished.connect(saved_file.close)
 
         crypto = self.ui.dumpsCryptocurrencyQComboBox.currentText()
 
@@ -580,9 +582,7 @@ class Dumps:
                                 csv_data.append(dump[key[0]])
                         out = ", ".join(map(str, csv_data))
                     else:
-                        exclude_set = set(exclude_include)
-                        exclude_set.add('root')
-                        dump = hd.dump(exclude=exclude_set)
+                        dump = hd.dump(exclude={'root', *exclude_include})
                         out = json.dumps(dump, indent=4, ensure_ascii=False)
 
                     signal.interval_output.emit(out)
@@ -590,7 +590,7 @@ class Dumps:
                     if hd_kwargs["cryptocurrency"].ECC.NAME != "SLIP10-Secp256k1" and SLIP10_SECP256K1_CONST.USE == "coincurve":
                         time.sleep(0.03)
                     
-                    if save_filepath != None:
+                    if saved_file != None:
                         saved_file.write(f"{out}\n")
                     return [_derivation.path()]
 
@@ -613,24 +613,24 @@ class Dumps:
         if dformat == "CSV":
             if derivation is None:
                 return None
-
             drive(*derivation.derivations())
-            if save_filepath != None:
-                saved_file.close()
 
         else:
             if derivation != None:                
-                drive(*derivation.derivations())
-                if save_filepath != None:
-                    saved_file.close()
+                if "root" not in exclude_include:
+                    root = json.dumps(hd.dump(exclude={"derivation", *exclude_include}), indent=4, ensure_ascii=False)
+                    
+                    signal.interval_output.emit(root)
 
-                #result = json.dumps(hd.dumps(exclude=set(exclude_include)), indent=4, ensure_ascii=False)
+                    if saved_file != None:
+                        saved_file.write(f"{root}\n")
+
+                drive(*derivation.derivations())
             else:
                 result = json.dumps(hd.dump(exclude=set(exclude_include)), indent=4, ensure_ascii=False)
 
-                if save_filepath != None:
+                if saved_file != None:
                     saved_file.write(result)
-                    saved_file.close()
                 return result
 
         return None
@@ -1016,7 +1016,7 @@ class Dumps:
             self.__default_csv_include()
         else:
             self.ui.dumpsExcludeOrIncludeQLabel.setText("Exclude")
-            self.ui.dumpsExcludeOrIncludeQLineEdit.setText(None)
+            self.ui.dumpsExcludeOrIncludeQLineEdit.setText("root")
 
 
     def __default_csv_include(self):
@@ -1069,6 +1069,9 @@ class Dumps:
 
         if self.ui.dumpsFormatQComboBox.currentText() == "CSV":
             self.__default_csv_include()
+        else:
+            self.ui.dumpsExcludeOrIncludeQLineEdit.setText("root")
+ 
 
     def __filter_derivation_tab(self, k):
         first_name = None
