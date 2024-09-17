@@ -9,8 +9,9 @@
 import string
 from random import choice
 
-from PySide6.QtGui import QIntValidator, QRegularExpressionValidator
+from PySide6.QtGui import QIntValidator, QRegularExpressionValidator, QColor
 from PySide6.QtCore import QRegularExpression
+
 
 from hdwallet.cryptocurrencies import (
     Cardano, CRYPTOCURRENCIES
@@ -44,11 +45,20 @@ from hdwallet.seeds import (
     SEEDS
 )
 
+from desktop.utils.common import set_red_border, clear_all_borders
+
 class Generate:
     def __init__(self, app):
         self.app = app
         self.ui = app.ui
         self._setup_generate_stack()
+        self.generate_group_boxes = [
+            self.ui.generateClientAndStrengthContainerQGroupBox,
+            self.ui.generateMnemonicClientWordsLanguageContainerQGroupBox,
+            self.ui.seedGroupBoxContainerQGroupBox,
+            self.ui.generateLengthAndPassphraseQGroupBox
+        ]
+
 
     def _setup_generate_stack(self):
         self.ui.generateEntropyClientQComboBox.addItems(ENTROPIES.names())
@@ -97,6 +107,7 @@ class Generate:
         self.ui.generateEntropyStrengthQComboBox.setCurrentIndex(0)
 
     def _generate_entropy(self):
+        clear_all_borders(self.generate_group_boxes)
         entropy_client = self.ui.generateEntropyClientQComboBox.currentText()
         strength = int(self.ui.generateEntropyStrengthQComboBox.currentText())
         gen_entropy = ENTROPIES.entropy(entropy_client).generate(strength=strength)
@@ -146,6 +157,7 @@ class Generate:
             self.ui.generateMnemonicEntropyQFrame.setEnabled(True)
 
     def _generate_mnemonic(self):
+        clear_all_borders(self.generate_group_boxes)
         mnemonic_client = self.ui.generateMnemonicClientQComboBox.currentText()
         word = self.ui.generateMnemonicWordsQComboBox.currentText()
         entropy = self.ui.generateSeedMnemonicEntropyQLineEdit.text()
@@ -163,12 +175,15 @@ class Generate:
                 gen_mnemonic = MNEMONICS.mnemonic(mnemonic_client).from_words(**kwargs)
             else:
                 if len(entropy) == 0:
+                    set_red_border(self.ui.generateMnemonicClientWordsLanguageContainerQGroupBox)
                     raise Exception("Entropy is required to generate mnemonic!")
+                
                 kwargs["entropy"] = entropy
                 gen_mnemonic = MNEMONICS.mnemonic(mnemonic_client).from_entropy(**kwargs)
 
         except Exception as e:
             output = f"ERROR: {e}"
+            set_red_border(self.ui.generateMnemonicClientWordsLanguageContainerQGroupBox)
 
         else:
             output = {
@@ -209,6 +224,7 @@ class Generate:
             self.ui.generateSeedPassphraseGenerateContainerQFrame.setEnabled(False)
 
     def _generate_seed(self):
+        clear_all_borders(self.generate_group_boxes)
         seed_client = self.ui.generateSeedClientQComboBox.currentText()
         mnemonic_type = self.ui.generateSeedMnemonicTypeQComboBox.currentText().lower()
         cardano_type = self.ui.generateSeedCardanoTypeQComboBox.currentText().lower()
@@ -218,6 +234,7 @@ class Generate:
 
         try:
             if len(mnemonic) == 0:
+                set_red_border(self.ui.seedGroupBoxContainerQGroupBox)
                 raise Exception("mnemonic is required to generate seed!")
             elif CardanoSeed.name() == seed_client:
                 seed = CardanoSeed.from_mnemonic(mnemonic=mnemonic, cardano_type=cardano_type, passphrase=passphrase)
@@ -230,6 +247,7 @@ class Generate:
                 seed = SEEDS.seed(seed_client).from_mnemonic(mnemonic=mnemonic)
         except Exception as e:
             output = f"ERROR: {e}"
+            set_red_border(self.ui.seedGroupBoxContainerQGroupBox)
         else:
             output = {
                 "name": seed_client,
@@ -239,8 +257,10 @@ class Generate:
         self.app.println(output)
 
     def _generate_passphrase(self):
+        clear_all_borders(self.generate_group_boxes)
 
         if len(self.ui.generateLengthQLineEdit.text()) == 0:
+            set_red_border(self.ui.generateLengthAndPassphraseQGroupBox)
             self.app.println("ERROR: passpharse length is required")
             return None
 
@@ -257,6 +277,7 @@ class Generate:
 
         output = None
         if not any([upper, lower, special, digit]):
+            set_red_border(self.ui.generateLengthAndPassphraseQGroupBox)
             output = "ERROR: At least one of upper, lower, special, or digit must be selected"
         else:
             pp = "".join(choice(characters) for _ in range(length))
@@ -267,3 +288,4 @@ class Generate:
             }
 
         self.app.println(output)
+
