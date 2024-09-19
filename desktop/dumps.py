@@ -249,6 +249,17 @@ class Dumps:
             lambda: self._update_terminal_state(False, True)
         )
 
+        # Algorand clients
+        algorand_clients = ["Algorand", "BIP39"]
+        self.algorand_client_combo_boxes = [
+            (self.ui.bipFromEntropyClientQComboBox, self.ui.bipFromEntropyClientContainerQFrame),
+            (self.ui.bipFromMnemonicClientQComboBox, self.ui.bipFromMnemonicClientContainerQFrame),
+            (self.ui.bipFromSeedClientQComboBox, self.ui.bipFromSeedClientContainerQFrame)
+        ]
+
+        for combo_box, _ in self.algorand_client_combo_boxes:
+            combo_box.addItems(algorand_clients)
+
         self.ui.customClientQComboBox.clear()
         self.ui.customClientQComboBox.addItems(self.custom_paths.keys())
         self.ui.customClientQComboBox.currentIndexChanged.connect(self._custom_path_client_changed)
@@ -717,16 +728,22 @@ class Dumps:
             hd_kwargs["language"] = self.ui.bipFromEntropyLanguageQComboBox.currentText().lower()
             hd_kwargs["passphrase"] = self.ui.bipFromEntropyPassphraseQLineEdit.text()
             hd_kwargs["public_key_type"] = self.ui.bipFromEntropyPublicKeyTypeQComboBox.currentText().lower()
+            
+            entropy_class = ENTROPIES.entropy(self.ui.bipFromEntropyClientQComboBox.currentText())
+            
             return HDWallet(**hd_kwargs).from_entropy(
-                BIP39Entropy(
+                entropy_class(
                     entropy=self.ui.bipFromEntropyGenerateQLineEdit.text()
                 )
             )
         elif dump_from == "Mnemonic":
             hd_kwargs["passphrase"] = self.ui.bipFromMnemonicPassphraseQLineEdit.text()
             hd_kwargs["public_key_type"] = self.ui.bipFromMnemonicPublicKeyTypeQComboBox.currentText().lower()
+
+            mnemonic_class = MNEMONICS.mnemonic(self.ui.bipFromMnemonicClientQComboBox.currentText())
+
             return HDWallet(**hd_kwargs).from_mnemonic(
-                BIP39Mnemonic(
+                mnemonic_class(
                     mnemonic=self.ui.bipFromMnemonicQLineEdit.text()
                 )
             )
@@ -742,6 +759,9 @@ class Dumps:
             )
         elif dump_from == "Seed":
             hd_kwargs["public_key_type"] = self.ui.bipFromSeedPublicKeyTypeQComboBox.currentText().lower()
+
+            seed_class = SEEDS.seed(self.ui.bipFromSeedClientQComboBox.currentText())
+
             return HDWallet(**hd_kwargs).from_seed(
                 BIP39Seed(
                     seed=self.ui.bipFromSeedsQLineEdit.text()
@@ -1007,8 +1027,16 @@ class Dumps:
         self.ui.electrumV1FromWIFBIP38PassphraseQCheckBox.setChecked(False)
         self.ui.electrumV1FromWIFBIP38PassphraseQCheckBox.setEnabled(is_bip38_supported)
         
-
         for c in coin_typs_derviation: c.setText(str(crypto_obj.COIN_TYPE))
+
+        if crypto == "Algorand":
+            for combo_box, container in self.algorand_client_combo_boxes:
+                combo_box.setCurrentText("Algorand")
+                container.setVisible(True) 
+        else:
+            for combo_box, container in self.algorand_client_combo_boxes:
+                combo_box.setCurrentText("BIP39")
+                container.setVisible(False) 
 
     def _dump_format_changed(self, export_format):
         if export_format == "CSV":
