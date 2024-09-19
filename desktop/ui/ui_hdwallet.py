@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletkJQBKf.ui'
+## Form generated from reading UI file 'hdwalletxoWgOy.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -815,10 +815,54 @@ class Ui_MainWindow(object):
         self.bipFromEntropyQStackedWidgetVLayout.setSpacing(10)
         self.bipFromEntropyQStackedWidgetVLayout.setObjectName(u"bipFromEntropyQStackedWidgetVLayout")
         self.bipFromEntropyQStackedWidgetVLayout.setContentsMargins(0, 0, 0, 0)
-        self.bipFromEntropyContainerQFrame = QFrame(self.bipFromEntropyQStackedWidget)
+        self.bipFromEntropyClientAndEntropyContainerQFrame = QFrame(self.bipFromEntropyQStackedWidget)
+        self.bipFromEntropyClientAndEntropyContainerQFrame.setObjectName(u"bipFromEntropyClientAndEntropyContainerQFrame")
+        self.bipFromEntropyClientAndEntropyContainerQFrame.setFrameShape(QFrame.StyledPanel)
+        self.bipFromEntropyClientAndEntropyContainerQFrame.setFrameShadow(QFrame.Raised)
+        self.bipFromEntropyClientAndEntropyContainerQFrameHLayout = QHBoxLayout(self.bipFromEntropyClientAndEntropyContainerQFrame)
+        self.bipFromEntropyClientAndEntropyContainerQFrameHLayout.setSpacing(15)
+        self.bipFromEntropyClientAndEntropyContainerQFrameHLayout.setObjectName(u"bipFromEntropyClientAndEntropyContainerQFrameHLayout")
+        self.bipFromEntropyClientAndEntropyContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
+        self.bipFromEntropyClientContainerQFrame = QFrame(self.bipFromEntropyClientAndEntropyContainerQFrame)
+        self.bipFromEntropyClientContainerQFrame.setObjectName(u"bipFromEntropyClientContainerQFrame")
+        self.bipFromEntropyClientContainerQFrame.setFrameShape(QFrame.StyledPanel)
+        self.bipFromEntropyClientContainerQFrame.setFrameShadow(QFrame.Raised)
+        self.bipFromEntropyClientContainerQFrameVLayout = QVBoxLayout(self.bipFromEntropyClientContainerQFrame)
+        self.bipFromEntropyClientContainerQFrameVLayout.setSpacing(5)
+        self.bipFromEntropyClientContainerQFrameVLayout.setObjectName(u"bipFromEntropyClientContainerQFrameVLayout")
+        self.bipFromEntropyClientContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
+        self.bipFromEntropyClientLabelContainerQFrame = QFrame(self.bipFromEntropyClientContainerQFrame)
+        self.bipFromEntropyClientLabelContainerQFrame.setObjectName(u"bipFromEntropyClientLabelContainerQFrame")
+        self.bipFromEntropyClientLabelContainerQFrame.setFrameShape(QFrame.StyledPanel)
+        self.bipFromEntropyClientLabelContainerQFrame.setFrameShadow(QFrame.Raised)
+        self.bipFromEntropyClientLabelContainerQFrameHLayout = QHBoxLayout(self.bipFromEntropyClientLabelContainerQFrame)
+        self.bipFromEntropyClientLabelContainerQFrameHLayout.setSpacing(15)
+        self.bipFromEntropyClientLabelContainerQFrameHLayout.setObjectName(u"bipFromEntropyClientLabelContainerQFrameHLayout")
+        self.bipFromEntropyClientLabelContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
+        self.bipFromEntropyClientQLabel = QLabel(self.bipFromEntropyClientLabelContainerQFrame)
+        self.bipFromEntropyClientQLabel.setObjectName(u"bipFromEntropyClientQLabel")
+
+        self.bipFromEntropyClientLabelContainerQFrameHLayout.addWidget(self.bipFromEntropyClientQLabel)
+
+        self.bipFromEntropyClientLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.bipFromEntropyClientLabelContainerQFrameHLayout.addItem(self.bipFromEntropyClientLabelContainerQFrameHSpacer)
+
+
+        self.bipFromEntropyClientContainerQFrameVLayout.addWidget(self.bipFromEntropyClientLabelContainerQFrame)
+
+        self.bipFromEntropyClientQComboBox = QComboBox(self.bipFromEntropyClientContainerQFrame)
+        self.bipFromEntropyClientQComboBox.setObjectName(u"bipFromEntropyClientQComboBox")
+
+        self.bipFromEntropyClientContainerQFrameVLayout.addWidget(self.bipFromEntropyClientQComboBox)
+
+
+        self.bipFromEntropyClientAndEntropyContainerQFrameHLayout.addWidget(self.bipFromEntropyClientContainerQFrame)
+
+        self.bipFromEntropyContainerQFrame = QFrame(self.bipFromEntropyClientAndEntropyContainerQFrame)
         self.bipFromEntropyContainerQFrame.setObjectName(u"bipFromEntropyContainerQFrame")
         self.bipFromEntropyContainerQFrameVLayout = QVBoxLayout(self.bipFromEntropyContainerQFrame)
-        self.bipFromEntropyContainerQFrameVLayout.setSpacing(10)
+        self.bipFromEntropyContainerQFrameVLayout.setSpacing(5)
         self.bipFromEntropyContainerQFrameVLayout.setObjectName(u"bipFromEntropyContainerQFrameVLayout")
         self.bipFromEntropyContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
         self.bipFromEntropyLabelContainerQFrame = QFrame(self.bipFromEntropyContainerQFrame)
@@ -854,7 +898,10 @@ class Ui_MainWindow(object):
         self.bipFromEntropyContainerQFrameVLayout.addWidget(self.bipFromEntropyEntAndGenerateContainerQFrame)
 
 
-        self.bipFromEntropyQStackedWidgetVLayout.addWidget(self.bipFromEntropyContainerQFrame)
+        self.bipFromEntropyClientAndEntropyContainerQFrameHLayout.addWidget(self.bipFromEntropyContainerQFrame)
+
+
+        self.bipFromEntropyQStackedWidgetVLayout.addWidget(self.bipFromEntropyClientAndEntropyContainerQFrame)
 
         self.bipFromEntropyPublicKeyAndPassphraseContainerQFrame = QFrame(self.bipFromEntropyQStackedWidget)
         self.bipFromEntropyPublicKeyAndPassphraseContainerQFrame.setObjectName(u"bipFromEntropyPublicKeyAndPassphraseContainerQFrame")
@@ -988,10 +1035,54 @@ class Ui_MainWindow(object):
         self.bipFromMnemonicQStackedWidgetVLayout.setSpacing(10)
         self.bipFromMnemonicQStackedWidgetVLayout.setObjectName(u"bipFromMnemonicQStackedWidgetVLayout")
         self.bipFromMnemonicQStackedWidgetVLayout.setContentsMargins(0, 0, 0, 0)
-        self.bipFromMnemonicContainerQFrame = QFrame(self.bipFromMnemonicQStackedWidget)
+        self.bipFromMnemonicClientAndMnemonicContainerQFrame = QFrame(self.bipFromMnemonicQStackedWidget)
+        self.bipFromMnemonicClientAndMnemonicContainerQFrame.setObjectName(u"bipFromMnemonicClientAndMnemonicContainerQFrame")
+        self.bipFromMnemonicClientAndMnemonicContainerQFrame.setFrameShape(QFrame.StyledPanel)
+        self.bipFromMnemonicClientAndMnemonicContainerQFrame.setFrameShadow(QFrame.Raised)
+        self.bipFromMnemonicClientAndMnemonicContainerQFrameHSpacer = QHBoxLayout(self.bipFromMnemonicClientAndMnemonicContainerQFrame)
+        self.bipFromMnemonicClientAndMnemonicContainerQFrameHSpacer.setSpacing(10)
+        self.bipFromMnemonicClientAndMnemonicContainerQFrameHSpacer.setObjectName(u"bipFromMnemonicClientAndMnemonicContainerQFrameHSpacer")
+        self.bipFromMnemonicClientAndMnemonicContainerQFrameHSpacer.setContentsMargins(0, 0, 0, 0)
+        self.bipFromMnemonicClientContainerQFrame = QFrame(self.bipFromMnemonicClientAndMnemonicContainerQFrame)
+        self.bipFromMnemonicClientContainerQFrame.setObjectName(u"bipFromMnemonicClientContainerQFrame")
+        self.bipFromMnemonicClientContainerQFrame.setFrameShape(QFrame.StyledPanel)
+        self.bipFromMnemonicClientContainerQFrame.setFrameShadow(QFrame.Raised)
+        self.bipFromMnemonicClientContainerQFrameVLayout = QVBoxLayout(self.bipFromMnemonicClientContainerQFrame)
+        self.bipFromMnemonicClientContainerQFrameVLayout.setSpacing(5)
+        self.bipFromMnemonicClientContainerQFrameVLayout.setObjectName(u"bipFromMnemonicClientContainerQFrameVLayout")
+        self.bipFromMnemonicClientContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
+        self.bipFromMnemonicClientLabelContainerQFrame = QFrame(self.bipFromMnemonicClientContainerQFrame)
+        self.bipFromMnemonicClientLabelContainerQFrame.setObjectName(u"bipFromMnemonicClientLabelContainerQFrame")
+        self.bipFromMnemonicClientLabelContainerQFrame.setFrameShape(QFrame.StyledPanel)
+        self.bipFromMnemonicClientLabelContainerQFrame.setFrameShadow(QFrame.Raised)
+        self.bipFromMnemonicClientLabelContainerQFrameHLayout = QHBoxLayout(self.bipFromMnemonicClientLabelContainerQFrame)
+        self.bipFromMnemonicClientLabelContainerQFrameHLayout.setSpacing(15)
+        self.bipFromMnemonicClientLabelContainerQFrameHLayout.setObjectName(u"bipFromMnemonicClientLabelContainerQFrameHLayout")
+        self.bipFromMnemonicClientLabelContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
+        self.bipFromMnemonicClientQLabel = QLabel(self.bipFromMnemonicClientLabelContainerQFrame)
+        self.bipFromMnemonicClientQLabel.setObjectName(u"bipFromMnemonicClientQLabel")
+
+        self.bipFromMnemonicClientLabelContainerQFrameHLayout.addWidget(self.bipFromMnemonicClientQLabel)
+
+        self.bipFromMnemonicClientLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.bipFromMnemonicClientLabelContainerQFrameHLayout.addItem(self.bipFromMnemonicClientLabelContainerQFrameHSpacer)
+
+
+        self.bipFromMnemonicClientContainerQFrameVLayout.addWidget(self.bipFromMnemonicClientLabelContainerQFrame)
+
+        self.bipFromMnemonicClientQComboBox = QComboBox(self.bipFromMnemonicClientContainerQFrame)
+        self.bipFromMnemonicClientQComboBox.setObjectName(u"bipFromMnemonicClientQComboBox")
+
+        self.bipFromMnemonicClientContainerQFrameVLayout.addWidget(self.bipFromMnemonicClientQComboBox)
+
+
+        self.bipFromMnemonicClientAndMnemonicContainerQFrameHSpacer.addWidget(self.bipFromMnemonicClientContainerQFrame)
+
+        self.bipFromMnemonicContainerQFrame = QFrame(self.bipFromMnemonicClientAndMnemonicContainerQFrame)
         self.bipFromMnemonicContainerQFrame.setObjectName(u"bipFromMnemonicContainerQFrame")
         self.bipFromMnemonicContainerQFrameVLayout = QVBoxLayout(self.bipFromMnemonicContainerQFrame)
-        self.bipFromMnemonicContainerQFrameVLayout.setSpacing(10)
+        self.bipFromMnemonicContainerQFrameVLayout.setSpacing(5)
         self.bipFromMnemonicContainerQFrameVLayout.setObjectName(u"bipFromMnemonicContainerQFrameVLayout")
         self.bipFromMnemonicContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
         self.bipFromMnemonicLabelContainerQFrame = QFrame(self.bipFromMnemonicContainerQFrame)
@@ -1027,7 +1118,10 @@ class Ui_MainWindow(object):
         self.bipFromMnemonicContainerQFrameVLayout.addWidget(self.bipFromMnemonicLabelGenerateContainerQFrame)
 
 
-        self.bipFromMnemonicQStackedWidgetVLayout.addWidget(self.bipFromMnemonicContainerQFrame)
+        self.bipFromMnemonicClientAndMnemonicContainerQFrameHSpacer.addWidget(self.bipFromMnemonicContainerQFrame)
+
+
+        self.bipFromMnemonicQStackedWidgetVLayout.addWidget(self.bipFromMnemonicClientAndMnemonicContainerQFrame)
 
         self.bipFromMnemonicPublicKeyTypeAndPassphraseQFrame = QFrame(self.bipFromMnemonicQStackedWidget)
         self.bipFromMnemonicPublicKeyTypeAndPassphraseQFrame.setObjectName(u"bipFromMnemonicPublicKeyTypeAndPassphraseQFrame")
@@ -1121,7 +1215,51 @@ class Ui_MainWindow(object):
         self.bipFromSeedQStackedWidgetVLayout.setSpacing(10)
         self.bipFromSeedQStackedWidgetVLayout.setObjectName(u"bipFromSeedQStackedWidgetVLayout")
         self.bipFromSeedQStackedWidgetVLayout.setContentsMargins(0, 0, 0, 0)
-        self.bipFromSeedQFrame = QFrame(self.bipFromSeedQStackedWidget)
+        self.bipFromSeedClientAndSeedContainerQFrame = QFrame(self.bipFromSeedQStackedWidget)
+        self.bipFromSeedClientAndSeedContainerQFrame.setObjectName(u"bipFromSeedClientAndSeedContainerQFrame")
+        self.bipFromSeedClientAndSeedContainerQFrame.setFrameShape(QFrame.StyledPanel)
+        self.bipFromSeedClientAndSeedContainerQFrame.setFrameShadow(QFrame.Raised)
+        self.bipFromSeedClientAndSeedContainerQFrameHLayout = QHBoxLayout(self.bipFromSeedClientAndSeedContainerQFrame)
+        self.bipFromSeedClientAndSeedContainerQFrameHLayout.setSpacing(15)
+        self.bipFromSeedClientAndSeedContainerQFrameHLayout.setObjectName(u"bipFromSeedClientAndSeedContainerQFrameHLayout")
+        self.bipFromSeedClientAndSeedContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
+        self.bipFromSeedClientContainerQFrame = QFrame(self.bipFromSeedClientAndSeedContainerQFrame)
+        self.bipFromSeedClientContainerQFrame.setObjectName(u"bipFromSeedClientContainerQFrame")
+        self.bipFromSeedClientContainerQFrame.setFrameShape(QFrame.StyledPanel)
+        self.bipFromSeedClientContainerQFrame.setFrameShadow(QFrame.Raised)
+        self.bipFromSeedClientContainerQFrameVLayout = QVBoxLayout(self.bipFromSeedClientContainerQFrame)
+        self.bipFromSeedClientContainerQFrameVLayout.setSpacing(5)
+        self.bipFromSeedClientContainerQFrameVLayout.setObjectName(u"bipFromSeedClientContainerQFrameVLayout")
+        self.bipFromSeedClientContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
+        self.bipFromSeedClientLabelContainerQFrame = QFrame(self.bipFromSeedClientContainerQFrame)
+        self.bipFromSeedClientLabelContainerQFrame.setObjectName(u"bipFromSeedClientLabelContainerQFrame")
+        self.bipFromSeedClientLabelContainerQFrame.setFrameShape(QFrame.StyledPanel)
+        self.bipFromSeedClientLabelContainerQFrame.setFrameShadow(QFrame.Raised)
+        self.bipFromSeedClientLabelContainerQFrameHLayout = QHBoxLayout(self.bipFromSeedClientLabelContainerQFrame)
+        self.bipFromSeedClientLabelContainerQFrameHLayout.setSpacing(15)
+        self.bipFromSeedClientLabelContainerQFrameHLayout.setObjectName(u"bipFromSeedClientLabelContainerQFrameHLayout")
+        self.bipFromSeedClientLabelContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
+        self.bipFromSeedClientQLabel = QLabel(self.bipFromSeedClientLabelContainerQFrame)
+        self.bipFromSeedClientQLabel.setObjectName(u"bipFromSeedClientQLabel")
+
+        self.bipFromSeedClientLabelContainerQFrameHLayout.addWidget(self.bipFromSeedClientQLabel)
+
+        self.bipFromSeedClientLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.bipFromSeedClientLabelContainerQFrameHLayout.addItem(self.bipFromSeedClientLabelContainerQFrameHSpacer)
+
+
+        self.bipFromSeedClientContainerQFrameVLayout.addWidget(self.bipFromSeedClientLabelContainerQFrame)
+
+        self.bipFromSeedClientQComboBox = QComboBox(self.bipFromSeedClientContainerQFrame)
+        self.bipFromSeedClientQComboBox.setObjectName(u"bipFromSeedClientQComboBox")
+
+        self.bipFromSeedClientContainerQFrameVLayout.addWidget(self.bipFromSeedClientQComboBox)
+
+
+        self.bipFromSeedClientAndSeedContainerQFrameHLayout.addWidget(self.bipFromSeedClientContainerQFrame)
+
+        self.bipFromSeedQFrame = QFrame(self.bipFromSeedClientAndSeedContainerQFrame)
         self.bipFromSeedQFrame.setObjectName(u"bipFromSeedQFrame")
         self.bipFromSeedQFrame.setFrameShape(QFrame.StyledPanel)
         self.bipFromSeedQFrame.setFrameShadow(QFrame.Raised)
@@ -1153,7 +1291,10 @@ class Ui_MainWindow(object):
         self.bipFromSeedQFrameVLayout.addWidget(self.bipFromSeedsQLineEdit)
 
 
-        self.bipFromSeedQStackedWidgetVLayout.addWidget(self.bipFromSeedQFrame)
+        self.bipFromSeedClientAndSeedContainerQFrameHLayout.addWidget(self.bipFromSeedQFrame)
+
+
+        self.bipFromSeedQStackedWidgetVLayout.addWidget(self.bipFromSeedClientAndSeedContainerQFrame)
 
         self.bipFromSeedPublicKeyTypeQFrame = QFrame(self.bipFromSeedQStackedWidget)
         self.bipFromSeedPublicKeyTypeQFrame.setObjectName(u"bipFromSeedPublicKeyTypeQFrame")
@@ -6574,8 +6715,8 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.hdwalletQStackedWidget.setCurrentIndex(1)
-        self.hdQStackedWidget.setCurrentIndex(4)
-        self.bipQStackedWidget.setCurrentIndex(4)
+        self.hdQStackedWidget.setCurrentIndex(0)
+        self.bipQStackedWidget.setCurrentIndex(0)
         self.cardanoQStackedWidget.setCurrentIndex(4)
         self.electrumV1QStackedWidget.setCurrentIndex(3)
         self.electrumV2QStackedWidget.setCurrentIndex(2)
@@ -6664,6 +6805,8 @@ class Ui_MainWindow(object):
         self.dumpsFromQComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"XPublic Key", None))
 
         self.dumpsFromQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
+        self.bipFromEntropyClientQLabel.setText(QCoreApplication.translate("MainWindow", u"Client", None))
+        self.bipFromEntropyClientQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.bipFromEntropyQLabel.setText(QCoreApplication.translate("MainWindow", u"Entropy", None))
         self.bipFromEntropyPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.bipFromEntropyPassphraseQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
@@ -6682,6 +6825,8 @@ class Ui_MainWindow(object):
         self.bipFromEntropyPublicKeyTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Uncompressed", None))
 
         self.bipFromEntropyPublicKeyTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
+        self.bipFromMnemonicClientQLabel.setText(QCoreApplication.translate("MainWindow", u"Client", None))
+        self.bipFromMnemonicClientQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.bipFromMnemonicQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic", None))
         self.bipFromMnemonicPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.bipFromMnemonicPassphraseQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
@@ -6690,6 +6835,8 @@ class Ui_MainWindow(object):
         self.bipFromMnemonicPublicKeyTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Uncompressed", None))
 
         self.bipFromMnemonicPublicKeyTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
+        self.bipFromSeedClientQLabel.setText(QCoreApplication.translate("MainWindow", u"Client", None))
+        self.bipFromSeedClientQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.bipFromSeedsQLabel.setText(QCoreApplication.translate("MainWindow", u"Seed", None))
         self.bipFromSeedPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
         self.bipFromSeedPublicKeyTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Compressed", None))

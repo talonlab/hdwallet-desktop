@@ -1716,7 +1716,7 @@
                     <number>0</number>
                    </property>
                    <property name="currentIndex">
-                    <number>4</number>
+                    <number>0</number>
                    </property>
                    <widget class="QWidget" name="bipsPageQWidget">
                     <layout class="QVBoxLayout" name="bipsPageQWidgetVLayout">
@@ -1738,7 +1738,7 @@
                      <item>
                       <widget class="QStackedWidget" name="bipQStackedWidget">
                        <property name="currentIndex">
-                        <number>4</number>
+                        <number>0</number>
                        </property>
                        <widget class="QWidget" name="bipFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="bipFromEntropyQStackedWidgetVLayout">
@@ -1758,10 +1758,16 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="bipFromEntropyContainerQFrame">
-                           <layout class="QVBoxLayout" name="bipFromEntropyContainerQFrameVLayout">
+                          <widget class="QFrame" name="bipFromEntropyClientAndEntropyContainerQFrame">
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QHBoxLayout" name="bipFromEntropyClientAndEntropyContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>10</number>
+                             <number>15</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -1776,10 +1782,16 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QFrame" name="bipFromEntropyLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="bipFromEntropyLabelContainerQFrameHLayout">
+                             <widget class="QFrame" name="bipFromEntropyClientContainerQFrame">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QVBoxLayout" name="bipFromEntropyClientContainerQFrameVLayout">
                                <property name="spacing">
-                                <number>15</number>
+                                <number>5</number>
                                </property>
                                <property name="leftMargin">
                                 <number>0</number>
@@ -1794,33 +1806,67 @@
                                 <number>0</number>
                                </property>
                                <item>
-                                <widget class="QLabel" name="bipFromEntropyQLabel">
-                                 <property name="text">
-                                  <string>Entropy</string>
+                                <widget class="QFrame" name="bipFromEntropyClientLabelContainerQFrame">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
                                  </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QHBoxLayout" name="bipFromEntropyClientLabelContainerQFrameHLayout">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="bipFromEntropyClientQLabel">
+                                    <property name="text">
+                                     <string>Client</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="bipFromEntropyClientLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>40</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
                                 </widget>
                                </item>
                                <item>
-                                <spacer name="bipFromEntropyLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
+                                <widget class="QComboBox" name="bipFromEntropyClientQComboBox">
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
                                  </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>764</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
+                                </widget>
                                </item>
                               </layout>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QFrame" name="bipFromEntropyEntAndGenerateContainerQFrame">
-                              <layout class="QHBoxLayout" name="bipFromEntropyEntAndGenerateContainerQFrameHLayout">
+                             <widget class="QFrame" name="bipFromEntropyContainerQFrame">
+                              <layout class="QVBoxLayout" name="bipFromEntropyContainerQFrameVLayout">
                                <property name="spacing">
-                                <number>15</number>
+                                <number>5</number>
                                </property>
                                <property name="leftMargin">
                                 <number>0</number>
@@ -1835,7 +1881,69 @@
                                 <number>0</number>
                                </property>
                                <item>
-                                <widget class="QLineEdit" name="bipFromEntropyGenerateQLineEdit"/>
+                                <widget class="QFrame" name="bipFromEntropyLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="bipFromEntropyLabelContainerQFrameHLayout">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="bipFromEntropyQLabel">
+                                    <property name="text">
+                                     <string>Entropy</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="bipFromEntropyLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QFrame" name="bipFromEntropyEntAndGenerateContainerQFrame">
+                                 <layout class="QHBoxLayout" name="bipFromEntropyEntAndGenerateContainerQFrameHLayout">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLineEdit" name="bipFromEntropyGenerateQLineEdit"/>
+                                  </item>
+                                 </layout>
+                                </widget>
                                </item>
                               </layout>
                              </widget>
@@ -2165,8 +2273,14 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="bipFromMnemonicContainerQFrame">
-                           <layout class="QVBoxLayout" name="bipFromMnemonicContainerQFrameVLayout">
+                          <widget class="QFrame" name="bipFromMnemonicClientAndMnemonicContainerQFrame">
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QHBoxLayout" name="bipFromMnemonicClientAndMnemonicContainerQFrameHSpacer">
                             <property name="spacing">
                              <number>10</number>
                             </property>
@@ -2183,10 +2297,16 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QFrame" name="bipFromMnemonicLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="bipFromMnemonicLabelContainerQFrameHLayout">
+                             <widget class="QFrame" name="bipFromMnemonicClientContainerQFrame">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QVBoxLayout" name="bipFromMnemonicClientContainerQFrameVLayout">
                                <property name="spacing">
-                                <number>15</number>
+                                <number>5</number>
                                </property>
                                <property name="leftMargin">
                                 <number>0</number>
@@ -2201,33 +2321,67 @@
                                 <number>0</number>
                                </property>
                                <item>
-                                <widget class="QLabel" name="bipFromMnemonicQLabel">
-                                 <property name="text">
-                                  <string>Mnemonic</string>
+                                <widget class="QFrame" name="bipFromMnemonicClientLabelContainerQFrame">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
                                  </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QHBoxLayout" name="bipFromMnemonicClientLabelContainerQFrameHLayout">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="bipFromMnemonicClientQLabel">
+                                    <property name="text">
+                                     <string>Client</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="bipFromMnemonicClientLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>40</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
                                 </widget>
                                </item>
                                <item>
-                                <spacer name="bipFromMnemonicLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
+                                <widget class="QComboBox" name="bipFromMnemonicClientQComboBox">
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
                                  </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>764</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
+                                </widget>
                                </item>
                               </layout>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QFrame" name="bipFromMnemonicLabelGenerateContainerQFrame">
-                              <layout class="QHBoxLayout" name="bipFromMnemonicLabelGenerateContainerQFrameHLayout">
+                             <widget class="QFrame" name="bipFromMnemonicContainerQFrame">
+                              <layout class="QVBoxLayout" name="bipFromMnemonicContainerQFrameVLayout">
                                <property name="spacing">
-                                <number>15</number>
+                                <number>5</number>
                                </property>
                                <property name="leftMargin">
                                 <number>0</number>
@@ -2242,7 +2396,69 @@
                                 <number>0</number>
                                </property>
                                <item>
-                                <widget class="QLineEdit" name="bipFromMnemonicQLineEdit"/>
+                                <widget class="QFrame" name="bipFromMnemonicLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="bipFromMnemonicLabelContainerQFrameHLayout">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="bipFromMnemonicQLabel">
+                                    <property name="text">
+                                     <string>Mnemonic</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="bipFromMnemonicLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QFrame" name="bipFromMnemonicLabelGenerateContainerQFrame">
+                                 <layout class="QHBoxLayout" name="bipFromMnemonicLabelGenerateContainerQFrameHLayout">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLineEdit" name="bipFromMnemonicQLineEdit"/>
+                                  </item>
+                                 </layout>
+                                </widget>
                                </item>
                               </layout>
                              </widget>
@@ -2466,16 +2682,16 @@
                           <number>0</number>
                          </property>
                          <item>
-                          <widget class="QFrame" name="bipFromSeedQFrame">
+                          <widget class="QFrame" name="bipFromSeedClientAndSeedContainerQFrame">
                            <property name="frameShape">
                             <enum>QFrame::StyledPanel</enum>
                            </property>
                            <property name="frameShadow">
                             <enum>QFrame::Raised</enum>
                            </property>
-                           <layout class="QVBoxLayout" name="bipFromSeedQFrameVLayout">
+                           <layout class="QHBoxLayout" name="bipFromSeedClientAndSeedContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>5</number>
+                             <number>15</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -2490,10 +2706,16 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QFrame" name="bipFromSeedsLabelContainerQFrame">
-                              <layout class="QHBoxLayout" name="bipFromSeedsLabelContainerQFrameHLayout">
+                             <widget class="QFrame" name="bipFromSeedClientContainerQFrame">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QVBoxLayout" name="bipFromSeedClientContainerQFrameVLayout">
                                <property name="spacing">
-                                <number>10</number>
+                                <number>5</number>
                                </property>
                                <property name="leftMargin">
                                 <number>0</number>
@@ -2508,30 +2730,132 @@
                                 <number>0</number>
                                </property>
                                <item>
-                                <widget class="QLabel" name="bipFromSeedsQLabel">
-                                 <property name="text">
-                                  <string>Seed</string>
+                                <widget class="QFrame" name="bipFromSeedClientLabelContainerQFrame">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
                                  </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QHBoxLayout" name="bipFromSeedClientLabelContainerQFrameHLayout">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="bipFromSeedClientQLabel">
+                                    <property name="text">
+                                     <string>Client</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="bipFromSeedClientLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>40</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
                                 </widget>
                                </item>
                                <item>
-                                <spacer name="bipFromSeedsLabelContainerQFrameHSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
+                                <widget class="QComboBox" name="bipFromSeedClientQComboBox">
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
                                  </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>764</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                </spacer>
+                                </widget>
                                </item>
                               </layout>
                              </widget>
                             </item>
                             <item>
-                             <widget class="QLineEdit" name="bipFromSeedsQLineEdit"/>
+                             <widget class="QFrame" name="bipFromSeedQFrame">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QVBoxLayout" name="bipFromSeedQFrameVLayout">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="bipFromSeedsLabelContainerQFrame">
+                                 <layout class="QHBoxLayout" name="bipFromSeedsLabelContainerQFrameHLayout">
+                                  <property name="spacing">
+                                   <number>10</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="bipFromSeedsQLabel">
+                                    <property name="text">
+                                     <string>Seed</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="bipFromSeedsLabelContainerQFrameHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLineEdit" name="bipFromSeedsQLineEdit"/>
+                               </item>
+                              </layout>
+                             </widget>
                             </item>
                            </layout>
                           </widget>
