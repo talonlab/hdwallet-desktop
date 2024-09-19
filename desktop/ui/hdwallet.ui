@@ -527,7 +527,7 @@
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
-                      <layout class="QVBoxLayout" name="generateMnemonicWordsContainerQFrameVLayout_3">
+                      <layout class="QVBoxLayout" name="generateMnemonicTypeContainerQFrameVLayout">
                        <property name="spacing">
                         <number>5</number>
                        </property>
@@ -841,7 +841,7 @@
                  </item>
                  <item>
                   <widget class="QFrame" name="generateSeedClientMnemonicContainerQFrame">
-                   <layout class="QHBoxLayout" name="generateMnemonicClientWordsLanguageContainerQFrameHLayout_2">
+                   <layout class="QHBoxLayout" name="generateSeedClientMnemonicContainerQFrameHLayout">
                     <property name="spacing">
                      <number>10</number>
                     </property>
@@ -1716,7 +1716,7 @@
                     <number>0</number>
                    </property>
                    <property name="currentIndex">
-                    <number>0</number>
+                    <number>4</number>
                    </property>
                    <widget class="QWidget" name="bipsPageQWidget">
                     <layout class="QVBoxLayout" name="bipsPageQWidgetVLayout">
@@ -5858,7 +5858,7 @@
                             </item>
                             <item>
                              <widget class="QFrame" name="cardanoFromXPrivateKeyStrictQFrame">
-                              <layout class="QVBoxLayout" name="verticalLayout_5">
+                              <layout class="QVBoxLayout" name="cardanoFromXPrivateKeyStrictQFrameVLayout">
                                <property name="spacing">
                                 <number>0</number>
                                </property>
@@ -9464,7 +9464,7 @@
                                 <verstretch>0</verstretch>
                                </sizepolicy>
                               </property>
-                              <layout class="QVBoxLayout" name="verticalLayout_9">
+                              <layout class="QVBoxLayout" name="electrumV2FromEntropyLanguageContainerQFrameVLayout">
                                <property name="spacing">
                                 <number>5</number>
                                </property>
@@ -10145,7 +10145,7 @@
                                </property>
                                <item>
                                 <widget class="QFrame" name="electrumV2FromSeedsLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="electrumV2FromSeedsLabelContainerQFrameHLayout_3">
+                                 <layout class="QHBoxLayout" name="electrumV2FromSeedsLabelContainerQFrameHLayout">
                                   <property name="spacing">
                                    <number>15</number>
                                   </property>
@@ -11539,7 +11539,7 @@
                                     <property name="frameShadow">
                                      <enum>QFrame::Raised</enum>
                                     </property>
-                                    <layout class="QHBoxLayout" name="moneroFromWatchOnlyPaymentIDLabelContainerQFrameHSpacer_2">
+                                    <layout class="QHBoxLayout" name="moneroFromWatchOnlyPaymentIDLabelContainerQFrameHLayout">
                                      <property name="spacing">
                                       <number>15</number>
                                      </property>
