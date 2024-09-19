@@ -30,6 +30,7 @@ from desktop.widgets.donation import Donation
 from desktop.utils.worker import Worker
 from desktop.generate import Generate
 from desktop.dumps import Dumps
+from desktop.utils.common import clear_all_borders
 
 class MainApplication:
     """
@@ -51,6 +52,15 @@ class MainApplication:
         """
         Initialize the UI components and their connections.
         """
+        self.errboxes = [
+            self.ui.dumpsStackQGroupBox,
+            self.ui.derivationQGroupBox,
+            self.ui.dumpsFormatKeysContainerQGroupBox,
+            self.ui.generateClientAndStrengthContainerQGroupBox,
+            self.ui.generateMnemonicClientWordsLanguageContainerQGroupBox,
+            self.ui.seedGroupBoxContainerQGroupBox,
+            self.ui.generateLengthAndPassphraseQGroupBox
+        ]
 
         self.terminal_expand_icon = QIcon(resolve_path("desktop/ui/images/svg/expand-white-thin.svg"))
         self.terminal_collapse_icon = QIcon(resolve_path("desktop/ui/images/svg/collapse-white-thin.svg"))
@@ -68,7 +78,10 @@ class MainApplication:
 
         self.ui.outputTerminalQLineEdit.returnPressed.connect(self.process_command)
         self.ui.outputTerminalQPushButton.clicked.connect(self.process_command)
-        self.ui.clearTerminalQPushButton.clicked.connect(self.ui.outputTerminalQPlainTextEdit.clear)
+        self.ui.clearTerminalQPushButton.clicked.connect(
+            lambda: (self.ui.outputTerminalQPlainTextEdit.clear(), clear_all_borders(self.errboxes))
+        )
+
 
         self.ui.generateQPushButton.clicked.connect(
             functools.partial(self.generate_dump_tab_changed, "generatePageQStackedWidget", self.ui.generateQPushButton)

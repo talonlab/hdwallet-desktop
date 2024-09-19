@@ -1738,7 +1738,7 @@
                      <item>
                       <widget class="QStackedWidget" name="bipQStackedWidget">
                        <property name="currentIndex">
-                        <number>0</number>
+                        <number>1</number>
                        </property>
                        <widget class="QWidget" name="bipFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="bipFromEntropyQStackedWidgetVLayout">
@@ -1767,7 +1767,7 @@
                            </property>
                            <layout class="QHBoxLayout" name="bipFromEntropyClientAndEntropyContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -2691,7 +2691,7 @@
                            </property>
                            <layout class="QHBoxLayout" name="bipFromSeedClientAndSeedContainerQFrameHLayout">
                             <property name="spacing">
-                             <number>15</number>
+                             <number>10</number>
                             </property>
                             <property name="leftMargin">
                              <number>0</number>
@@ -11735,7 +11735,7 @@
                     </sizepolicy>
                    </property>
                    <property name="currentIndex">
-                    <number>1</number>
+                    <number>9</number>
                    </property>
                    <widget class="QWidget" name="customQStackedWidgetPage">
                     <layout class="QHBoxLayout" name="customQStackedWidgetPageHLayout">
@@ -12019,10 +12019,10 @@
                            <bool>false</bool>
                           </property>
                           <property name="text">
-                           <string/>
+                           <string>44</string>
                           </property>
                           <property name="placeholderText">
-                           <string>44</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -12097,10 +12097,10 @@
                            <bool>false</bool>
                           </property>
                           <property name="text">
-                           <string/>
+                           <string>0</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -12172,7 +12172,7 @@
                            <string>0</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -12323,7 +12323,7 @@
                            <string>0-10</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -12417,10 +12417,10 @@
                            <bool>false</bool>
                           </property>
                           <property name="text">
-                           <string/>
+                           <string>49</string>
                           </property>
                           <property name="placeholderText">
-                           <string>49</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -12495,10 +12495,10 @@
                            <bool>false</bool>
                           </property>
                           <property name="text">
-                           <string/>
+                           <string>0</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -12570,7 +12570,7 @@
                            <string>0</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -12721,7 +12721,7 @@
                            <string>0-10</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -12815,10 +12815,10 @@
                            <bool>false</bool>
                           </property>
                           <property name="text">
-                           <string/>
+                           <string>84</string>
                           </property>
                           <property name="placeholderText">
-                           <string>84</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -12893,10 +12893,10 @@
                            <bool>false</bool>
                           </property>
                           <property name="text">
-                           <string/>
+                           <string>0</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -12968,7 +12968,7 @@
                            <string>0</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -13119,7 +13119,7 @@
                            <string>0-10</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -13213,10 +13213,10 @@
                            <bool>false</bool>
                           </property>
                           <property name="text">
-                           <string/>
+                           <string>86</string>
                           </property>
                           <property name="placeholderText">
-                           <string>86</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -13291,10 +13291,10 @@
                            <bool>false</bool>
                           </property>
                           <property name="text">
-                           <string/>
+                           <string>0</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -13366,7 +13366,7 @@
                            <string>0</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -13517,7 +13517,7 @@
                            <string>0-10</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -13791,10 +13791,10 @@
                            <bool>false</bool>
                           </property>
                           <property name="text">
-                           <string/>
+                           <string>1852</string>
                           </property>
                           <property name="placeholderText">
-                           <string>1852</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -13869,10 +13869,10 @@
                            <bool>false</bool>
                           </property>
                           <property name="text">
-                           <string/>
+                           <string>1815</string>
                           </property>
                           <property name="placeholderText">
-                           <string>1815</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -13944,7 +13944,7 @@
                            <string>0</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -14100,7 +14100,7 @@
                            <string>0-10</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -14191,7 +14191,7 @@
                            <string>0</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -14328,7 +14328,7 @@
                            <string>0-10</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -14419,7 +14419,7 @@
                            <string>0</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -14491,7 +14491,7 @@
                            <string>0-10</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -14582,7 +14582,7 @@
                            <string>1</string>
                           </property>
                           <property name="placeholderText">
-                           <string>1</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>
@@ -14654,7 +14654,7 @@
                            <string>0</string>
                           </property>
                           <property name="placeholderText">
-                           <string>0</string>
+                           <string>index</string>
                           </property>
                          </widget>
                         </item>

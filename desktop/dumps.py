@@ -66,9 +66,14 @@ from hdwallet.derivations import (
 
 from hdwallet.const import SLIP10_SECP256K1_CONST
 
+from hdwallet.exceptions import MnemonicError, DerivationError
+
 from desktop.utils.worker import (
     Worker, WorkerSignals
 )
+
+from desktop.utils.common import set_red_border, clear_all_borders
+
 
 class Dumps:
 
@@ -78,6 +83,12 @@ class Dumps:
         self._setup_dump_stack()
 
     def _setup_dump_stack(self):
+
+        self.errboxes = [
+            self.ui.dumpsStackQGroupBox,
+            self.ui.derivationQGroupBox,
+            self.ui.dumpsFormatKeysContainerQGroupBox
+        ]
 
         self.ui.dumpsSaveAndGenerateQPushButton.clicked.connect(
             lambda: self._dumps(save=True)
@@ -453,12 +464,19 @@ class Dumps:
 
     def _dumps(self, save=False):
         save_filepath = None
+        clear_all_borders(self.errboxes)
         if save:
             save_filepath = self._file_locator(self.ui.dumpsFormatQComboBox.currentText())
             if save_filepath == '': return None
 
-        def _error(e): 
+        def _error(e):
             self.app.println(f"ERROR: {e}")
+            if isinstance(e, DerivationError):  
+                set_red_border(self.ui.derivationQGroupBox)
+            elif isinstance(e, CSVProcessingError):  
+                set_red_border(self.ui.dumpsFormatKeysContainerQGroupBox)
+            else:
+                set_red_border(self.ui.dumpsStackQGroupBox)
         
         def _task_ended(): 
             self.ui.dumpsGenerateQPushButton.setEnabled(True)
@@ -585,13 +603,18 @@ class Dumps:
 
                     if dformat == "CSV":
                         dump = hd.dump(exclude={"root"})
-                        
-                        for key in [keys.split(":") for keys in exclude_include]:
-                            if len(key) == 2:
-                                csv_data.append(dump[key[0]][key[1]])
-                            else:
-                                csv_data.append(dump[key[0]])
-                        out = ", ".join(map(str, csv_data))
+
+                        try:
+                            for key in [keys.split(":") for keys in exclude_include]:
+                                if len(key) == 2:
+                                    csv_data.append(dump[key[0]][key[1]])
+                                else:
+                                    csv_data.append(dump[key[0]])
+                            out = ", ".join(map(str, csv_data))
+
+                        except Exception as e:
+                            raise CSVProcessingError(e)
+
                     else:
                         dump = hd.dump(exclude={'root', *exclude_include})
                         out = json.dumps(dump, indent=4, ensure_ascii=False)
@@ -1113,6 +1136,7 @@ class Dumps:
         self.derivation_tab[first_name]["button"].click()
 
     def _dump_from_changed(self):
+        clear_all_borders(self.errboxes)
         dump_from = self.ui.dumpsFromQComboBox.currentText()
         if dump_from == '':
             return None
@@ -1162,3 +1186,6 @@ class Dumps:
     def _update_terminal_state(self, stop_btn_enable, terminal_cancelled):
         self.ui.stopTerminalQPushButton.setEnabled(stop_btn_enable)
         self.terminal_cancelled = terminal_cancelled
+
+class CSVProcessingError(Exception):
+            pass
