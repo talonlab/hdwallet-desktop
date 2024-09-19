@@ -124,16 +124,12 @@ class Donation(Modal):
         donation_ui.donationsCoreTeamQPushButton.click()
         donation_ui.donationsCharityCaptionQLabel.setTextFormat(Qt.RichText)
         donation_ui.donationsCharityCaptionQLabel.setText(
-            """This donation is for the charity team, because without them,
-            we'd have no idea where our good intentions should go.<br>
-            Cheers to our chaos coordinators!"""
+            """Your donation helps us continue our work and grow. Every bit counts—thank you for your support!"""
         )
 
         donation_ui.donationsCaptionQLabel.setTextFormat(Qt.RichText)
         donation_ui.donationsCaptionQLabel.setText(
-            """This donation is for the core team, because without them,
-            we'd be googling 'how to turn on a computer.'<br>
-            Cheers to our tech wizards!"""
+            """Your contribution directly impacts those in need. Together, we can make a difference!"""
         )
 
         donation_ui.donationsCaptionQLabel.setWordWrap(True)
