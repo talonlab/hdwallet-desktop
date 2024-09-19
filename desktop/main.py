@@ -154,8 +154,13 @@ class MainApplication:
         self.ui.outputTerminalQLineEdit.setText(None)
 
         def process() -> str:
+            commands = shlex.split(cmd)
+
+            if any(word in commands for word in ("ds", "dumps")):
+                return "WARNING: The 'dumps' command is not supported in the Desktop CLI. Please use the standalone CLI to perform this operation."
+
             cli = self.cli_runner.invoke(
-                cli_main, shlex.split(cmd)
+                cli_main, commands
             )
             return cli.output
 
