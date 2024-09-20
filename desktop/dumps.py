@@ -407,8 +407,17 @@ class Dumps:
             ),
         ]
 
+        #Byron options removed from private and public 
+        removed_list_pri =[
+            self.ui.cardanoFromPrivateKeyCardanoTypeQComboBox,
+            self.ui.cardanoFromPublicKeyCardanoTypeQComboBox
+        ]
+        cardano_list_removed = [item for item in cardano_list if not item.lower().startswith('byron')]
 
+        #list of cardano types
         cardano_list = [i.title() for i in Cardano.TYPES.get_cardano_types()]
+
+        #list of address
         c_address_list = ["Payment", "Staking"]
 
         for pair in cardano_and_address_type:
@@ -416,35 +425,24 @@ class Dumps:
                 pair[0].clear()
             if isinstance(pair[1], QComboBox):
                 pair[1].clear()
-            pair[0].addItems(cardano_list)
+            if pair[0] in removed_list_pri:
+                pair[0].addItems(cardano_list_removed)
+                pair[0].setCurrentIndex(0)#set selected combo to Shelly-Icarus
+            else:
+                pair[0].addItems(cardano_list)   
+                pair[0].setCurrentIndex(3)#set selected combo to Shelly-Icarus
+
             pair[1].addItems(c_address_list)
             pair[0].currentIndexChanged.connect(functools.partial(self.__pair_ca_address_type, pair[1], pair[0], pair[3]))
             pair[1].currentIndexChanged.connect(functools.partial(self.__pair_addr_staking, pair[1], pair[2], pair[4]))
             pair[2].setEnabled(False)
             pair[4].setEnabled(False)
-            pair[0].setCurrentIndex(0)
-            pair[0].currentIndexChanged.connect(functools.partial(self._check_shelley_ledger,pair[0]))
-            self._check_shelley_ledger(pair[0], pair[0].currentIndex())
+            
 
         self.ui.cardanoFromXPublicKeyStrictQCheckBox.setChecked(True)
         self.ui.cardanoFromXPrivateKeyStrictQCheckBox.setChecked(True)
         self.ui.bipFromXPrivateKeyStrictQCheckBox.setChecked(True)
         self.ui.bipFromXPublicKeyStrictQCheckBox.setChecked(True)
-
-        self.ui.cardanoFromEntropyPassphraseContainerQFrame.setEnabled(False)
-        self.ui.cardanoFromMnemonicPassphraseContainerQFrame.setEnabled(False)
-        self.ui.cardanoFromSeedPassphraseContainerQFrame.setEnabled(False)
-
-
-    def _check_shelley_ledger(self, combo_box, index):
-        if combo_box.currentText() in ["Shelley-Ledger", "Byron-Ledger"]:
-            self.ui.cardanoFromEntropyPassphraseContainerQFrame.setEnabled(True)
-            self.ui.cardanoFromMnemonicPassphraseContainerQFrame.setEnabled(True)
-            self.ui.cardanoFromSeedPassphraseContainerQFrame.setEnabled(True)
-        else:
-            self.ui.cardanoFromEntropyPassphraseContainerQFrame.setEnabled(False)
-            self.ui.cardanoFromMnemonicPassphraseContainerQFrame.setEnabled(False)
-            self.ui.cardanoFromSeedPassphraseContainerQFrame.setEnabled(False)
 
     def __pair_ca_address_type(self, c_addr, c_list, cd_addr, idx):
         if c_list.currentText().lower().startswith("shelley"):

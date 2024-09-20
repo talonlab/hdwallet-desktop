@@ -207,7 +207,7 @@ class Generate:
 
         if CardanoSeed.name() == seed_client:
             self.ui.generateSeedCardanoTypeContainerQFrame.setEnabled(True)
-            self.ui.generateSeedCardanoTypeQComboBox.setCurrentIndex(0)
+            self.ui.generateSeedCardanoTypeQComboBox.setCurrentIndex(3)
         elif ElectrumV2Seed.name() == seed_client:
             self.ui.generateSeedMnemonicTypeContainerQFrame.setEnabled(True)
             self.ui.generateSeedMnemonicTypeQComboBox.setCurrentIndex(0)
