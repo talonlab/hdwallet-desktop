@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletLoQxiu.ui'
+## Form generated from reading UI file 'hdwalletTuEFWx.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -3316,47 +3316,6 @@ class Ui_MainWindow(object):
         self.electrumV1FromEntropyPublicKeyTypeAndPassphraseContainerQFrameHLayout.setSpacing(10)
         self.electrumV1FromEntropyPublicKeyTypeAndPassphraseContainerQFrameHLayout.setObjectName(u"electrumV1FromEntropyPublicKeyTypeAndPassphraseContainerQFrameHLayout")
         self.electrumV1FromEntropyPublicKeyTypeAndPassphraseContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.electrumV1FromEntropyPassphraseContainerQFrame = QFrame(self.electrumV1FromEntropyPublicKeyTypeAndPassphraseContainerQFrame)
-        self.electrumV1FromEntropyPassphraseContainerQFrame.setObjectName(u"electrumV1FromEntropyPassphraseContainerQFrame")
-        self.electrumV1FromEntropyPassphraseContainerQFrameVLayout = QVBoxLayout(self.electrumV1FromEntropyPassphraseContainerQFrame)
-        self.electrumV1FromEntropyPassphraseContainerQFrameVLayout.setSpacing(5)
-        self.electrumV1FromEntropyPassphraseContainerQFrameVLayout.setObjectName(u"electrumV1FromEntropyPassphraseContainerQFrameVLayout")
-        self.electrumV1FromEntropyPassphraseContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.electrumV1FromEntropyPassphraseLabelContainerQFrame = QFrame(self.electrumV1FromEntropyPassphraseContainerQFrame)
-        self.electrumV1FromEntropyPassphraseLabelContainerQFrame.setObjectName(u"electrumV1FromEntropyPassphraseLabelContainerQFrame")
-        self.electrumV1FromEntropyPassphraseLabelContainerQFrameHLayout = QHBoxLayout(self.electrumV1FromEntropyPassphraseLabelContainerQFrame)
-        self.electrumV1FromEntropyPassphraseLabelContainerQFrameHLayout.setSpacing(15)
-        self.electrumV1FromEntropyPassphraseLabelContainerQFrameHLayout.setObjectName(u"electrumV1FromEntropyPassphraseLabelContainerQFrameHLayout")
-        self.electrumV1FromEntropyPassphraseLabelContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.electrumV1FromEntropyPassphraseQLabel = QLabel(self.electrumV1FromEntropyPassphraseLabelContainerQFrame)
-        self.electrumV1FromEntropyPassphraseQLabel.setObjectName(u"electrumV1FromEntropyPassphraseQLabel")
-
-        self.electrumV1FromEntropyPassphraseLabelContainerQFrameHLayout.addWidget(self.electrumV1FromEntropyPassphraseQLabel)
-
-        self.electrumV1FromEntropyPassphraseLabelContainerQFrameHSpacer = QSpacerItem(764, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.electrumV1FromEntropyPassphraseLabelContainerQFrameHLayout.addItem(self.electrumV1FromEntropyPassphraseLabelContainerQFrameHSpacer)
-
-
-        self.electrumV1FromEntropyPassphraseContainerQFrameVLayout.addWidget(self.electrumV1FromEntropyPassphraseLabelContainerQFrame)
-
-        self.electrumV1FromEntropyPassphraseGenerateContainerQFrame = QFrame(self.electrumV1FromEntropyPassphraseContainerQFrame)
-        self.electrumV1FromEntropyPassphraseGenerateContainerQFrame.setObjectName(u"electrumV1FromEntropyPassphraseGenerateContainerQFrame")
-        self.electrumV1FromEntropyPassphraseGenerateContainerQFrameHLayout = QHBoxLayout(self.electrumV1FromEntropyPassphraseGenerateContainerQFrame)
-        self.electrumV1FromEntropyPassphraseGenerateContainerQFrameHLayout.setSpacing(15)
-        self.electrumV1FromEntropyPassphraseGenerateContainerQFrameHLayout.setObjectName(u"electrumV1FromEntropyPassphraseGenerateContainerQFrameHLayout")
-        self.electrumV1FromEntropyPassphraseGenerateContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.electrumV1FromEntropyPassphraseGenerateQLineEdit = QLineEdit(self.electrumV1FromEntropyPassphraseGenerateContainerQFrame)
-        self.electrumV1FromEntropyPassphraseGenerateQLineEdit.setObjectName(u"electrumV1FromEntropyPassphraseGenerateQLineEdit")
-
-        self.electrumV1FromEntropyPassphraseGenerateContainerQFrameHLayout.addWidget(self.electrumV1FromEntropyPassphraseGenerateQLineEdit)
-
-
-        self.electrumV1FromEntropyPassphraseContainerQFrameVLayout.addWidget(self.electrumV1FromEntropyPassphraseGenerateContainerQFrame)
-
-
-        self.electrumV1FromEntropyPublicKeyTypeAndPassphraseContainerQFrameHLayout.addWidget(self.electrumV1FromEntropyPassphraseContainerQFrame)
-
         self.electrumV1FromEntropyPublicKeyTypeContainerQFrame = QFrame(self.electrumV1FromEntropyPublicKeyTypeAndPassphraseContainerQFrame)
         self.electrumV1FromEntropyPublicKeyTypeContainerQFrame.setObjectName(u"electrumV1FromEntropyPublicKeyTypeContainerQFrame")
         self.electrumV1FromEntropyPublicKeyTypeContainerQFrame.setMinimumSize(QSize(150, 0))
@@ -4085,51 +4044,6 @@ class Ui_MainWindow(object):
         self.electrumV2FromEntropyLanguageMnemonicTypeAndWordsContainerQFrameHLayout.setSpacing(10)
         self.electrumV2FromEntropyLanguageMnemonicTypeAndWordsContainerQFrameHLayout.setObjectName(u"electrumV2FromEntropyLanguageMnemonicTypeAndWordsContainerQFrameHLayout")
         self.electrumV2FromEntropyLanguageMnemonicTypeAndWordsContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.electrumV2FromEntropyPassphraseContainerQFrame = QFrame(self.electrumV2FromEntropyLanguageMnemonicTypeAndWordsContainerQFrame)
-        self.electrumV2FromEntropyPassphraseContainerQFrame.setObjectName(u"electrumV2FromEntropyPassphraseContainerQFrame")
-        sizePolicy2.setHeightForWidth(self.electrumV2FromEntropyPassphraseContainerQFrame.sizePolicy().hasHeightForWidth())
-        self.electrumV2FromEntropyPassphraseContainerQFrame.setSizePolicy(sizePolicy2)
-        self.electrumV2FromEntropyPassphraseContainerQFrameVLayout = QVBoxLayout(self.electrumV2FromEntropyPassphraseContainerQFrame)
-        self.electrumV2FromEntropyPassphraseContainerQFrameVLayout.setSpacing(5)
-        self.electrumV2FromEntropyPassphraseContainerQFrameVLayout.setObjectName(u"electrumV2FromEntropyPassphraseContainerQFrameVLayout")
-        self.electrumV2FromEntropyPassphraseContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.electrumV2FromEntropyPassphraseLabelContainerQFrame = QFrame(self.electrumV2FromEntropyPassphraseContainerQFrame)
-        self.electrumV2FromEntropyPassphraseLabelContainerQFrame.setObjectName(u"electrumV2FromEntropyPassphraseLabelContainerQFrame")
-        self.electrumV2FromEntropyPassphraseLabelContainerQFrameHLayout = QHBoxLayout(self.electrumV2FromEntropyPassphraseLabelContainerQFrame)
-        self.electrumV2FromEntropyPassphraseLabelContainerQFrameHLayout.setSpacing(15)
-        self.electrumV2FromEntropyPassphraseLabelContainerQFrameHLayout.setObjectName(u"electrumV2FromEntropyPassphraseLabelContainerQFrameHLayout")
-        self.electrumV2FromEntropyPassphraseLabelContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.electrumV2FromEntropyPassphraseQLabel = QLabel(self.electrumV2FromEntropyPassphraseLabelContainerQFrame)
-        self.electrumV2FromEntropyPassphraseQLabel.setObjectName(u"electrumV2FromEntropyPassphraseQLabel")
-
-        self.electrumV2FromEntropyPassphraseLabelContainerQFrameHLayout.addWidget(self.electrumV2FromEntropyPassphraseQLabel)
-
-        self.electrumV2FromEntropyPassphraseLabelContainerQFrameHSpacer = QSpacerItem(764, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.electrumV2FromEntropyPassphraseLabelContainerQFrameHLayout.addItem(self.electrumV2FromEntropyPassphraseLabelContainerQFrameHSpacer)
-
-
-        self.electrumV2FromEntropyPassphraseContainerQFrameVLayout.addWidget(self.electrumV2FromEntropyPassphraseLabelContainerQFrame)
-
-        self.electrumV2FromEntropyPassphraseGenerateContainerQFrame = QFrame(self.electrumV2FromEntropyPassphraseContainerQFrame)
-        self.electrumV2FromEntropyPassphraseGenerateContainerQFrame.setObjectName(u"electrumV2FromEntropyPassphraseGenerateContainerQFrame")
-        self.electrumV2FromEntropyPassphraseGenerateContainerQFrameHLayout = QHBoxLayout(self.electrumV2FromEntropyPassphraseGenerateContainerQFrame)
-        self.electrumV2FromEntropyPassphraseGenerateContainerQFrameHLayout.setSpacing(15)
-        self.electrumV2FromEntropyPassphraseGenerateContainerQFrameHLayout.setObjectName(u"electrumV2FromEntropyPassphraseGenerateContainerQFrameHLayout")
-        self.electrumV2FromEntropyPassphraseGenerateContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.electrumV2FromEntropyPassphraseGenerateQLineEdit = QLineEdit(self.electrumV2FromEntropyPassphraseGenerateContainerQFrame)
-        self.electrumV2FromEntropyPassphraseGenerateQLineEdit.setObjectName(u"electrumV2FromEntropyPassphraseGenerateQLineEdit")
-        sizePolicy1.setHeightForWidth(self.electrumV2FromEntropyPassphraseGenerateQLineEdit.sizePolicy().hasHeightForWidth())
-        self.electrumV2FromEntropyPassphraseGenerateQLineEdit.setSizePolicy(sizePolicy1)
-
-        self.electrumV2FromEntropyPassphraseGenerateContainerQFrameHLayout.addWidget(self.electrumV2FromEntropyPassphraseGenerateQLineEdit)
-
-
-        self.electrumV2FromEntropyPassphraseContainerQFrameVLayout.addWidget(self.electrumV2FromEntropyPassphraseGenerateContainerQFrame)
-
-
-        self.electrumV2FromEntropyLanguageMnemonicTypeAndWordsContainerQFrameHLayout.addWidget(self.electrumV2FromEntropyPassphraseContainerQFrame)
-
         self.electrumV2FromEntropyLanguageContainerQFrame = QFrame(self.electrumV2FromEntropyLanguageMnemonicTypeAndWordsContainerQFrame)
         self.electrumV2FromEntropyLanguageContainerQFrame.setObjectName(u"electrumV2FromEntropyLanguageContainerQFrame")
         sizePolicy.setHeightForWidth(self.electrumV2FromEntropyLanguageContainerQFrame.sizePolicy().hasHeightForWidth())
@@ -4145,11 +4059,8 @@ class Ui_MainWindow(object):
 
         self.electrumV2FromEntropyLanguageQComboBox = QComboBox(self.electrumV2FromEntropyLanguageContainerQFrame)
         self.electrumV2FromEntropyLanguageQComboBox.setObjectName(u"electrumV2FromEntropyLanguageQComboBox")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.electrumV2FromEntropyLanguageQComboBox.sizePolicy().hasHeightForWidth())
-        self.electrumV2FromEntropyLanguageQComboBox.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.electrumV2FromEntropyLanguageQComboBox.sizePolicy().hasHeightForWidth())
+        self.electrumV2FromEntropyLanguageQComboBox.setSizePolicy(sizePolicy3)
 
         self.electrumV2FromEntropyLanguageContainerQFrameVLayout.addWidget(self.electrumV2FromEntropyLanguageQComboBox)
 
@@ -5187,6 +5098,9 @@ class Ui_MainWindow(object):
 
         self.derivationsQStackedWidget = QStackedWidget(self.derivationQGroupBox)
         self.derivationsQStackedWidget.setObjectName(u"derivationsQStackedWidget")
+        sizePolicy4 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
         sizePolicy4.setHeightForWidth(self.derivationsQStackedWidget.sizePolicy().hasHeightForWidth())
         self.derivationsQStackedWidget.setSizePolicy(sizePolicy4)
         self.customQStackedWidgetPage = QWidget()
@@ -6715,13 +6629,13 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.hdwalletQStackedWidget.setCurrentIndex(1)
-        self.hdQStackedWidget.setCurrentIndex(4)
-        self.bipQStackedWidget.setCurrentIndex(1)
-        self.cardanoQStackedWidget.setCurrentIndex(4)
-        self.electrumV1QStackedWidget.setCurrentIndex(3)
-        self.electrumV2QStackedWidget.setCurrentIndex(2)
+        self.hdQStackedWidget.setCurrentIndex(3)
+        self.bipQStackedWidget.setCurrentIndex(5)
+        self.cardanoQStackedWidget.setCurrentIndex(0)
+        self.electrumV1QStackedWidget.setCurrentIndex(0)
+        self.electrumV2QStackedWidget.setCurrentIndex(0)
         self.moneroQStackedWidget.setCurrentIndex(5)
-        self.derivationsQStackedWidget.setCurrentIndex(9)
+        self.derivationsQStackedWidget.setCurrentIndex(8)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -7023,8 +6937,6 @@ class Ui_MainWindow(object):
 
         self.cardanoFromPublicKeyAddressTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV1FromEntropyQLabel.setText(QCoreApplication.translate("MainWindow", u"Entropy", None))
-        self.electrumV1FromEntropyPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
-        self.electrumV1FromEntropyPassphraseGenerateQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
         self.electrumV1FromEntropyPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
         self.electrumV1FromEntropyPublicKeyTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Uncompressed", None))
         self.electrumV1FromEntropyPublicKeyTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Compressed", None))
@@ -7078,8 +6990,6 @@ class Ui_MainWindow(object):
         self.electrumV2FromEntropyQLabel.setText(QCoreApplication.translate("MainWindow", u"Entropy", None))
         self.electrumV2FromEntropyModeQLabel.setText(QCoreApplication.translate("MainWindow", u"Mode", None))
         self.electrumV2FromEntropyModeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
-        self.electrumV2FromEntropyPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
-        self.electrumV2FromEntropyPassphraseGenerateQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
         self.electrumV2FromEntropyLanguageQLabel.setText(QCoreApplication.translate("MainWindow", u"Language", None))
         self.electrumV2FromEntropyLanguageQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV2FromEntropyMnemonicTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Mnemonic Type", None))

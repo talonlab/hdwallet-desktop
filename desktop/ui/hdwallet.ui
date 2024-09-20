@@ -1716,7 +1716,7 @@
                     <number>0</number>
                    </property>
                    <property name="currentIndex">
-                    <number>4</number>
+                    <number>3</number>
                    </property>
                    <widget class="QWidget" name="bipsPageQWidget">
                     <layout class="QVBoxLayout" name="bipsPageQWidgetVLayout">
@@ -1738,7 +1738,7 @@
                      <item>
                       <widget class="QStackedWidget" name="bipQStackedWidget">
                        <property name="currentIndex">
-                        <number>1</number>
+                        <number>5</number>
                        </property>
                        <widget class="QWidget" name="bipFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="bipFromEntropyQStackedWidgetVLayout">
@@ -4232,7 +4232,7 @@
                      <item>
                       <widget class="QStackedWidget" name="cardanoQStackedWidget">
                        <property name="currentIndex">
-                        <number>4</number>
+                        <number>0</number>
                        </property>
                        <widget class="QWidget" name="cardanoFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="cardanoFromEntropyQStackedWidgetVLayout">
@@ -7472,7 +7472,7 @@
                      <item>
                       <widget class="QStackedWidget" name="electrumV1QStackedWidget">
                        <property name="currentIndex">
-                        <number>3</number>
+                        <number>0</number>
                        </property>
                        <widget class="QWidget" name="electrumV1FromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="electrumV1FromEntropyQStackedWidgetVLayout">
@@ -7595,96 +7595,6 @@
                             <property name="bottomMargin">
                              <number>0</number>
                             </property>
-                            <item>
-                             <widget class="QFrame" name="electrumV1FromEntropyPassphraseContainerQFrame">
-                              <layout class="QVBoxLayout" name="electrumV1FromEntropyPassphraseContainerQFrameVLayout">
-                               <property name="spacing">
-                                <number>5</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QFrame" name="electrumV1FromEntropyPassphraseLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="electrumV1FromEntropyPassphraseLabelContainerQFrameHLayout">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="electrumV1FromEntropyPassphraseQLabel">
-                                    <property name="text">
-                                     <string>Passphrase</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <spacer name="electrumV1FromEntropyPassphraseLabelContainerQFrameHSpacer">
-                                    <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
-                                    </property>
-                                    <property name="sizeHint" stdset="0">
-                                     <size>
-                                      <width>764</width>
-                                      <height>20</height>
-                                     </size>
-                                    </property>
-                                   </spacer>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QFrame" name="electrumV1FromEntropyPassphraseGenerateContainerQFrame">
-                                 <layout class="QHBoxLayout" name="electrumV1FromEntropyPassphraseGenerateContainerQFrameHLayout">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLineEdit" name="electrumV1FromEntropyPassphraseGenerateQLineEdit">
-                                    <property name="placeholderText">
-                                     <string>(Optional)</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
                             <item>
                              <widget class="QFrame" name="electrumV1FromEntropyPublicKeyTypeContainerQFrame">
                               <property name="minimumSize">
@@ -9141,7 +9051,7 @@
                      <item>
                       <widget class="QStackedWidget" name="electrumV2QStackedWidget">
                        <property name="currentIndex">
-                        <number>2</number>
+                        <number>0</number>
                        </property>
                        <widget class="QWidget" name="electrumV2FromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="electrumV2FromEntropyQStackedWidgetVLayout" stretch="0,0">
@@ -9355,108 +9265,6 @@
                              <number>0</number>
                             </property>
                             <item>
-                             <widget class="QFrame" name="electrumV2FromEntropyPassphraseContainerQFrame">
-                              <property name="sizePolicy">
-                               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                                <horstretch>0</horstretch>
-                                <verstretch>0</verstretch>
-                               </sizepolicy>
-                              </property>
-                              <layout class="QVBoxLayout" name="electrumV2FromEntropyPassphraseContainerQFrameVLayout">
-                               <property name="spacing">
-                                <number>5</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QFrame" name="electrumV2FromEntropyPassphraseLabelContainerQFrame">
-                                 <layout class="QHBoxLayout" name="electrumV2FromEntropyPassphraseLabelContainerQFrameHLayout">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLabel" name="electrumV2FromEntropyPassphraseQLabel">
-                                    <property name="text">
-                                     <string>Passphrase</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item>
-                                   <spacer name="electrumV2FromEntropyPassphraseLabelContainerQFrameHSpacer">
-                                    <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
-                                    </property>
-                                    <property name="sizeHint" stdset="0">
-                                     <size>
-                                      <width>764</width>
-                                      <height>20</height>
-                                     </size>
-                                    </property>
-                                   </spacer>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QFrame" name="electrumV2FromEntropyPassphraseGenerateContainerQFrame">
-                                 <layout class="QHBoxLayout" name="electrumV2FromEntropyPassphraseGenerateContainerQFrameHLayout">
-                                  <property name="spacing">
-                                   <number>15</number>
-                                  </property>
-                                  <property name="leftMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="topMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="rightMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <property name="bottomMargin">
-                                   <number>0</number>
-                                  </property>
-                                  <item>
-                                   <widget class="QLineEdit" name="electrumV2FromEntropyPassphraseGenerateQLineEdit">
-                                    <property name="sizePolicy">
-                                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                                      <horstretch>0</horstretch>
-                                      <verstretch>0</verstretch>
-                                     </sizepolicy>
-                                    </property>
-                                    <property name="placeholderText">
-                                     <string>(Optional)</string>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
-                            <item>
                              <widget class="QFrame" name="electrumV2FromEntropyLanguageContainerQFrame">
                               <property name="sizePolicy">
                                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -9490,7 +9298,7 @@
                                <item>
                                 <widget class="QComboBox" name="electrumV2FromEntropyLanguageQComboBox">
                                  <property name="sizePolicy">
-                                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                    <horstretch>0</horstretch>
                                    <verstretch>0</verstretch>
                                   </sizepolicy>
@@ -11735,7 +11543,7 @@
                     </sizepolicy>
                    </property>
                    <property name="currentIndex">
-                    <number>9</number>
+                    <number>8</number>
                    </property>
                    <widget class="QWidget" name="customQStackedWidgetPage">
                     <layout class="QHBoxLayout" name="customQStackedWidgetPageHLayout">

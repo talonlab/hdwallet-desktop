@@ -407,15 +407,16 @@ class Dumps:
             ),
         ]
 
+
+        #list of cardano types
+        cardano_list = [i.title() for i in Cardano.TYPES.get_cardano_types()]
+
         #Byron options removed from private and public 
         removed_list_pri =[
             self.ui.cardanoFromPrivateKeyCardanoTypeQComboBox,
             self.ui.cardanoFromPublicKeyCardanoTypeQComboBox
         ]
         cardano_list_removed = [item for item in cardano_list if not item.lower().startswith('byron')]
-
-        #list of cardano types
-        cardano_list = [i.title() for i in Cardano.TYPES.get_cardano_types()]
 
         #list of address
         c_address_list = ["Payment", "Staking"]
@@ -902,7 +903,6 @@ class Dumps:
     def _dump_ev1(self, dump_from, hd_kwargs):
         if dump_from == "Entropy":
             hd_kwargs["language"] = self.ui.electrumV1FromEntropyLanguageQComboBox.currentText().lower()
-            hd_kwargs["passphrase"] = self.ui.electrumV1FromEntropyPassphraseGenerateQLineEdit.text()
             hd_kwargs["public_key_type"] = self.ui.electrumV1FromEntropyPublicKeyTypeQComboBox.currentText().lower()
             return HDWallet(**hd_kwargs).from_entropy(
                 ElectrumV1Entropy(
@@ -958,7 +958,6 @@ class Dumps:
             hd_kwargs["mode"] = self.ui.electrumV2FromEntropyModeQComboBox.currentText().lower()
             hd_kwargs["mnemonic_type"] = self.ui.electrumV2FromEntropyMnemonicTypeQComboBox.currentText().lower()
             hd_kwargs["language"] = self.ui.electrumV2FromEntropyLanguageQComboBox.currentText().lower()
-            hd_kwargs["passphrase"] = self.ui.electrumV2FromEntropyGenerateQLineEdit.text()
             hd_kwargs["public_key_type"] = self.ui.electrumV2FromEntropyPublicKeyTypeQComboBox.currentText().lower()
             return HDWallet(**hd_kwargs).from_entropy(
                 ElectrumV2Entropy(
