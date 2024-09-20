@@ -128,3 +128,25 @@ def update_style(widget: QWidget) -> None:
     :param widget: The widget to update the style for.
     """
     widget.setStyleSheet(widget.styleSheet())
+
+
+def set_red_border(widget):
+    """
+    Sets a red border on the given widget by adding a 'red-border' class to its properties.
+
+    :param widget: The widget to which the red border class is applied.
+    """
+    widget.setProperty("class", "red-border")
+    widget.style().unpolish(widget)
+    widget.style().polish(widget)
+
+def clear_all_borders(group_boxes):
+    """
+    Clears the borders from all widgets in the provided group by removing the 'red-border' class.
+
+    :param group_boxes: A list of widgets from which the 'red-border' class is removed.
+    """
+    for widget in group_boxes:
+        widget.setProperty("class", "")
+        widget.style().unpolish(widget)
+        widget.style().polish(widget)
