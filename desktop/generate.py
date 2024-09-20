@@ -45,7 +45,7 @@ from hdwallet.seeds import (
     SEEDS
 )
 
-from desktop.utils.common import set_red_border, clear_all_borders
+from desktop.utils import set_red_border, clear_all_borders
 
 class Generate:
     def __init__(self, app):

@@ -30,7 +30,7 @@ from desktop.widgets.donation import Donation
 from desktop.utils.worker import Worker
 from desktop.generate import Generate
 from desktop.dumps import Dumps
-from desktop.utils.common import clear_all_borders
+from desktop.utils import clear_all_borders
 
 class MainApplication:
     """
@@ -78,18 +78,10 @@ class MainApplication:
 
         self.ui.outputTerminalQLineEdit.returnPressed.connect(self.process_command)
         self.ui.outputTerminalQPushButton.clicked.connect(self.process_command)
-        self.ui.clearTerminalQPushButton.clicked.connect(
-            lambda: (self.ui.outputTerminalQPlainTextEdit.clear(), clear_all_borders(self.errboxes))
-        )
+        self.ui.clearTerminalQPushButton.clicked.connect(self._clear_terminal_and_borders)
 
 
-        self.ui.generateQPushButton.clicked.connect(
-            functools.partial(self.generate_dump_tab_changed, "generatePageQStackedWidget", self.ui.generateQPushButton)
-        )
-
-        self.ui.dumpQPushButton.clicked.connect(
-            functools.partial(self.generate_dump_tab_changed, "dumpsPageQStackedWidget", self.ui.dumpQPushButton)
-        )
+        self._setup_tab_buttons()
         self.ui.dumpQPushButton.click()
 
         self.ui.donationHDWalletQPushButton.clicked.connect(
@@ -133,6 +125,31 @@ class MainApplication:
 
         self.generate = Generate(self.app)
         self.dumps = Dumps(self.app)
+
+    def _setup_tab_buttons(self):
+        """
+        Connects buttons to the generate_dump_tab_changed function and clears borders when the tab changes.
+        """
+        def on_tab_button_clicked(page_name, button):
+            clear_all_borders(self.errboxes) 
+            self.generate_dump_tab_changed(page_name, button)
+
+        self.ui.generateQPushButton.clicked.connect(
+            functools.partial(on_tab_button_clicked, "generatePageQStackedWidget", self.ui.generateQPushButton)
+        )
+        self.ui.dumpQPushButton.clicked.connect(
+            functools.partial(on_tab_button_clicked, "dumpsPageQStackedWidget", self.ui.dumpQPushButton)
+        )
+
+
+    def _clear_terminal_and_borders(self):
+        """
+        Clears the terminal and resets borders for error boxes.
+
+        :param self: Instance of the class, providing access to UI elements.
+        """
+        self.ui.outputTerminalQPlainTextEdit.clear()
+        clear_all_borders(self.errboxes)
 
     def __validate_inputs(self, line_edits: list) -> None:
         """

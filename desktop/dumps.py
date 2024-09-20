@@ -72,7 +72,7 @@ from desktop.utils.worker import (
     Worker, WorkerSignals
 )
 
-from desktop.utils.common import set_red_border, clear_all_borders
+from desktop.utils import set_red_border, clear_all_borders
 
 
 class Dumps:
@@ -326,6 +326,7 @@ class Dumps:
         self.ui.electrumV2FromSeedModeQComboBox.setCurrentIndex(0)
 
         # BIPs WIF BIP38 events
+        self.ui.bipFromWIFBIP38PassphraseContainerQFrame.setEnabled(False)
         self.ui.bipFromWIFBIP38PassphraseQLineEdit.setEnabled(False)
         self.ui.bipFromWIFBIP38PassphraseQCheckBox.setChecked(False)
         self.ui.bipFromWIFBIP38PassphraseQCheckBox.toggled.connect(
@@ -333,11 +334,13 @@ class Dumps:
                 self._bip38_toggled(
                     self.ui.bipFromWIFBIP38PassphraseQCheckBox,
                     self.ui.bipFromWIFBIP38PassphraseQLineEdit,
-                    self.ui.bipFromWIFQLabel
+                    self.ui.bipFromWIFQLabel,
+                    self.ui.bipFromWIFBIP38PassphraseContainerQFrame
                 )
         )
 
         # ElectrumV2 WIF BIP38 events
+        self.ui.electrumV1FromWIFBIP38PassphraseContainerQFrame.setEnabled(False)
         self.ui.electrumV1FromWIFBIP38PassphraseQLineEdit.setEnabled(False)
         self.ui.electrumV1FromWIFBIP38PassphraseQCheckBox.setChecked(False)
         self.ui.electrumV1FromWIFBIP38PassphraseQCheckBox.toggled.connect(
@@ -345,7 +348,8 @@ class Dumps:
                 self._bip38_toggled(
                     self.ui.electrumV1FromWIFBIP38PassphraseQCheckBox,
                     self.ui.electrumV1FromWIFBIP38PassphraseQLineEdit,
-                    self.ui.electrumV1FromWIFQLabel
+                    self.ui.electrumV1FromWIFQLabel,
+                    self.ui.electrumV1FromWIFBIP38PassphraseContainerQFrame
                 )
         )
 
@@ -419,13 +423,28 @@ class Dumps:
             pair[2].setEnabled(False)
             pair[4].setEnabled(False)
             pair[0].setCurrentIndex(0)
-            
+            pair[0].currentIndexChanged.connect(functools.partial(self._check_shelley_ledger,pair[0]))
+            self._check_shelley_ledger(pair[0], pair[0].currentIndex())
 
         self.ui.cardanoFromXPublicKeyStrictQCheckBox.setChecked(True)
         self.ui.cardanoFromXPrivateKeyStrictQCheckBox.setChecked(True)
         self.ui.bipFromXPrivateKeyStrictQCheckBox.setChecked(True)
         self.ui.bipFromXPublicKeyStrictQCheckBox.setChecked(True)
 
+        self.ui.cardanoFromEntropyPassphraseContainerQFrame.setEnabled(False)
+        self.ui.cardanoFromMnemonicPassphraseContainerQFrame.setEnabled(False)
+        self.ui.cardanoFromSeedPassphraseContainerQFrame.setEnabled(False)
+
+
+    def _check_shelley_ledger(self, combo_box, index):
+        if combo_box.currentText() in ["Shelley-Ledger", "Byron-Ledger"]:
+            self.ui.cardanoFromEntropyPassphraseContainerQFrame.setEnabled(True)
+            self.ui.cardanoFromMnemonicPassphraseContainerQFrame.setEnabled(True)
+            self.ui.cardanoFromSeedPassphraseContainerQFrame.setEnabled(True)
+        else:
+            self.ui.cardanoFromEntropyPassphraseContainerQFrame.setEnabled(False)
+            self.ui.cardanoFromMnemonicPassphraseContainerQFrame.setEnabled(False)
+            self.ui.cardanoFromSeedPassphraseContainerQFrame.setEnabled(False)
 
     def __pair_ca_address_type(self, c_addr, c_list, cd_addr, idx):
         if c_list.currentText().lower().startswith("shelley"):
@@ -1171,12 +1190,13 @@ class Dumps:
         if path != None:
             self.ui.customPathQLineEdit.setText(path)
 
-        self.ui.customPathQLineEdit.setEnabled(path == None)
+        self.ui.customPathQFrame.setEnabled(path == None)
 
-    def _bip38_toggled(self, chkbox, passphrase, lable):
+    def _bip38_toggled(self, chkbox, passphrase, lable, passphrase_frame):
         chkbox_state = chkbox.isChecked()
         passphrase.setText(None)
         passphrase.setEnabled(chkbox_state)
+        passphrase_frame.setEnabled(chkbox_state)
 
         if chkbox_state:
             lable.setText("Encrypted Wallet Important Format")
