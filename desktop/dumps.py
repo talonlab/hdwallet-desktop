@@ -268,8 +268,47 @@ class Dumps:
             (self.ui.bipFromSeedClientQComboBox, self.ui.bipFromSeedClientContainerQFrame)
         ]
 
-        for combo_box, _ in self.algorand_client_combo_boxes:
-            combo_box.addItems(algorand_clients)
+        self.cardano_client_combo_boxes = [
+            self.ui.cardanoFromEntropyClientQComboBox,
+            self.ui.cardanoFromMnemonicClientQComboBox,
+            self.ui.cardanoFromSeedClientQComboBox
+        ]
+
+        self.electrumv1_client_combo_boxes = [
+            self.ui.electrumV1FromEntropyClientQComboBox,
+            self.ui.electrumV1FromMnemonicClientQComboBox,
+            self.ui.electrumV1FromSeedClientQComboBox
+        ]
+
+        self.electrumv2_client_combo_boxes = [
+            self.ui.electrumV2FromEntropyClientQComboBox,
+            self.ui.electrumV2FromMnemonicClientQComboBox,
+            self.ui.electrumV2FromSeedClientQComboBox
+        ]
+
+        self.monero_client_combo_boxes = [
+            self.ui.moneroFromEntropyClientQComboBox,
+            self.ui.moneroFromMnemonicClientQComboBox,
+            self.ui.moneroFromSeedClientQComboBox
+        ]
+
+        combo_boxes_with_clients = [
+            (self.algorand_client_combo_boxes, algorand_clients),  
+            (self.cardano_client_combo_boxes, ["Cardano"]),
+            (self.electrumv1_client_combo_boxes, ["Electrum-V1"]),
+            (self.electrumv2_client_combo_boxes, ["Electrum-V2"]),
+            (self.monero_client_combo_boxes, ["Monero"])
+        ]
+
+        for combo_box_list, clients in combo_boxes_with_clients:
+            for combo_box_item in combo_box_list:
+                if isinstance(combo_box_item, tuple):
+                    combo_box = combo_box_item[0]
+                else:
+                    combo_box = combo_box_item
+
+                combo_box.addItems(clients) if len(clients) > 1 else combo_box.addItem(clients[0])
+                combo_box.setCurrentIndex(0)
 
         self.ui.customClientQComboBox.clear()
         self.ui.customClientQComboBox.addItems(self.custom_paths.keys())
@@ -491,7 +530,7 @@ class Dumps:
             self.app.println(f"ERROR: {e}")
             if isinstance(e, DerivationError):  
                 set_red_border(self.ui.derivationQGroupBox)
-            elif isinstance(e, CSVProcessingError):  
+            elif isinstance(e, ExportFormatError):  
                 set_red_border(self.ui.dumpsFormatKeysContainerQGroupBox)
             else:
                 set_red_border(self.ui.dumpsStackQGroupBox)
@@ -631,7 +670,7 @@ class Dumps:
                             out = ", ".join(map(str, csv_data))
 
                         except Exception as e:
-                            raise CSVProcessingError(e)
+                            raise ExportFormatError(e)
 
                     else:
                         dump = hd.dump(exclude={'root', *exclude_include})
@@ -1071,11 +1110,11 @@ class Dumps:
         if crypto == "Algorand":
             for combo_box, container in self.algorand_client_combo_boxes:
                 combo_box.setCurrentText("Algorand")
-                container.setVisible(True) 
+                container.setEnabled(True) 
         else:
             for combo_box, container in self.algorand_client_combo_boxes:
                 combo_box.setCurrentText("BIP39")
-                container.setVisible(False) 
+                container.setEnabled(False) 
 
     def _dump_format_changed(self, export_format):
         if export_format == "CSV":
@@ -1204,5 +1243,5 @@ class Dumps:
         self.ui.stopTerminalQPushButton.setEnabled(stop_btn_enable)
         self.terminal_cancelled = terminal_cancelled
 
-class CSVProcessingError(Exception):
-            pass
+class ExportFormatError(Exception):
+    pass

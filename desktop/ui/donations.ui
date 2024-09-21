@@ -156,7 +156,7 @@
       <number>0</number>
      </property>
      <widget class="QWidget" name="donationsCoreTeamQWidget">
-      <layout class="QVBoxLayout" name="verticalLayout">
+      <layout class="QVBoxLayout" name="donationsCoreTeamQWidgetVLayout">
        <property name="spacing">
         <number>15</number>
        </property>
@@ -186,8 +186,8 @@
         </spacer>
        </item>
        <item>
-        <widget class="QFrame" name="frame_2">
-         <layout class="QHBoxLayout" name="horizontalLayout">
+        <widget class="QFrame" name="donationsCoreTeamQRQFrame">
+         <layout class="QHBoxLayout" name="donationsCoreTeamQRQFrameHLayout">
           <property name="spacing">
            <number>0</number>
           </property>
@@ -204,8 +204,8 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QFrame" name="frame_5">
-            <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <widget class="QFrame" name="donationsCoreTeamQRCodeQFrame">
+            <layout class="QHBoxLayout" name="donationsCoreTeamQRCodeQFrameHLayout">
              <property name="spacing">
               <number>0</number>
              </property>
@@ -222,7 +222,7 @@
               <number>0</number>
              </property>
              <item>
-              <spacer name="horizontalSpacer">
+              <spacer name="donationsCoreTeamQRCodeQFrameVLSpacer">
                <property name="orientation">
                 <enum>Qt::Horizontal</enum>
                </property>
@@ -236,7 +236,7 @@
              </item>
              <item>
               <widget class="QFrame" name="donationQRCodeContainerQFrame">
-               <layout class="QVBoxLayout" name="verticalLayout_5">
+               <layout class="QVBoxLayout" name="donationQRCodeContainerQFrameVLayout">
                 <property name="spacing">
                  <number>0</number>
                 </property>
@@ -275,7 +275,7 @@
               </widget>
              </item>
              <item>
-              <spacer name="horizontalSpacer_2">
+              <spacer name="donationsCoreTeamQRCodeQFrameVRSpacer">
                <property name="orientation">
                 <enum>Qt::Horizontal</enum>
                </property>
@@ -294,7 +294,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frame_3">
+        <widget class="QFrame" name="donationsCoreTeamAddressContainerQFrame">
          <layout class="QHBoxLayout" name="horizontalLayout_5">
           <property name="spacing">
            <number>0</number>
@@ -325,7 +325,7 @@
            </spacer>
           </item>
           <item>
-           <widget class="QFrame" name="frame_6">
+           <widget class="QFrame" name="donationsCoreTeamAddressQFrame">
             <layout class="QHBoxLayout" name="horizontalLayout_4">
              <property name="spacing">
               <number>15</number>
@@ -520,7 +520,7 @@
       </layout>
      </widget>
      <widget class="QWidget" name="donationsCharityQWidget">
-      <layout class="QVBoxLayout" name="verticalLayout_7">
+      <layout class="QVBoxLayout" name="donationsCharityQWidgetVLayout">
        <property name="spacing">
         <number>15</number>
        </property>
@@ -537,7 +537,7 @@
         <number>0</number>
        </property>
        <item>
-        <spacer name="verticalSpacer_5">
+        <spacer name="donationsCharityQWidgetVTSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -550,8 +550,8 @@
         </spacer>
        </item>
        <item>
-        <widget class="QFrame" name="frame_11">
-         <layout class="QHBoxLayout" name="horizontalLayout_12">
+        <widget class="QFrame" name="donationsCharityQRCodeQFrame">
+         <layout class="QHBoxLayout" name="donationsCharityQRCodeQFrameHLayout">
           <property name="spacing">
            <number>0</number>
           </property>
@@ -568,7 +568,7 @@
            <number>0</number>
           </property>
           <item>
-           <spacer name="horizontalSpacer_9">
+           <spacer name="donationsCharityQRCodeQFrameHLSpacer">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -582,7 +582,7 @@
           </item>
           <item>
            <widget class="QFrame" name="donationCharityQRCodeContainerQFrame">
-            <layout class="QVBoxLayout" name="verticalLayout_4">
+            <layout class="QVBoxLayout" name="donationCharityQRCodeContainerQFrameVLayout">
              <property name="spacing">
               <number>0</number>
              </property>
@@ -621,7 +621,7 @@
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer_10">
+           <spacer name="donationsCharityQRCodeQFrameHRSpacer">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -637,8 +637,8 @@
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frame_12">
-         <layout class="QHBoxLayout" name="horizontalLayout_13">
+        <widget class="QFrame" name="donationsCharityAddressContainerQFrame">
+         <layout class="QHBoxLayout" name="donationsCharityAddressContainerQFrameHLayout">
           <property name="spacing">
            <number>0</number>
           </property>
@@ -655,7 +655,7 @@
            <number>0</number>
           </property>
           <item>
-           <spacer name="horizontalSpacer_11">
+           <spacer name="donationsCharityAddressContainerQFrameHLSpacer">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -668,8 +668,8 @@
            </spacer>
           </item>
           <item>
-           <widget class="QFrame" name="frame_13">
-            <layout class="QHBoxLayout" name="horizontalLayout_14">
+           <widget class="QFrame" name="donationsCharityAddressQFrame">
+            <layout class="QHBoxLayout" name="donationsCharityAddressQFrameHLayout">
              <property name="spacing">
               <number>15</number>
              </property>
@@ -703,7 +703,7 @@
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer_12">
+           <spacer name="donationsCharityAddressContainerQFrameHRSpacer">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -719,8 +719,8 @@
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frame_14">
-         <layout class="QHBoxLayout" name="horizontalLayout_15">
+        <widget class="QFrame" name="donationsCharityCryptocurrencyContainerQFrame">
+         <layout class="QHBoxLayout" name="donationsCharityCryptocurrencyContainerQFrameHLayout">
           <property name="spacing">
            <number>15</number>
           </property>
@@ -737,7 +737,7 @@
            <number>0</number>
           </property>
           <item>
-           <spacer name="horizontalSpacer_13">
+           <spacer name="donationsCharityCryptocurrencyContainerQFrameHLSpacer">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -750,14 +750,14 @@
            </spacer>
           </item>
           <item>
-           <widget class="QFrame" name="frame_16">
+           <widget class="QFrame" name="donationsCharityCryptocurrencyQFrame">
             <property name="minimumSize">
              <size>
               <width>150</width>
               <height>0</height>
              </size>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_6">
+            <layout class="QVBoxLayout" name="donationsCharityCryptocurrencyQFrameVLayout">
              <property name="spacing">
               <number>15</number>
              </property>
@@ -791,7 +791,7 @@
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer_14">
+           <spacer name="donationsCharityCryptocurrencyContainerQFrameHRSpacer">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -807,8 +807,8 @@
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frame_15">
-         <layout class="QHBoxLayout" name="horizontalLayout_18">
+        <widget class="QFrame" name="donationsCharityCaptionContainerQFrame">
+         <layout class="QHBoxLayout" name="donationsCharityCaptionContainerQFrameHLayout">
           <property name="leftMargin">
            <number>50</number>
           </property>
@@ -832,7 +832,7 @@
         </widget>
        </item>
        <item>
-        <spacer name="verticalSpacer_4">
+        <spacer name="donationsCharityQWidgetVMSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -845,7 +845,7 @@
         </spacer>
        </item>
        <item>
-        <spacer name="verticalSpacer_2">
+        <spacer name="donationsCharityQWidgetVBSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>

@@ -124,12 +124,12 @@ class Donation(Modal):
         donation_ui.donationsCoreTeamQPushButton.click()
         donation_ui.donationsCharityCaptionQLabel.setTextFormat(Qt.RichText)
         donation_ui.donationsCharityCaptionQLabel.setText(
-            """Your donation helps us continue our work and grow. Every bit counts—thank you for your support!"""
+            """Your contribution directly impacts those in need. Together, we can make a difference!"""
         )
 
         donation_ui.donationsCaptionQLabel.setTextFormat(Qt.RichText)
         donation_ui.donationsCaptionQLabel.setText(
-            """Your contribution directly impacts those in need. Together, we can make a difference!"""
+            """Your donation helps us continue our work and grow. Every bit counts—thank you for your support!"""
         )
 
         donation_ui.donationsCaptionQLabel.setWordWrap(True)
