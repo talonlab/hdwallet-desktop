@@ -294,7 +294,7 @@ class Dumps:
 
         combo_boxes_with_clients = [
             (self.algorand_client_combo_boxes, algorand_clients),  
-            (self.cardano_client_combo_boxes, ["Cardano"]),
+            (self.cardano_client_combo_boxes, ["Cardano", "BIP39"]),
             (self.electrumv1_client_combo_boxes, ["Electrum-V1"]),
             (self.electrumv2_client_combo_boxes, ["Electrum-V2"]),
             (self.monero_client_combo_boxes, ["Monero"])
@@ -309,6 +309,13 @@ class Dumps:
 
                 combo_box.addItems(clients) if len(clients) > 1 else combo_box.addItem(clients[0])
                 combo_box.setCurrentIndex(0)
+
+                if clients == ["Cardano", "BIP39"]:
+                    if "BIP39" in clients:
+                        self.ui.cardanoFromEntropyClientQComboBox.setCurrentIndex(clients.index("BIP39"))
+                        self.ui.cardanoFromMnemonicClientQComboBox.setCurrentIndex(clients.index("BIP39"))
+                    else:
+                        combo_box.setCurrentIndex(clients.index("Cardano"))
 
         self.ui.customClientQComboBox.clear()
         self.ui.customClientQComboBox.addItems(self.custom_paths.keys())

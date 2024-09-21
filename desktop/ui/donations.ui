@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
+  <layout class="QVBoxLayout" name="FormVLayout">
    <property name="spacing">
     <number>0</number>
    </property>
@@ -31,7 +31,7 @@
    </property>
    <item>
     <widget class="QFrame" name="donationsNavbarQFrame">
-     <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <layout class="QHBoxLayout" name="donationsNavbarQFrameHLayout">
       <property name="spacing">
        <number>10</number>
       </property>
@@ -55,7 +55,7 @@
        </widget>
       </item>
       <item>
-       <spacer name="horizontalSpacer_8">
+       <spacer name="donationsNavbarQFrameHSpacer">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
@@ -68,14 +68,14 @@
        </spacer>
       </item>
       <item>
-       <widget class="QFrame" name="frame_9">
+       <widget class="QFrame" name="donationsQPushButtonContainerQFrame">
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_16">
+        <layout class="QHBoxLayout" name="donationsQPushButtonContainerQFrameHLayout">
          <property name="spacing">
           <number>0</number>
          </property>
@@ -153,7 +153,7 @@
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="donationsCoreTeamQWidget">
       <layout class="QVBoxLayout" name="donationsCoreTeamQWidgetVLayout">
@@ -173,7 +173,7 @@
         <number>0</number>
        </property>
        <item>
-        <spacer name="verticalSpacer_6">
+        <spacer name="donationsCoreTeamQWidgetVTSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -295,7 +295,7 @@
        </item>
        <item>
         <widget class="QFrame" name="donationsCoreTeamAddressContainerQFrame">
-         <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <layout class="QHBoxLayout" name="donationsCoreTeamAddressContainerQFrameHLayout">
           <property name="spacing">
            <number>0</number>
           </property>
@@ -312,7 +312,7 @@
            <number>0</number>
           </property>
           <item>
-           <spacer name="horizontalSpacer_3">
+           <spacer name="donationsCoreTeamAddressContainerQFrameHLSpacer">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -326,7 +326,7 @@
           </item>
           <item>
            <widget class="QFrame" name="donationsCoreTeamAddressQFrame">
-            <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <layout class="QHBoxLayout" name="donationsCoreTeamAddressQFrameHLayout">
              <property name="spacing">
               <number>15</number>
              </property>
@@ -360,7 +360,7 @@
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer_4">
+           <spacer name="donationsCoreTeamAddressContainerQFrameHRSpacer">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -376,8 +376,8 @@
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frame_4">
-         <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <widget class="QFrame" name="donationsCoreTeamCryptocurrencyContainerQFrame">
+         <layout class="QHBoxLayout" name="donationsCoreTeamCryptocurrencyContainerQFrameHLayout">
           <property name="spacing">
            <number>15</number>
           </property>
@@ -394,7 +394,7 @@
            <number>0</number>
           </property>
           <item>
-           <spacer name="horizontalSpacer_15">
+           <spacer name="donationsCoreTeamCryptocurrencyContainerQFrameHLSpacer">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -407,14 +407,14 @@
            </spacer>
           </item>
           <item>
-           <widget class="QFrame" name="frame_7">
+           <widget class="QFrame" name="donationsCoreTeamCryptocurrencyQFrame">
             <property name="minimumSize">
              <size>
               <width>150</width>
               <height>0</height>
              </size>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_3">
+            <layout class="QVBoxLayout" name="donationsCoreTeamCryptocurrencyQFrameVLayout">
              <property name="spacing">
               <number>15</number>
              </property>
@@ -448,7 +448,7 @@
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer_16">
+           <spacer name="donationsCoreTeamCryptocurrencyContainerQFrameHRSpacer">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -464,8 +464,8 @@
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frame_8">
-         <layout class="QHBoxLayout" name="horizontalLayout_17">
+        <widget class="QFrame" name="donationsCoreTeamCaptionContainerQFrame">
+         <layout class="QHBoxLayout" name="donationsCoreTeamCaptionContainerQFrameHLayout">
           <property name="spacing">
            <number>0</number>
           </property>
@@ -492,7 +492,7 @@
         </widget>
        </item>
        <item>
-        <spacer name="verticalSpacer_3">
+        <spacer name="donationsCoreTeamQWidgetVMSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -505,7 +505,7 @@
         </spacer>
        </item>
        <item>
-        <spacer name="verticalSpacer">
+        <spacer name="donationsCoreTeamQWidgetVBSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
