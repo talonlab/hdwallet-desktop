@@ -43,6 +43,48 @@ QLineEdit QMenu::item::selected {
     color: white;
 }
 
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////
+QMenu */
+QMenu {
+    background-color: rgb(16, 21, 27);  
+    color: white;  
+    border: 1px solid rgba(128, 128, 128, 0.25);  
+    padding: 5px; 
+    border-radius: 4px;  
+}
+
+QMenu::item {
+    background-color: transparent;  
+    padding: 5px 15px; 
+    color: rgba(25, 30, 36, 100);  
+}
+
+QMenu::item:selected {
+    background-color: rgba(25, 30, 36, 100); 
+    color: white; 
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: rgba(128, 128, 128, 0.25);  
+    margin: 5px 0;  
+}
+
+QMenu:disabled {
+    color: rgba(255, 255, 255, 0.5);  
+}
+
+QTextEdit QMenu::item,
+QLineEdit QMenu::item {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+QTextEdit QMenu::item:selected,
+QLineEdit QMenu::item:selected {
+    color: white;
+}
+
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
 CheckBox */
 
@@ -110,6 +152,10 @@ QPushButton:hover {
 #donationsCopyCustomQFrame:pressed,
 QPushButton:pressed {
     background-color: rgb(25, 30, 36);
+}
+
+QPushButton:disabled{
+    background-color: rgba(25, 30, 36, 0.5);
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
