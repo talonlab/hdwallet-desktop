@@ -15,7 +15,7 @@ QWidget {
 
 QWidget:disabled{
     color: rgba(255, 255, 255, 0.5);
-    background-color: transparent;
+    background-color: rgb(25,30,36);
 }
 
 QWidget:focus { 
@@ -33,47 +33,44 @@ QFrame:disabled{
     background-color: transparent;
 }
 
-QTextEdit QMenu::item,
-QLineEdit QMenu::item {
-    color: rgba(255, 255, 255, 90);
-}
-
-QTextEdit QMenu::item::selected,
-QLineEdit QMenu::item::selected {
-    color: white;
-}
-
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
 QMenu */
 QMenu {
-    background-color: rgb(16, 21, 27);  
-    color: white;  
-    border: 1px solid rgba(128, 128, 128, 0.25);  
-    padding: 5px; 
+    background-color: rgb(16, 21, 27); 
+    color: white;  /* Text color */
+    border: 1px solid rgba(128, 128, 128, 0.25); 
+    padding: 5px;  
     border-radius: 4px;  
 }
 
 QMenu::item {
-    background-color: transparent;  
-    padding: 5px 15px; 
-    color: white; 
-    qproperty-icon: none;
+    background-color: rgb(25, 30, 36);  
+    padding: 5px 15px;  
+    color: white;
+    qproperty-icon: none;  
 }
 
 QMenu::item:selected {
-    background-color: rgba(25, 30, 36, 100);  
-    color: white; 
+    background: rgba(16, 21, 27,100);  
+    color: #83b9ff; 
+    border-radius: 3px;  
 }
 
-QMenu::item:disabled {
-    color: rgba(255, 255, 255, 0.5);  
+QMenu::item:hover {
+    background-color: rgb(16, 21, 27,100);
+    color: #83b9ff;
+    border-radius: 3px; 
+}
+
+QMenu::item:disabled {  
     background-color: transparent; 
+    color: rgba(255, 255, 255, 0.5);
 }
 
 QMenu::item:disabled:selected {
-    background-color: transparent; 
     color: rgba(255, 255, 255, 0.5);  
+    background-color: transparent; 
 }
 
 QMenu::separator {
@@ -82,29 +79,9 @@ QMenu::separator {
     margin: 5px 0;  
 }
 
-QTextEdit QMenu::item,
-QLineEdit QMenu::item {
-    color: white;  
-    qproperty-icon: red;
-}
-
-QTextEdit QMenu::item:selected,
-QLineEdit QMenu::item:selected {
-    color: white;
-}
-
-QTextEdit QMenu::item:disabled,
-QLineEdit QMenu::item:disabled {
-    color: rgba(255, 255, 255, 0.5); 
-    background-color: transparent; 
-}
-
-QTextEdit QMenu::item:disabled:selected,
-QLineEdit QMenu::item:disabled:selected {
-    background-color: transparent;  
+QMenu:disabled {
     color: rgba(255, 255, 255, 0.5);  
 }
-
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
 CheckBox */
