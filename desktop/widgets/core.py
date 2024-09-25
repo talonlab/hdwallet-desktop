@@ -25,6 +25,8 @@ from PySide6.QtGui import (
     QTextCharFormat, QTextCursor, QColor
 )
 
+from hdwallet.info import __versions__ as hdwallet_versions
+
 from desktop.utils import (
     put_svg, update_style, resolve_path
 )
@@ -106,6 +108,12 @@ class Application(QMainWindow):
         self.resize_evt.resize_event_callback = self.update_terminal_ui
         self.ui.outputQFrame.installEventFilter(self.resize_evt)
         self.ui.outputTerminalQPlainTextEdit.verticalScrollBar().rangeChanged.connect(self.update_terminal_ui)
+
+        versions = {
+            "library": hdwallet_versions["hdwallet"],
+            "desktop": hdwallet_versions["desktop"]
+        }
+        self.ui.outputTerminalQPlainTextEdit.setPlaceholderText(json.dumps(versions, indent=4))
 
     def load_stylesheet(self, path: str) -> None:
         """
