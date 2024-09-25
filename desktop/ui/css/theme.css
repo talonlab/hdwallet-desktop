@@ -15,7 +15,7 @@ QWidget {
 
 QWidget:disabled{
     color: rgba(255, 255, 255, 0.5);
-    background-color: rgb(25,30,36);
+    background-color: rgb(16, 21, 27);
 }
 
 QWidget:focus { 
@@ -38,27 +38,27 @@ QFrame:disabled{
 QMenu */
 QMenu {
     background-color: rgb(16, 21, 27); 
-    color: white;  /* Text color */
+    color: white; 
     border: 1px solid rgba(128, 128, 128, 0.25); 
     padding: 5px;  
     border-radius: 4px;  
 }
 
 QMenu::item {
-    background-color: rgb(25, 30, 36);  
+    background-color: transparent;  
     padding: 5px 15px;  
     color: white;
     qproperty-icon: none;  
 }
 
 QMenu::item:selected {
-    background: rgba(16, 21, 27,100);  
+    background:  rgb(25, 30, 36);  
     color: #83b9ff; 
     border-radius: 3px;  
 }
 
 QMenu::item:hover {
-    background-color: rgb(16, 21, 27,100);
+    background-color: rgb(25, 30, 36);
     color: #83b9ff;
     border-radius: 3px; 
 }
