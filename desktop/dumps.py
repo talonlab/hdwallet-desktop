@@ -685,7 +685,7 @@ class Dumps:
 
                     signal.interval_output.emit(out)
                     
-                    if hd_kwargs["cryptocurrency"].ECC.NAME != "SLIP10-Secp256k1" and SLIP10_SECP256K1_CONST.USE == "coincurve":
+                    if (hd_kwargs["cryptocurrency"].ECC.NAME != "SLIP10-Secp256k1" and SLIP10_SECP256K1_CONST.USE == "coincurve") or dformat == "JSON":
                         time.sleep(0.03)
                     
                     if saved_file != None:
