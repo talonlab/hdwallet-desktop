@@ -676,8 +676,8 @@ class Dumps:
                                     csv_data.append(dump[key[0]])
                             out = ", ".join(map(str, csv_data))
 
-                        except Exception as e:
-                            raise ExportFormatError(e)
+                        except KeyError as e:
+                            raise ExportFormatError(f"Unknown key {e}")
 
                     else:
                         dump = hd.dump(exclude={'root', *exclude_include})
@@ -1178,7 +1178,7 @@ class Dumps:
 
         self.ui.dumpsFromQComboBox.clear()
         self.ui.dumpsFromQComboBox.addItems(sorted(keys))
-        self.ui.dumpsFromQComboBox.setCurrentIndex(0)
+        self.ui.dumpsFromQComboBox.setCurrentText("Mnemonic")
 
         if self.ui.dumpsFormatQComboBox.currentText() == "CSV":
             self.__default_csv_include()
