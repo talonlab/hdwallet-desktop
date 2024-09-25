@@ -484,6 +484,8 @@ class Dumps:
             pair[1].currentIndexChanged.connect(functools.partial(self.__pair_addr_staking, pair[1], pair[2], pair[4]))
             pair[2].setEnabled(False)
             pair[4].setEnabled(False)
+
+            pair[1].setCurrentIndex(0)
             
 
         self.ui.cardanoFromXPublicKeyStrictQCheckBox.setChecked(True)
