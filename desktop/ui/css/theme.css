@@ -57,12 +57,23 @@ QMenu {
 QMenu::item {
     background-color: transparent;  
     padding: 5px 15px; 
-    color: rgba(25, 30, 36, 100);  
+    color: white; 
+    qproperty-icon: none;
 }
 
 QMenu::item:selected {
-    background-color: rgba(25, 30, 36, 100); 
+    background-color: rgba(25, 30, 36, 100);  
     color: white; 
+}
+
+QMenu::item:disabled {
+    color: rgba(255, 255, 255, 0.5);  
+    background-color: transparent; 
+}
+
+QMenu::item:disabled:selected {
+    background-color: transparent; 
+    color: rgba(255, 255, 255, 0.5);  
 }
 
 QMenu::separator {
@@ -71,19 +82,29 @@ QMenu::separator {
     margin: 5px 0;  
 }
 
-QMenu:disabled {
-    color: rgba(255, 255, 255, 0.5);  
-}
-
 QTextEdit QMenu::item,
 QLineEdit QMenu::item {
-    color: rgba(255, 255, 255, 0.9);
+    color: white;  
+    qproperty-icon: red;
 }
 
 QTextEdit QMenu::item:selected,
 QLineEdit QMenu::item:selected {
     color: white;
 }
+
+QTextEdit QMenu::item:disabled,
+QLineEdit QMenu::item:disabled {
+    color: rgba(255, 255, 255, 0.5); 
+    background-color: transparent; 
+}
+
+QTextEdit QMenu::item:disabled:selected,
+QLineEdit QMenu::item:disabled:selected {
+    background-color: transparent;  
+    color: rgba(255, 255, 255, 0.5);  
+}
+
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
 CheckBox */
