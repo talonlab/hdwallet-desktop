@@ -188,10 +188,10 @@ class Generate:
         else:
             output = {
                 "name": mnemonic_client,
-                "mnemonic": gen_mnemonic
+                "mnemonic": gen_mnemonic,
+                "language": lang,
+                "words": len(gen_mnemonic.split(" "))
             }
-
-            output.update(kwargs)
 
         self.app.println(output)
 
