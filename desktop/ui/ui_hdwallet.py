@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletQSLyNU.ui'
+## Form generated from reading UI file 'hdwalletvAHqAy.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -3808,12 +3808,12 @@ class Ui_MainWindow(object):
 
         self.electrumV1FromSeedsPublicKeyTypeContainerQFrameVLayout.addWidget(self.electrumV1FromSeedPublicKeyTypeLabelContainerQFrame)
 
-        self.electrumV1FromClientQComboBox = QComboBox(self.electrumV1FromSeedsPublicKeyTypeContainerQFrame)
-        self.electrumV1FromClientQComboBox.addItem("")
-        self.electrumV1FromClientQComboBox.addItem("")
-        self.electrumV1FromClientQComboBox.setObjectName(u"electrumV1FromClientQComboBox")
+        self.electrumV1FromSeedPublicKeyTypeQComboBox = QComboBox(self.electrumV1FromSeedsPublicKeyTypeContainerQFrame)
+        self.electrumV1FromSeedPublicKeyTypeQComboBox.addItem("")
+        self.electrumV1FromSeedPublicKeyTypeQComboBox.addItem("")
+        self.electrumV1FromSeedPublicKeyTypeQComboBox.setObjectName(u"electrumV1FromSeedPublicKeyTypeQComboBox")
 
-        self.electrumV1FromSeedsPublicKeyTypeContainerQFrameVLayout.addWidget(self.electrumV1FromClientQComboBox)
+        self.electrumV1FromSeedsPublicKeyTypeContainerQFrameVLayout.addWidget(self.electrumV1FromSeedPublicKeyTypeQComboBox)
 
 
         self.electrumV1FromSeedsPublicKeyTypeQFrameHLayout.addWidget(self.electrumV1FromSeedsPublicKeyTypeContainerQFrame)
@@ -7032,10 +7032,10 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.hdwalletQStackedWidget.setCurrentIndex(1)
-        self.hdQStackedWidget.setCurrentIndex(4)
-        self.bipQStackedWidget.setCurrentIndex(0)
+        self.hdQStackedWidget.setCurrentIndex(2)
+        self.bipQStackedWidget.setCurrentIndex(2)
         self.cardanoQStackedWidget.setCurrentIndex(0)
-        self.electrumV1QStackedWidget.setCurrentIndex(1)
+        self.electrumV1QStackedWidget.setCurrentIndex(2)
         self.electrumV2QStackedWidget.setCurrentIndex(2)
         self.moneroQStackedWidget.setCurrentIndex(5)
         self.derivationsQStackedWidget.setCurrentIndex(8)
@@ -7376,10 +7376,10 @@ class Ui_MainWindow(object):
         self.electrumV1FromSeedClientQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV1FromSeedQLabel.setText(QCoreApplication.translate("MainWindow", u"Seed", None))
         self.electrumV1FromSeedPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
-        self.electrumV1FromClientQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Uncompressed", None))
-        self.electrumV1FromClientQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Compressed", None))
+        self.electrumV1FromSeedPublicKeyTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Uncompressed", None))
+        self.electrumV1FromSeedPublicKeyTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Compressed", None))
 
-        self.electrumV1FromClientQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
+        self.electrumV1FromSeedPublicKeyTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.electrumV1FromWIFQLabel.setText(QCoreApplication.translate("MainWindow", u"Wallet Important Format", None))
         self.electrumV1FromWIFBIP38PassphraseQCheckBox.setText(QCoreApplication.translate("MainWindow", u"BIP38", None))
         self.electrumV1FromWIFBIP38PassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
