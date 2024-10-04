@@ -22,7 +22,6 @@ import os
 import re
 import shlex
 import functools
-import subprocess
 
 from desktop.utils import resolve_path
 from desktop.widgets.core import *
@@ -76,10 +75,15 @@ class MainApplication:
 
         self.ui.expandAndCollapseTerminalQFrame.layout().addWidget(self.ui.toggle_expand_terminal)
 
+        self.ui.outputTerminalQLineEdit.textChanged.connect(
+            lambda s: self.ui.outputTerminalQPushButton.setEnabled(s != "")
+        )
+        self.ui.outputTerminalQPushButton.setEnabled(False)
+
         self.ui.outputTerminalQLineEdit.returnPressed.connect(self.process_command)
         self.ui.outputTerminalQPushButton.clicked.connect(self.process_command)
-        self.ui.clearTerminalQPushButton.clicked.connect(self._clear_terminal_and_borders)
 
+        self.ui.clearTerminalQPushButton.clicked.connect(self._clear_terminal_and_borders)
 
         self._setup_tab_buttons()
         self.ui.dumpQPushButton.click()
