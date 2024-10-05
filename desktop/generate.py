@@ -235,7 +235,7 @@ class Generate:
         try:
             if len(mnemonic) == 0:
                 set_red_border(self.ui.seedGroupBoxContainerQGroupBox)
-                raise Exception("mnemonic is required to generate seed!")
+                raise Exception("Mnemonic is required to generate seed!")
             elif CardanoSeed.name() == seed_client:
                 seed = CardanoSeed.from_mnemonic(mnemonic=mnemonic, cardano_type=cardano_type, passphrase=passphrase)
             elif ElectrumV2Seed.name() == seed_client:
@@ -261,7 +261,7 @@ class Generate:
 
         if len(self.ui.generateLengthQLineEdit.text()) == 0:
             set_red_border(self.ui.generateLengthAndPassphraseQGroupBox)
-            self.app.println("ERROR: passpharse length is required")
+            self.app.println("ERROR: Passpharse length is required")
             return None
 
         length = int(self.ui.generateLengthQLineEdit.text())
