@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletvAHqAy.ui'
+## Form generated from reading UI file 'hdwalletzzkuzN.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -7617,7 +7617,7 @@ class Ui_MainWindow(object):
         self.dumpsFormatQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.dumpsExcludeOrIncludeQLabel.setText(QCoreApplication.translate("MainWindow", u"Exclude / Include", None))
         self.dumpsGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
-        self.dumpsSaveAndGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate And Save", None))
+        self.dumpsSaveAndGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Save", None))
         self.outputTerminalQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Command Line Interface (CLI)", None))
         self.outputTerminalQPushButton.setText(QCoreApplication.translate("MainWindow", u"Execute", None))
         self.stopTerminalQPushButton.setText(QCoreApplication.translate("MainWindow", u"Stop", None))

@@ -15675,7 +15675,7 @@
                  <item alignment="Qt::AlignBottom">
                   <widget class="QPushButton" name="dumpsSaveAndGenerateQPushButton">
                    <property name="text">
-                    <string>Generate And Save</string>
+                    <string>Save</string>
                    </property>
                   </widget>
                  </item>
