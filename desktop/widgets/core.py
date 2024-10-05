@@ -41,8 +41,8 @@ class Application(QMainWindow):
 
     TEXT_COLOR: QColor = QColor(255, 255, 255)
     HIGHLIGHT_PATTERN = [
-        (re.compile(r'^ERROR:.*$'), QColor(255, 96, 96)),         # ERROR
-        (re.compile(r'^WARNING:.*$'), QColor(255, 221, 0)),       # WARNING
+        (re.compile(r'^ERROR'), QColor(255, 96, 96)),         # ERROR
+        (re.compile(r'^WARNING'), QColor(255, 221, 0)),       # WARNING
         (re.compile(r'\bm/.*?(?=\s)'), QColor(131, 185, 255)),    # "m/" path
         (re.compile(r'\".*?\"(?=\s*:)'), QColor(131, 185, 255)),  # keys
         (re.compile(r'\".*?\"'), QColor(255, 255, 255)),          # string
