@@ -176,7 +176,7 @@ class Generate:
             else:
                 if len(entropy) == 0:
                     set_red_border(self.ui.generateMnemonicClientWordsLanguageContainerQGroupBox)
-                    raise Exception("Entropy is required to generate mnemonic!")
+                    raise Exception("Entropy is required")
                 
                 kwargs["entropy"] = entropy
                 gen_mnemonic = MNEMONICS.mnemonic(mnemonic_client).from_entropy(**kwargs)
@@ -235,7 +235,7 @@ class Generate:
         try:
             if len(mnemonic) == 0:
                 set_red_border(self.ui.seedGroupBoxContainerQGroupBox)
-                raise Exception("Mnemonic is required to generate seed!")
+                raise Exception("Mnemonic is required")
             elif CardanoSeed.name() == seed_client:
                 seed = CardanoSeed.from_mnemonic(mnemonic=mnemonic, cardano_type=cardano_type, passphrase=passphrase)
             elif ElectrumV2Seed.name() == seed_client:

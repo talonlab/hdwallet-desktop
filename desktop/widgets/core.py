@@ -48,7 +48,7 @@ class Application(QMainWindow):
         (re.compile(r'\".*?\"'), QColor(255, 255, 255)),                               # string
         (re.compile(r'(?<=[\[\s])\d+(?=,|\]|$)'), QColor(255, 165, 0)),                # numbers
         (re.compile(r'(?<=[\[\s])(true|false|null)(?=,|\]|$)'), QColor(255, 165, 0)),  # boolean/null
-        (re.compile(r'[{}[\],:]'), QColor(255, 255, 255)),                             # punctuation
+        (re.compile(r'[{}[\],:]'), QColor(255, 255, 255))                              # punctuation
     ]
 
     def __new__(cls, *args, **kwargs) -> 'Application':
