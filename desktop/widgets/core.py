@@ -41,14 +41,14 @@ class Application(QMainWindow):
 
     TEXT_COLOR: QColor = QColor(255, 255, 255)
     HIGHLIGHT_PATTERN = [
-        (re.compile(r'^ERROR'), QColor(255, 96, 96)),         # ERROR
-        (re.compile(r'^WARNING'), QColor(255, 221, 0)),       # WARNING
-        (re.compile(r'\bm/.*?(?=\s)'), QColor(131, 185, 255)),    # "m/" path
-        (re.compile(r'\".*?\"(?=\s*:)'), QColor(131, 185, 255)),  # keys
-        (re.compile(r'\".*?\"'), QColor(255, 255, 255)),          # string
-        (re.compile(r'\b\d+\b'), QColor(255, 165, 0)),            # numbers
-        (re.compile(r'\btrue\b|\bfalse\b|\bnull\b'), QColor(255, 165, 0)),   # boolean/null
-        (re.compile(r'[{}[\],:]'), QColor(255, 255, 255)),                   # punctuation
+        (re.compile(r'^ERROR'), QColor(255, 96, 96)),                                  # ERROR
+        (re.compile(r'^WARNING'), QColor(255, 221, 0)),                                # WARNING
+        (re.compile(r'\bm/.*?(?=\s)'), QColor(131, 185, 255)),                         # "m/" path
+        (re.compile(r'\".*?\"(?=\s*:)'), QColor(131, 185, 255)),                       # keys
+        (re.compile(r'\".*?\"'), QColor(255, 255, 255)),                               # string
+        (re.compile(r'(?<=[\[\s])\d+(?=,|\]|$)'), QColor(255, 165, 0)),                # numbers
+        (re.compile(r'(?<=[\[\s])(true|false|null)(?=,|\]|$)'), QColor(255, 165, 0)),  # boolean/null
+        (re.compile(r'[{}[\],:]'), QColor(255, 255, 255)),                             # punctuation
     ]
 
     def __new__(cls, *args, **kwargs) -> 'Application':
