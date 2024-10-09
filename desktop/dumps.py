@@ -97,6 +97,13 @@ class Dumps:
             "Entropy": {
                 "min_length": 32,
                 "max_length": 66
+            },
+            "Staking Public Key": {
+                "pattern": "^[0-9a-fA-F]*$"
+            },
+            "Payment ID": {
+                "required": False,
+                "pattern": "^[0-9a-fA-F]*$"
             }
         }
 
@@ -896,7 +903,7 @@ class Dumps:
             hd_kwargs["passphrase"] = self.ui.cardanoFromEntropyPassphraseQLineEdit.text()
             hd_kwargs["cardano_type"] = self.ui.cardanoFromEntropyCardanoTypeQComboBox.currentText().lower()
             hd_kwargs["address_type"] = self.ui.cardanoFromEntropyAddressTypeQComboBox.currentText().lower()
-            hd_kwargs["staking_public_key"] = self.ui.cardanoFromEntropyStakingQLineEdit.text()
+            hd_kwargs["staking_public_key"] =  self._validate_and_get("Staking Public Key", self.ui.cardanoFromEntropyStakingQLineEdit)
             return HDWallet(**hd_kwargs).from_entropy(
                 BIP39Entropy(
                     entropy=self._validate_and_get("Entropy", self.ui.cardanoFromEntropyGenerateQLineEdit)
@@ -906,7 +913,7 @@ class Dumps:
             hd_kwargs["passphrase"] = self.ui.cardanoFromMnemonicPassphraseQLineEdit.text()
             hd_kwargs["cardano_type"] = self.ui.cardanoFromMnemonicCardanoTypeQComboBox.currentText().lower()
             hd_kwargs["address_type"] = self.ui.cardanoFromMnemonicAddressTypeQComboBox.currentText().lower()
-            hd_kwargs["staking_public_key"] = self.ui.cardanoFromMnemonicStakingQLineEdit.text()
+            hd_kwargs["staking_public_key"] = self._validate_and_get("Staking Public Key", self.ui.cardanoFromMnemonicStakingQLineEdit)
             return HDWallet(**hd_kwargs).from_mnemonic(
                 BIP39Mnemonic(
                     mnemonic=self._validate_and_get("Mnemonic", self.ui.cardanoFromMnemonicGenerateQLineEdit)
@@ -915,14 +922,14 @@ class Dumps:
         elif dump_from == "Private key":
             hd_kwargs["cardano_type"] = self.ui.cardanoFromPrivateKeyCardanoTypeQComboBox.currentText().lower()
             hd_kwargs["address_type"] = self.ui.cardanoFromPrivateKeyAddressTypeQComboBox.currentText().lower()
-            hd_kwargs["staking_public_key"] = self.ui.cardanoFromPrivateKeyStakingQLineEdit.text()
+            hd_kwargs["staking_public_key"] = self._validate_and_get("Staking Public Key", self.ui.cardanoFromPrivateKeyStakingQLineEdit)
             return HDWallet(**hd_kwargs).from_private_key(
                 private_key=self._validate_and_get("Private Key", self.ui.cardanoFromPrivateKeyQLineEdit)
             )
         elif dump_from == "Public key":
             hd_kwargs["cardano_type"] = self.ui.cardanoFromPublicKeyCardanoTypeQComboBox.currentText().lower()
             hd_kwargs["address_type"] = self.ui.cardanoFromPublicKeyAddressTypeQComboBox.currentText().lower()
-            hd_kwargs["staking_public_key"] = self.ui.cardanoFromPublicKeyStakingQLineEdit.text()
+            hd_kwargs["staking_public_key"] = self._validate_and_get("Staking Public Key", self.ui.cardanoFromPublicKeyStakingQLineEdit)
             return HDWallet(**hd_kwargs).from_public_key(
                 public_key=self._validate_and_get("Public Key", self.ui.cardanoFromPublicKeyQLineEdit)
             )
@@ -930,7 +937,7 @@ class Dumps:
             hd_kwargs["passphrase"] = self.ui.cardanoFromSeedPassphraseQLineEdit.text()
             hd_kwargs["cardano_type"] = self.ui.cardanoFromSeedCardanoTypeQComboBox.currentText().lower()
             hd_kwargs["address_type"] = self.ui.cardanoFromSeedAddressTypeQComboBox.currentText().lower()
-            hd_kwargs["staking_public_key"] = self.ui.cardanoFromSeedStakingQLineEdit.text()
+            hd_kwargs["staking_public_key"] = self._validate_and_get("Staking Public Key", self.ui.cardanoFromSeedStakingQLineEdit)
             return HDWallet(**hd_kwargs).from_seed(
                 CardanoSeed(
                     seed=self._validate_and_get("Seed", self.ui.cardanoFromSeedQLineEdit)
@@ -939,7 +946,7 @@ class Dumps:
         elif dump_from == "XPrivate key":
             hd_kwargs["cardano_type"] = self.ui.cardanoFromXPrivateKeyCardanoTypeQComboBox.currentText().lower()
             hd_kwargs["address_type"] = self.ui.cardanoFromXPrivateKeyAddressTypeQComboBox.currentText().lower()
-            hd_kwargs["staking_public_key"] = self.ui.cardanoFromXPrivateKeyStakingQLineEdit.text()
+            hd_kwargs["staking_public_key"] = self._validate_and_get("Staking Public Key", self.ui.cardanoFromXPrivateKeyStakingQLineEdit)
             return HDWallet(**hd_kwargs).from_xprivate_key(
                 xprivate_key=self._validate_and_get("XPrivate Key", self.ui.cardanoFromXPrivateKeyQLineEdit),
                 strict=self.ui.cardanoFromXPrivateKeyStrictQCheckBox.isChecked()
@@ -947,7 +954,7 @@ class Dumps:
         elif dump_from == "XPublic key":
             hd_kwargs["cardano_type"] = self.ui.cardanoFromXPublicKeyCardanoTypeQComboBox.currentText().lower()
             hd_kwargs["address_type"] = self.ui.cardanoFromXPublicKeyAddressTypeQComboBox.currentText().lower()
-            hd_kwargs["staking_public_key"] = self.ui.cardanoFromXPublicKeyStakingQLineEdit.text()
+            hd_kwargs["staking_public_key"] = self._validate_and_get("Staking Public Key", self.ui.cardanoFromXPublicKeyStakingQLineEdit)
             return HDWallet(**hd_kwargs).from_xpublic_key(
                 xpublic_key=self._validate_and_get("XPublic", self.ui.cardanoFromXPublicKeyQLineEdit),
                 strict=self.ui.cardanoFromXPublicKeyStrictQCheckBox.isChecked()
@@ -1000,7 +1007,6 @@ class Dumps:
                 )
                 wif = bip38.decrypt(encrypted_wif=wif, passphrase=passphrase)
 
-
             return HDWallet(**hd_kwargs).from_wif(
                 wif=wif
             )
@@ -1041,7 +1047,7 @@ class Dumps:
     def _dump_monero(self, dump_from, hd_kwargs):
         if dump_from == "Entropy":
             hd_kwargs["language"] = self.ui.moneroFromEntropyLanguageQComboBox.currentText().lower()
-            hd_kwargs["payment_id"] = self.ui.moneroFromEntropyPaymentIDQLineEdit.text().lower()
+            hd_kwargs["payment_id"] = self._validate_and_get("Payment ID", self.ui.moneroFromEntropyPaymentIDQLineEdit).lower()
             return HDWallet(**hd_kwargs).from_entropy(
                 MoneroEntropy(
                     entropy=self._validate_and_get("Entropy", self.ui.moneroFromEntropyQLineEdit)
@@ -1049,7 +1055,7 @@ class Dumps:
             )
 
         elif dump_from == "Mnemonic":
-            hd_kwargs["payment_id"] = self.ui.moneroFromMnemonicPaymentIDQLineEdit.text().lower()
+            hd_kwargs["payment_id"] = self._validate_and_get("Payment ID", self.ui.moneroFromMnemonicPaymentIDQLineEdit).lower()
             return HDWallet(**hd_kwargs).from_mnemonic(
                 MoneroMnemonic(
                     mnemonic=self._validate_and_get("Mnemonic", self.ui.moneroFromMnemonicQLineEdit)
@@ -1057,13 +1063,13 @@ class Dumps:
             )
 
         elif dump_from == "Private key":
-            hd_kwargs["payment_id"] = self.ui.moneroFromMnemonicPaymentIDQLineEdit.text().lower()
+            hd_kwargs["payment_id"] = self._validate_and_get("Payment ID", self.ui.moneroFromMnemonicPaymentIDQLineEdit).lower()
             return HDWallet(**hd_kwargs).from_private_key(
                 private_key=self._validate_and_get("Private Key", self.ui.moneroFromPrivateKeyQLineEdit).lower()
             )
 
         elif dump_from == "Seed":
-            hd_kwargs["payment_id"] = self.ui.moneroFromSeedPaymentIDQLineEdit.text().lower()
+            hd_kwargs["payment_id"] = self._validate_and_get("Payment ID", self.ui.moneroFromSeedPaymentIDQLineEdit).lower()
             return HDWallet(**hd_kwargs).from_seed(
                 MoneroSeed(
                     seed=self._validate_and_get("Seed", self.ui.moneroFromSeedQLineEdit)
@@ -1071,13 +1077,13 @@ class Dumps:
             )
 
         elif dump_from == "Spend private key":
-            hd_kwargs["payment_id"] = self.ui.moneroFromSpendPrivateKeyPaymentIDQLineEdit.text().lower()
+            hd_kwargs["payment_id"] = self._validate_and_get("Payment ID", self.ui.moneroFromSpendPrivateKeyPaymentIDQLineEdit).lower()
             return HDWallet(**hd_kwargs).from_spend_private_key(
                 spend_private_key=self._validate_and_get("Spend Private Key", self.ui.moneroFromSpendPrivateKeyQLineEdit).lower()
             )
 
         elif dump_from == "Watch only":
-            hd_kwargs["payment_id"] = self.ui.moneroFromWatchOnlyPaymentIDQLineEdit.text().lower()
+            hd_kwargs["payment_id"] = self._validate_and_get("Payment ID", self.ui.moneroFromWatchOnlyPaymentIDQLineEdit).lower()
             return HDWallet(**hd_kwargs).from_watch_only(
                 view_private_key=self._validate_and_get("View Private Key", self.ui.moneroFromWatchOnlyViewPrivateKeyQLIneEdit),
                 spend_public_key=self._validate_and_get("Spend Public Key", self.ui.moneroFromWatchOnlySpendPublicKeyQLineEdit)
@@ -1259,15 +1265,20 @@ class Dumps:
         out = line_edit.text();
         rule = self.validation_rules.get(rule_name, {})
 
+        is_required = rule.get("required", True);
+
         min_len = rule.get("min_length")
         max_len = rule.get("max_length")
+        pattern = rule.get("pattern")
 
-        if out == "":
+        if out == "" and line_edit.isEnabled() and is_required:
             raise Error(f"{rule_name} is required")
         elif min_len != None and min_len > len(out):
             raise Error(f"{rule_name} must be at least {min_len} characters long")
         elif max_len != None and max_len < len(out):
             raise Error(f"{rule_name} must be no more than {max_len} characters long")
+        elif pattern != None and not re.match(pattern, out):
+            raise Error(f"Invalid {rule_name.lower()} data")  
 
         return out
 
