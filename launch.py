@@ -7,14 +7,20 @@
 # file COPYING or https://opensource.org/license/mit
 
 from PySide6.QtWidgets import QApplication
-
+from PySide6.QtGui import QPalette, QColor
+from PySide6.QtCore import Qt
 import sys
 
 from desktop.main import MainApplication
 
-
 def main() -> None:
     qapp: QApplication = QApplication(sys.argv)
+
+    palette = QPalette()
+    palette.setColor(QPalette.Active, QPalette.Text, QColor(255, 255, 255))
+    palette.setColor(QPalette.Disabled, QPalette.Text, QColor(170, 170, 170))
+    qapp.setPalette(palette)
+
     main_application: MainApplication = MainApplication()
     main_application.app.show()
     sys.exit(qapp.exec())

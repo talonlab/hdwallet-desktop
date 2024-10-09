@@ -9,8 +9,9 @@
 import string
 from random import choice
 
-from PySide6.QtGui import QIntValidator, QRegularExpressionValidator
+from PySide6.QtGui import QIntValidator, QRegularExpressionValidator, QColor
 from PySide6.QtCore import QRegularExpression
+
 
 from hdwallet.cryptocurrencies import (
     Cardano, CRYPTOCURRENCIES
@@ -44,11 +45,20 @@ from hdwallet.seeds import (
     SEEDS
 )
 
+from desktop.utils import update_border_class, clear_borders_class
+
 class Generate:
     def __init__(self, app):
         self.app = app
         self.ui = app.ui
         self._setup_generate_stack()
+        self.generate_group_boxes = [
+            self.ui.generateClientAndStrengthContainerQGroupBox,
+            self.ui.generateMnemonicClientWordsLanguageContainerQGroupBox,
+            self.ui.seedGroupBoxContainerQGroupBox,
+            self.ui.generateLengthAndPassphraseQGroupBox
+        ]
+
 
     def _setup_generate_stack(self):
         self.ui.generateEntropyClientQComboBox.addItems(ENTROPIES.names())
@@ -97,6 +107,7 @@ class Generate:
         self.ui.generateEntropyStrengthQComboBox.setCurrentIndex(0)
 
     def _generate_entropy(self):
+        clear_borders_class(self.generate_group_boxes)
         entropy_client = self.ui.generateEntropyClientQComboBox.currentText()
         strength = int(self.ui.generateEntropyStrengthQComboBox.currentText())
         gen_entropy = ENTROPIES.entropy(entropy_client).generate(strength=strength)
@@ -146,6 +157,7 @@ class Generate:
             self.ui.generateMnemonicEntropyQFrame.setEnabled(True)
 
     def _generate_mnemonic(self):
+        clear_borders_class(self.generate_group_boxes)
         mnemonic_client = self.ui.generateMnemonicClientQComboBox.currentText()
         word = self.ui.generateMnemonicWordsQComboBox.currentText()
         entropy = self.ui.generateSeedMnemonicEntropyQLineEdit.text()
@@ -163,20 +175,23 @@ class Generate:
                 gen_mnemonic = MNEMONICS.mnemonic(mnemonic_client).from_words(**kwargs)
             else:
                 if len(entropy) == 0:
-                    raise Exception("Entropy is required to generate mnemonic!")
+                    update_border_class(self.ui.generateMnemonicClientWordsLanguageContainerQGroupBox, "hdwError")
+                    raise Exception("Entropy is required")
+                
                 kwargs["entropy"] = entropy
                 gen_mnemonic = MNEMONICS.mnemonic(mnemonic_client).from_entropy(**kwargs)
 
         except Exception as e:
             output = f"ERROR: {e}"
+            update_border_class(self.ui.generateMnemonicClientWordsLanguageContainerQGroupBox, "hdwError")
 
         else:
             output = {
                 "name": mnemonic_client,
-                "mnemonic": gen_mnemonic
+                "mnemonic": gen_mnemonic,
+                "language": lang,
+                "words": len(gen_mnemonic.split(" "))
             }
-
-            output.update(kwargs)
 
         self.app.println(output)
 
@@ -192,7 +207,7 @@ class Generate:
 
         if CardanoSeed.name() == seed_client:
             self.ui.generateSeedCardanoTypeContainerQFrame.setEnabled(True)
-            self.ui.generateSeedCardanoTypeQComboBox.setCurrentIndex(0)
+            self.ui.generateSeedCardanoTypeQComboBox.setCurrentIndex(3)
         elif ElectrumV2Seed.name() == seed_client:
             self.ui.generateSeedMnemonicTypeContainerQFrame.setEnabled(True)
             self.ui.generateSeedMnemonicTypeQComboBox.setCurrentIndex(0)
@@ -209,6 +224,7 @@ class Generate:
             self.ui.generateSeedPassphraseGenerateContainerQFrame.setEnabled(False)
 
     def _generate_seed(self):
+        clear_borders_class(self.generate_group_boxes)
         seed_client = self.ui.generateSeedClientQComboBox.currentText()
         mnemonic_type = self.ui.generateSeedMnemonicTypeQComboBox.currentText().lower()
         cardano_type = self.ui.generateSeedCardanoTypeQComboBox.currentText().lower()
@@ -218,7 +234,8 @@ class Generate:
 
         try:
             if len(mnemonic) == 0:
-                raise Exception("mnemonic is required to generate seed!")
+                update_border_class(self.ui.seedGroupBoxContainerQGroupBox, "hdwError")
+                raise Exception("Mnemonic is required")
             elif CardanoSeed.name() == seed_client:
                 seed = CardanoSeed.from_mnemonic(mnemonic=mnemonic, cardano_type=cardano_type, passphrase=passphrase)
             elif ElectrumV2Seed.name() == seed_client:
@@ -230,6 +247,7 @@ class Generate:
                 seed = SEEDS.seed(seed_client).from_mnemonic(mnemonic=mnemonic)
         except Exception as e:
             output = f"ERROR: {e}"
+            update_border_class(self.ui.seedGroupBoxContainerQGroupBox, "hdwError")
         else:
             output = {
                 "name": seed_client,
@@ -239,9 +257,11 @@ class Generate:
         self.app.println(output)
 
     def _generate_passphrase(self):
+        clear_borders_class(self.generate_group_boxes)
 
         if len(self.ui.generateLengthQLineEdit.text()) == 0:
-            self.app.println("ERROR: passpharse length is required")
+            update_border_class(self.ui.generateLengthAndPassphraseQGroupBox, "hdwError")
+            self.app.println("ERROR: Length is required")
             return None
 
         length = int(self.ui.generateLengthQLineEdit.text())
@@ -250,20 +270,25 @@ class Generate:
         digit = self.ui.generatePassphraseNumberQCheckBox.isChecked()
         special = self.ui.generatePassphraseCharacterQCheckBox.isChecked()
 
+        if not any([upper, lower, special, digit]):
+            update_border_class(self.ui.generateLengthAndPassphraseQGroupBox, "hdwWarning")
+            self.app.println("WARNING: Select at least one option, defaulting to 'Upper Case', 'Lower Case' and 'Numbers'")
+            upper = lower = digit = True
+            self.ui.generatePassphraseUpperCaseQCheckBox.setChecked(True)
+            self.ui.generatePassphraseLowerCaseQCheckBox.setChecked(True)
+            self.ui.generatePassphraseNumberQCheckBox.setChecked(True)  
+
         characters = string.ascii_lowercase if lower else ''
         characters += string.ascii_uppercase if upper else ''
         characters += string.digits if digit else ''
         characters += string.punctuation if special else ''
 
         output = None
-        if not any([upper, lower, special, digit]):
-            output = "ERROR: At least one of upper, lower, special, or digit must be selected"
-        else:
-            pp = "".join(choice(characters) for _ in range(length))
+        pp = "".join(choice(characters) for _ in range(length))
 
-            output = {
-                "passphrase": pp,
-                "length": length
-            }
+        output = {
+            "passphrase": pp,
+            "length": length
+        }
 
         self.app.println(output)

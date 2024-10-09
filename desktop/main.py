@@ -22,15 +22,14 @@ import os
 import re
 import shlex
 import functools
-import subprocess
 
 from desktop.utils import resolve_path
 from desktop.widgets.core import *
 from desktop.widgets.donation import Donation
 from desktop.utils.worker import Worker
-from desktop.utils.highlighter import Highlighter
 from desktop.generate import Generate
 from desktop.dumps import Dumps
+from desktop.utils import clear_borders_class
 
 class MainApplication:
     """
@@ -52,6 +51,15 @@ class MainApplication:
         """
         Initialize the UI components and their connections.
         """
+        self.errboxes = [
+            self.ui.dumpsStackQGroupBox,
+            self.ui.derivationQGroupBox,
+            self.ui.dumpsFormatKeysContainerQGroupBox,
+            self.ui.generateClientAndStrengthContainerQGroupBox,
+            self.ui.generateMnemonicClientWordsLanguageContainerQGroupBox,
+            self.ui.seedGroupBoxContainerQGroupBox,
+            self.ui.generateLengthAndPassphraseQGroupBox
+        ]
 
         self.terminal_expand_icon = QIcon(resolve_path("desktop/ui/images/svg/expand-white-thin.svg"))
         self.terminal_collapse_icon = QIcon(resolve_path("desktop/ui/images/svg/collapse-white-thin.svg"))
@@ -67,17 +75,17 @@ class MainApplication:
 
         self.ui.expandAndCollapseTerminalQFrame.layout().addWidget(self.ui.toggle_expand_terminal)
 
+        self.ui.outputTerminalQLineEdit.textChanged.connect(
+            lambda s: self.ui.outputTerminalQPushButton.setEnabled(s != "")
+        )
+        self.ui.outputTerminalQPushButton.setEnabled(False)
+
         self.ui.outputTerminalQLineEdit.returnPressed.connect(self.process_command)
         self.ui.outputTerminalQPushButton.clicked.connect(self.process_command)
-        self.ui.clearTerminalQPushButton.clicked.connect(self.ui.outputTerminalQPlainTextEdit.clear)
 
-        self.ui.generateQPushButton.clicked.connect(
-            functools.partial(self.generate_dump_tab_changed, "generatePageQStackedWidget", self.ui.generateQPushButton)
-        )
+        self.ui.clearTerminalQPushButton.clicked.connect(self._clear_terminal_and_borders)
 
-        self.ui.dumpQPushButton.clicked.connect(
-            functools.partial(self.generate_dump_tab_changed, "dumpsPageQStackedWidget", self.ui.dumpQPushButton)
-        )
+        self._setup_tab_buttons()
         self.ui.dumpQPushButton.click()
 
         self.ui.donationHDWalletQPushButton.clicked.connect(
@@ -85,8 +93,6 @@ class MainApplication:
                 main_window=self.app.window(), parent_frame=self.ui.hdWalletContainerQFrame
             )
         )
-
-        Highlighter(self.ui.outputTerminalQPlainTextEdit.document())
 
         self.ui.generateClientAndStrengthContainerQGroupBox.setSizePolicy(
             QSizePolicy.Expanding, QSizePolicy.Expanding
@@ -124,6 +130,31 @@ class MainApplication:
         self.generate = Generate(self.app)
         self.dumps = Dumps(self.app)
 
+    def _setup_tab_buttons(self):
+        """
+        Connects buttons to the generate_dump_tab_changed function and clears borders when the tab changes.
+        """
+        def on_tab_button_clicked(page_name, button):
+            clear_borders_class(self.errboxes) 
+            self.generate_dump_tab_changed(page_name, button)
+
+        self.ui.generateQPushButton.clicked.connect(
+            functools.partial(on_tab_button_clicked, "generatePageQStackedWidget", self.ui.generateQPushButton)
+        )
+        self.ui.dumpQPushButton.clicked.connect(
+            functools.partial(on_tab_button_clicked, "dumpsPageQStackedWidget", self.ui.dumpQPushButton)
+        )
+
+
+    def _clear_terminal_and_borders(self):
+        """
+        Clears the terminal and resets borders for error boxes.
+
+        :param self: Instance of the class, providing access to UI elements.
+        """
+        self.ui.outputTerminalQPlainTextEdit.clear()
+        clear_borders_class(self.errboxes)
+
     def __validate_inputs(self, line_edits: list) -> None:
         """
         Validate and filter input fields for line edits.
@@ -157,8 +188,13 @@ class MainApplication:
         self.ui.outputTerminalQLineEdit.setText(None)
 
         def process() -> str:
+            commands = shlex.split(cmd)
+
+            if any(word in commands for word in ("ds", "dumps")):
+                return "WARNING: The 'dumps' command is not supported in the Desktop CLI. Please use the standalone CLI to perform this operation."
+
             cli = self.cli_runner.invoke(
-                cli_main, shlex.split(cmd)
+                cli_main, commands
             )
             return cli.output
 
