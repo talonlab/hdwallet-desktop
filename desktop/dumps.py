@@ -70,7 +70,7 @@ from desktop.utils.worker import (
     Worker, WorkerSignals
 )
 
-from desktop.utils import set_red_border, clear_all_borders
+from desktop.utils import update_border_class, clear_borders_class
 
 
 class Dumps:
@@ -535,7 +535,7 @@ class Dumps:
 
     def _dumps(self, save=False):
         save_filepath = None
-        clear_all_borders(self.errboxes)
+        clear_borders_class(self.errboxes)
         if save:
             save_filepath = self._file_locator(self.ui.dumpsFormatQComboBox.currentText())
             if save_filepath == '': return None
@@ -543,11 +543,11 @@ class Dumps:
         def _error(e):
             self.app.println(f"ERROR: {e}")
             if isinstance(e, DerivationError):  
-                set_red_border(self.ui.derivationQGroupBox)
+                update_border_class(self.ui.derivationQGroupBox, "hdwError")
             elif isinstance(e, ExportFormatError):  
-                set_red_border(self.ui.dumpsFormatKeysContainerQGroupBox)
+                update_border_class(self.ui.dumpsFormatKeysContainerQGroupBox, "hdwError")
             else:
-                set_red_border(self.ui.dumpsStackQGroupBox)
+                update_border_class(self.ui.dumpsStackQGroupBox, "hdwError")
         
         def _task_ended(): 
             self.ui.dumpsGenerateQPushButton.setEnabled(True)
@@ -1203,7 +1203,7 @@ class Dumps:
         self.derivation_tab[first_name]["button"].click()
 
     def _dump_from_changed(self):
-        clear_all_borders(self.errboxes)
+        clear_borders_class(self.errboxes)
         dump_from = self.ui.dumpsFromQComboBox.currentText()
         if dump_from == '':
             return None

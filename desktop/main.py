@@ -29,7 +29,7 @@ from desktop.widgets.donation import Donation
 from desktop.utils.worker import Worker
 from desktop.generate import Generate
 from desktop.dumps import Dumps
-from desktop.utils import clear_all_borders
+from desktop.utils import clear_borders_class
 
 class MainApplication:
     """
@@ -135,7 +135,7 @@ class MainApplication:
         Connects buttons to the generate_dump_tab_changed function and clears borders when the tab changes.
         """
         def on_tab_button_clicked(page_name, button):
-            clear_all_borders(self.errboxes) 
+            clear_borders_class(self.errboxes) 
             self.generate_dump_tab_changed(page_name, button)
 
         self.ui.generateQPushButton.clicked.connect(
@@ -153,7 +153,7 @@ class MainApplication:
         :param self: Instance of the class, providing access to UI elements.
         """
         self.ui.outputTerminalQPlainTextEdit.clear()
-        clear_all_borders(self.errboxes)
+        clear_borders_class(self.errboxes)
 
     def __validate_inputs(self, line_edits: list) -> None:
         """
