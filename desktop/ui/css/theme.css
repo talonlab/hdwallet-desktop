@@ -125,6 +125,7 @@ QLabel {
     letter-spacing: 1px;
     color: rgb(255, 255, 255);
     background-color: transparent;
+    text-transform: uppercase;
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -140,6 +141,7 @@ QPushButton {
     padding: 5px 10px;
     height: 25px;
     outline: none;
+    text-transform: uppercase;
 }
 
 QPushButton:hover {
@@ -433,6 +435,7 @@ QGroupBox {
     border-radius: 4px;
     margin-top: 1ex;
     font: 11pt "HDWallet";
+    text-transform: uppercase;
 }
 
 QGroupBox::title {
@@ -643,3 +646,11 @@ QRadioButton::indicator:checked {
     border: 1px solid rgba(255, 221, 0,0.5);
 }
 
+
+#donationsCharityCaptionContainerQFrame QLabel,
+#donationsCoreTeamCaptionContainerQFrame QLabel{
+    font: 10pt "Tahoma";
+    letter-spacing: 1px;
+    background-color: rgb(16, 21, 27);
+    text-transform: none;
+}

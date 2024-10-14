@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'donationsESmFCQ.ui'
+## Form generated from reading UI file 'donationslATPzU.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -383,7 +383,7 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
         self.donationsQLabel.setText(QCoreApplication.translate("Form", u"Donations", None))
-        self.donationsCoreTeamQPushButton.setText(QCoreApplication.translate("Form", u"Core Team", None))
+        self.donationsCoreTeamQPushButton.setText(QCoreApplication.translate("Form", u"Team", None))
         self.donationsCharityQPushButton.setText(QCoreApplication.translate("Form", u"Charity", None))
         self.donationsQRCodeQLabel.setText(QCoreApplication.translate("Form", u"QR Code", None))
         self.donationsAddressQLabel.setText(QCoreApplication.translate("Form", u"Address", None))

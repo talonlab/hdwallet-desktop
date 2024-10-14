@@ -94,7 +94,7 @@
          <item>
           <widget class="QPushButton" name="donationsCoreTeamQPushButton">
            <property name="text">
-            <string>Core Team</string>
+            <string>Team</string>
            </property>
           </widget>
          </item>
