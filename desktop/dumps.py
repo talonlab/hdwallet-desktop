@@ -1144,6 +1144,7 @@ class Dumps:
 
 
     def __default_csv_include(self):
+        crypto = self.ui.dumpsCryptocurrencyQComboBox.currentText()
         hd = self.ui.dumpsHdQComboBox.currentText()
 
         if hd == "BIP32":
@@ -1164,6 +1165,10 @@ class Dumps:
             _include: str = "at:minor,at:major,sub_address"
         else:
             _include = None
+
+        if crypto in ("Bitcoin-Cash", "Bitcoin-Cash-SLP", "eCash"):
+            _include: str = "at:path,addresses:legacy-p2pkh,public_key,wif"
+
 
         self.ui.dumpsExcludeOrIncludeQLineEdit.setText(_include)
 
