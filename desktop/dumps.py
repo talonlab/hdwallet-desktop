@@ -1234,7 +1234,12 @@ class Dumps:
         self.app.change_page(current_from_stack, current_from_widget)
 
         is_drived = dump_from not in self.hd_undrivable_methods[current_hd]
+        
         self.ui.derivationQGroupBox.setEnabled(is_drived)
+        self.ui.dumpsformatQFrame.setEnabled(is_drived)
+
+        if not is_drived:
+            self.ui.dumpsFormatQComboBox.setCurrentText("JSON")
 
         if is_drived:
             key = current_hd
