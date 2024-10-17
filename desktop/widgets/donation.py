@@ -11,7 +11,7 @@ from PySide6.QtWidgets import (
     QWidget, QFrame, QVBoxLayout, QLabel, QPushButton
 )
 from PySide6.QtCore import (
-    Qt, QSize
+    Qt, QSize, QTimer
 )
 from PySide6.QtGui import (
     QIcon, QCursor
@@ -35,36 +35,6 @@ class Donation(Modal):
         super(Donation, self).__init__(parent, parent_frame)
         self.ui: Optional[Ui_Form] = None
 
-
-    def __update_btns(self) -> None:
-        """
-        Update the stylesheets of the donation buttons.
-        """
-        self.ui.donationsCharityQPushButton.setStyleSheet(
-            self.ui.donationsCharityQPushButton.styleSheet()
-        )
-        self.ui.donationsCoreTeamQPushButton.setStyleSheet(
-            self.ui.donationsCoreTeamQPushButton.styleSheet()
-        )
-
-    def show_charity(self) -> None:
-        """
-        Show the charity donation page.
-        """
-        self.ui.stackedWidget.setCurrentIndex(1)
-        self.ui.donationsCharityQPushButton.setProperty("Active", "true")
-        self.ui.donationsCoreTeamQPushButton.setProperty("Active", "")
-        self.__update_btns()
-
-    def show_core(self) -> None:
-        """
-        Show the core team donation page.
-        """
-        self.ui.stackedWidget.setCurrentIndex(0)
-        self.ui.donationsCharityQPushButton.setProperty("Active", "")
-        self.ui.donationsCoreTeamQPushButton.setProperty("Active", "true")
-        self.__update_btns()
-
     def core_crypto_changed(self) -> None:
         """
         Update the core team donation address and QR code when the selected cryptocurrency changes.
@@ -72,18 +42,27 @@ class Donation(Modal):
         crypto = self.ui.donationsCryptocurrencyQComboBox.currentText()
         addr = crypto_addresses[crypto]
         self.core_addr = addr
-        self.ui.donationsAddressQLabel.setText(f"{addr[:15]}...{addr[-10:]}")
+        self.ui.donationsAddressQLabel.setText(f"{addr[:11]}...{addr[-11:]}")
         put_qr_code(self.ui.donationsQRCodeQLabel, addr)
 
-    def charity_crypto_changed(self) -> None:
+    def copy_address(self) -> None:
         """
-        Update the charity donation address and QR code when the selected cryptocurrency changes.
+        Copy the address to clipboard, change button text to 'Copied' for 1 second, and then revert.
         """
-        crypto = self.ui.donationsCharityCryptocurrencyQComboBox.currentText()
-        addr = crypto_addresses[crypto]
-        self.charity_addr = addr
-        self.ui.donationsCharityAddressQLabel.setText(f"{addr[:15]}...{addr[-10:]}")
-        put_qr_code(self.ui.donationsCharityQRCodeQLabel, addr)
+        copy_to_clipboard(text=self.core_addr, show_toast=False, frame=self)
+        
+        self.ui.donationsAddressCopyQPushButton.setText("Copied")
+        self.ui.donationsAddressCopyQPushButton.setEnabled(False)
+
+        QTimer.singleShot(1000, self.reset_copy_button)
+
+    def reset_copy_button(self) -> None:
+        """
+        Reset the copy button text back to 'Copy' and enable it.
+        """
+        self.ui.donationsAddressCopyQPushButton.setText("Copy")
+        self.ui.donationsAddressCopyQPushButton.setEnabled(True)
+
 
     @staticmethod
     def show_donation_modal(main_window: QWidget, parent_frame: QWidget) -> None:
@@ -110,37 +89,19 @@ class Donation(Modal):
         frame.close_button.setCursor(QCursor(Qt.PointingHandCursor))
         donation_ui.closeModalButtonQFrame.layout().addWidget(frame.close_button)
 
-        donation_ui.donationsCoreTeamQPushButton.clicked.connect(frame.show_core)
-        donation_ui.donationsCharityQPushButton.clicked.connect(frame.show_charity)
 
         donation_ui.donationsCryptocurrencyQComboBox.addItems(sorted(crypto_addresses.keys()))
         donation_ui.donationsCryptocurrencyQComboBox.currentIndexChanged.connect(frame.core_crypto_changed)
         donation_ui.donationsCryptocurrencyQComboBox.setCurrentText("Ethereum")
 
-        donation_ui.donationsCharityCryptocurrencyQComboBox.addItems(["Bitcoin", "Ethereum"])
-        donation_ui.donationsCharityCryptocurrencyQComboBox.currentIndexChanged.connect(frame.charity_crypto_changed)
-        donation_ui.donationsCharityCryptocurrencyQComboBox.setCurrentText("Ethereum")
-
-        donation_ui.donationsCoreTeamQPushButton.click()
-        donation_ui.donationsCharityCaptionQLabel.setTextFormat(Qt.RichText)
-        donation_ui.donationsCharityCaptionQLabel.setText(
-            """Your contribution directly impacts those in need. Together, we can make a difference!"""
-        )
-
         donation_ui.donationsCaptionQLabel.setTextFormat(Qt.RichText)
         donation_ui.donationsCaptionQLabel.setText(
-            """Your donation helps us continue our work and grow. Every bit counts—thank you for your support!"""
+            """Your donation empowers our core team to continue our work and grow. Every contribution counts—thank you for your support!"""
         )
 
         donation_ui.donationsCaptionQLabel.setWordWrap(True)
-        donation_ui.donationsCharityCaptionQLabel.setWordWrap(True)
 
-        donation_ui.donationsAddressCopyQPushButton.clicked.connect(
-            lambda: copy_to_clipboard(text=frame.core_addr, show_toast=True, frame=frame)
-        )
-        donation_ui.donationsCharityAddressCopyQPushButton.clicked.connect(
-            lambda: copy_to_clipboard(frame.charity_addr, show_toast=True, frame=frame)
-        )
+        donation_ui.donationsAddressCopyQPushButton.clicked.connect(frame.copy_address)
 
         frame.layout().addWidget(main_widget)
         frame.re_adjust()

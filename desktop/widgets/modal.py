@@ -42,8 +42,8 @@ class Modal(QFrame):
         QVBoxLayout(self)
 
         self.margin: int = 15
-        self.width: int = 465
-        self.height: int = 565
+        self.width: int = 418
+        self.height: int = 508
 
         self.parent_frame = parent_frame
         self.overlay_frame: OverlayFrame = OverlayFrame(self.parent())

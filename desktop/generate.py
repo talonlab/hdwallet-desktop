@@ -91,7 +91,12 @@ class Generate:
 
         self.ui.generateSeedCardanoTypeQComboBox.addItems([i.title() for i in Cardano.TYPES.get_cardano_types()])
 
-        electrum_v2_mnemonic_types = [i.title() for i in ElectrumV2Mnemonic.mnemonic_types.keys()]
+        electrum_v2_mnemonic_types = [
+            '-'.join([part.capitalize() if idx == 0 else part.upper() for idx, part in enumerate(item.split('-'))])
+            for item in ElectrumV2Mnemonic.mnemonic_types.keys()
+        ]
+
+
         self.ui.generateSeedMnemonicTypeQComboBox.addItems(electrum_v2_mnemonic_types)
         self.ui.generateMnemonicTypeQComboBox.addItems(electrum_v2_mnemonic_types)
 

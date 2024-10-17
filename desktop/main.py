@@ -7,13 +7,13 @@
 # file COPYING or https://opensource.org/license/mit
 
 from PySide6.QtCore import (
-    QThreadPool, QRegularExpression, Slot, Qt, QSize
+    QThreadPool, QRegularExpression, Slot, Qt, QSize, QUrl
 )
 from PySide6.QtWidgets import (
     QSizePolicy, QWidget, QPushButton, QLineEdit, QPushButton
 )
 from PySide6.QtGui import (
-    QRegularExpressionValidator, QCursor
+    QRegularExpressionValidator, QCursor, QDesktopServices
 )
 from click.testing import CliRunner
 from hdwallet.cli.__main__ import cli_main
@@ -104,7 +104,7 @@ class MainApplication:
             QSizePolicy.Expanding, QSizePolicy.Expanding
         )
         self.ui.helpHDWalletQPushButton.clicked.connect(
-            lambda: os.startfile(resolve_path("desktop/data/hdwallet.pdf"))
+            lambda: QDesktopServices.openUrl(QUrl("https://talonlab.gitbook.io/hdwallet/manual/generate"))
         )
 
         inputs = [
@@ -129,6 +129,7 @@ class MainApplication:
 
         self.generate = Generate(self.app)
         self.dumps = Dumps(self.app)
+
 
     def _setup_tab_buttons(self):
         """

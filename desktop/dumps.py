@@ -149,7 +149,7 @@ class Dumps:
             "Electrum-V2": ["Electrum"],
             "Monero": ["Monero"]
         }
-
+        
         self.derivation_tab = OrderedDict()
 
         self.derivation_tab["Custom"] = {
@@ -207,29 +207,29 @@ class Dumps:
                 "StackWidget": "bipQStackedWidget",
                 "Entropy": "bipFromEntropyQStackedWidget",
                 "Mnemonic": "bipFromMnemonicQStackedWidget",
-                "Private key": "bipFromPrivateKeyQStackedWidget",
-                "Public key": "bipFromPublicKeyQStackedWidget",
+                "Private Key": "bipFromPrivateKeyQStackedWidget",
+                "Public Key": "bipFromPublicKeyQStackedWidget",
                 "Seed": "bipFromSeedQStackedWidget",
                 "WIF": "bipFromWIFQStackedWidget",
-                "XPrivate key": "bipFromXPrivateKeyQStackedWidget",
-                "XPublic key": "bipFromXPublicKeyQStackedWidget"
+                "XPrivate Key": "bipFromXPrivateKeyQStackedWidget",
+                "XPublic Key": "bipFromXPublicKeyQStackedWidget"
             },
             "cardanoPageQWidget": {
                 "StackWidget": "cardanoQStackedWidget",
                 "Entropy": "cardanoFromEntropyQStackedWidget",
                 "Mnemonic": "cardanoFromMnemonicQStackedWidget",
-                "Private key": "cardanoFromPrivateKeyQStackedWidget",
-                "Public key": "cardanoFromPublicKeyQStackedWidget",
+                "Private Key": "cardanoFromPrivateKeyQStackedWidget",
+                "Public Key": "cardanoFromPublicKeyQStackedWidget",
                 "Seed": "cardanoFromSeedQStackedWidget",
-                "XPrivate key": "cardanoFromXPrivateKeyQStackedWidget",
-                "XPublic key": "cardanoFromXPublicKeyQStackedWidget"
+                "XPrivate Key": "cardanoFromXPrivateKeyQStackedWidget",
+                "XPublic Key": "cardanoFromXPublicKeyQStackedWidget"
             },
             "electrumV1PageQWidget": {
                 "StackWidget": "electrumV1QStackedWidget",
                 "Entropy": "electrumV1FromEntropyQStackedWidget",
                 "Mnemonic": "electrumV1FromMnemonicQStackedWidget",
-                "Private key": "electrumV1FromPrivateKeyQStackedWidget",
-                "Public key": "electrumV1FromPublicKeyQStackedWidget",
+                "Private Key": "electrumV1FromPrivateKeyQStackedWidget",
+                "Public Key": "electrumV1FromPublicKeyQStackedWidget",
                 "Seed": "electrumV1FromSeedQStackedWidget",
                 "WIF": "electrumV1FromWIFQStackedWidget",
             },
@@ -243,10 +243,10 @@ class Dumps:
                 "StackWidget": "moneroQStackedWidget",
                 "Entropy": "moneroFromEntropyQStackedWidget",
                 "Mnemonic": "moneroFromMnemonicQStackedWidget",
-                "Private key": "moneroFromPrivateKeyQStackedWidget",
+                "Private Key": "moneroFromPrivateKeyQStackedWidget",
                 "Seed": "moneroFromSeedQStackedWidget",
-                "Spend private key": "moneroFromSpendPrivateKeyQStackedWidget",
-                "Watch only": "moneroFromWatchOnlyQStackedWidget",
+                "Spend Private Key": "moneroFromSpendPrivateKeyQStackedWidget",
+                "Watch Only": "moneroFromWatchOnlyQStackedWidget",
             }
         }
 
@@ -370,12 +370,18 @@ class Dumps:
 
         electrum_v2_modes = [i.title() for i in ELECTRUM_V2_MODES.get_modes()]
 
-        self.ui.electrumV2FromEntropyMnemonicTypeQComboBox.addItems([i.title() for i in ElectrumV2Mnemonic.mnemonic_types.keys()])
+        self.ui.electrumV2FromEntropyMnemonicTypeQComboBox.addItems(
+            '-'.join([part.capitalize() if idx == 0 else part.upper() for idx, part in enumerate(item.split('-'))])
+            for item in ElectrumV2Mnemonic.mnemonic_types.keys()
+        )
         self.ui.electrumV2FromEntropyModeQComboBox.addItems(electrum_v2_modes)
         self.ui.electrumV2FromEntropyMnemonicTypeQComboBox.setCurrentIndex(0)
         self.ui.electrumV2FromEntropyModeQComboBox.setCurrentIndex(0)
 
-        self.ui.electrumV2FromMnemonicMnemonicTypeQComboBox.addItems([i.title() for i in ElectrumV2Mnemonic.mnemonic_types.keys()])
+        self.ui.electrumV2FromMnemonicMnemonicTypeQComboBox.addItems(
+            '-'.join([part.capitalize() if idx == 0 else part.upper() for idx, part in enumerate(item.split('-'))])
+            for item in ElectrumV2Mnemonic.mnemonic_types.keys()
+        )
         self.ui.electrumV2FromMnemonicModeQComboBox.addItems(electrum_v2_modes)
         self.ui.electrumV2FromMnemonicMnemonicTypeQComboBox.setCurrentIndex(0)
         self.ui.electrumV2FromMnemonicModeQComboBox.setCurrentIndex(0)

@@ -568,7 +568,6 @@ QRadioButton::indicator:checked {
     border-radius: 0;
 }
 
-#donationsCharityCryptocurrencyQLabel,
 #donationsCryptocurrencyQLabel{
     color: white;
     font: 12pt "HDWallet";
@@ -578,8 +577,7 @@ QRadioButton::indicator:checked {
     border-radius: 0;
 }
 
-#donationsCharityCaptionQLabel,
-#donationsCharityAddressQLabel,
+
 #donationsCaptionQLabel,
 #donationsAddressQLabel{
     color: white;
@@ -588,6 +586,7 @@ QRadioButton::indicator:checked {
     background-color: rgb(16, 21, 27);
     border: none;
     border-radius: 0;
+    text-transform: none;
 }
 
 #donationsCharityAddressQLabel,
