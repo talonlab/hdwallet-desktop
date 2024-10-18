@@ -39,11 +39,19 @@ class Donation(Modal):
         """
         Update the core team donation address and QR code when the selected cryptocurrency changes.
         """
-        crypto = self.ui.donationsCryptocurrencyQComboBox.currentText()
-        addr = crypto_addresses[crypto]
+        for crypto in crypto_addresses:
+            self.ui.donationsCryptocurrencyQComboBox.addItem(crypto["cryptocurrency"])
+
+        selected_crypto = self.ui.donationsCryptocurrencyQComboBox.currentText()
+        crypto_details = next((item for item in crypto_addresses if item["cryptocurrency"] == selected_crypto), None)
+
+        addr = crypto_details["address"]
         self.core_addr = addr
-        self.ui.donationsAddressQLabel.setText(f"{addr[:11]}...{addr[-11:]}")
+
+        self.ui.donationsAddressQLabel.setText(f"{addr[:10]}...{addr[-10:]}")
         put_qr_code(self.ui.donationsQRCodeQLabel, addr)
+        
+
 
     def copy_address(self) -> None:
         """
@@ -90,7 +98,9 @@ class Donation(Modal):
         donation_ui.closeModalButtonQFrame.layout().addWidget(frame.close_button)
 
 
-        donation_ui.donationsCryptocurrencyQComboBox.addItems(sorted(crypto_addresses.keys()))
+        donation_ui.donationsCryptocurrencyQComboBox.addItems(
+            sorted([crypto['cryptocurrency'] for crypto in crypto_addresses])
+        )
         donation_ui.donationsCryptocurrencyQComboBox.currentIndexChanged.connect(frame.core_crypto_changed)
         donation_ui.donationsCryptocurrencyQComboBox.setCurrentText("Ethereum")
 
