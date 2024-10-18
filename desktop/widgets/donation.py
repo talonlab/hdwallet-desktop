@@ -49,7 +49,7 @@ class Donation(Modal):
         """
         Copy the address to clipboard, change button text to 'Copied' for 1 second, and then revert.
         """
-        copy_to_clipboard(text=self.core_addr, show_toast=False, frame=self)
+        copy_to_clipboard(text=self.core_addr, frame=self)
         
         self.ui.donationsAddressCopyQPushButton.setText("Copied")
         self.ui.donationsAddressCopyQPushButton.setEnabled(False)
