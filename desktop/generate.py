@@ -45,7 +45,9 @@ from hdwallet.seeds import (
     SEEDS
 )
 
-from desktop.utils import update_border_class, clear_borders_class
+from desktop.utils import (
+    update_border_class, clear_borders_class, normalized_mnemonic_types
+)
 
 class Generate:
     def __init__(self, app):
@@ -91,10 +93,7 @@ class Generate:
 
         self.ui.generateSeedCardanoTypeQComboBox.addItems([i.title() for i in Cardano.TYPES.get_cardano_types()])
 
-        electrum_v2_mnemonic_types = [
-            '-'.join([part.capitalize() if idx == 0 else part.upper() for idx, part in enumerate(item.split('-'))])
-            for item in ElectrumV2Mnemonic.mnemonic_types.keys()
-        ]
+        electrum_v2_mnemonic_types = normalized_mnemonic_types()  
 
 
         self.ui.generateSeedMnemonicTypeQComboBox.addItems(electrum_v2_mnemonic_types)

@@ -6,10 +6,12 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit
 
-import os
-
-import qrcode
+from functools import lru_cache
 from PIL.ImageQt import ImageQt, Image
+
+import os
+import qrcode
+
 from PySide6.QtSvg import QSvgRenderer
 
 from PySide6.QtWidgets import (
@@ -18,6 +20,8 @@ from PySide6.QtWidgets import (
 from PySide6.QtSvgWidgets import QSvgWidget
 from PySide6.QtCore import Qt, QSize
 from PySide6.QtGui import QPixmap, QPainter
+
+from hdwallet.mnemonics import ElectrumV2Mnemonic
 
 
 def clear_layout(layout: QLayout, delete: bool = True) -> None:
@@ -150,3 +154,12 @@ def clear_borders_class(group_boxes: list):
         widget.setProperty("class", "")
         widget.style().unpolish(widget)
         widget.style().polish(widget)
+
+@lru_cache(maxsize=1)
+def normalized_mnemonic_types() -> list:
+    formatted_items = []
+    for item in ElectrumV2Mnemonic.mnemonic_types.keys():
+        parts = item.split('-')
+        formatted_item = '-'.join([part.capitalize() if idx == 0 else part.upper() for idx, part in enumerate(parts)])
+        formatted_items.append(formatted_item)
+    return formatted_items
