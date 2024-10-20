@@ -548,12 +548,12 @@ class Dumps:
     def _dumps(self, save=False):
         save_filepath = None
         clear_borders_class(self.errboxes)
-        if save:
-            save_filepath = self._file_locator(self.ui.dumpsFormatQComboBox.currentText())
-            if save_filepath == '': return None
+        self.error_occurred = False
 
         def _error(e):
             self.app.println(f"ERROR: {e}")
+            self.error_occurred = True
+            
             if isinstance(e, DerivationError):  
                 update_border_class(self.ui.derivationQGroupBox, "hdwError")
             elif isinstance(e, ExportFormatError):  
@@ -564,6 +564,11 @@ class Dumps:
         def _task_ended(): 
             self.ui.dumpsGenerateQPushButton.setEnabled(True)
             self._update_terminal_state(False, False)
+
+            if save and not self.error_occurred:
+                save_filepath = self._file_locator(self.ui.dumpsFormatQComboBox.currentText())
+                if save_filepath == '':
+                    return None 
 
         self.ui.dumpsGenerateQPushButton.setEnabled(False)
 
