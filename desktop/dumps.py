@@ -413,6 +413,9 @@ class Dumps:
                 )
         )
 
+        self.ui.dumpsExcludeOrIncludeQLineEdit.setPlaceholderText(
+            "eg. at:path,address" if self.ui.dumpsFormatQComboBox.currentText == "CSV" else "eg. root,indexes"
+        )
 
         cardano_and_address_type = [
             (
