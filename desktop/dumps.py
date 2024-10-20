@@ -414,7 +414,13 @@ class Dumps:
         )
 
         self.ui.dumpsExcludeOrIncludeQLineEdit.setPlaceholderText(
-            "eg. at:path,address" if self.ui.dumpsFormatQComboBox.currentText == "CSV" else "eg. root,indexes"
+            "eg. root,indexes" if self.ui.dumpsFormatQComboBox.currentText() == "JSON" else "eg. at:path,address"
+        )
+
+        self.ui.dumpsFormatQComboBox.currentTextChanged.connect(
+            lambda text: self.ui.dumpsExcludeOrIncludeQLineEdit.setPlaceholderText(
+                "eg. root,indexes" if text == "JSON" else "eg. at:path,address"
+            )
         )
 
         cardano_and_address_type = [
@@ -560,7 +566,7 @@ class Dumps:
                 update_border_class(self.ui.dumpsFormatKeysContainerQGroupBox, "hdwError")
             else:
                 update_border_class(self.ui.dumpsStackQGroupBox, "hdwError")
-        
+
         def _task_ended(): 
             self.ui.dumpsGenerateQPushButton.setEnabled(True)
             self._update_terminal_state(False, False)
