@@ -103,7 +103,7 @@ class Application(QMainWindow):
             45
         )
     
-        QFontDatabase.addApplicationFont(resolve_path("desktop/ui/font/HDWallet-Regular(1).otf"))
+        QFontDatabase.addApplicationFont(resolve_path("desktop/ui/font/HDWallet.ttf"))
 
 
         self.resize_evt = ResizeEventFilter()
