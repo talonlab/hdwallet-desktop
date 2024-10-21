@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'donationsxsXOyq.ui'
+## Form generated from reading UI file 'donationsugbhbe.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -157,6 +157,8 @@ class Ui_Form(object):
         self.donationsCoreTeamAddressQFrameHLayout.setContentsMargins(0, 0, 0, 0)
         self.donationsAddressQLabel = QLabel(self.donationsCoreTeamAddressQFrame)
         self.donationsAddressQLabel.setObjectName(u"donationsAddressQLabel")
+        self.donationsAddressQLabel.setAlignment(Qt.AlignCenter)
+        self.donationsAddressQLabel.setIndent(0)
 
         self.donationsCoreTeamAddressQFrameHLayout.addWidget(self.donationsAddressQLabel)
 

@@ -48,7 +48,7 @@ class Donation(Modal):
         addr = crypto_details["address"]
         self.core_addr = addr
 
-        self.ui.donationsAddressQLabel.setText(f"{addr[:10]}...{addr[-10:]}")
+        self.ui.donationsAddressQLabel.setText(f"{addr[:10]}...{addr[-9:]}")
         put_qr_code(self.ui.donationsQRCodeQLabel, addr)
         
 
@@ -88,7 +88,7 @@ class Donation(Modal):
         donation_ui.setupUi(main_widget)
         frame.ui = donation_ui
 
-        close_icon = QIcon(resolve_path("desktop/ui/images/svg/icon_close.svg"))
+        close_icon = QIcon(resolve_path("desktop/ui/images/svg/close.svg"))
 
         frame.close_button = QPushButton(None)
         frame.close_button.setIcon(close_icon)

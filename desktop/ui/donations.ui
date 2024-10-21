@@ -377,6 +377,12 @@
                  <property name="text">
                   <string>Address</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="indent">
+                  <number>0</number>
+                 </property>
                 </widget>
                </item>
                <item>
