@@ -865,7 +865,7 @@ class Dumps:
                 )
             )
         elif dump_from == "private key":
-            hd_kwargs["public_key_type"] = self.ui.bipFromMnemonicPublicKeyTypeQComboBox.currentText().lower()
+            hd_kwargs["public_key_type"] = self.ui.bipFromPrivateKeyPublicKeyTypeQComboBox.currentText().lower()
             return HDWallet(**hd_kwargs).from_private_key(
                 private_key=self._validate_and_get("Private Key", self.ui.bipFromPrivateKeyQLineEdit)
             )
