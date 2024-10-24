@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletJHYWSX.ui'
+## Form generated from reading UI file 'hdwalletXnyhVj.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -28,7 +28,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1300, 690)
+        MainWindow.resize(1300, 598)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -627,14 +627,6 @@ class Ui_MainWindow(object):
 
 
         self.generatePageQStackedWidgetVLayout.addWidget(self.generateLengthAndPassphraseQGroupBox)
-
-        self.generatePageQStackedWidgetVBSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.generatePageQStackedWidgetVLayout.addItem(self.generatePageQStackedWidgetVBSpacer)
-
-        self.generatePageQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.generatePageQStackedWidgetVLayout.addItem(self.generatePageQStackedWidgetVSpacer)
 
         self.hdwalletQStackedWidget.addWidget(self.generatePageQStackedWidget)
         self.dumpsPageQStackedWidget = QWidget()
@@ -6980,21 +6972,17 @@ class Ui_MainWindow(object):
 
         self.dumpsPageQStackedWidgetVLayout.addWidget(self.dumpsFormatKeysContainerQGroupBox)
 
-        self.dumpsStackQGroupBoxVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.dumpsPageQStackedWidgetVLayout.addItem(self.dumpsStackQGroupBoxVSpacer)
-
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.dumpsPageQStackedWidgetVLayout.addItem(self.verticalSpacer)
 
-        self.hdWalletContainerQFrameVSpacerB = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.dumpsPageQStackedWidgetVLayout.addItem(self.hdWalletContainerQFrameVSpacerB)
-
         self.hdwalletQStackedWidget.addWidget(self.dumpsPageQStackedWidget)
 
         self.hdwalletMainQFrameVLayout.addWidget(self.hdwalletQStackedWidget)
+
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.hdwalletMainQFrameVLayout.addItem(self.verticalSpacer_2)
 
         self.footerContainerQFrame = QFrame(self.hdwalletMainQFrame)
         self.footerContainerQFrame.setObjectName(u"footerContainerQFrame")
