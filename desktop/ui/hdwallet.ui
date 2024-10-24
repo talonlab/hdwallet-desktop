@@ -178,7 +178,7 @@
           <item>
            <widget class="QStackedWidget" name="hdwalletQStackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="generatePageQStackedWidget">
              <layout class="QVBoxLayout" name="generatePageQStackedWidgetVLayout">
@@ -1790,7 +1790,7 @@
                     <number>0</number>
                    </property>
                    <property name="currentIndex">
-                    <number>4</number>
+                    <number>2</number>
                    </property>
                    <widget class="QWidget" name="bipsPageQWidget">
                     <layout class="QVBoxLayout" name="bipsPageQWidgetVLayout">
@@ -1812,7 +1812,7 @@
                      <item>
                       <widget class="QStackedWidget" name="bipQStackedWidget">
                        <property name="currentIndex">
-                        <number>4</number>
+                        <number>5</number>
                        </property>
                        <widget class="QWidget" name="bipFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="bipFromEntropyQStackedWidgetVLayout">
@@ -3163,7 +3163,7 @@
                               </layout>
                              </widget>
                             </item>
-                            <item>
+                            <item alignment="Qt::AlignBottom">
                              <widget class="QFrame" name="bipFromXPrivateKeyStrictCheckBoxContainerQFrame">
                               <layout class="QVBoxLayout" name="bipFromXPrivateKeyStrictCheckBoxContainerQFrameVlayout">
                                <property name="spacing">
@@ -3181,20 +3181,7 @@
                                <property name="bottomMargin">
                                 <number>0</number>
                                </property>
-                               <item>
-                                <spacer name="bipFromXPrivateKeyStrictCheckBoxContainerQFrameVSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Vertical</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>20</width>
-                                   <height>40</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
-                               <item>
+                               <item alignment="Qt::AlignBottom">
                                 <widget class="QCheckBox" name="bipFromXPrivateKeyStrictQCheckBox">
                                  <property name="cursor">
                                   <cursorShape>PointingHandCursor</cursorShape>
@@ -3421,7 +3408,7 @@
                               </layout>
                              </widget>
                             </item>
-                            <item>
+                            <item alignment="Qt::AlignBottom">
                              <widget class="QFrame" name="bipFromXPublicKeyStrictCheckBoxContainerQFrame">
                               <layout class="QVBoxLayout" name="bipFromXPublicKeyStrictCheckBoxContainerQFrameVLayout">
                                <property name="spacing">
@@ -3439,19 +3426,6 @@
                                <property name="bottomMargin">
                                 <number>0</number>
                                </property>
-                               <item>
-                                <spacer name="bipFromXPublicKeyStrictCheckBoxContainerQFrameVSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Vertical</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>20</width>
-                                   <height>40</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
                                <item>
                                 <widget class="QCheckBox" name="bipFromXPublicKeyStrictQCheckBox">
                                  <property name="cursor">
@@ -3685,7 +3659,7 @@
                             <property name="bottomMargin">
                              <number>0</number>
                             </property>
-                            <item>
+                            <item alignment="Qt::AlignBottom">
                              <widget class="QFrame" name="bipFromWIFBIP38PassphraseChackBoxContainerQFrame">
                               <layout class="QVBoxLayout" name="bipFromWIFBIP38PassphraseChackBoxContainerQFrameVLayout">
                                <property name="spacing">
@@ -3703,19 +3677,6 @@
                                <property name="bottomMargin">
                                 <number>0</number>
                                </property>
-                               <item>
-                                <spacer name="bipFromWIFBIP38PassphraseChackBoxContainerQFrameVSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Vertical</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>20</width>
-                                   <height>40</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
                                <item>
                                 <widget class="QCheckBox" name="bipFromWIFBIP38PassphraseQCheckBox">
                                  <property name="cursor">
@@ -6263,7 +6224,7 @@
                               </layout>
                              </widget>
                             </item>
-                            <item>
+                            <item alignment="Qt::AlignBottom">
                              <widget class="QFrame" name="cardanoFromXPrivateKeyStrictQFrame">
                               <layout class="QVBoxLayout" name="cardanoFromXPrivateKeyStrictQFrameVLayout">
                                <property name="spacing">
@@ -6281,19 +6242,6 @@
                                <property name="bottomMargin">
                                 <number>0</number>
                                </property>
-                               <item>
-                                <spacer name="cardanoFromXPrivateKeyStrictQFrameVSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Vertical</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>20</width>
-                                   <height>40</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
                                <item>
                                 <widget class="QCheckBox" name="cardanoFromXPrivateKeyStrictQCheckBox">
                                  <property name="cursor">
@@ -6714,7 +6662,7 @@
                               </layout>
                              </widget>
                             </item>
-                            <item>
+                            <item alignment="Qt::AlignBottom">
                              <widget class="QFrame" name="cardanoFromXPublicKeyStrictQFrame">
                               <layout class="QVBoxLayout" name="cardanoFromXPublicKeyStrictQFrameVLayout">
                                <property name="spacing">
@@ -6732,19 +6680,6 @@
                                <property name="bottomMargin">
                                 <number>0</number>
                                </property>
-                               <item>
-                                <spacer name="cardanoFromXPublicKeyStrictQFrameVSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Vertical</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>20</width>
-                                   <height>40</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
                                <item>
                                 <widget class="QCheckBox" name="cardanoFromXPublicKeyStrictQCheckBox">
                                  <property name="cursor">
@@ -9086,7 +9021,7 @@
                             <property name="bottomMargin">
                              <number>0</number>
                             </property>
-                            <item>
+                            <item alignment="Qt::AlignBottom">
                              <widget class="QFrame" name="electrumV1FromWIFBIP38PassphraseCheckBoxQFrame">
                               <layout class="QVBoxLayout" name="electrumV1FromWIFBIP38PassphraseCheckBoxQFrameVLayout">
                                <property name="spacing">
@@ -9104,19 +9039,6 @@
                                <property name="bottomMargin">
                                 <number>0</number>
                                </property>
-                               <item>
-                                <spacer name="electrumV1FromWIFBIP38PassphraseCheckBoxQFrameVSpacer">
-                                 <property name="orientation">
-                                  <enum>Qt::Vertical</enum>
-                                 </property>
-                                 <property name="sizeHint" stdset="0">
-                                  <size>
-                                   <width>20</width>
-                                   <height>40</height>
-                                  </size>
-                                 </property>
-                                </spacer>
-                               </item>
                                <item>
                                 <widget class="QCheckBox" name="electrumV1FromWIFBIP38PassphraseQCheckBox">
                                  <property name="cursor">
@@ -16007,6 +15929,19 @@
               </item>
               <item>
                <spacer name="dumpsStackQGroupBoxVSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <spacer name="verticalSpacer">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletLvxjon.ui'
+## Form generated from reading UI file 'hdwalletjqOevF.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -1420,18 +1420,14 @@ class Ui_MainWindow(object):
         self.bipFromXPrivateKeyStrictCheckBoxContainerQFrameVlayout.setSpacing(0)
         self.bipFromXPrivateKeyStrictCheckBoxContainerQFrameVlayout.setObjectName(u"bipFromXPrivateKeyStrictCheckBoxContainerQFrameVlayout")
         self.bipFromXPrivateKeyStrictCheckBoxContainerQFrameVlayout.setContentsMargins(0, 0, 0, 0)
-        self.bipFromXPrivateKeyStrictCheckBoxContainerQFrameVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.bipFromXPrivateKeyStrictCheckBoxContainerQFrameVlayout.addItem(self.bipFromXPrivateKeyStrictCheckBoxContainerQFrameVSpacer)
-
         self.bipFromXPrivateKeyStrictQCheckBox = QCheckBox(self.bipFromXPrivateKeyStrictCheckBoxContainerQFrame)
         self.bipFromXPrivateKeyStrictQCheckBox.setObjectName(u"bipFromXPrivateKeyStrictQCheckBox")
         self.bipFromXPrivateKeyStrictQCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
 
-        self.bipFromXPrivateKeyStrictCheckBoxContainerQFrameVlayout.addWidget(self.bipFromXPrivateKeyStrictQCheckBox)
+        self.bipFromXPrivateKeyStrictCheckBoxContainerQFrameVlayout.addWidget(self.bipFromXPrivateKeyStrictQCheckBox, 0, Qt.AlignBottom)
 
 
-        self.bipFromXPrivateKeyAndPublicKeyTypeQFrameHLayout.addWidget(self.bipFromXPrivateKeyStrictCheckBoxContainerQFrame)
+        self.bipFromXPrivateKeyAndPublicKeyTypeQFrameHLayout.addWidget(self.bipFromXPrivateKeyStrictCheckBoxContainerQFrame, 0, Qt.AlignBottom)
 
 
         self.bipFromXPrivateKeyQStackedWidgetVLayout.addWidget(self.bipFromXPrivateKeyAndPublicKeyTypeQFrame)
@@ -1532,10 +1528,6 @@ class Ui_MainWindow(object):
         self.bipFromXPublicKeyStrictCheckBoxContainerQFrameVLayout.setSpacing(0)
         self.bipFromXPublicKeyStrictCheckBoxContainerQFrameVLayout.setObjectName(u"bipFromXPublicKeyStrictCheckBoxContainerQFrameVLayout")
         self.bipFromXPublicKeyStrictCheckBoxContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.bipFromXPublicKeyStrictCheckBoxContainerQFrameVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.bipFromXPublicKeyStrictCheckBoxContainerQFrameVLayout.addItem(self.bipFromXPublicKeyStrictCheckBoxContainerQFrameVSpacer)
-
         self.bipFromXPublicKeyStrictQCheckBox = QCheckBox(self.bipFromXPublicKeyStrictCheckBoxContainerQFrame)
         self.bipFromXPublicKeyStrictQCheckBox.setObjectName(u"bipFromXPublicKeyStrictQCheckBox")
         self.bipFromXPublicKeyStrictQCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
@@ -1543,7 +1535,7 @@ class Ui_MainWindow(object):
         self.bipFromXPublicKeyStrictCheckBoxContainerQFrameVLayout.addWidget(self.bipFromXPublicKeyStrictQCheckBox)
 
 
-        self.bipFromXPublicKeyAndPublicKeyTypeContainerQFrameHLayout.addWidget(self.bipFromXPublicKeyStrictCheckBoxContainerQFrame)
+        self.bipFromXPublicKeyAndPublicKeyTypeContainerQFrameHLayout.addWidget(self.bipFromXPublicKeyStrictCheckBoxContainerQFrame, 0, Qt.AlignBottom)
 
 
         self.bipFromXPublicKeyQStackedWidgetVLayout.addWidget(self.bipFromXPublicKeyAndPublicKeyTypeContainerQFrame)
@@ -1645,10 +1637,6 @@ class Ui_MainWindow(object):
         self.bipFromWIFBIP38PassphraseChackBoxContainerQFrameVLayout.setSpacing(0)
         self.bipFromWIFBIP38PassphraseChackBoxContainerQFrameVLayout.setObjectName(u"bipFromWIFBIP38PassphraseChackBoxContainerQFrameVLayout")
         self.bipFromWIFBIP38PassphraseChackBoxContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.bipFromWIFBIP38PassphraseChackBoxContainerQFrameVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.bipFromWIFBIP38PassphraseChackBoxContainerQFrameVLayout.addItem(self.bipFromWIFBIP38PassphraseChackBoxContainerQFrameVSpacer)
-
         self.bipFromWIFBIP38PassphraseQCheckBox = QCheckBox(self.bipFromWIFBIP38PassphraseChackBoxContainerQFrame)
         self.bipFromWIFBIP38PassphraseQCheckBox.setObjectName(u"bipFromWIFBIP38PassphraseQCheckBox")
         self.bipFromWIFBIP38PassphraseQCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
@@ -1656,7 +1644,7 @@ class Ui_MainWindow(object):
         self.bipFromWIFBIP38PassphraseChackBoxContainerQFrameVLayout.addWidget(self.bipFromWIFBIP38PassphraseQCheckBox)
 
 
-        self.bipFromWIFPublicKeyAndBIP38PassphraseContainerQFrameHLayout.addWidget(self.bipFromWIFBIP38PassphraseChackBoxContainerQFrame)
+        self.bipFromWIFPublicKeyAndBIP38PassphraseContainerQFrameHLayout.addWidget(self.bipFromWIFBIP38PassphraseChackBoxContainerQFrame, 0, Qt.AlignBottom)
 
         self.bipFromWIFBIP38PassphraseContainerQFrame = QFrame(self.bipFromWIFPublicKeyAndBIP38PassphraseContainerQFrame)
         self.bipFromWIFBIP38PassphraseContainerQFrame.setObjectName(u"bipFromWIFBIP38PassphraseContainerQFrame")
@@ -2756,10 +2744,6 @@ class Ui_MainWindow(object):
         self.cardanoFromXPrivateKeyStrictQFrameVLayout.setSpacing(0)
         self.cardanoFromXPrivateKeyStrictQFrameVLayout.setObjectName(u"cardanoFromXPrivateKeyStrictQFrameVLayout")
         self.cardanoFromXPrivateKeyStrictQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.cardanoFromXPrivateKeyStrictQFrameVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.cardanoFromXPrivateKeyStrictQFrameVLayout.addItem(self.cardanoFromXPrivateKeyStrictQFrameVSpacer)
-
         self.cardanoFromXPrivateKeyStrictQCheckBox = QCheckBox(self.cardanoFromXPrivateKeyStrictQFrame)
         self.cardanoFromXPrivateKeyStrictQCheckBox.setObjectName(u"cardanoFromXPrivateKeyStrictQCheckBox")
         self.cardanoFromXPrivateKeyStrictQCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
@@ -2767,7 +2751,7 @@ class Ui_MainWindow(object):
         self.cardanoFromXPrivateKeyStrictQFrameVLayout.addWidget(self.cardanoFromXPrivateKeyStrictQCheckBox)
 
 
-        self.cardanoFromXPrivateKeyStrictXPrivateKeyContainerQFrameHLayout.addWidget(self.cardanoFromXPrivateKeyStrictQFrame)
+        self.cardanoFromXPrivateKeyStrictXPrivateKeyContainerQFrameHLayout.addWidget(self.cardanoFromXPrivateKeyStrictQFrame, 0, Qt.AlignBottom)
 
         self.cardanoFromXPrivateKeyCardanoTypeContainerQFrame = QFrame(self.cardanoFromXPrivateKeyStrictXPrivateKeyContainerQFrame)
         self.cardanoFromXPrivateKeyCardanoTypeContainerQFrame.setObjectName(u"cardanoFromXPrivateKeyCardanoTypeContainerQFrame")
@@ -2944,10 +2928,6 @@ class Ui_MainWindow(object):
         self.cardanoFromXPublicKeyStrictQFrameVLayout.setSpacing(0)
         self.cardanoFromXPublicKeyStrictQFrameVLayout.setObjectName(u"cardanoFromXPublicKeyStrictQFrameVLayout")
         self.cardanoFromXPublicKeyStrictQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.cardanoFromXPublicKeyStrictQFrameVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.cardanoFromXPublicKeyStrictQFrameVLayout.addItem(self.cardanoFromXPublicKeyStrictQFrameVSpacer)
-
         self.cardanoFromXPublicKeyStrictQCheckBox = QCheckBox(self.cardanoFromXPublicKeyStrictQFrame)
         self.cardanoFromXPublicKeyStrictQCheckBox.setObjectName(u"cardanoFromXPublicKeyStrictQCheckBox")
         self.cardanoFromXPublicKeyStrictQCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
@@ -2955,7 +2935,7 @@ class Ui_MainWindow(object):
         self.cardanoFromXPublicKeyStrictQFrameVLayout.addWidget(self.cardanoFromXPublicKeyStrictQCheckBox)
 
 
-        self.cardanoFromXPublicKeyStrictXPublicKeyContainerQFrameHLayout.addWidget(self.cardanoFromXPublicKeyStrictQFrame)
+        self.cardanoFromXPublicKeyStrictXPublicKeyContainerQFrameHLayout.addWidget(self.cardanoFromXPublicKeyStrictQFrame, 0, Qt.AlignBottom)
 
         self.cardanoFromXPublicKeyCardanoTypeContainerQFrame = QFrame(self.cardanoFromXPublicKeyStrictXPublicKeyContainerQFrame)
         self.cardanoFromXPublicKeyCardanoTypeContainerQFrame.setObjectName(u"cardanoFromXPublicKeyCardanoTypeContainerQFrame")
@@ -3941,10 +3921,6 @@ class Ui_MainWindow(object):
         self.electrumV1FromWIFBIP38PassphraseCheckBoxQFrameVLayout.setSpacing(0)
         self.electrumV1FromWIFBIP38PassphraseCheckBoxQFrameVLayout.setObjectName(u"electrumV1FromWIFBIP38PassphraseCheckBoxQFrameVLayout")
         self.electrumV1FromWIFBIP38PassphraseCheckBoxQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.electrumV1FromWIFBIP38PassphraseCheckBoxQFrameVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.electrumV1FromWIFBIP38PassphraseCheckBoxQFrameVLayout.addItem(self.electrumV1FromWIFBIP38PassphraseCheckBoxQFrameVSpacer)
-
         self.electrumV1FromWIFBIP38PassphraseQCheckBox = QCheckBox(self.electrumV1FromWIFBIP38PassphraseCheckBoxQFrame)
         self.electrumV1FromWIFBIP38PassphraseQCheckBox.setObjectName(u"electrumV1FromWIFBIP38PassphraseQCheckBox")
         self.electrumV1FromWIFBIP38PassphraseQCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
@@ -3952,7 +3928,7 @@ class Ui_MainWindow(object):
         self.electrumV1FromWIFBIP38PassphraseCheckBoxQFrameVLayout.addWidget(self.electrumV1FromWIFBIP38PassphraseQCheckBox)
 
 
-        self.electrumV1FromWIFBIP38AndPublicKeyTypeContainerQFrameHLayout.addWidget(self.electrumV1FromWIFBIP38PassphraseCheckBoxQFrame)
+        self.electrumV1FromWIFBIP38AndPublicKeyTypeContainerQFrameHLayout.addWidget(self.electrumV1FromWIFBIP38PassphraseCheckBoxQFrame, 0, Qt.AlignBottom)
 
         self.electrumV1FromWIFBIP38PassphraseContainerQFrame = QFrame(self.electrumV1FromWIFBIP38AndPublicKeyTypeContainerQFrame)
         self.electrumV1FromWIFBIP38PassphraseContainerQFrame.setObjectName(u"electrumV1FromWIFBIP38PassphraseContainerQFrame")
@@ -7004,6 +6980,10 @@ class Ui_MainWindow(object):
 
         self.dumpsPageQStackedWidgetVLayout.addItem(self.dumpsStackQGroupBoxVSpacer)
 
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.dumpsPageQStackedWidgetVLayout.addItem(self.verticalSpacer)
+
         self.hdWalletContainerQFrameVSpacerB = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.dumpsPageQStackedWidgetVLayout.addItem(self.hdWalletContainerQFrameVSpacerB)
@@ -7192,9 +7172,9 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.hdwalletQStackedWidget.setCurrentIndex(0)
-        self.hdQStackedWidget.setCurrentIndex(4)
-        self.bipQStackedWidget.setCurrentIndex(4)
+        self.hdwalletQStackedWidget.setCurrentIndex(1)
+        self.hdQStackedWidget.setCurrentIndex(2)
+        self.bipQStackedWidget.setCurrentIndex(5)
         self.cardanoQStackedWidget.setCurrentIndex(4)
         self.electrumV1QStackedWidget.setCurrentIndex(3)
         self.electrumV2QStackedWidget.setCurrentIndex(2)
