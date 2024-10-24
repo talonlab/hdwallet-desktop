@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletmBwSiq.ui'
+## Form generated from reading UI file 'hdwalletLvxjon.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -28,7 +28,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1300, 591)
+        MainWindow.resize(1300, 608)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -54,7 +54,7 @@ class Ui_MainWindow(object):
         self.hdWalletHeaderContainerQFrameHLayout = QHBoxLayout(self.hdWalletHeaderContainerQFrame)
         self.hdWalletHeaderContainerQFrameHLayout.setSpacing(15)
         self.hdWalletHeaderContainerQFrameHLayout.setObjectName(u"hdWalletHeaderContainerQFrameHLayout")
-        self.hdWalletHeaderContainerQFrameHLayout.setContentsMargins(15, 10, 15, 10)
+        self.hdWalletHeaderContainerQFrameHLayout.setContentsMargins(15, 15, 15, 15)
         self.hdwalletLogoHLayout = QHBoxLayout()
         self.hdwalletLogoHLayout.setObjectName(u"hdwalletLogoHLayout")
 
@@ -99,7 +99,7 @@ class Ui_MainWindow(object):
         self.hdwalletMainQFrameVLayout = QVBoxLayout(self.hdwalletMainQFrame)
         self.hdwalletMainQFrameVLayout.setSpacing(0)
         self.hdwalletMainQFrameVLayout.setObjectName(u"hdwalletMainQFrameVLayout")
-        self.hdwalletMainQFrameVLayout.setContentsMargins(15, 0, 15, 10)
+        self.hdwalletMainQFrameVLayout.setContentsMargins(15, 0, 15, 15)
         self.hdwalletQStackedWidget = QStackedWidget(self.hdwalletMainQFrame)
         self.hdwalletQStackedWidget.setObjectName(u"hdwalletQStackedWidget")
         self.generatePageQStackedWidget = QWidget()
@@ -7046,11 +7046,21 @@ class Ui_MainWindow(object):
 
         self.footerContainerQFrameHLayout.addItem(self.footerContainerQFrameHSpacer)
 
-        self.helpHDWalletQPushButton = QPushButton(self.footerContainerQFrame)
+        self.linksHelpContainerQFrame = QFrame(self.footerContainerQFrame)
+        self.linksHelpContainerQFrame.setObjectName(u"linksHelpContainerQFrame")
+        self.linksHelpContainerQFrame.setFrameShape(QFrame.StyledPanel)
+        self.linksHelpContainerQFrame.setFrameShadow(QFrame.Raised)
+        self.linksHelpContainerQFrameHLayout = QHBoxLayout(self.linksHelpContainerQFrame)
+        self.linksHelpContainerQFrameHLayout.setSpacing(10)
+        self.linksHelpContainerQFrameHLayout.setObjectName(u"linksHelpContainerQFrameHLayout")
+        self.linksHelpContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
+        self.helpHDWalletQPushButton = QPushButton(self.linksHelpContainerQFrame)
         self.helpHDWalletQPushButton.setObjectName(u"helpHDWalletQPushButton")
-        self.helpHDWalletQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
-        self.footerContainerQFrameHLayout.addWidget(self.helpHDWalletQPushButton)
+        self.linksHelpContainerQFrameHLayout.addWidget(self.helpHDWalletQPushButton)
+
+
+        self.footerContainerQFrameHLayout.addWidget(self.linksHelpContainerQFrame, 0, Qt.AlignVCenter)
 
 
         self.hdwalletMainQFrameVLayout.addWidget(self.footerContainerQFrame)
@@ -7146,9 +7156,9 @@ class Ui_MainWindow(object):
         self.outputTerminalActionQWidget = QWidget(self.outputQFrame)
         self.outputTerminalActionQWidget.setObjectName(u"outputTerminalActionQWidget")
         self.outputTerminalActionQWidgetHLayout = QHBoxLayout(self.outputTerminalActionQWidget)
-        self.outputTerminalActionQWidgetHLayout.setSpacing(15)
+        self.outputTerminalActionQWidgetHLayout.setSpacing(10)
         self.outputTerminalActionQWidgetHLayout.setObjectName(u"outputTerminalActionQWidgetHLayout")
-        self.outputTerminalActionQWidgetHLayout.setContentsMargins(15, 10, 15, 10)
+        self.outputTerminalActionQWidgetHLayout.setContentsMargins(15, 10, 15, 15)
         self.outputTerminalQLineEdit = HistoryLineEdit(self.outputTerminalActionQWidget)
         self.outputTerminalQLineEdit.setObjectName(u"outputTerminalQLineEdit")
 

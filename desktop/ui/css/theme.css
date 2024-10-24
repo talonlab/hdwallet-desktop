@@ -656,7 +656,6 @@ QRadioButton::indicator:checked {
     background-color: rgb(16, 21, 27);
     text-transform: none;
 }
-
 #linksContainerQFrame QLabel{
     font: 10pt "Tahoma";
     letter-spacing: 1px;

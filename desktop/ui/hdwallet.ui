@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1300</width>
-    <height>591</height>
+    <height>608</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -79,13 +79,13 @@
            <number>15</number>
           </property>
           <property name="topMargin">
-           <number>10</number>
+           <number>15</number>
           </property>
           <property name="rightMargin">
            <number>15</number>
           </property>
           <property name="bottomMargin">
-           <number>10</number>
+           <number>15</number>
           </property>
           <item>
            <layout class="QHBoxLayout" name="hdwalletLogoHLayout"/>
@@ -173,7 +173,7 @@
            <number>15</number>
           </property>
           <property name="bottomMargin">
-           <number>10</number>
+           <number>15</number>
           </property>
           <item>
            <widget class="QStackedWidget" name="hdwalletQStackedWidget">
@@ -16116,14 +16116,38 @@
                </property>
               </spacer>
              </item>
-             <item>
-              <widget class="QPushButton" name="helpHDWalletQPushButton">
-               <property name="cursor">
-                <cursorShape>PointingHandCursor</cursorShape>
+             <item alignment="Qt::AlignVCenter">
+              <widget class="QFrame" name="linksHelpContainerQFrame">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
                </property>
-               <property name="text">
-                <string>Help</string>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
                </property>
+               <layout class="QHBoxLayout" name="linksHelpContainerQFrameHLayout">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="helpHDWalletQPushButton">
+                  <property name="text">
+                   <string>Help</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
             </layout>
@@ -16348,7 +16372,7 @@
         <widget class="QWidget" name="outputTerminalActionQWidget" native="true">
          <layout class="QHBoxLayout" name="outputTerminalActionQWidgetHLayout">
           <property name="spacing">
-           <number>15</number>
+           <number>10</number>
           </property>
           <property name="leftMargin">
            <number>15</number>
@@ -16360,7 +16384,7 @@
            <number>15</number>
           </property>
           <property name="bottomMargin">
-           <number>10</number>
+           <number>15</number>
           </property>
           <item>
            <widget class="HistoryLineEdit" name="outputTerminalQLineEdit">
