@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletjqOevF.ui'
+## Form generated from reading UI file 'hdwalletJHYWSX.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -28,7 +28,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1300, 608)
+        MainWindow.resize(1300, 690)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -627,6 +627,10 @@ class Ui_MainWindow(object):
 
 
         self.generatePageQStackedWidgetVLayout.addWidget(self.generateLengthAndPassphraseQGroupBox)
+
+        self.generatePageQStackedWidgetVBSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.generatePageQStackedWidgetVLayout.addItem(self.generatePageQStackedWidgetVBSpacer)
 
         self.generatePageQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -7172,7 +7176,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.hdwalletQStackedWidget.setCurrentIndex(1)
+        self.hdwalletQStackedWidget.setCurrentIndex(0)
         self.hdQStackedWidget.setCurrentIndex(2)
         self.bipQStackedWidget.setCurrentIndex(5)
         self.cardanoQStackedWidget.setCurrentIndex(4)
