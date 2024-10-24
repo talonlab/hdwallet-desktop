@@ -79,13 +79,13 @@
            <number>15</number>
           </property>
           <property name="topMargin">
-           <number>15</number>
+           <number>10</number>
           </property>
           <property name="rightMargin">
            <number>15</number>
           </property>
           <property name="bottomMargin">
-           <number>15</number>
+           <number>10</number>
           </property>
           <item>
            <layout class="QHBoxLayout" name="hdwalletLogoHLayout"/>
@@ -173,12 +173,12 @@
            <number>15</number>
           </property>
           <property name="bottomMargin">
-           <number>15</number>
+           <number>10</number>
           </property>
           <item>
            <widget class="QStackedWidget" name="hdwalletQStackedWidget">
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="generatePageQStackedWidget">
              <layout class="QVBoxLayout" name="generatePageQStackedWidgetVLayout">
@@ -1105,6 +1105,9 @@
                     </property>
                     <property name="bottomMargin">
                      <number>0</number>
+                    </property>
+                    <property name="spacing">
+                     <number>5</number>
                     </property>
                     <item row="1" column="0" alignment="Qt::AlignBottom">
                      <widget class="QFrame" name="generatePassphraseLineEditContainerQFrame">
@@ -16048,7 +16051,7 @@
               <number>0</number>
              </property>
              <property name="topMargin">
-              <number>10</number>
+              <number>15</number>
              </property>
              <property name="rightMargin">
               <number>0</number>
@@ -16056,7 +16059,7 @@
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <item>
+             <item alignment="Qt::AlignVCenter">
               <widget class="QFrame" name="linksContainerQFrame">
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
@@ -16080,14 +16083,14 @@
                 <property name="bottomMargin">
                  <number>0</number>
                 </property>
-                <item>
+                <item alignment="Qt::AlignBottom">
                  <widget class="QLabel" name="copyrightQLabel">
                   <property name="text">
                    <string>© 2020-2024</string>
                   </property>
                  </widget>
                 </item>
-                <item>
+                <item alignment="Qt::AlignBottom">
                  <widget class="QLabel" name="websiteQLabel">
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
@@ -16357,7 +16360,7 @@
            <number>15</number>
           </property>
           <property name="bottomMargin">
-           <number>15</number>
+           <number>10</number>
           </property>
           <item>
            <widget class="HistoryLineEdit" name="outputTerminalQLineEdit">

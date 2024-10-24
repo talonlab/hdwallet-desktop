@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletJaUlzu.ui'
+## Form generated from reading UI file 'hdwalletmBwSiq.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -54,7 +54,7 @@ class Ui_MainWindow(object):
         self.hdWalletHeaderContainerQFrameHLayout = QHBoxLayout(self.hdWalletHeaderContainerQFrame)
         self.hdWalletHeaderContainerQFrameHLayout.setSpacing(15)
         self.hdWalletHeaderContainerQFrameHLayout.setObjectName(u"hdWalletHeaderContainerQFrameHLayout")
-        self.hdWalletHeaderContainerQFrameHLayout.setContentsMargins(15, 15, 15, 15)
+        self.hdWalletHeaderContainerQFrameHLayout.setContentsMargins(15, 10, 15, 10)
         self.hdwalletLogoHLayout = QHBoxLayout()
         self.hdwalletLogoHLayout.setObjectName(u"hdwalletLogoHLayout")
 
@@ -99,7 +99,7 @@ class Ui_MainWindow(object):
         self.hdwalletMainQFrameVLayout = QVBoxLayout(self.hdwalletMainQFrame)
         self.hdwalletMainQFrameVLayout.setSpacing(0)
         self.hdwalletMainQFrameVLayout.setObjectName(u"hdwalletMainQFrameVLayout")
-        self.hdwalletMainQFrameVLayout.setContentsMargins(15, 0, 15, 15)
+        self.hdwalletMainQFrameVLayout.setContentsMargins(15, 0, 15, 10)
         self.hdwalletQStackedWidget = QStackedWidget(self.hdwalletMainQFrame)
         self.hdwalletQStackedWidget.setObjectName(u"hdwalletQStackedWidget")
         self.generatePageQStackedWidget = QWidget()
@@ -536,6 +536,7 @@ class Ui_MainWindow(object):
         self.generatePassphraseContainerQFrame = QFrame(self.generateLengthAndPassphraseQGroupBox)
         self.generatePassphraseContainerQFrame.setObjectName(u"generatePassphraseContainerQFrame")
         self.generatePassphraseContainerQFrameGridLayout = QGridLayout(self.generatePassphraseContainerQFrame)
+        self.generatePassphraseContainerQFrameGridLayout.setSpacing(5)
         self.generatePassphraseContainerQFrameGridLayout.setObjectName(u"generatePassphraseContainerQFrameGridLayout")
         self.generatePassphraseContainerQFrameGridLayout.setContentsMargins(0, 0, 0, 0)
         self.generatePassphraseLineEditContainerQFrame = QFrame(self.generatePassphraseContainerQFrame)
@@ -7018,7 +7019,7 @@ class Ui_MainWindow(object):
         self.footerContainerQFrameHLayout = QHBoxLayout(self.footerContainerQFrame)
         self.footerContainerQFrameHLayout.setSpacing(10)
         self.footerContainerQFrameHLayout.setObjectName(u"footerContainerQFrameHLayout")
-        self.footerContainerQFrameHLayout.setContentsMargins(0, 10, 0, 0)
+        self.footerContainerQFrameHLayout.setContentsMargins(0, 15, 0, 0)
         self.linksContainerQFrame = QFrame(self.footerContainerQFrame)
         self.linksContainerQFrame.setObjectName(u"linksContainerQFrame")
         self.linksContainerQFrame.setFrameShape(QFrame.StyledPanel)
@@ -7030,16 +7031,16 @@ class Ui_MainWindow(object):
         self.copyrightQLabel = QLabel(self.linksContainerQFrame)
         self.copyrightQLabel.setObjectName(u"copyrightQLabel")
 
-        self.linksContainerQFrameHLayout.addWidget(self.copyrightQLabel)
+        self.linksContainerQFrameHLayout.addWidget(self.copyrightQLabel, 0, Qt.AlignBottom)
 
         self.websiteQLabel = QLabel(self.linksContainerQFrame)
         self.websiteQLabel.setObjectName(u"websiteQLabel")
         self.websiteQLabel.setCursor(QCursor(Qt.PointingHandCursor))
 
-        self.linksContainerQFrameHLayout.addWidget(self.websiteQLabel)
+        self.linksContainerQFrameHLayout.addWidget(self.websiteQLabel, 0, Qt.AlignBottom)
 
 
-        self.footerContainerQFrameHLayout.addWidget(self.linksContainerQFrame)
+        self.footerContainerQFrameHLayout.addWidget(self.linksContainerQFrame, 0, Qt.AlignVCenter)
 
         self.footerContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
@@ -7147,7 +7148,7 @@ class Ui_MainWindow(object):
         self.outputTerminalActionQWidgetHLayout = QHBoxLayout(self.outputTerminalActionQWidget)
         self.outputTerminalActionQWidgetHLayout.setSpacing(15)
         self.outputTerminalActionQWidgetHLayout.setObjectName(u"outputTerminalActionQWidgetHLayout")
-        self.outputTerminalActionQWidgetHLayout.setContentsMargins(15, 10, 15, 15)
+        self.outputTerminalActionQWidgetHLayout.setContentsMargins(15, 10, 15, 10)
         self.outputTerminalQLineEdit = HistoryLineEdit(self.outputTerminalActionQWidget)
         self.outputTerminalQLineEdit.setObjectName(u"outputTerminalQLineEdit")
 
@@ -7181,7 +7182,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.hdwalletQStackedWidget.setCurrentIndex(1)
+        self.hdwalletQStackedWidget.setCurrentIndex(0)
         self.hdQStackedWidget.setCurrentIndex(4)
         self.bipQStackedWidget.setCurrentIndex(4)
         self.cardanoQStackedWidget.setCurrentIndex(4)
