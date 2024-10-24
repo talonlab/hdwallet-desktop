@@ -1184,10 +1184,8 @@ class Dumps:
 
         if crypto in ("Bitcoin-Cash", "Bitcoin-Cash-SLP", "eCash"):
             _include: str = "at:path,addresses:legacy-p2pkh,public_key,wif"
-
         elif crypto == "Avalanche":
             _include: str = "at:path,addresses:p-chain,public_key,wif"
-
         elif crypto == "Binance":
             _include: str = "at:path,addresses:chain,public_key,wif"
 
