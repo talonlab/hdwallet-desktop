@@ -476,15 +476,16 @@ QRadioButton::indicator {
     width: 16px;
     height: 16px;
     border-radius: 10px;
-    background: rgb(16, 21, 27);
+    background: rgb(25, 30, 36);
 }
 
 QRadioButton::indicator:hover {
-    border: 3px solid rgba(25, 30, 36, 100);
+    border: 3px solid rgb(25, 30, 36);
 }
+
 QRadioButton::indicator:checked {
     background: 3px solid #83b9ff;
-    border: 3px solid rgb(25, 30, 36);
+    border: 3px solid transparent;
 }
 
 #outputWidgetTopContainerQWidget{
@@ -659,4 +660,14 @@ QRadioButton::indicator:checked {
     letter-spacing: 1px;
     background-color: rgb(16, 21, 27);
     text-transform: none;
+}
+
+#linksContainerQFrame QLabel{
+    font: 10pt "Tahoma";
+    letter-spacing: 1px;
+    text-transform: none;
+}
+
+#websiteQLabel:hover{
+    border-bottom: 3px solid #83b9ff;
 }

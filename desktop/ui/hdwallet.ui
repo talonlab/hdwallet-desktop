@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1300</width>
-    <height>575</height>
+    <height>591</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -123,6 +123,9 @@
              </property>
              <item>
               <widget class="QPushButton" name="generateQPushButton">
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
                <property name="text">
                 <string>Generate</string>
                </property>
@@ -130,6 +133,9 @@
              </item>
              <item>
               <widget class="QPushButton" name="dumpQPushButton">
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
                <property name="text">
                 <string>Dumps</string>
                </property>
@@ -140,15 +146,11 @@
           </item>
           <item>
            <widget class="QPushButton" name="donationHDWalletQPushButton">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="text">
              <string>Donation</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="helpHDWalletQPushButton">
-            <property name="text">
-             <string>Help</string>
             </property>
            </widget>
           </item>
@@ -249,6 +251,9 @@
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
                       <property name="placeholderText">
                        <string>(Select)</string>
                       </property>
@@ -296,6 +301,9 @@
                         <height>0</height>
                        </size>
                       </property>
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
                       <property name="placeholderText">
                        <string>(Select)</string>
                       </property>
@@ -306,6 +314,9 @@
                  </item>
                  <item alignment="Qt::AlignBottom">
                   <widget class="QPushButton" name="generateEntropyClientAndStrengthQPushButton">
+                   <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                   </property>
                    <property name="text">
                     <string>Generate</string>
                    </property>
@@ -386,6 +397,9 @@
                        </item>
                        <item>
                         <widget class="QComboBox" name="generateMnemonicClientQComboBox">
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
                          <property name="placeholderText">
                           <string>(Select)</string>
                          </property>
@@ -439,6 +453,9 @@
                           </property>
                           <item>
                            <widget class="QRadioButton" name="generateMnemonicWordsQRadioButton">
+                            <property name="cursor">
+                             <cursorShape>PointingHandCursor</cursorShape>
+                            </property>
                             <property name="text">
                              <string>Words</string>
                             </property>
@@ -446,6 +463,9 @@
                           </item>
                           <item>
                            <widget class="QRadioButton" name="generateMnemonicEntropyQRadioButton">
+                            <property name="cursor">
+                             <cursorShape>PointingHandCursor</cursorShape>
+                            </property>
                             <property name="text">
                              <string>Entopy</string>
                             </property>
@@ -490,6 +510,9 @@
                        </item>
                        <item>
                         <widget class="QComboBox" name="generateMnemonicLanguageQComboBox">
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
                          <property name="placeholderText">
                           <string>(Select)</string>
                          </property>
@@ -552,6 +575,9 @@
                        </item>
                        <item>
                         <widget class="QComboBox" name="generateMnemonicTypeQComboBox">
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
                          <property name="placeholderText">
                           <string>(Select)</string>
                          </property>
@@ -593,6 +619,9 @@
                        </item>
                        <item>
                         <widget class="QComboBox" name="generateMnemonicWordsQComboBox">
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
                          <property name="placeholderText">
                           <string>(Select)</string>
                          </property>
@@ -678,6 +707,9 @@
                     </item>
                     <item alignment="Qt::AlignBottom">
                      <widget class="QPushButton" name="generateMnemonicClientWordsAndLanguageQPushButton">
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
                       <property name="text">
                        <string>Generate</string>
                       </property>
@@ -758,6 +790,9 @@
                        </item>
                        <item>
                         <widget class="QComboBox" name="generateSeedClientQComboBox">
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
                          <property name="placeholderText">
                           <string>(Select)</string>
                          </property>
@@ -793,6 +828,9 @@
                        </item>
                        <item>
                         <widget class="QComboBox" name="generateSeedMnemonicTypeQComboBox">
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
                          <property name="placeholderText">
                           <string>(Select)</string>
                          </property>
@@ -828,6 +866,9 @@
                        </item>
                        <item>
                         <widget class="QComboBox" name="generateSeedCardanoTypeQComboBox">
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
                          <property name="placeholderText">
                           <string>(Select)</string>
                          </property>
@@ -1012,6 +1053,9 @@
                     </item>
                     <item alignment="Qt::AlignBottom">
                      <widget class="QPushButton" name="generateSeedPassphraseGenerateQPushButton">
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
                       <property name="text">
                        <string>Generate</string>
                       </property>
@@ -1082,6 +1126,9 @@
                        </property>
                        <item>
                         <widget class="QCheckBox" name="generatePassphraseLowerCaseQCheckBox">
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
                          <property name="text">
                           <string>Lower Case</string>
                          </property>
@@ -1089,6 +1136,9 @@
                        </item>
                        <item>
                         <widget class="QCheckBox" name="generatePassphraseCharacterQCheckBox">
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
                          <property name="text">
                           <string>Characters</string>
                          </property>
@@ -1117,6 +1167,9 @@
                        </property>
                        <item>
                         <widget class="QCheckBox" name="generatePassphraseUpperCaseQCheckBox">
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
                          <property name="text">
                           <string>Upper Case</string>
                          </property>
@@ -1124,6 +1177,9 @@
                        </item>
                        <item>
                         <widget class="QCheckBox" name="generatePassphraseNumberQCheckBox">
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
                          <property name="text">
                           <string>Numbers</string>
                          </property>
@@ -1215,6 +1271,9 @@
                  </item>
                  <item alignment="Qt::AlignBottom">
                   <widget class="QPushButton" name="generatePassphraseQPushButton">
+                   <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                   </property>
                    <property name="text">
                     <string>Generate</string>
                    </property>
@@ -1334,6 +1393,9 @@
                     </item>
                     <item>
                      <widget class="QComboBox" name="dumpsCryptocurrencyQComboBox">
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
                       <property name="placeholderText">
                        <string>(Select)</string>
                       </property>
@@ -1419,6 +1481,9 @@
                     </item>
                     <item>
                      <widget class="QComboBox" name="dumpsNetworkQComboBox">
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
                       <property name="placeholderText">
                        <string>(Select)</string>
                       </property>
@@ -1506,6 +1571,9 @@
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
+                      </property>
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
                       </property>
                       <property name="placeholderText">
                        <string>(Select)</string>
@@ -1635,6 +1703,9 @@
                         <verstretch>0</verstretch>
                        </sizepolicy>
                       </property>
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
                       <property name="placeholderText">
                        <string>(Select)</string>
                       </property>
@@ -1716,7 +1787,7 @@
                     <number>0</number>
                    </property>
                    <property name="currentIndex">
-                    <number>2</number>
+                    <number>4</number>
                    </property>
                    <widget class="QWidget" name="bipsPageQWidget">
                     <layout class="QVBoxLayout" name="bipsPageQWidgetVLayout">
@@ -1738,7 +1809,7 @@
                      <item>
                       <widget class="QStackedWidget" name="bipQStackedWidget">
                        <property name="currentIndex">
-                        <number>2</number>
+                        <number>4</number>
                        </property>
                        <widget class="QWidget" name="bipFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="bipFromEntropyQStackedWidgetVLayout">
@@ -1854,6 +1925,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="bipFromEntropyClientQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -2120,6 +2194,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="bipFromEntropyLanguageQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <item>
                                   <property name="text">
                                    <string>Chinese Simplified</string>
@@ -2232,6 +2309,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="bipFromEntropyPublicKeyTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -2369,6 +2449,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="bipFromMnemonicClientQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -2641,6 +2724,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="bipFromMnemonicPublicKeyTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -2778,6 +2864,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="bipFromSeedClientQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -2932,6 +3021,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="bipFromSeedPublicKeyTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -3101,6 +3193,9 @@
                                </item>
                                <item>
                                 <widget class="QCheckBox" name="bipFromXPrivateKeyStrictQCheckBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="text">
                                   <string>Strict</string>
                                  </property>
@@ -3184,6 +3279,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="bipFromXPrivateKeyPublicKeyTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -3353,6 +3451,9 @@
                                </item>
                                <item>
                                 <widget class="QCheckBox" name="bipFromXPublicKeyStrictQCheckBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="text">
                                   <string>Strict</string>
                                  </property>
@@ -3436,6 +3537,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="bipFromXPublicKeyPublicKeyTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -3611,6 +3715,9 @@
                                </item>
                                <item>
                                 <widget class="QCheckBox" name="bipFromWIFBIP38PassphraseQCheckBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="text">
                                   <string>BIP38</string>
                                  </property>
@@ -3751,6 +3858,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="bipFromWIFPublicKeyTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -3955,6 +4065,9 @@
                                    <height>0</height>
                                   </size>
                                  </property>
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -3992,6 +4105,9 @@
                         </layout>
                        </widget>
                        <widget class="QWidget" name="bipFromPublicKeyQStackedWidget">
+                        <property name="cursor">
+                         <cursorShape>ArrowCursor</cursorShape>
+                        </property>
                         <layout class="QVBoxLayout" name="bipFromPublicKeyQStackedWidgetVLayout">
                          <property name="spacing">
                           <number>10</number>
@@ -4172,6 +4288,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="bipFromPublicKeyPublicKeyTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -4232,7 +4351,7 @@
                      <item>
                       <widget class="QStackedWidget" name="cardanoQStackedWidget">
                        <property name="currentIndex">
-                        <number>0</number>
+                        <number>4</number>
                        </property>
                        <widget class="QWidget" name="cardanoFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="cardanoFromEntropyQStackedWidgetVLayout">
@@ -4345,6 +4464,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="cardanoFromEntropyClientQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -4506,6 +4628,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="cardanoFromEntropyCardanoTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -4760,6 +4885,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="cardanoFromEntropyLanguageQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -4874,6 +5002,9 @@
                                    <horstretch>0</horstretch>
                                    <verstretch>0</verstretch>
                                   </sizepolicy>
+                                 </property>
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
                                  </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
@@ -4999,6 +5130,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="cardanoFromMnemonicClientQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -5160,6 +5294,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="cardanoFromMnemonicCardanoTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -5441,6 +5578,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="cardanoFromMnemonicAddressTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -5567,6 +5707,9 @@
                                 <widget class="QComboBox" name="cardanoFromSeedClientQComboBox">
                                  <property name="enabled">
                                   <bool>false</bool>
+                                 </property>
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
                                  </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
@@ -5708,6 +5851,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="cardanoFromSeedCardanoTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -5968,6 +6114,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="cardanoFromSeedAddressTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -6144,6 +6293,9 @@
                                </item>
                                <item>
                                 <widget class="QCheckBox" name="cardanoFromXPrivateKeyStrictQCheckBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="text">
                                   <string>Strict</string>
                                  </property>
@@ -6219,6 +6371,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="cardanoFromXPrivateKeyCardanoTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -6410,6 +6565,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="cardanoFromXPrivateKeyAddressTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -6586,6 +6744,9 @@
                                </item>
                                <item>
                                 <widget class="QCheckBox" name="cardanoFromXPublicKeyStrictQCheckBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="text">
                                   <string>Strict</string>
                                  </property>
@@ -6661,6 +6822,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="cardanoFromXPublicKeyCardanoTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -6852,6 +7016,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="cardanoFromXPublicKeyAddressTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -7068,6 +7235,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="cardanoFromPrivateKeyCardanoTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -7259,6 +7429,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="cardanoFromPrivateKeyAddressTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -7469,6 +7642,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="cardanoFromPublicKeyCardanoTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -7660,6 +7836,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="cardanoFromPublicKeyAddressTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -7727,7 +7906,7 @@
                      <item>
                       <widget class="QStackedWidget" name="electrumV1QStackedWidget">
                        <property name="currentIndex">
-                        <number>2</number>
+                        <number>3</number>
                        </property>
                        <widget class="QWidget" name="electrumV1FromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="electrumV1FromEntropyQStackedWidgetVLayout">
@@ -7846,6 +8025,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV1FromEntropyClientQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -8028,6 +8210,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV1FromEntropyPublicKeyTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -8107,6 +8292,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV1FromEntropyLanguageQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -8277,6 +8465,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV1FromMnemonicClientQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -8446,6 +8637,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV1FromMnemonicPublicKeyTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -8465,7 +8659,7 @@
                              </widget>
                             </item>
                             <item>
-                             <spacer name="horizontalSpacer">
+                             <spacer name="electrumV1FromMnemonicPublicKeyTypeAndPassphraseContainerQFrameHSpacer">
                               <property name="orientation">
                                <enum>Qt::Horizontal</enum>
                               </property>
@@ -8599,6 +8793,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV1FromSeedClientQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -8747,6 +8944,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV1FromSeedPublicKeyTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -8916,6 +9116,9 @@
                                </item>
                                <item>
                                 <widget class="QCheckBox" name="electrumV1FromWIFBIP38PassphraseQCheckBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="text">
                                   <string>BIP38</string>
                                  </property>
@@ -9056,6 +9259,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV1FromWIFPublicKeyTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -9257,6 +9463,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV1FromPrivateKeyPublicKeyTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -9468,6 +9677,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV1FromPublicKeyPublicKeyTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -9641,6 +9853,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV2FromEntropyClientQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -9804,6 +10019,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV2FromEntropyModeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -9851,6 +10069,9 @@
                                    <verstretch>0</verstretch>
                                   </sizepolicy>
                                  </property>
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -9897,6 +10118,9 @@
                                    <horstretch>0</horstretch>
                                    <verstretch>0</verstretch>
                                   </sizepolicy>
+                                 </property>
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
                                  </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
@@ -9960,6 +10184,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV2FromEntropyPublicKeyTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -10094,6 +10321,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV2FromMnemonicClientQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -10270,6 +10500,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV2FromMnemonicModeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -10339,6 +10572,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV2FromMnemonicMnemonicTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="currentText">
                                   <string/>
                                  </property>
@@ -10417,6 +10653,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV2FromMnemonicPublicKeyTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -10551,6 +10790,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV2FromSeedClientQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -10672,6 +10914,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV2FromSeedModeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -10734,6 +10979,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="electrumV2FromSeedPublicKeyTypeQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -10900,6 +11148,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="moneroFromEntropyClientQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -11055,6 +11306,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="moneroFromEntropyLanguageQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -11294,6 +11548,9 @@
                                </item>
                                <item>
                                 <widget class="QComboBox" name="moneroFromMnemonicClientQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="placeholderText">
                                   <string>(Select)</string>
                                  </property>
@@ -11603,6 +11860,9 @@
                                   </item>
                                   <item>
                                    <widget class="QComboBox" name="moneroFromSeedClientQComboBox">
+                                    <property name="cursor">
+                                     <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
                                     <property name="placeholderText">
                                      <string>(Select)</string>
                                     </property>
@@ -12399,6 +12659,9 @@
                     </property>
                     <item>
                      <widget class="QPushButton" name="customTabQPushButton">
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
                       <property name="text">
                        <string>Custom</string>
                       </property>
@@ -12406,6 +12669,9 @@
                     </item>
                     <item>
                      <widget class="QPushButton" name="bip44TabQPushButton">
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
                       <property name="text">
                        <string>BIP44</string>
                       </property>
@@ -12413,6 +12679,9 @@
                     </item>
                     <item>
                      <widget class="QPushButton" name="bip49TabQPushButton">
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
                       <property name="text">
                        <string>BIP49</string>
                       </property>
@@ -12420,6 +12689,9 @@
                     </item>
                     <item>
                      <widget class="QPushButton" name="bip84TabQPushButton">
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
                       <property name="text">
                        <string>BIP84</string>
                       </property>
@@ -12427,6 +12699,9 @@
                     </item>
                     <item>
                      <widget class="QPushButton" name="bip86TabQPushButton">
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
                       <property name="text">
                        <string>BIP86</string>
                       </property>
@@ -12434,6 +12709,9 @@
                     </item>
                     <item>
                      <widget class="QPushButton" name="bip141TabQPushButton">
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
                       <property name="text">
                        <string>BIP141</string>
                       </property>
@@ -12441,6 +12719,9 @@
                     </item>
                     <item>
                      <widget class="QPushButton" name="cip1852TabQPushButton">
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
                       <property name="text">
                        <string>CIP1852</string>
                       </property>
@@ -12448,6 +12729,9 @@
                     </item>
                     <item>
                      <widget class="QPushButton" name="electrumTabQPushButton">
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
                       <property name="text">
                        <string>Electrum</string>
                       </property>
@@ -12455,6 +12739,9 @@
                     </item>
                     <item>
                      <widget class="QPushButton" name="moneroTabQPushButton">
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
                       <property name="text">
                        <string>Monero</string>
                       </property>
@@ -12462,6 +12749,9 @@
                     </item>
                     <item>
                      <widget class="QPushButton" name="hdwTabQPushButton">
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
                       <property name="text">
                        <string>HDW</string>
                       </property>
@@ -12492,7 +12782,7 @@
                     </sizepolicy>
                    </property>
                    <property name="currentIndex">
-                    <number>8</number>
+                    <number>0</number>
                    </property>
                    <widget class="QWidget" name="customQStackedWidgetPage">
                     <layout class="QHBoxLayout" name="customQStackedWidgetPageHLayout">
@@ -12656,6 +12946,9 @@
                         </item>
                         <item>
                          <widget class="QComboBox" name="customClientQComboBox">
+                          <property name="cursor">
+                           <cursorShape>PointingHandCursor</cursorShape>
+                          </property>
                           <property name="placeholderText">
                            <string>(Select)</string>
                           </property>
@@ -12997,6 +13290,9 @@
                         </item>
                         <item>
                          <widget class="QComboBox" name="bip44ChangeQComboBox">
+                          <property name="cursor">
+                           <cursorShape>PointingHandCursor</cursorShape>
+                          </property>
                           <property name="placeholderText">
                            <string>(Select)</string>
                           </property>
@@ -13395,6 +13691,9 @@
                         </item>
                         <item>
                          <widget class="QComboBox" name="bip49ChangeQComboBox">
+                          <property name="cursor">
+                           <cursorShape>PointingHandCursor</cursorShape>
+                          </property>
                           <property name="placeholderText">
                            <string>(Select)</string>
                           </property>
@@ -13793,6 +14092,9 @@
                         </item>
                         <item>
                          <widget class="QComboBox" name="bip84ChangeQComboBox">
+                          <property name="cursor">
+                           <cursorShape>PointingHandCursor</cursorShape>
+                          </property>
                           <property name="placeholderText">
                            <string>(Select)</string>
                           </property>
@@ -14191,6 +14493,9 @@
                         </item>
                         <item>
                          <widget class="QComboBox" name="bip86ChangeQComboBox">
+                          <property name="cursor">
+                           <cursorShape>PointingHandCursor</cursorShape>
+                          </property>
                           <property name="placeholderText">
                            <string>(Select)</string>
                           </property>
@@ -14433,6 +14738,9 @@
                         </item>
                         <item>
                          <widget class="QComboBox" name="bip141ScriptSemanticsQComboBox">
+                          <property name="cursor">
+                           <cursorShape>PointingHandCursor</cursorShape>
+                          </property>
                           <property name="placeholderText">
                            <string>(Select)</string>
                           </property>
@@ -14769,6 +15077,9 @@
                         </item>
                         <item>
                          <widget class="QComboBox" name="cip1852ChangeQComboBox">
+                          <property name="cursor">
+                           <cursorShape>PointingHandCursor</cursorShape>
+                          </property>
                           <property name="placeholderText">
                            <string>(Select)</string>
                           </property>
@@ -15528,6 +15839,9 @@
                        </item>
                        <item>
                         <widget class="QComboBox" name="dumpsFormatQComboBox">
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
                          <property name="placeholderText">
                           <string>(Select)</string>
                          </property>
@@ -15664,6 +15978,9 @@
                      <verstretch>0</verstretch>
                     </sizepolicy>
                    </property>
+                   <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                   </property>
                    <property name="styleSheet">
                     <string notr="true"/>
                    </property>
@@ -15674,6 +15991,9 @@
                  </item>
                  <item alignment="Qt::AlignBottom">
                   <widget class="QPushButton" name="dumpsSaveAndGenerateQPushButton">
+                   <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                   </property>
                    <property name="text">
                     <string>Save</string>
                    </property>
@@ -15695,25 +16015,119 @@
                 </property>
                </spacer>
               </item>
+              <item>
+               <spacer name="hdWalletContainerQFrameVSpacerB">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
              </layout>
             </widget>
            </widget>
           </item>
+          <item>
+           <widget class="QFrame" name="footerContainerQFrame">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="footerContainerQFrameHLayout">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>10</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QFrame" name="linksContainerQFrame">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="linksContainerQFrameHLayout">
+                <property name="spacing">
+                 <number>5</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="copyrightQLabel">
+                  <property name="text">
+                   <string>© 2020-2024</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="websiteQLabel">
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
+                  <property name="text">
+                   <string>hdwallet.io</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <spacer name="footerContainerQFrameHSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="helpHDWalletQPushButton">
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string>Help</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
          </layout>
         </widget>
-       </item>
-       <item>
-        <spacer name="hdWalletContainerQFrameVSpacerB">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
        </item>
       </layout>
      </widget>
@@ -15954,6 +16368,9 @@
           </item>
           <item>
            <widget class="QPushButton" name="outputTerminalQPushButton">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="text">
              <string>Execute</string>
             </property>
@@ -15961,6 +16378,9 @@
           </item>
           <item>
            <widget class="QPushButton" name="stopTerminalQPushButton">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="text">
              <string>Stop</string>
             </property>
@@ -15968,6 +16388,9 @@
           </item>
           <item>
            <widget class="QPushButton" name="clearTerminalQPushButton">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="text">
              <string>Clear</string>
             </property>

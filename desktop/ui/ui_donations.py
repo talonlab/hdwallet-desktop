@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'donationsugbhbe.ui'
+## Form generated from reading UI file 'donationsXuevSI.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -187,6 +187,7 @@ class Ui_Form(object):
 
         self.donationsCryptocurrencyQComboBox = QComboBox(self.donationsCoreTeamCryptocurrencyQFrame)
         self.donationsCryptocurrencyQComboBox.setObjectName(u"donationsCryptocurrencyQComboBox")
+        self.donationsCryptocurrencyQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.donationsCoreTeamCryptocurrencyQFrameVLayout.addWidget(self.donationsCryptocurrencyQComboBox)
 

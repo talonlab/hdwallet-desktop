@@ -106,6 +106,7 @@ class MainApplication:
         self.ui.helpHDWalletQPushButton.clicked.connect(
             lambda: QDesktopServices.openUrl(QUrl("https://talonlab.gitbook.io/hdwallet/manual/generate"))
         )
+        self.ui.websiteQLabel.mousePressEvent = lambda event: QDesktopServices.openUrl(QUrl("https://hdwallet.io"))
 
         inputs = [
             self.ui.bip44AccountQLineEdit,

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletzzkuzN.ui'
+## Form generated from reading UI file 'hdwalletJaUlzu.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -28,7 +28,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1300, 575)
+        MainWindow.resize(1300, 591)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -72,11 +72,13 @@ class Ui_MainWindow(object):
         self.generateAndDumpTabContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
         self.generateQPushButton = QPushButton(self.generateAndDumpTabContainerQFrame)
         self.generateQPushButton.setObjectName(u"generateQPushButton")
+        self.generateQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generateAndDumpTabContainerQFrameHLayout.addWidget(self.generateQPushButton)
 
         self.dumpQPushButton = QPushButton(self.generateAndDumpTabContainerQFrame)
         self.dumpQPushButton.setObjectName(u"dumpQPushButton")
+        self.dumpQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generateAndDumpTabContainerQFrameHLayout.addWidget(self.dumpQPushButton)
 
@@ -85,13 +87,9 @@ class Ui_MainWindow(object):
 
         self.donationHDWalletQPushButton = QPushButton(self.hdWalletHeaderContainerQFrame)
         self.donationHDWalletQPushButton.setObjectName(u"donationHDWalletQPushButton")
+        self.donationHDWalletQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.hdWalletHeaderContainerQFrameHLayout.addWidget(self.donationHDWalletQPushButton)
-
-        self.helpHDWalletQPushButton = QPushButton(self.hdWalletHeaderContainerQFrame)
-        self.helpHDWalletQPushButton.setObjectName(u"helpHDWalletQPushButton")
-
-        self.hdWalletHeaderContainerQFrameHLayout.addWidget(self.helpHDWalletQPushButton)
 
 
         self.hdWalletContainerQFrameVLayout.addWidget(self.hdWalletHeaderContainerQFrame)
@@ -134,6 +132,7 @@ class Ui_MainWindow(object):
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.generateEntropyClientQComboBox.sizePolicy().hasHeightForWidth())
         self.generateEntropyClientQComboBox.setSizePolicy(sizePolicy1)
+        self.generateEntropyClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generateEntropyClientContainerQFrameVLayout.addWidget(self.generateEntropyClientQComboBox)
 
@@ -156,6 +155,7 @@ class Ui_MainWindow(object):
         sizePolicy1.setHeightForWidth(self.generateEntropyStrengthQComboBox.sizePolicy().hasHeightForWidth())
         self.generateEntropyStrengthQComboBox.setSizePolicy(sizePolicy1)
         self.generateEntropyStrengthQComboBox.setMinimumSize(QSize(275, 0))
+        self.generateEntropyStrengthQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generateEntropyStrengthContainerQFrameVLayout.addWidget(self.generateEntropyStrengthQComboBox)
 
@@ -164,6 +164,7 @@ class Ui_MainWindow(object):
 
         self.generateEntropyClientAndStrengthQPushButton = QPushButton(self.generateClientAndStrengthContainerQGroupBox)
         self.generateEntropyClientAndStrengthQPushButton.setObjectName(u"generateEntropyClientAndStrengthQPushButton")
+        self.generateEntropyClientAndStrengthQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generateClientAndStrengthContainerQFrameHLayout.addWidget(self.generateEntropyClientAndStrengthQPushButton, 0, Qt.AlignBottom)
 
@@ -200,6 +201,7 @@ class Ui_MainWindow(object):
 
         self.generateMnemonicClientQComboBox = QComboBox(self.generateMnemonicClientContainerQFrame)
         self.generateMnemonicClientQComboBox.setObjectName(u"generateMnemonicClientQComboBox")
+        self.generateMnemonicClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generateMnemonicClientContainerQFrameVLayout.addWidget(self.generateMnemonicClientQComboBox)
 
@@ -225,11 +227,13 @@ class Ui_MainWindow(object):
         self.generateMnemonicFromActionQFrameHLayout.setContentsMargins(0, 0, 0, 0)
         self.generateMnemonicWordsQRadioButton = QRadioButton(self.generateMnemonicFromActionQFrame)
         self.generateMnemonicWordsQRadioButton.setObjectName(u"generateMnemonicWordsQRadioButton")
+        self.generateMnemonicWordsQRadioButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generateMnemonicFromActionQFrameHLayout.addWidget(self.generateMnemonicWordsQRadioButton)
 
         self.generateMnemonicEntropyQRadioButton = QRadioButton(self.generateMnemonicFromActionQFrame)
         self.generateMnemonicEntropyQRadioButton.setObjectName(u"generateMnemonicEntropyQRadioButton")
+        self.generateMnemonicEntropyQRadioButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generateMnemonicFromActionQFrameHLayout.addWidget(self.generateMnemonicEntropyQRadioButton)
 
@@ -253,6 +257,7 @@ class Ui_MainWindow(object):
 
         self.generateMnemonicLanguageQComboBox = QComboBox(self.generateMnemonicLanguageContainerQFrame)
         self.generateMnemonicLanguageQComboBox.setObjectName(u"generateMnemonicLanguageQComboBox")
+        self.generateMnemonicLanguageQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generateMnemonicLanguageContainerQFrameVLayout.addWidget(self.generateMnemonicLanguageQComboBox)
 
@@ -283,6 +288,7 @@ class Ui_MainWindow(object):
 
         self.generateMnemonicTypeQComboBox = QComboBox(self.generateMnemonicTypeContainerQFrame)
         self.generateMnemonicTypeQComboBox.setObjectName(u"generateMnemonicTypeQComboBox")
+        self.generateMnemonicTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generateMnemonicTypeContainerQFrameVLayout.addWidget(self.generateMnemonicTypeQComboBox)
 
@@ -303,6 +309,7 @@ class Ui_MainWindow(object):
 
         self.generateMnemonicWordsQComboBox = QComboBox(self.generateMnemonicWordsContainerQFrame)
         self.generateMnemonicWordsQComboBox.setObjectName(u"generateMnemonicWordsQComboBox")
+        self.generateMnemonicWordsQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generateMnemonicWordsContainerQFrameVLayout.addWidget(self.generateMnemonicWordsQComboBox)
 
@@ -346,6 +353,7 @@ class Ui_MainWindow(object):
 
         self.generateMnemonicClientWordsAndLanguageQPushButton = QPushButton(self.generateMnemonicLanguageWordsEntropyContainerQFrame)
         self.generateMnemonicClientWordsAndLanguageQPushButton.setObjectName(u"generateMnemonicClientWordsAndLanguageQPushButton")
+        self.generateMnemonicClientWordsAndLanguageQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generateMnemonicLanguageWordsEntropyContainerQFrameHLayout.addWidget(self.generateMnemonicClientWordsAndLanguageQPushButton, 0, Qt.AlignBottom)
 
@@ -381,6 +389,7 @@ class Ui_MainWindow(object):
 
         self.generateSeedClientQComboBox = QComboBox(self.generateSeedClientContainerQFrame)
         self.generateSeedClientQComboBox.setObjectName(u"generateSeedClientQComboBox")
+        self.generateSeedClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generateSeedClientContainerQFrameVLayout.addWidget(self.generateSeedClientQComboBox)
 
@@ -400,6 +409,7 @@ class Ui_MainWindow(object):
 
         self.generateSeedMnemonicTypeQComboBox = QComboBox(self.generateSeedMnemonicTypeContainerQFrame)
         self.generateSeedMnemonicTypeQComboBox.setObjectName(u"generateSeedMnemonicTypeQComboBox")
+        self.generateSeedMnemonicTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generateSeedMnemonicTypeContainerQFrameVLayout.addWidget(self.generateSeedMnemonicTypeQComboBox)
 
@@ -419,6 +429,7 @@ class Ui_MainWindow(object):
 
         self.generateSeedCardanoTypeQComboBox = QComboBox(self.generateSeedCardanoTypeContainerQFrame)
         self.generateSeedCardanoTypeQComboBox.setObjectName(u"generateSeedCardanoTypeQComboBox")
+        self.generateSeedCardanoTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generateSeedCardanoTypeContainerQFrameVLayout.addWidget(self.generateSeedCardanoTypeQComboBox)
 
@@ -505,6 +516,7 @@ class Ui_MainWindow(object):
 
         self.generateSeedPassphraseGenerateQPushButton = QPushButton(self.generateSeedClientMnemonicContainerQFrame)
         self.generateSeedPassphraseGenerateQPushButton.setObjectName(u"generateSeedPassphraseGenerateQPushButton")
+        self.generateSeedPassphraseGenerateQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generateSeedClientMnemonicContainerQFrameHLayout.addWidget(self.generateSeedPassphraseGenerateQPushButton, 0, Qt.AlignBottom)
 
@@ -534,11 +546,13 @@ class Ui_MainWindow(object):
         self.generatePassphraseLineEditContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
         self.generatePassphraseLowerCaseQCheckBox = QCheckBox(self.generatePassphraseLineEditContainerQFrame)
         self.generatePassphraseLowerCaseQCheckBox.setObjectName(u"generatePassphraseLowerCaseQCheckBox")
+        self.generatePassphraseLowerCaseQCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generatePassphraseLineEditContainerQFrameHLayout.addWidget(self.generatePassphraseLowerCaseQCheckBox)
 
         self.generatePassphraseCharacterQCheckBox = QCheckBox(self.generatePassphraseLineEditContainerQFrame)
         self.generatePassphraseCharacterQCheckBox.setObjectName(u"generatePassphraseCharacterQCheckBox")
+        self.generatePassphraseCharacterQCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generatePassphraseLineEditContainerQFrameHLayout.addWidget(self.generatePassphraseCharacterQCheckBox)
 
@@ -553,11 +567,13 @@ class Ui_MainWindow(object):
         self.generatePassphraseLetterTypeContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
         self.generatePassphraseUpperCaseQCheckBox = QCheckBox(self.generatePassphraseLetterTypeContainerQFrame)
         self.generatePassphraseUpperCaseQCheckBox.setObjectName(u"generatePassphraseUpperCaseQCheckBox")
+        self.generatePassphraseUpperCaseQCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generatePassphraseLetterTypeContainerQFrameHLayout.addWidget(self.generatePassphraseUpperCaseQCheckBox)
 
         self.generatePassphraseNumberQCheckBox = QCheckBox(self.generatePassphraseLetterTypeContainerQFrame)
         self.generatePassphraseNumberQCheckBox.setObjectName(u"generatePassphraseNumberQCheckBox")
+        self.generatePassphraseNumberQCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generatePassphraseLetterTypeContainerQFrameHLayout.addWidget(self.generatePassphraseNumberQCheckBox)
 
@@ -604,6 +620,7 @@ class Ui_MainWindow(object):
 
         self.generatePassphraseQPushButton = QPushButton(self.generateLengthAndPassphraseQGroupBox)
         self.generatePassphraseQPushButton.setObjectName(u"generatePassphraseQPushButton")
+        self.generatePassphraseQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.generateLengthAndPassphraseQFrameHLayout.addWidget(self.generatePassphraseQPushButton, 0, Qt.AlignBottom)
 
@@ -655,6 +672,7 @@ class Ui_MainWindow(object):
         self.dumpsCryptocurrencyQComboBox.addItem("")
         self.dumpsCryptocurrencyQComboBox.addItem("")
         self.dumpsCryptocurrencyQComboBox.setObjectName(u"dumpsCryptocurrencyQComboBox")
+        self.dumpsCryptocurrencyQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.dumpsCryptocurrencyContainerQFrameVLayout.addWidget(self.dumpsCryptocurrencyQComboBox)
 
@@ -690,6 +708,7 @@ class Ui_MainWindow(object):
         self.dumpsNetworkQComboBox.addItem("")
         self.dumpsNetworkQComboBox.addItem("")
         self.dumpsNetworkQComboBox.setObjectName(u"dumpsNetworkQComboBox")
+        self.dumpsNetworkQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.dumpsNetworkContainerQFrameVLayout.addWidget(self.dumpsNetworkQComboBox)
 
@@ -738,6 +757,7 @@ class Ui_MainWindow(object):
         sizePolicy3.setVerticalStretch(0)
         sizePolicy3.setHeightForWidth(self.dumpsHdQComboBox.sizePolicy().hasHeightForWidth())
         self.dumpsHdQComboBox.setSizePolicy(sizePolicy3)
+        self.dumpsHdQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.dumpsHdListComboContainerQFrameVLayout.addWidget(self.dumpsHdQComboBox)
 
@@ -781,6 +801,7 @@ class Ui_MainWindow(object):
         self.dumpsFromQComboBox.setObjectName(u"dumpsFromQComboBox")
         sizePolicy3.setHeightForWidth(self.dumpsFromQComboBox.sizePolicy().hasHeightForWidth())
         self.dumpsFromQComboBox.setSizePolicy(sizePolicy3)
+        self.dumpsFromQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.dumpsFromContainerQFrameVLayout.addWidget(self.dumpsFromQComboBox)
 
@@ -853,6 +874,7 @@ class Ui_MainWindow(object):
 
         self.bipFromEntropyClientQComboBox = QComboBox(self.bipFromEntropyClientContainerQFrame)
         self.bipFromEntropyClientQComboBox.setObjectName(u"bipFromEntropyClientQComboBox")
+        self.bipFromEntropyClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bipFromEntropyClientContainerQFrameVLayout.addWidget(self.bipFromEntropyClientQComboBox)
 
@@ -984,6 +1006,7 @@ class Ui_MainWindow(object):
         self.bipFromEntropyLanguageQComboBox.addItem("")
         self.bipFromEntropyLanguageQComboBox.addItem("")
         self.bipFromEntropyLanguageQComboBox.setObjectName(u"bipFromEntropyLanguageQComboBox")
+        self.bipFromEntropyLanguageQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bipFromEntropyLanguageContainerQFrameVLayout.addWidget(self.bipFromEntropyLanguageQComboBox)
 
@@ -1019,6 +1042,7 @@ class Ui_MainWindow(object):
         self.bipFromEntropyPublicKeyTypeQComboBox.addItem("")
         self.bipFromEntropyPublicKeyTypeQComboBox.addItem("")
         self.bipFromEntropyPublicKeyTypeQComboBox.setObjectName(u"bipFromEntropyPublicKeyTypeQComboBox")
+        self.bipFromEntropyPublicKeyTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bipFromEntropyPublicKeyTypeContainerQFrameVLayout.addWidget(self.bipFromEntropyPublicKeyTypeQComboBox)
 
@@ -1073,6 +1097,7 @@ class Ui_MainWindow(object):
 
         self.bipFromMnemonicClientQComboBox = QComboBox(self.bipFromMnemonicClientContainerQFrame)
         self.bipFromMnemonicClientQComboBox.setObjectName(u"bipFromMnemonicClientQComboBox")
+        self.bipFromMnemonicClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bipFromMnemonicClientContainerQFrameVLayout.addWidget(self.bipFromMnemonicClientQComboBox)
 
@@ -1199,6 +1224,7 @@ class Ui_MainWindow(object):
         self.bipFromMnemonicPublicKeyTypeQComboBox.addItem("")
         self.bipFromMnemonicPublicKeyTypeQComboBox.addItem("")
         self.bipFromMnemonicPublicKeyTypeQComboBox.setObjectName(u"bipFromMnemonicPublicKeyTypeQComboBox")
+        self.bipFromMnemonicPublicKeyTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bipFromMnemonicPublicKeyTypeContainerQFrameVLayout.addWidget(self.bipFromMnemonicPublicKeyTypeQComboBox)
 
@@ -1253,6 +1279,7 @@ class Ui_MainWindow(object):
 
         self.bipFromSeedClientQComboBox = QComboBox(self.bipFromSeedClientContainerQFrame)
         self.bipFromSeedClientQComboBox.setObjectName(u"bipFromSeedClientQComboBox")
+        self.bipFromSeedClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bipFromSeedClientContainerQFrameVLayout.addWidget(self.bipFromSeedClientQComboBox)
 
@@ -1327,6 +1354,7 @@ class Ui_MainWindow(object):
         self.bipFromSeedPublicKeyTypeQComboBox.addItem("")
         self.bipFromSeedPublicKeyTypeQComboBox.addItem("")
         self.bipFromSeedPublicKeyTypeQComboBox.setObjectName(u"bipFromSeedPublicKeyTypeQComboBox")
+        self.bipFromSeedPublicKeyTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bipFromSeedPublicKeyTypeContainerQFrameVLayout.addWidget(self.bipFromSeedPublicKeyTypeQComboBox)
 
@@ -1397,6 +1425,7 @@ class Ui_MainWindow(object):
 
         self.bipFromXPrivateKeyStrictQCheckBox = QCheckBox(self.bipFromXPrivateKeyStrictCheckBoxContainerQFrame)
         self.bipFromXPrivateKeyStrictQCheckBox.setObjectName(u"bipFromXPrivateKeyStrictQCheckBox")
+        self.bipFromXPrivateKeyStrictQCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bipFromXPrivateKeyStrictCheckBoxContainerQFrameVlayout.addWidget(self.bipFromXPrivateKeyStrictQCheckBox)
 
@@ -1437,6 +1466,7 @@ class Ui_MainWindow(object):
         self.bipFromXPrivateKeyPublicKeyTypeQComboBox.addItem("")
         self.bipFromXPrivateKeyPublicKeyTypeQComboBox.addItem("")
         self.bipFromXPrivateKeyPublicKeyTypeQComboBox.setObjectName(u"bipFromXPrivateKeyPublicKeyTypeQComboBox")
+        self.bipFromXPrivateKeyPublicKeyTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bipFromXPrivateKeyPublicKeyTypeContainerQFrameVLayout.addWidget(self.bipFromXPrivateKeyPublicKeyTypeQComboBox)
 
@@ -1507,6 +1537,7 @@ class Ui_MainWindow(object):
 
         self.bipFromXPublicKeyStrictQCheckBox = QCheckBox(self.bipFromXPublicKeyStrictCheckBoxContainerQFrame)
         self.bipFromXPublicKeyStrictQCheckBox.setObjectName(u"bipFromXPublicKeyStrictQCheckBox")
+        self.bipFromXPublicKeyStrictQCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bipFromXPublicKeyStrictCheckBoxContainerQFrameVLayout.addWidget(self.bipFromXPublicKeyStrictQCheckBox)
 
@@ -1547,6 +1578,7 @@ class Ui_MainWindow(object):
         self.bipFromXPublicKeyPublicKeyTypeQComboBox.addItem("")
         self.bipFromXPublicKeyPublicKeyTypeQComboBox.addItem("")
         self.bipFromXPublicKeyPublicKeyTypeQComboBox.setObjectName(u"bipFromXPublicKeyPublicKeyTypeQComboBox")
+        self.bipFromXPublicKeyPublicKeyTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bipFromXPublicKeyPublicKeyTypeContainerQFrameVLayout.addWidget(self.bipFromXPublicKeyPublicKeyTypeQComboBox)
 
@@ -1618,6 +1650,7 @@ class Ui_MainWindow(object):
 
         self.bipFromWIFBIP38PassphraseQCheckBox = QCheckBox(self.bipFromWIFBIP38PassphraseChackBoxContainerQFrame)
         self.bipFromWIFBIP38PassphraseQCheckBox.setObjectName(u"bipFromWIFBIP38PassphraseQCheckBox")
+        self.bipFromWIFBIP38PassphraseQCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bipFromWIFBIP38PassphraseChackBoxContainerQFrameVLayout.addWidget(self.bipFromWIFBIP38PassphraseQCheckBox)
 
@@ -1685,6 +1718,7 @@ class Ui_MainWindow(object):
         self.bipFromWIFPublicKeyTypeQComboBox.addItem("")
         self.bipFromWIFPublicKeyTypeQComboBox.addItem("")
         self.bipFromWIFPublicKeyTypeQComboBox.setObjectName(u"bipFromWIFPublicKeyTypeQComboBox")
+        self.bipFromWIFPublicKeyTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bipFromWIFPublicKeyTypeContainerQFrameVLayout.addWidget(self.bipFromWIFPublicKeyTypeQComboBox)
 
@@ -1774,6 +1808,7 @@ class Ui_MainWindow(object):
         self.bipFromPrivateKeyPublicKeyTypeQComboBox.addItem("")
         self.bipFromPrivateKeyPublicKeyTypeQComboBox.setObjectName(u"bipFromPrivateKeyPublicKeyTypeQComboBox")
         self.bipFromPrivateKeyPublicKeyTypeQComboBox.setMinimumSize(QSize(150, 0))
+        self.bipFromPrivateKeyPublicKeyTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bipFromPrivateKeyAndPublicKeyTypeLineContainerQFrameVLayout.addWidget(self.bipFromPrivateKeyPublicKeyTypeQComboBox)
 
@@ -1790,6 +1825,7 @@ class Ui_MainWindow(object):
         self.bipQStackedWidget.addWidget(self.bipFromPrivateKeyQStackedWidget)
         self.bipFromPublicKeyQStackedWidget = QWidget()
         self.bipFromPublicKeyQStackedWidget.setObjectName(u"bipFromPublicKeyQStackedWidget")
+        self.bipFromPublicKeyQStackedWidget.setCursor(QCursor(Qt.ArrowCursor))
         self.bipFromPublicKeyQStackedWidgetVLayout = QVBoxLayout(self.bipFromPublicKeyQStackedWidget)
         self.bipFromPublicKeyQStackedWidgetVLayout.setSpacing(10)
         self.bipFromPublicKeyQStackedWidgetVLayout.setObjectName(u"bipFromPublicKeyQStackedWidgetVLayout")
@@ -1867,6 +1903,7 @@ class Ui_MainWindow(object):
         self.bipFromPublicKeyPublicKeyTypeQComboBox.addItem("")
         self.bipFromPublicKeyPublicKeyTypeQComboBox.addItem("")
         self.bipFromPublicKeyPublicKeyTypeQComboBox.setObjectName(u"bipFromPublicKeyPublicKeyTypeQComboBox")
+        self.bipFromPublicKeyPublicKeyTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bipFromPublicKeyPublicKeyTypeContainerQFrameVLayout.addWidget(self.bipFromPublicKeyPublicKeyTypeQComboBox)
 
@@ -1936,6 +1973,7 @@ class Ui_MainWindow(object):
 
         self.cardanoFromEntropyClientQComboBox = QComboBox(self.cardanoFromEntropyAndCardanoTypeClientContainerQFrame)
         self.cardanoFromEntropyClientQComboBox.setObjectName(u"cardanoFromEntropyClientQComboBox")
+        self.cardanoFromEntropyClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromEntropyAndCardanoTypeClientContainerQFrameVLayout.addWidget(self.cardanoFromEntropyClientQComboBox)
 
@@ -2016,6 +2054,7 @@ class Ui_MainWindow(object):
         self.cardanoFromEntropyCardanoTypeQComboBox.addItem("")
         self.cardanoFromEntropyCardanoTypeQComboBox.addItem("")
         self.cardanoFromEntropyCardanoTypeQComboBox.setObjectName(u"cardanoFromEntropyCardanoTypeQComboBox")
+        self.cardanoFromEntropyCardanoTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromEntropyCardanoTypeContainerQFrameVLayout.addWidget(self.cardanoFromEntropyCardanoTypeQComboBox)
 
@@ -2129,6 +2168,7 @@ class Ui_MainWindow(object):
         self.cardanoFromEntropyLanguageQComboBox.addItem("")
         self.cardanoFromEntropyLanguageQComboBox.addItem("")
         self.cardanoFromEntropyLanguageQComboBox.setObjectName(u"cardanoFromEntropyLanguageQComboBox")
+        self.cardanoFromEntropyLanguageQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromEntropyLanguageContainerQFrameVLayout.addWidget(self.cardanoFromEntropyLanguageQComboBox)
 
@@ -2163,6 +2203,7 @@ class Ui_MainWindow(object):
         self.cardanoFromEntropyAddressTypeQComboBox.setObjectName(u"cardanoFromEntropyAddressTypeQComboBox")
         sizePolicy3.setHeightForWidth(self.cardanoFromEntropyAddressTypeQComboBox.sizePolicy().hasHeightForWidth())
         self.cardanoFromEntropyAddressTypeQComboBox.setSizePolicy(sizePolicy3)
+        self.cardanoFromEntropyAddressTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromEntropyAddressTypeContainerQFrameVLayout.addWidget(self.cardanoFromEntropyAddressTypeQComboBox)
 
@@ -2216,6 +2257,7 @@ class Ui_MainWindow(object):
 
         self.cardanoFromMnemonicClientQComboBox = QComboBox(self.cardanoFromMnemonicClientContainerQFrame)
         self.cardanoFromMnemonicClientQComboBox.setObjectName(u"cardanoFromMnemonicClientQComboBox")
+        self.cardanoFromMnemonicClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromMnemonicClientContainerQFrameVLayout.addWidget(self.cardanoFromMnemonicClientQComboBox)
 
@@ -2296,6 +2338,7 @@ class Ui_MainWindow(object):
         self.cardanoFromMnemonicCardanoTypeQComboBox.addItem("")
         self.cardanoFromMnemonicCardanoTypeQComboBox.addItem("")
         self.cardanoFromMnemonicCardanoTypeQComboBox.setObjectName(u"cardanoFromMnemonicCardanoTypeQComboBox")
+        self.cardanoFromMnemonicCardanoTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromMnemonicCardanoTypeContainerQFrameVLayout.addWidget(self.cardanoFromMnemonicCardanoTypeQComboBox)
 
@@ -2411,6 +2454,7 @@ class Ui_MainWindow(object):
 
         self.cardanoFromMnemonicAddressTypeQComboBox = QComboBox(self.cardanoFromMnemonicAddressTypeContainerQFrame)
         self.cardanoFromMnemonicAddressTypeQComboBox.setObjectName(u"cardanoFromMnemonicAddressTypeQComboBox")
+        self.cardanoFromMnemonicAddressTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromMnemonicAddressTypeContainerQFrameVLayout.addWidget(self.cardanoFromMnemonicAddressTypeQComboBox)
 
@@ -2465,6 +2509,7 @@ class Ui_MainWindow(object):
         self.cardanoFromSeedClientQComboBox = QComboBox(self.cardanoFromSeedClientContainerQFrame)
         self.cardanoFromSeedClientQComboBox.setObjectName(u"cardanoFromSeedClientQComboBox")
         self.cardanoFromSeedClientQComboBox.setEnabled(False)
+        self.cardanoFromSeedClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromSeedClientContainerQFrameVLayout.addWidget(self.cardanoFromSeedClientQComboBox)
 
@@ -2536,6 +2581,7 @@ class Ui_MainWindow(object):
         self.cardanoFromSeedCardanoTypeQComboBox.addItem("")
         self.cardanoFromSeedCardanoTypeQComboBox.addItem("")
         self.cardanoFromSeedCardanoTypeQComboBox.setObjectName(u"cardanoFromSeedCardanoTypeQComboBox")
+        self.cardanoFromSeedCardanoTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromSeedCardanoTypeContainerQFrameVLayout.addWidget(self.cardanoFromSeedCardanoTypeQComboBox)
 
@@ -2648,6 +2694,7 @@ class Ui_MainWindow(object):
         self.cardanoFromSeedAddressTypeQComboBox.addItem("")
         self.cardanoFromSeedAddressTypeQComboBox.addItem("")
         self.cardanoFromSeedAddressTypeQComboBox.setObjectName(u"cardanoFromSeedAddressTypeQComboBox")
+        self.cardanoFromSeedAddressTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromSeedAddressTypeContainerQFrameVLayout.addWidget(self.cardanoFromSeedAddressTypeQComboBox)
 
@@ -2714,6 +2761,7 @@ class Ui_MainWindow(object):
 
         self.cardanoFromXPrivateKeyStrictQCheckBox = QCheckBox(self.cardanoFromXPrivateKeyStrictQFrame)
         self.cardanoFromXPrivateKeyStrictQCheckBox.setObjectName(u"cardanoFromXPrivateKeyStrictQCheckBox")
+        self.cardanoFromXPrivateKeyStrictQCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromXPrivateKeyStrictQFrameVLayout.addWidget(self.cardanoFromXPrivateKeyStrictQCheckBox)
 
@@ -2753,6 +2801,7 @@ class Ui_MainWindow(object):
         self.cardanoFromXPrivateKeyCardanoTypeQComboBox.addItem("")
         self.cardanoFromXPrivateKeyCardanoTypeQComboBox.addItem("")
         self.cardanoFromXPrivateKeyCardanoTypeQComboBox.setObjectName(u"cardanoFromXPrivateKeyCardanoTypeQComboBox")
+        self.cardanoFromXPrivateKeyCardanoTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromXPrivateKeyCardanoTypeContainerQFrameVLayout.addWidget(self.cardanoFromXPrivateKeyCardanoTypeQComboBox)
 
@@ -2833,6 +2882,7 @@ class Ui_MainWindow(object):
         self.cardanoFromXPrivateKeyAddressTypeQComboBox.addItem("")
         self.cardanoFromXPrivateKeyAddressTypeQComboBox.addItem("")
         self.cardanoFromXPrivateKeyAddressTypeQComboBox.setObjectName(u"cardanoFromXPrivateKeyAddressTypeQComboBox")
+        self.cardanoFromXPrivateKeyAddressTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromXPrivateKeyAddressTypeContainerQFrameVLayout.addWidget(self.cardanoFromXPrivateKeyAddressTypeQComboBox)
 
@@ -2899,6 +2949,7 @@ class Ui_MainWindow(object):
 
         self.cardanoFromXPublicKeyStrictQCheckBox = QCheckBox(self.cardanoFromXPublicKeyStrictQFrame)
         self.cardanoFromXPublicKeyStrictQCheckBox.setObjectName(u"cardanoFromXPublicKeyStrictQCheckBox")
+        self.cardanoFromXPublicKeyStrictQCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromXPublicKeyStrictQFrameVLayout.addWidget(self.cardanoFromXPublicKeyStrictQCheckBox)
 
@@ -2938,6 +2989,7 @@ class Ui_MainWindow(object):
         self.cardanoFromXPublicKeyCardanoTypeQComboBox.addItem("")
         self.cardanoFromXPublicKeyCardanoTypeQComboBox.addItem("")
         self.cardanoFromXPublicKeyCardanoTypeQComboBox.setObjectName(u"cardanoFromXPublicKeyCardanoTypeQComboBox")
+        self.cardanoFromXPublicKeyCardanoTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromXPublicKeyCardanoTypeContainerQFrameVLayout.addWidget(self.cardanoFromXPublicKeyCardanoTypeQComboBox)
 
@@ -3018,6 +3070,7 @@ class Ui_MainWindow(object):
         self.cardanoFromXPublicKeyAddressTypeQComboBox.addItem("")
         self.cardanoFromXPublicKeyAddressTypeQComboBox.addItem("")
         self.cardanoFromXPublicKeyAddressTypeQComboBox.setObjectName(u"cardanoFromXPublicKeyAddressTypeQComboBox")
+        self.cardanoFromXPublicKeyAddressTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromXPublicKeyAddressTypeContainerQFrameVLayout.addWidget(self.cardanoFromXPublicKeyAddressTypeQComboBox)
 
@@ -3106,6 +3159,7 @@ class Ui_MainWindow(object):
         self.cardanoFromPrivateKeyCardanoTypeQComboBox.addItem("")
         self.cardanoFromPrivateKeyCardanoTypeQComboBox.addItem("")
         self.cardanoFromPrivateKeyCardanoTypeQComboBox.setObjectName(u"cardanoFromPrivateKeyCardanoTypeQComboBox")
+        self.cardanoFromPrivateKeyCardanoTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromPrivateKeyCardanoTypeContainerQFrameVLayout.addWidget(self.cardanoFromPrivateKeyCardanoTypeQComboBox)
 
@@ -3186,6 +3240,7 @@ class Ui_MainWindow(object):
         self.cardanoFromPrivateKeyAddressTypeQComboBox.addItem("")
         self.cardanoFromPrivateKeyAddressTypeQComboBox.addItem("")
         self.cardanoFromPrivateKeyAddressTypeQComboBox.setObjectName(u"cardanoFromPrivateKeyAddressTypeQComboBox")
+        self.cardanoFromPrivateKeyAddressTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromPrivateKeyAddressTypeContainerQFrameVLayout.addWidget(self.cardanoFromPrivateKeyAddressTypeQComboBox)
 
@@ -3273,6 +3328,7 @@ class Ui_MainWindow(object):
         self.cardanoFromPublicKeyCardanoTypeQComboBox.addItem("")
         self.cardanoFromPublicKeyCardanoTypeQComboBox.addItem("")
         self.cardanoFromPublicKeyCardanoTypeQComboBox.setObjectName(u"cardanoFromPublicKeyCardanoTypeQComboBox")
+        self.cardanoFromPublicKeyCardanoTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromPublicKeyCardanoTypeContainerQFrameVLayout.addWidget(self.cardanoFromPublicKeyCardanoTypeQComboBox)
 
@@ -3353,6 +3409,7 @@ class Ui_MainWindow(object):
         self.cardanoFromPublicKeyAddressTypeQComboBox.addItem("")
         self.cardanoFromPublicKeyAddressTypeQComboBox.addItem("")
         self.cardanoFromPublicKeyAddressTypeQComboBox.setObjectName(u"cardanoFromPublicKeyAddressTypeQComboBox")
+        self.cardanoFromPublicKeyAddressTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cardanoFromPublicKeyAddressTypeContainerQFrameVLayout.addWidget(self.cardanoFromPublicKeyAddressTypeQComboBox)
 
@@ -3420,6 +3477,7 @@ class Ui_MainWindow(object):
 
         self.electrumV1FromEntropyClientQComboBox = QComboBox(self.electrumV1FromEntropyClientContainerQFrame)
         self.electrumV1FromEntropyClientQComboBox.setObjectName(u"electrumV1FromEntropyClientQComboBox")
+        self.electrumV1FromEntropyClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV1FromEntropyClientContainerQFrameVLayout.addWidget(self.electrumV1FromEntropyClientQComboBox)
 
@@ -3505,6 +3563,7 @@ class Ui_MainWindow(object):
         self.electrumV1FromEntropyPublicKeyTypeQComboBox.addItem("")
         self.electrumV1FromEntropyPublicKeyTypeQComboBox.addItem("")
         self.electrumV1FromEntropyPublicKeyTypeQComboBox.setObjectName(u"electrumV1FromEntropyPublicKeyTypeQComboBox")
+        self.electrumV1FromEntropyPublicKeyTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV1FromEntropyPublicKeyTypeContainerQFrameVLayout.addWidget(self.electrumV1FromEntropyPublicKeyTypeQComboBox)
 
@@ -3545,6 +3604,7 @@ class Ui_MainWindow(object):
         self.electrumV1FromEntropyLanguageQComboBox.addItem("")
         self.electrumV1FromEntropyLanguageQComboBox.addItem("")
         self.electrumV1FromEntropyLanguageQComboBox.setObjectName(u"electrumV1FromEntropyLanguageQComboBox")
+        self.electrumV1FromEntropyLanguageQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV1FromEntropyLanguageContainerQFrameVLayout.addWidget(self.electrumV1FromEntropyLanguageQComboBox)
 
@@ -3600,6 +3660,7 @@ class Ui_MainWindow(object):
 
         self.electrumV1FromMnemonicClientQComboBox = QComboBox(self.electrumV1FromMnemonicClientContainerQFrame)
         self.electrumV1FromMnemonicClientQComboBox.setObjectName(u"electrumV1FromMnemonicClientQComboBox")
+        self.electrumV1FromMnemonicClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV1FromMnemonicClientContainerQFrameVLayout.addWidget(self.electrumV1FromMnemonicClientQComboBox)
 
@@ -3681,15 +3742,16 @@ class Ui_MainWindow(object):
         self.electrumV1FromMnemonicPublicKeyTypeQComboBox.addItem("")
         self.electrumV1FromMnemonicPublicKeyTypeQComboBox.addItem("")
         self.electrumV1FromMnemonicPublicKeyTypeQComboBox.setObjectName(u"electrumV1FromMnemonicPublicKeyTypeQComboBox")
+        self.electrumV1FromMnemonicPublicKeyTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV1FromMnemonicPublicKeyTypeContainerQFrameVLayout.addWidget(self.electrumV1FromMnemonicPublicKeyTypeQComboBox)
 
 
         self.electrumV1FromMnemonicPublicKeyTypeAndPassphraseContainerQFrameHLayout.addWidget(self.electrumV1FromMnemonicPublicKeyTypeContainerQFrame)
 
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.electrumV1FromMnemonicPublicKeyTypeAndPassphraseContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.electrumV1FromMnemonicPublicKeyTypeAndPassphraseContainerQFrameHLayout.addItem(self.horizontalSpacer)
+        self.electrumV1FromMnemonicPublicKeyTypeAndPassphraseContainerQFrameHLayout.addItem(self.electrumV1FromMnemonicPublicKeyTypeAndPassphraseContainerQFrameHSpacer)
 
 
         self.electrumV1FromMnemonicQStackedWidgetVLayout.addWidget(self.electrumV1FromMnemonicPublicKeyTypeAndPassphraseContainerQFrame)
@@ -3740,6 +3802,7 @@ class Ui_MainWindow(object):
 
         self.electrumV1FromSeedClientQComboBox = QComboBox(self.electrumV1FromSeedClientContainerQFrame)
         self.electrumV1FromSeedClientQComboBox.setObjectName(u"electrumV1FromSeedClientQComboBox")
+        self.electrumV1FromSeedClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV1FromSeedClientContainerQFrameVLayout.addWidget(self.electrumV1FromSeedClientQComboBox)
 
@@ -3812,6 +3875,7 @@ class Ui_MainWindow(object):
         self.electrumV1FromSeedPublicKeyTypeQComboBox.addItem("")
         self.electrumV1FromSeedPublicKeyTypeQComboBox.addItem("")
         self.electrumV1FromSeedPublicKeyTypeQComboBox.setObjectName(u"electrumV1FromSeedPublicKeyTypeQComboBox")
+        self.electrumV1FromSeedPublicKeyTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV1FromSeedsPublicKeyTypeContainerQFrameVLayout.addWidget(self.electrumV1FromSeedPublicKeyTypeQComboBox)
 
@@ -3882,6 +3946,7 @@ class Ui_MainWindow(object):
 
         self.electrumV1FromWIFBIP38PassphraseQCheckBox = QCheckBox(self.electrumV1FromWIFBIP38PassphraseCheckBoxQFrame)
         self.electrumV1FromWIFBIP38PassphraseQCheckBox.setObjectName(u"electrumV1FromWIFBIP38PassphraseQCheckBox")
+        self.electrumV1FromWIFBIP38PassphraseQCheckBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV1FromWIFBIP38PassphraseCheckBoxQFrameVLayout.addWidget(self.electrumV1FromWIFBIP38PassphraseQCheckBox)
 
@@ -3949,6 +4014,7 @@ class Ui_MainWindow(object):
         self.electrumV1FromWIFPublicKeyTypeQComboBox.addItem("")
         self.electrumV1FromWIFPublicKeyTypeQComboBox.addItem("")
         self.electrumV1FromWIFPublicKeyTypeQComboBox.setObjectName(u"electrumV1FromWIFPublicKeyTypeQComboBox")
+        self.electrumV1FromWIFPublicKeyTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV1FromWIFPublicKeyTypeContainerQFrameVLayout.addWidget(self.electrumV1FromWIFPublicKeyTypeQComboBox)
 
@@ -4038,6 +4104,7 @@ class Ui_MainWindow(object):
         self.electrumV1FromPrivateKeyPublicKeyTypeQComboBox.addItem("")
         self.electrumV1FromPrivateKeyPublicKeyTypeQComboBox.addItem("")
         self.electrumV1FromPrivateKeyPublicKeyTypeQComboBox.setObjectName(u"electrumV1FromPrivateKeyPublicKeyTypeQComboBox")
+        self.electrumV1FromPrivateKeyPublicKeyTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV1FromPrivateKeyPublicKeyTypeContainerQFrameVLayout.addWidget(self.electrumV1FromPrivateKeyPublicKeyTypeQComboBox)
 
@@ -4130,6 +4197,7 @@ class Ui_MainWindow(object):
         self.electrumV1FromPublicKeyPublicKeyTypeQComboBox.addItem("")
         self.electrumV1FromPublicKeyPublicKeyTypeQComboBox.addItem("")
         self.electrumV1FromPublicKeyPublicKeyTypeQComboBox.setObjectName(u"electrumV1FromPublicKeyPublicKeyTypeQComboBox")
+        self.electrumV1FromPublicKeyPublicKeyTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV1FromPublicKeyPublicKeyTypeContainerQFrameVLayout.addWidget(self.electrumV1FromPublicKeyPublicKeyTypeQComboBox)
 
@@ -4199,6 +4267,7 @@ class Ui_MainWindow(object):
 
         self.electrumV2FromEntropyClientQComboBox = QComboBox(self.electrumV2FromEntropyClientContainerQFrame)
         self.electrumV2FromEntropyClientQComboBox.setObjectName(u"electrumV2FromEntropyClientQComboBox")
+        self.electrumV2FromEntropyClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV2FromEntropyClientContainerQFrameVLayout.addWidget(self.electrumV2FromEntropyClientQComboBox)
 
@@ -4277,6 +4346,7 @@ class Ui_MainWindow(object):
 
         self.electrumV2FromEntropyModeQComboBox = QComboBox(self.electrumV2FromEntropyModeContainerQFrame)
         self.electrumV2FromEntropyModeQComboBox.setObjectName(u"electrumV2FromEntropyModeQComboBox")
+        self.electrumV2FromEntropyModeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV2FromEntropyModeContainerQFrameVLayout.addWidget(self.electrumV2FromEntropyModeQComboBox)
 
@@ -4300,6 +4370,7 @@ class Ui_MainWindow(object):
         self.electrumV2FromEntropyLanguageQComboBox.setObjectName(u"electrumV2FromEntropyLanguageQComboBox")
         sizePolicy3.setHeightForWidth(self.electrumV2FromEntropyLanguageQComboBox.sizePolicy().hasHeightForWidth())
         self.electrumV2FromEntropyLanguageQComboBox.setSizePolicy(sizePolicy3)
+        self.electrumV2FromEntropyLanguageQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV2FromEntropyLanguageContainerQFrameVLayout.addWidget(self.electrumV2FromEntropyLanguageQComboBox)
 
@@ -4323,6 +4394,7 @@ class Ui_MainWindow(object):
         self.electrumV2FromEntropyMnemonicTypeQComboBox.setObjectName(u"electrumV2FromEntropyMnemonicTypeQComboBox")
         sizePolicy3.setHeightForWidth(self.electrumV2FromEntropyMnemonicTypeQComboBox.sizePolicy().hasHeightForWidth())
         self.electrumV2FromEntropyMnemonicTypeQComboBox.setSizePolicy(sizePolicy3)
+        self.electrumV2FromEntropyMnemonicTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV2FromEntropyMnemonicTypeContainerQFrameVLayout.addWidget(self.electrumV2FromEntropyMnemonicTypeQComboBox)
 
@@ -4355,6 +4427,7 @@ class Ui_MainWindow(object):
         self.electrumV2FromEntropyPublicKeyTypeQComboBox.addItem("")
         self.electrumV2FromEntropyPublicKeyTypeQComboBox.addItem("")
         self.electrumV2FromEntropyPublicKeyTypeQComboBox.setObjectName(u"electrumV2FromEntropyPublicKeyTypeQComboBox")
+        self.electrumV2FromEntropyPublicKeyTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV2FromEntropyPublicKeyTypeContainerQFrameVLayout.addWidget(self.electrumV2FromEntropyPublicKeyTypeQComboBox)
 
@@ -4408,6 +4481,7 @@ class Ui_MainWindow(object):
 
         self.electrumV2FromMnemonicClientQComboBox = QComboBox(self.electrumV2FromMnemonicClientContainerQFrame)
         self.electrumV2FromMnemonicClientQComboBox.setObjectName(u"electrumV2FromMnemonicClientQComboBox")
+        self.electrumV2FromMnemonicClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV2FromMnemonicClientContainerQFrameVLayout.addWidget(self.electrumV2FromMnemonicClientQComboBox)
 
@@ -4490,6 +4564,7 @@ class Ui_MainWindow(object):
 
         self.electrumV2FromMnemonicModeQComboBox = QComboBox(self.electrumV2FromMnemonicModeContainerQFrame)
         self.electrumV2FromMnemonicModeQComboBox.setObjectName(u"electrumV2FromMnemonicModeQComboBox")
+        self.electrumV2FromMnemonicModeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV2FromMnemonicModeContainerQFrameVLayout.addWidget(self.electrumV2FromMnemonicModeQComboBox)
 
@@ -4522,6 +4597,7 @@ class Ui_MainWindow(object):
 
         self.electrumV2FromMnemonicMnemonicTypeQComboBox = QComboBox(self.electrumV2FromMnemonicMnemonicTypeContainerQFrame)
         self.electrumV2FromMnemonicMnemonicTypeQComboBox.setObjectName(u"electrumV2FromMnemonicMnemonicTypeQComboBox")
+        self.electrumV2FromMnemonicMnemonicTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV2FromMnemonicMnemonicTypeContainerQFrameVLayout.addWidget(self.electrumV2FromMnemonicMnemonicTypeQComboBox)
 
@@ -4557,6 +4633,7 @@ class Ui_MainWindow(object):
         self.electrumV2FromMnemonicPublicKeyTypeQComboBox.addItem("")
         self.electrumV2FromMnemonicPublicKeyTypeQComboBox.addItem("")
         self.electrumV2FromMnemonicPublicKeyTypeQComboBox.setObjectName(u"electrumV2FromMnemonicPublicKeyTypeQComboBox")
+        self.electrumV2FromMnemonicPublicKeyTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV2FromMnemonicPublicKeyTypeContainerQFrameVLayout.addWidget(self.electrumV2FromMnemonicPublicKeyTypeQComboBox)
 
@@ -4610,6 +4687,7 @@ class Ui_MainWindow(object):
 
         self.electrumV2FromSeedClientQComboBox = QComboBox(self.electrumV2FromSeedClientContainerQFrame)
         self.electrumV2FromSeedClientQComboBox.setObjectName(u"electrumV2FromSeedClientQComboBox")
+        self.electrumV2FromSeedClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV2FromSeedClientContainerQFrameVLayout.addWidget(self.electrumV2FromSeedClientQComboBox)
 
@@ -4670,6 +4748,7 @@ class Ui_MainWindow(object):
 
         self.electrumV2FromSeedModeQComboBox = QComboBox(self.electrumV2FromSeedModeContainerQFrame)
         self.electrumV2FromSeedModeQComboBox.setObjectName(u"electrumV2FromSeedModeQComboBox")
+        self.electrumV2FromSeedModeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV2FromSeedModeContainerQFrameVLayout.addWidget(self.electrumV2FromSeedModeQComboBox)
 
@@ -4701,6 +4780,7 @@ class Ui_MainWindow(object):
         self.electrumV2FromSeedPublicKeyTypeQComboBox.addItem("")
         self.electrumV2FromSeedPublicKeyTypeQComboBox.addItem("")
         self.electrumV2FromSeedPublicKeyTypeQComboBox.setObjectName(u"electrumV2FromSeedPublicKeyTypeQComboBox")
+        self.electrumV2FromSeedPublicKeyTypeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.electrumV2FromSeedPublicKeyTypeContainerQFrameVLayout.addWidget(self.electrumV2FromSeedPublicKeyTypeQComboBox)
 
@@ -4768,6 +4848,7 @@ class Ui_MainWindow(object):
 
         self.moneroFromEntropyClientQComboBox = QComboBox(self.moneroFromEntropyClientContainerQFrame)
         self.moneroFromEntropyClientQComboBox.setObjectName(u"moneroFromEntropyClientQComboBox")
+        self.moneroFromEntropyClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.moneroFromEntropyClientContainerQFrameVLayout.addWidget(self.moneroFromEntropyClientQComboBox)
 
@@ -4849,6 +4930,7 @@ class Ui_MainWindow(object):
         self.moneroFromEntropyLanguageQComboBox.addItem("")
         self.moneroFromEntropyLanguageQComboBox.addItem("")
         self.moneroFromEntropyLanguageQComboBox.setObjectName(u"moneroFromEntropyLanguageQComboBox")
+        self.moneroFromEntropyLanguageQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.moneroFromEntropyLanguageContainerQFrameVLayout.addWidget(self.moneroFromEntropyLanguageQComboBox)
 
@@ -4936,6 +5018,7 @@ class Ui_MainWindow(object):
 
         self.moneroFromMnemonicClientQComboBox = QComboBox(self.moneroFromMnemonicClientContainerQFrame)
         self.moneroFromMnemonicClientQComboBox.setObjectName(u"moneroFromMnemonicClientQComboBox")
+        self.moneroFromMnemonicClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.moneroFromMnemonicClientContainerQFrameVLayout.addWidget(self.moneroFromMnemonicClientQComboBox)
 
@@ -5071,6 +5154,7 @@ class Ui_MainWindow(object):
 
         self.moneroFromSeedClientQComboBox = QComboBox(self.moneroFromSeedClientContainerQFrame)
         self.moneroFromSeedClientQComboBox.setObjectName(u"moneroFromSeedClientQComboBox")
+        self.moneroFromSeedClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.moneroFromSeedClientContainerQFrameVLayout.addWidget(self.moneroFromSeedClientQComboBox)
 
@@ -5444,51 +5528,61 @@ class Ui_MainWindow(object):
         self.derivationTabButtonsContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
         self.customTabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.customTabQPushButton.setObjectName(u"customTabQPushButton")
+        self.customTabQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.derivationTabButtonsContainerQFrameHLayout.addWidget(self.customTabQPushButton)
 
         self.bip44TabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.bip44TabQPushButton.setObjectName(u"bip44TabQPushButton")
+        self.bip44TabQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.derivationTabButtonsContainerQFrameHLayout.addWidget(self.bip44TabQPushButton)
 
         self.bip49TabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.bip49TabQPushButton.setObjectName(u"bip49TabQPushButton")
+        self.bip49TabQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.derivationTabButtonsContainerQFrameHLayout.addWidget(self.bip49TabQPushButton)
 
         self.bip84TabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.bip84TabQPushButton.setObjectName(u"bip84TabQPushButton")
+        self.bip84TabQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.derivationTabButtonsContainerQFrameHLayout.addWidget(self.bip84TabQPushButton)
 
         self.bip86TabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.bip86TabQPushButton.setObjectName(u"bip86TabQPushButton")
+        self.bip86TabQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.derivationTabButtonsContainerQFrameHLayout.addWidget(self.bip86TabQPushButton)
 
         self.bip141TabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.bip141TabQPushButton.setObjectName(u"bip141TabQPushButton")
+        self.bip141TabQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.derivationTabButtonsContainerQFrameHLayout.addWidget(self.bip141TabQPushButton)
 
         self.cip1852TabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.cip1852TabQPushButton.setObjectName(u"cip1852TabQPushButton")
+        self.cip1852TabQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.derivationTabButtonsContainerQFrameHLayout.addWidget(self.cip1852TabQPushButton)
 
         self.electrumTabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.electrumTabQPushButton.setObjectName(u"electrumTabQPushButton")
+        self.electrumTabQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.derivationTabButtonsContainerQFrameHLayout.addWidget(self.electrumTabQPushButton)
 
         self.moneroTabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.moneroTabQPushButton.setObjectName(u"moneroTabQPushButton")
+        self.moneroTabQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.derivationTabButtonsContainerQFrameHLayout.addWidget(self.moneroTabQPushButton)
 
         self.hdwTabQPushButton = QPushButton(self.derivationTabButtonsContainerQFrame)
         self.hdwTabQPushButton.setObjectName(u"hdwTabQPushButton")
+        self.hdwTabQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.derivationTabButtonsContainerQFrameHLayout.addWidget(self.hdwTabQPushButton)
 
@@ -5577,6 +5671,7 @@ class Ui_MainWindow(object):
         self.customClientQComboBox.addItem("")
         self.customClientQComboBox.addItem("")
         self.customClientQComboBox.setObjectName(u"customClientQComboBox")
+        self.customClientQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.customClientQFrameVLayout.addWidget(self.customClientQComboBox)
 
@@ -5718,6 +5813,7 @@ class Ui_MainWindow(object):
         self.bip44ChangeQComboBox.addItem("")
         self.bip44ChangeQComboBox.addItem("")
         self.bip44ChangeQComboBox.setObjectName(u"bip44ChangeQComboBox")
+        self.bip44ChangeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bip44ChangeQFrameVLayout.addWidget(self.bip44ChangeQComboBox)
 
@@ -5891,6 +5987,7 @@ class Ui_MainWindow(object):
         self.bip49ChangeQComboBox.addItem("")
         self.bip49ChangeQComboBox.addItem("")
         self.bip49ChangeQComboBox.setObjectName(u"bip49ChangeQComboBox")
+        self.bip49ChangeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bip49ChangeQFrameVLayout.addWidget(self.bip49ChangeQComboBox)
 
@@ -6064,6 +6161,7 @@ class Ui_MainWindow(object):
         self.bip84ChangeQComboBox.addItem("")
         self.bip84ChangeQComboBox.addItem("")
         self.bip84ChangeQComboBox.setObjectName(u"bip84ChangeQComboBox")
+        self.bip84ChangeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bip84ChangeQFrameVLayout.addWidget(self.bip84ChangeQComboBox)
 
@@ -6237,6 +6335,7 @@ class Ui_MainWindow(object):
         self.bip86ChangeQComboBox.addItem("")
         self.bip86ChangeQComboBox.addItem("")
         self.bip86ChangeQComboBox.setObjectName(u"bip86ChangeQComboBox")
+        self.bip86ChangeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bip86ChangeQFrameVLayout.addWidget(self.bip86ChangeQComboBox)
 
@@ -6344,6 +6443,7 @@ class Ui_MainWindow(object):
         self.bip141ScriptSemanticsQComboBox.addItem("")
         self.bip141ScriptSemanticsQComboBox.addItem("")
         self.bip141ScriptSemanticsQComboBox.setObjectName(u"bip141ScriptSemanticsQComboBox")
+        self.bip141ScriptSemanticsQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bip141ScriptSemanticsQFrameVLayout.addWidget(self.bip141ScriptSemanticsQComboBox)
 
@@ -6486,6 +6586,7 @@ class Ui_MainWindow(object):
         self.cip1852ChangeQComboBox.addItem("")
         self.cip1852ChangeQComboBox.addItem("")
         self.cip1852ChangeQComboBox.setObjectName(u"cip1852ChangeQComboBox")
+        self.cip1852ChangeQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.cip1852ChangeQFrameVLayout.addWidget(self.cip1852ChangeQComboBox)
 
@@ -6817,6 +6918,7 @@ class Ui_MainWindow(object):
         self.dumpsFormatQComboBox.addItem("")
         self.dumpsFormatQComboBox.addItem("")
         self.dumpsFormatQComboBox.setObjectName(u"dumpsFormatQComboBox")
+        self.dumpsFormatQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.dumpsformatQFrameVLayout.addWidget(self.dumpsFormatQComboBox)
 
@@ -6883,12 +6985,14 @@ class Ui_MainWindow(object):
         sizePolicy5.setVerticalStretch(0)
         sizePolicy5.setHeightForWidth(self.dumpsGenerateQPushButton.sizePolicy().hasHeightForWidth())
         self.dumpsGenerateQPushButton.setSizePolicy(sizePolicy5)
+        self.dumpsGenerateQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.dumpsGenerateQPushButton.setStyleSheet(u"")
 
         self.dumpsFormatKeysContainerQGroupBoxHLayout.addWidget(self.dumpsGenerateQPushButton, 0, Qt.AlignBottom)
 
         self.dumpsSaveAndGenerateQPushButton = QPushButton(self.dumpsFormatKeysContainerQGroupBox)
         self.dumpsSaveAndGenerateQPushButton.setObjectName(u"dumpsSaveAndGenerateQPushButton")
+        self.dumpsSaveAndGenerateQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.dumpsFormatKeysContainerQGroupBoxHLayout.addWidget(self.dumpsSaveAndGenerateQPushButton, 0, Qt.AlignBottom)
 
@@ -6899,16 +7003,59 @@ class Ui_MainWindow(object):
 
         self.dumpsPageQStackedWidgetVLayout.addItem(self.dumpsStackQGroupBoxVSpacer)
 
+        self.hdWalletContainerQFrameVSpacerB = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.dumpsPageQStackedWidgetVLayout.addItem(self.hdWalletContainerQFrameVSpacerB)
+
         self.hdwalletQStackedWidget.addWidget(self.dumpsPageQStackedWidget)
 
         self.hdwalletMainQFrameVLayout.addWidget(self.hdwalletQStackedWidget)
 
+        self.footerContainerQFrame = QFrame(self.hdwalletMainQFrame)
+        self.footerContainerQFrame.setObjectName(u"footerContainerQFrame")
+        self.footerContainerQFrame.setFrameShape(QFrame.StyledPanel)
+        self.footerContainerQFrame.setFrameShadow(QFrame.Raised)
+        self.footerContainerQFrameHLayout = QHBoxLayout(self.footerContainerQFrame)
+        self.footerContainerQFrameHLayout.setSpacing(10)
+        self.footerContainerQFrameHLayout.setObjectName(u"footerContainerQFrameHLayout")
+        self.footerContainerQFrameHLayout.setContentsMargins(0, 10, 0, 0)
+        self.linksContainerQFrame = QFrame(self.footerContainerQFrame)
+        self.linksContainerQFrame.setObjectName(u"linksContainerQFrame")
+        self.linksContainerQFrame.setFrameShape(QFrame.StyledPanel)
+        self.linksContainerQFrame.setFrameShadow(QFrame.Raised)
+        self.linksContainerQFrameHLayout = QHBoxLayout(self.linksContainerQFrame)
+        self.linksContainerQFrameHLayout.setSpacing(5)
+        self.linksContainerQFrameHLayout.setObjectName(u"linksContainerQFrameHLayout")
+        self.linksContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
+        self.copyrightQLabel = QLabel(self.linksContainerQFrame)
+        self.copyrightQLabel.setObjectName(u"copyrightQLabel")
+
+        self.linksContainerQFrameHLayout.addWidget(self.copyrightQLabel)
+
+        self.websiteQLabel = QLabel(self.linksContainerQFrame)
+        self.websiteQLabel.setObjectName(u"websiteQLabel")
+        self.websiteQLabel.setCursor(QCursor(Qt.PointingHandCursor))
+
+        self.linksContainerQFrameHLayout.addWidget(self.websiteQLabel)
+
+
+        self.footerContainerQFrameHLayout.addWidget(self.linksContainerQFrame)
+
+        self.footerContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.footerContainerQFrameHLayout.addItem(self.footerContainerQFrameHSpacer)
+
+        self.helpHDWalletQPushButton = QPushButton(self.footerContainerQFrame)
+        self.helpHDWalletQPushButton.setObjectName(u"helpHDWalletQPushButton")
+        self.helpHDWalletQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
+
+        self.footerContainerQFrameHLayout.addWidget(self.helpHDWalletQPushButton)
+
+
+        self.hdwalletMainQFrameVLayout.addWidget(self.footerContainerQFrame)
+
 
         self.hdWalletContainerQFrameVLayout.addWidget(self.hdwalletMainQFrame)
-
-        self.hdWalletContainerQFrameVSpacerB = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.hdWalletContainerQFrameVLayout.addItem(self.hdWalletContainerQFrameVSpacerB)
 
 
         self.centralwidgetHLayout.addWidget(self.hdWalletContainerQFrame)
@@ -7008,16 +7155,19 @@ class Ui_MainWindow(object):
 
         self.outputTerminalQPushButton = QPushButton(self.outputTerminalActionQWidget)
         self.outputTerminalQPushButton.setObjectName(u"outputTerminalQPushButton")
+        self.outputTerminalQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.outputTerminalActionQWidgetHLayout.addWidget(self.outputTerminalQPushButton)
 
         self.stopTerminalQPushButton = QPushButton(self.outputTerminalActionQWidget)
         self.stopTerminalQPushButton.setObjectName(u"stopTerminalQPushButton")
+        self.stopTerminalQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.outputTerminalActionQWidgetHLayout.addWidget(self.stopTerminalQPushButton)
 
         self.clearTerminalQPushButton = QPushButton(self.outputTerminalActionQWidget)
         self.clearTerminalQPushButton.setObjectName(u"clearTerminalQPushButton")
+        self.clearTerminalQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.outputTerminalActionQWidgetHLayout.addWidget(self.clearTerminalQPushButton)
 
@@ -7032,13 +7182,13 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.hdwalletQStackedWidget.setCurrentIndex(1)
-        self.hdQStackedWidget.setCurrentIndex(2)
-        self.bipQStackedWidget.setCurrentIndex(2)
-        self.cardanoQStackedWidget.setCurrentIndex(0)
-        self.electrumV1QStackedWidget.setCurrentIndex(2)
+        self.hdQStackedWidget.setCurrentIndex(4)
+        self.bipQStackedWidget.setCurrentIndex(4)
+        self.cardanoQStackedWidget.setCurrentIndex(4)
+        self.electrumV1QStackedWidget.setCurrentIndex(3)
         self.electrumV2QStackedWidget.setCurrentIndex(2)
         self.moneroQStackedWidget.setCurrentIndex(5)
-        self.derivationsQStackedWidget.setCurrentIndex(8)
+        self.derivationsQStackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -7049,7 +7199,6 @@ class Ui_MainWindow(object):
         self.generateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
         self.dumpQPushButton.setText(QCoreApplication.translate("MainWindow", u"Dumps", None))
         self.donationHDWalletQPushButton.setText(QCoreApplication.translate("MainWindow", u"Donation", None))
-        self.helpHDWalletQPushButton.setText(QCoreApplication.translate("MainWindow", u"Help", None))
         self.generateClientAndStrengthContainerQGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Entropy", None))
         self.generateEntropyClientQLabel.setText(QCoreApplication.translate("MainWindow", u"Client", None))
         self.generateEntropyClientQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
@@ -7618,6 +7767,9 @@ class Ui_MainWindow(object):
         self.dumpsExcludeOrIncludeQLabel.setText(QCoreApplication.translate("MainWindow", u"Exclude / Include", None))
         self.dumpsGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Generate", None))
         self.dumpsSaveAndGenerateQPushButton.setText(QCoreApplication.translate("MainWindow", u"Save", None))
+        self.copyrightQLabel.setText(QCoreApplication.translate("MainWindow", u"\u00a9 2020-2024", None))
+        self.websiteQLabel.setText(QCoreApplication.translate("MainWindow", u"hdwallet.io", None))
+        self.helpHDWalletQPushButton.setText(QCoreApplication.translate("MainWindow", u"Help", None))
         self.outputTerminalQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Command Line Interface (CLI)", None))
         self.outputTerminalQPushButton.setText(QCoreApplication.translate("MainWindow", u"Execute", None))
         self.stopTerminalQPushButton.setText(QCoreApplication.translate("MainWindow", u"Stop", None))

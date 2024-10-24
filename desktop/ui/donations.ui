@@ -443,6 +443,9 @@
                </item>
                <item>
                 <widget class="QComboBox" name="donationsCryptocurrencyQComboBox">
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
                  <property name="placeholderText">
                   <string>Select Cryptocurrency</string>
                  </property>
