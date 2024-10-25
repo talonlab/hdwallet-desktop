@@ -9,7 +9,6 @@
 from cx_Freeze import setup, Executable
 from hdwallet import info
 
-
 app_name  = "HDWallet"
 icon_path = "desktop/ui/images/icon/icon.ico"
 
@@ -69,6 +68,7 @@ executables = [
 setup(
     name=app_name,
     version=info.__versions__["desktop"],
+    author=info.__author__,
     description="A desktop application for generating hierarchical deterministic wallets using the HDWallet library.",
     executables=executables,
     options={
