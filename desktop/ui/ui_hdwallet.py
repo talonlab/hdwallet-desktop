@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletXnyhVj.ui'
+## Form generated from reading UI file 'hdwalletpSTvnT.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -28,7 +28,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1300, 598)
+        MainWindow.resize(1300, 608)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -627,6 +627,10 @@ class Ui_MainWindow(object):
 
 
         self.generatePageQStackedWidgetVLayout.addWidget(self.generateLengthAndPassphraseQGroupBox)
+
+        self.generatePageQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.generatePageQStackedWidgetVLayout.addItem(self.generatePageQStackedWidgetVSpacer)
 
         self.hdwalletQStackedWidget.addWidget(self.generatePageQStackedWidget)
         self.dumpsPageQStackedWidget = QWidget()
@@ -6972,17 +6976,17 @@ class Ui_MainWindow(object):
 
         self.dumpsPageQStackedWidgetVLayout.addWidget(self.dumpsFormatKeysContainerQGroupBox)
 
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.dumpsPageQStackedWidgetVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.dumpsPageQStackedWidgetVLayout.addItem(self.verticalSpacer)
+        self.dumpsPageQStackedWidgetVLayout.addItem(self.dumpsPageQStackedWidgetVSpacer)
 
         self.hdwalletQStackedWidget.addWidget(self.dumpsPageQStackedWidget)
 
         self.hdwalletMainQFrameVLayout.addWidget(self.hdwalletQStackedWidget)
 
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.hdwalletMainQFrameVSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.hdwalletMainQFrameVLayout.addItem(self.verticalSpacer_2)
+        self.hdwalletMainQFrameVLayout.addItem(self.hdwalletMainQFrameVSpacer)
 
         self.footerContainerQFrame = QFrame(self.hdwalletMainQFrame)
         self.footerContainerQFrame.setObjectName(u"footerContainerQFrame")
@@ -7028,6 +7032,7 @@ class Ui_MainWindow(object):
         self.linksHelpContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
         self.helpHDWalletQPushButton = QPushButton(self.linksHelpContainerQFrame)
         self.helpHDWalletQPushButton.setObjectName(u"helpHDWalletQPushButton")
+        self.helpHDWalletQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.linksHelpContainerQFrameHLayout.addWidget(self.helpHDWalletQPushButton)
 
@@ -7164,7 +7169,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.hdwalletQStackedWidget.setCurrentIndex(0)
+        self.hdwalletQStackedWidget.setCurrentIndex(1)
         self.hdQStackedWidget.setCurrentIndex(2)
         self.bipQStackedWidget.setCurrentIndex(5)
         self.cardanoQStackedWidget.setCurrentIndex(4)

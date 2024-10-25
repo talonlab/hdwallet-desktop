@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1300</width>
-    <height>598</height>
+    <height>608</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -1284,6 +1284,19 @@
                  </item>
                 </layout>
                </widget>
+              </item>
+              <item>
+               <spacer name="generatePageQStackedWidgetVSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
               </item>
              </layout>
             </widget>
@@ -15915,7 +15928,7 @@
                </widget>
               </item>
               <item>
-               <spacer name="verticalSpacer">
+               <spacer name="dumpsPageQStackedWidgetVSpacer">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
@@ -15932,7 +15945,7 @@
            </widget>
           </item>
           <item>
-           <spacer name="verticalSpacer_2">
+           <spacer name="hdwalletMainQFrameVSpacer">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
@@ -16051,6 +16064,9 @@
                 </property>
                 <item>
                  <widget class="QPushButton" name="helpHDWalletQPushButton">
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
+                  </property>
                   <property name="text">
                    <string>Help</string>
                   </property>

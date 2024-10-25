@@ -436,14 +436,14 @@ QGroupBox {
     border: 1px solid rgba(128, 128, 128, 0.25);
     border-radius: 4px;
     margin-top: 1ex;
-    font: 11pt "HDWallet";
+    font: 10.6pt "HDWallet";
     text-transform: uppercase;
 }
 
 QGroupBox::title {
     subcontrol-origin: margin;
     left: 15px;
-    padding: 0 3px 0 3px;
+    padding: 2px 3px 6px 3px;
     background-color: rgb(16, 21, 27);
 }
 
