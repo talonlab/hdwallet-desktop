@@ -26,7 +26,7 @@ from bip38 import (
 
 from hdwallet import HDWallet
 from hdwallet.hds import HDS
-from hdwallet.const import ELECTRUM_V2_MODES
+from hdwallet.const import MODES as ELECTRUM_V2_MODES
 from hdwallet.cryptocurrencies import (
     Cardano, CRYPTOCURRENCIES
 )
@@ -115,6 +115,7 @@ class Dumps:
             "BIP49": "bipsPageQWidget",
             "BIP84": "bipsPageQWidget",
             "BIP86": "bipsPageQWidget",
+            "BIP141": "bipsPageQWidget",
             "Cardano": "cardanoPageQWidget",
             "Electrum-V1": "electrumV1PageQWidget",
             "Electrum-V2": "electrumV2PageQWidget",
@@ -127,6 +128,7 @@ class Dumps:
             "BIP49": ["WIF", "Private Key", "Public Key"],
             "BIP84": ["WIF", "Private Key", "Public Key"],
             "BIP86": ["WIF", "Private Key", "Public Key"],
+            "BIP141": ["WIF", "Private Key", "Public Key"],
             "Electrum-V1": [],
             "Electrum-V2": [],
             "Cardano": ["Private Key", "Public Key"],
@@ -134,12 +136,13 @@ class Dumps:
         }
 
         self.hd_allowed_derivation = {
-            "BIP32": ["Custom", "BIP44", "BIP49", "BIP84", "BIP86", "CIP1852", "HDW"],
-            "BIP32XPUB": ["Custom"],
+            "BIP32": ["Custom", "BIP44", "BIP49", "BIP84", "BIP86", "BIP141", "CIP1852", "HDW"],
+            "BIP32XPUB": ["Custom", "BIP141"],
             "BIP44": ["BIP44"],
             "BIP49": ["BIP49"],
             "BIP84": ["BIP84"],
             "BIP86": ["BIP86"],
+            "BIP141": ["Custom", "BIP44", "BIP49", "BIP84", "BIP86", "BIP141", "CIP1852", "HDW"],
             "Cardano": ["Custom", "BIP44", "CIP1852"],
             "CardanoXPUB": ["Custom"],
             "Electrum-V1": ["Electrum"],
@@ -266,10 +269,10 @@ class Dumps:
 
         # BIP Semantic
         self.script_semantics = {
-            "P2WPKH": "P2WPKH", 
-            "P2WPKH nested in P2SH": "P2WPKH_IN_P2SH", 
-            "P2WSH (1-of-1 multisig)": "P2WSH", 
-            "P2WSH nested in P2SH (1-of-1 multisig)":"P2WSH_IN_P2SH"
+            "P2WPKH": "p2wpkh",
+            "P2WPKH-In-P2SH": "p2wpkh-in-p2sh",
+            "P2WSH": "p2wsh",
+            "P2WSH-In-P2SH": "p2wsh-in-p2sh"
         }
 
         self.bips_sematic_combos = [
@@ -841,7 +844,7 @@ class Dumps:
         elif current_tab == "HDW":
             return HDWDerivation(
                 account=self.ui.hdwAccountQLineEdit.text(),
-                ecc=self.ui.hdwEccQComboBox.currentText(),
+                ecc=self.ui.hdwEccQLineEdit.text(),
                 address=self.ui.hdwAddressQLineEdit.text()
             )
 
