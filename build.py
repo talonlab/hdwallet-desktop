@@ -9,8 +9,14 @@
 from cx_Freeze import setup, Executable
 from hdwallet import info
 
+import platform
+
 app_name  = "HDWallet"
-icon_path = "desktop/ui/images/icon/icon.ico"
+
+if platform.system() == "Windows":
+    icon_path = "desktop/ui/images/icon/icon.ico"
+else:
+    icon_path = "desktop/ui/images/svg/HDW-Logo.svg"
 
 msi_shortcut_table = [
     (
