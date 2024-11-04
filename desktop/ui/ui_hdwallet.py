@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletOABInB.ui'
+## Form generated from reading UI file 'hdwalletGzvucj.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -923,6 +923,47 @@ class Ui_MainWindow(object):
 
         self.bipFromEntropyClientAndEntropyContainerQFrameHLayout.addWidget(self.bipFromEntropyContainerQFrame)
 
+        self.bipFromEntropyLanguageContainerQFrame = QFrame(self.bipFromEntropyClientAndEntropyContainerQFrame)
+        self.bipFromEntropyLanguageContainerQFrame.setObjectName(u"bipFromEntropyLanguageContainerQFrame")
+        self.bipFromEntropyLanguageContainerQFrameVLayout = QVBoxLayout(self.bipFromEntropyLanguageContainerQFrame)
+        self.bipFromEntropyLanguageContainerQFrameVLayout.setSpacing(5)
+        self.bipFromEntropyLanguageContainerQFrameVLayout.setObjectName(u"bipFromEntropyLanguageContainerQFrameVLayout")
+        self.bipFromEntropyLanguageContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
+        self.bipFromEntropyLanguageLabelContainerQFrame = QFrame(self.bipFromEntropyLanguageContainerQFrame)
+        self.bipFromEntropyLanguageLabelContainerQFrame.setObjectName(u"bipFromEntropyLanguageLabelContainerQFrame")
+        self.bipFromEntropyLanguageLabelContainerQFrameHLayout = QHBoxLayout(self.bipFromEntropyLanguageLabelContainerQFrame)
+        self.bipFromEntropyLanguageLabelContainerQFrameHLayout.setSpacing(15)
+        self.bipFromEntropyLanguageLabelContainerQFrameHLayout.setObjectName(u"bipFromEntropyLanguageLabelContainerQFrameHLayout")
+        self.bipFromEntropyLanguageLabelContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
+        self.bipFromEntropyLanguageQLabel = QLabel(self.bipFromEntropyLanguageLabelContainerQFrame)
+        self.bipFromEntropyLanguageQLabel.setObjectName(u"bipFromEntropyLanguageQLabel")
+
+        self.bipFromEntropyLanguageLabelContainerQFrameHLayout.addWidget(self.bipFromEntropyLanguageQLabel)
+
+        self.bipFromEntropyLanguageLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.bipFromEntropyLanguageLabelContainerQFrameHLayout.addItem(self.bipFromEntropyLanguageLabelContainerQFrameHSpacer)
+
+
+        self.bipFromEntropyLanguageContainerQFrameVLayout.addWidget(self.bipFromEntropyLanguageLabelContainerQFrame)
+
+        self.bipFromEntropyLanguageQComboBox = QComboBox(self.bipFromEntropyLanguageContainerQFrame)
+        self.bipFromEntropyLanguageQComboBox.addItem("")
+        self.bipFromEntropyLanguageQComboBox.addItem("")
+        self.bipFromEntropyLanguageQComboBox.addItem("")
+        self.bipFromEntropyLanguageQComboBox.addItem("")
+        self.bipFromEntropyLanguageQComboBox.addItem("")
+        self.bipFromEntropyLanguageQComboBox.addItem("")
+        self.bipFromEntropyLanguageQComboBox.addItem("")
+        self.bipFromEntropyLanguageQComboBox.addItem("")
+        self.bipFromEntropyLanguageQComboBox.setObjectName(u"bipFromEntropyLanguageQComboBox")
+        self.bipFromEntropyLanguageQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
+
+        self.bipFromEntropyLanguageContainerQFrameVLayout.addWidget(self.bipFromEntropyLanguageQComboBox)
+
+
+        self.bipFromEntropyClientAndEntropyContainerQFrameHLayout.addWidget(self.bipFromEntropyLanguageContainerQFrame)
+
 
         self.bipFromEntropyQStackedWidgetVLayout.addWidget(self.bipFromEntropyClientAndEntropyContainerQFrame)
 
@@ -972,47 +1013,6 @@ class Ui_MainWindow(object):
 
 
         self.bipFromEntropyPublicKeyAndPassphraseContainerQFrameHLayout.addWidget(self.bipFromEntropyPassphraseContainerQFrame)
-
-        self.bipFromEntropyLanguageContainerQFrame = QFrame(self.bipFromEntropyPublicKeyAndPassphraseContainerQFrame)
-        self.bipFromEntropyLanguageContainerQFrame.setObjectName(u"bipFromEntropyLanguageContainerQFrame")
-        self.bipFromEntropyLanguageContainerQFrameVLayout = QVBoxLayout(self.bipFromEntropyLanguageContainerQFrame)
-        self.bipFromEntropyLanguageContainerQFrameVLayout.setSpacing(5)
-        self.bipFromEntropyLanguageContainerQFrameVLayout.setObjectName(u"bipFromEntropyLanguageContainerQFrameVLayout")
-        self.bipFromEntropyLanguageContainerQFrameVLayout.setContentsMargins(0, 0, 0, 0)
-        self.bipFromEntropyLanguageLabelContainerQFrame = QFrame(self.bipFromEntropyLanguageContainerQFrame)
-        self.bipFromEntropyLanguageLabelContainerQFrame.setObjectName(u"bipFromEntropyLanguageLabelContainerQFrame")
-        self.bipFromEntropyLanguageLabelContainerQFrameHLayout = QHBoxLayout(self.bipFromEntropyLanguageLabelContainerQFrame)
-        self.bipFromEntropyLanguageLabelContainerQFrameHLayout.setSpacing(15)
-        self.bipFromEntropyLanguageLabelContainerQFrameHLayout.setObjectName(u"bipFromEntropyLanguageLabelContainerQFrameHLayout")
-        self.bipFromEntropyLanguageLabelContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
-        self.bipFromEntropyLanguageQLabel = QLabel(self.bipFromEntropyLanguageLabelContainerQFrame)
-        self.bipFromEntropyLanguageQLabel.setObjectName(u"bipFromEntropyLanguageQLabel")
-
-        self.bipFromEntropyLanguageLabelContainerQFrameHLayout.addWidget(self.bipFromEntropyLanguageQLabel)
-
-        self.bipFromEntropyLanguageLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.bipFromEntropyLanguageLabelContainerQFrameHLayout.addItem(self.bipFromEntropyLanguageLabelContainerQFrameHSpacer)
-
-
-        self.bipFromEntropyLanguageContainerQFrameVLayout.addWidget(self.bipFromEntropyLanguageLabelContainerQFrame)
-
-        self.bipFromEntropyLanguageQComboBox = QComboBox(self.bipFromEntropyLanguageContainerQFrame)
-        self.bipFromEntropyLanguageQComboBox.addItem("")
-        self.bipFromEntropyLanguageQComboBox.addItem("")
-        self.bipFromEntropyLanguageQComboBox.addItem("")
-        self.bipFromEntropyLanguageQComboBox.addItem("")
-        self.bipFromEntropyLanguageQComboBox.addItem("")
-        self.bipFromEntropyLanguageQComboBox.addItem("")
-        self.bipFromEntropyLanguageQComboBox.addItem("")
-        self.bipFromEntropyLanguageQComboBox.addItem("")
-        self.bipFromEntropyLanguageQComboBox.setObjectName(u"bipFromEntropyLanguageQComboBox")
-        self.bipFromEntropyLanguageQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
-
-        self.bipFromEntropyLanguageContainerQFrameVLayout.addWidget(self.bipFromEntropyLanguageQComboBox)
-
-
-        self.bipFromEntropyPublicKeyAndPassphraseContainerQFrameHLayout.addWidget(self.bipFromEntropyLanguageContainerQFrame)
 
         self.bipFromEntropyPublicKeyTypeContainerQFrame = QFrame(self.bipFromEntropyPublicKeyAndPassphraseContainerQFrame)
         self.bipFromEntropyPublicKeyTypeContainerQFrame.setObjectName(u"bipFromEntropyPublicKeyTypeContainerQFrame")
@@ -1071,6 +1071,11 @@ class Ui_MainWindow(object):
 
         self.bipFromEntropySemanticsQComboBox = QComboBox(self.bipFromEntropySemanticsQFrame)
         self.bipFromEntropySemanticsQComboBox.setObjectName(u"bipFromEntropySemanticsQComboBox")
+        sizePolicy4 = QSizePolicy(QSizePolicy.MinimumExpanding, QSizePolicy.Fixed)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.bipFromEntropySemanticsQComboBox.sizePolicy().hasHeightForWidth())
+        self.bipFromEntropySemanticsQComboBox.setSizePolicy(sizePolicy4)
         self.bipFromEntropySemanticsQComboBox.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.bipFromEntropySemanticsQFrameVLayout.addWidget(self.bipFromEntropySemanticsQComboBox)
@@ -1797,11 +1802,11 @@ class Ui_MainWindow(object):
 
         self.bipFromWIFBIP38PassphraseContainerQFrame = QFrame(self.bipFromWIFPublicKeyAndBIP38PassphraseContainerQFrame)
         self.bipFromWIFBIP38PassphraseContainerQFrame.setObjectName(u"bipFromWIFBIP38PassphraseContainerQFrame")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Preferred)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.bipFromWIFBIP38PassphraseContainerQFrame.sizePolicy().hasHeightForWidth())
-        self.bipFromWIFBIP38PassphraseContainerQFrame.setSizePolicy(sizePolicy4)
+        sizePolicy5 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Preferred)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.bipFromWIFBIP38PassphraseContainerQFrame.sizePolicy().hasHeightForWidth())
+        self.bipFromWIFBIP38PassphraseContainerQFrame.setSizePolicy(sizePolicy5)
         self.bipFromWIFBIP38PassphraseContainerQFrameVLayout = QVBoxLayout(self.bipFromWIFBIP38PassphraseContainerQFrame)
         self.bipFromWIFBIP38PassphraseContainerQFrameVLayout.setSpacing(5)
         self.bipFromWIFBIP38PassphraseContainerQFrameVLayout.setObjectName(u"bipFromWIFBIP38PassphraseContainerQFrameVLayout")
@@ -5807,11 +5812,11 @@ class Ui_MainWindow(object):
 
         self.derivationsQStackedWidget = QStackedWidget(self.derivationQGroupBox)
         self.derivationsQStackedWidget.setObjectName(u"derivationsQStackedWidget")
-        sizePolicy5 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
-        sizePolicy5.setHorizontalStretch(0)
-        sizePolicy5.setVerticalStretch(0)
-        sizePolicy5.setHeightForWidth(self.derivationsQStackedWidget.sizePolicy().hasHeightForWidth())
-        self.derivationsQStackedWidget.setSizePolicy(sizePolicy5)
+        sizePolicy6 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy6.setHorizontalStretch(0)
+        sizePolicy6.setVerticalStretch(0)
+        sizePolicy6.setHeightForWidth(self.derivationsQStackedWidget.sizePolicy().hasHeightForWidth())
+        self.derivationsQStackedWidget.setSizePolicy(sizePolicy6)
         self.customQStackedWidgetPage = QWidget()
         self.customQStackedWidgetPage.setObjectName(u"customQStackedWidgetPage")
         self.customQStackedWidgetPageHLayout = QHBoxLayout(self.customQStackedWidgetPage)
@@ -7116,11 +7121,11 @@ class Ui_MainWindow(object):
 
         self.dumpsGenerateQPushButton = QPushButton(self.dumpsFormatKeysContainerQGroupBox)
         self.dumpsGenerateQPushButton.setObjectName(u"dumpsGenerateQPushButton")
-        sizePolicy6 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Preferred)
-        sizePolicy6.setHorizontalStretch(0)
-        sizePolicy6.setVerticalStretch(0)
-        sizePolicy6.setHeightForWidth(self.dumpsGenerateQPushButton.sizePolicy().hasHeightForWidth())
-        self.dumpsGenerateQPushButton.setSizePolicy(sizePolicy6)
+        sizePolicy7 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Preferred)
+        sizePolicy7.setHorizontalStretch(0)
+        sizePolicy7.setVerticalStretch(0)
+        sizePolicy7.setHeightForWidth(self.dumpsGenerateQPushButton.sizePolicy().hasHeightForWidth())
+        self.dumpsGenerateQPushButton.setSizePolicy(sizePolicy7)
         self.dumpsGenerateQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.dumpsGenerateQPushButton.setStyleSheet(u"")
 
@@ -7216,19 +7221,19 @@ class Ui_MainWindow(object):
         self.outputQFrameVLayout.setContentsMargins(0, 0, 0, 0)
         self.noLayoutQWidget = QWidget(self.outputQFrame)
         self.noLayoutQWidget.setObjectName(u"noLayoutQWidget")
-        sizePolicy7 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
-        sizePolicy7.setHorizontalStretch(0)
-        sizePolicy7.setVerticalStretch(0)
-        sizePolicy7.setHeightForWidth(self.noLayoutQWidget.sizePolicy().hasHeightForWidth())
-        self.noLayoutQWidget.setSizePolicy(sizePolicy7)
+        sizePolicy8 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
+        sizePolicy8.setHorizontalStretch(0)
+        sizePolicy8.setVerticalStretch(0)
+        sizePolicy8.setHeightForWidth(self.noLayoutQWidget.sizePolicy().hasHeightForWidth())
+        self.noLayoutQWidget.setSizePolicy(sizePolicy8)
         self.outputTerminalQWidget = QWidget(self.noLayoutQWidget)
         self.outputTerminalQWidget.setObjectName(u"outputTerminalQWidget")
         self.outputTerminalQWidget.setGeometry(QRect(0, 0, 601, 541))
-        sizePolicy8 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        sizePolicy8.setHorizontalStretch(0)
-        sizePolicy8.setVerticalStretch(0)
-        sizePolicy8.setHeightForWidth(self.outputTerminalQWidget.sizePolicy().hasHeightForWidth())
-        self.outputTerminalQWidget.setSizePolicy(sizePolicy8)
+        sizePolicy9 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy9.setHorizontalStretch(0)
+        sizePolicy9.setVerticalStretch(0)
+        sizePolicy9.setHeightForWidth(self.outputTerminalQWidget.sizePolicy().hasHeightForWidth())
+        self.outputTerminalQWidget.setSizePolicy(sizePolicy9)
         self.outputTerminalQFrameVLayout = QVBoxLayout(self.outputTerminalQWidget)
         self.outputTerminalQFrameVLayout.setSpacing(0)
         self.outputTerminalQFrameVLayout.setObjectName(u"outputTerminalQFrameVLayout")
@@ -7236,8 +7241,8 @@ class Ui_MainWindow(object):
         self.outputTerminalQPlainTextEdit = QPlainTextEdit(self.outputTerminalQWidget)
         self.outputTerminalQPlainTextEdit.setObjectName(u"outputTerminalQPlainTextEdit")
         self.outputTerminalQPlainTextEdit.setEnabled(True)
-        sizePolicy8.setHeightForWidth(self.outputTerminalQPlainTextEdit.sizePolicy().hasHeightForWidth())
-        self.outputTerminalQPlainTextEdit.setSizePolicy(sizePolicy8)
+        sizePolicy9.setHeightForWidth(self.outputTerminalQPlainTextEdit.sizePolicy().hasHeightForWidth())
+        self.outputTerminalQPlainTextEdit.setSizePolicy(sizePolicy9)
         self.outputTerminalQPlainTextEdit.setFrameShape(QFrame.NoFrame)
         self.outputTerminalQPlainTextEdit.setFrameShadow(QFrame.Plain)
         self.outputTerminalQPlainTextEdit.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
@@ -7260,11 +7265,11 @@ class Ui_MainWindow(object):
         self.outputFrameTopContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
         self.outputWidgetTopContainerQFrame = QFrame(self.outputWidgetTopContainerQWidget)
         self.outputWidgetTopContainerQFrame.setObjectName(u"outputWidgetTopContainerQFrame")
-        sizePolicy9 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
-        sizePolicy9.setHorizontalStretch(0)
-        sizePolicy9.setVerticalStretch(0)
-        sizePolicy9.setHeightForWidth(self.outputWidgetTopContainerQFrame.sizePolicy().hasHeightForWidth())
-        self.outputWidgetTopContainerQFrame.setSizePolicy(sizePolicy9)
+        sizePolicy10 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
+        sizePolicy10.setHorizontalStretch(0)
+        sizePolicy10.setVerticalStretch(0)
+        sizePolicy10.setHeightForWidth(self.outputWidgetTopContainerQFrame.sizePolicy().hasHeightForWidth())
+        self.outputWidgetTopContainerQFrame.setSizePolicy(sizePolicy10)
         self.outputWidgetTopContainerQFrame.setMinimumSize(QSize(40, 0))
         self.outputWidgetTopContainerQFrameHLayout = QHBoxLayout(self.outputWidgetTopContainerQFrame)
         self.outputWidgetTopContainerQFrameHLayout.setSpacing(20)
@@ -7421,8 +7426,6 @@ class Ui_MainWindow(object):
         self.bipFromEntropyClientQLabel.setText(QCoreApplication.translate("MainWindow", u"Client", None))
         self.bipFromEntropyClientQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.bipFromEntropyQLabel.setText(QCoreApplication.translate("MainWindow", u"Entropy", None))
-        self.bipFromEntropyPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
-        self.bipFromEntropyPassphraseQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
         self.bipFromEntropyLanguageQLabel.setText(QCoreApplication.translate("MainWindow", u"Language", None))
         self.bipFromEntropyLanguageQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Chinese Simplified", None))
         self.bipFromEntropyLanguageQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Chinese Traditional", None))
@@ -7433,6 +7436,8 @@ class Ui_MainWindow(object):
         self.bipFromEntropyLanguageQComboBox.setItemText(6, QCoreApplication.translate("MainWindow", u"Japanese", None))
         self.bipFromEntropyLanguageQComboBox.setItemText(7, QCoreApplication.translate("MainWindow", u"Spanish", None))
 
+        self.bipFromEntropyPassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
+        self.bipFromEntropyPassphraseQLineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Optional)", None))
         self.bipFromEntropyPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
         self.bipFromEntropyPublicKeyTypeQComboBox.setItemText(0, QCoreApplication.translate("MainWindow", u"Compressed", None))
         self.bipFromEntropyPublicKeyTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Uncompressed", None))
