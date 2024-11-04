@@ -178,7 +178,7 @@
           <item>
            <widget class="QStackedWidget" name="hdwalletQStackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="generatePageQStackedWidget">
              <layout class="QVBoxLayout" name="generatePageQStackedWidgetVLayout">
@@ -1790,7 +1790,7 @@
                     <number>0</number>
                    </property>
                    <property name="currentIndex">
-                    <number>2</number>
+                    <number>0</number>
                    </property>
                    <widget class="QWidget" name="bipsPageQWidget">
                     <layout class="QVBoxLayout" name="bipsPageQWidgetVLayout">
@@ -1812,7 +1812,7 @@
                      <item>
                       <widget class="QStackedWidget" name="bipQStackedWidget">
                        <property name="currentIndex">
-                        <number>5</number>
+                        <number>0</number>
                        </property>
                        <widget class="QWidget" name="bipFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="bipFromEntropyQStackedWidgetVLayout">
@@ -2247,12 +2247,6 @@
                             </item>
                             <item>
                              <widget class="QFrame" name="bipFromEntropyPublicKeyTypeContainerQFrame">
-                              <property name="minimumSize">
-                               <size>
-                                <width>150</width>
-                                <height>0</height>
-                               </size>
-                              </property>
                               <layout class="QVBoxLayout" name="bipFromEntropyPublicKeyTypeContainerQFrameVLayout">
                                <property name="spacing">
                                 <number>5</number>
@@ -2328,6 +2322,65 @@
                                    <string>Uncompressed</string>
                                   </property>
                                  </item>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="bipFromEntropySemanticsQFrame">
+                              <layout class="QVBoxLayout" name="bipFromEntropySemanticsQFrameVLayout">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="bipFromEntropySemanticsLabelQFrame">
+                                 <layout class="QHBoxLayout" name="bipFromEntropySemanticsLabelQFrameHLayout">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="bipFromEntropySemanticsQLabel">
+                                    <property name="text">
+                                     <string>Semantic</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QComboBox" name="bipFromEntropySemanticsQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
+                                 </property>
                                 </widget>
                                </item>
                               </layout>
@@ -2748,6 +2801,65 @@
                               </layout>
                              </widget>
                             </item>
+                            <item>
+                             <widget class="QFrame" name="bipFromMnemonicSemanticsQFrame">
+                              <layout class="QVBoxLayout" name="bipFromMnemonicSemanticsQFrameVLayout">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="bipFromMnemonicSemanticsLabelQFrame">
+                                 <layout class="QHBoxLayout" name="bipFromMnemonicSemanticsLabelQFrameHLayout">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="bipFromMnemonicSemanticsQLabel">
+                                    <property name="text">
+                                     <string>Semantic</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QComboBox" name="bipFromMnemonicSemanticsQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
                            </layout>
                           </widget>
                          </item>
@@ -3046,6 +3158,65 @@
                              </widget>
                             </item>
                             <item>
+                             <widget class="QFrame" name="bipFromSeedSemanticsQFrame">
+                              <layout class="QVBoxLayout" name="bipFromXPrivateKeySemanticsQFrameVLayout_2">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="bipFromSeedSemanticsLabelQFrame">
+                                 <layout class="QHBoxLayout" name="bipFromXPrivateKeySemanticsLabelQFrameHLayout_2">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="bipFromSeedSemanticsQLabel">
+                                    <property name="text">
+                                     <string>Semantic</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QComboBox" name="bipFromSeedSemanticsQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
                              <spacer name="bipFromSeedPublicKeyTypeQFrameHSpacer">
                               <property name="orientation">
                                <enum>Qt::Horizontal</enum>
@@ -3285,6 +3456,65 @@
                                    <string>Uncompressed</string>
                                   </property>
                                  </item>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="bipFromXPrivateKeySemanticsQFrame">
+                              <layout class="QVBoxLayout" name="bipFromXPrivateKeySemanticsQFrameVLayout">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="bipFromXPrivateKeySemanticsLabelQFrame">
+                                 <layout class="QHBoxLayout" name="bipFromXPrivateKeySemanticsLabelQFrameHLayout">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="bipFromXPrivateKeySemanticsQLabel">
+                                    <property name="text">
+                                     <string>Semantic</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QComboBox" name="bipFromXPrivateKeySemanticsQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
+                                 </property>
                                 </widget>
                                </item>
                               </layout>
@@ -3536,6 +3766,84 @@
                              </widget>
                             </item>
                             <item>
+                             <widget class="QFrame" name="bipFromXPublicKeySemanticsQFrame">
+                              <property name="maximumSize">
+                               <size>
+                                <width>200</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
+                              <layout class="QVBoxLayout" name="bipFromXPublicKeySemanticsQFrameVLayout">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="bipFromXPublicKeySemanticsLabelQFrame">
+                                 <layout class="QHBoxLayout" name="bipFromXPublicKeySemanticsLabelQFrameHLayout">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="bipFromXPublicKeySemanticsQLabel">
+                                    <property name="text">
+                                     <string>Semantic</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <spacer name="bipFromXPublicKeySemanticsLabelHSpacer">
+                                    <property name="orientation">
+                                     <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                     <size>
+                                      <width>764</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                   </spacer>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QComboBox" name="bipFromXPublicKeySemanticsQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
                              <spacer name="bipFromXPublicKeyPublicKeyTypeQFrameHSpacer">
                               <property name="orientation">
                                <enum>Qt::Horizontal</enum>
@@ -3692,6 +4000,12 @@
                             </item>
                             <item>
                              <widget class="QFrame" name="bipFromWIFBIP38PassphraseContainerQFrame">
+                              <property name="sizePolicy">
+                               <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                               </sizepolicy>
+                              </property>
                               <layout class="QVBoxLayout" name="bipFromWIFBIP38PassphraseContainerQFrameVLayout">
                                <property name="spacing">
                                 <number>5</number>
@@ -3838,6 +4152,65 @@
                                    <string>Uncompressed</string>
                                   </property>
                                  </item>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="bipFromWIFSemanticsQFrame">
+                              <layout class="QVBoxLayout" name="bipFromXPublicKeySemanticsQFrameVLayout_2">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="bipFromWIFSemanticsLabelQFrame">
+                                 <layout class="QHBoxLayout" name="bipFromXPublicKeySemanticsLabelQFrameHLayout_2">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="bipFromWIFSemanticsQLabel">
+                                    <property name="text">
+                                     <string>Semantic</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QComboBox" name="bipFromWIFSemanticsQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
+                                 </property>
                                 </widget>
                                </item>
                               </layout>
@@ -4045,6 +4418,65 @@
                                    <string>Uncompressed</string>
                                   </property>
                                  </item>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="bipFromPrivateKeySemanticsQFrame">
+                              <layout class="QVBoxLayout" name="bipFromPrivateKeySemanticsQFrameVLayout">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="bipFromPrivateKeySemanticsLabelQFrame">
+                                 <layout class="QHBoxLayout" name="bipFromPrivateKeySemanticsLabelQFrameHLayout">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="bipFromPrivateKeySemanticsQLabel">
+                                    <property name="text">
+                                     <string>Semantic</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QComboBox" name="bipFromPrivateKeySemanticsQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
+                                 </property>
                                 </widget>
                                </item>
                               </layout>
@@ -4268,6 +4700,65 @@
                                    <string>Uncompressed</string>
                                   </property>
                                  </item>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="bipFromPublicKeySemanticsQFrame">
+                              <layout class="QVBoxLayout" name="bipFromPublicKeySemanticsQFrameVLayout">
+                               <property name="spacing">
+                                <number>5</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item>
+                                <widget class="QFrame" name="bipFromPublicKeySemanticsLabelQFrame">
+                                 <layout class="QHBoxLayout" name="bipFromPublicKeySemanticsLabelQFrameHLayout">
+                                  <property name="spacing">
+                                   <number>15</number>
+                                  </property>
+                                  <property name="leftMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLabel" name="bipFromPublicKeySemanticsQLabel">
+                                    <property name="text">
+                                     <string>Semantic</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QComboBox" name="bipFromPublicKeySemanticsQComboBox">
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
+                                 <property name="placeholderText">
+                                  <string>(Select)</string>
+                                 </property>
                                 </widget>
                                </item>
                               </layout>
@@ -12633,16 +13124,6 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="bip141TabQPushButton">
-                      <property name="cursor">
-                       <cursorShape>PointingHandCursor</cursorShape>
-                      </property>
-                      <property name="text">
-                       <string>BIP141</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
                      <widget class="QPushButton" name="cip1852TabQPushButton">
                       <property name="cursor">
                        <cursorShape>PointingHandCursor</cursorShape>
@@ -12707,7 +13188,7 @@
                     </sizepolicy>
                    </property>
                    <property name="currentIndex">
-                    <number>0</number>
+                    <number>5</number>
                    </property>
                    <widget class="QWidget" name="customQStackedWidgetPage">
                     <layout class="QHBoxLayout" name="customQStackedWidgetPageHLayout">
@@ -14506,189 +14987,6 @@
                           <property name="placeholderText">
                            <string>index</string>
                           </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                   <widget class="QWidget" name="bip141QStackedWidgetPage">
-                    <layout class="QHBoxLayout" name="bip141QStackedWidgetPageHLayout">
-                     <property name="spacing">
-                      <number>10</number>
-                     </property>
-                     <property name="leftMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="topMargin">
-                      <number>5</number>
-                     </property>
-                     <property name="rightMargin">
-                      <number>0</number>
-                     </property>
-                     <property name="bottomMargin">
-                      <number>0</number>
-                     </property>
-                     <item>
-                      <widget class="QFrame" name="bip141PathQFrame">
-                       <layout class="QVBoxLayout" name="bip141PathQFrameVLayout">
-                        <property name="spacing">
-                         <number>5</number>
-                        </property>
-                        <property name="leftMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="topMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="rightMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="bottomMargin">
-                         <number>0</number>
-                        </property>
-                        <item>
-                         <widget class="QFrame" name="bip141PathLabelQFrame">
-                          <layout class="QHBoxLayout" name="bip141PathLabelQFrameHLayout">
-                           <property name="spacing">
-                            <number>15</number>
-                           </property>
-                           <property name="leftMargin">
-                            <number>0</number>
-                           </property>
-                           <property name="topMargin">
-                            <number>0</number>
-                           </property>
-                           <property name="rightMargin">
-                            <number>0</number>
-                           </property>
-                           <property name="bottomMargin">
-                            <number>0</number>
-                           </property>
-                           <item>
-                            <widget class="QLabel" name="bip141PathQLabel">
-                             <property name="text">
-                              <string>Path</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
-                            <spacer name="bip141PathLabelHSpacer">
-                             <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
-                             </property>
-                             <property name="sizeHint" stdset="0">
-                              <size>
-                               <width>764</width>
-                               <height>20</height>
-                              </size>
-                             </property>
-                            </spacer>
-                           </item>
-                          </layout>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLineEdit" name="bip141PathQLineEdit">
-                          <property name="text">
-                           <string/>
-                          </property>
-                          <property name="placeholderText">
-                           <string>m/0'/0</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QFrame" name="bip141ScriptSemanticsQFrame">
-                       <layout class="QVBoxLayout" name="bip141ScriptSemanticsQFrameVLayout">
-                        <property name="spacing">
-                         <number>5</number>
-                        </property>
-                        <property name="leftMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="topMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="rightMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="bottomMargin">
-                         <number>0</number>
-                        </property>
-                        <item>
-                         <widget class="QFrame" name="bip141ScriptSemanticsLabelQFrame">
-                          <layout class="QHBoxLayout" name="bip141ScriptSemanticsLabelQFrameHLayout">
-                           <property name="spacing">
-                            <number>15</number>
-                           </property>
-                           <property name="leftMargin">
-                            <number>0</number>
-                           </property>
-                           <property name="topMargin">
-                            <number>0</number>
-                           </property>
-                           <property name="rightMargin">
-                            <number>0</number>
-                           </property>
-                           <property name="bottomMargin">
-                            <number>0</number>
-                           </property>
-                           <item>
-                            <widget class="QLabel" name="bip141ScriptSemanticsQLabel">
-                             <property name="text">
-                              <string>Script Semantics</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item>
-                            <spacer name="bip141ScriptSemanticsLabelHSpacer">
-                             <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
-                             </property>
-                             <property name="sizeHint" stdset="0">
-                              <size>
-                               <width>764</width>
-                               <height>20</height>
-                              </size>
-                             </property>
-                            </spacer>
-                           </item>
-                          </layout>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QComboBox" name="bip141ScriptSemanticsQComboBox">
-                          <property name="cursor">
-                           <cursorShape>PointingHandCursor</cursorShape>
-                          </property>
-                          <property name="placeholderText">
-                           <string>(Select)</string>
-                          </property>
-                          <item>
-                           <property name="text">
-                            <string>P2WPKH</string>
-                           </property>
-                          </item>
-                          <item>
-                           <property name="text">
-                            <string>P2WPKH nested in P2SH</string>
-                           </property>
-                          </item>
-                          <item>
-                           <property name="text">
-                            <string>P2WSH (1-of-1 multisig)</string>
-                           </property>
-                          </item>
-                          <item>
-                           <property name="text">
-                            <string>P2WSH nested in P2SH (1-of-1 multisig)</string>
-                           </property>
-                          </item>
                          </widget>
                         </item>
                        </layout>
