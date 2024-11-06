@@ -7485,7 +7485,7 @@ class Ui_MainWindow(object):
         self.bipFromXPublicKeyPublicKeyTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
         self.bipFromXPublicKeySemanticsQLabel.setText(QCoreApplication.translate("MainWindow", u"Semantic", None))
         self.bipFromXPublicKeySemanticsQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
-        self.bipFromWIFQLabel.setText(QCoreApplication.translate("MainWindow", u"Wallet Important Format", None))
+        self.bipFromWIFQLabel.setText(QCoreApplication.translate("MainWindow", u"Wallet Import Format", None))
         self.bipFromWIFBIP38PassphraseQCheckBox.setText(QCoreApplication.translate("MainWindow", u"BIP38", None))
         self.bipFromWIFBIP38PassphraseCheckBoxQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.bipFromWIFPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))
@@ -7697,7 +7697,7 @@ class Ui_MainWindow(object):
         self.electrumV1FromSeedPublicKeyTypeQComboBox.setItemText(1, QCoreApplication.translate("MainWindow", u"Compressed", None))
 
         self.electrumV1FromSeedPublicKeyTypeQComboBox.setPlaceholderText(QCoreApplication.translate("MainWindow", u"(Select)", None))
-        self.electrumV1FromWIFQLabel.setText(QCoreApplication.translate("MainWindow", u"Wallet Important Format", None))
+        self.electrumV1FromWIFQLabel.setText(QCoreApplication.translate("MainWindow", u"Wallet Import Format", None))
         self.electrumV1FromWIFBIP38PassphraseQCheckBox.setText(QCoreApplication.translate("MainWindow", u"BIP38", None))
         self.electrumV1FromWIFBIP38PassphraseQLabel.setText(QCoreApplication.translate("MainWindow", u"Passphrase", None))
         self.electrumV1FromWIFPublicKeyTypeQLabel.setText(QCoreApplication.translate("MainWindow", u"Public Key Type", None))

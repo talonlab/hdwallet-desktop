@@ -1296,9 +1296,9 @@ class Dumps:
         passphrase_frame.setEnabled(chkbox_state)
 
         if chkbox_state:
-            lable.setText("Encrypted Wallet Important Format")
+            lable.setText("Encrypted Wallet Import Format")
         else:
-            lable.setText("Wallet Important Format")
+            lable.setText("Wallet Import Format")
 
     def _update_terminal_state(self, stop_btn_enable, terminal_cancelled):
         self.ui.stopTerminalQPushButton.setEnabled(stop_btn_enable)

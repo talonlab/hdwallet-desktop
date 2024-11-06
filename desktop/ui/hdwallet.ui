@@ -3929,7 +3929,7 @@
                                <item>
                                 <widget class="QLabel" name="bipFromWIFQLabel">
                                  <property name="text">
-                                  <string>Wallet Important Format</string>
+                                  <string>Wallet Import Format</string>
                                  </property>
                                 </widget>
                                </item>
@@ -9474,7 +9474,7 @@
                                <item>
                                 <widget class="QLabel" name="electrumV1FromWIFQLabel">
                                  <property name="text">
-                                  <string>Wallet Important Format</string>
+                                  <string>Wallet Import Format</string>
                                  </property>
                                 </widget>
                                </item>
