@@ -196,7 +196,7 @@ class MainApplication:
                 return "WARNING: The 'dumps' command is not supported in the Desktop CLI. Please use the standalone CLI to perform this operation."
 
             cli = self.cli_runner.invoke(
-                cli_main, commands
+                cli_main, commands, prog_name="hdwallet"
             )
             return cli.output
 

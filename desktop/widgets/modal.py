@@ -63,7 +63,7 @@ class Modal(QFrame):
 
         x_pos = geo.width() / 2 - self.width / 2
         y_pos = geo.height() / 2 - self.height / 2
-        y_pos -= geo.height() * 0.05
+        y_pos -= self.height * 0.05
         self.setGeometry(x_pos, y_pos, self.width, self.height)
 
         self.overlay_frame.setGeometry(0, 0, geo.width(), geo.height())

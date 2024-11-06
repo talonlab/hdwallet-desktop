@@ -9,9 +9,14 @@
 from cx_Freeze import setup, Executable
 from hdwallet import info
 
+import platform
 
 app_name  = "HDWallet"
-icon_path = "desktop/ui/images/icon/icon.ico"
+
+if platform.system() == "Windows":
+    icon_path = "desktop/ui/images/icon/icon.ico"
+else:
+    icon_path = "desktop/ui/images/svg/HDW-Logo.svg"
 
 msi_shortcut_table = [
     (
@@ -69,6 +74,7 @@ executables = [
 setup(
     name=app_name,
     version=info.__versions__["desktop"],
+    author=info.__author__,
     description="A desktop application for generating hierarchical deterministic wallets using the HDWallet library.",
     executables=executables,
     options={

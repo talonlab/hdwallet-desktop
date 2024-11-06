@@ -26,7 +26,7 @@ from bip38 import (
 
 from hdwallet import HDWallet
 from hdwallet.hds import HDS
-from hdwallet.const import ELECTRUM_V2_MODES
+from hdwallet.const import MODES as ELECTRUM_V2_MODES
 from hdwallet.cryptocurrencies import (
     Cardano, CRYPTOCURRENCIES
 )
@@ -109,8 +109,6 @@ class Dumps:
             }
         }
 
-        self.script_semantics = ["P2WPKH", "P2WPKH_IN_P2SH", "P2WSH", "P2WSH_IN_P2SH"]
-
         self.stack_hd_widgets = {
             "BIP32": "bipsPageQWidget",
             "BIP44": "bipsPageQWidget",
@@ -144,7 +142,7 @@ class Dumps:
             "BIP49": ["BIP49"],
             "BIP84": ["BIP84"],
             "BIP86": ["BIP86"],
-            "BIP141": ["BIP141"],
+            "BIP141": ["Custom", "BIP44", "BIP49", "BIP84", "BIP86", "BIP141", "CIP1852", "HDW"],
             "Cardano": ["Custom", "BIP44", "CIP1852"],
             "CardanoXPUB": ["Custom"],
             "Electrum-V1": ["Electrum"],
@@ -177,11 +175,6 @@ class Dumps:
         self.derivation_tab["BIP86"] = {
             "button": self.ui.bip86TabQPushButton,
             "widget": "bip86QStackedWidgetPage"
-        }
-
-        self.derivation_tab["BIP141"] = {
-            "button": self.ui.bip141TabQPushButton,
-            "widget": "bip141QStackedWidgetPage"
         }
 
         self.derivation_tab["CIP1852"] = {
@@ -273,6 +266,29 @@ class Dumps:
         self.ui.stopTerminalQPushButton.clicked.connect(
             lambda: self._update_terminal_state(False, True)
         )
+
+        # BIP Semantic
+        self.script_semantics = {
+            "P2WPKH": "p2wpkh",
+            "P2WPKH-In-P2SH": "p2wpkh-in-p2sh",
+            "P2WSH": "p2wsh",
+            "P2WSH-In-P2SH": "p2wsh-in-p2sh"
+        }
+
+        self.bips_sematic_combos = [
+            self.ui.bipFromEntropySemanticsQComboBox,
+            self.ui.bipFromMnemonicSemanticsQComboBox,
+            self.ui.bipFromPrivateKeySemanticsQComboBox,
+            self.ui.bipFromPublicKeySemanticsQComboBox,
+            self.ui.bipFromSeedSemanticsQComboBox,
+            self.ui.bipFromWIFSemanticsQComboBox,
+            self.ui.bipFromXPrivateKeySemanticsQComboBox,
+            self.ui.bipFromXPublicKeySemanticsQComboBox
+        ]
+
+        for semantic_combo in self.bips_sematic_combos:
+            semantic_combo.addItems(self.script_semantics.keys())
+            semantic_combo.setCurrentIndex(0)
 
         # Algorand clients
         algorand_clients = ["Algorand", "BIP39"]
@@ -614,9 +630,6 @@ class Dumps:
         }
 
         if current_hd in ('BIP32', 'BIP44', 'BIP49', 'BIP84', 'BIP86', 'BIP141'):
-            if current_hd == 'BIP141':
-                semantic_indx = self.ui.bip141ScriptSemanticsQComboBox.currentIndex()
-                hd_kwargs["semantic"] = self.script_semantics[semantic_indx]
             hd = self._dump_bips(dump_from, hd_kwargs)
         elif current_hd == 'Cardano':
             hd = self._dump_cardano(dump_from, hd_kwargs)
@@ -806,11 +819,6 @@ class Dumps:
                 change=f"{self.ui.bip86ChangeQComboBox.currentText().lower()}-chain",
                 address=self.ui.bip86AddressQLineEdit.text()
             )
-        elif current_tab == "BIP141":
-            return CustomDerivation(
-                path=self.ui.bip141PathQLineEdit.text()
-            )
-
         elif current_tab == "CIP1852":
             role = self.ui.cip1852ChangeQComboBox.currentText().lower()
             postfix = "key" if role == "staking" else "chain"
@@ -836,7 +844,7 @@ class Dumps:
         elif current_tab == "HDW":
             return HDWDerivation(
                 account=self.ui.hdwAccountQLineEdit.text(),
-                ecc=self.ui.hdwEccQComboBox.currentText(),
+                ecc=self.ui.hdwEccQLineEdit.text(),
                 address=self.ui.hdwAddressQLineEdit.text()
             )
 
@@ -845,6 +853,7 @@ class Dumps:
             hd_kwargs["language"] = self.ui.bipFromEntropyLanguageQComboBox.currentText().lower()
             hd_kwargs["passphrase"] = self.ui.bipFromEntropyPassphraseQLineEdit.text()
             hd_kwargs["public_key_type"] = self.ui.bipFromEntropyPublicKeyTypeQComboBox.currentText().lower()
+            hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromEntropySemanticsQComboBox.currentText()]
             
             entropy_class = ENTROPIES.entropy(self.ui.bipFromEntropyClientQComboBox.currentText())
             
@@ -856,6 +865,7 @@ class Dumps:
         elif dump_from == "mnemonic":
             hd_kwargs["passphrase"] = self.ui.bipFromMnemonicPassphraseQLineEdit.text()
             hd_kwargs["public_key_type"] = self.ui.bipFromMnemonicPublicKeyTypeQComboBox.currentText().lower()
+            hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromMnemonicSemanticsQComboBox.currentText()]
 
             mnemonic_class = MNEMONICS.mnemonic(self.ui.bipFromMnemonicClientQComboBox.currentText())
 
@@ -866,16 +876,19 @@ class Dumps:
             )
         elif dump_from == "private key":
             hd_kwargs["public_key_type"] = self.ui.bipFromPrivateKeyPublicKeyTypeQComboBox.currentText().lower()
+            hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromPrivateKeySemanticsQComboBox.currentText()]
             return HDWallet(**hd_kwargs).from_private_key(
                 private_key=self._validate_and_get("Private Key", self.ui.bipFromPrivateKeyQLineEdit)
             )
         elif dump_from == "public key":
             hd_kwargs["public_key_type"] = self.ui.bipFromPublicKeyPublicKeyTypeQComboBox.currentText().lower()
+            hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromPublicKeySemanticsQComboBox.currentText()]
             return HDWallet(**hd_kwargs).from_public_key(
                 public_key=self._validate_and_get("Public Key", self.ui.bipFromPublicKeyQLineEdit)
             )
         elif dump_from == "seed":
             hd_kwargs["public_key_type"] = self.ui.bipFromSeedPublicKeyTypeQComboBox.currentText().lower()
+            hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromSeedSemanticsQComboBox.currentText()]
 
             seed_class = SEEDS.seed(self.ui.bipFromSeedClientQComboBox.currentText())
 
@@ -886,6 +899,7 @@ class Dumps:
             )
         elif dump_from == "wif":
             hd_kwargs["public_key_type"] = self.ui.bipFromWIFPublicKeyTypeQComboBox.currentText().lower()
+            hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromWIFSemanticsQComboBox.currentText()]
             wif = self._validate_and_get("WIF", self.ui.bipFromWIFQLineEdit)
 
             if self.ui.bipFromWIFBIP38PassphraseQCheckBox.isChecked():
@@ -902,12 +916,14 @@ class Dumps:
             )
         elif dump_from == "xprivate key":
             hd_kwargs["public_key_type"] = self.ui.bipFromXPrivateKeyPublicKeyTypeQComboBox.currentText().lower()
+            hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromXPrivateKeySemanticsQComboBox.currentText()]
             return HDWallet(**hd_kwargs).from_xprivate_key(
                 xprivate_key=self._validate_and_get("XPrivate Key", self.ui.bipFromXPrivateKeyQLineEdit),
                 strict=self.ui.bipFromXPrivateKeyStrictQCheckBox.isChecked()
             )
         elif dump_from == "xpublic key":
             hd_kwargs["public_key_type"] = self.ui.bipFromXPublicKeyPublicKeyTypeQComboBox.currentText().lower()
+            hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromXPublicKeySemanticsQComboBox.currentText()]
             return HDWallet(**hd_kwargs).from_xpublic_key(
                 xpublic_key=self._validate_and_get("XPublic Key", self.ui.bipFromXPublicKeyQLineEdit),
                 strict=self.ui.bipFromXPublicKeyStrictQCheckBox.isChecked()
@@ -1169,8 +1185,6 @@ class Dumps:
             "BIP44", "BIP49", "BIP84", "BIP86"
         ]:
             _include: str = "at:path,address,public_key,wif"
-        elif hd == "BIP141":
-            _include: str = f"at:path,addresses:p2wpkh,public_key,wif"
         elif hd == "Cardano":
             _include: str = "at:path,address,public_key,private_key"
         elif hd in [
@@ -1282,9 +1296,9 @@ class Dumps:
         passphrase_frame.setEnabled(chkbox_state)
 
         if chkbox_state:
-            lable.setText("Encrypted Wallet Important Format")
+            lable.setText("Encrypted Wallet Import Format")
         else:
-            lable.setText("Wallet Important Format")
+            lable.setText("Wallet Import Format")
 
     def _update_terminal_state(self, stop_btn_enable, terminal_cancelled):
         self.ui.stopTerminalQPushButton.setEnabled(stop_btn_enable)
