@@ -7,7 +7,7 @@
 # file COPYING or https://opensource.org/license/mit
 
 from cx_Freeze import setup, Executable
-from hdwallet import info
+from desktop import info
 
 import platform
 
@@ -73,7 +73,7 @@ executables = [
 
 setup(
     name=app_name,
-    version=info.__versions__["desktop"],
+    version=info.__version__,
     author=info.__author__,
     description="A desktop application for generating hierarchical deterministic wallets using the HDWallet library.",
     executables=executables,

@@ -14,7 +14,7 @@ import shutil
 import platform
 import subprocess
 
-from hdwallet.info import __versions__, __name__, __author__, __description__
+from hdwallet.info import __version__, __name__, __author__, __description__
 
 arch_map = {
     "x86_64": "amd64",
@@ -29,7 +29,7 @@ if platform.system() != "Linux":
     sys.exit(1)
 
 
-app_version = __versions__["desktop"].lstrip("v")
+app_version = __version__.lstrip("v")
 app_name  = "HDWallet"
 app_description = __description__
 maintainer = __author__ 

@@ -25,7 +25,8 @@ from PySide6.QtGui import (
     QTextCharFormat, QTextCursor, QColor
 )
 
-from hdwallet.info import __versions__ as hdwallet_versions
+from desktop.info import __version__ as desktop_version
+from hdwallet.info import __version__ as library_version
 
 from desktop.utils import (
     put_svg, update_style, resolve_path
@@ -112,8 +113,8 @@ class Application(QMainWindow):
         self.ui.outputTerminalQPlainTextEdit.verticalScrollBar().rangeChanged.connect(self.update_terminal_ui)
 
         versions = {
-            "library": hdwallet_versions["hdwallet"],
-            "desktop": hdwallet_versions["desktop"]
+            "library": library_version,
+            "desktop": desktop_version
         }
         self.ui.outputTerminalQPlainTextEdit.setPlaceholderText(json.dumps(versions, indent=4))
 
