@@ -34,7 +34,7 @@ app_name  = "HDWallet"
 app_description = __description__
 maintainer = __author__ 
 
-icon_path = "desktop/ui/images/svg/HDW-Logo.svg"  
+icon_path = "src/ui/images/svg/HDW-Logo.svg"
 
 build_root = Path("./dist")
 build_root.mkdir(exist_ok=True)

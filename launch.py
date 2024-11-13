@@ -11,7 +11,7 @@ from PySide6.QtGui import QPalette, QColor
 from PySide6.QtCore import Qt
 import sys
 
-from desktop.main import MainApplication
+from src.main import MainApplication
 
 def main() -> None:
     qapp: QApplication = QApplication(sys.argv)

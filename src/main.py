@@ -23,13 +23,13 @@ import re
 import shlex
 import functools
 
-from desktop.utils import resolve_path
-from desktop.widgets.core import *
-from desktop.widgets.donation import Donation
-from desktop.utils.worker import Worker
-from desktop.generate import Generate
-from desktop.dumps import Dumps
-from desktop.utils import clear_borders_class
+from src.utils import resolve_path
+from src.widgets.core import *
+from src.widgets.donation import Donation
+from src.utils.worker import Worker
+from src.generate import Generate
+from src.dumps import Dumps
+from src.utils import clear_borders_class
 
 class MainApplication:
     """
@@ -61,8 +61,8 @@ class MainApplication:
             self.ui.generateLengthAndPassphraseQGroupBox
         ]
 
-        self.terminal_expand_icon = QIcon(resolve_path("desktop/ui/images/svg/expand-white-thin.svg"))
-        self.terminal_collapse_icon = QIcon(resolve_path("desktop/ui/images/svg/collapse-white-thin.svg"))
+        self.terminal_expand_icon = QIcon(resolve_path("src/ui/images/svg/expand-white-thin.svg"))
+        self.terminal_collapse_icon = QIcon(resolve_path("src/ui/images/svg/collapse-white-thin.svg"))
 
         self.ui.toggle_expand_terminal = QPushButton(None)
         self.ui.toggle_expand_terminal.setCheckable(True)

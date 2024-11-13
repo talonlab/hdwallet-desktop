@@ -21,7 +21,7 @@ from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QCheckBox, QCo
     QPushButton, QRadioButton, QSizePolicy, QSpacerItem,
     QStackedWidget, QVBoxLayout, QWidget)
 
-from desktop.widgets.history_lineedit import HistoryLineEdit
+from src.widgets.history_lineedit import HistoryLineEdit
 from .resources_rc import *
 
 class Ui_MainWindow(object):

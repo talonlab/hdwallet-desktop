@@ -17,11 +17,11 @@ from PySide6.QtGui import (
     QIcon, QCursor
 )
 
-from desktop.widgets.modal import Modal
-from desktop.ui.ui_donations import Ui_Form
-from desktop.addresses import crypto_addresses
-from desktop.utils import put_qr_code, resolve_path
-from desktop.utils.clipboard import copy_to_clipboard
+from src.widgets.modal import Modal
+from src.ui.ui_donations import Ui_Form
+from src.addresses import crypto_addresses
+from src.utils import put_qr_code, resolve_path
+from src.utils.clipboard import copy_to_clipboard
 
 
 class Donation(Modal):
@@ -88,7 +88,7 @@ class Donation(Modal):
         donation_ui.setupUi(main_widget)
         frame.ui = donation_ui
 
-        close_icon = QIcon(resolve_path("desktop/ui/images/svg/close.svg"))
+        close_icon = QIcon(resolve_path("src/ui/images/svg/close.svg"))
 
         frame.close_button = QPushButton(None)
         frame.close_button.setIcon(close_icon)

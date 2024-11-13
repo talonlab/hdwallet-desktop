@@ -66,11 +66,11 @@ from hdwallet.exceptions import (
     Error, MnemonicError, DerivationError
 )
 
-from desktop.utils.worker import (
+from src.utils.worker import (
     Worker, WorkerSignals
 )
 
-from desktop.utils import (
+from src.utils import (
     update_border_class, clear_borders_class, normalized_mnemonic_types
 )
 

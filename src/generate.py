@@ -45,7 +45,7 @@ from hdwallet.seeds import (
     SEEDS
 )
 
-from desktop.utils import (
+from src.utils import (
     update_border_class, clear_borders_class, normalized_mnemonic_types
 )
 

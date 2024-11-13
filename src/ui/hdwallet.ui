@@ -16665,7 +16665,7 @@
   <customwidget>
    <class>HistoryLineEdit</class>
    <extends>QLineEdit</extends>
-   <header>desktop.widgets.history_lineedit</header>
+   <header>src.widgets.history_lineedit</header>
   </customwidget>
  </customwidgets>
  <resources>

@@ -25,14 +25,14 @@ from PySide6.QtGui import (
     QTextCharFormat, QTextCursor, QColor
 )
 
-from desktop.info import __version__ as desktop_version
+from src.info import __version__ as desktop_version
 from hdwallet.info import __version__ as library_version
 
-from desktop.utils import (
+from src.utils import (
     put_svg, update_style, resolve_path
 )
-from desktop.ui.ui_hdwallet import Ui_MainWindow
-from desktop.widgets.detached_window import DetachedTerminalWindow
+from src.ui.ui_hdwallet import Ui_MainWindow
+from src.widgets.detached_window import DetachedTerminalWindow
 
 class Application(QMainWindow):
     _instance: Optional['Application'] = None
@@ -91,20 +91,20 @@ class Application(QMainWindow):
         self.detached_window = None
 
         self.setWindowTitle("Hierarchical Deterministic Wallet")
-        self.hdwallet_icon = QIcon(resolve_path("desktop/ui/images/icon/icon.ico"))
+        self.hdwallet_icon = QIcon(resolve_path("src/ui/images/icon/icon.ico"))
         self.setWindowIcon(self.hdwallet_icon)
-        css_path = resolve_path("desktop/ui/css/theme.css")
+        css_path = resolve_path("src/ui/css/theme.css")
         self.fs_watcher = QFileSystemWatcher([css_path])
         self.fs_watcher.fileChanged.connect(lambda: self.load_stylesheet(css_path))
         self.load_stylesheet(css_path)
         put_svg(
             self.ui.hdwalletLogoHLayout,
-            resolve_path("desktop/ui/images/svg/hdwalletLogoFullSize.svg"),
+            resolve_path("src/ui/images/svg/hdwalletLogoFullSize.svg"),
             132.04,
             45
         )
     
-        QFontDatabase.addApplicationFont(resolve_path("desktop/ui/font/HDWallet.ttf"))
+        QFontDatabase.addApplicationFont(resolve_path("src/ui/font/HDWallet.ttf"))
 
 
         self.resize_evt = ResizeEventFilter()
