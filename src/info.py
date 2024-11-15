@@ -5,7 +5,7 @@
 # file COPYING or https://opensource.org/license/mit
 
 __name__: str = "hdwallet-desktop"
-__version__: str = "v0.1.0b12"
+__version__: str = "v0.1.0b13"
 __license__: str = "MIT"
 __author__: str = "Meheret Tesfaye Batu"
 __email__: str = "meherett.batu@gmail.com"
