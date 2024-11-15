@@ -28,9 +28,9 @@ A cross-platform client desktop application built on the [Hierarchical Determini
 
 To install on Windows, download one of the following from the Releases page:
 
-- [MSI](https://github.com/talonlab/hdwallet-desktop/releases) Installer – Recommended for a guided installation process.
+- MSI Installer – Recommended for a guided installation process.
 
-- [Executable](https://github.com/talonlab/hdwallet-desktop/releases) (.exe) – A standalone version that runs without installation.
+- Executable (.exe) – A standalone version that runs without installation.
 
 Once downloaded, double-click the .msi or .exe file and follow the on-screen instructions to complete the installation.
 
@@ -38,14 +38,14 @@ Once downloaded, double-click the .msi or .exe file and follow the on-screen ins
 
 To install on Linux, download one of the following from the Releases page:
 
-- [Debian Package (.deb)](https://github.com/talonlab/hdwallet-desktop/releases) – Recommended for Debian-based systems like Ubuntu and Debian.
+- Debian Package (.deb) – Recommended for Debian-based systems like Ubuntu and Debian.
 
     Installation: Open a terminal, navigate to the download location, and run:
     ```
     sudo dpkg -i hdwallet-desktop-x.x.x-amd64.deb
     ```
 
-- [AppImage](https://github.com/talonlab/hdwallet-desktop/releases) – A portable format compatible with most Linux distributions.
+- AppImage– A portable format compatible with most Linux distributions.
 
     Installation: Make the file executable and run:
     ```
@@ -96,3 +96,11 @@ Thank you very much for your support.
 ## License
 
 Distributed under the [MIT](https://github.com/talonlab/hdwallet-desktop/blob/master/LICENSE) license. See ``LICENSE`` for more information.
+
+## Terms and Conditions
+
+By using this project, you agree to the [Terms and Conditions](https://talonlab.gitbook.io/hdwallet/terms-and-conditions).
+
+## Privacy Policy
+
+To understand how your data is used, please review our [Privacy Policy](https://talonlab.gitbook.io/hdwallet/privacy-policy).
