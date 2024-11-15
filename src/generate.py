@@ -117,7 +117,7 @@ class Generate:
         gen_entropy = ENTROPIES.entropy(entropy_client).generate(strength=strength)
 
         output = {
-            "name": entropy_client,
+            "client": entropy_client,
             "entropy": gen_entropy,
             "strength": strength
         }
@@ -191,7 +191,7 @@ class Generate:
 
         else:
             output = {
-                "name": mnemonic_client,
+                "client": mnemonic_client,
                 "mnemonic": gen_mnemonic,
                 "language": lang,
                 "words": len(gen_mnemonic.split(" "))
@@ -254,7 +254,7 @@ class Generate:
             update_border_class(self.ui.seedGroupBoxContainerQGroupBox, "hdwError")
         else:
             output = {
-                "name": seed_client,
+                "client": seed_client,
                 "seed": seed
             }
 
