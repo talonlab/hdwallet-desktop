@@ -853,7 +853,9 @@ class Dumps:
             hd_kwargs["language"] = self.ui.bipFromEntropyLanguageQComboBox.currentText().lower()
             hd_kwargs["passphrase"] = self.ui.bipFromEntropyPassphraseQLineEdit.text()
             hd_kwargs["public_key_type"] = self.ui.bipFromEntropyPublicKeyTypeQComboBox.currentText().lower()
-            hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromEntropySemanticsQComboBox.currentText()]
+
+            if self.ui.bipFromEntropySemanticsQComboBox.isEnabled():
+                hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromEntropySemanticsQComboBox.currentText()]
             
             entropy_class = ENTROPIES.entropy(self.ui.bipFromEntropyClientQComboBox.currentText())
             
@@ -865,7 +867,9 @@ class Dumps:
         elif dump_from == "mnemonic":
             hd_kwargs["passphrase"] = self.ui.bipFromMnemonicPassphraseQLineEdit.text()
             hd_kwargs["public_key_type"] = self.ui.bipFromMnemonicPublicKeyTypeQComboBox.currentText().lower()
-            hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromMnemonicSemanticsQComboBox.currentText()]
+
+            if self.ui.bipFromMnemonicSemanticsQComboBox.isEnabled():
+                hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromMnemonicSemanticsQComboBox.currentText()]
 
             mnemonic_class = MNEMONICS.mnemonic(self.ui.bipFromMnemonicClientQComboBox.currentText())
 
@@ -876,19 +880,27 @@ class Dumps:
             )
         elif dump_from == "private key":
             hd_kwargs["public_key_type"] = self.ui.bipFromPrivateKeyPublicKeyTypeQComboBox.currentText().lower()
-            hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromPrivateKeySemanticsQComboBox.currentText()]
+            
+            if self.ui.bipFromPrivateKeySemanticsQComboBox.isEnabled():
+                hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromPrivateKeySemanticsQComboBox.currentText()]
+            
             return HDWallet(**hd_kwargs).from_private_key(
                 private_key=self._validate_and_get("Private Key", self.ui.bipFromPrivateKeyQLineEdit)
             )
         elif dump_from == "public key":
             hd_kwargs["public_key_type"] = self.ui.bipFromPublicKeyPublicKeyTypeQComboBox.currentText().lower()
-            hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromPublicKeySemanticsQComboBox.currentText()]
+            
+            if self.ui.bipFromPublicKeySemanticsQComboBox.isEnabled():
+                hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromPublicKeySemanticsQComboBox.currentText()]
+            
             return HDWallet(**hd_kwargs).from_public_key(
                 public_key=self._validate_and_get("Public Key", self.ui.bipFromPublicKeyQLineEdit)
             )
         elif dump_from == "seed":
             hd_kwargs["public_key_type"] = self.ui.bipFromSeedPublicKeyTypeQComboBox.currentText().lower()
-            hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromSeedSemanticsQComboBox.currentText()]
+            
+            if self.ui.bipFromSeedSemanticsQComboBox.isEnabled():
+                hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromSeedSemanticsQComboBox.currentText()]
 
             seed_class = SEEDS.seed(self.ui.bipFromSeedClientQComboBox.currentText())
 
@@ -899,7 +911,10 @@ class Dumps:
             )
         elif dump_from == "wif":
             hd_kwargs["public_key_type"] = self.ui.bipFromWIFPublicKeyTypeQComboBox.currentText().lower()
-            hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromWIFSemanticsQComboBox.currentText()]
+            
+            if self.ui.bipFromWIFSemanticsQComboBox.isEnabled():
+                hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromWIFSemanticsQComboBox.currentText()]
+            
             wif = self._validate_and_get("WIF", self.ui.bipFromWIFQLineEdit)
 
             if self.ui.bipFromWIFBIP38PassphraseQCheckBox.isChecked():
@@ -916,14 +931,20 @@ class Dumps:
             )
         elif dump_from == "xprivate key":
             hd_kwargs["public_key_type"] = self.ui.bipFromXPrivateKeyPublicKeyTypeQComboBox.currentText().lower()
-            hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromXPrivateKeySemanticsQComboBox.currentText()]
+            
+            if self.ui.bipFromXPrivateKeySemanticsQComboBox.isEnabled():
+                hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromXPrivateKeySemanticsQComboBox.currentText()]
+            
             return HDWallet(**hd_kwargs).from_xprivate_key(
                 xprivate_key=self._validate_and_get("XPrivate Key", self.ui.bipFromXPrivateKeyQLineEdit),
                 strict=self.ui.bipFromXPrivateKeyStrictQCheckBox.isChecked()
             )
         elif dump_from == "xpublic key":
             hd_kwargs["public_key_type"] = self.ui.bipFromXPublicKeyPublicKeyTypeQComboBox.currentText().lower()
-            hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromXPublicKeySemanticsQComboBox.currentText()]
+            
+            if self.ui.bipFromXPublicKeySemanticsQComboBox.isEnabled():
+                hd_kwargs["semantic"] = self.script_semantics[self.ui.bipFromXPublicKeySemanticsQComboBox.currentText()]
+            
             return HDWallet(**hd_kwargs).from_xpublic_key(
                 xpublic_key=self._validate_and_get("XPublic Key", self.ui.bipFromXPublicKeyQLineEdit),
                 strict=self.ui.bipFromXPublicKeyStrictQCheckBox.isChecked()
@@ -1196,12 +1217,22 @@ class Dumps:
         else:
             _include = None
 
+
+        tmp_addresses = [
+            "Algorand", "Aptos", "Cosmos", "Ethereum", "EOS", "Ergo", "Filecoin", "Harmony", "Icon", "Injective",
+            "MultiversX", "Nano", "Neo", "OKT-Chain", "Stellar", "Solana", "Sui", "Tezos", "XinFin", "Zilliqa"
+        ]
+        tmp_cryptocurrency = CRYPTOCURRENCIES.cryptocurrency(crypto)
         if crypto in ("Bitcoin-Cash", "Bitcoin-Cash-SLP", "eCash"):
             _include: str = "at:path,addresses:legacy-p2pkh,public_key,wif"
-        elif crypto == "Avalanche":
+        elif any([address in tmp_addresses for address in tmp_cryptocurrency.ADDRESSES.get_addresses()]):
+            _include: str = "at:path,address,public_key,wif"
+
+        if crypto == "Avalanche":
             _include: str = "at:path,addresses:p-chain,public_key,wif"
         elif crypto == "Binance":
             _include: str = "at:path,addresses:chain,public_key,wif"
+
 
         self.ui.dumpsExcludeOrIncludeQLineEdit.setText(_include)
 
@@ -1228,6 +1259,10 @@ class Dumps:
         self.ui.dumpsFromQComboBox.clear()
         self.ui.dumpsFromQComboBox.addItems(sorted(keys))
         self.ui.dumpsFromQComboBox.setCurrentText("Mnemonic")
+
+        enable_semantics = current_hd == "BIP141"
+        for semantic_combo in self.bips_sematic_combos:
+            semantic_combo.setEnabled(enable_semantics)
 
         if self.ui.dumpsFormatQComboBox.currentText() == "CSV":
             self.__default_csv_include()
