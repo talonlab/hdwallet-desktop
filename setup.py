@@ -50,7 +50,8 @@ bdist_msi_opt = {
     "data": msi_data,
     "initial_target_dir": f"[ProgramFiles64Folder]\\{app_name}",
     "install_icon": icon_path,
-    "upgrade_code": "{B1CFF0C5-5145-3C96-A54E-4AECA6F5774D}"
+    "upgrade_code": "{B1CFF0C5-5145-3C96-A54E-4AECA6F5774D}",
+    "license_file": "data/TERMS_AND_CONDITIONS.rtf"
 }
 
 build_exe_opt = {
