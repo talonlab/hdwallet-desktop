@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'hdwalletGzvucj.ui'
+## Form generated from reading UI file 'hdwalletpPeVbw.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -975,6 +975,7 @@ class Ui_MainWindow(object):
         self.bipFromEntropyPublicKeyAndPassphraseContainerQFrameHLayout.setContentsMargins(0, 0, 0, 0)
         self.bipFromEntropyPassphraseContainerQFrame = QFrame(self.bipFromEntropyPublicKeyAndPassphraseContainerQFrame)
         self.bipFromEntropyPassphraseContainerQFrame.setObjectName(u"bipFromEntropyPassphraseContainerQFrame")
+        self.bipFromEntropyPassphraseContainerQFrame.setMaximumSize(QSize(265, 16777215))
         self.bipFromEntropyPassphraseContainerQFrameVLayout = QVBoxLayout(self.bipFromEntropyPassphraseContainerQFrame)
         self.bipFromEntropyPassphraseContainerQFrameVLayout.setSpacing(5)
         self.bipFromEntropyPassphraseContainerQFrameVLayout.setObjectName(u"bipFromEntropyPassphraseContainerQFrameVLayout")
@@ -1190,6 +1191,7 @@ class Ui_MainWindow(object):
         self.bipFromMnemonicPublicKeyTypeAndPassphraseQFrameHLayout.setContentsMargins(0, 0, 0, 0)
         self.bipFromMnemonicPassphraseContainerQFrame = QFrame(self.bipFromMnemonicPublicKeyTypeAndPassphraseQFrame)
         self.bipFromMnemonicPassphraseContainerQFrame.setObjectName(u"bipFromMnemonicPassphraseContainerQFrame")
+        self.bipFromMnemonicPassphraseContainerQFrame.setMaximumSize(QSize(265, 16777215))
         self.bipFromMnemonicPassphraseContainerQFrameVLayout = QVBoxLayout(self.bipFromMnemonicPassphraseContainerQFrame)
         self.bipFromMnemonicPassphraseContainerQFrameVLayout.setSpacing(5)
         self.bipFromMnemonicPassphraseContainerQFrameVLayout.setObjectName(u"bipFromMnemonicPassphraseContainerQFrameVLayout")
@@ -1231,7 +1233,11 @@ class Ui_MainWindow(object):
 
         self.bipFromMnemonicPublicKeyTypeContainerQFrame = QFrame(self.bipFromMnemonicPublicKeyTypeAndPassphraseQFrame)
         self.bipFromMnemonicPublicKeyTypeContainerQFrame.setObjectName(u"bipFromMnemonicPublicKeyTypeContainerQFrame")
-        self.bipFromMnemonicPublicKeyTypeContainerQFrame.setMinimumSize(QSize(150, 0))
+        sizePolicy5 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Preferred)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.bipFromMnemonicPublicKeyTypeContainerQFrame.sizePolicy().hasHeightForWidth())
+        self.bipFromMnemonicPublicKeyTypeContainerQFrame.setSizePolicy(sizePolicy5)
         self.bipFromMnemonicPublicKeyTypeContainerQFrameVLayout = QVBoxLayout(self.bipFromMnemonicPublicKeyTypeContainerQFrame)
         self.bipFromMnemonicPublicKeyTypeContainerQFrameVLayout.setSpacing(5)
         self.bipFromMnemonicPublicKeyTypeContainerQFrameVLayout.setObjectName(u"bipFromMnemonicPublicKeyTypeContainerQFrameVLayout")
@@ -1246,10 +1252,6 @@ class Ui_MainWindow(object):
         self.bipFromMnemonicPublicKeyTypeQLabel.setObjectName(u"bipFromMnemonicPublicKeyTypeQLabel")
 
         self.bipFromMnemonicPublicKeyTypeLabelContainerQFrameHLayout.addWidget(self.bipFromMnemonicPublicKeyTypeQLabel)
-
-        self.bipFromMnemonicPublicKeyTypeLabelContainerQFrameHSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.bipFromMnemonicPublicKeyTypeLabelContainerQFrameHLayout.addItem(self.bipFromMnemonicPublicKeyTypeLabelContainerQFrameHSpacer)
 
 
         self.bipFromMnemonicPublicKeyTypeContainerQFrameVLayout.addWidget(self.bipFromMnemonicPublicKeyTypeLabelContainerQFrame)
@@ -1802,11 +1804,11 @@ class Ui_MainWindow(object):
 
         self.bipFromWIFBIP38PassphraseContainerQFrame = QFrame(self.bipFromWIFPublicKeyAndBIP38PassphraseContainerQFrame)
         self.bipFromWIFBIP38PassphraseContainerQFrame.setObjectName(u"bipFromWIFBIP38PassphraseContainerQFrame")
-        sizePolicy5 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Preferred)
-        sizePolicy5.setHorizontalStretch(0)
-        sizePolicy5.setVerticalStretch(0)
-        sizePolicy5.setHeightForWidth(self.bipFromWIFBIP38PassphraseContainerQFrame.sizePolicy().hasHeightForWidth())
-        self.bipFromWIFBIP38PassphraseContainerQFrame.setSizePolicy(sizePolicy5)
+        sizePolicy6 = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Preferred)
+        sizePolicy6.setHorizontalStretch(0)
+        sizePolicy6.setVerticalStretch(0)
+        sizePolicy6.setHeightForWidth(self.bipFromWIFBIP38PassphraseContainerQFrame.sizePolicy().hasHeightForWidth())
+        self.bipFromWIFBIP38PassphraseContainerQFrame.setSizePolicy(sizePolicy6)
         self.bipFromWIFBIP38PassphraseContainerQFrameVLayout = QVBoxLayout(self.bipFromWIFBIP38PassphraseContainerQFrame)
         self.bipFromWIFBIP38PassphraseContainerQFrameVLayout.setSpacing(5)
         self.bipFromWIFBIP38PassphraseContainerQFrameVLayout.setObjectName(u"bipFromWIFBIP38PassphraseContainerQFrameVLayout")
@@ -5812,11 +5814,11 @@ class Ui_MainWindow(object):
 
         self.derivationsQStackedWidget = QStackedWidget(self.derivationQGroupBox)
         self.derivationsQStackedWidget.setObjectName(u"derivationsQStackedWidget")
-        sizePolicy6 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
-        sizePolicy6.setHorizontalStretch(0)
-        sizePolicy6.setVerticalStretch(0)
-        sizePolicy6.setHeightForWidth(self.derivationsQStackedWidget.sizePolicy().hasHeightForWidth())
-        self.derivationsQStackedWidget.setSizePolicy(sizePolicy6)
+        sizePolicy7 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy7.setHorizontalStretch(0)
+        sizePolicy7.setVerticalStretch(0)
+        sizePolicy7.setHeightForWidth(self.derivationsQStackedWidget.sizePolicy().hasHeightForWidth())
+        self.derivationsQStackedWidget.setSizePolicy(sizePolicy7)
         self.customQStackedWidgetPage = QWidget()
         self.customQStackedWidgetPage.setObjectName(u"customQStackedWidgetPage")
         self.customQStackedWidgetPageHLayout = QHBoxLayout(self.customQStackedWidgetPage)
@@ -7121,11 +7123,8 @@ class Ui_MainWindow(object):
 
         self.dumpsGenerateQPushButton = QPushButton(self.dumpsFormatKeysContainerQGroupBox)
         self.dumpsGenerateQPushButton.setObjectName(u"dumpsGenerateQPushButton")
-        sizePolicy7 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Preferred)
-        sizePolicy7.setHorizontalStretch(0)
-        sizePolicy7.setVerticalStretch(0)
-        sizePolicy7.setHeightForWidth(self.dumpsGenerateQPushButton.sizePolicy().hasHeightForWidth())
-        self.dumpsGenerateQPushButton.setSizePolicy(sizePolicy7)
+        sizePolicy5.setHeightForWidth(self.dumpsGenerateQPushButton.sizePolicy().hasHeightForWidth())
+        self.dumpsGenerateQPushButton.setSizePolicy(sizePolicy5)
         self.dumpsGenerateQPushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.dumpsGenerateQPushButton.setStyleSheet(u"")
 
@@ -7335,7 +7334,7 @@ class Ui_MainWindow(object):
 
         self.hdwalletQStackedWidget.setCurrentIndex(1)
         self.hdQStackedWidget.setCurrentIndex(0)
-        self.bipQStackedWidget.setCurrentIndex(0)
+        self.bipQStackedWidget.setCurrentIndex(1)
         self.cardanoQStackedWidget.setCurrentIndex(4)
         self.electrumV1QStackedWidget.setCurrentIndex(3)
         self.electrumV2QStackedWidget.setCurrentIndex(2)

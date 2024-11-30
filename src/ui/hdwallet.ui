@@ -1812,7 +1812,7 @@
                      <item>
                       <widget class="QStackedWidget" name="bipQStackedWidget">
                        <property name="currentIndex">
-                        <number>0</number>
+                        <number>1</number>
                        </property>
                        <widget class="QWidget" name="bipFromEntropyQStackedWidget">
                         <layout class="QVBoxLayout" name="bipFromEntropyQStackedWidgetVLayout">
@@ -2157,6 +2157,12 @@
                             </property>
                             <item>
                              <widget class="QFrame" name="bipFromEntropyPassphraseContainerQFrame">
+                              <property name="maximumSize">
+                               <size>
+                                <width>265</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
                               <layout class="QVBoxLayout" name="bipFromEntropyPassphraseContainerQFrameVLayout">
                                <property name="spacing">
                                 <number>5</number>
@@ -2631,6 +2637,12 @@
                             </property>
                             <item>
                              <widget class="QFrame" name="bipFromMnemonicPassphraseContainerQFrame">
+                              <property name="maximumSize">
+                               <size>
+                                <width>265</width>
+                                <height>16777215</height>
+                               </size>
+                              </property>
                               <layout class="QVBoxLayout" name="bipFromMnemonicPassphraseContainerQFrameVLayout">
                                <property name="spacing">
                                 <number>5</number>
@@ -2721,11 +2733,11 @@
                             </item>
                             <item>
                              <widget class="QFrame" name="bipFromMnemonicPublicKeyTypeContainerQFrame">
-                              <property name="minimumSize">
-                               <size>
-                                <width>150</width>
-                                <height>0</height>
-                               </size>
+                              <property name="sizePolicy">
+                               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                               </sizepolicy>
                               </property>
                               <layout class="QVBoxLayout" name="bipFromMnemonicPublicKeyTypeContainerQFrameVLayout">
                                <property name="spacing">
@@ -2767,19 +2779,6 @@
                                      <string>Public Key Type</string>
                                     </property>
                                    </widget>
-                                  </item>
-                                  <item>
-                                   <spacer name="bipFromMnemonicPublicKeyTypeLabelContainerQFrameHSpacer">
-                                    <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
-                                    </property>
-                                    <property name="sizeHint" stdset="0">
-                                     <size>
-                                      <width>40</width>
-                                      <height>20</height>
-                                     </size>
-                                    </property>
-                                   </spacer>
                                   </item>
                                  </layout>
                                 </widget>
