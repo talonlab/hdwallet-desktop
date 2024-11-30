@@ -35,6 +35,20 @@ msi_shortcut_table = [
     )
 ]
 
+bdist_mac_opt = {
+    "iconfile": "data/MyIcon.icns",
+    "bundle_name": app_name,
+    "include_resources": [("src/ui/images", "Resources")],
+    "codesign_identity": "Developer ID Application: Talon Lab"
+}
+
+bdist_dmg_options = {
+    "volume_label": app_name,
+    "applications_shortcut": True,
+    #"iconfile": "data/MyIcon.icns",
+    "background": icon_path
+}
+
 msi_directory_table = [
     ("ProgramMenuFolder", "TARGETDIR", "."),
     ("HDWalletMenu", "ProgramMenuFolder", "HDWAL~1|HDWallet")
@@ -57,7 +71,10 @@ bdist_msi_opt = {
 build_exe_opt = {
     "packages": ["_scrypt"],
     "excludes": ["tkinter"],
-    "include_msvcr": True
+    "include_msvcr": True,
+    "include_files":[
+            ("data/MyIcon.icns", "MyApp.app/Contents/Resources/icon.icns"),
+        ]
 }
 
 executables = [
@@ -80,6 +97,8 @@ setup(
     executables=executables,
     options={
         "build_exe": build_exe_opt,
-        "bdist_msi": bdist_msi_opt
+        "bdist_msi": bdist_msi_opt,
+        "bdist_mac": bdist_mac_opt,
+        "bdist_dmg": bdist_dmg_options
     }
 )
