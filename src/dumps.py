@@ -1228,23 +1228,26 @@ class Dumps:
         self.ui.dumpsFromQComboBox.setCurrentText("Mnemonic")
 
         self.script_semantics = {
-            "P2WPKH_IN_P2SH": "P2WPKH-In-P2SH",
-            "P2WSH_IN_P2SH": "P2WSH-In-P2SH"
+            "dogecoin": "Dogecoin",
+            "p2wpkh-in-p2sh": "P2WPKH-In-P2SH",
+            "p2wsh-in-p2sh": "P2WSH-In-P2SH"
         }
 
-        self.allowed_bip141_semantics = ["P2WPKH", "P2WPKH_IN_P2SH", "P2WSH", "P2WSH_IN_P2SH"]
+        self.allowed_bip141_semantics = ["p2wpkh", "p2wpkh-in-p2sh", "p2wsh", "p2wsh-in-p2sh"]
 
 
         versions = [
-            self.script_semantics.get(v, v) 
+            self.script_semantics.get(v, v.upper()) 
             for v in crypto.DEFAULT_NETWORK.XPRIVATE_KEY_VERSIONS.get_versions()
             if current_hd != "BIP141" or v in self.allowed_bip141_semantics
         ]
 
+        default_version = self.script_semantics.get(crypto.DEFAULT_SEMANTIC, crypto.DEFAULT_SEMANTIC.upper())
+
         for semantic_combo in self.bips_sematic_combos:
             semantic_combo.clear()
             semantic_combo.addItems(versions)
-            semantic_combo.setCurrentIndex(0)
+            semantic_combo.setCurrentText(default_version)
 
 
         if self.ui.dumpsFormatQComboBox.currentText() == "CSV":
@@ -1282,6 +1285,17 @@ class Dumps:
         
         self.ui.derivationQGroupBox.setEnabled(is_drived)
         self.ui.dumpsformatQFrame.setEnabled(is_drived)
+
+        self.bip141_semantic_frames = [
+            self.ui.bipFromPrivateKeySemanticsQFrame,
+            self.ui.bipFromPublicKeySemanticsQFrame,
+            self.ui.bipFromWIFSemanticsQFrame
+        ]
+
+        is_bip141 = current_hd == "BIP141"
+
+        for semantic_frame in self.bip141_semantic_frames: 
+            semantic_frame.setEnabled(is_bip141)
 
         if not is_drived:
             self.ui.dumpsFormatQComboBox.setCurrentText("JSON")
