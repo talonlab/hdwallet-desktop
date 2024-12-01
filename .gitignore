@@ -1,4 +1,5 @@
 # Files stuff
+.DS_Store
 .coverage
 make.bat
 Makefile
