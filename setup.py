@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Copyright © 2020-2024, Meheret Tesfaye Batu <meherett.batu@gmail.com>
+# Copyright 2020-2024, Meheret Tesfaye Batu <meherett.batu@gmail.com>
 #             2024, Abenezer Lulseged Wube <itsm3abena@gmail.com>
 #             2024, Eyoel Tadesse <eyoel_tadesse@proton.me>
 # Distributed under the MIT software license, see the accompanying
@@ -12,6 +12,10 @@ from src import info
 import platform
 
 app_name  = "HDWallet"
+
+# Get platform info
+platform_name = platform.system().lower()
+machine_arch = platform.machine()
 
 if platform.system() == "Windows":
     icon_path = "src/ui/images/icon/icon.ico"
@@ -43,7 +47,7 @@ bdist_mac_opt = {
 }
 
 bdist_dmg_options = {
-    "volume_label": app_name,
+    "volume_label": f"{app_name}-{info.__version__}-{platform_name}-{machine_arch}",
     "applications_shortcut": True,
     #"iconfile": "data/MyIcon.icns",
     "background": icon_path
@@ -90,7 +94,7 @@ executables = [
 ]
 
 setup(
-    name=app_name,
+    name=f"{app_name}-{info.__version__}-{platform_name}-{machine_arch}",
     version=info.__version__,
     author=info.__author__,
     description="A desktop application for generating hierarchical deterministic wallets using the HDWallet library.",
