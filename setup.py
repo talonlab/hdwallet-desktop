@@ -16,6 +16,7 @@ app_name  = "HDWallet"
 # Get platform info
 platform_name = platform.system().lower()
 machine_arch = platform.machine()
+app_version = info.__version__.lstrip("v")
 
 if platform.system() == "Windows":
     icon_path = "src/ui/images/icon/icon.ico"
@@ -47,7 +48,7 @@ bdist_mac_opt = {
 }
 
 bdist_dmg_options = {
-    "volume_label": f"{app_name}-{info.__version__}-{platform_name}-{machine_arch}",
+    "volume_label": f"{app_name}-{app_version}-{platform_name}-{machine_arch}",
     "applications_shortcut": True,
     #"iconfile": "data/MyIcon.icns",
     "background": icon_path
@@ -94,7 +95,7 @@ executables = [
 ]
 
 setup(
-    name=f"{app_name}-{info.__version__}-{platform_name}-{machine_arch}",
+    name=app_name,
     version=info.__version__,
     author=info.__author__,
     description="A desktop application for generating hierarchical deterministic wallets using the HDWallet library.",

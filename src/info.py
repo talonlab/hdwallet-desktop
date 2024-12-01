@@ -7,5 +7,5 @@
 __name__: str = "hdwallet-desktop"
 __version__: str = "v0.1.0b13"
 __license__: str = "MIT"
-__author__: str = "Meheret Tesfaye Batu"
-__email__: str = "meherett.batu@gmail.com"
+__author__: str = "Talon Lab"
+__email__: str = "info@talonlab.org"
