@@ -1242,7 +1242,11 @@ class Dumps:
             if current_hd != "BIP141" or v in self.allowed_bip141_semantics
         ]
 
-        default_version = self.script_semantics.get(crypto.DEFAULT_SEMANTIC, crypto.DEFAULT_SEMANTIC.upper())
+        if "BIP141" == current_hd:
+            default_version = "P2WPKH"
+        else:
+            default_version = self.script_semantics.get(crypto.DEFAULT_SEMANTIC, crypto.DEFAULT_SEMANTIC.upper())
+
 
         for semantic_combo in self.bips_sematic_combos:
             semantic_combo.clear()
