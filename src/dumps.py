@@ -255,7 +255,8 @@ class Dumps:
             "Bitcoin Core": "m/0'/0'",
             "blockchain.info": "m/44'/0'/0'",
             "MultiBit HD": "m/0'/0",
-            "Coinomi, Ledger": "m/44'/0'/0'"
+            "Coinomi, Ledger": "m/44'/0'/0'",
+            "QiWallet": "m/88'/0'/0'"
         }
 
         for name, data in self.derivation_tab.items():
