@@ -8,16 +8,16 @@
 
 <div align="center">
 
-
+![GitHub Created At](https://img.shields.io/github/created-at/talonlab/hdwallet-desktop)
 ![GitHub License](https://img.shields.io/github/license/talonlab/hdwallet-desktop?color=black)
-![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux-blue)
+![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux%20%7C%20Mac-blue)
 ![GitHub Release](https://img.shields.io/github/v/release/talonlab/hdwallet-desktop)
 ![GitHub Release Date](https://img.shields.io/github/release-date/talonlab/hdwallet-desktop)
 
 
 </div>
 
-A cross-platform client desktop application built on the [Hierarchical Deterministic (HD) Wallet Library](https://github.com/talonlab/python-hdwallet). This application leverages the Python-based library for the implementation of a hierarchical deterministic wallet generator for more than 140+ multiple cryptocurrencies. 
+A cross-platform client desktop application built on the [Hierarchical Deterministic (HD) Wallet Library](https://github.com/talonlab/python-hdwallet). This application leverages the Python-based library for the implementation of a hierarchical deterministic wallet generator for more than 200 multiple cryptocurrencies. 
 
 ![Desktop Application](data/hdwallet.gif)
 
@@ -28,7 +28,7 @@ A cross-platform client desktop application built on the [Hierarchical Determini
 
 To install on Windows, download one of the following from the Releases page:
 
-- MSI Installer – Recommended for a guided installation process.
+- MSI Installer– Recommended for a guided installation process.
 
 - Executable (.exe) – A standalone version that runs without installation.
 
@@ -52,8 +52,24 @@ To install on Linux, download one of the following from the Releases page:
     chmod +x hdwallet-desktop-x.x.x-x86_64.AppImage
     ```
     ```
-    ./ hdwallet-desktop-x.x.x-x86_64.AppImage
+    ./hdwallet-desktop-x.x.x-x86_64.AppImage
     ```
+
+### For Mac
+
+To install on Mac, download one of the following from the Releases page:
+
+- MacOS App Bundle (.app):
+   - Available as a `.zip` file.
+   - Two versions:
+     - **ARM64**: For Apple Silicon `M` series devices.
+     - **x64**: For Intel-based Macs.
+
+- MacOS Disk Image (.dmg):
+   - A convenient format for installation on macOS.
+   - Two versions:
+     - **ARM64**: For Apple Silicon `M` series devices.
+     - **x64**: For Intel-based Macs.
 
 
 ## Development
@@ -79,8 +95,6 @@ Feel free to open an [issue](https://github.com/talonlab/hdwallet-desktop/issues
 or a pull request if you've solved an issue. And also any help in testing, development,
 documentation and other tasks is highly appreciated and useful to the project.
 There are tasks for contributors of all experience levels.
-
-For more information, see the [CONTRIBUTING.md](https://github.com/talonlab/hdwallet-desktop/blob/master/CONTRIBUTING.md) file.
 
 
 ## Donations
