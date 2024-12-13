@@ -1,11 +1,10 @@
-name: Build and Package BIP38
+name: Build and Package HDWallet
 
 on:
   pull_request:
   push:
     tags:
-      - '**[0-9]+.[0-9]+.[0-9]+*'
-  pull_request:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
 
 jobs:
   build:
