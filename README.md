@@ -1,5 +1,5 @@
 <h1 align="center" style="border-bottom: none">
-    <img height="200" width="1000" alt="HDWallet" src="data/hdlogo.png">
+    <img height="100" alt="HDWallet" src="data/full-logo.svg">
 </h1>
 
 <p align="center">
@@ -38,6 +38,14 @@ Once downloaded, double-click the .msi or .exe file and follow the on-screen ins
 
 To install on Linux, download one of the following from the Releases page:
 
+Note: For ubuntu >= 22.04 install required libraries
+
+```
+sudo apt-get update
+sudo apt-get install libxcb-cursor0 libxcb-cursor-dev
+```
+
+
 - Debian Package (.deb) – Recommended for Debian-based systems like Ubuntu and Debian.
 
     Installation: Open a terminal, navigate to the download location, and run:
@@ -58,6 +66,19 @@ To install on Linux, download one of the following from the Releases page:
 ### For Mac
 
 To install on Mac, download one of the following from the Releases page:
+
+1. **Install OpenSSL** (a required dependency if not already installed):
+```bash
+brew install openssl
+```
+2. **Set up OpenSSL** environment variables to ensure it is correctly linked for development:
+```bash
+echo 'export LDFLAGS=-L$(brew --prefix openssl)/lib' >> ~/.zshrc
+echo 'export CPPFLAGS=-I$(brew --prefix openssl)/include' >> ~/.zshrc
+echo 'export PKG_CONFIG_PATH=$(brew --prefix openssl)/lib/pkgconfig' >> ~/.zshrc
+echo 'export PATH=$(brew --prefix openssl)/bin:$PATH' >> ~/.zshrc
+source ~/.zshrc
+```
 
 - MacOS App Bundle (.app):
    - Available as a `.zip` file.
