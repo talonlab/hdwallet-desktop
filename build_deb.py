@@ -42,7 +42,7 @@ build_root.mkdir(exist_ok=True)
 appimage_output_path = None
 
 try:
-    subprocess.run(["python3", "build.py", "bdist_appimage"], check=True)
+    subprocess.run(["python3", "setup.py", "bdist_appimage"], check=True)
     dist_appimage_files = glob(f"dist/{app_name}-{app_version}*.AppImage")
     if dist_appimage_files:
         appimage_output_path = dist_appimage_files[0]
