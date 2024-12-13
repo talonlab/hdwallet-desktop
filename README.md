@@ -9,7 +9,7 @@
 <div align="center">
 
 ![GitHub Created At](https://img.shields.io/github/created-at/talonlab/hdwallet-desktop)
-![GitHub License](https://img.shields.io/github/license/talonlab/hdwallet-desktop?color=black)
+![GitHub License](https://img.shields.io/github/license/talonlab/hdwallet-desktop?style=flat&color=black)
 ![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux%20%7C%20Mac-blue)
 ![GitHub Release](https://img.shields.io/github/v/release/talonlab/hdwallet-desktop)
 ![GitHub Release Date](https://img.shields.io/github/release-date/talonlab/hdwallet-desktop)
