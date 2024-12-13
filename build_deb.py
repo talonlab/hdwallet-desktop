@@ -31,7 +31,7 @@ if platform.system() != "Linux":
 
 app_version = __version__.lstrip("v")
 app_name  = "HDWallet"
-app_description = __description__
+app_description = "A desktop application for generating hierarchical deterministic wallets"
 maintainer = __author__ 
 
 icon_path = "src/ui/images/svg/HDW-Logo.svg"
@@ -76,7 +76,7 @@ Exec=/opt/{app_name}/{app_name}.AppImage
 Icon={app_name}
 Type=Application
 Categories=Utility;
-Comment=A desktop application for generating hierarchical deterministic wallets.
+Comment={app_description}.
 """
 desktop_entry_path = applications_dir / f"{app_name}.desktop"
 desktop_entry_path.write_text(desktop_entry_content)
