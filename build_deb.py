@@ -43,7 +43,7 @@ appimage_output_path = None
 
 try:
     subprocess.run(["python3", "setup.py", "bdist_appimage"], check=True)
-    dist_appimage_files = glob(f"dist/{app_name}-{app_version}*.AppImage")
+    dist_appimage_files = glob(f"dist/*.AppImage")
     if dist_appimage_files:
         appimage_output_path = dist_appimage_files[0]
     else:
