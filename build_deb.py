@@ -30,7 +30,7 @@ if platform.system() != "Linux":
 
 
 app_version = __version__.lstrip("v")
-app_name  = __name__
+app_name  = "HDWallet"
 app_description = __description__
 maintainer = __author__ 
 
@@ -43,7 +43,7 @@ appimage_output_path = None
 
 try:
     subprocess.run(["python3", "setup.py", "bdist_appimage"], check=True)
-    dist_appimage_files = glob(f"dist/{app_name}-{app_version}*.AppImage")
+    dist_appimage_files = glob(f"dist/*.AppImage")
     if dist_appimage_files:
         appimage_output_path = dist_appimage_files[0]
     else:

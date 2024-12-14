@@ -11,7 +11,7 @@ from src import info
 
 import platform
 
-app_name  = info.__name__
+app_name  = "HDWallet"
 
 # Get platform info
 platform_name = platform.system().lower()
