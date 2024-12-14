@@ -14,7 +14,7 @@ import shutil
 import platform
 import subprocess
 
-from hdwallet.info import __version__, __name__, __author__, __description__
+from src.info import __version__, __name__, __author__, __description__
 
 arch_map = {
     "x86_64": "amd64",
@@ -30,8 +30,8 @@ if platform.system() != "Linux":
 
 
 app_version = __version__.lstrip("v")
-app_name  = "HDWallet"
-app_description = "A desktop application for generating hierarchical deterministic wallets"
+app_name  = __name__
+app_description = __description__
 maintainer = __author__ 
 
 icon_path = "src/ui/images/svg/HDW-Logo.svg"
@@ -43,7 +43,7 @@ appimage_output_path = None
 
 try:
     subprocess.run(["python3", "setup.py", "bdist_appimage"], check=True)
-    dist_appimage_files = glob(f"dist/*.AppImage")
+    dist_appimage_files = glob(f"dist/{app_name}-{app_version}*.AppImage")
     if dist_appimage_files:
         appimage_output_path = dist_appimage_files[0]
     else:
