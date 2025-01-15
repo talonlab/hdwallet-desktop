@@ -127,6 +127,17 @@ If you find our work helpful, consider supporting the project:
 - **Ethereum / ERC20** - 0xD3cbCB0B6F82A03C715D665b72dC44CEf54e6D9B
 - **Solana** - 9cVoan5GvnpVvysEkFWEFR4k9cpTdWKmqQ6Gi7nwM5ES
 
+We accept a wide range of cryptocurrencies! If you'd like to donate using another coin, generate an address using the following ECC public keys at [hdwallet.online](https://hdwallet.online):
+
+| **ECC**                | **Public Key**                                                                 | **Online**                                                                                                                                                                                                                                                                                                                                 |
+|------------------------|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| SLIP10-Secp256k1       | `029890465120fb6c4efecdfcfd149f8333b0929b98976722a28ee39f5344d29eee`           | [generate](https://hdwallet.online/dumps/slip10-secp256k1/BTC?network=mainnet&hd=BIP32&from=public-key&public-key=029890465120fb6c4efecdfcfd149f8333b0929b98976722a28ee39f5344d29eee&public-key-type=compressed&format=JSON&exclude=root&generate=true)                                                                                    |
+| SLIP10-Ed25519         | `007ff5643c73e46e6c6a0dfd702894610505423e145dc8a93df19ff44eb011323b`           | [generate](https://hdwallet.online/dumps/slip10-ed25519/ALGO?network=mainnet&hd=BIP32&from=public-key&public-key=007ff5643c73e46e6c6a0dfd702894610505423e145dc8a93df19ff44eb011323b&format=JSON&exclude=root&generate=true)                                                                                                                |
+| Kholaw-Ed25519         | `005a49188ccd3d841dd877d7c00078da5c90452cbd69d4cef7a959f679fcc0e0e3`           | [generate](https://hdwallet.online/dumps/kholaw-ed25519/ADA?network=mainnet&hd=Cardano&from=public-key&public-key=005a49188ccd3d841dd877d7c00078da5c90452cbd69d4cef7a959f679fcc0e0e3&staking-public-key=005a49188ccd3d841dd877d7c00078da5c90452cbd69d4cef7a959f679fcc0e0e3&address-type=payment&format=JSON&exclude=root&generate=true)    |
+| SLIP10-Ed25519-Blake2b | `0051e8b29f7d0214dc96843cdbdcc071dc65397016ea6f7381f81bf42d76c7357c`           | [generate](https://hdwallet.online/dumps/slip10-ed25519-blake2b/XNO?network=mainnet&hd=BIP32&from=public-key&public-key=0051e8b29f7d0214dc96843cdbdcc071dc65397016ea6f7381f81bf42d76c7357c&format=JSON&exclude=root&generate=true)                                                                                                         |
+| SLIP10-Nist256p1       | `039ee4e2aadd6f4e7938d164b646c4b424114b8dd57252287151398ba0baf25780`           | [generate](https://hdwallet.online/dumps/slip10-nist256p1/NEO?network=mainnet&hd=BIP32&from=public-key&public-key=039ee4e2aadd6f4e7938d164b646c4b424114b8dd57252287151398ba0baf25780&format=JSON&exclude=root&generate=true)                                                                                                               |
+
+
 Thank you very much for your support.
 
 ## License
