@@ -122,8 +122,6 @@ jobs:
             echo "No .deb file found in dist directory"
           fi
 
-
-
       - name: Build Windows Executable
         if: matrix.os == 'windows-latest'
         run: |
@@ -135,32 +133,30 @@ jobs:
             Write-Output "No MSI package found in dist directory"
           }
 
-
       - name: Upload Ubuntu .deb Package
         if: startsWith(matrix.os, 'ubuntu-latest')
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ubuntu-deb-package
           path: dist/*
 
       - name: Upload Windows Executables
         if: matrix.os == 'windows-latest'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: windows-executables
           path: dist/*
 
       - name: Upload Intel Build Artifacts
         if: matrix.os == 'macos-15'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: macos-intel-artifacts
           path: dist/*
 
       - name: Upload ARM64 Build Artifacts
         if: matrix.os == 'macos-latest'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: macos-arm64-artifacts
           path: dist/*
-
