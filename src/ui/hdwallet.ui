@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1300</width>
-    <height>608</height>
+    <height>614</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -51,7 +51,7 @@
        </size>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <layout class="QVBoxLayout" name="hdWalletContainerQFrameVLayout">
        <property name="spacing">
@@ -93,7 +93,7 @@
           <item>
            <spacer name="hdWalletHeaderContainerQFrameHSpacer">
             <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+             <enum>Qt::Orientation::Horizontal</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -312,7 +312,7 @@
                    </layout>
                   </widget>
                  </item>
-                 <item alignment="Qt::AlignBottom">
+                 <item alignment="Qt::AlignmentFlag::AlignBottom">
                   <widget class="QPushButton" name="generateEntropyClientAndStrengthQPushButton">
                    <property name="cursor">
                     <cursorShape>PointingHandCursor</cursorShape>
@@ -682,7 +682,7 @@
                           <item>
                            <spacer name="generateMnemonicEntropyLabelQFrameHSpacer">
                             <property name="orientation">
-                             <enum>Qt::Horizontal</enum>
+                             <enum>Qt::Orientation::Horizontal</enum>
                             </property>
                             <property name="sizeHint" stdset="0">
                              <size>
@@ -705,7 +705,7 @@
                       </layout>
                      </widget>
                     </item>
-                    <item alignment="Qt::AlignBottom">
+                    <item alignment="Qt::AlignmentFlag::AlignBottom">
                      <widget class="QPushButton" name="generateMnemonicClientWordsAndLanguageQPushButton">
                       <property name="cursor">
                        <cursorShape>PointingHandCursor</cursorShape>
@@ -950,7 +950,7 @@
                           <item>
                            <spacer name="generateSeedMnemonicContainerQFrameHSpacer">
                             <property name="orientation">
-                             <enum>Qt::Horizontal</enum>
+                             <enum>Qt::Orientation::Horizontal</enum>
                             </property>
                             <property name="sizeHint" stdset="0">
                              <size>
@@ -1028,7 +1028,7 @@
                           <item>
                            <spacer name="generateSeedPassphraseGenerateLabelContainerQFrameHSpacer">
                             <property name="orientation">
-                             <enum>Qt::Horizontal</enum>
+                             <enum>Qt::Orientation::Horizontal</enum>
                             </property>
                             <property name="sizeHint" stdset="0">
                              <size>
@@ -1051,7 +1051,7 @@
                       </layout>
                      </widget>
                     </item>
-                    <item alignment="Qt::AlignBottom">
+                    <item alignment="Qt::AlignmentFlag::AlignBottom">
                      <widget class="QPushButton" name="generateSeedPassphraseGenerateQPushButton">
                       <property name="cursor">
                        <cursorShape>PointingHandCursor</cursorShape>
@@ -1109,7 +1109,7 @@
                     <property name="spacing">
                      <number>5</number>
                     </property>
-                    <item row="1" column="0" alignment="Qt::AlignBottom">
+                    <item row="1" column="0" alignment="Qt::AlignmentFlag::AlignBottom">
                      <widget class="QFrame" name="generatePassphraseLineEditContainerQFrame">
                       <layout class="QHBoxLayout" name="generatePassphraseLineEditContainerQFrameHLayout">
                        <property name="spacing">
@@ -1246,7 +1246,7 @@
                        <item>
                         <spacer name="generateLengthLabelContainerQFrameHSpacer">
                          <property name="orientation">
-                          <enum>Qt::Horizontal</enum>
+                          <enum>Qt::Orientation::Horizontal</enum>
                          </property>
                          <property name="sizeHint" stdset="0">
                           <size>
@@ -1272,7 +1272,7 @@
                    </layout>
                   </widget>
                  </item>
-                 <item alignment="Qt::AlignBottom">
+                 <item alignment="Qt::AlignmentFlag::AlignBottom">
                   <widget class="QPushButton" name="generatePassphraseQPushButton">
                    <property name="cursor">
                     <cursorShape>PointingHandCursor</cursorShape>
@@ -1288,7 +1288,7 @@
               <item>
                <spacer name="generatePageQStackedWidgetVSpacer">
                 <property name="orientation">
-                 <enum>Qt::Vertical</enum>
+                 <enum>Qt::Orientation::Vertical</enum>
                 </property>
                 <property name="sizeHint" stdset="0">
                  <size>
@@ -1381,7 +1381,7 @@
                        <item>
                         <spacer name="dumpsCryptocurrencyLabelContainerQFrameHSpacer">
                          <property name="orientation">
-                          <enum>Qt::Horizontal</enum>
+                          <enum>Qt::Orientation::Horizontal</enum>
                          </property>
                          <property name="sizeHint" stdset="0">
                           <size>
@@ -1469,7 +1469,7 @@
                        <item>
                         <spacer name="dumpsNetworkLabelContainerQFrameHSpacer">
                          <property name="orientation">
-                          <enum>Qt::Horizontal</enum>
+                          <enum>Qt::Orientation::Horizontal</enum>
                          </property>
                          <property name="sizeHint" stdset="0">
                           <size>
@@ -1526,7 +1526,7 @@
                     <item>
                      <widget class="QFrame" name="dumpsHdListLabelContainerQFrame">
                       <property name="frameShape">
-                       <enum>QFrame::NoFrame</enum>
+                       <enum>QFrame::Shape::NoFrame</enum>
                       </property>
                       <layout class="QHBoxLayout" name="dumpsHdListLabelContainerQFrameHLayout">
                        <property name="spacing">
@@ -1554,7 +1554,7 @@
                        <item>
                         <spacer name="dumpsHdListLabelContainerQFrameHSpacer">
                          <property name="orientation">
-                          <enum>Qt::Horizontal</enum>
+                          <enum>Qt::Orientation::Horizontal</enum>
                          </property>
                          <property name="sizeHint" stdset="0">
                           <size>
@@ -1657,7 +1657,7 @@
                     <item>
                      <widget class="QFrame" name="dumpsFromLabelContainerQFrame">
                       <property name="frameShape">
-                       <enum>QFrame::NoFrame</enum>
+                       <enum>QFrame::Shape::NoFrame</enum>
                       </property>
                       <layout class="QHBoxLayout" name="dumpsFromLabelContainerQFrameHLayout">
                        <property name="spacing">
@@ -1685,7 +1685,7 @@
                        <item>
                         <spacer name="dumpsFromLabelContainerQFrameHSpacer">
                          <property name="orientation">
-                          <enum>Qt::Horizontal</enum>
+                          <enum>Qt::Orientation::Horizontal</enum>
                          </property>
                          <property name="sizeHint" stdset="0">
                           <size>
@@ -1834,10 +1834,10 @@
                          <item>
                           <widget class="QFrame" name="bipFromEntropyClientAndEntropyContainerQFrame">
                            <property name="frameShape">
-                            <enum>QFrame::StyledPanel</enum>
+                            <enum>QFrame::Shape::StyledPanel</enum>
                            </property>
                            <property name="frameShadow">
-                            <enum>QFrame::Raised</enum>
+                            <enum>QFrame::Shadow::Raised</enum>
                            </property>
                            <layout class="QHBoxLayout" name="bipFromEntropyClientAndEntropyContainerQFrameHLayout">
                             <property name="spacing">
@@ -1858,10 +1858,10 @@
                             <item>
                              <widget class="QFrame" name="bipFromEntropyClientContainerQFrame">
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="bipFromEntropyClientContainerQFrameVLayout">
                                <property name="spacing">
@@ -1882,10 +1882,10 @@
                                <item>
                                 <widget class="QFrame" name="bipFromEntropyClientLabelContainerQFrame">
                                  <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
+                                  <enum>QFrame::Shape::StyledPanel</enum>
                                  </property>
                                  <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
+                                  <enum>QFrame::Shadow::Raised</enum>
                                  </property>
                                  <layout class="QHBoxLayout" name="bipFromEntropyClientLabelContainerQFrameHLayout">
                                   <property name="spacing">
@@ -1913,7 +1913,7 @@
                                   <item>
                                    <spacer name="bipFromEntropyClientLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -1985,7 +1985,7 @@
                                   <item>
                                    <spacer name="bipFromEntropyLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -2071,7 +2071,7 @@
                                   <item>
                                    <spacer name="bipFromEntropyLanguageLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -2207,7 +2207,7 @@
                                   <item>
                                    <spacer name="bipFromEntropyPassphraseLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -2297,7 +2297,7 @@
                                   <item>
                                    <spacer name="bipFromEntropyPublicKeyTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -2423,10 +2423,10 @@
                          <item>
                           <widget class="QFrame" name="bipFromMnemonicClientAndMnemonicContainerQFrame">
                            <property name="frameShape">
-                            <enum>QFrame::StyledPanel</enum>
+                            <enum>QFrame::Shape::StyledPanel</enum>
                            </property>
                            <property name="frameShadow">
-                            <enum>QFrame::Raised</enum>
+                            <enum>QFrame::Shadow::Raised</enum>
                            </property>
                            <layout class="QHBoxLayout" name="bipFromMnemonicClientAndMnemonicContainerQFrameHSpacer">
                             <property name="spacing">
@@ -2447,10 +2447,10 @@
                             <item>
                              <widget class="QFrame" name="bipFromMnemonicClientContainerQFrame">
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="bipFromMnemonicClientContainerQFrameVLayout">
                                <property name="spacing">
@@ -2471,10 +2471,10 @@
                                <item>
                                 <widget class="QFrame" name="bipFromMnemonicClientLabelContainerQFrame">
                                  <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
+                                  <enum>QFrame::Shape::StyledPanel</enum>
                                  </property>
                                  <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
+                                  <enum>QFrame::Shadow::Raised</enum>
                                  </property>
                                  <layout class="QHBoxLayout" name="bipFromMnemonicClientLabelContainerQFrameHLayout">
                                   <property name="spacing">
@@ -2502,7 +2502,7 @@
                                   <item>
                                    <spacer name="bipFromMnemonicClientLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -2574,7 +2574,7 @@
                                   <item>
                                    <spacer name="bipFromMnemonicLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -2687,7 +2687,7 @@
                                   <item>
                                    <spacer name="bipFromMnemonicPassphraseLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -2890,10 +2890,10 @@
                          <item>
                           <widget class="QFrame" name="bipFromSeedClientAndSeedContainerQFrame">
                            <property name="frameShape">
-                            <enum>QFrame::StyledPanel</enum>
+                            <enum>QFrame::Shape::StyledPanel</enum>
                            </property>
                            <property name="frameShadow">
-                            <enum>QFrame::Raised</enum>
+                            <enum>QFrame::Shadow::Raised</enum>
                            </property>
                            <layout class="QHBoxLayout" name="bipFromSeedClientAndSeedContainerQFrameHLayout">
                             <property name="spacing">
@@ -2914,10 +2914,10 @@
                             <item>
                              <widget class="QFrame" name="bipFromSeedClientContainerQFrame">
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="bipFromSeedClientContainerQFrameVLayout">
                                <property name="spacing">
@@ -2938,10 +2938,10 @@
                                <item>
                                 <widget class="QFrame" name="bipFromSeedClientLabelContainerQFrame">
                                  <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
+                                  <enum>QFrame::Shape::StyledPanel</enum>
                                  </property>
                                  <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
+                                  <enum>QFrame::Shadow::Raised</enum>
                                  </property>
                                  <layout class="QHBoxLayout" name="bipFromSeedClientLabelContainerQFrameHLayout">
                                   <property name="spacing">
@@ -2969,7 +2969,7 @@
                                   <item>
                                    <spacer name="bipFromSeedClientLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -2998,10 +2998,10 @@
                             <item>
                              <widget class="QFrame" name="bipFromSeedQFrame">
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="bipFromSeedQFrameVLayout">
                                <property name="spacing">
@@ -3047,7 +3047,7 @@
                                   <item>
                                    <spacer name="bipFromSeedsLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -3224,7 +3224,7 @@
                             <item>
                              <spacer name="bipFromSeedPublicKeyTypeQFrameHSpacer">
                               <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
+                               <enum>Qt::Orientation::Horizontal</enum>
                               </property>
                               <property name="sizeHint" stdset="0">
                                <size>
@@ -3320,7 +3320,7 @@
                                   <item>
                                    <spacer name="bipFromXPrivateKeyLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -3339,7 +3339,7 @@
                               </layout>
                              </widget>
                             </item>
-                            <item alignment="Qt::AlignBottom">
+                            <item alignment="Qt::AlignmentFlag::AlignBottom">
                              <widget class="QFrame" name="bipFromXPrivateKeyStrictCheckBoxContainerQFrame">
                               <layout class="QVBoxLayout" name="bipFromXPrivateKeyStrictCheckBoxContainerQFrameVlayout">
                                <property name="spacing">
@@ -3357,7 +3357,7 @@
                                <property name="bottomMargin">
                                 <number>0</number>
                                </property>
-                               <item alignment="Qt::AlignBottom">
+                               <item alignment="Qt::AlignmentFlag::AlignBottom">
                                 <widget class="QCheckBox" name="bipFromXPrivateKeyStrictQCheckBox">
                                  <property name="cursor">
                                   <cursorShape>PointingHandCursor</cursorShape>
@@ -3528,7 +3528,7 @@
                             <item>
                              <spacer name="bipFromXPrivateKeyPublicKeyTypeQFrameHSpacer">
                               <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
+                               <enum>Qt::Orientation::Horizontal</enum>
                               </property>
                               <property name="sizeHint" stdset="0">
                                <size>
@@ -3624,7 +3624,7 @@
                                   <item>
                                    <spacer name="bipFromXPublicKeyLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -3643,7 +3643,7 @@
                               </layout>
                              </widget>
                             </item>
-                            <item alignment="Qt::AlignBottom">
+                            <item alignment="Qt::AlignmentFlag::AlignBottom">
                              <widget class="QFrame" name="bipFromXPublicKeyStrictCheckBoxContainerQFrame">
                               <layout class="QVBoxLayout" name="bipFromXPublicKeyStrictCheckBoxContainerQFrameVLayout">
                                <property name="spacing">
@@ -3822,7 +3822,7 @@
                                   <item>
                                    <spacer name="bipFromXPublicKeySemanticsLabelHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -3851,7 +3851,7 @@
                             <item>
                              <spacer name="bipFromXPublicKeyPublicKeyTypeQFrameHSpacer">
                               <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
+                               <enum>Qt::Orientation::Horizontal</enum>
                               </property>
                               <property name="sizeHint" stdset="0">
                                <size>
@@ -3935,7 +3935,7 @@
                                <item>
                                 <spacer name="bipFromWIFLabelContainerQFrameHSpacer">
                                  <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
+                                  <enum>Qt::Orientation::Horizontal</enum>
                                  </property>
                                  <property name="sizeHint" stdset="0">
                                   <size>
@@ -3972,7 +3972,7 @@
                             <property name="bottomMargin">
                              <number>0</number>
                             </property>
-                            <item alignment="Qt::AlignBottom">
+                            <item alignment="Qt::AlignmentFlag::AlignBottom">
                              <widget class="QFrame" name="bipFromWIFBIP38PassphraseChackBoxContainerQFrame">
                               <layout class="QVBoxLayout" name="bipFromWIFBIP38PassphraseChackBoxContainerQFrameVLayout">
                                <property name="spacing">
@@ -4055,7 +4055,7 @@
                                   <item>
                                    <spacer name="bipFromWIFBIP38PassphraseCheckBoxContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -4126,7 +4126,7 @@
                                   <item>
                                    <spacer name="bipFromWIFPublicKeyTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -4313,7 +4313,7 @@
                                   <item>
                                    <spacer name="bipFromPrivateKeyLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -4490,7 +4490,7 @@
                             <item>
                              <spacer name="bipFromPrivateKeyAndPublicKeyTypeQFrameHSpacer">
                               <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
+                               <enum>Qt::Orientation::Horizontal</enum>
                               </property>
                               <property name="sizeHint" stdset="0">
                                <size>
@@ -4595,7 +4595,7 @@
                                   <item>
                                    <spacer name="bipFromPublicKeyLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -4772,7 +4772,7 @@
                             <item>
                              <spacer name="bipFromPublicKeyPublicKeyTypeQFrameHSpacer">
                               <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
+                               <enum>Qt::Orientation::Horizontal</enum>
                               </property>
                               <property name="sizeHint" stdset="0">
                                <size>
@@ -4854,10 +4854,10 @@
                                <bool>false</bool>
                               </property>
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="cardanoFromEntropyAndCardanoTypeClientContainerQFrameVLayout">
                                <property name="spacing">
@@ -4878,10 +4878,10 @@
                                <item>
                                 <widget class="QFrame" name="cardanoFromEntropyAndCardanoTypeClientLabelContainerQFrame">
                                  <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
+                                  <enum>QFrame::Shape::StyledPanel</enum>
                                  </property>
                                  <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
+                                  <enum>QFrame::Shadow::Raised</enum>
                                  </property>
                                  <layout class="QHBoxLayout" name="cardanoFromEntropyAndCardanoTypeClientLabelContainerQFrameHLayout">
                                   <property name="spacing">
@@ -4909,7 +4909,7 @@
                                   <item>
                                    <spacer name="cardanoFromEntropyClientLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -4981,7 +4981,7 @@
                                   <item>
                                    <spacer name="cardanoFromEntropyLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -5073,7 +5073,7 @@
                                   <item>
                                    <spacer name="cardanoFromEntropyCardanoTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -5196,7 +5196,7 @@
                                   <item>
                                    <spacer name="cardanoFromEntropyStakingLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -5261,7 +5261,7 @@
                                   <item>
                                    <spacer name="cardanoFromEntropyPassphraseLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -5330,7 +5330,7 @@
                                   <item>
                                    <spacer name="cardanoFromEntropyLanguageLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -5442,7 +5442,7 @@
                                   <item>
                                    <spacer name="cardanoFromEntropyAddressTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -5520,10 +5520,10 @@
                                <bool>false</bool>
                               </property>
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="cardanoFromMnemonicClientContainerQFrameVLayout">
                                <property name="spacing">
@@ -5544,10 +5544,10 @@
                                <item>
                                 <widget class="QFrame" name="cardanoFromMnemonicClientLabelContainerQFrame">
                                  <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
+                                  <enum>QFrame::Shape::StyledPanel</enum>
                                  </property>
                                  <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
+                                  <enum>QFrame::Shadow::Raised</enum>
                                  </property>
                                  <layout class="QHBoxLayout" name="cardanoFromMnemonicClientLabelContainerQFrameHLayout">
                                   <property name="spacing">
@@ -5575,7 +5575,7 @@
                                   <item>
                                    <spacer name="cardanoFromMnemonicClientLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -5647,7 +5647,7 @@
                                   <item>
                                    <spacer name="cardanoFromMnemonicLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -5739,7 +5739,7 @@
                                   <item>
                                    <spacer name="cardanoFromMnemonicCardanoTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -5862,7 +5862,7 @@
                                   <item>
                                    <spacer name="cardanoFromMnemonicStakingLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -5927,7 +5927,7 @@
                                   <item>
                                    <spacer name="cardanoFromMnemonicPassphraseLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -6023,7 +6023,7 @@
                                   <item>
                                    <spacer name="cardanoFromMnemonicAddressTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -6095,10 +6095,10 @@
                                <bool>false</bool>
                               </property>
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="cardanoFromSeedClientContainerQFrameVLayout">
                                <property name="spacing">
@@ -6119,10 +6119,10 @@
                                <item>
                                 <widget class="QFrame" name="cardanoFromSeedClientLabelContainerQFrame">
                                  <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
+                                  <enum>QFrame::Shape::StyledPanel</enum>
                                  </property>
                                  <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
+                                  <enum>QFrame::Shadow::Raised</enum>
                                  </property>
                                  <layout class="QHBoxLayout" name="cardanoFromSeedClientLabelContainerQFrameHLayout">
                                   <property name="spacing">
@@ -6150,7 +6150,7 @@
                                   <item>
                                    <spacer name="cardanoFromSeedClientLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -6225,7 +6225,7 @@
                                   <item>
                                    <spacer name="cardanoFromSeedLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -6296,7 +6296,7 @@
                                   <item>
                                    <spacer name="cardanoFromSeedCardanoTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -6419,7 +6419,7 @@
                                   <item>
                                    <spacer name="cardanoFromSeedStakingLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -6484,7 +6484,7 @@
                                   <item>
                                    <spacer name="cardanoFromSeedPassphraseLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -6559,7 +6559,7 @@
                                   <item>
                                    <spacer name="cardanoFromSeedAddressTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -6701,7 +6701,7 @@
                                   <item>
                                    <spacer name="cardanoFromXPrivateKeyLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -6720,7 +6720,7 @@
                               </layout>
                              </widget>
                             </item>
-                            <item alignment="Qt::AlignBottom">
+                            <item alignment="Qt::AlignmentFlag::AlignBottom">
                              <widget class="QFrame" name="cardanoFromXPrivateKeyStrictQFrame">
                               <layout class="QVBoxLayout" name="cardanoFromXPrivateKeyStrictQFrameVLayout">
                                <property name="spacing">
@@ -6803,7 +6803,7 @@
                                   <item>
                                    <spacer name="cardanoFromXPrivateKeyCardanoTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -6926,7 +6926,7 @@
                                   <item>
                                    <spacer name="cardanoFromXPrivateKeyStakingLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -6997,7 +6997,7 @@
                                   <item>
                                    <spacer name="cardanoFromXPrivateKeyAddressTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -7139,7 +7139,7 @@
                                   <item>
                                    <spacer name="cardanoFromXPublicKeyLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -7158,7 +7158,7 @@
                               </layout>
                              </widget>
                             </item>
-                            <item alignment="Qt::AlignBottom">
+                            <item alignment="Qt::AlignmentFlag::AlignBottom">
                              <widget class="QFrame" name="cardanoFromXPublicKeyStrictQFrame">
                               <layout class="QVBoxLayout" name="cardanoFromXPublicKeyStrictQFrameVLayout">
                                <property name="spacing">
@@ -7241,7 +7241,7 @@
                                   <item>
                                    <spacer name="cardanoFromXPublicKeyCardanoTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -7364,7 +7364,7 @@
                                   <item>
                                    <spacer name="cardanoFromXPublicKeyStakingLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -7435,7 +7435,7 @@
                                   <item>
                                    <spacer name="cardanoFromXPublicKeyAddressTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -7583,7 +7583,7 @@
                                   <item>
                                    <spacer name="cardanoFromPrivateKeyContainerLabelQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -7654,7 +7654,7 @@
                                   <item>
                                    <spacer name="cardanoFromPrivateKeyCardanoTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -7777,7 +7777,7 @@
                                   <item>
                                    <spacer name="cardanoFromPrivateKeyStakingLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -7848,7 +7848,7 @@
                                   <item>
                                    <spacer name="cardanoFromPrivateKeyAddressTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -7990,7 +7990,7 @@
                                   <item>
                                    <spacer name="cardanoFromPublicKeyLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -8061,7 +8061,7 @@
                                   <item>
                                    <spacer name="cardanoFromPublicKeyCardanoTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -8184,7 +8184,7 @@
                                   <item>
                                    <spacer name="cardanoFromPublicKeyStakingLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -8255,7 +8255,7 @@
                                   <item>
                                    <spacer name="cardanoFromPublicKeyAddressTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -8362,10 +8362,10 @@
                          <item>
                           <widget class="QFrame" name="electrumV1FromEntropyClientAndEntropyContainerQFrame">
                            <property name="frameShape">
-                            <enum>QFrame::StyledPanel</enum>
+                            <enum>QFrame::Shape::StyledPanel</enum>
                            </property>
                            <property name="frameShadow">
-                            <enum>QFrame::Raised</enum>
+                            <enum>QFrame::Shadow::Raised</enum>
                            </property>
                            <layout class="QHBoxLayout" name="electrumV1FromEntropyClientAndEntropyContainerQFrameHLayout">
                             <property name="spacing">
@@ -8389,10 +8389,10 @@
                                <bool>false</bool>
                               </property>
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="electrumV1FromEntropyClientContainerQFrameVLayout">
                                <property name="spacing">
@@ -8413,10 +8413,10 @@
                                <item>
                                 <widget class="QFrame" name="electrumV1FromEntropyClientLabelContainerQFrame">
                                  <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
+                                  <enum>QFrame::Shape::StyledPanel</enum>
                                  </property>
                                  <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
+                                  <enum>QFrame::Shadow::Raised</enum>
                                  </property>
                                  <layout class="QHBoxLayout" name="electrumV1FromEntropyClientLabelContainerQFrameHLayout">
                                   <property name="spacing">
@@ -8444,7 +8444,7 @@
                                   <item>
                                    <spacer name="electrumV1FromEntropyClientLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -8516,7 +8516,7 @@
                                   <item>
                                    <spacer name="electrumV1FromEntropyLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -8629,7 +8629,7 @@
                                   <item>
                                    <spacer name="electrumV1FromEntropyPublicKeyTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -8711,7 +8711,7 @@
                                   <item>
                                    <spacer name="electrumV1FromEntropyLanguageLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -8802,10 +8802,10 @@
                          <item>
                           <widget class="QFrame" name="electrumV1FromMnemonicClientAndMnemonicContainerQFrame">
                            <property name="frameShape">
-                            <enum>QFrame::StyledPanel</enum>
+                            <enum>QFrame::Shape::StyledPanel</enum>
                            </property>
                            <property name="frameShadow">
-                            <enum>QFrame::Raised</enum>
+                            <enum>QFrame::Shadow::Raised</enum>
                            </property>
                            <layout class="QHBoxLayout" name="electrumV1FromMnemonicClientAndMnemonicContainerQFrameHLayout">
                             <property name="spacing">
@@ -8829,10 +8829,10 @@
                                <bool>false</bool>
                               </property>
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="electrumV1FromMnemonicClientContainerQFrameVLayout">
                                <property name="spacing">
@@ -8853,10 +8853,10 @@
                                <item>
                                 <widget class="QFrame" name="electrumV1FromMnemonicClientLabelContainerQFrame">
                                  <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
+                                  <enum>QFrame::Shape::StyledPanel</enum>
                                  </property>
                                  <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
+                                  <enum>QFrame::Shadow::Raised</enum>
                                  </property>
                                  <layout class="QHBoxLayout" name="electrumV1FromMnemonicClientLabelContainerQFrameHLayout">
                                   <property name="spacing">
@@ -8884,7 +8884,7 @@
                                   <item>
                                    <spacer name="electrumV1FromMnemonicClientLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -8956,7 +8956,7 @@
                                   <item>
                                    <spacer name="electrumV1FromMnemonicLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -9095,7 +9095,7 @@
                             <item>
                              <spacer name="electrumV1FromMnemonicPublicKeyTypeAndPassphraseContainerQFrameHSpacer">
                               <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
+                               <enum>Qt::Orientation::Horizontal</enum>
                               </property>
                               <property name="sizeHint" stdset="0">
                                <size>
@@ -9130,10 +9130,10 @@
                          <item>
                           <widget class="QFrame" name="electrumV1FromSeedClientAndSeedContainer">
                            <property name="frameShape">
-                            <enum>QFrame::StyledPanel</enum>
+                            <enum>QFrame::Shape::StyledPanel</enum>
                            </property>
                            <property name="frameShadow">
-                            <enum>QFrame::Raised</enum>
+                            <enum>QFrame::Shadow::Raised</enum>
                            </property>
                            <layout class="QHBoxLayout" name="electrumV1FromSeedClientAndSeedContainerHLayout">
                             <property name="spacing">
@@ -9157,10 +9157,10 @@
                                <bool>false</bool>
                               </property>
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="electrumV1FromSeedClientContainerQFrameVLayout">
                                <property name="spacing">
@@ -9181,10 +9181,10 @@
                                <item>
                                 <widget class="QFrame" name="electrumV1FromSeedClientLabelContainerQFrame">
                                  <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
+                                  <enum>QFrame::Shape::StyledPanel</enum>
                                  </property>
                                  <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
+                                  <enum>QFrame::Shadow::Raised</enum>
                                  </property>
                                  <layout class="QHBoxLayout" name="electrumV1FromSeedClientLabelContainerQFrameHLayout">
                                   <property name="spacing">
@@ -9212,7 +9212,7 @@
                                   <item>
                                    <spacer name="electrumV1FromSeedClientLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -9284,7 +9284,7 @@
                                   <item>
                                    <spacer name="electrumV1FromSeedLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -9402,7 +9402,7 @@
                             <item>
                              <spacer name="electrumV1FromSeedsPublicKeyTypeQFrameHSpacer">
                               <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
+                               <enum>Qt::Orientation::Horizontal</enum>
                               </property>
                               <property name="sizeHint" stdset="0">
                                <size>
@@ -9480,7 +9480,7 @@
                                <item>
                                 <spacer name="electrumV1FromWIFLabelContainerQFrameHSpacer">
                                  <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
+                                  <enum>Qt::Orientation::Horizontal</enum>
                                  </property>
                                  <property name="sizeHint" stdset="0">
                                   <size>
@@ -9517,7 +9517,7 @@
                             <property name="bottomMargin">
                              <number>0</number>
                             </property>
-                            <item alignment="Qt::AlignBottom">
+                            <item alignment="Qt::AlignmentFlag::AlignBottom">
                              <widget class="QFrame" name="electrumV1FromWIFBIP38PassphraseCheckBoxQFrame">
                               <layout class="QVBoxLayout" name="electrumV1FromWIFBIP38PassphraseCheckBoxQFrameVLayout">
                                <property name="spacing">
@@ -9594,7 +9594,7 @@
                                   <item>
                                    <spacer name="electrumV1FromWIFBIP38PassphraseContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -9665,7 +9665,7 @@
                                   <item>
                                    <spacer name="electrumV1FromWIFPublicKeyTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -9726,7 +9726,7 @@
                          <item>
                           <widget class="QFrame" name="electrumV1FromPrivateKeyAndPublicKeyTypeContainerQFrame">
                            <property name="frameShadow">
-                            <enum>QFrame::Raised</enum>
+                            <enum>QFrame::Shadow::Raised</enum>
                            </property>
                            <layout class="QHBoxLayout" name="electrumV1FromPrivateKeyAndPublicKeyTypeContainerQFrameHLayout">
                             <property name="spacing">
@@ -9790,7 +9790,7 @@
                                   <item>
                                    <spacer name="electrumV1FromPrivateKeyLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -9908,7 +9908,7 @@
                             <item>
                              <spacer name="electrumV1FromPrivateKeyPublicKeyTypeQFrameHSpacer">
                               <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
+                               <enum>Qt::Orientation::Horizontal</enum>
                               </property>
                               <property name="sizeHint" stdset="0">
                                <size>
@@ -10004,7 +10004,7 @@
                                   <item>
                                    <spacer name="electrumV1FromPublicKeyLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -10122,7 +10122,7 @@
                             <item>
                              <spacer name="electrumV1FromPublicKeyPublicTypeQFrameHSpacer">
                               <property name="orientation">
-                               <enum>Qt::Horizontal</enum>
+                               <enum>Qt::Orientation::Horizontal</enum>
                               </property>
                               <property name="sizeHint" stdset="0">
                                <size>
@@ -10204,10 +10204,10 @@
                                <bool>false</bool>
                               </property>
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="electrumV2FromEntropyClientContainerQFrameVLayout">
                                <property name="spacing">
@@ -10228,10 +10228,10 @@
                                <item>
                                 <widget class="QFrame" name="electrumV2FromEntropyClientLabelContainerQFrame">
                                  <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
+                                  <enum>QFrame::Shape::StyledPanel</enum>
                                  </property>
                                  <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
+                                  <enum>QFrame::Shadow::Raised</enum>
                                  </property>
                                  <layout class="QHBoxLayout" name="electrumV2FromEntropyClientLabelContainerQFrameHLayout">
                                   <property name="spacing">
@@ -10259,7 +10259,7 @@
                                   <item>
                                    <spacer name="electrumV2FromEntropyClientLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -10331,7 +10331,7 @@
                                   <item>
                                    <spacer name="electrumV2FromEntropyLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -10672,10 +10672,10 @@
                                <bool>false</bool>
                               </property>
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="electrumV2FromMnemonicClientContainerQFrameVLayout">
                                <property name="spacing">
@@ -10696,10 +10696,10 @@
                                <item>
                                 <widget class="QFrame" name="electrumV2FromMnemonicClientLabelContainerQFrame">
                                  <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
+                                  <enum>QFrame::Shape::StyledPanel</enum>
                                  </property>
                                  <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
+                                  <enum>QFrame::Shadow::Raised</enum>
                                  </property>
                                  <layout class="QHBoxLayout" name="electrumV2FromMnemonicClientLabelContainerQFrameHLayout">
                                   <property name="spacing">
@@ -10727,7 +10727,7 @@
                                   <item>
                                    <spacer name="electrumV2FromMnemonicClientLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -10799,7 +10799,7 @@
                                   <item>
                                    <spacer name="electrumV2FromMnemonicLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -10906,7 +10906,7 @@
                                   <item>
                                    <spacer name="electrumV2FromMnemonicModeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -10978,7 +10978,7 @@
                                   <item>
                                    <spacer name="electrumV2FromMnemonicMnemonicTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -11059,7 +11059,7 @@
                                   <item>
                                    <spacer name="electrumV2FromMnemonicPublicKeyTypeLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -11141,10 +11141,10 @@
                                <bool>false</bool>
                               </property>
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="electrumV2FromSeedClientContainerQFrameVLayout">
                                <property name="spacing">
@@ -11165,10 +11165,10 @@
                                <item>
                                 <widget class="QFrame" name="electrumV2FromSeedClientLabelContainerQFrame">
                                  <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
+                                  <enum>QFrame::Shape::StyledPanel</enum>
                                  </property>
                                  <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
+                                  <enum>QFrame::Shadow::Raised</enum>
                                  </property>
                                  <layout class="QHBoxLayout" name="electrumV2FromSeedClientLabelContainerQFrameHLayout">
                                   <property name="spacing">
@@ -11196,7 +11196,7 @@
                                   <item>
                                    <spacer name="electrumV2FromSeedClientLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -11268,7 +11268,7 @@
                                   <item>
                                    <spacer name="electrumV2FromSeedsLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -11472,10 +11472,10 @@
                          <item>
                           <widget class="QFrame" name="moneroFromEntropyClientAndEntropyContainerQFrame">
                            <property name="frameShape">
-                            <enum>QFrame::StyledPanel</enum>
+                            <enum>QFrame::Shape::StyledPanel</enum>
                            </property>
                            <property name="frameShadow">
-                            <enum>QFrame::Raised</enum>
+                            <enum>QFrame::Shadow::Raised</enum>
                            </property>
                            <layout class="QHBoxLayout" name="moneroFromEntropyClientAndEntropyContainerQFrameHLayout">
                             <property name="spacing">
@@ -11499,10 +11499,10 @@
                                <bool>false</bool>
                               </property>
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="moneroFromEntropyClientContainerQFrameVLayout">
                                <property name="spacing">
@@ -11523,10 +11523,10 @@
                                <item>
                                 <widget class="QFrame" name="moneroFromEntropyClientLabelContainerQFrame">
                                  <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
+                                  <enum>QFrame::Shape::StyledPanel</enum>
                                  </property>
                                  <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
+                                  <enum>QFrame::Shadow::Raised</enum>
                                  </property>
                                  <layout class="QHBoxLayout" name="moneroFromEntropyClientLabelContainerQFrameHLayout">
                                   <property name="spacing">
@@ -11554,7 +11554,7 @@
                                   <item>
                                    <spacer name="moneroFromEntropyClientLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -11626,7 +11626,7 @@
                                   <item>
                                    <spacer name="moneroFromEntropyLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -11712,7 +11712,7 @@
                                   <item>
                                    <spacer name="moneroFromEntropyLanguageLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -11824,7 +11824,7 @@
                                   <item>
                                    <spacer name="moneroFromEntropyPaymentIDLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -11872,10 +11872,10 @@
                          <item>
                           <widget class="QFrame" name="moneroFromMnemonicClientAndMnemonicContainerQFrame">
                            <property name="frameShape">
-                            <enum>QFrame::StyledPanel</enum>
+                            <enum>QFrame::Shape::StyledPanel</enum>
                            </property>
                            <property name="frameShadow">
-                            <enum>QFrame::Raised</enum>
+                            <enum>QFrame::Shadow::Raised</enum>
                            </property>
                            <layout class="QHBoxLayout" name="horizontalLayout_2">
                             <property name="spacing">
@@ -11899,10 +11899,10 @@
                                <bool>false</bool>
                               </property>
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="moneroFromMnemonicClientContainerQFrameVLayout">
                                <property name="spacing">
@@ -11923,10 +11923,10 @@
                                <item>
                                 <widget class="QFrame" name="moneroFromMnemonicClientLabelContainerQFrame">
                                  <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
+                                  <enum>QFrame::Shape::StyledPanel</enum>
                                  </property>
                                  <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
+                                  <enum>QFrame::Shadow::Raised</enum>
                                  </property>
                                  <layout class="QHBoxLayout" name="moneroFromMnemonicClientLabelContainerQFrameHLayout">
                                   <property name="spacing">
@@ -11954,7 +11954,7 @@
                                   <item>
                                    <spacer name="moneroFromMnemonicClientLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -12026,7 +12026,7 @@
                                   <item>
                                    <spacer name="moneroFromMnemonicLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -12118,7 +12118,7 @@
                                   <item>
                                    <spacer name="moneroFromMnemonicPaymentIDLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -12184,10 +12184,10 @@
                             <item>
                              <widget class="QFrame" name="moneroFromSeedClientAndSeedContainerQFrame">
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QHBoxLayout" name="moneroFromSeedClientAndSeedContainerQFrameHLayout">
                                <property name="spacing">
@@ -12211,10 +12211,10 @@
                                   <bool>false</bool>
                                  </property>
                                  <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
+                                  <enum>QFrame::Shape::StyledPanel</enum>
                                  </property>
                                  <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
+                                  <enum>QFrame::Shadow::Raised</enum>
                                  </property>
                                  <layout class="QVBoxLayout" name="moneroFromSeedClientContainerQFrameVLayout">
                                   <property name="spacing">
@@ -12235,10 +12235,10 @@
                                   <item>
                                    <widget class="QFrame" name="moneroFromSeedClientLabelContainerQFrame">
                                     <property name="frameShape">
-                                     <enum>QFrame::StyledPanel</enum>
+                                     <enum>QFrame::Shape::StyledPanel</enum>
                                     </property>
                                     <property name="frameShadow">
-                                     <enum>QFrame::Raised</enum>
+                                     <enum>QFrame::Shadow::Raised</enum>
                                     </property>
                                     <layout class="QHBoxLayout" name="moneroFromSeedClientLabelContainerQFrameHLayout">
                                      <property name="spacing">
@@ -12266,7 +12266,7 @@
                                      <item>
                                       <spacer name="moneroFromSeedClientLabelContainerQFrameHSpacer">
                                        <property name="orientation">
-                                        <enum>Qt::Horizontal</enum>
+                                        <enum>Qt::Orientation::Horizontal</enum>
                                        </property>
                                        <property name="sizeHint" stdset="0">
                                         <size>
@@ -12338,7 +12338,7 @@
                                      <item>
                                       <spacer name="moneroFromSeedLabelContainerQFrameHSpacer">
                                        <property name="orientation">
-                                        <enum>Qt::Horizontal</enum>
+                                        <enum>Qt::Orientation::Horizontal</enum>
                                        </property>
                                        <property name="sizeHint" stdset="0">
                                         <size>
@@ -12406,7 +12406,7 @@
                                   <item>
                                    <spacer name="moneroFromSeedPaymentIDLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -12497,7 +12497,7 @@
                                <item>
                                 <spacer name="moneroFromSpendPrivateKeyLabelContainerQFrameHSpacer">
                                  <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
+                                  <enum>Qt::Orientation::Horizontal</enum>
                                  </property>
                                  <property name="sizeHint" stdset="0">
                                   <size>
@@ -12537,10 +12537,10 @@
                             <item>
                              <widget class="QFrame" name="moneroFromSpendPaymentIDLabelContainerQFrame">
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QHBoxLayout" name="horizontalLayout">
                                <property name="spacing">
@@ -12568,7 +12568,7 @@
                                <item>
                                 <spacer name="moneroFromSpendPaymentIDLabelContainerQFrameHSpacer">
                                  <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
+                                  <enum>Qt::Orientation::Horizontal</enum>
                                  </property>
                                  <property name="sizeHint" stdset="0">
                                   <size>
@@ -12656,7 +12656,7 @@
                                <item>
                                 <spacer name="moneroFromPrivateKeyLabelContainerQFrameHSpacer">
                                  <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
+                                  <enum>Qt::Orientation::Horizontal</enum>
                                  </property>
                                  <property name="sizeHint" stdset="0">
                                   <size>
@@ -12721,7 +12721,7 @@
                                <item>
                                 <spacer name="moneroFromPrivateKeyPaymentIDLabelContainerQFrameHSpacer">
                                  <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
+                                  <enum>Qt::Orientation::Horizontal</enum>
                                  </property>
                                  <property name="sizeHint" stdset="0">
                                   <size>
@@ -12784,10 +12784,10 @@
                             <item>
                              <widget class="QFrame" name="moneroFromWatchOnlyViewPrivateKeyQFrame">
                               <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
+                               <enum>QFrame::Shape::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
+                               <enum>QFrame::Shadow::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="moneroFromWatchOnlyViewPrivateKeyQFrameVLayout">
                                <property name="spacing">
@@ -12833,7 +12833,7 @@
                                   <item>
                                    <spacer name="moneroFromWatchOnlyViewPrivateKeyLabelContainerQFrameHSpacer">
                                     <property name="orientation">
-                                     <enum>Qt::Horizontal</enum>
+                                     <enum>Qt::Orientation::Horizontal</enum>
                                     </property>
                                     <property name="sizeHint" stdset="0">
                                      <size>
@@ -12897,10 +12897,10 @@
                                   <item>
                                    <widget class="QFrame" name="moneroFromWatchOnlySpendPublicKeyLabelContainerQFrame">
                                     <property name="frameShape">
-                                     <enum>QFrame::StyledPanel</enum>
+                                     <enum>QFrame::Shape::StyledPanel</enum>
                                     </property>
                                     <property name="frameShadow">
-                                     <enum>QFrame::Raised</enum>
+                                     <enum>QFrame::Shadow::Raised</enum>
                                     </property>
                                     <layout class="QHBoxLayout" name="moneroFromWatchOnlySpendPublicKeyLabelContainerQFrameHLayout">
                                      <property name="spacing">
@@ -12928,7 +12928,7 @@
                                      <item>
                                       <spacer name="moneroFromWatchOnlySpendPublicKeyLabelContainerQFrameHSpacer">
                                        <property name="orientation">
-                                        <enum>Qt::Horizontal</enum>
+                                        <enum>Qt::Orientation::Horizontal</enum>
                                        </property>
                                        <property name="sizeHint" stdset="0">
                                         <size>
@@ -12968,10 +12968,10 @@
                                   <item>
                                    <widget class="QFrame" name="moneroFromWatchOnlyPaymentIDLabelContainerQFrame">
                                     <property name="frameShape">
-                                     <enum>QFrame::StyledPanel</enum>
+                                     <enum>QFrame::Shape::StyledPanel</enum>
                                     </property>
                                     <property name="frameShadow">
-                                     <enum>QFrame::Raised</enum>
+                                     <enum>QFrame::Shadow::Raised</enum>
                                     </property>
                                     <layout class="QHBoxLayout" name="moneroFromWatchOnlyPaymentIDLabelContainerQFrameHLayout">
                                      <property name="spacing">
@@ -12999,7 +12999,7 @@
                                      <item>
                                       <spacer name="moneroFromWatchOnlyPaymentIDLabelContainerQFrameHSpacer">
                                        <property name="orientation">
-                                        <enum>Qt::Horizontal</enum>
+                                        <enum>Qt::Orientation::Horizontal</enum>
                                        </property>
                                        <property name="sizeHint" stdset="0">
                                         <size>
@@ -13171,7 +13171,7 @@
                     <item>
                      <spacer name="derivationTabButtonsContainerQFrameHSpacer">
                       <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
+                       <enum>Qt::Orientation::Horizontal</enum>
                       </property>
                       <property name="sizeHint" stdset="0">
                        <size>
@@ -13258,7 +13258,7 @@
                            <item>
                             <spacer name="customPathLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -13342,7 +13342,7 @@
                            <item>
                             <spacer name="customClientLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -13461,7 +13461,7 @@
                            <item>
                             <spacer name="bip44PurposeLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -13539,7 +13539,7 @@
                            <item>
                             <spacer name="bip44CoinTypeLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -13614,7 +13614,7 @@
                            <item>
                             <spacer name="bip44AccountLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -13686,7 +13686,7 @@
                            <item>
                             <spacer name="bip44ChangeLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -13768,7 +13768,7 @@
                            <item>
                             <spacer name="bip44AddressLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -13862,7 +13862,7 @@
                            <item>
                             <spacer name="bip49PurposeLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -13940,7 +13940,7 @@
                            <item>
                             <spacer name="bip49CoinTypeLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -14015,7 +14015,7 @@
                            <item>
                             <spacer name="bip49AccountLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -14087,7 +14087,7 @@
                            <item>
                             <spacer name="bip49ChangeLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -14169,7 +14169,7 @@
                            <item>
                             <spacer name="bip49AddressLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -14263,7 +14263,7 @@
                            <item>
                             <spacer name="bip84PurposeLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -14341,7 +14341,7 @@
                            <item>
                             <spacer name="bip84CoinTypeLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -14416,7 +14416,7 @@
                            <item>
                             <spacer name="bip84AccountLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -14488,7 +14488,7 @@
                            <item>
                             <spacer name="bip84ChangeLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -14570,7 +14570,7 @@
                            <item>
                             <spacer name="bip84AddressLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -14664,7 +14664,7 @@
                            <item>
                             <spacer name="bip86PurposeLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -14742,7 +14742,7 @@
                            <item>
                             <spacer name="bip86CoinTypeLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -14817,7 +14817,7 @@
                            <item>
                             <spacer name="bip86AccountLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -14889,7 +14889,7 @@
                            <item>
                             <spacer name="bip86ChangeLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -14971,7 +14971,7 @@
                            <item>
                             <spacer name="bip86AddressLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -15065,7 +15065,7 @@
                            <item>
                             <spacer name="cip1852PurposeLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -15143,7 +15143,7 @@
                            <item>
                             <spacer name="cip1852CoinTypeLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -15218,7 +15218,7 @@
                            <item>
                             <spacer name="cip1852AccountLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -15290,7 +15290,7 @@
                            <item>
                             <spacer name="cip1852ChangeLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -15377,7 +15377,7 @@
                            <item>
                             <spacer name="cip1852AddressLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -15468,7 +15468,7 @@
                            <item>
                             <spacer name="hdwAccountLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -15540,7 +15540,7 @@
                            <item>
                             <spacer name="hdwEccLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -15605,7 +15605,7 @@
                            <item>
                             <spacer name="hdwAddressLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -15696,7 +15696,7 @@
                            <item>
                             <spacer name="electrumChangeLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -15768,7 +15768,7 @@
                            <item>
                             <spacer name="electrumAddressLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -15859,7 +15859,7 @@
                            <item>
                             <spacer name="moneroMinorLabelLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -15931,7 +15931,7 @@
                            <item>
                             <spacer name="moneroMajorLabelHSpacer">
                              <property name="orientation">
-                              <enum>Qt::Horizontal</enum>
+                              <enum>Qt::Orientation::Horizontal</enum>
                              </property>
                              <property name="sizeHint" stdset="0">
                               <size>
@@ -16052,7 +16052,7 @@
                           <item>
                            <spacer name="dumpsFormatLabelContainerQFrameHSpacer">
                             <property name="orientation">
-                             <enum>Qt::Horizontal</enum>
+                             <enum>Qt::Orientation::Horizontal</enum>
                             </property>
                             <property name="sizeHint" stdset="0">
                              <size>
@@ -16137,7 +16137,7 @@
                        <item>
                         <spacer name="dumpsExcludeOrIncludeLabelContainerQFrameHSpacer">
                          <property name="orientation">
-                          <enum>Qt::Horizontal</enum>
+                          <enum>Qt::Orientation::Horizontal</enum>
                          </property>
                          <property name="sizeHint" stdset="0">
                           <size>
@@ -16198,7 +16198,7 @@
                    </layout>
                   </widget>
                  </item>
-                 <item alignment="Qt::AlignBottom">
+                 <item alignment="Qt::AlignmentFlag::AlignBottom">
                   <widget class="QPushButton" name="dumpsGenerateQPushButton">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
@@ -16217,7 +16217,7 @@
                    </property>
                   </widget>
                  </item>
-                 <item alignment="Qt::AlignBottom">
+                 <item alignment="Qt::AlignmentFlag::AlignBottom">
                   <widget class="QPushButton" name="dumpsSaveAndGenerateQPushButton">
                    <property name="cursor">
                     <cursorShape>PointingHandCursor</cursorShape>
@@ -16233,7 +16233,7 @@
               <item>
                <spacer name="dumpsPageQStackedWidgetVSpacer">
                 <property name="orientation">
-                 <enum>Qt::Vertical</enum>
+                 <enum>Qt::Orientation::Vertical</enum>
                 </property>
                 <property name="sizeHint" stdset="0">
                  <size>
@@ -16250,7 +16250,7 @@
           <item>
            <spacer name="hdwalletMainQFrameVSpacer">
             <property name="orientation">
-             <enum>Qt::Vertical</enum>
+             <enum>Qt::Orientation::Vertical</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -16263,10 +16263,10 @@
           <item>
            <widget class="QFrame" name="footerContainerQFrame">
             <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+             <enum>QFrame::Shape::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
+             <enum>QFrame::Shadow::Raised</enum>
             </property>
             <layout class="QHBoxLayout" name="footerContainerQFrameHLayout">
              <property name="spacing">
@@ -16284,13 +16284,13 @@
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <item alignment="Qt::AlignVCenter">
+             <item alignment="Qt::AlignmentFlag::AlignVCenter">
               <widget class="QFrame" name="linksContainerQFrame">
                <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
+                <enum>QFrame::Shape::StyledPanel</enum>
                </property>
                <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
+                <enum>QFrame::Shadow::Raised</enum>
                </property>
                <layout class="QHBoxLayout" name="linksContainerQFrameHLayout">
                 <property name="spacing">
@@ -16308,14 +16308,14 @@
                 <property name="bottomMargin">
                  <number>0</number>
                 </property>
-                <item alignment="Qt::AlignBottom">
+                <item alignment="Qt::AlignmentFlag::AlignBottom">
                  <widget class="QLabel" name="copyrightQLabel">
                   <property name="text">
-                   <string>© 2020-2024</string>
+                   <string>© 2020-2025</string>
                   </property>
                  </widget>
                 </item>
-                <item alignment="Qt::AlignBottom">
+                <item alignment="Qt::AlignmentFlag::AlignBottom">
                  <widget class="QLabel" name="websiteQLabel">
                   <property name="cursor">
                    <cursorShape>PointingHandCursor</cursorShape>
@@ -16331,7 +16331,7 @@
              <item>
               <spacer name="footerContainerQFrameHSpacer">
                <property name="orientation">
-                <enum>Qt::Horizontal</enum>
+                <enum>Qt::Orientation::Horizontal</enum>
                </property>
                <property name="sizeHint" stdset="0">
                 <size>
@@ -16341,13 +16341,13 @@
                </property>
               </spacer>
              </item>
-             <item alignment="Qt::AlignVCenter">
+             <item alignment="Qt::AlignmentFlag::AlignVCenter">
               <widget class="QFrame" name="linksHelpContainerQFrame">
                <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
+                <enum>QFrame::Shape::StyledPanel</enum>
                </property>
                <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
+                <enum>QFrame::Shadow::Raised</enum>
                </property>
                <layout class="QHBoxLayout" name="linksHelpContainerQFrameHLayout">
                 <property name="spacing">
@@ -16462,25 +16462,25 @@
               </sizepolicy>
              </property>
              <property name="frameShape">
-              <enum>QFrame::NoFrame</enum>
+              <enum>QFrame::Shape::NoFrame</enum>
              </property>
              <property name="frameShadow">
-              <enum>QFrame::Plain</enum>
+              <enum>QFrame::Shadow::Plain</enum>
              </property>
              <property name="verticalScrollBarPolicy">
-              <enum>Qt::ScrollBarAsNeeded</enum>
+              <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
              </property>
              <property name="horizontalScrollBarPolicy">
-              <enum>Qt::ScrollBarAlwaysOff</enum>
+              <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
              </property>
              <property name="sizeAdjustPolicy">
-              <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+              <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustToContentsOnFirstShow</enum>
              </property>
              <property name="readOnly">
               <bool>true</bool>
              </property>
              <property name="textInteractionFlags">
-              <set>Qt::TextSelectableByMouse</set>
+              <set>Qt::TextInteractionFlag::TextSelectableByMouse</set>
              </property>
              <property name="maximumBlockCount">
               <number>2500</number>
@@ -16565,10 +16565,10 @@
                  </size>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
+                 <enum>QFrame::Shape::StyledPanel</enum>
                 </property>
                 <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                 <enum>QFrame::Shadow::Raised</enum>
                 </property>
                 <layout class="QVBoxLayout" name="expandAndCollapseTerminalQFrameVLayout">
                  <property name="spacing">

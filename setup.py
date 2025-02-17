@@ -96,7 +96,7 @@ executables = [
         target_name=app_name,
         shortcut_name=app_name,
         shortcut_dir="HDWalletMenu",
-        copyright=f"Copyright (C) 2024 {app_name}"
+        copyright=f"Copyright (C) 2025 {app_name}"
     )
 ]
 
