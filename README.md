@@ -10,7 +10,7 @@
 
 ![GitHub Created At](https://img.shields.io/github/created-at/talonlab/hdwallet-desktop)
 ![GitHub License](https://img.shields.io/github/license/talonlab/hdwallet-desktop?style=flat&color=black)
-![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux%20%7C%20Mac-blue)
+![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux-blue)
 ![GitHub Release](https://img.shields.io/github/v/release/talonlab/hdwallet-desktop)
 ![GitHub Release Date](https://img.shields.io/github/release-date/talonlab/hdwallet-desktop)
 
@@ -62,35 +62,6 @@ sudo apt-get install libxcb-cursor0 libxcb-cursor-dev
     ```
     ./hdwallet-desktop-x.x.x-x86_64.AppImage
     ```
-
-### For Mac
-
-To install on Mac, download one of the following from the Releases page:
-
-1. **Install OpenSSL** (a required dependency if not already installed):
-```bash
-brew install openssl
-```
-2. **Set up OpenSSL** environment variables to ensure it is correctly linked for development:
-```bash
-echo 'export LDFLAGS=-L$(brew --prefix openssl)/lib' >> ~/.zshrc
-echo 'export CPPFLAGS=-I$(brew --prefix openssl)/include' >> ~/.zshrc
-echo 'export PKG_CONFIG_PATH=$(brew --prefix openssl)/lib/pkgconfig' >> ~/.zshrc
-echo 'export PATH=$(brew --prefix openssl)/bin:$PATH' >> ~/.zshrc
-source ~/.zshrc
-```
-
-- MacOS App Bundle (.app):
-   - Available as a `.zip` file.
-   - Two versions:
-     - **ARM64**: For Apple Silicon `M` series devices.
-     - **x64**: For Intel-based Macs.
-
-- MacOS Disk Image (.dmg):
-   - A convenient format for installation on macOS.
-   - Two versions:
-     - **ARM64**: For Apple Silicon `M` series devices.
-     - **x64**: For Intel-based Macs.
 
 
 ## Development
