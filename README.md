@@ -13,6 +13,7 @@
 ![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux-blue)
 ![GitHub Release](https://img.shields.io/github/v/release/talonlab/hdwallet-desktop)
 ![GitHub Release Date](https://img.shields.io/github/release-date/talonlab/hdwallet-desktop)
+![Downloads](https://img.shields.io/github/downloads/talonlab/hdwallet-desktop/total)
 
 
 </div>
